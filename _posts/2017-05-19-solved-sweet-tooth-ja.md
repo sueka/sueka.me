@@ -25,14 +25,14 @@ lang: ja
 
 {% katex display %}
 \begin{aligned}
-  & \phantom{\Rightarrow} \left(1-f\right)+\frac{1}{2}+\frac{1}{2} = f+\left(1-g\right)+\frac{1}{2} = f+g \\
-  & \Rightarrow f+\left(1-g\right)+\frac{1}{2} = f+g \\
-  & \Leftrightarrow g = \frac{3}{4} \\
-  \text{and} \\
-  & \phantom{\Rightarrow} \left(1-f\right)+\frac{1}{2}+\frac{1}{2} = f+\left(1-g\right)+\frac{1}{2} = f+g \\
-  & \Rightarrow \left(1-f\right)+\frac{1}{2}+\frac{1}{2} = f+g \\
-  & \Leftrightarrow \left(1-f\right)+\frac{1}{2}+\frac{1}{2} = f+\frac{3}{4} \\
-  & \Leftrightarrow f = \frac{5}{8} \\
+  & \phantom{\Rightarrow} \left(1-f\right)+\frac{1}{2}+\frac{1}{2} = f+\left(1-g\right)+\frac{1}{2} = f+g \\[0.618em]
+  & \Rightarrow f+\left(1-g\right)+\frac{1}{2} = f+g \\[0.618em]
+  & \Leftrightarrow g = \frac{3}{4} \\[0.618em]
+  \text{and} \\[0.618em]
+  & \phantom{\Rightarrow} \left(1-f\right)+\frac{1}{2}+\frac{1}{2} = f+\left(1-g\right)+\frac{1}{2} = f+g \\[0.618em]
+  & \Rightarrow \left(1-f\right)+\frac{1}{2}+\frac{1}{2} = f+g \\[0.618em]
+  & \Leftrightarrow \left(1-f\right)+\frac{1}{2}+\frac{1}{2} = f+\frac{3}{4} \\[0.618em]
+  & \Leftrightarrow f = \frac{5}{8} \\[0.618em]
 \end{aligned}
 {% endkatex %}
 
@@ -54,13 +54,13 @@ lang: ja
 
 {% katex display %}
 \begin{aligned}
-  & \phantom{=} 1-f+6 \frac{1}{2} \\
-  & = 1+\left(f\right)-g+5 \frac{1}{2} \\
-  & = 1+\left(f+g\right)-h+4 \frac{1}{2} \\
-  & = 1+\left(f+g+h\right)-i+3 \frac{1}{2} \\
-  & = 1+\left(f+g+h+i\right)-j+2 \frac{1}{2} \\
-  & = 1+\left(f+g+h+i+j\right)-k+\frac{1}{2} \\
-  & = \left(f+g+h+i+j+k\right) \\
+  & \phantom{=} 1-f+6 \frac{1}{2} \\[0.618em]
+  & = 1+\left(f\right)-g+5 \frac{1}{2} \\[0.618em]
+  & = 1+\left(f+g\right)-h+4 \frac{1}{2} \\[0.618em]
+  & = 1+\left(f+g+h\right)-i+3 \frac{1}{2} \\[0.618em]
+  & = 1+\left(f+g+h+i\right)-j+2 \frac{1}{2} \\[0.618em]
+  & = 1+\left(f+g+h+i+j\right)-k+\frac{1}{2} \\[0.618em]
+  & = \left(f+g+h+i+j+k\right) \\[0.618em]
 \end{aligned}
 {% endkatex %}
 
