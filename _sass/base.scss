@@ -1,0 +1,252 @@
+//
+//                                            _|
+//  _|  _|_|    _|_|      _|_|_|    _|_|    _|_|_|_|
+//  _|_|      _|_|_|_|  _|_|      _|_|_|_|    _|
+//  _|        _|            _|_|  _|          _|
+//  _|          _|_|_|  _|_|_|      _|_|_|      _|_|
+//
+//
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+  text-autospace: none;
+  margin: 0;
+}
+
+h1, p { margin: 0 auto }
+
+//
+//                      _|            _|
+//  _|    _|  _|_|_|          _|_|_|  _|    _|_|_|    _|_|_|    _|_|_|
+//  _|    _|  _|    _|  _|  _|        _|  _|    _|  _|_|      _|_|
+//  _|    _|  _|    _|  _|  _|        _|  _|    _|      _|_|      _|_|
+//    _|_|_|  _|    _|  _|    _|_|_|  _|    _|_|_|  _|_|_|    _|_|_|
+//
+//
+
+.plain {
+  font: unset;
+  padding: unset;
+  border: unset;
+  margin: unset;
+}
+
+//
+//                                  _|            _|        _|
+//  _|      _|    _|_|_|  _|  _|_|        _|_|_|  _|_|_|    _|    _|_|      _|_|_|
+//  _|      _|  _|    _|  _|_|      _|  _|    _|  _|    _|  _|  _|_|_|_|  _|_|
+//    _|  _|    _|    _|  _|        _|  _|    _|  _|    _|  _|  _|            _|_|
+//      _|        _|_|_|  _|        _|    _|_|_|  _|_|_|    _|    _|_|_|  _|_|_|
+//
+//
+
+$bg-color: white;
+$fg-color: #363636;
+$ui-color: #595959;
+
+$font-text: "Linux Libertine O", FreeSerif, "Times New Roman", Times, Baskerville, "Baskerville Old Face", serif;
+$font-emph: "Linux Biolinum O", FreeSans, "Myriad Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Segoe UI, sans-serif;
+$font-text-ja: IPAexMincho, YuMincho, "Hiragino Mincho ProN", "Yu Mincho", HGSMinchoE, Meiryo, sans-serif;
+$font-emph-ja: IPAexGothic, YuGothic, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+$font-code: CodeM, Ricty, "Source Han Code JP", Myrica, "IPAGothic", Osaka-mono, "MS Gothic", monospace, serif;
+
+//
+//      _|_|                        _|
+//    _|        _|_|    _|_|_|    _|_|_|_|
+//  _|_|_|_|  _|    _|  _|    _|    _|
+//    _|      _|    _|  _|    _|    _|
+//    _|        _|_|    _|    _|      _|_|
+//
+//
+
+html {
+  font: 19.2px $font-text;
+  &:lang(ja) { font-family: $font-text-ja }
+}
+h1, h2, h3, h4, h5, h6, th, dt, dt > b, strong {
+  font-weight: 500; font-family: $font-emph;
+  &:lang(ja) { font-family: $font-emph-ja }
+}
+dt > dfn, dfn, em {
+  &:lang(ja) { font-style: normal; font-family: $font-emph-ja }
+}
+a {
+  font-family: $font-text;
+  &:lang(ja) { font-family: $font-text-ja }
+}
+
+//
+//    _|                            _|
+//  _|_|_|_|    _|_|    _|    _|  _|_|_|_|
+//    _|      _|_|_|_|    _|_|      _|
+//    _|      _|        _|    _|    _|
+//      _|_|    _|_|_|  _|    _|      _|_|
+//
+//
+
+html {
+  text-align: justify;
+  &:lang(ja) { text-align: left; text-align: start }
+  line-height: 1.618;
+}
+
+//
+//  _|  _|            _|
+//  _|      _|_|_|    _|  _|
+//  _|  _|  _|    _|  _|_|
+//  _|  _|  _|    _|  _|  _|
+//  _|  _|  _|    _|  _|    _|
+//
+//
+
+a:link {
+  $link-color: dodgerblue;
+  text-decoration: none;
+  color: $link-color;
+  border-bottom: 0 dashed $link-color;
+  &:hover {
+    border-bottom-width: 1px;
+  }
+}
+
+a:visited {
+  $visited-color: darkorchid;
+  color: $visited-color;
+  border-bottom-color: $visited-color;
+}
+
+//
+//  _|                                            _|
+//  _|    _|_|_|  _|    _|    _|_|    _|    _|  _|_|_|_|
+//  _|  _|    _|  _|    _|  _|    _|  _|    _|    _|
+//  _|  _|    _|  _|    _|  _|    _|  _|    _|    _|
+//  _|    _|_|_|    _|_|_|    _|_|      _|_|_|      _|_|
+//                      _|
+//                  _|_|
+
+html {
+  background-color: $bg-color;
+  color: $fg-color;
+}
+
+body {
+  padding: 0 0.618em 0.382em;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1.618em 0 0.618em;
+}
+h1 { font-size: 196.6% }
+h2 { font-size: 161.8% }
+h3 { font-size: 134.8% }
+h4 { font-size: 115.5% }
+h5 { font-size: 103.9% }
+h6 { font-size: 100.0% }
+
+p, ul, ol {
+  margin: 0.618em 0 1.618em;
+}
+
+blockquote {
+  $quote-color: forestgreen;
+  padding: 0 0.618em;
+  border-left: 0.382em solid $quote-color;
+  margin: 1.618em 0 0.618em;
+  & > blockquote,
+  & > table, & > figure, & > pre,
+  & > ul, & > ol, & > dl,
+  & > p {
+    &:first-child { margin-top: 0 }
+    &:last-child { margin-bottom: 0 }
+  }
+  & > p {
+    margin-top: 0.618em;
+    margin-bottom: 1em;
+  }
+}
+
+footer {
+  border-top: 1px dashed $ui-color;
+  margin: 1.618em 0 0.618em;
+  &:last-child { margin-bottom: 0 }
+  padding: 0 0 1px;
+  & > p {
+    margin-bottom: 0;
+  }
+}
+
+.note {
+  padding: 0.382em 0.618em 0.382em 4.854em;
+  border: 1px dashed $ui-color;
+  margin: 0.618em 0 1.618em;
+}
+.note::before {
+  content: "NOTE";
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: $font-emph;
+  margin-left: -4.236em;
+  float: left;
+}
+
+//
+//    _|                _|        _|
+//  _|_|_|_|    _|_|_|  _|_|_|    _|    _|_|
+//    _|      _|    _|  _|    _|  _|  _|_|_|_|
+//    _|      _|    _|  _|    _|  _|  _|
+//      _|_|    _|_|_|  _|_|_|    _|    _|_|_|
+//
+//
+
+table {
+  border-collapse: collapse;
+  &, th, td {
+    border: 1px dashed $ui-color;
+  }
+  th, td {
+    padding: 0.382em 0.618em;
+  }
+}
+
+//
+//  _|  _|              _|
+//  _|        _|_|_|  _|_|_|_|
+//  _|  _|  _|_|        _|
+//  _|  _|      _|_|    _|
+//  _|  _|  _|_|_|        _|_|
+//
+//
+
+ol {
+  padding-left: 2em;
+}
+ul {
+  padding-left: 1.5em;
+}
+li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+//
+//      _|_|_|_|_|                                    _|  _|
+//    _|          _|  _|_|_|  _|_|      _|_|      _|_|_|        _|_|_|
+//  _|    _|_|_|  _|  _|    _|    _|  _|_|_|_|  _|    _|  _|  _|    _|
+//  _|  _|    _|  _|  _|    _|    _|  _|        _|    _|  _|  _|    _|
+//  _|    _|_|_|_|    _|    _|    _|    _|_|_|    _|_|_|  _|    _|_|_|
+//    _|
+//      _|_|_|_|_|_|
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: unquote(calc(13.6px + 0.56vw));
+    text-align: left;
+    text-align: start;
+  }
+}

@@ -1,0 +1,25 @@
+title: sueka.me
+lang: en
+url: http://sueka.me
+github_repo: sueka/sueka.me
+license: CC0
+license_url: https://creativecommons.org/publicdomain/zero/1.0/
+
+author: sueka
+email: mail-nospam@sueka.me
+pgp_key_id: D178285D
+pks_url: https://sks-keyservers.net/pks/lookup?op=get&search=0x5B60E6C7D178285D
+twitter_username: sueka_me
+github_username: sueka
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+collections:
+  posts:
+    permalink: /:categories/:year/:month/:slug.html
+
+markdown: kramdown
+sass:
+  style: compressed

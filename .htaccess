@@ -1,0 +1,10 @@
+ErrorDocument 403 /http/403.html
+ErrorDocument 404 /http/404.html
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\. [OR]
+RewriteCond %{HTTP_HOST} \.$
+RewriteRule ^(.*)$ http://sueka.me/$1 [R=308,L]
+
+Options -MultiViews

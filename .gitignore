@@ -1,0 +1,6 @@
+.git/
+.sass-cache/
+_drafts/
+_site/
+.directory
+Gemfile.lock

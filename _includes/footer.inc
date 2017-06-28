@@ -1,0 +1,12 @@
+{% capture license %}<a href="{{ site.license_url }}">{{ site.license }}</a>{% endcapture %}
+{% capture repository %}<a href="https://github.com/{{ site.github_repo }}">{{ site.github_repo }}</a>{% endcapture %}
+
+<footer>
+
+{% if include.this-lang == "ja" %}
+  <p><a href="/index-ja.html">{{ site.title }}</a> のソースコードは {{ license }} でライセンスされ、 GitHub 上のリポジトリ {{ repository }} で公開されています。</p>
+{% else %}
+  <p><a href="/">{{ site.title }}</a> is available on GitHub at {{ repository }} under the {{ license }}.</p>
+{% endif %}
+
+</footer>
