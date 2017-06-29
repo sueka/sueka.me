@@ -4,7 +4,7 @@
 <footer>
 
 {% if include.this-lang == "ja" %}
-  <p><a href="/index-ja.html">{{ site.title }}</a> のソースコードは {{ license }} でライセンスされ、 GitHub 上のリポジトリ {{ repository }} で公開されています。</p>
+  <p><a href="/index-ja.html">{{ site.title }}</a> のソースコードは {{ license }} でライセンスされ、 GitHub 上のリポジトリ {{ repository }} で公開されてゐます。</p>
 {% else %}
   <p><a href="/">{{ site.title }}</a> is available on GitHub at {{ repository }} under the {{ license }}.</p>
 {% endif %}
