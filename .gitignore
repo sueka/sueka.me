@@ -3,4 +3,5 @@
 _drafts/
 _site/
 .directory
+.jekyll-metadata
 Gemfile.lock
