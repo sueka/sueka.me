@@ -42,11 +42,11 @@ lang: ja
 
  | ジェレミーの選択権 | ジェレミーの取り分 | マリーの取り分 |
  |:---:|---|---|
- | 1回目 | {% katex display %} f+6 \frac{1}{2} {% endkatex %} | {% katex display %} 1-f+6 \frac{1}{2} {% endkatex %} |
- | 2回目 | {% katex display %} 1-\left(f\right)+g+5 \frac{1}{2} {% endkatex %} | {% katex display %} 1+\left(f\right)-g+5 \frac{1}{2} {% endkatex %} |
- | 3回目 | {% katex display %} 2-\left(f+g\right)+h+4 \frac{1}{2} {% endkatex %} | {% katex display %} 1+\left(f+g\right)-h+4 \frac{1}{2} {% endkatex %} |
- | 4回目 | {% katex display %} 3-\left(f+g+h\right)+i+3 \frac{1}{2} {% endkatex %} | {% katex display %} 1+\left(f+g+h\right)-i+3 \frac{1}{2} {% endkatex %} |
- | 5回目 | {% katex display %} 4-\left(f+g+h+i\right)+j+2 \frac{1}{2} {% endkatex %} | {% katex display %} 1+\left(f+g+h+i\right)-j+2 \frac{1}{2} {% endkatex %} |
+ | 1回目 | {% katex display %} f+6\frac{1}{2} {% endkatex %} | {% katex display %} 1-f+6\frac{1}{2} {% endkatex %} |
+ | 2回目 | {% katex display %} 1-\left(f\right)+g+5\frac{1}{2} {% endkatex %} | {% katex display %} 1+\left(f\right)-g+5\frac{1}{2} {% endkatex %} |
+ | 3回目 | {% katex display %} 2-\left(f+g\right)+h+4\frac{1}{2} {% endkatex %} | {% katex display %} 1+\left(f+g\right)-h+4\frac{1}{2} {% endkatex %} |
+ | 4回目 | {% katex display %} 3-\left(f+g+h\right)+i+3\frac{1}{2} {% endkatex %} | {% katex display %} 1+\left(f+g+h\right)-i+3\frac{1}{2} {% endkatex %} |
+ | 5回目 | {% katex display %} 4-\left(f+g+h+i\right)+j+2\frac{1}{2} {% endkatex %} | {% katex display %} 1+\left(f+g+h+i\right)-j+2\frac{1}{2} {% endkatex %} |
  | 6回目 | {% katex display %} 5-\left(f+g+h+i+j\right)+k+\frac{1}{2} {% endkatex %} | {% katex display %} 1+\left(f+g+h+i+j\right)-k+\frac{1}{2} {% endkatex %} |
  | 7回目 | {% katex display %} 7-\left(f+g+h+i+j+k\right) {% endkatex %} | {% katex display %} \left(f+g+h+i+j+k\right) {% endkatex %} |
 
@@ -54,17 +54,17 @@ lang: ja
 
 {% katex display %}
 \begin{aligned}
-  & \phantom{=} 1-f+6 \frac{1}{2} \\[0.618em]
-  & = 1+\left(f\right)-g+5 \frac{1}{2} \\[0.618em]
-  & = 1+\left(f+g\right)-h+4 \frac{1}{2} \\[0.618em]
-  & = 1+\left(f+g+h\right)-i+3 \frac{1}{2} \\[0.618em]
-  & = 1+\left(f+g+h+i\right)-j+2 \frac{1}{2} \\[0.618em]
+  & \phantom{=} 1-f+6\frac{1}{2} \\[0.618em]
+  & = 1+\left(f\right)-g+5\frac{1}{2} \\[0.618em]
+  & = 1+\left(f+g\right)-h+4\frac{1}{2} \\[0.618em]
+  & = 1+\left(f+g+h\right)-i+3\frac{1}{2} \\[0.618em]
+  & = 1+\left(f+g+h+i\right)-j+2\frac{1}{2} \\[0.618em]
   & = 1+\left(f+g+h+i+j\right)-k+\frac{1}{2} \\[0.618em]
   & = \left(f+g+h+i+j+k\right) \\[0.618em]
 \end{aligned}
 {% endkatex %}
 
-を解けば、 {% katex %} \left(f, g, h, i, j, k\right)=\left(\frac{65}{128}, \frac{33}{64}, \frac{17}{32}, \frac{9}{16}, \frac{5}{8}, \frac{3}{4}\right) {% endkatex %} が得られます。
+を解けば、 {% katex %} \left(f, g, h, i, j, k\right)=\left(\frac{65}{128},\frac{33}{64},\frac{17}{32},\frac{9}{16},\frac{5}{8},\frac{3}{4}\right) {% endkatex %} が得られます。
 
 ## 問題3
 
