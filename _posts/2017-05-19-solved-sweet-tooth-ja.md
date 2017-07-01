@@ -19,18 +19,18 @@ lang: ja
  |:---:|---|---|
  | 1回目 | {% katex display %} f+\frac{1}{2}+\frac{1}{2} {% endkatex %} | {% katex display %} \left(1-f\right)+\frac{1}{2}+\frac{1}{2} {% endkatex %} |
  | 2回目 | {% katex display %} \left(1-f\right)+g+\frac{1}{2} {% endkatex %} | {% katex display %} f+\left(1-g\right)+\frac{1}{2} {% endkatex %} |
- | 3回目 | {% katex display %} \left(1-f\right)+\left(1-g\right)+1 {% endkatex %} | {% katex display %} f+g {% endkatex %} |
+ | 3回目 | {% katex display %} \left(1-f\right)+\left(1-g\right)+1 {% endkatex %} | {% katex display %} f+g+0 {% endkatex %} |
 
 といふものです。マリーは、ジェレミーにいつ選択権を与へるかを決めることができるので、三通りの取り分が全て等しくなければ、自分の取り分が多くなるやうにすることができます。よって、ジェレミーにとっての最適戦略は、マリーの三通りの取り分が全て等しくなるやうにすることです。:
 
 {% katex display %}
 \begin{aligned}
-  & \phantom{\Rightarrow} \left(1-f\right)+\frac{1}{2}+\frac{1}{2} = f+\left(1-g\right)+\frac{1}{2} = f+g \\[0.618em]
-  & \Rightarrow f+\left(1-g\right)+\frac{1}{2} = f+g \\[0.618em]
+  & \phantom{\Rightarrow} \left(1-f\right)+\frac{1}{2}+\frac{1}{2} = f+\left(1-g\right)+\frac{1}{2} = f+g+0 \\[0.618em]
+  & \Rightarrow f+\left(1-g\right)+\frac{1}{2} = f+g+0 \\[0.618em]
   & \Leftrightarrow g = \frac{3}{4} \\[0.618em]
   \text{and} \\[0.618em]
-  & \phantom{\Rightarrow} \left(1-f\right)+\frac{1}{2}+\frac{1}{2} = f+\left(1-g\right)+\frac{1}{2} = f+g \\[0.618em]
-  & \Rightarrow \left(1-f\right)+\frac{1}{2}+\frac{1}{2} = f+g \\[0.618em]
+  & \phantom{\Rightarrow} \left(1-f\right)+\frac{1}{2}+\frac{1}{2} = f+\left(1-g\right)+\frac{1}{2} = f+g+0 \\[0.618em]
+  & \Rightarrow \left(1-f\right)+\frac{1}{2}+\frac{1}{2} = f+g+0 \\[0.618em]
   & \Leftrightarrow \left(1-f\right)+\frac{1}{2}+\frac{1}{2} = f+\frac{3}{4} \\[0.618em]
   & \Leftrightarrow f = \frac{5}{8} \\[0.618em]
 \end{aligned}
@@ -42,25 +42,25 @@ lang: ja
 
  | ジェレミーの選択権 | ジェレミーの取り分 | マリーの取り分 |
  |:---:|---|---|
- | 1回目 | {% katex display %} f+6\frac{1}{2} {% endkatex %} | {% katex display %} 1-f+6\frac{1}{2} {% endkatex %} |
- | 2回目 | {% katex display %} 1-\left(f\right)+g+5\frac{1}{2} {% endkatex %} | {% katex display %} 1+\left(f\right)-g+5\frac{1}{2} {% endkatex %} |
- | 3回目 | {% katex display %} 2-\left(f+g\right)+h+4\frac{1}{2} {% endkatex %} | {% katex display %} 1+\left(f+g\right)-h+4\frac{1}{2} {% endkatex %} |
- | 4回目 | {% katex display %} 3-\left(f+g+h\right)+i+3\frac{1}{2} {% endkatex %} | {% katex display %} 1+\left(f+g+h\right)-i+3\frac{1}{2} {% endkatex %} |
- | 5回目 | {% katex display %} 4-\left(f+g+h+i\right)+j+2\frac{1}{2} {% endkatex %} | {% katex display %} 1+\left(f+g+h+i\right)-j+2\frac{1}{2} {% endkatex %} |
- | 6回目 | {% katex display %} 5-\left(f+g+h+i+j\right)+k+\frac{1}{2} {% endkatex %} | {% katex display %} 1+\left(f+g+h+i+j\right)-k+\frac{1}{2} {% endkatex %} |
- | 7回目 | {% katex display %} 7-\left(f+g+h+i+j+k\right) {% endkatex %} | {% katex display %} \left(f+g+h+i+j+k\right) {% endkatex %} |
+ | 1回目 | {% katex display %} f+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2} {% endkatex %} | {% katex display %} \left(1-f\right)+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2} {% endkatex %} |
+ | 2回目 | {% katex display %} \left(1-f\right)+g+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2} {% endkatex %} | {% katex display %} f+\left(1-g\right)+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2} {% endkatex %} |
+ | 3回目 | {% katex display %} \left(1-f\right)+\left(1-g\right)+h+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2} {% endkatex %} | {% katex display %} f+g+\left(1-h\right)+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2} {% endkatex %} |
+ | 4回目 | {% katex display %} \left(1-f\right)+\left(1-g\right)+\left(1-h\right)+i+\frac{1}{2}+\frac{1}{2}+\frac{1}{2} {% endkatex %} | {% katex display %} f+g+h+\left(1-i\right)+\frac{1}{2}+\frac{1}{2}+\frac{1}{2} {% endkatex %} |
+ | 5回目 | {% katex display %} \left(1-f\right)+\left(1-g\right)+\left(1-h\right)+\left(1-i\right)+j+\frac{1}{2}+\frac{1}{2} {% endkatex %} | {% katex display %} f+g+h+i+\left(1-j\right)+\frac{1}{2}+\frac{1}{2} {% endkatex %} |
+ | 6回目 | {% katex display %} \left(1-f\right)+\left(1-g\right)+\left(1-h\right)+\left(1-i\right)+\left(1-j\right)+k+\frac{1}{2} {% endkatex %} | {% katex display %} f+g+h+i+j+\left(1-k\right)+\frac{1}{2} {% endkatex %} |
+ | 7回目 | {% katex display %} \left(1-f\right)+\left(1-g\right)+\left(1-h\right)+\left(1-i\right)+\left(1-j\right)+\left(1-k\right)+1 {% endkatex %} | {% katex display %} f+g+h+i+j+k+0 {% endkatex %} |
 
 となり、
 
 {% katex display %}
 \begin{aligned}
-  & \phantom{=} 1-f+6\frac{1}{2} \\[0.618em]
-  & = 1+\left(f\right)-g+5\frac{1}{2} \\[0.618em]
-  & = 1+\left(f+g\right)-h+4\frac{1}{2} \\[0.618em]
-  & = 1+\left(f+g+h\right)-i+3\frac{1}{2} \\[0.618em]
-  & = 1+\left(f+g+h+i\right)-j+2\frac{1}{2} \\[0.618em]
-  & = 1+\left(f+g+h+i+j\right)-k+\frac{1}{2} \\[0.618em]
-  & = \left(f+g+h+i+j+k\right) \\[0.618em]
+  & \phantom{=} \left(1-f\right)+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2} \\[0.618em]
+  & = f+\left(1-g\right)+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2} \\[0.618em]
+  & = f+g+\left(1-h\right)+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2} \\[0.618em]
+  & = f+g+h+\left(1-i\right)+\frac{1}{2}+\frac{1}{2}+\frac{1}{2} \\[0.618em]
+  & = f+g+h+i+\left(1-j\right)+\frac{1}{2}+\frac{1}{2} \\[0.618em]
+  & = f+g+h+i+j+\left(1-k\right)+\frac{1}{2} \\[0.618em]
+  & = f+g+h+i+j+k+0 \\[0.618em]
 \end{aligned}
 {% endkatex %}
 
