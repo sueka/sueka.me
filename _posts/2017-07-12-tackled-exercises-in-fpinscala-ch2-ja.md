@@ -1,7 +1,7 @@
 ---
 layout: post
 lang: ja
-tags: tackle scala functional
+tags: exercise fpinscala scala functional
 title: fpinscala 第2章の練習問題を解いた
 ---
 
