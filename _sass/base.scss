@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6, th, dt, dt > b, strong {
 dt > dfn, dfn, em {
   &:lang(ja) { font-style: normal; font-family: $font-emph-ja }
 }
-a, span {
+a, span[lang] {
   font-family: $font-text;
   &:lang(ja) { font-family: $font-text-ja }
 }
