@@ -80,7 +80,6 @@ a {
   font-family: $font-text;
   &:lang(ja) { font-family: $font-text-ja }
 }
-
 pre, code {
   font-family: $font-code;
   &:lang(ja) { font-family: $font-code-ja }
@@ -141,8 +140,8 @@ html {
 }
 
 body {
-  padding: 0 0.618em 0.382em;
   box-sizing: border-box;
+  padding: 0 0.618em 0.382em;
 }
 
 h1, h2, h3, h4, h5, h6 {
