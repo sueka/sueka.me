@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 「甘いもの好き」を解きました
+title: 「甘いもの好き」を解いた
 tags: puzzle p3
 lang: ja
 ---

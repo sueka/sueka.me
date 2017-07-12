@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 大学を卒業しました
+title: 大学を卒業した
 tags: diary
 lang: ja
 ---
