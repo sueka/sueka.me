@@ -1,0 +1,59 @@
+//
+//  _|                                            _|
+//  _|    _|_|_|  _|    _|    _|_|    _|    _|  _|_|_|_|
+//  _|  _|    _|  _|    _|  _|    _|  _|    _|    _|
+//  _|  _|    _|  _|    _|  _|    _|  _|    _|    _|
+//  _|    _|_|_|    _|_|_|    _|_|      _|_|_|      _|_|
+//                      _|
+//                  _|_|
+
+.highlight {
+  background-color: rgba(27, 31, 35, 0.05);
+  margin: 0.618em 0 1.618em;
+  padding: 0 1.618em;
+  table {
+    border: none;
+    margin: 0;
+    th, td {
+      border: none;
+    }
+    td > pre {
+      margin: 0;
+    }
+  }
+  .gutter {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    color: rgba(27, 31, 35, 0.335);
+  }
+  .code {
+    padding: 0;
+  }
+}
+
+//
+//    _|      _|
+//  _|_|_|_|  _|_|_|      _|_|    _|_|_|  _|_|      _|_|
+//    _|      _|    _|  _|_|_|_|  _|    _|    _|  _|_|_|_|
+//    _|      _|    _|  _|        _|    _|    _|  _|
+//      _|_|  _|    _|    _|_|_|  _|    _|    _|    _|_|_|
+//
+//
+
+.highlight {
+  // name
+  .n  { color: dodgerblue }
+  .nn { color: dodgerblue } // namespace
+  .nd { color: dodgerblue } // decorator
+
+  // operator
+  .o  {}
+
+  // keyword
+  .k  { color: darkorchid }
+  .kt { color: navy } // type
+
+  // number
+  .mi { color: darkcyan } // integer
+}

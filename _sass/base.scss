@@ -51,9 +51,10 @@ $ui-color: #595959;
 
 $font-text: "Linux Libertine O", FreeSerif, "Times New Roman", Times, Baskerville, "Baskerville Old Face", serif;
 $font-emph: "Linux Biolinum O", FreeSans, "Myriad Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Segoe UI, sans-serif;
+$font-code: "Source Code Pro", Inconsolata, Menlo, Monaco, Consolas, monospace, serif;
 $font-text-ja: IPAexMincho, YuMincho, "Hiragino Mincho ProN", "Yu Mincho", HGSMinchoE, Meiryo, sans-serif;
 $font-emph-ja: IPAexGothic, YuGothic, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-$font-code: CodeM, Ricty, "Source Han Code JP", Myrica, "IPAGothic", Osaka-mono, "MS Gothic", monospace, serif;
+$font-code-ja: CodeM, Ricty, "Source Han Code JP", Myrica, "IPAGothic", Osaka-mono, "MS Gothic", monospace, serif;
 
 //
 //      _|_|                        _|
@@ -78,6 +79,11 @@ dt > dfn, dfn, em {
 a {
   font-family: $font-text;
   &:lang(ja) { font-family: $font-text-ja }
+}
+
+pre, code {
+  font-family: $font-code;
+  &:lang(ja) { font-family: $font-code-ja }
 }
 
 //
