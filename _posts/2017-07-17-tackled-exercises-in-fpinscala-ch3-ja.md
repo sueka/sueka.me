@@ -358,6 +358,7 @@ def zipWith[A, B, C](as: List[A], bs: List[B])(f: (A, B) => C): List[C] = (as, b
 この問題の直前で Scala 標準ライブラリの `List` について言及され、いくつかのメソッドが紹介されてゐるので、以後の回答では、本で実装してゐる `List` ではなく、標準ライブラリの `List` を使ひます。
 
 {% highlight scala linenos %}
+@annotation.tailrec
 def startWith[A](as: List[A], subAs: List[A]): Boolean = (as, subAs) match {
   case (_, Nil) => true
   case (x :: xs, subX :: subXs) if (x == subX) => startWith(xs, subXs)
