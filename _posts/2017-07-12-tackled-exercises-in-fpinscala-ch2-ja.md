@@ -5,10 +5,10 @@ tags: exercise fpinscala scala functional
 title: fpinscala 第2章の練習問題を解いた
 ---
 
-[『Scala関数型デザイン&amp;プログラミング ―Scalazコントリビューターによる関数型徹底ガイド』](https://www.amazon.co.jp/dp/4844337769)第2章の練習問題を解きました。
+[『 Scala 関数型デザイン&amp;プログラミング ― Scalaz コントリビューターによる関数型徹底ガイド』](https://www.amazon.co.jp/dp/4844337769)第2章「 Scala 関数型プログラミングの準備」の練習問題を解きました。
 
 <aside class="note">
-この記事には、『Scala関数型デザイン&amp;プログラミング ―Scalazコントリビューターによる関数型徹底ガイド』の練習問題の解答が含まれてゐます。ご注意下さい。なほ、この本の練習問題の解答は、本には収録されてゐませんが、著者の GitHub リポジトリ <a href="https://github.com/fpinscala/fpinscala">fpinscala/fpinscala</a> で公開されてゐます。
+この記事には、『 Scala 関数型デザイン&amp;プログラミング ― Scalaz コントリビューターによる関数型徹底ガイド』の練習問題の解答が含まれてゐます。ご注意下さい。なほ、この本の練習問題の解答は、本には収録されてゐませんが、著者の GitHub リポジトリ <a href="https://github.com/fpinscala/fpinscala">fpinscala/fpinscala</a> で公開されてゐます。
 </aside>
 
 ## 練習問題 2.1
