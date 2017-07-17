@@ -40,7 +40,7 @@ def tail(xs: List[_]) = xs match {
 }
 {% endhighlight %}
 
-`Nil` の場合の選択肢としては、 `Unit` 値を返す、 `@annotation.unchecked` アノテーションを使ふ、 Maybe モナドや Either モナドを使ふなどの方法が考へられますが、この点は次章で勉強したいです。
+`Nil` の場合の選択肢としては、例外を投げる、 `Unit` 値を返す、 `@annotation.unchecked` アノテーションを使ふ、 Maybe モナドや Either モナドを使ふなどの方法が考へられますが、この点は次章で勉強したいです。
 
 ## 練習問題 3.3
 
