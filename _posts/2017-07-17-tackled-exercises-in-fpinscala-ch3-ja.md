@@ -212,7 +212,7 @@ def foldRight[A, B](as: List[A], z: B)(acc: (A, B) => B): B =
   foldLeft(reverse(as), z)(acc)
 {% endhighlight %}
 
-前者の手抜きな方法として、末尾に要素を追加する関数を畳み込み関数とすることで `reverse` を実装するといふ方法があります。:
+前者の手抜きな方法として、末尾に要素を追加する関数を畳み込み関数とすることで `reverse` を実装するといふものがあります。:
 
 {% highlight scala linenos %}
 def push[A](as: List[A], a: A) = foldRight(as, Cons(a, Nil))(Cons(_, _))
