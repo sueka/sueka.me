@@ -1,7 +1,7 @@
 ---
 layout: post
 lang: ja
-tags: exercise pfds sml
+tags: exercise pfds sml functional
 title: PFDS 第2章の演習問題を解いた
 ---
 
