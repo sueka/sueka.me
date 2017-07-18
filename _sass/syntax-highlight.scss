@@ -54,6 +54,10 @@
   .k  { color: darkorchid }
   .kt { color: navy } // type
   .kc { color: deeppink } // constant
+  .kr { color: darkorchid } // reserved
+  .k, .kr {
+    font-weight: 700;
+  }
 
   // number
   .mi { color: darkcyan } // integer
