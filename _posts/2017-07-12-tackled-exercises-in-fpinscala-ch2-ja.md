@@ -2,16 +2,16 @@
 layout: post
 lang: ja
 tags: exercise fpinscala scala functional
-title: fpinscala 第2章の練習問題を解いた
+title: fpinscala 第2章の EXERCISE を解いた
 ---
 
-[『 Scala 関数型デザイン&amp;プログラミング ― Scalaz コントリビューターによる関数型徹底ガイド』](https://www.amazon.co.jp/dp/4844337769)第2章「 Scala 関数型プログラミングの準備」の練習問題を解きました。
+[『 Scala 関数型デザイン&amp;プログラミング ― Scalaz コントリビューターによる関数型徹底ガイド』](https://www.amazon.co.jp/dp/4844337769)第2章「 Scala 関数型プログラミングの準備」の EXERCISE を解きました。
 
 <aside class="note">
-この記事には、『 Scala 関数型デザイン&amp;プログラミング ― Scalaz コントリビューターによる関数型徹底ガイド』の練習問題の解答が含まれてゐます。ご注意下さい。なほ、この本の練習問題の解答は、本には収録されてゐませんが、著者の GitHub リポジトリ <a href="https://github.com/fpinscala/fpinscala">fpinscala/fpinscala</a> で公開されてゐます。
+この記事には、『 Scala 関数型デザイン&amp;プログラミング ― Scalaz コントリビューターによる関数型徹底ガイド』の EXERCISE の解答が含まれてゐます。ご注意下さい。なほ、この本の EXERCISE の解答は、本には収録されてゐませんが、著者の GitHub リポジトリ <a href="https://github.com/fpinscala/fpinscala">fpinscala/fpinscala</a> で公開されてゐます。
 </aside>
 
-## 練習問題 2.1
+## EXERCISE 2.1
 
 > {% katex %} n {% endkatex %} 番目のフィボナッチ数を取得する再帰関数を記述せよ。最初の2つのフィボナッチ数は {% katex %} 0 {% endkatex %} と {% katex %} 1 {% endkatex %} である。 {% katex %} n {% endkatex %} 番目の数字は常に前の2つの数字の合計となる。この数列は {% katex %} 0, 1, 1, 2, 3, 5 {% endkatex %} のように始まる。再帰関数の定義では、ローカルな末尾再帰関数を使用すること。
 >
@@ -34,7 +34,7 @@ def fib(n: Int): Int = {
 }
 {% endhighlight %}
 
-## 練習問題 2.2
+## EXERCISE 2.2
 
 > 指定された比較関数に従って `Array[A]` がソートされているかどうかを調べる `isSorted` を実装せよ。
 >
@@ -54,7 +54,7 @@ def isSorted[A](as: Array[A], ordered: (A, A) => Boolean): Boolean = {
 }
 {% endhighlight %}
 
-## 練習問題 2.3
+## EXERCISE 2.3
 
 > カリー化 <span lang="en">(currying)</span> では、引数2つの関数 `f` が、 `f` を部分的に適用する引数1つの関数に変換される。この場合も、コンパイルできる実装は1つだけである。この実装を記述せよ。
 >
@@ -68,7 +68,7 @@ def curry[A, B, C](f: (A, B) => C): A => (B => C) = {
 }
 {% endhighlight %}
 
-## 練習問題 2.4
+## EXERCISE 2.4
 
 > `curry` による変換を逆向きに行う `uncurry` を実装せよ。 `=>` は右結合であるため、 `A => (B => C)` は `A => B => C` と記述できる。
 >
@@ -82,7 +82,7 @@ def uncurry[A, B, C](f: A => B => C): (A, B) => C = {
 }
 {% endhighlight %}
 
-## 練習問題 2.5
+## EXERCISE 2.5
 
 > 2つの関数を合成する高階関数を実装せよ。
 >
