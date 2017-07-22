@@ -12,7 +12,7 @@ title: PFDS 第2章の演習問題を解いた
 </aside>
 
 <aside class="note">
-SML の予約語を削除してしまふといふ Rouge のバグ (<a href="https://github.com/jneen/rouge/issues/657">issue</a>, <a href="https://github.com/jneen/rouge/commit/3796474cab24868def5ffabcd3678b7b1f0911d5">fix</a>) を回避するかっこいい方法を思ひ付かなかったので、この記事では Gist スニペットを使ひます。
+SML の予約語を削除してしまふ Rouge のバグ (<a href="https://github.com/jneen/rouge/issues/657">issue</a>, <a href="https://github.com/jneen/rouge/commit/3796474cab24868def5ffabcd3678b7b1f0911d5">fix</a>) を回避するかっこいい方法を思ひ付かなかったので、この記事では Gist スニペットを使ひます。
 </aside>
 
 ## 演習問題 2.1
