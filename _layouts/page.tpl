@@ -8,11 +8,15 @@
 {% include head.inc %}
 </head>
 <body>
+<main>
+
 <h1>{{ page.title }}</h1>
 
 {% include languages.inc this-lang=page-lang %}
 
 {{ content }}
+
+</main>
 
 {% include recent-posts.inc this-lang=page-lang %}
 
