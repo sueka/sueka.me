@@ -29,7 +29,7 @@ SML の予約語を削除してしまふ Rouge のバグ (<a href="https://githu
 
 `suffixes` は、高々 {% katex %} n 1 {% endkatex %} 回しか呼び出されず、各呼び出しには、空リストの構築、 `::` によるパターンマッチング、 `::` の呼び出しだけが含まれます。これらの呼び出しの計算時間は {% katex %} O(1) {% endkatex %} なので、 `suffixes` は {% katex %} O(n) {% endkatex %} で動作します。また、 `suffixes (x :: xs)` は `xs` を共有してゐるので、その結果は {% katex %} O(n) {% endkatex %} の空間で表現できます。
 
-## 演習問題 2.2 (Andersson \[And91])
+## 演習問題 2.2 (Andersson \[And91\])
 
 > 最悪の場合、 `member` はほぼ {% katex %} 2d {% endkatex %} 回の比較を行う（ {% katex %} d {% endkatex %} は木の深さ）。 `member` 関数を書き換えて、比較の回数が {% katex %} d+1 {% endkatex %} 回以下になるようにしよう。見つけたい要素と等しい*かもしれない*要素の候補（つまり、 {% katex %} \lt {% endkatex %} が `false` を返したり、 {% katex %} \leq {% endkatex %} が `true` を返したりした最後の要素）を保持しておき、木の底にたどり着いたときに限って等価性の検査を行えばよい。
 
