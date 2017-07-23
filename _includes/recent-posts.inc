@@ -1,4 +1,4 @@
-{% assign in-langs = site.data.languages | where: 'langcode', include.this-lang %}
+{% assign in-langs = site.data.translations | where: 'langcode', include.this-lang %}
 {% for _ in in-langs %}{% assign in-lang = _ %}{% endfor %}
 
 <nav>

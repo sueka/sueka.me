@@ -15,7 +15,7 @@ title: Tag list
 <body>
 <h1>{{ page.title }}</h1>
 
-{% assign in-langs = site.data.languages | where: 'langcode', self-lang %}
+{% assign in-langs = site.data.translations | where: 'langcode', self-lang %}
 {% for _ in in-langs %}{% assign date-format-in-lang = _.date-format %}{% endfor %}
 
 {% for tag in site.tags %}
