@@ -153,7 +153,7 @@ def length[A](as: List[A]) = foldRight(as, 0)((_, res) => res + 1)
 
 ## EXERCISE 3.10
 
-> この `foldRight` の実装は末尾再帰ではなく、リストが大きい場合は `StackOverflowError` になってしまう。これを**スタックセーフ**ではないと言う。そうした状況であると仮定し、前章で説明した手法を使って、リスト再帰の総称関数 `foldLeft` を記述せよ。シグネチャは以下のとおり。
+> この `foldRight` の実装は末尾再帰ではなく、リストが大きい場合は `StackOverflowError` になってしまう。これを*スタックセーフ*ではないと言う。そうした状況であると仮定し、前章で説明した手法を使って、リスト再帰の総称関数 `foldLeft` を記述せよ。シグネチャは以下のとおり。
 >
 > ``` scala
 > def foldLeft[A,B](as: List[A], z: B)(f: (B, A) => B): B
