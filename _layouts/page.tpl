@@ -5,7 +5,7 @@
 <html lang="{{ page-lang }}">
 <head>
 <title>{{ page.title }}</title>
-{% include head.inc %}
+{% include head.inc this-lang=page-lang %}
 </head>
 <body>
 <main>
