@@ -1,4 +1,4 @@
-{% if page.ref %}
+{% if page.interlanguage-id %}
 
 {% assign in-langs = site.data.translations | where: 'langcode', include.this-lang %}
 {% for _ in in-langs %}{% assign languages-in-lang = _.languages %}{% endfor %}
@@ -14,7 +14,7 @@
   <ul>
   {% for object in objects %}
     {% assign object-lang = object.lang | default: site.lang %}
-    {% if object.ref == page.ref and object-lang != include.this-lang %}
+    {% if object.interlanguage-id == page.interlanguage-id and object-lang != include.this-lang %}
       {% assign in-langs = site.data.translations | where: 'langcode', object-lang %}
       {% for _ in in-langs %}{% assign in-lang = _ %}{% endfor %}
       <li><a lang="{{ object-lang }}" rel="alternate" href="{{ object.url }}" hreflang="{{ object-lang }}">{{ in-lang.name }}</a></li>

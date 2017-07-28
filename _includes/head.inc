@@ -6,7 +6,7 @@
 <link rel="canonical" href="{{ page.url | replace:"index.html","" | absolute_url }}" />
 
 {% comment %} Languages {% endcomment %}
-{% if page.ref %}
+{% if page.interlanguage-id %}
 
 {% if page.layout == 'page' %}
   {% assign objects = site.pages %}
@@ -15,7 +15,7 @@
 {% endif %}
 
 {% for object in objects %}
-  {% if object.ref == page.ref and object.lang != page.lang %}
+  {% if object.interlanguage-id == page.interlanguage-id and object.lang != page.lang %}
     <link rel="alternate" href="{{ object.url }}" herflang="{{ object.lang | default: site.lang }}" />
   {% endif %}
 {% endfor %}

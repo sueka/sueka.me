@@ -1,7 +1,7 @@
 ---
 layout: page
 title: sueka.me
-ref: index
+interlanguage-id: index
 lang: ja
 ---
 
