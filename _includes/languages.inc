@@ -6,7 +6,7 @@
 {% if page.layout == "post" %}
   {% assign objects = site.posts %}
 {% else %}
-  {% assign objects = site.pages | where: "layout", page.layout %}
+  {% assign objects = site.pages %}
 {% endif %}
 
 <nav>
