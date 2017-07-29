@@ -8,10 +8,10 @@
 {% comment %} Languages {% endcomment %}
 {% if page.interlanguage-id %}
 
-{% if page.layout == 'page' %}
-  {% assign objects = site.pages %}
-{% else %}
+{% if page.layout == 'post' %}
   {% assign objects = site.posts %}
+{% else %}
+  {% assign objects = site.pages %}
 {% endif %}
 
 {% for object in objects %}
