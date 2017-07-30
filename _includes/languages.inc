@@ -12,14 +12,14 @@
 <nav>
   <h3>{{ languages-in-lang }}</h3>
   <ul>
-  {% for object in objects %}
-    {% assign object-lang = object.lang | default: site.lang %}
-    {% if object.interlanguage-id == page.interlanguage-id and object-lang != include.this-lang %}
-      {% assign in-langs = site.data.translations | where: 'langcode', object-lang %}
-      {% for _ in in-langs %}{% assign in-lang = _ %}{% endfor %}
-      <li><a lang="{{ object-lang }}" rel="alternate" href="{{ object.url }}" hreflang="{{ object-lang }}">{{ in-lang.name }}</a></li>
-    {% endif %}
-  {% endfor %}
+    {% for object in objects %}
+      {% assign object-lang = object.lang | default: site.lang %}
+      {% if object.interlanguage-id == page.interlanguage-id and object-lang != include.this-lang %}
+        {% assign in-langs = site.data.translations | where: 'langcode', object-lang %}
+        {% for _ in in-langs %}{% assign in-lang = _ %}{% endfor %}
+        <li><a lang="{{ object-lang }}" rel="alternate" href="{{ object.url }}" hreflang="{{ object-lang }}">{{ in-lang.name }}</a></li>
+      {% endif %}
+    {% endfor %}
   </ul>
 </nav>
 
