@@ -10,11 +10,11 @@ title: Tag list
   <section id="tag_{{ tag[0] }}">
     <h2>{{ tag[0] }}</h2>
     <ul>
-    {% for post in tag[1] %}
-      {% assign post-lang = post.lang | default: site.lang %}
-      {% comment %} May specified "lang: en" in the post {% endcomment %}
-      <li>{{ post.date | date: date-format-in-lang }} - <a {% if post-lang != self-lang %} lang="{{ post-lang }}" {% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
+      {% for post in tag[1] %}
+        {% assign post-lang = post.lang | default: site.lang %}
+        {% comment %} May specified "lang: en" in the post {% endcomment %}
+        <li>{{ post.date | date: date-format-in-lang }} - <a {% if post-lang != self-lang %} lang="{{ post-lang }}" {% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
     </ul>
   </section>
 {% endfor %}
