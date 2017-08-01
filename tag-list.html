@@ -3,7 +3,8 @@ layout: list
 title: Tag list
 ---
 
-{% assign in-langs = site.data.translations | where: 'langcode', self-lang %}
+{% assign page-lang = page.lang | default: site.lang %}
+{% assign in-langs = site.data.translations | where: 'langcode', page-lang %}
 {% for _ in in-langs %}{% assign date-format-in-lang = _.date-format %}{% endfor %}
 
 {% for tag in site.tags %}
