@@ -1,0 +1,20 @@
+.gist {
+  table, table th, table td {
+    border: unset;
+  }
+
+  .highlight {
+    line-height: 1.618 !important;
+    font-size: unset !important;
+  }
+
+  .blob-num,
+  .blob-code-inner {
+    line-height: unset !important;
+    font-size: unset !important;
+    font-family: $font-code !important;
+    &:lang(ja) { font-family: $font-code-ja !important }
+  }
+
+  font-size: 1rem !important;
+}
