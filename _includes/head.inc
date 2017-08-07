@@ -17,7 +17,7 @@
 {% for object in objects %}
   {% assign object-lang = object.lang | default: site.lang %}
   {% if object.interlanguage-id == page.interlanguage-id and object-lang != include.this-lang %}
-    <link rel="alternate" href="{{ object.url }}" herflang="{{ object-lang }}" />
+    <link rel="alternate" href="{{ object.url }}" hreflang="{{ object-lang }}" />
   {% endif %}
 {% endfor %}
 
