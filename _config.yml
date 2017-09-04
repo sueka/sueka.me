@@ -13,6 +13,7 @@ twitter_username: sueka_me
 github_username: sueka
 
 exclude:
+  - spec/
   - Gemfile
   - Gemfile.lock
   - README.md
