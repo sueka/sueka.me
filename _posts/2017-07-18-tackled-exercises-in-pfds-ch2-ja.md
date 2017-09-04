@@ -27,7 +27,7 @@ SML の予約語を削除してしまふ Rouge のバグ (<a href="https://githu
 
 {% gist sueka/74b1f557128981f6fdbd952a1106d08d %}
 
-`suffixes` は、高々 {% katex %} n 1 {% endkatex %} 回しか呼び出されず、各呼び出しには、空リストの構築、 `::` によるパターンマッチング、 `::` の呼び出しだけが含まれます。これらの呼び出しの計算時間は {% katex %} O(1) {% endkatex %} なので、 `suffixes` は {% katex %} O(n) {% endkatex %} で動作します。また、 `suffixes (x :: xs)` は `xs` を共有してゐるので、その結果は {% katex %} O(n) {% endkatex %} の空間で表現できます。
+`suffixes` は、高々 {% katex %} n + 1 {% endkatex %} 回しか呼び出されず、各呼び出しには、空リストの構築、 `::` によるパターンマッチング、 `::` の呼び出しだけが含まれます。これらの呼び出しの計算時間は {% katex %} O(1) {% endkatex %} なので、 `suffixes` は {% katex %} O(n) {% endkatex %} で動作します。また、 `suffixes (x :: xs)` は `xs` を共有してゐるので、その結果は {% katex %} O(n) {% endkatex %} の空間で表現できます。
 
 ## 演習問題 2.2 (Andersson \[And91\])
 
