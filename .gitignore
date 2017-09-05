@@ -5,3 +5,5 @@ _site/
 .directory
 .jekyll-metadata
 Gemfile.lock
+.bundle
+vendor/
