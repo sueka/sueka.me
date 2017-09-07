@@ -1,0 +1,19 @@
+sudo: false
+language: ruby
+rvm: 2.4.1
+install:
+  - gem install bundler
+  - bundle install --deployment
+cashe:
+  directories: vendor/bundle
+script:
+  - bundle exec jekyll b
+  - bundle exec htmlproofer _site/ --disable-external
+branches:
+  only:
+    - master
+    - develop
+notifications:
+  email:
+    on_success: never
+    on_failure: change
