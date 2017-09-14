@@ -18,6 +18,10 @@ GEM
     childprocess (0.7.1)
       ffi (~> 1.0, >= 1.0.11)
     cliver (0.3.2)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.11.1)
     colorator (1.1.0)
     colored (1.2)
     concurrent-ruby (1.0.5)
@@ -50,6 +54,9 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-coffeescript (1.0.2)
+      coffee-script (~> 2.2)
+      coffee-script-source (~> 1.11.1)
     jekyll-gist (1.4.1)
       octokit (~> 4.2)
     jekyll-katex (0.1.2)
@@ -137,6 +144,7 @@ DEPENDENCIES
   capybara
   html-proofer
   jekyll
+  jekyll-coffeescript
   jekyll-gist
   jekyll-katex
   phantomjs-binaries

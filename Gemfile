@@ -4,6 +4,7 @@ gem "jekyll"
 group :jekyll_plugins do
   gem "jekyll-gist"
   gem "jekyll-katex"
+  gem "jekyll-coffeescript"
 end
 
 group :test do
