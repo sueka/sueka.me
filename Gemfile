@@ -13,5 +13,8 @@ group :test do
   gem "phantomjs-binaries"
   gem "poltergeist"
   gem "selenium-webdriver"
+end
+
+group :lint do
   gem "html-proofer"
 end
