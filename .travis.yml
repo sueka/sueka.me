@@ -7,7 +7,7 @@ install:
 cashe:
   directories: vendor/bundle
 script:
-  - bundle exec jekyll b
+  - bundle exec jekyll b --safe
   - bundle exec htmlproofer _site/ --disable-external
 branches:
   only:
