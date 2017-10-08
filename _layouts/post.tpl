@@ -16,6 +16,8 @@
 
 {% include languages.inc this-lang=page-lang %}
 
+{% include toc.inc this-lang=page-lang %}
+
 {{ content }}
 
 </main>
