@@ -13,6 +13,13 @@ iframe {
 }
 </style>
 
+## アカウントの一覧
+
+- [Twitter](//twitter.com/{{ site.twitter_username }})
+- [GitHub](//github.com/{{ site.github_username }})
+- [MDN](//developer.mozilla.org/ja/profiles/sueka)
+- [Stack Overflow](https://stackoverflow.com/users/8795737/h-sueka)
+
 ## スケジュール
 
 ほとんどの予定は時間枠しか公開してをらず、とくに私以外の人が参加者としてマークされてゐる予定の詳細を公開することはありません。
