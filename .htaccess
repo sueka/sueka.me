@@ -1,6 +1,11 @@
 ErrorDocument 403 /http/403.html
 ErrorDocument 404 /http/404.html
 
+<If "%{REQUEST_URI} =~ /ja$/">
+  ErrorDocument 403 /http/403-ja.html
+  ErrorDocument 404 /http/404-ja.html
+</If>
+
 RewriteEngine On
 RewriteBase /
 RewriteCond %{HTTP_HOST} ^www\. [OR]
