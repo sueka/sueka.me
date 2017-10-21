@@ -10,6 +10,7 @@ iframe {
   max-width: calc(100vw - 1.236em);
   height: 600px;
   max-height: calc(75vw - 0.927em);
+  min-height: calc(50vh - 0.927em);
 }
 </style>
 
