@@ -48,6 +48,7 @@ h1, p { margin: 0 auto }
 $bg-color: white;
 $fg-color: #363636;
 $ui-color: #595959;
+$accent-color: springgreen;
 
 $link-color: dodgerblue;
 $visited-color: darkorchid;
@@ -86,6 +87,16 @@ a, span[lang] {
 pre, code {
   font-family: $font-code;
   &:lang(ja) { font-family: $font-code-ja }
+}
+
+body > header {
+  & > nav > ul > li > a {
+    font-weight: 500;
+    font-family: $font-emph;
+    &:lang(ja) {
+      font-family: $font-emph-ja;
+    }
+  }
 }
 
 //
@@ -185,6 +196,49 @@ blockquote {
   }
 }
 
+body > header {
+  display: flex;
+  & > h1 {
+    font-size: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    & > a:link {
+      display: flex;
+      padding: 0.618em;
+      & > img {
+        width: 24px;
+        height: 24px;
+      }
+      &:hover > img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  & > nav > ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    & > li {
+      display: block;
+      & > a:link {
+        display: block;
+        padding: 0.618em 1em;
+        height: 24px;
+      }
+    }
+  }
+
+  a:link,
+  a:visited {
+    &:hover {
+      border: 0;
+    }
+  }
+}
+
 main {
   margin: 0 0.618em;
 }
@@ -215,6 +269,33 @@ footer {
   font-family: $font-emph;
   margin-left: -4.236em;
   float: left;
+}
+
+//
+//        _|
+//    _|_|_|    _|_|      _|_|_|    _|_|    _|  _|_|
+//  _|    _|  _|_|_|_|  _|        _|    _|  _|_|
+//  _|    _|  _|        _|        _|    _|  _|
+//    _|_|_|    _|_|_|    _|_|_|    _|_|    _|
+//
+//
+
+body > header {
+  background-color: $accent-color;
+  color: $fg-color;
+  & > h1 > a:link {
+    &, & > img {
+      transition: 180ms ease;
+    }
+  }
+  a:link, a:visited {
+    color: $bg-color;
+    border-color: $bg-color;
+    &:hover {
+      background-color: $bg-color;
+      color: $accent-color;
+    }
+  }
 }
 
 //
