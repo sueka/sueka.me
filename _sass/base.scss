@@ -18,7 +18,9 @@ body {
   margin: 0;
 }
 
-h1, p { margin: 0 auto }
+h1, p {
+  margin: 0 auto;
+}
 
 //
 //                      _|            _|
@@ -67,22 +69,34 @@ $font-code-ja: CodeM, Ricty, "Source Han Code JP", Myrica, "IPAGothic", Menlo, "
 
 html {
   font: 19.2px $font-text;
-  &:lang(ja) { font-family: $font-text-ja }
+  &:lang(ja) {
+    font-family: $font-text-ja;
+  }
 }
 h1, h2, h3, h4, h5, h6, th, dt, dt > b, strong {
-  font-weight: 500; font-family: $font-emph;
-  &:lang(ja) { font-family: $font-emph-ja }
+  font-weight: 500;
+  font-family: $font-emph;
+  &:lang(ja) {
+    font-family: $font-emph-ja;
+  }
 }
 dt > dfn, dfn, em {
-  &:lang(ja) { font-style: normal; font-family: $font-emph-ja }
+  &:lang(ja) {
+    font-style: normal;
+    font-family: $font-emph-ja;
+  }
 }
 a, span[lang] {
   font-family: $font-text;
-  &:lang(ja) { font-family: $font-text-ja }
+  &:lang(ja) {
+    font-family: $font-text-ja;
+  }
 }
 pre, code {
   font-family: $font-code;
-  &:lang(ja) { font-family: $font-code-ja }
+  &:lang(ja) {
+    font-family: $font-code-ja;
+  }
 }
 
 //
@@ -96,7 +110,10 @@ pre, code {
 
 html {
   text-align: justify;
-  &:lang(ja) { text-align: left; text-align: start }
+  &:lang(ja) {
+    text-align: left;
+    text-align: start;
+  }
   line-height: 1.618;
 }
 
@@ -156,12 +173,24 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 1.618em 0 0.618em;
 }
-h1 { font-size: 196.6% }
-h2 { font-size: 161.8% }
-h3 { font-size: 134.8% }
-h4 { font-size: 115.5% }
-h5 { font-size: 103.9% }
-h6 { font-size: 100.0% }
+h1 {
+  font-size: 196.6%;
+}
+h2 {
+  font-size: 161.8%;
+}
+h3 {
+  font-size: 134.8%;
+}
+h4 {
+  font-size: 115.5%;
+}
+h5 {
+  font-size: 103.9%;
+}
+h6 {
+  font-size: 100.0%;
+}
 
 p, ul, ol {
   margin: 0.618em 0 1.618em;
@@ -176,8 +205,12 @@ blockquote {
   & > table, & > figure, & > pre,
   & > ul, & > ol, & > dl,
   & > p {
-    &:first-child { margin-top: 0 }
-    &:last-child { margin-bottom: 0 }
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   & > p {
     margin-top: 0.618em;
@@ -188,8 +221,10 @@ blockquote {
 footer {
   border-top: 1px dashed $ui-color;
   margin: 1.618em 0 0.618em;
-  &:last-child { margin-bottom: 0 }
   padding: 0 0 1px;
+  &:last-child {
+    margin-bottom: 0;
+  }
   & > p {
     margin-bottom: 0;
   }
