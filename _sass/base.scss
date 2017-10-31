@@ -50,6 +50,10 @@ h1, p {
 $bg-color: white;
 $fg-color: #363636;
 $ui-color: #595959;
+$accent-color: springgreen;
+
+$link-color: dodgerblue;
+$visited-color: darkorchid;
 
 $font-text: "Linux Libertine O", FreeSerif, "Times New Roman", Times, Baskerville, "Baskerville Old Face", serif;
 $font-emph: "Linux Biolinum O", FreeSans, "Myriad Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Segoe UI, sans-serif;
@@ -99,6 +103,16 @@ pre, code {
   }
 }
 
+body > header {
+  & > nav > ul > li > a {
+    font-weight: 500;
+    font-family: $font-emph;
+    &:lang(ja) {
+      font-family: $font-emph-ja;
+    }
+  }
+}
+
 //
 //    _|                            _|
 //  _|_|_|_|    _|_|    _|    _|  _|_|_|_|
@@ -136,7 +150,6 @@ q {
 //
 
 a:link {
-  $link-color: dodgerblue;
   text-decoration: none;
   color: $link-color;
   border-bottom: 0 dashed $link-color;
@@ -146,7 +159,6 @@ a:link {
 }
 
 a:visited {
-  $visited-color: darkorchid;
   color: $visited-color;
   border-bottom-color: $visited-color;
 }
@@ -167,7 +179,6 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 0 0.618em 0.382em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -218,6 +229,57 @@ blockquote {
   }
 }
 
+body > header {
+  display: flex;
+  & > h1 {
+    font-size: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    & > a:link {
+      display: flex;
+      padding: 0.618em;
+      & > img {
+        width: 24px;
+        height: 24px;
+      }
+      &:hover > img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  & > nav > ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    & > li {
+      display: block;
+      & > a:link {
+        display: block;
+        padding: 0.618em 1em;
+        height: 24px;
+      }
+    }
+  }
+
+  a:link,
+  a:visited {
+    &:hover {
+      border: 0;
+    }
+  }
+}
+
+main {
+  margin: 0 0.618em;
+}
+
+.recent-posts {
+  margin: 0 0.618em;
+}
+
 footer {
   border-top: 1px dashed $ui-color;
   margin: 1.618em 0 0.618em;
@@ -242,6 +304,33 @@ footer {
   font-family: $font-emph;
   margin-left: -4.236em;
   float: left;
+}
+
+//
+//        _|
+//    _|_|_|    _|_|      _|_|_|    _|_|    _|  _|_|
+//  _|    _|  _|_|_|_|  _|        _|    _|  _|_|
+//  _|    _|  _|        _|        _|    _|  _|
+//    _|_|_|    _|_|_|    _|_|_|    _|_|    _|
+//
+//
+
+body > header {
+  background-color: $accent-color;
+  color: $fg-color;
+  & > h1 > a:link {
+    &, & > img {
+      transition: 180ms ease;
+    }
+  }
+  a:link, a:visited {
+    color: $bg-color;
+    border-color: $bg-color;
+    &:hover {
+      background-color: $bg-color;
+      color: $accent-color;
+    }
+  }
 }
 
 //

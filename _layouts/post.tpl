@@ -8,6 +8,9 @@
 {% include head.inc this-lang=page-lang %}
 </head>
 <body>
+
+{% include header.inc this-lang=page-lang %}
+
 <main>
 
 <h1>{{ page.title }}</h1>
