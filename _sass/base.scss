@@ -319,10 +319,8 @@ footer {
 body > header {
   background-color: $accent-color;
   color: $fg-color;
-  & > h1 > a:link {
-    &, & > img {
-      transition: 180ms ease;
-    }
+  & > h1 > a:link > img {
+    transition: 180ms ease;
   }
   a:link, a:visited {
     color: $bg-color;
