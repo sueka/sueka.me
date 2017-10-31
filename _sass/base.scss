@@ -151,7 +151,6 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 0 0.618em 0.382em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -186,11 +185,19 @@ blockquote {
   }
 }
 
+main {
+  margin: 0 0.618em;
+}
+
+.recent-posts {
+  margin: 0 0.618em;
+}
+
 footer {
   border-top: 1px dashed $ui-color;
-  margin: 1.618em 0 0.618em;
   &:last-child { margin-bottom: 0 }
-  padding: 0 0 1px;
+  margin: 1.618em 0.618em 0.618em;
+  padding: 0 0 0.382em;
   & > p {
     margin-bottom: 0;
   }
