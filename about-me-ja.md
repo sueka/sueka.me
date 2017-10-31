@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 私について
+interlanguage-id: about-me
 lang: ja
 ---
 
