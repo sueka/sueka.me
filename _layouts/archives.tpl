@@ -16,7 +16,7 @@
 {% elsif page.type == "month" %}
   <h1>Posts on {{ page.date | date: "%B %Y" }}</h1>
 {% elsif page.type == "tag" %}
-  <h1>Posts tagged with <strong>{{ page.title }}</strong></h1>
+  <h1>Posts tagged with <em>{{ page.title }}</em></h1>
 {% endif %}
 
 <ul class="posts">
