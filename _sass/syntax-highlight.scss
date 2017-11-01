@@ -10,6 +10,10 @@
 .highlight {
   margin: 0.618em 0 1.618em;
   padding: 0 1.618em;
+  code {
+    display: block;
+    overflow-x: auto;
+  }
   table {
     border: none;
     margin: 0;
