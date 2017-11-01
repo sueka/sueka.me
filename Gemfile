@@ -6,6 +6,7 @@ group :jekyll_plugins do
   gem "jekyll-katex"
   gem "jekyll-coffeescript"
   gem "jekyll-toc"
+  gem "jekyll-archives"
 end
 
 group :test do
