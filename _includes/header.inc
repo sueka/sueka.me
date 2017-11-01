@@ -1,6 +1,3 @@
-{% capture license %}<a href="{{ site.license_url }}">{{ site.license }}</a>{% endcapture %}
-{% capture repository %}<a href="https://github.com/{{ site.github_repo }}">{{ site.github_repo }}</a>{% endcapture %}
-
 <header>
 
 {% if include.this-lang == "ja" %}
