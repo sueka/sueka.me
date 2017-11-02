@@ -19,10 +19,13 @@
 
   // w/ linenos
   table {
+    display: block;
     border: none;
     margin: 0;
     & > tbody {
+      display: block;
       & > tr {
+        display: flex;
         & > td {
           border: none;
           & > pre {
@@ -35,6 +38,7 @@
             color: rgba(27, 31, 35, 0.333);
           }
           &.code {
+            overflow-x: auto;
             padding: 0;
           }
         }
