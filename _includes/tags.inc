@@ -7,7 +7,7 @@
   <h3>{{ tags-in-lang }}</h3>
   <ul>
     {% for tag in page.tags %}
-      <li><a href="/tag/{{ tag }}/">{{ tag }}</a></li>
+      <li><a href="/tags/{{ tag }}/">{{ tag }}</a></li>
     {% endfor %}
   </ul>
 </nav>
