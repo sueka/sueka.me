@@ -10,10 +10,14 @@
 .highlight {
   margin: 0.618em 0 1.618em;
   padding: 0 1.618em;
+
+  // w/o linenos
   & > code {
     overflow-x: auto;
     display: block;
   }
+
+  // w/ linenos
   table {
     border: none;
     margin: 0;
