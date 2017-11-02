@@ -21,7 +21,7 @@ iframe {
 - [MDN](//developer.mozilla.org/ja/profiles/sueka)
 - [Stack Overflow](https://stackoverflow.com/users/8795737/h-sueka)
 
-## Schedule
+## Calendar
 
 For most schedules, I will publicize only its slot.  I do not disclose the detail of a schedule that has someone other than me as participant.
 
