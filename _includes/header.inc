@@ -1,6 +1,8 @@
+{% assign page-lang = include.this-lang | default: page.lang | default: site.lang %}
+
 <header>
 
-{% if include.this-lang == "ja" %}
+{% if page-lang == "ja" %}
   <h1 class="home">
     <a href="{{ "/index-ja.html" | relative_url }}">
       <img alt="home" width="24" height="24" src="{{ "assets/images/favicon.svg" | relative_url }}" />

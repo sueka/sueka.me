@@ -1,4 +1,5 @@
-{% assign in-langs = site.data.translations | where: 'langcode', include.this-lang %}
+{% assign page-lang = include.this-lang | default: page.lang | default: site.lang %}
+{% assign in-langs = site.data.translations | where: 'langcode', page-lang %}
 {% for _ in in-langs %}{% assign date-format-in-lang = _.date-format %}{% endfor %}
 
 <ul>

@@ -1,3 +1,5 @@
+{% assign page-lang = include.this-lang | default: page.lang | default: site.lang %}
+
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,7 +18,7 @@
 
 {% for object in objects %}
   {% assign object-lang = object.lang | default: site.lang %}
-  {% if object.interlanguage-id == page.interlanguage-id and object-lang != include.this-lang %}
+  {% if object.interlanguage-id == page.interlanguage-id and object-lang != page-lang %}
     <link rel="alternate" href="{{ object.url }}" hreflang="{{ object-lang }}" />
   {% endif %}
 {% endfor %}

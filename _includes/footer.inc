@@ -1,9 +1,10 @@
 {% capture license %}<a href="{{ site.license_url }}">{{ site.license }}</a>{% endcapture %}
 {% capture repository %}<a href="https://github.com/{{ site.github_repo }}">{{ site.github_repo }}</a>{% endcapture %}
+{% assign page-lang = include.this-lang | default: page.lang | default: site.lang %}
 
 <footer>
 
-{% if include.this-lang == "ja" %}
+{% if page-lang == "ja" %}
   <p><a href="/index-ja.html">{{ site.title }}</a> のソースコードは {{ license }} でライセンスされ、 GitHub 上のリポジトリ {{ repository }} で公開されてゐます。</p>
 {% else %}
   <p>The source code of <a href="/">{{ site.title }}</a> is available on GitHub at {{ repository }} under the {{ license }}.</p>

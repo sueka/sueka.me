@@ -21,7 +21,7 @@
   <h1>Posts tagged with <em>{{ page.title }}</em></h1>
 {% endif %}
 
-{% include archives.inc this-lang=page-lang %}
+{% include archives.inc %}
 
 </main>
 

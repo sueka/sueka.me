@@ -5,27 +5,27 @@
 <html lang="{{ page-lang }}">
 <head>
 <title>{{ page.title }}</title>
-{% include head.inc this-lang=page-lang %}
+{% include head.inc %}
 </head>
 <body>
 
-{% include header.inc this-lang=page-lang %}
+{% include header.inc %}
 
 <main>
 
 <h1>{{ page.title }}</h1>
 
-{% include tags.inc this-lang=page-lang %}
+{% include tags.inc %}
 
-{% include languages.inc this-lang=page-lang %}
+{% include languages.inc %}
 
-{% include toc.inc this-lang=page-lang %}
+{% include toc.inc %}
 
 {{ content }}
 
 </main>
 
-{% include footer.inc this-lang=page-lang %}
+{% include footer.inc %}
 
 </body>
 </html>
