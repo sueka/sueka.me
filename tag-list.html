@@ -7,15 +7,20 @@ title: Tag list
 {% assign in-langs = site.data.translations | where: 'langcode', page-lang %}
 {% for _ in in-langs %}{% assign date-format-in-lang = _.date-format %}{% endfor %}
 
+{% assign routing-to-tags = site.jekyll-archives.permalinks.tag %}
+
 {% for tag in site.tags %}
   <section id="tag_{{ tag[0] }}">
     <h2>{{ tag[0] }}</h2>
     <ul>
-      {% for post in tag[1] %}
+      {% for post in tag[1] limit: 10 %}
         {% assign post-lang = post.lang | default: site.lang %}
         {% comment %} May specified "lang: en" in the post {% endcomment %}
         <li>{{ post.date | date: date-format-in-lang }} - <a {% if post-lang != self-lang %} lang="{{ post-lang }}" {% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </ul>
+    {% if tag[1].size > 10 %}
+      <p>There are <a href="{{ routing-to-tags | replace: ":name", tag[0] }}">more</a>.</p>
+    {% endif %}
   </section>
 {% endfor %}
