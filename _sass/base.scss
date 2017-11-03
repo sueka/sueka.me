@@ -248,19 +248,23 @@ body > header {
     }
   }
 
-  & > nav > ul {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    & > li {
-      display: block;
-      & > a:link {
+  & > nav {
+    overflow-x: auto;
+    & > ul {
+      display: flex;
+      white-space: nowrap;
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      & > li {
         display: block;
-        padding: 0.618em 1em;
-        height: 24px;
-        line-height: 24px;
+        & > a:link {
+          display: block;
+          padding: 0.618em 1em;
+          height: 24px;
+          line-height: 24px;
+        }
       }
     }
   }
