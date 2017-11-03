@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 
 {% assign page-lang = page.lang | default: site.lang %}
-{% assign in-langs = site.data.translations | where: 'langcode', page-lang %}
-{% for _ in in-langs %}{% assign date-format-in-lang = _.date-format %}{% endfor %}
 
 <html lang="{{ site.lang }}">
 <head>
@@ -23,14 +21,7 @@
   <h1>Posts tagged with <em>{{ page.title }}</em></h1>
 {% endif %}
 
-<ul class="posts">
-{% for post in page.posts %}
-  <li>
-    <span class="post-date">{{ post.date | date: date-format-in-lang }}</span>
-    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-  </li>
-{% endfor %}
-</ul>
+{% include archives.inc this-lang=page-lang %}
 
 </main>
 
