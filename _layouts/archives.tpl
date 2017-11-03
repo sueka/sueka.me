@@ -11,7 +11,7 @@
   {% endif %}
 {% endcapture %}
 
-<html lang="{{ site.lang }}">
+<html lang="{{ page-lang }}">
 <head>
 <title>{{ page-title }}</title>
 {% include head.inc %}
