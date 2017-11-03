@@ -11,6 +11,7 @@
   <nav>
     <ul>
       <li><a href="{{ "/about-me-ja.html" | relative_url }}">作者について</a></li>
+      <li><a href="{{ "/archives-list.html" | relative_url }}">アーカイブ</a></li>
     </ul>
   </nav>
 {% else %}
@@ -22,6 +23,7 @@
   <nav>
     <ul>
       <li><a href="{{ "/about-me.html" | relative_url }}">About me</a></li>
+      <li><a href="{{ "/archives-list.html" | relative_url }}">Archives</a></li>
     </ul>
   </nav>
 {% endif %}

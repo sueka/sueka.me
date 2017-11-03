@@ -1,0 +1,23 @@
+---
+layout: page
+title: Archives list
+---
+
+{% assign page-lang = page.lang | default: site.lang %}
+{% assign in-langs = site.data.translations | where: 'langcode', page-lang %}
+{% for _ in in-langs %}{% assign date-format-in-lang = _.date-format %}{% endfor %}
+
+{% assign years = site.posts | group_by_exp: "post", 'post.date | date: "%Y"' | sort: "name" | reverse %}
+{% for year in years %}
+  <section id="year_{{ year[0] }}">
+    <h2>{{ year.name }}</h2>
+    <ul>
+      {% assign posts = year.items | sort: "date" | reverse %}
+      {% for post in posts %}
+        {% assign post-lang = post.lang | default: site.lang %}
+        {% comment %} May specified "lang: en" in the post {% endcomment %}
+        <li>{{ post.date | date: date-format-in-lang }} - <a {% if post-lang != self-lang %} lang="{{ post-lang }}" {% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endfor %}
