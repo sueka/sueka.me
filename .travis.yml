@@ -4,6 +4,8 @@ rvm: 2.4.1
 install:
   - gem install bundler
   - bundle install --deployment
+  - git clone --depth=1 --branch=master https://github.com/sueka/posts.sueka.me.git ~/sueka/posts.sueka.me
+  - cp -r ~/sueka/posts.sueka.me/_posts ~/sueka/sueka.me/
 cashe:
   directories: vendor/bundle
 script:
