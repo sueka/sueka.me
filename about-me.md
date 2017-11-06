@@ -8,9 +8,9 @@ interlanguage-id: about-me
 iframe {
   width: 800px;
   max-width: calc(100vw - 1.236em);
-  height: 600px;
-  max-height: calc(75vw - 0.927em);
-  min-height: calc(50vh - 0.927em);
+  height: 640px;
+  max-height: calc(80vw - 0.927em);
+  min-height: calc(54vh - 0.927em);
 }
 </style>
 
