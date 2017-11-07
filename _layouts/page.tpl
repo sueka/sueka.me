@@ -2,7 +2,7 @@
 
 {% assign page-lang = page.lang | default: site.lang %}
 
-<html lang="{{ page-lang }}">
+<html {% if page-lang == "he" %} dir="rtl" {% endif %} lang="{{ page-lang }}">
 <head>
 <title>{{ page.title }}</title>
 {% include head.inc %}

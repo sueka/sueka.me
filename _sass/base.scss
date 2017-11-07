@@ -255,6 +255,10 @@ body > header {
       white-space: nowrap;
       list-style: none;
       padding-left: 0;
+      &:lang(he) {
+        // padding-left: 0;
+        padding-right: 0;
+      }
       margin-top: 0;
       margin-bottom: 0;
       & > li {
@@ -367,9 +371,17 @@ table {
 
 ol {
   padding-left: 2em;
+  &:lang(he) {
+    padding-left: initial;
+    padding-right: 2em;
+  }
 }
 ul {
   padding-left: 1.5em;
+  &:lang(he) {
+    padding-left: initial;
+    padding-right: 1.5em;
+  }
 }
 li > p {
   margin-top: 0;
