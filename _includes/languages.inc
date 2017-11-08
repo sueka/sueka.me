@@ -4,18 +4,14 @@
 {% assign in-langs = site.data.translations | where: 'langcode', page-lang %}
 {% for _ in in-langs %}{% assign languages-in-lang = _.languages %}{% endfor %}
 
-{% if page.layout == "post" %}
-  {% assign objects = site.posts %}
-{% else %}
-  {% assign objects = site.pages %}
-{% endif %}
+{% assign objects = site.posts | concat: site.pages | sort: "lang" | where: "interlanguage-id", page.interlanguage-id %}
 
 <nav>
   <h3>{{ languages-in-lang }}</h3>
   <ul>
     {% for object in objects %}
       {% assign object-lang = object.lang | default: site.lang %}
-      {% if object.interlanguage-id == page.interlanguage-id and object-lang != page-lang %}
+      {% if object-lang != page-lang %}
         {% assign in-langs = site.data.translations | where: 'langcode', object-lang %}
         {% for _ in in-langs %}{% assign in-lang = _ %}{% endfor %}
         <li><a lang="{{ object-lang }}" title="{{ object.title }}" rel="alternate" href="{{ object.url }}" hreflang="{{ object-lang }}">{{ in-lang.name }}</a></li>
