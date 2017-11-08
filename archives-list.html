@@ -11,7 +11,7 @@ title: Archives list
 
 {% assign years = site.posts | group_by_exp: "post", 'post.date | date: "%Y"' | sort: "name" | reverse %}
 {% for year in years %}
-  <section id="year_{{ year[0] }}">
+  <section id="year_{{ year.name }}">
     <h2>{{ year.name }}</h2>
     <ul>
       {% assign posts = year.items | sort: "date" | reverse %}
