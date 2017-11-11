@@ -10,15 +10,11 @@
 {% comment %} Languages {% endcomment %}
 {% if page.interlanguage-id %}
 
-{% if page.layout == 'post' %}
-  {% assign objects = site.posts %}
-{% else %}
-  {% assign objects = site.pages %}
-{% endif %}
+{% assign objects = site.posts | concat: site.pages | where: "interlanguage-id", page.interlanguage-id %}
 
 {% for object in objects %}
   {% assign object-lang = object.lang | default: site.lang %}
-  {% if object.interlanguage-id == page.interlanguage-id and object-lang != page-lang %}
+  {% if object-lang != page-lang %}
     <link rel="alternate" href="{{ object.url }}" hreflang="{{ object-lang }}" />
   {% endif %}
 {% endfor %}
