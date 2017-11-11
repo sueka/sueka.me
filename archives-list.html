@@ -17,7 +17,6 @@ title: Archives list
       {% assign posts = year.items | sort: "date" | reverse %}
       {% for post in posts limit: 10 %}
         {% assign post-lang = post.lang | default: site.lang %}
-        {% comment %} May specified "lang: en" in the post {% endcomment %}
         <li>{{ post.date | date: date-format }} - <a {% if post-lang != self-lang %} lang="{{ post-lang }}" {% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </ul>
