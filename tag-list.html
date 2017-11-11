@@ -9,18 +9,20 @@ title: Tag list
 
 {% assign routing-to-tags = site.jekyll-archives.permalinks.tag %}
 
-{% for tag in site.tags %}
-  <section id="tag_{{ tag[0] }}">
-    <h2>{{ tag[0] }}</h2>
+{% for tag-posts-pair in site.tags %}
+  {% assign tag = tag-posts-pair | first %}
+  {% assign posts = tag-posts-pair | last | sort: "date" | reverse %}
+  <section id="tag_{{ tag }}">
+    <h2>{{ tag }}</h2>
     <ul>
-      {% for post in tag[1] limit: 10 %}
+      {% for post in posts limit: 10 %}
         {% assign post-lang = post.lang | default: site.lang %}
         {% comment %} May specified "lang: en" in the post {% endcomment %}
         <li>{{ post.date | date: date-format }} - <a {% if post-lang != self-lang %} lang="{{ post-lang }}" {% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </ul>
     {% if tag[1].size > 10 %}
-      <p>There are <a href="{{ routing-to-tags | replace: ":name", tag[0] }}">more</a>.</p>
+      <p>There are <a href="{{ routing-to-tags | replace: ":name", tag }}">more</a>.</p>
     {% endif %}
   </section>
 {% endfor %}
