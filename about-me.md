@@ -18,8 +18,8 @@ iframe {
 
 - [Twitter](//twitter.com/{{ site.twitter_username }})
 - [GitHub](//github.com/{{ site.github_username }})
-- [MDN](//developer.mozilla.org/ja/profiles/sueka)
-- [Stack Overflow](https://stackoverflow.com/users/8795737/h-sueka)
+- [MDN](//developer.mozilla.org/en-US/profiles/sueka)
+- [Stack Overflow](//stackoverflow.com/users/8795737/h-sueka)
 
 ## My calendar
 
