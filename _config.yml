@@ -41,6 +41,7 @@ sass:
 plugins:
   - jekyll-coffeescript
   - jekyll-archives
+  - jemoji
 
 jekyll-archives:
   enabled:

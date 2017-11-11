@@ -7,6 +7,7 @@ group :jekyll_plugins do
   gem "jekyll-coffeescript"
   gem "jekyll-toc"
   gem "jekyll-archives"
+  gem "jemoji"
 end
 
 group :test do
