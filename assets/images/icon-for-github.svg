@@ -1,0 +1,31 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 1 1">
+  <g>
+    <polygon style="fill: #ffffff" points="0.0,0.0 1.0,0.0 1.0,1.0 0.0,1.0" />
+    <polygon style="fill: #ffd700" points="0.0,0.0 0.2,0.0 0.2,0.2 0.0,0.2" />
+    <polygon style="fill: #ffd700" points="0.2,0.0 0.4,0.0 0.4,0.2 0.2,0.2" />
+    <polygon style="fill: #ffd700" points="0.4,0.0 0.6,0.0 0.6,0.2 0.4,0.2" />
+    <polygon style="fill: #ffd700" points="0.6,0.0 0.8,0.0 0.8,0.2 0.6,0.2" />
+    <polygon style="fill: #ffd700" points="0.8,0.0 1.0,0.0 1.0,0.2 0.8,0.2" />
+    <polygon style="fill: #ffd700" points="0.0,0.2 0.2,0.2 0.2,0.4 0.0,0.4" />
+    <polygon style="fill: #ffd700" points="0.2,0.2 0.4,0.2 0.4,0.4 0.2,0.4" />
+    <polygon style="fill: #ffd700" points="0.4,0.2 0.6,0.2 0.6,0.4 0.4,0.4" />
+    <polygon style="fill: #ffd700" points="0.6,0.2 0.8,0.2 0.8,0.4 0.6,0.4" />
+    <polygon style="fill: #ffd700" points="0.8,0.2 1.0,0.2 1.0,0.4 0.8,0.4" />
+    <polygon style="fill: #ffd700" points="0.0,0.4 0.2,0.4 0.2,0.6 0.0,0.6" />
+    <polygon style="fill: #ffd700" points="0.2,0.4 0.4,0.4 0.4,0.6 0.2,0.6" />
+    <polygon style="fill: #ffd700" points="0.4,0.4 0.6,0.4 0.6,0.6 0.4,0.6" />
+    <polygon style="fill: #ffd700" points="0.6,0.4 0.8,0.4 0.8,0.6 0.6,0.6" />
+    <polygon style="fill: #ffd700" points="0.8,0.4 1.0,0.4 1.0,0.6 0.8,0.6" />
+    <polygon style="fill: #ffd700" points="0.0,0.6 0.2,0.6 0.2,0.8 0.0,0.8" />
+    <polygon style="fill: #ffd700" points="0.2,0.6 0.4,0.6 0.4,0.8 0.2,0.8" />
+    <polygon style="fill: #ffd700" points="0.4,0.6 0.6,0.6 0.6,0.8 0.4,0.8" />
+    <polygon style="fill: #ffd700" points="0.6,0.6 0.8,0.6 0.8,0.8 0.6,0.8" />
+    <polygon style="fill: #ffd700" points="0.8,0.6 1.0,0.6 1.0,0.8 0.8,0.8" />
+    <polygon style="fill: #ffd700" points="0.0,0.8 0.2,0.8 0.2,1.0 0.0,1.0" />
+    <polygon style="fill: #ffd700" points="0.2,0.8 0.4,0.8 0.4,1.0 0.2,1.0" />
+    <polygon style="fill: #ffd700" points="0.4,0.8 0.6,0.8 0.6,1.0 0.4,1.0" />
+    <polygon style="fill: #ffd700" points="0.6,0.8 0.8,0.8 0.8,1.0 0.6,1.0" />
+    <polygon style="fill: #ffd700" points="0.8,0.8 1.0,0.8 1.0,1.0 0.8,1.0" />
+  </g>
+</svg>
