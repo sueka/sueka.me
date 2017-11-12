@@ -291,9 +291,9 @@ footer {
   &:last-child {
     margin-bottom: 0;
   }
-  padding: 0 0 0.382em;
+  padding: 0;
   & > p {
-    margin-bottom: 0;
+    margin: 0.382em;
   }
 }
 
@@ -348,11 +348,10 @@ body > header {
 table {
   margin: 0.618em auto 1.618em;
   border-collapse: collapse;
-  &, th, td {
-    border: 1px dashed $ui-color;
-  }
   th, td {
+    white-space: nowrap;
     padding: 0.382em 0.618em;
+    border: 1px dashed $ui-color;
   }
 }
 
