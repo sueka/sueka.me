@@ -1,8 +1,8 @@
 {% if page.tags %}
 
 {% assign page-lang = include.this-lang | default: page.lang | default: site.lang %}
-{% assign transitions = site.data.translations | where: 'langcode', page-lang %}
-{% assign tags-in-native = translations[0].tags %}
+{% assign translation = site.data.translations | where: 'langcode', page-lang | first %}
+{% assign tags-in-native = translation.tags %}
 
 <nav>
   <h3>{{ tags-in-native }}</h3>
