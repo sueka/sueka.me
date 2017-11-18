@@ -11,6 +11,19 @@ cashe:
 script:
   - bundle exec jekyll b --safe
   - bundle exec htmlproofer _site/ --disable-external
+before_deploy:
+  - openssl aes-256-cbc -K $encrypted_e735c587144c_key -iv $encrypted_e735c587144c_iv -in .travis/id_rsa.enc -out /tmp/id_rsa -d
+  - eval "$(ssh-agent -s)"
+  - chmod 600 /tmp/id_rsa
+  - ssh-add /tmp/id_rsa
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: rsync -r --delete-after $TRAVIS_BUILD_DIR/_site arch@sueka.me:/srv/http/www/html
+  on:
+    branch: master
+addons:
+  ssh_known_hosts: sueka.me
 branches:
   only:
     - master
