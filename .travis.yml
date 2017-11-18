@@ -23,7 +23,6 @@ deploy:
   on:
     branch:
       - master
-      - develop
 addons:
   ssh_known_hosts: sueka.me
 branches:
