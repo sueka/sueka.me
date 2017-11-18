@@ -19,7 +19,8 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: .travis/deploy.sh
+  script:
+    - rsync --quiet -rpt --delete-after $TRAVIS_BUILD_DIR/_site/ http@sueka.me:/srv/http/www/html
   on:
     branch:
       - master
