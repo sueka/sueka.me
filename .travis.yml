@@ -4,8 +4,8 @@ rvm: 2.4.1
 install:
   - gem install bundler
   - bundle install --deployment
-  - git clone --depth=1 --branch=master https://github.com/sueka/posts.sueka.me.git ~/sueka/posts.sueka.me
-  - cp -r ~/sueka/posts.sueka.me/_posts ~/sueka/sueka.me/
+  - git remote add -t $TRAVIS_BRANCH -f posts https://github.com/sueka/posts.sueka.me.git
+  - git merge -Xours -m "Merge posts into $TRAVIS_BRANCH" --allow-unrelated-histories posts/$TRAVIS_BRANCH
 cashe:
   directories: vendor/bundle
 script:
