@@ -19,7 +19,7 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r --delete-after $TRAVIS_BUILD_DIR/_site arch@sueka.me:/srv/http/www/html
+  script: rsync -r --delete-after $TRAVIS_BUILD_DIR/_site/ http@sueka.me:/srv/http/www/html
   on:
     branch: master
 addons:
