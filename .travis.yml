@@ -1,12 +1,13 @@
-sudo: true
+sudo: false
 language: ruby
 rvm: 2.4.1
 install:
-  - git merge -Xours -m "Merge posts into $TRAVIS_BRANCH" origin/posts
+  - git remote set-branches --add origin posts
+  - git fetch origin
+  - git merge -Xours -m "Merge posts into $TRAVIS_BRANCH" --allow-unrelated-histories origin/posts
   - gem install bundler
   - bundle install --deployment
-cashe:
-  directories: vendor/bundle
+cashe: bundler
 script:
   - bundle exec jekyll b --safe
   - bundle exec htmlproofer _site/ --disable-external
