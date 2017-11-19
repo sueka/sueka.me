@@ -1,6 +1,6 @@
 title: sueka.me
 lang: en
-url: http://sueka.me
+url: https://sueka.me
 github_repo: sueka/sueka.me
 license: CC0
 license_url: https://creativecommons.org/publicdomain/zero/1.0/
@@ -52,4 +52,4 @@ jekyll-archives:
   permalinks:
     year: /:year/
     month: /:year/:month/
-    tag: /tags/:name/
+    tag: /tags/:name.html
