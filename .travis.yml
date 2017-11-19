@@ -4,8 +4,7 @@ rvm: 2.4.1
 install:
   - gem install bundler
   - bundle install --deployment
-  - git remote rename $(git remote) github
-  - git merge -Xours -m "Merge posts into $TRAVIS_BRANCH" github/posts
+  - git merge -Xours -m "Merge posts into $TRAVIS_BRANCH" $(git remote)/posts
 cashe:
   directories: vendor/bundle
 script:
