@@ -4,7 +4,8 @@ rvm: 2.4.1
 install:
   - gem install bundler
   - bundle install --deployment
-  - git merge -Xours -m "Merge posts into $TRAVIS_BRANCH" --allow-unrelated-histories posts
+  - git remote rename $(git remote) github
+  - git merge -Xours -m "Merge posts into $TRAVIS_BRANCH" github/posts
 cashe:
   directories: vendor/bundle
 script:
