@@ -7,7 +7,7 @@ install:
   - git merge -Xours -m "Merge posts into $TRAVIS_BRANCH" --allow-unrelated-histories origin/posts
   - gem install bundler
   - bundle install --deployment
-cashe: bundler
+cache: bundler
 script:
   - bundle exec jekyll b --safe
   - bundle exec htmlproofer _site/ --disable-external
