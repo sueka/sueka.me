@@ -2,9 +2,9 @@ sudo: false
 language: ruby
 rvm: 2.4.1
 install:
-  - git remote set-branches --add origin posts
+  - git remote set-branches --add origin posts/$TRAVIS_BRANCH
   - git fetch origin
-  - git merge -Xours -m "Merge posts into $TRAVIS_BRANCH" --allow-unrelated-histories origin/posts
+  - git merge -Xours -m "Merge posts/$TRAVIS_BRANCH into $TRAVIS_BRANCH" --allow-unrelated-histories origin/posts/$TRAVIS_BRANCH
   - gem install bundler
   - bundle install --deployment
 cache: bundler
