@@ -2,7 +2,7 @@ sudo: false
 language: ruby
 rvm: 2.4.1
 env:
-  - MAIN_BRANCH=$(echo $TRAVIS_BRANCH | cut -d '/' -f 2 )
+  - MAIN_BRANCH=$(echo $TRAVIS_BRANCH | cut -d '/' -f 2)
 install:
   - git remote set-branches --add origin $MAIN_BRANCH
   - git fetch origin
