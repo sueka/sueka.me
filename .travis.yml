@@ -6,7 +6,8 @@ env:
 install:
   - git remote set-branches --add origin $MAIN_BRANCH
   - git fetch origin
-  - git merge -Xtheirs -m "Merge $MAIN_BRANCH into posts/$MAIN_BRANCH" --allow-unrelated-histories origin/$MAIN_BRANCH
+  - git checkout $MAIN_BRANCH
+  - git merge -Xours -m "Merge posts/$MAIN_BRANCH into $MAIN_BRANCH" --allow-unrelated-histories posts/$MAIN_BRANCH
   - gem install bundler
   - bundle install --deployment
 cache:
