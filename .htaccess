@@ -19,3 +19,9 @@ RewriteRule ^.*$ https://sueka.me%{REQUEST_URI} [R=308,L]
 RewriteRule ^(.+/)*index\.html?$ $1 [R=308,L]
 
 Options -MultiViews
+
+ExpiresActive On
+ExpiresByType text/css A604800
+ExpiresByType text/html A604800
+ExpiresByType text/javascript A604800
+ExpiresDefault A1209599
