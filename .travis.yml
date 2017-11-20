@@ -9,7 +9,8 @@ install:
   - git merge -Xtheirs -m "Merge $MAIN_BRANCH into posts/$MAIN_BRANCH" --allow-unrelated-histories origin/$MAIN_BRANCH
   - gem install bundler
   - bundle install --deployment
-cache: bundler
+cache:
+  directories: vendor/bundle
 script:
   - bundle exec jekyll b --safe
   - bundle exec htmlproofer _site/ --disable-external
