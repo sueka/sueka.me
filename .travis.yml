@@ -9,7 +9,7 @@ install:
   - bundle install --deployment
 cache: bundler
 script:
-  - bundle exec jekyll b --safe
+  - bundle exec jekyll b --safe --source source
   - bundle exec htmlproofer _site/ --disable-external
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_e735c587144c_key -iv $encrypted_e735c587144c_iv -in .travis/id_rsa.enc -out /tmp/id_rsa -d
