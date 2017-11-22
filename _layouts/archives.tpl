@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 
 {% assign page-lang = page.lang | default: site.lang %}
-{% capture page-title %}
-  {% if page.type == "year" %}
-    Posts of {{ page.date | date: "%Y" }}
-  {% elsif page.type == "month" %}
-    Posts on {{ page.date | date: "%B %Y" }}
-  {% elsif page.type == "tag" %}
-    Posts tagged with {{ page.title }}
-  {% endif %}
-{% endcapture %}
+{% if page.type == "year" %}
+  {% assign page-title = page.date | date: "Posts of %Y" %}
+{% elsif page.type == "month" %}
+  {% assign page-title = page.date | date: "Posts on %B %Y" %}
+{% elsif page.type == "tag" %}
+  {% assign page-title = 'Posts tagged with ' | append: page.title %}
+{% endif %}
 
 <html lang="{{ page-lang }}">
 <head>
