@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 
 {% assign page-lang = page.lang | default: site.lang %}
+{% if page.path == '/' %}
+  {% assign page-title = page.title %}
+{% else %}
+  {% assign page-title = page.title | append: ' | ' | append: site.title %}
+{% endif %}
 
 <html lang="{{ page-lang }}">
 <head>
-<title>{{ page.title }}</title>
+<title>{{ page-title }}</title>
 {% include head.inc %}
 </head>
 <body>
