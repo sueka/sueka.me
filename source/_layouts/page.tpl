@@ -8,7 +8,7 @@
 {% when '/index-ja.html' %}
   {% assign page-title = page.title %}
 {% else %}
-  {% assign page-title = page.title | append: ' | ' | append: site.title %}
+  {% assign page-title = page.title | append: ' - ' | append: site.title %}
 {% endcase %}
 
 <html lang="{{ page-lang }}">
