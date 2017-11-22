@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 
 {% assign page-lang = page.lang | default: site.lang %}
-{% if page.path == '/' %}
+
+{% case page.url %}
+{% when '/' %}
+  {% assign page-title = page.title %}
+{% when '/index-ja.html' %}
   {% assign page-title = page.title %}
 {% else %}
   {% assign page-title = page.title | append: ' | ' | append: site.title %}
-{% endif %}
+{% endcase %}
 
 <html lang="{{ page-lang }}">
 <head>
@@ -17,6 +21,18 @@
 {% include header.inc %}
 
 <main>
+
+{% assign handle = 'cake' %}
+{% case handle %}
+  {% when 'cake' %}
+     {% assign test = 'This is a cake' %}
+  {% when 'cookie' %}
+     This is a cookie
+  {% else %}
+     This is not a cake nor a cookie
+{% endcase %}
+
+{{ page-path }}
 
 <h1>{{ page.title }}</h1>
 
