@@ -24,7 +24,7 @@ deploy:
     branch:
       - master
 addons:
-  ssh_known_hosts: sueka.me
+  ssh_known_hosts: 133.130.114.209
 branches:
   only:
     - master
