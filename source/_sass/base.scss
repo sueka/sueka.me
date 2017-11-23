@@ -149,18 +149,23 @@ q {
 //
 //
 
-a:link {
+a {
   text-decoration: none;
+  border-bottom: dashed $link-color 0;
+}
+
+a:link {
   color: $link-color;
-  border-bottom: 0 dashed $link-color;
-  &:hover {
-    border-bottom-width: 1px;
-  }
+  border-bottom-color: $link-color;
 }
 
 a:visited {
   color: $visited-color;
   border-bottom-color: $visited-color;
+}
+
+a:hover {
+  border-bottom-width: 1px;
 }
 
 //
@@ -235,16 +240,16 @@ body > header {
     font-size: 100%;
     margin-top: 0;
     margin-bottom: 0;
-    & > a:link {
+    & > a {
       display: flex;
       padding: 0.618em;
       & > img {
         width: 24px;
         height: 24px;
       }
-      &:hover > img {
-        transform: rotate(180deg);
-      }
+    }
+    & > a:hover > img {
+      transform: rotate(180deg);
     }
   }
 
@@ -259,7 +264,7 @@ body > header {
       margin-bottom: 0;
       & > li {
         display: block;
-        & > a:link {
+        & > a {
           display: block;
           padding: 0.618em 1em;
           height: 24px;
@@ -269,11 +274,8 @@ body > header {
     }
   }
 
-  a:link,
-  a:visited {
-    &:hover {
-      border: 0;
-    }
+  a:hover {
+    border: 0;
   }
 }
 
@@ -320,16 +322,16 @@ footer {
 body > header {
   background-color: $accent-color;
   color: $fg-color;
-  & > h1 > a:link > img {
+  & > h1 > a > img {
     transition: 180ms ease;
   }
   a:link, a:visited {
     color: $bg-color;
     border-color: $bg-color;
-    &:hover {
-      background-color: $bg-color;
-      color: $accent-color;
-    }
+  }
+  a:hover {
+    background-color: $bg-color;
+    color: $accent-color;
   }
 }
 
