@@ -12,14 +12,6 @@ pks_url: https://sks-keyservers.net/pks/lookup?op=get&search=0x5B60E6C7D178285D
 twitter_username: hsueka
 github_username: sueka
 
-exclude:
-  - spec/
-  - vendor/
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - UNLICENSE.txt
-
 collections:
   posts:
     permalink: /:categories/:year/:month/:slug.html
