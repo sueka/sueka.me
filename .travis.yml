@@ -7,7 +7,8 @@ install:
   - git remote set-branches --add origin $MAIN_BRANCH
   - git fetch origin
   - git checkout $MAIN_BRANCH
-  - git merge -Xours -m "Merge posts/$MAIN_BRANCH into $MAIN_BRANCH" --allow-unrelated-histories posts/$MAIN_BRANCH
+  - git merge -Xours -m "Merge posts/$MAIN_BRANCH into $MAIN_BRANCH"
+    --allow-unrelated-histories posts/$MAIN_BRANCH
   - gem install bundler
   - bundle install --deployment
 cache:
@@ -16,14 +17,18 @@ script:
   - bundle exec jekyll b --safe --source source
   - bundle exec htmlproofer _site/ --disable-external
 before_deploy:
-  - openssl aes-256-cbc -K $encrypted_e735c587144c_key -iv $encrypted_e735c587144c_iv -in .travis/id_rsa.enc -out /tmp/id_rsa -d
+  - openssl aes-256-cbc -K $encrypted_e735c587144c_key -iv $encrypted_e735c587144c_iv
+    -in .travis/id_rsa.enc -out /tmp/id_rsa -d
   - eval "$(ssh-agent -s)"
   - chmod 600 /tmp/id_rsa
   - ssh-add /tmp/id_rsa
 deploy:
   provider: script
   skip_cleanup: true
-  script: find $TRAVIS_BUILD_DIR/_site -type f -print | xargs chmod 604 && find $TRAVIS_BUILD_DIR/_site -type d -print | xargs chmod 701 && rsync --quiet -rpt --delete-after $TRAVIS_BUILD_DIR/_site/ http@sueka.me:/srv/http/www/html
+  script:
+    find $TRAVIS_BUILD_DIR/_site -type f -print | xargs chmod 604 &&
+    find $TRAVIS_BUILD_DIR/_site -type d -print | xargs chmod 701 &&
+    rsync --quiet -rpt --delete-after $TRAVIS_BUILD_DIR/_site/ http@sueka.me:/srv/http/www/html
   on:
     branch:
       - posts/master
