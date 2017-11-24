@@ -6,9 +6,9 @@
 
 ## Usage
 
-Running `bundle exec jekyll b` generates `_site` directory.
+Running `bundle exec jekyll b -s source` generates `_site` directory.
 
-To browser test, starting a local server by running `bundle exec jekyll s`, execute `bundle exec rspec`.
+To browser test, starting a local server by running `bundle exec jekyll s -s source`, execute `bundle exec rspec`.
 
 ### Deployment
 
