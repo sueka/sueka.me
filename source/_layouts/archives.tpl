@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 
 {% assign page-lang = page.lang | default: site.lang %}
-{% if page.type == "year" %}
+{% case page.type %}
+{% when "year" %}
   {% assign page-title = page.date | date: "Posts of %Y" %}
-{% elsif page.type == "month" %}
+{% when "month" %}
   {% assign page-title = page.date | date: "Posts on %B %Y" %}
-{% elsif page.type == "tag" %}
+{% when "tag" %}
   {% assign page-title = 'Posts tagged with ' | append: page.title %}
-{% endif %}
+{% endcase %}
 
 <html lang="{{ page-lang }}">
 <head>

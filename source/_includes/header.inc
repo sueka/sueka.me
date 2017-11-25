@@ -2,7 +2,8 @@
 
 <header>
 
-{% if page-lang == "ja" %}
+{% case page-lang %}
+{% when "ja" %}
   <h1 class="home">
     <a href="{{ "/index-ja.html" | relative_url }}">
       <img alt="home" width="24" height="24" src="{{ "assets/images/favicon.svg" | relative_url }}" />
@@ -28,6 +29,6 @@
       <li><a href="{{ "/archives-list.html" | relative_url }}">Archives</a></li>
     </ul>
   </nav>
-{% endif %}
+{% endcase %}
 
 </header>
