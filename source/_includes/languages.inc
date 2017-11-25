@@ -4,7 +4,7 @@
 {% assign translation = site.data.translations | where: 'langcode', page-lang | first %}
 {% assign languages = translation.languages %}
 
-{% assign objects = site.posts | concat: site.pages | sort: "lang" | where: "interlanguage-id", page.interlanguage-id %}
+{% assign objects = site.posts | concat: site.pages | sort: 'lang' | where: 'interlanguage-id', page.interlanguage-id %}
 
 <nav>
   <h3>{{ languages }}</h3>

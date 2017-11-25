@@ -11,7 +11,7 @@ title: Tag list
 
 {% for tag-posts-pair in site.tags %}
   {% assign tag = tag-posts-pair | first %}
-  {% assign posts = tag-posts-pair | last | sort: "date" | reverse %}
+  {% assign posts = tag-posts-pair | last | sort: 'date' | reverse %}
   <section id="tag_{{ tag }}">
     <h2>{{ tag }}</h2>
     <ul>
@@ -22,7 +22,7 @@ title: Tag list
       {% endfor %}
     </ul>
     {% if tag[1].size > 10 %}
-      <p>There are <a href="{{ routing-to-tags | replace: ":name", tag }}">more</a>.</p>
+      <p>There are <a href="{{ routing-to-tags | replace: ':name', tag }}">more</a>.</p>
     {% endif %}
   </section>
 {% endfor %}

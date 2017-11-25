@@ -9,19 +9,19 @@ title: Archives list
 
 {% assign routing-to-year = site.jekyll-archives.permalinks.year %}
 
-{% assign years = site.posts | group_by_exp: "post", 'post.date | date: "%Y"' | sort: "name" | reverse %}
+{% assign years = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' | sort: 'name' | reverse %}
 {% for year in years %}
   <section id="year_{{ year.name }}">
     <h2>{{ year.name }}</h2>
     <ul>
-      {% assign posts = year.items | sort: "date" | reverse %}
+      {% assign posts = year.items | sort: 'date' | reverse %}
       {% for post in posts limit: 10 %}
         {% assign post-lang = post.lang | default: site.lang %}
         <li>{{ post.date | date: date-format }} - <a {% if post-lang != self-lang %} lang="{{ post-lang }}" {% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </ul>
     {% if posts.size > 10 %}
-      <p>There are <a href="{{ routing-to-year | replace: ":year", year.name }}">more</a>.</p>
+      <p>There are <a href="{{ routing-to-year | replace: ':year', year.name }}">more</a>.</p>
     {% endif %}
   </section>
 {% endfor %}

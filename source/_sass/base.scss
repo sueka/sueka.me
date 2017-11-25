@@ -55,12 +55,12 @@ $accent-color: springgreen;
 $link-color: dodgerblue;
 $visited-color: darkorchid;
 
-$font-text: "Linux Libertine O", FreeSerif, "Times New Roman", Times, Baskerville, "Baskerville Old Face", serif;
-$font-emph: "Linux Biolinum O", FreeSans, "Myriad Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Segoe UI, sans-serif;
-$font-code: "Source Code Pro", Inconsolata, Menlo, Monaco, Consolas, monospace, serif;
-$font-text-ja: IPAexMincho, YuMincho, "Hiragino Mincho ProN", "Yu Mincho", HGSMinchoE, Meiryo, sans-serif;
-$font-emph-ja: IPAexGothic, YuGothic, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-$font-code-ja: CodeM, Ricty, "Source Han Code JP", Myrica, "IPAGothic", Menlo, "MS Gothic", monospace, serif;
+$font-text: 'Linux Libertine O', FreeSerif, 'Times New Roman', Times, Baskerville, 'Baskerville Old Face', serif;
+$font-emph: 'Linux Biolinum O', FreeSans, 'Myriad Pro', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Segoe UI, sans-serif;
+$font-code: 'Source Code Pro', Inconsolata, Menlo, Monaco, Consolas, monospace, serif;
+$font-text-ja: IPAexMincho, YuMincho, 'Hiragino Mincho ProN', 'Yu Mincho', HGSMinchoE, Meiryo, sans-serif;
+$font-emph-ja: IPAexGothic, YuGothic, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
+$font-code-ja: CodeM, Ricty, 'Source Han Code JP', Myrica, 'IPAGothic', Menlo, 'MS Gothic', monospace, serif;
 
 //
 //      _|_|                        _|
@@ -133,10 +133,10 @@ html {
 
 q {
   &::before {
-    content: "“";
+    content: '“';
   }
   &::after {
-    content: "”";
+    content: '”';
   }
 }
 
@@ -302,7 +302,7 @@ footer {
   margin: 0.618em 0 1.618em;
 }
 .note::before {
-  content: "NOTE";
+  content: 'NOTE';
   font-weight: 500;
   font-size: 1rem;
   font-family: $font-emph;

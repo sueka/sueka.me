@@ -12,15 +12,15 @@ checkPrimality = (n) ->
         [2].concat(_ for _ in [3 .. Math.sqrt n] by 2)
     pfcs.every (x) -> n % x != 0
 
-addEventListener "submit", (e) ->
+addEventListener 'submit', (e) ->
   form = document.forms[0]
   res = document.querySelector('#res')
   if e.target == form
-    n = +form.elements.namedItem("n").value
+    n = +form.elements.namedItem('n').value
     res.textContent =
       if checkPrimality n
-        "Yes"
+        'Yes'
       else
-        "No"
+        'No'
   e.preventDefault()
   false

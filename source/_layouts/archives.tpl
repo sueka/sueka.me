@@ -2,11 +2,11 @@
 
 {% assign page-lang = page.lang | default: site.lang %}
 {% case page.type %}
-{% when "year" %}
-  {% assign page-title = page.date | date: "Posts of %Y" %}
-{% when "month" %}
-  {% assign page-title = page.date | date: "Posts on %B %Y" %}
-{% when "tag" %}
+{% when 'year' %}
+  {% assign page-title = page.date | date: 'Posts of %Y' %}
+{% when 'month' %}
+  {% assign page-title = page.date | date: 'Posts on %B %Y' %}
+{% when 'tag' %}
   {% assign page-title = 'Posts tagged with ' | append: page.title %}
 {% endcase %}
 

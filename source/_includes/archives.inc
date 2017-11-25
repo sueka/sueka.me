@@ -3,7 +3,7 @@
 {% assign date-format = translation.date-format %}
 
 <ul>
-  {% for post in page.posts | sort: "date" %}
+  {% for post in page.posts | sort: 'date' %}
     {% assign post-lang = post.lang | default: site.lang %}
     <li>{{ post.date | date: date-format }} - <a {% if post-lang != self-lang %} lang="{{ post-lang }}" {% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}

@@ -1,23 +1,23 @@
-source "https://rubygems.org"
-gem "jekyll"
+source 'https://rubygems.org'
+gem 'jekyll'
 
 group :jekyll_plugins do
-  gem "jekyll-gist"
-  gem "jekyll-katex"
-  gem "jekyll-coffeescript"
-  gem "jekyll-toc"
-  gem "jekyll-archives"
-  gem "jemoji"
+  gem 'jekyll-gist'
+  gem 'jekyll-katex'
+  gem 'jekyll-coffeescript'
+  gem 'jekyll-toc'
+  gem 'jekyll-archives'
+  gem 'jemoji'
 end
 
 group :test do
-  gem "rspec"
-  gem "capybara"
-  gem "phantomjs-binaries"
-  gem "poltergeist"
-  gem "selenium-webdriver"
+  gem 'rspec'
+  gem 'capybara'
+  gem 'phantomjs-binaries'
+  gem 'poltergeist'
+  gem 'selenium-webdriver'
 end
 
 group :lint do
-  gem "html-proofer"
+  gem 'html-proofer'
 end

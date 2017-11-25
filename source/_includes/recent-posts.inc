@@ -4,7 +4,7 @@
 <nav class="recent-posts">
   <h3>{{ translation.recent-posts }}</h3>
   <ul>
-    {% for post in site.posts | sort: "date" %}
+    {% for post in site.posts | sort: 'date' %}
       {% assign post-lang = post.lang | default: site.lang %}
       {% if post-lang == page-lang %}
         <li>{{ post.date | date: translation.date-format }} - <a href="{{ post.url }}">{{ post.title }}</a></li>
