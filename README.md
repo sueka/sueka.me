@@ -6,9 +6,9 @@
 
 ## Usage
 
-Running `bundle exec jekyll b -s source` generates `_site` directory.
+Running `bundle exec jekyll build --source source` generates `_site` directory.
 
-To browser test, starting a local server by running `bundle exec jekyll s -s source`, execute `bundle exec rspec`.
+To browser test, starting a local server by running `bundle exec jekyll serve --source source`, execute `bundle exec rspec`.
 
 ### Deployment
 
@@ -16,7 +16,7 @@ To browser test, starting a local server by running `bundle exec jekyll s -s sou
 
 To deploy manually, upload `_site` directory to your server by executing a command such as `scp -r _site/ http@203.0.113.89:/srv/http/www/html` or taking other ways.
 
-Don't forget to do `usermod -s /bin/bash http` in advance for logging in as `http`.
+Don't forget to do `usermod --shell /bin/bash http` in advance for logging in as `http`.
 
 ## License
 

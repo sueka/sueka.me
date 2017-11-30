@@ -10,7 +10,7 @@ install:
   - bundle install --deployment
 cache: bundler
 script:
-  - bundle exec jekyll b --safe --source source
+  - bundle exec jekyll b --safe -s source
   - bundle exec htmlproofer _site/ --disable-external
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_e735c587144c_key -iv $encrypted_e735c587144c_iv
@@ -24,7 +24,7 @@ deploy:
   script:
     find $TRAVIS_BUILD_DIR/_site -type f -print | xargs chmod 604 &&
     find $TRAVIS_BUILD_DIR/_site -type d -print | xargs chmod 701 &&
-    rsync --quiet -rpt --delete-after $TRAVIS_BUILD_DIR/_site/ http@sueka.me:/srv/http/www/html
+    rsync -qrpt --delete-after $TRAVIS_BUILD_DIR/_site/ http@sueka.me:/srv/http/www/html
   on:
     branch:
       - master
