@@ -15,16 +15,6 @@ github_username: sueka
 collections:
   posts:
     permalink: /:categories/:year/:month/:slug.html
-  apps:
-    output: true
-    permalink: /:path
-
-defaults:
-  - scope:
-      path: ''
-      type: apps
-    values:
-      layout: app
 
 markdown: kramdown
 sass:
