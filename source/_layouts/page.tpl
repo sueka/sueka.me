@@ -22,18 +22,6 @@
 
 <main>
 
-{% assign handle = 'cake' %}
-{% case handle %}
-  {% when 'cake' %}
-     {% assign test = 'This is a cake' %}
-  {% when 'cookie' %}
-     This is a cookie
-  {% else %}
-     This is not a cake nor a cookie
-{% endcase %}
-
-{{ page-path }}
-
 <h1>{{ page.title }}</h1>
 
 {% include languages.inc %}
