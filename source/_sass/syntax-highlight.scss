@@ -9,7 +9,7 @@
 
 .highlight {
   margin: 0.618em 0 1.618em;
-  padding: 0 1.618em;
+  padding: 0.382em 0.618em;
 
   // w/o linenos
   & > code {
@@ -57,27 +57,30 @@
 //
 
 .highlight {
+  background-color: #333;
+  color: darkgray;
+
   // name
-  .n  { color: dodgerblue }
-  .nn { color: dodgerblue } // namespace
-  .nd { color: dodgerblue } // decorator
-  .nc { color: dodgerblue } // class
+  .n  {}
+  .nn { color: tomato } // namespace
+  .nd { color: tomato } // decorator
+  .nc { color: tomato } // class
 
   // operator
   .o  {}
 
   // keyword
-  .k  { color: darkorchid }
-  .kt { color: navy } // type
-  .kc { color: deeppink } // constant
-  .kr { color: darkorchid } // reserved
+  .k  { color: orchid }
+  .kt { color: khaki } // type
+  .kc { color: sandybrown } // constant
+  .kr { color: orchid } // reserved
   .k, .kr {
-    font-weight: 700;
+    font-weight: 500;
   }
 
   // number
-  .mi { color: darkcyan } // integer
-  .mf { color: darkcyan } // float
+  .mi { color: khaki } // integer
+  .mf { color: khaki } // float
 
   // punctuation
   .p {}
