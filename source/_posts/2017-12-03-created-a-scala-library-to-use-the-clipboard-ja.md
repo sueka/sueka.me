@@ -58,7 +58,7 @@ reverseCb.unsafePerformIO
 implicit def OptionShow: Show[Option[_]] = showFromToString
 
 val cbImage = Clipboard.getClipboardImage
-val printCbImage = cbImage map (_.toOption) >>= putLn[Option[_]]
+val printCbImage = cbImage.map(_.toOption) >>= putLn[Option[_]]
 printCbImage.unsafePerformIO
 ```
 
