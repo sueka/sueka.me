@@ -55,13 +55,10 @@ reverseCb.unsafePerformIO
 クリップボードに画像が格納されてゐる場合、
 
 ``` scala
-implicit def ImageShow: Show[Image] = showFromToString
+implicit def OptionShow: Show[Option[_]] = showFromToString
 
 val cbImage = Clipboard.getClipboardImage
-val printCbImage = cbImage map {
-  case Success(s) => s
-  case Failure(_) => null
-} >>= putLn[Image]
+val printCbImage = cbImage map (_.toOption) >>= putLn[Option[_]]
 printCbImage.unsafePerformIO
 ```
 
