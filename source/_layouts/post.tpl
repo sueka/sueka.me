@@ -19,6 +19,8 @@
 
 {% include languages.inc %}
 
+{% include improve-link.inc %}
+
 {% include toc.inc %}
 
 {{ content }}

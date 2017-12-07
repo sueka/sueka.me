@@ -26,6 +26,8 @@
 
 {% include languages.inc %}
 
+{% include improve-link.inc %}
+
 {{ content }}
 
 </main>
