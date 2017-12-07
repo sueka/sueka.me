@@ -2,13 +2,13 @@
 {% capture repository %}<a href="https://github.com/{{ site.github_repo }}">{{ site.github_repo }}</a>{% endcapture %}
 {% assign page-lang = include.this-lang | default: page.lang | default: site.lang %}
 
-<footer>
+<footer><p>
 
 {% case page-lang %}
 {% when 'ja' %}
-  <p><a href="/index-ja.html">{{ site.title }}</a> のソースコードは {{ license }} でライセンスされ、 GitHub 上のリポジトリ {{ repository }} で公開されてゐます。</p>
+  <a href="/index-ja.html">{{ site.title }}</a> のソースコードは {{ license }} でライセンスされ、 GitHub 上のリポジトリ {{ repository }} で公開されてゐます。
 {% else %}
-  <p>The source code of <a href="/">{{ site.title }}</a> is available on GitHub at {{ repository }} under the {{ license }}.</p>
+  The source code of <a href="/">{{ site.title }}</a> is available on GitHub at {{ repository }} under the {{ license }}.
 {% endcase %}
 
-</footer>
+</p></footer>
