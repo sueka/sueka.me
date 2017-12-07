@@ -223,6 +223,8 @@ blockquote {
   & > table, & > figure, & > pre,
   & > ul, & > ol, & > dl,
   & > p {
+    margin-left: 0 !important; // override main
+    margin-right: 0 !important; // override main
     &:first-child {
       margin-top: 0;
     }
