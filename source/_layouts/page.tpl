@@ -26,9 +26,9 @@
 
 {% include languages.inc %}
 
-{% include improve-link.inc %}
-
 {{ content }}
+
+{% include improve-link.inc %}
 
 </main>
 

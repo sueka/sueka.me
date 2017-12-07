@@ -19,11 +19,11 @@
 
 {% include languages.inc %}
 
-{% include improve-link.inc %}
-
 {% include toc.inc %}
 
 {{ content }}
+
+{% include improve-link.inc %}
 
 </main>
 
