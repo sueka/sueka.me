@@ -215,7 +215,7 @@ p, ul, ol {
 
 blockquote {
   $quote-color: forestgreen;
-  padding: 0 0.618em;
+  padding: 0;
   border-left: 0.382em solid $quote-color;
   margin-top: 1.618em
   margin-bottom 0.618em;
@@ -223,8 +223,6 @@ blockquote {
   & > table, & > figure, & > pre,
   & > ul, & > ol, & > dl,
   & > p {
-    margin-left: 0 !important; // override main
-    margin-right: 0 !important; // override main
     &:first-child {
       margin-top: 0;
     }
