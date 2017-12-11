@@ -48,6 +48,14 @@
   }
 }
 
+@media screen and (min-width: 1000px) {
+  .highlight {
+    & > code {
+      white-space: pre-wrap;
+    }
+  }
+}
+
 //
 //    _|      _|
 //  _|_|_|_|  _|_|_|      _|_|    _|_|_|  _|_|      _|_|

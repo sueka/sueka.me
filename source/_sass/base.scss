@@ -398,6 +398,11 @@ li > p {
 @media screen and (max-width: 1000px) {
   html {
     font-size: unquote(calc(13.6px + 0.56vw));
+  }
+}
+
+@media screen and (max-width: 999.75px) {
+  html {
     text-align: left;
     text-align: start;
   }
