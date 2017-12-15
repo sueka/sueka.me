@@ -20,4 +20,4 @@ Don't forget to do `usermod --shell /bin/bash http` in advance for logging in as
 
 ## License
 
-[CC0 1.0 Universal](./LICENSE.txt)
+[CC0 1.0 Universal](./UNLICENSE.txt)
