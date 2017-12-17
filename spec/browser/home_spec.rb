@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 RSpec.describe 'sueka.me' do
   describe 'home page' do
     feature 'multilanguage' do
