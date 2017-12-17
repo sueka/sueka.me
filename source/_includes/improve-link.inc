@@ -1,4 +1,4 @@
-{% assign page-lang = include.this-lang | default: page.lang | default: site.lang %}
+{% assign include-lang = include.lang | default: page-lang %}
 
 {% assign main-source-path = "source/" | append: page.path %}
 
@@ -11,7 +11,7 @@
 
 <aside><p>
 
-{% case page-lang %}
+{% case include-lang %}
 {% when 'ja' %}
   このページのメインソースは <a href="{{ main-source-url }}">{{ main-source-path }}</a> です。
 {% else %}

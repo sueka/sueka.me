@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 {% assign page-lang = page.lang | default: site.lang %}
+
 {% case page.type %}
 {% when 'year' %}
   {% assign page-title = page.date | date: 'Posts of %Y' %}

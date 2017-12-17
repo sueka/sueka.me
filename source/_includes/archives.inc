@@ -1,5 +1,6 @@
-{% assign page-lang = include.this-lang | default: page.lang | default: site.lang %}
-{% assign translation = site.data.translations | where: 'langcode', page-lang | first %}
+{% assign include-lang = include.lang | default: page-lang %}
+
+{% assign translation = site.data.translations | where: 'langcode', include-lang | first %}
 {% assign date-format = translation.date-format %}
 
 <ul>

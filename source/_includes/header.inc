@@ -1,8 +1,8 @@
-{% assign page-lang = include.this-lang | default: page.lang | default: site.lang %}
+{% assign include-lang = include.lang | default: page-lang %}
 
 <header>
 
-{% case page-lang %}
+{% case include-lang %}
 {% when 'ja' %}
   <h1 class="home">
     <a href="{{ '/index-ja.html' | relative_url }}">
