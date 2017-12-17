@@ -10,14 +10,14 @@ group :jekyll_plugins do
   gem 'jemoji'
 end
 
+group :development, :test do
+  gem 'html-proofer'
+end
+
 group :test do
   gem 'rspec'
   gem 'capybara'
   gem 'phantomjs-binaries'
   gem 'poltergeist'
   gem 'selenium-webdriver'
-end
-
-group :lint do
-  gem 'html-proofer'
 end
