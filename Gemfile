@@ -12,6 +12,7 @@ end
 
 group :development, :test do
   gem 'html-proofer'
+  gem 'rubocop'
 end
 
 group :test do
