@@ -182,5 +182,8 @@ DEPENDENCIES
   rubocop
   selenium-webdriver
 
+RUBY VERSION
+   ruby 2.4.3p205
+
 BUNDLED WITH
-   1.16.0.pre.1
+   1.16.0
