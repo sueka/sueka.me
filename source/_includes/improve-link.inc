@@ -2,12 +2,7 @@
 
 {% assign main-source-path = "source/" | append: page.path %}
 
-{% case page.layout %}
-{% when 'post' %}
-  {% assign main-source-url = "//github.com/" | append: site.github_repo | append: "/blob/posts/master/" | append: main-source-path %}
-{% when 'page' %}
-  {% assign main-source-url = "//github.com/" | append: site.github_repo | append: "/blob/master/" | append: main-source-path %}
-{% endcase %}
+{% assign main-source-url = "//github.com/" | append: site.github_repo | append: "/blob/master/" | append: main-source-path %}
 
 <aside><p>
 
