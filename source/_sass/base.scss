@@ -186,6 +186,11 @@ body {
   box-sizing: border-box;
 }
 
+:not(pre) > code {
+  background-color: invert($fg-color);
+  padding: 0.236em 0.382em;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 1.618em;
   margin-bottom: 0.618em;
