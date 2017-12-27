@@ -102,6 +102,9 @@ pre, code {
     font-family: $font-code-ja;
   }
 }
+:not(pre) > code {
+  font-size: 91%;
+}
 
 body > header {
   & > nav > ul > li > a {
@@ -188,7 +191,7 @@ body {
 
 :not(pre) > code {
   background-color: invert($fg-color);
-  padding: 0.236em 0.382em;
+  padding: 0.146em 0.236em;
 }
 
 h1, h2, h3, h4, h5, h6 {
