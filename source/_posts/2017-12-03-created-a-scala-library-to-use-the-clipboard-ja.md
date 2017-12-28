@@ -3,6 +3,7 @@ layout: post
 title: Scala でクリップボードを扱ふためのライブラリを書いた
 tags: scala io clipboard
 lang: ja
+toc: true
 ---
 
 Scala でクリップボードを扱ふためのライブラリを書きました。 GitHub 上のリポジトリ [sueka/clipboard](//github.com/sueka/clipboard) で公開してゐます。
