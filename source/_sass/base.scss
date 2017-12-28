@@ -192,7 +192,7 @@ body {
 :not(pre) > code {
   background-color: invert($fg-color);
   border-radius: 0.146em;
-  padding: 0.146em 0.382em;
+  padding: 0.146em 0.236em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -220,17 +220,17 @@ h6 {
 }
 
 p {
-  margin: 1em 0;
+  margin: 1em 0 0.618em;
 }
 ul, ol {
-  margin: 0.618em 0 1.618em;
+  margin: 0.618em 0 1em;
 }
 
 blockquote {
   $quote-color: forestgreen;
   padding: 0;
   border-left: 0.382em solid $quote-color;
-  margin-top: 1.618em
+  margin-top: 1em
   margin-bottom 0.618em;
   & > blockquote,
   & > table, & > figure, & > pre,
@@ -244,8 +244,8 @@ blockquote {
     }
   }
   & > p {
-    margin-top: 0.618em;
-    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.618em;
   }
 }
 
@@ -314,7 +314,7 @@ footer {
   margin: 1.618em 0.618em 0.618em;
   padding: 0;
   & > p {
-    margin: 0.382em 0 0;
+    margin: 0.382em 0 0.236em;
   }
 }
 
