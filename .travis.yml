@@ -6,6 +6,11 @@ rvm:
   - 2.4.3
   - 2.5.0
 
+branches:
+  only:
+    - master
+    - develop
+
 install:
   - gem install bundler
   - bundle install --deployment
@@ -36,11 +41,6 @@ addons:
   ssh_known_hosts:
     - sueka.me
     - 133.130.114.209
-
-branches:
-  only:
-    - master
-    - develop
 
 notifications:
   email:
