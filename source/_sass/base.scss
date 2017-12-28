@@ -219,7 +219,10 @@ h6 {
   font-size: 100.0%;
 }
 
-p, ul, ol {
+p {
+  margin: 1em 0;
+}
+ul, ol {
   margin: 0.618em 0 1.618em;
 }
 
