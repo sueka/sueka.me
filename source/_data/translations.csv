@@ -1,3 +1,3 @@
-langcode,name,languages,tags,recent-posts,date-format
-en,English,Languages,Tags,Recent posts,"%b. %-d, %Y"
-ja,日本語,他言語版,タグ,最近の投稿,%Y年%-m月%-d日
+langcode,name,languages,tags,table-of-contents,recent-posts,date-format
+en,English,Languages,Tags,Table of contents,Recent posts,"%b. %-d, %Y"
+ja,日本語,他言語版,タグ,目次,最近の投稿,%Y年%-m月%-d日
