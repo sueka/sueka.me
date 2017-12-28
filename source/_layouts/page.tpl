@@ -26,6 +26,8 @@
 
 {% include languages.inc %}
 
+{% include toc.inc %}
+
 {{ content }}
 
 {% include improve-link.inc %}
