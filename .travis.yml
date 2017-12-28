@@ -6,7 +6,9 @@ rvm:
   - 2.4.3
   - 2.5.0
 
-bundler_args: --deployment
+install:
+  - gem install bundler
+  - bundle install --deployment
 cache: bundler
 
 script:
