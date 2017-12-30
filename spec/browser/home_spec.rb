@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe 'sueka.me' do
   describe 'home page' do
     feature 'multilanguage' do
