@@ -55,6 +55,9 @@ $accent-color: springgreen;
 $link-color: dodgerblue;
 $visited-color: darkorchid;
 
+$code-bg-color: gainsboro;
+$code-fg-color: #1f1f1f;
+
 $font-text: 'Linux Libertine O', FreeSerif, 'Times New Roman', Times, Baskerville, 'Baskerville Old Face', serif;
 $font-emph: 'Linux Biolinum O', FreeSans, 'Myriad Pro', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Segoe UI, sans-serif;
 $font-code: 'Source Code Pro', Inconsolata, Menlo, Monaco, Consolas, monospace, serif;
@@ -190,7 +193,8 @@ body {
 }
 
 :not(pre) > code {
-  background-color: invert($fg-color);
+  background-color: $code-bg-color;
+  color: $code-fg-color;
   padding: 0.146em 0.236em;
   border-radius: 0.146em;
 }
