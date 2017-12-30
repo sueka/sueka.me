@@ -10,7 +10,7 @@
 {% when 'ja' %}
   このページのメインソースは <a href="{{ main-source-url }}">{{ main-source-path }}</a> です。
 {% else %}
-  This page has been generated from <a href="{{ main-source-url }}">{{ main-source-path }}</a> and some templates.
+  The main source code for this page is <a href="{{ main-source-url }}">{{ main-source-path }}</a>.
 {% endcase %}
 
 </p></aside>
