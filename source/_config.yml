@@ -21,16 +21,16 @@ sass:
   style: compressed
 
 plugins:
-  - jekyll-coffeescript
   - jekyll-archives
+  - jekyll-coffeescript
   - jemoji
 
 jekyll-archives:
+  layout: archives
   enabled:
     - year
     - month
     - tags
-  layout: archives
   permalinks:
     year: /:year/
     month: /:year/:month/

@@ -191,8 +191,8 @@ body {
 
 :not(pre) > code {
   background-color: invert($fg-color);
-  border-radius: 0.146em;
   padding: 0.146em 0.236em;
+  border-radius: 0.146em;
 }
 
 h1, h2, h3, h4, h5, h6 {
