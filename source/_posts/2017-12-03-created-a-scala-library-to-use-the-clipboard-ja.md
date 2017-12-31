@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Scala でクリップボードを扱ふためのライブラリを書いた
-tags: scala io clipboard
 lang: ja
+tags: scala io clipboard
 toc: true
 ---
 
