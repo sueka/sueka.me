@@ -27,8 +27,8 @@
   // w/ linenos
   table {
     display: block;
-    border: none;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     & > tbody {
       display: block;
       & > tr {
@@ -36,16 +36,14 @@
         & > td {
           border: none;
           & > pre {
-            margin: 0;
+            margin-top: 0;
+            margin-bottom: 0;
           }
           &.gutter {
-            padding-top: 0;
-            padding-bottom: 0;
-            padding-left: 0;
-            color: rgba(27, 31, 35, 0.333);
+            padding: 0;
+            margin-right: 1em;
           }
           &.code {
-            overflow-x: auto;
             padding: 0;
           }
         }
@@ -74,6 +72,10 @@
 .highlight {
   background-color: #333;
   color: darkgray;
+
+  table > tbody > tr > td.gutter {
+    color: darkgray;
+  }
 
   // name
   .n  { color: silver }
