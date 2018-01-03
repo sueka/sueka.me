@@ -7,20 +7,26 @@
 //                      _|
 //                  _|_|
 
-.highlight {
-  overflow-x: auto;
-
+.highlighter-rouge {
   margin: 0.618em 0;
-  padding: 0;
-
-  pre {
-    margin-top: 0;
-    margin-bottom: 0;
+  pre.highlight {
+    overflow-x: auto;
+    margin: 0;
     padding: 0.382em 0.618em;
   }
+}
 
-  // w/o linenos
-  & > code {
+figure.highlight {
+  margin: 0.618em 0;
+  & > pre {
+    overflow-x: auto;
+    margin: 0;
+    padding: 0.382em 0.618em;
+  }
+}
+
+.highlight {
+  pre > code {
     display: inline-block;
   }
 
