@@ -40,7 +40,9 @@
             margin-bottom: 0;
           }
           &.gutter {
+            text-align: right;
             padding: 0;
+            margin-left: 0.5em;
             margin-right: 1em;
           }
           &.code {
