@@ -8,7 +8,7 @@
 
 {% case include-lang %}
 {% when 'ja' %}
-  このページは、いくつかのテンプレートと <a href="{{ main-source-url }}">{{ main-source-path }}</a> から生成されてゐます。
+  このページは <a href="{{ main-source-url }}">{{ main-source-path }}</a> といくつかのテンプレートから生成されてゐます。
 {% else %}
   This page has been generated from <a href="{{ main-source-url }}">{{ main-source-path }}</a> and some templates.
 {% endcase %}
