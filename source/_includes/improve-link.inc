@@ -8,9 +8,9 @@
 
 {% case include-lang %}
 {% when 'ja' %}
-  このページのメインソースは <a href="{{ main-source-url }}">{{ main-source-path }}</a> です。
+  このページは、いくつかのテンプレートと <a href="{{ main-source-url }}">{{ main-source-path }}</a> から生成されてゐます。
 {% else %}
-  The main source code for this page is <a href="{{ main-source-url }}">{{ main-source-path }}</a>.
+  This page has been generated from <a href="{{ main-source-url }}">{{ main-source-path }}</a> and some templates.
 {% endcase %}
 
 </p></aside>
