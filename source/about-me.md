@@ -6,11 +6,13 @@ interlanguage-id: about-me
 
 <style scope>
 iframe {
+  display: block;
+  margin: 0.618em auto 1em;
   width: 800px;
-  max-width: calc(100vw - 1.236em);
+  max-width: 97.0336%;
+  max-width: calc(100% - 1.236em);
   height: 640px;
-  max-height: calc(80vw - 0.927em);
-  min-height: calc(54vh - 0.927em);
+  max-height: calc(80vh - 0.9888em);
 }
 </style>
 
