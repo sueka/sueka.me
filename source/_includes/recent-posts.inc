@@ -8,7 +8,7 @@
     {% for post in site.posts | sort: 'date' %}
       {% assign post-lang = post.lang | default: site.lang %}
       {% if post-lang == include-lang %}
-        <li>{{ post.date | date: translation.date-format }} - <a href="{{ post.url }}">{{ post.title }}</a></li>
+        <li><time datetime="{{ post.date | date_to_xmlschema | slice: 0, 10 }}">{{ post.date | date: translation.date-format }}</time> - <a href="{{ post.url }}">{{ post.title }}</a></li>
       {% endif %}
     {% endfor %}
   </ul>
