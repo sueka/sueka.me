@@ -18,7 +18,7 @@ title: Tag list
       {% for post in posts limit: 10 %}
         {% assign post-lang = post.lang | default: site.lang %}
         {% comment %} May specified "lang: en" in the post {% endcomment %}
-        <li>{{ post.date | date: date-format }} - <a {% if post-lang != self-lang %} lang="{{ post-lang }}" {% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
+        <li>{{ post.date | date: date-format }} - <a {% if post-lang != page-lang %} lang="{{ post-lang }}" hreflang="{{ post-lang }}" {% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </ul>
     {% if tag[1].size > 10 %}
