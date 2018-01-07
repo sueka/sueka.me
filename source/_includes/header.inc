@@ -12,8 +12,8 @@
   <nav>
     <ul>
       <li><a href="{{ '/about-me-ja.html' | relative_url }}">作者について</a></li>
-      <li><a href="{{ '/tag-list.html' | relative_url }}">タグ</a></li>
-      <li><a href="{{ '/archives-list.html' | relative_url }}">アーカイブ</a></li>
+      <li><a href="{{ '/tag-list.html' | relative_url }}" hreflang="{{ site.lang }}">タグ</a></li>
+      <li><a href="{{ '/archives-list.html' | relative_url }}" hreflang="{{ site.lang }}">アーカイブ</a></li>
     </ul>
   </nav>
 {% else %}
