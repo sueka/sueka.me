@@ -17,6 +17,8 @@ iframe {
 }
 </style>
 
+Hi, I,m *{{ site.author }}*.
+
 ## List of my accounts
 
 - [Twitter](//twitter.com/{{ site.twitter_username }})

@@ -18,6 +18,8 @@ iframe {
 }
 </style>
 
+このウェブサイトの作者は *{{ site.author }}* です。
+
 ## アカウントの一覧
 
 - [Twitter](//twitter.com/{{ site.twitter_username }})
