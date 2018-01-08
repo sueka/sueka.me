@@ -17,7 +17,7 @@ iframe {
 }
 </style>
 
-Hi, I,m *{{ site.author }}*.
+Hi, I'm *{{ site.author }}*, an author of this website.
 
 ## My calendar
 
