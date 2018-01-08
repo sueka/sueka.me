@@ -21,7 +21,7 @@ Hi, I'm *{{ site.author }}*, an author of this website.
 
 ## My calendar
 
-For most schedules, I will publicize only its slot.  I do not disclose the detail of a schedule that has someone other than me as participant.
+I will publicize only its slot for most schedules.  I don't disclose a detail of a schedule that has someone other than me as participant.
 
 <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;hl=en&amp;bgcolor=%23FFFFFF&amp;src=uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=Asia%2FTokyo" frameborder="0" scrolling="no"></iframe>
 
