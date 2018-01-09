@@ -1,8 +1,8 @@
 {% assign include-lang = include.lang | default: page-lang %}
 
-{% assign main-source-path = "source/" | append: page.path %}
+{% assign main-source-path = 'source/' | append: page.path %}
 
-{% assign main-source-url = "//github.com/" | append: site.github_repo | append: "/blob/" | append: site.git.last_commit.long_sha | append: "/" | append: main-source-path %}
+{% assign main-source-url = '//github.com/' | append: site.github_repo | append: '/blob/' | append: site.git.last_commit.long_sha | append: '/' | append: main-source-path %}
 
 <aside><p>
 
