@@ -8,6 +8,7 @@ group :jekyll_plugins do
   gem 'jekyll-archives'
   gem 'jekyll-coffeescript'
   gem 'jekyll-gist'
+  gem 'jekyll-git_metadata'
   gem 'jekyll-katex'
   gem 'jekyll-toc'
   gem 'jemoji'
