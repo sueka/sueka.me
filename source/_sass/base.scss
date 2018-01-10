@@ -100,7 +100,7 @@ a, span[lang] {
   }
 }
 pre, code {
-  font-size: 90.8%;
+  font-size: 88.7%;
   font-family: $font-code;
   &:lang(ja) {
     font-size: 100%;
@@ -108,9 +108,9 @@ pre, code {
   }
 }
 :not(pre) > code {
-  font-size: 82.5%;
+  font-size: 78.6%;
   &:lang(ja) {
-    font-size: 90.8%;
+    font-size: 88.7%;
   }
 }
 
