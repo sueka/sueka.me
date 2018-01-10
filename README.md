@@ -4,6 +4,10 @@
 
 [![Build Status](https://travis-ci.org/sueka/sueka.me.svg?branch=master)](https://travis-ci.org/sueka/sueka.me)
 
+## Languages
+
+- [日本語](./README-ja.md)
+
 ## Usage
 
 Running `bundle exec jekyll build --source source` generates a `_site` directory.
