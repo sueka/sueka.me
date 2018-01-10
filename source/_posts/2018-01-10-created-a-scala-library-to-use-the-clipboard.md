@@ -63,7 +63,7 @@ printCbImage.unsafePerformIO
 
 prints a result applying `_.toString` to `java.awt.Image` object.
 
-## Blueprint
+## Views
 
 - Support for FileList
 - Event handling
