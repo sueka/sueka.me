@@ -44,14 +44,14 @@ val writeCb = readLn >>= Clipboard.setClipboardString
 writeCb.unsafePerformIO
 {% endhighlight %}
 
-You can reverse a string stored in the clipboard when running
+You can reverse a string stored in the clipboard when evaluating
 
 {% highlight scala %}
 val reverseCb = Clipboard.modifyClipboardString(_.reverse)
 reverseCb.unsafePerformIO
 {% endhighlight %}
 
-When the clipboard has an image, running
+When the clipboard has an image, evaluating
 
 {% highlight scala %}
 implicit def OptionShow: Show[Option[_]] = showFromToString
