@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Created a Scala library to use the clipboard
-interlanguage-id: 2017-12-03-created-a-scala-library-to-use-the-clipboard
+interlanguage-id: created-a-scala-library-to-use-the-clipboard
 tags: scala io clipboard
 toc: true
 ---
