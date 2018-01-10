@@ -224,6 +224,11 @@ h6 {
   font-size: 100.0%;
 }
 
+hr {
+  margin: 1.618em 0 1em;
+  border: none;
+}
+
 p {
   margin: 1em 0 0.618em;
 }
@@ -302,7 +307,7 @@ body > header {
 main {
   // margin: 0 0.618em;
   margin: 0;
-  h1, h2, h3, h4, h5, h6,
+  h1, h2, h3, h4, h5, h6, hr,
   ul, ol,
   p, blockquote {
     margin-left: 0.618rem;

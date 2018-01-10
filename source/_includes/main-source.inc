@@ -4,6 +4,8 @@
 
 {% assign main-source-url = '//github.com/' | append: site.github_repo | append: '/blob/' | append: site.git.last_commit.long_sha | append: '/' | append: main-source-path %}
 
+<hr />
+
 <aside><p>
 
 {% case include-lang %}
