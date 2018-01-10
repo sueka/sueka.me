@@ -1,10 +1,19 @@
+# Git
 .git/
+
+# Jekyll
+.git-metadata/
 .sass-cache/
 _drafts/
 _site/
-.directory
 .jekyll-metadata
+
+# bundler
 .bundle
 vendor/
-google*.html
+
+# rbenv
 .ruby-version
+
+# Linux
+.directory
