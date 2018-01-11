@@ -7,7 +7,7 @@
 
 {% assign objects = site.posts | concat: site.pages | sort: 'lang' | where: 'interlanguage-id', page.interlanguage-id %}
 
-<nav>
+<nav class="languages">
   <h3>{{ languages }}</h3>
   <ul>
     {% for object in objects %}

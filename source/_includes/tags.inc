@@ -5,7 +5,7 @@
 {% assign translation = site.data.translations | where: 'langcode', include-lang | first %}
 {% assign tags-in-native = translation.tags %}
 
-<nav>
+<nav class="tags">
   <h3>{{ tags-in-native }}</h3>
   <ul>
     {% for tag in page.tags %}
