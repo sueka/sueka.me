@@ -3,10 +3,10 @@
 {% if page.toc %}
 
 {% assign translation = site.data.translations | where: 'langcode', include-lang | first %}
-{% assign table-of-contents = translation.table-of-contents %}
+{% assign contents = translation.contents %}
 
 <nav class="toc">
-  <h3>{{ table-of-contents }}</h3>
+  <h3>{{ contents }}</h3>
   {{ content | toc_only }}
 </nav>
 
