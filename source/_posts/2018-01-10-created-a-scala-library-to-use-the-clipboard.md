@@ -16,7 +16,7 @@ The shell commands such as `xsel`, `pbcopy`, and `clip` have several differences
 
 Import the following objects:
 
-{% highlight scala %}
+``` scala
 import java.awt.Image
 import scala.util.{ Success, Failure }
 import scalaz.Scalaz.ToBindOps
@@ -24,42 +24,42 @@ import scalaz.Show
 import scalaz.Show.showFromToString
 import scalaz.effect.IO.{ putLn, putStrLn, readLn }
 import me.sueka.clipboard.Clipboard
-{% endhighlight %}
+```
 
 To print a string stored in the clipboard, do
 
-{% highlight scala %}
+``` scala
 val cbString = Clipboard.getClipboardString
 val printCbStringLn = cbString map {
   case Success(s) => s
   case Failure(_) => ""
 } >>= putStrLn
 printCbStringLn.unsafePerformIO
-{% endhighlight %}
+```
 
 To store a string read from standard input in the clipboard, do
 
-{% highlight scala %}
+``` scala
 val writeCb = readLn >>= Clipboard.setClipboardString
 writeCb.unsafePerformIO
-{% endhighlight %}
+```
 
 You can reverse a string stored in the clipboard when evaluating
 
-{% highlight scala %}
+``` scala
 val reverseCb = Clipboard.modifyClipboardString(_.reverse)
 reverseCb.unsafePerformIO
-{% endhighlight %}
+```
 
 When the clipboard has an image,
 
-{% highlight scala %}
+``` scala
 implicit def OptionShow: Show[Option[_]] = showFromToString
 
 val cbImage = Clipboard.getClipboardImage
 val printCbImage = cbImage.map(_.toOption) >>= putLn[Option[_]]
 printCbImage.unsafePerformIO
-{% endhighlight %}
+```
 
 prints a result applying `_.toString` to `java.awt.Image` object.
 
