@@ -25,7 +25,6 @@
         a.className = "header-anchor";
         a.href = "#" + hn.id;
         a.textContent = "🔗";
-    hn.append("\n");
     hn.append(a);
   });
 
