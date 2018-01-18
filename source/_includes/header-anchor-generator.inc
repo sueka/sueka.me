@@ -3,15 +3,19 @@
 (function (window) {
 
   function array(arrayLike) {
-    return window.Array.prototype.slice.call(arrayLike)
+    return window.Array.prototype.slice.call(arrayLike);
   }
 
   Object.defineProperty(window.NodeList.prototype, "asArray", {
-    get: function () { return array(this) }
+    get: function () {
+      return array(this);
+    }
   });
 
   Object.defineProperty(window.Array.prototype, "flatten", {
-    get: function () { return window.Array.prototype.concat.apply([], this) }
+    get: function () {
+      return window.Array.prototype.concat.apply([], this);
+    }
   });
 
   var hns = window.document.querySelectorAll("main").asArray.map(function (main) {
