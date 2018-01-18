@@ -38,5 +38,7 @@
 
 {% include footer.inc %}
 
+{% include header-anchor-generator.inc %}
+
 </body>
 </html>
