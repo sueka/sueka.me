@@ -30,4 +30,7 @@
     hn.append(a);
   });
 
+  window.addEventListener("touchstart", function () {
+  }, false);
+
 })(new Function("return this")());
