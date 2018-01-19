@@ -325,11 +325,13 @@ main {
 }
 
 .header-anchor {
-  position: relative;
-  left: 1ex;
   opacity: 0;
   font-size: 1rem;
   vertical-align: middle;
+
+  &::before {
+    content: ' ';
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
