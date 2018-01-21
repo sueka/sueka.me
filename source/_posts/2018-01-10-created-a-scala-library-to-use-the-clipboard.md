@@ -61,7 +61,7 @@ val printCbImage = cbImage.map(_.toOption) >>= putLn[Option[_]]
 printCbImage.unsafePerformIO
 ```
 
-prints a result applying `_.toString` to `java.awt.Image` object.
+prints a result applying the `_.toString` to a `Option[java.awt.Image]` object.
 
 ## Future views
 

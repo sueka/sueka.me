@@ -64,7 +64,7 @@ val printCbImage = cbImage.map(_.toOption) >>= putLn[Option[_]]
 printCbImage.unsafePerformIO
 ```
 
-のやうにすると `java.awt.Image` オブジェクトを `_.toString` したものを出力させることができます。
+のやうにすると `Option[java.awt.Image]` オブジェクトを `_.toString` したものを出力させることができます。
 
 ## 展望
 
