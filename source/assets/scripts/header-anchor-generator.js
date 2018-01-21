@@ -27,7 +27,7 @@
         a.className = "header-anchor";
         a.href = "#" + hn.id;
         a.textContent = "🔗";
-    hn.append(a);
+    hn.appendChild(a);
   });
 
   window.addEventListener("touchstart", function () {
