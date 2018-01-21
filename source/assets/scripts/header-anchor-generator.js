@@ -1,18 +1,18 @@
 (function (window) {
 
   function array(arrayLike) {
-    return window.Array.prototype.slice.call(arrayLike);
+    return Array.prototype.slice.call(arrayLike);
   }
 
-  Object.defineProperty(window.NodeList.prototype, "asArray", {
+  Object.defineProperty(NodeList.prototype, "asArray", {
     get: function () {
       return array(this);
     }
   });
 
-  Object.defineProperty(window.Array.prototype, "flatten", {
+  Object.defineProperty(Array.prototype, "flatten", {
     get: function () {
-      return window.Array.prototype.concat.apply([], this);
+      return Array.prototype.concat.apply([], this);
     }
   });
 
