@@ -353,14 +353,15 @@ footer {
   }
 }
 
-.note {
-  padding: 0.382em 0.618em 0.382em 4.854em;
-  border: 1px dashed $ui-color;
-  margin: 0.618em 0.618rem 1.618em;
+aside {
+  margin: 0.618em 0.618rem 1em;
   & > p {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
   }
+}
+.note {
+  border: 1px dashed $ui-color;
+  padding: 0.382em 0.618em 0.382em 4.854em;
 }
 .note::before {
   content: 'NOTE';
