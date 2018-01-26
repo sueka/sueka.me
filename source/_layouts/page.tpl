@@ -24,22 +24,13 @@
 
 <h1>{{ page.title }}</h1>
 
-<div class="container">
-  <div class="side-column">
+{% include languages.inc %}
 
-    {% include languages.inc %}
+{% include toc.inc %}
 
-    {% include toc.inc %}
+{{ content }}
 
-  </div>
-  <div class="main-column">
-
-    {{ content }}
-
-    {% include main-source.inc %}
-
-  </div>
-</div>
+{% include main-source.inc %}
 
 </main>
 
