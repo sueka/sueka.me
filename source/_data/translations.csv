@@ -1,3 +1,4 @@
 langcode,name,languages,tags,contents,recent-posts,date-format
 en,English,Languages,Tags,Contents,Recent posts,"%b. %-d, %Y"
 ja,日本語,他言語版,タグ,目次,最近の投稿,%Y年%-m月%-d日
+he,עברית,דף זה בשפות אחרות,תגים,תוכן עניינים,הודעות האחרונות,%Y-%m-%d

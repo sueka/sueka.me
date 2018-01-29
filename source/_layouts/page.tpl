@@ -7,11 +7,13 @@
   {% assign page-title = page.title %}
 {% when '/index-ja.html' %}
   {% assign page-title = page.title %}
+{% when '/index-he.html' %}
+  {% assign page-title = page.title %}
 {% else %}
   {% assign page-title = page.title | append: ' - ' | append: site.title %}
 {% endcase %}
 
-<html lang="{{ page-lang }}">
+<html {% if page-lang == 'he' %} dir="rtl" {% endif %} lang="{{ page-lang }}">
 <head>
 <title>{{ page-title }}</title>
 {% include head.inc %}

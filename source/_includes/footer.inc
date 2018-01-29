@@ -8,6 +8,8 @@
 {% case include-lang %}
 {% when 'ja' %}
   <a href="/index-ja.html">{{ site.title }}</a> のソースコードは {{ license }} でライセンスされ、 GitHub 上のリポジトリ {{ repository }} で公開されてゐます。
+{% when 'he' %}
+  קוד המקור של <a href="/index-he.html">{{ site.title }}</a> זמין על GitHub ב {{ repository }} תחת {{ license }}.
 {% else %}
   The source code of <a href="/">{{ site.title }}</a> is available on GitHub at {{ repository }} under the {{ license }}.
 {% endcase %}
