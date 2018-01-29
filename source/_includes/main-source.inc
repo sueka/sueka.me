@@ -11,6 +11,8 @@
 {% case include-lang %}
 {% when 'ja' %}
   このページは <a href="{{ main-source-url }}">{{ main-source-path }}</a> といくつかのテンプレートから生成されてゐます。
+{% when 'he' %}
+  דף זה נוצר מ-<a href="{{ main-source-url }}">{{ main-source-path }}</a> וכמה תבניות.
 {% else %}
   This page has been generated from <a href="{{ main-source-url }}">{{ main-source-path }}</a> and some templates.
 {% endcase %}
