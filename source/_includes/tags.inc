@@ -1,6 +1,7 @@
 {% assign include-lang = include.lang | default: page-lang %}
+{% assign number-of-tags = page.tags | size %}
 
-{% if page.tags %}
+{% if number-of-tags != 0 %}
 
 {% assign translation = site.data.translations | where: 'langcode', include-lang | first %}
 {% assign tags-in-native = translation.tags %}
