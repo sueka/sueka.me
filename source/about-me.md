@@ -8,10 +8,10 @@ interlanguage-id: about-me
 iframe {
   display: block;
   margin: 0.618em auto 1em;
-  width: 97.0336%;
-  width: calc(100% - 1.236em);
-  height: 87.22688%;
-  height: calc(89.6vw - 0.9888em);
+  width: 95.2%;
+  width: calc(100% - 2em);
+  height: 85.76%;
+  height: calc(89.6vw - 1.6em);
   max-width: 800px;
   max-height: 640px;
 }
