@@ -321,11 +321,12 @@ body > header {
 main {
   // margin: 0 0.618em;
   margin: 0;
+  aside,
   h1, h2, h3, h4, h5, h6, hr,
   ul, ol,
   p, blockquote {
-    margin-left: 0.618rem;
-    margin-right: 0.618rem;
+    margin-left: 1.618rem;
+    margin-right: 1.618rem;
   }
 }
 
@@ -362,15 +363,15 @@ section, article, nav, aside {
 
 footer {
   border-top: 1px dashed $ui-color;
-  margin: 1.618em 0.618em 0.382em;
-  padding: 0;
+  margin: 1.618em 1em 0;
+  padding: 1em 0.618em;
   & > p {
-    margin: 0.382em 0 0.236em;
+    margin: 0;
   }
 }
 
 aside {
-  margin: 0.618em 0.618rem 1em;
+  margin: 0.618em 0 1em;
   & > p {
     margin: 0;
   }
