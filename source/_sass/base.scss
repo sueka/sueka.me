@@ -356,6 +356,10 @@ section, article, nav, aside {
   }
 }
 
+.header-anchor:focus {
+  opacity: 1;
+}
+
 .recent-posts {
   margin: 0 0.618em;
 }
