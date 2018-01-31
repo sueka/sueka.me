@@ -325,8 +325,8 @@ main {
   h1, h2, h3, h4, h5, h6, hr,
   ul, ol,
   p, blockquote {
-    margin-left: 1.618rem;
-    margin-right: 1.618rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 
@@ -358,13 +358,13 @@ section, article, nav, aside {
 }
 
 .recent-posts {
-  margin: 0 1.618em;
+  margin: 0 1em;
 }
 
 footer {
   border-top: 1px dashed $ui-color;
-  margin: 1.618em 1em 0;
-  padding: 1em 0.618em;
+  margin: 1.618em 0.618em 0;
+  padding: 0.618em 0.382em;
   & > p {
     margin: 0;
   }
