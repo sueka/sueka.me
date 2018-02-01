@@ -10,7 +10,7 @@
   <h3>{{ tags-in-native }}</h3>
   <ul>
     {% for tag in page.tags %}
-      <li><a href="/tags/{{ tag }}.html">{{ tag }}</a></li>
+      <li><a href="/tags/{{ tag | slugify }}.html">{{ tag }}</a></li>
     {% endfor %}
   </ul>
 </nav>
