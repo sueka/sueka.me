@@ -42,9 +42,10 @@
     };
   }));
 
+  var space = window.document.createTextNode(" ");
+
   anchorageAndIds.forEach(function (anchorageAndId) {
-    var space = window.document.createTextNode(" "),
-        a = window.document.createElement("a");
+    var a = window.document.createElement("a");
         a.className = "header-anchor";
         a.href = "#" + anchorageAndId.id;
         a.textContent = "🔗";
