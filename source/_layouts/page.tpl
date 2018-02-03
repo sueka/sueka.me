@@ -5,9 +5,9 @@
 {% case page.url %}
 {% when '/' %}
   {% assign page-title = page.title %}
-{% when '/index-ja.html' %}
-  {% assign page-title = page.title %}
 {% when '/index-he.html' %}
+  {% assign page-title = page.title %}
+{% when '/index-ja.html' %}
   {% assign page-title = page.title %}
 {% else %}
   {% assign page-title = page.title | append: ' - ' | append: site.title %}
