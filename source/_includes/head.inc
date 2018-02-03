@@ -13,8 +13,12 @@
 
 {% endfor %}
 
+{% if page.katex %}
+
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/{{ site.katex_version }}/katex.min.css" as="style" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/{{ site.katex_version }}/katex.min.css" />
+
+{% endif %}
 
 {% comment %} Languages {% endcomment %}
 {% if page.interlanguage-id %}
