@@ -18,6 +18,6 @@ lang: he
 
 - [Twitter](//twitter.com/{{ site.twitter_username }})
 - [GitHub](//github.com/{{ site.github_username }})
-- [MDN](//developer.mozilla.org/ja/profiles/sueka)
+- [MDN](//developer.mozilla.org/en-US/profiles/sueka)
 - [Stack Overflow](//stackoverflow.com/users/8795737/h-sueka)
 - [pixiv](//www.pixiv.net/member.php?id=28203588)
