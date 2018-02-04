@@ -13,7 +13,7 @@ RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [R=308,L]
 RewriteCond %{HTTP_HOST} ^www\. [OR]
 RewriteCond %{HTTP_HOST} \.$
 RewriteRule ^.*$ https://sueka.me%{REQUEST_URI} [R=308,L]
-RewriteRule ^(.+/)*index\.html?$ $1 [R=308,L]
+RewriteRule ^(.+/)?index\.html$ $1 [R=308,L]
 
 Options -MultiViews -Indexes
 
