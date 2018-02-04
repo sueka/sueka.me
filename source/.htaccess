@@ -1,11 +1,10 @@
-Options +MultiViews
-
-AddLanguage en .en
-AddLanguage he .he
-AddLanguage ja .ja
-
 ErrorDocument 403 /http/403.html
 ErrorDocument 404 /http/404.html
+
+<If "%{REQUEST_URI} =~ /\bja\b/">
+  ErrorDocument 403 /http/403-ja.html
+  ErrorDocument 404 /http/404-ja.html
+</If>
 
 RewriteEngine On
 RewriteBase /
