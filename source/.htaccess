@@ -2,10 +2,8 @@ AddLanguage en .en
 AddLanguage he .he
 AddLanguage ja .ja
 
-DirectoryIndex index
-
-ErrorDocument 403 /http/403
-ErrorDocument 404 /http/404
+ErrorDocument 403 /http/403.html
+ErrorDocument 404 /http/404.html
 
 RewriteEngine On
 RewriteBase /
@@ -14,7 +12,7 @@ RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [R=308,L]
 RewriteCond %{HTTP_HOST} ^www\. [OR]
 RewriteCond %{HTTP_HOST} \.$
 RewriteRule ^.*$ https://sueka.me%{REQUEST_URI} [R=308,L]
-RewriteRule ^(.+/)?index$ $1 [R=308,L]
+RewriteRule ^(.+/)?index\.html$ $1 [R=308,L]
 
 Options +MultiViews -Indexes
 

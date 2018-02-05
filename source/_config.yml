@@ -33,6 +33,6 @@ jekyll-archives:
     - month
     - tags
   permalinks:
-    year: /:year/index
-    month: /:year/:month/index
+    year: /:year/
+    month: /:year/:month/
     tag: /tags/:name.html
