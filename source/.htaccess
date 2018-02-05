@@ -1,5 +1,3 @@
-Options +MultiViews
-
 AddLanguage en .en
 AddLanguage he .he
 AddLanguage ja .ja
@@ -16,7 +14,7 @@ RewriteCond %{HTTP_HOST} \.$
 RewriteRule ^.*$ https://sueka.me%{REQUEST_URI} [R=308,L]
 RewriteRule ^(.+/)?index\.html$ $1 [R=308,L]
 
-Options -MultiViews -Indexes
+Options +MultiViews -Indexes
 
 ExpiresActive On
 ExpiresByType text/css A604800
