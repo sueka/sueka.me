@@ -15,7 +15,7 @@ github_username: sueka
 
 collections:
   posts:
-    permalink: /:year/:month/:slug.html
+    permalink: /:year/:month/:title.html
 
 markdown: kramdown
 sass:
