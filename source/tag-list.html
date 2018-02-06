@@ -7,7 +7,8 @@ title: Tag list
 {% assign translation = site.data.translations | where: 'langcode', page-lang | first %}
 {% assign date-format = translation.date-format %}
 {% assign routing-to-tags = site.jekyll-archives.permalinks.tag %}
-{% for tag-posts-pair in site.tags %}
+{% assign tags = site.tags | sort %}
+{% for tag-posts-pair in tags %}
   {% assign tag = tag-posts-pair | first %}
   {% assign posts = tag-posts-pair | last | sort: 'date' | reverse %}
   <section id="tag_{{ tag }}">
