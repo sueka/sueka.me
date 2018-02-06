@@ -1,7 +1,5 @@
 {% assign include-lang = include.lang | default: page-lang %}
-
 {% assign translation = site.data.translations | where: 'langcode', include-lang | first %}
-
 <nav class="recent-posts">
   <h3>{{ translation.recent-posts }}</h3>
   <ul>

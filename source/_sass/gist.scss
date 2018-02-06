@@ -1,4 +1,6 @@
 .gist {
+  font-size: 1rem !important;
+
   table, table th, table td {
     border: unset;
   }
@@ -13,8 +15,8 @@
     line-height: unset !important;
     font-size: unset !important;
     font-family: $font-code !important;
-    &:lang(ja) { font-family: $font-code-ja !important }
+    &:lang(ja) {
+      font-family: $font-code-ja !important
+    }
   }
-
-  font-size: 1rem !important;
 }
