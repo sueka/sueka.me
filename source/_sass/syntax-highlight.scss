@@ -90,6 +90,9 @@ figure.highlight {
   .nn { color: tomato } // namespace
   .nd { color: tomato } // decorator
   .nc { color: tomato } // class
+  .nb { color: #39c } // built in
+  .nt { color: #39c } // tag
+  .nv { color: tomato } // variable
 
   // operator
   .o  {}
@@ -109,4 +112,11 @@ figure.highlight {
 
   // punctuation
   .p {}
+
+  // comment
+  .c { color: gray; font-style: italic }
+
+  // string
+  .s1 { color: yellowgreen } // single
+  .s2 { color: yellowgreen } // double
 }
