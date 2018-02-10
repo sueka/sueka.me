@@ -419,7 +419,8 @@ body > header {
     color: $bg-color;
     border-color: $bg-color;
   }
-  a:hover {
+  a:hover,
+  a.hover-like {
     background-color: $bg-color;
     color: mix($fg-color, $accent-color, 14.6%);
   }
