@@ -25,6 +25,7 @@
       <li><a href="{{ about-me-path | relative_url }}">{{ about-me-anchor-text }}</a></li>
       <li><a href="{{ '/tag-list.html' | relative_url }}">{{ translation.tags }}</a></li>
       <li><a href="{{ '/archives-list.html' | relative_url }}">{{ translation.archives }}</a></li>
+      <li><a href="{{ '/search.html' | relative_url }}">{{ translation.search }}</a></li>
     </ul>
   </nav>
 </header>
