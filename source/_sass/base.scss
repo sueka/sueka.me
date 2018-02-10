@@ -275,6 +275,11 @@ blockquote,
   }
 }
 
+input {
+  font-size: 16px;
+  font-size: unquote('max(16px, 100%)');
+}
+
 body > header {
   display: flex;
   & > h1 {
