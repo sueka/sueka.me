@@ -17,6 +17,9 @@ collections:
   posts:
     permalink: /:year/:month/:title.html
 
+liquid:
+  error_mode: strict
+
 markdown: kramdown
 sass:
   style: compressed
