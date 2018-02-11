@@ -329,13 +329,15 @@ body > header {
   }
 }
 
-main {
+main,
+.side-column,
+.main-column {
   // margin: 0 0.618em;
   margin: 0;
-  section, aside,
-  h1, h2, h3, h4, h5, h6, hr,
-  ul, ol,
-  p, blockquote, .blockquote-like {
+  > section, > aside,
+  > h1, > h2, > h3, > h4, > h5, > h6, > hr,
+  > ul, > ol,
+  > p, > blockquote, > .blockquote-like {
     margin-left: 1rem;
     margin-right: 1rem;
   }
@@ -377,15 +379,13 @@ footer {
   margin: 1.618em 0.618em 0;
   padding: 0.618em 0.382em;
   & > p {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
 aside {
   margin: 0.618em 0 1em;
-  & > p {
-    margin: 0;
-  }
 }
 .note {
   border: 1px dashed $ui-color;
