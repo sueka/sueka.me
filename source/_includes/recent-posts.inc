@@ -3,7 +3,7 @@
 <nav class="recent-posts">
   <h3>{{ translation.recent-posts }}</h3>
   <ul>
-    {% assign site-posts = site.posts | sort: 'date' %}
+    {% assign site-posts = site.posts | sort: 'date' | reverse %}
     {% for post in site-posts %}
       {% assign post-lang = post.lang | default: site.lang %}
       {% if post-lang == include-lang %}
