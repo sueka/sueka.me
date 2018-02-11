@@ -329,11 +329,16 @@ body > header {
   }
 }
 
-main,
-.side-column,
-.main-column {
+main {
   // margin: 0 0.618em;
   margin: 0;
+}
+
+main,
+.side-column,
+.main-column,
+blockquote,
+.blockquote-like {
   > section, > aside, > nav,
   > h1, > h2, > h3, > h4, > h5, > h6, > hr,
   > ul, > ol,
