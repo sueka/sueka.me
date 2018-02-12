@@ -20,9 +20,9 @@
     return this.map(f).flatten;
   };
 
-  var mains = window.document.querySelectorAll("main").asArray;
+  const mains = window.document.querySelectorAll("main").asArray;
 
-  var anchorageAndIds = mains.flatMap(function (main) {
+  const anchorageAndIds = mains.flatMap(function (main) {
     return main.querySelectorAll("h1, h2, h3, h4, h5, h6").asArray;
   }).filter(function (hn) {
     return hn.hasAttribute("id");
@@ -43,11 +43,11 @@
   }));
 
   anchorageAndIds.forEach(function (anchorageAndId) {
-    var space = window.document.createTextNode(" "),
-        a = window.document.createElement("a");
-        a.className = "header-anchor";
-        a.href = "#" + anchorageAndId.id;
-        a.textContent = "🔗";
+    const space = window.document.createTextNode(" ");
+    const a = window.document.createElement("a");
+          a.className = "header-anchor";
+          a.href = "#" + anchorageAndId.id;
+          a.textContent = "🔗";
     anchorageAndId.anchorage.appendChild(space);
     anchorageAndId.anchorage.appendChild(a);
   });
