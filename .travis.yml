@@ -17,7 +17,7 @@ install:
 cache: bundler
 
 script:
-  - bundle exec jekyll b --safe -s source
+  - bundle exec jekyll b --safe
   - bundle exec htmlproofer _site/ --disable-external
 
 before_deploy:

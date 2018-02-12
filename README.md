@@ -7,9 +7,9 @@ sueka.me
 
 ## Usage
 
-Running `bundle exec jekyll build --source source` generates a `_site` directory.
+Running `bundle exec jekyll build` generates a `_site` directory.
 
-To browser test, starting a local server by running `bundle exec jekyll serve --source source`, execute `bundle exec rspec`.
+To browser test, starting a local server by running `bundle exec jekyll serve`, execute `bundle exec rspec`.
 
 ### Deployment
 
