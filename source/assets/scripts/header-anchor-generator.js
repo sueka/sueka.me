@@ -4,36 +4,24 @@
     return Array.prototype.slice.call(arrayLike);
   }
 
-  Object.defineProperty(NodeList.prototype, "asArray", {
-    get: function () {
-      return array(this);
-    }
-  });
+  function flatten(xss) {
+    return Array.prototype.concat.apply([], xss);
+  }
 
-  Object.defineProperty(Array.prototype, "flatten", {
-    get: function () {
-      return Array.prototype.concat.apply([], this);
-    }
-  });
+  const mains = array(window.document.querySelectorAll("main"));
 
-  Array.prototype.flatMap = function (f) {
-    return this.map(f).flatten;
-  };
-
-  const mains = window.document.querySelectorAll("main").asArray;
-
-  const anchorageAndIds = mains.flatMap(function (main) {
-    return main.querySelectorAll("h1, h2, h3, h4, h5, h6").asArray;
-  }).filter(function (hn) {
+  const anchorageAndIds = flatten(mains.map(function (main) {
+    return array(main.querySelectorAll("h1, h2, h3, h4, h5, h6"));
+  })).filter(function (hn) {
     return hn.hasAttribute("id");
   }).map(function (hn) {
     return {
       "anchorage": hn,
       "id": hn.id,
     };
-  }).concat(mains.flatMap(function (main) {
-    return main.querySelectorAll("section, article, nav, aside").asArray;
-  }).filter(function (section) {
+  }).concat(flatten(mains.map(function (main) {
+    return array(main.querySelectorAll("section, article, nav, aside"));
+  })).filter(function (section) {
     return section.hasAttribute("id");
   }).map(function (section) {
     return {
