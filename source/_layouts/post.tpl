@@ -22,6 +22,6 @@
       </div>
     </main>
     {% include footer.inc %}
-    {% include header-anchor-generator.inc %}
+    {% include scripts.inc %}
   </body>
 </html>
