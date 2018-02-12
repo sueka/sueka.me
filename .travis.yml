@@ -32,7 +32,7 @@ deploy:
   script:
     find "$TRAVIS_BUILD_DIR/_site" -type f -print | xargs chmod 604 &&
     find "$TRAVIS_BUILD_DIR/_site" -type d -print | xargs chmod 701 &&
-    rsync -qrpt --delete-after "$TRAVIS_BUILD_DIR/_site/" http@sueka.me:/srv/http/www/html
+    rsync -qrpt --delete-after "$TRAVIS_BUILD_DIR/_site/" http@sueka.me:/opt/local/http/me/sueka/www/html
   on:
     rvm: 2.4.3
     branch: master
