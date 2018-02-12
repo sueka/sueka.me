@@ -35,9 +35,9 @@
   anchorageAndIds.forEach(function (anchorageAndId) {
     const space = document.createTextNode(" ");
     const a = document.createElement("a");
-    a.className = "header-anchor";
-    a.href = "#" + anchorageAndId.id;
-    a.textContent = "🔗";
+          a.className = "header-anchor";
+          a.href = "#" + anchorageAndId.id;
+          a.textContent = "🔗";
     anchorageAndId.anchorage.appendChild(space);
     anchorageAndId.anchorage.appendChild(a);
   });
