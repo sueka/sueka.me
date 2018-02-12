@@ -336,7 +336,16 @@ main {
 
 main,
 .side-column,
-.main-column,
+.main-column {
+  > section, > aside, > nav,
+  > h1, > h2, > h3, > h4, > h5, > h6, > hr,
+  > ul, > ol,
+  > p, > blockquote, > .blockquote-like {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
 blockquote,
 .blockquote-like {
   > section, > aside, > nav,
@@ -344,7 +353,6 @@ blockquote,
   > ul, > ol,
   > p, > blockquote, > .blockquote-like {
     margin-left: 1rem;
-    margin-right: 1rem;
   }
 }
 
