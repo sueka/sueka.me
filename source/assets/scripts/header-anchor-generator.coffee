@@ -9,29 +9,29 @@ flatten = (xss) ->
 
 mains = array document.querySelectorAll('main')
 
-anchorageAndIds = flatten(mains.map((main) ->
-  array(main.querySelectorAll('h1, h2, h3, h4, h5, h6'))
+anchorageAndIds = (flatten(mains.map((main) ->
+  array main.querySelectorAll('h1, h2, h3, h4, h5, h6')
 )).filter((hn) ->
   hn.hasAttribute('id')
-).map((hn) -> {
-  'anchorage': hn,
-  'id': hn.id,
+).map (hn) -> {
+  anchorage: hn,
+  id: hn.id,
 }).concat flatten(mains.map((main) ->
-  array(main.querySelectorAll('section, article, nav, aside'))
+  array main.querySelectorAll('section, article, nav, aside')
 )).filter((section) ->
   section.hasAttribute('id')
 ).map (section) -> {
-  'anchorage': section.querySelector('h1, h2, h3, h4, h5, h6'),
-  'id': section.id,
+  anchorage: section.querySelector('h1, h2, h3, h4, h5, h6'),
+  id: section.id,
 }
 
-anchorageAndIds.forEach (anchorageAndId) ->
+anchorageAndIds.forEach ({ anchorage, id }) ->
   space = document.createTextNode(' ')
   a = document.createElement('a')
   a.className = 'header-anchor'
-  a.href = '#' + anchorageAndId.id
+  a.href = '#' + id
   a.textContent = '🔗'
-  anchorageAndId.anchorage.appendChild(space)
-  anchorageAndId.anchorage.appendChild(a)
+  anchorage.appendChild(space)
+  anchorage.appendChild(a)
 
 window.addEventListener('touchstart', (->), false)
