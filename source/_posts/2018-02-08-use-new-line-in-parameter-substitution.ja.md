@@ -8,7 +8,7 @@ toc: true
 
 改行を変数にすればよいです。
 
-## 例
+## 実例
 
 ``` sh
 #!/usr/bin/env sh
