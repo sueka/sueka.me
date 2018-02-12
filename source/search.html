@@ -1,30 +1,10 @@
 ---
-layout: none
+layout: page
+extra-scripts: search
 title: Search
 ---
 
-{% assign page-lang = page.lang | default: site.lang %}
-<html {% if page-lang == 'he' %} dir="rtl" {% endif %} lang="{{ page-lang }}">
-  <head>
-    <title>{{ page.title }} - {{ site.title }}</title>
-    {% include head.inc %}
-  </head>
-  <body>
-    {% include header.inc %}
-    <main>
-      <h1>{{ page.title }}</h1>
-      <div class="container">
-        <div class="side-column"></div>
-        <div class="main-column">
-          <section>
-            <input name="q" />
-            <div class="search-result"></div>
-          </section>
-          {% include main-source.inc %}
-        </div>
-      </div>
-    </main>
-    {% include footer.inc %}
-    <script src="{{ 'assets/scripts/search.js' | relative_url }}"></script>
-  </body>
-</html>
+<section>
+  <input name="q" />
+  <div class="search-result"></div>
+</section>
