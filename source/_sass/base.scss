@@ -257,11 +257,15 @@ blockquote,
   border-left: 0.382em solid $quote-color;
   margin-top: 1em;
   margin-bottom: 0.618em;
-  & > blockquote,
-  & > .blockquote-like,
-  & > table, & > figure, & > pre,
-  & > ul, & > ol, & > dl,
-  & > p {
+
+  > section, > aside, > nav,
+  > h1, > h2, > h3, > h4, > h5, > h6, > hr,
+  > blockquote,
+  > .blockquote-like,
+  > table, > figure, > pre,
+  > ul, > ol, > dl,
+  > p {
+    margin-left: 0.618rem;
     &:first-child {
       margin-top: 0;
     }
@@ -343,16 +347,6 @@ main,
   > p, > blockquote, > .blockquote-like {
     margin-left: 1rem;
     margin-right: 1rem;
-  }
-}
-
-blockquote,
-.blockquote-like {
-  > section, > aside, > nav,
-  > h1, > h2, > h3, > h4, > h5, > h6, > hr,
-  > ul, > ol,
-  > p, > blockquote, > .blockquote-like {
-    margin-left: 1rem;
   }
 }
 
