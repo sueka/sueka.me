@@ -9,21 +9,15 @@ flatten = (xss) ->
 
 mains = array document.querySelectorAll('main')
 
-anchorageAndIds = (flatten(mains.map((main) ->
-  array main.querySelectorAll('h1, h2, h3, h4, h5, h6')
-)).filter((hn) ->
-  hn.hasAttribute('id')
-).map (hn) -> {
-  anchorage: hn,
-  id: hn.id,
-}).concat flatten(mains.map((main) ->
-  array main.querySelectorAll('section, article, nav, aside')
-)).filter((section) ->
-  section.hasAttribute('id')
-).map (section) -> {
-  anchorage: section.querySelector('h1, h2, h3, h4, h5, h6'),
-  id: section.id,
-}
+anchorageAndIds =
+  flatten mains.map (main) -> array main.querySelectorAll('h1, h2, h3, h4, h5, h6')
+  .filter (hn) -> hn.hasAttribute('id')
+  .map (hn) -> { anchorage: hn, id: hn.id }
+  .concat (
+    flatten mains.map (main) -> array main.querySelectorAll('section, article, nav, aside')
+    .filter (section) -> section.hasAttribute('id')
+    .map (section) -> { anchorage: section.querySelector('h1, h2, h3, h4, h5, h6'), id: section.id }
+  )
 
 anchorageAndIds.forEach ({ anchorage, id }) ->
   space = document.createTextNode(' ')

@@ -10,7 +10,7 @@ search = (patterns, posts) ->
 input = array document.querySelectorAll('input[name=q]')
 
 fetch('/json/posts.json').then((response) -> response.json()).then (posts) ->
-  addEventListener 'keyup', (event) ->
+  window.addEventListener 'keyup', (event) ->
     if (input.includes event.target)
       q = event.target.value
 
