@@ -9,7 +9,9 @@ search = (patterns, posts) ->
 
 input = array document.querySelectorAll('input[name=q]')
 
-fetch('/json/posts.json').then((response) -> response.json()).then (posts) ->
+fetch('/json/posts.json')
+.then (response) -> response.json()
+.then (posts) ->
   window.addEventListener 'keyup', (event) ->
     if (input.includes event.target)
       q = event.target.value
@@ -36,3 +38,4 @@ fetch('/json/posts.json').then((response) -> response.json()).then (posts) ->
 
         ul.appendChild(liContainer)
         div.appendChild(ul)
+  , false
