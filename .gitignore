@@ -1,6 +1,3 @@
-# Git
-.git/
-
 # Jekyll
 .git-metadata/
 .sass-cache/
