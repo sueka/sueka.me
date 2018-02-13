@@ -1,6 +1,15 @@
 ---
 ---
 
+if (!Array.prototype.includes)
+  Object.defineProperty Array.prototype, 'includes', {
+    value: (searchElement, fromIndex = 0) ->
+      if (this == null)
+        throw new TypeError("Cannot read property 'includes' of #{this}")
+
+      fromIndex <= this.indexOf(searchElement)
+  }
+
 array = (arrayLike) ->
   Array.prototype.slice.call(arrayLike)
 
@@ -21,6 +30,7 @@ fetch('/json/posts.json')
 
       if (q != '')
         searchPatterns = q.split(' ').map((query) -> new RegExp(query, 'i'))
+        # exceprtPattern = new RegExp('(?:[^>](?!<))+' + q.replace(' ', '|') + '[^<]+(?:</)', 'i')
 
         ul = document.createElement('ul')
         liContainer = document.createDocumentFragment()
@@ -32,6 +42,8 @@ fetch('/json/posts.json')
           a.lang = post.lang
           a.hreflang = post.lang
           a.textContent = post.title
+          # div = document.createElement('div')
+          #     div.innerHTML = exceprtPattern.exec(post.content)[0]
 
           li.appendChild(a)
           liContainer.appendChild(li)
