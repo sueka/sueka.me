@@ -323,6 +323,14 @@ body > header {
   }
 }
 
+.scroll-indicator {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 0.382ex;
+  width: 0%;
+}
+
 main {
   // margin: 0 0.618em;
   margin: 0;
@@ -421,6 +429,10 @@ body > header {
     background-color: $bg-color;
     color: mix($fg-color, $accent-color, 14.6%);
   }
+}
+
+.scroll-indicator {
+  background-color: mix($fg-color, $accent-color, 14.6%);
 }
 
 //

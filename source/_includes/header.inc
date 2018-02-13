@@ -33,3 +33,4 @@
     </ul>
   </nav>
 </header>
+<div class="scroll-indicator"></div>
