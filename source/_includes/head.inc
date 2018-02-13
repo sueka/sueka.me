@@ -8,7 +8,7 @@
   <link rel="preload" href="{{ 'assets/stylesheets/' | append: extra-stylesheet | append: '.css' | relative_url }}" as="style" />
   <link rel="stylesheet" href="{{ 'assets/stylesheets/' | append: extra-stylesheet | append: '.css' | relative_url }}" />
 {% endfor %}
-{% if page.katex %}
+{% if page.use-katex %}
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/{{ site.katex_version }}/katex.min.css" as="style" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/{{ site.katex_version }}/katex.min.css" />
 {% endif %}
