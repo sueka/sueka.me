@@ -4,9 +4,9 @@
 scrollIndicate = () ->
   scrollIndicator = document.querySelector('body > header + .scroll-indicator')
 
-  scrollingElement = document.scrollingElement | document.documentElement
+  scrollingElement = document.scrollingElement || document.documentElement
   scrollTop = Math.max(scrollingElement.scrollTop, document.body.scrollTop)
-  scrollMaxY = window.scrollMaxY | (document.documentElement.scrollHeight - document.documentElement.clientHeight)
+  scrollMaxY = window.scrollMaxY || (document.documentElement.scrollHeight - document.documentElement.clientHeight)
 
   scrollIndicator.style.width =
     if (scrollMaxY == 0)
