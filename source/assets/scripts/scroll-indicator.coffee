@@ -6,7 +6,7 @@ scrollIndicate = () ->
 
   scrollingElement = document.scrollingElement || document.documentElement
   scrollTop = Math.max(scrollingElement.scrollTop, document.body.scrollTop)
-  scrollMaxY = window.scrollMaxY || (document.documentElement.scrollHeight - document.documentElement.clientHeight)
+  scrollMaxY = document.documentElement.scrollHeight - window.innerHeight
 
   scrollIndicator.style.width =
     if (scrollMaxY == 0)
