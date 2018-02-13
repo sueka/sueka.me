@@ -12,7 +12,7 @@ scrollIndicate = () ->
     if (scrollMaxY == 0)
       '0'
     else
-      100 * (scrollTop / scrollMaxY) + '%'
+      100 * Math.min(1, scrollTop / scrollMaxY) + '%'
 
 window.addEventListener 'load', scrollIndicate, false
 window.addEventListener 'scroll', scrollIndicate, false
