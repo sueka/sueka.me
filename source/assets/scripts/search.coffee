@@ -35,7 +35,7 @@ fetch('/json/posts.json')
 
       if (q != '')
         searchPatterns = q.split(' ').map((query) -> new RegExp(query, 'i'))
-        # exceprtPattern = new RegExp('(?:[^>](?!<))+' + q.replace(' ', '|') + '[^<]+(?:</)', 'i')
+        excerptPattern = new RegExp("((?<=\n).*)(#{q.replace(' ', '|')})(.*(?=\n))", 'i')
 
         ul = document.createElement('ul')
         liContainer = document.createDocumentFragment()
@@ -44,14 +44,17 @@ fetch('/json/posts.json')
           li = document.createElement('li')
           a = document.createElement('a')
           a.href = post.url
+          a.textContent = post.title
+          pre = document.createElement('pre')
           if (post.lang)
             a.lang = post.lang
             a.hreflang = post.lang
-          a.textContent = post.title
-          # div = document.createElement('div')
-          #     div.innerHTML = exceprtPattern.exec(post.content)[0]
+            pre.lang = post.lang # FIXME: ignoring inline lang attributes
+          matches = excerptPattern.exec(post.textContent)
+          pre.innerHTML = "#{matches[1]}<mark>#{matches[2]}</mark>#{matches[3]}"
 
           li.appendChild(a)
+          li.appendChild(pre)
           liContainer.appendChild(li)
 
         ul.appendChild(liContainer)
