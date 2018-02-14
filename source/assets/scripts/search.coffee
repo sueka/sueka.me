@@ -21,6 +21,11 @@ input = array document.querySelectorAll('input[name=q]')
 fetch('/json/posts.json')
 .then (response) -> response.json()
 .then (posts) ->
+  container = document.createElement('div')
+  posts.forEach (post) ->
+    container.innerHTML = post.content
+    post.textContent = container.textContent
+
   window.addEventListener 'keyup', (event) ->
     if (input.includes event.target)
       q = event.target.value
