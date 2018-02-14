@@ -44,8 +44,9 @@ fetch('/json/posts.json')
           li = document.createElement('li')
           a = document.createElement('a')
           a.href = post.url
-          a.lang = post.lang
-          a.hreflang = post.lang
+          if (post.lang)
+            a.lang = post.lang
+            a.hreflang = post.lang
           a.textContent = post.title
           # div = document.createElement('div')
           #     div.innerHTML = exceprtPattern.exec(post.content)[0]
