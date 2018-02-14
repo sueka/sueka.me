@@ -1,9 +1,9 @@
 ---
 ---
 
-scrollIndicate = () ->
-  scrollIndicator = document.querySelector('body > header + .scroll-indicator')
+scrollIndicator = document.querySelector('body > header + .scroll-indicator')
 
+scrollIndicate = () ->
   scrollingElement = document.scrollingElement || document.documentElement
   scrollTop = Math.max(scrollingElement.scrollTop, document.body.scrollTop)
   scrollMaxY = document.documentElement.scrollHeight - window.innerHeight
