@@ -207,6 +207,10 @@ body {
   overflow-y: scroll;
 }
 
+pre {
+  white-space: pre-wrap;
+}
+
 :not(pre) > code {
   background-color: $code-bg-color;
   color: $code-fg-color;
