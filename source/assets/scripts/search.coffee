@@ -14,7 +14,7 @@ array = (arrayLike) ->
   Array.prototype.slice.call(arrayLike)
 
 search = (patterns, posts) ->
-  posts.filter((post) -> patterns.every((pattern) -> pattern.test(post.textContent)))
+  posts.filter((post) -> patterns.every((pattern) -> pattern.test(post.title) || pattern.test(post.textContent)))
 
 input = array document.querySelectorAll('input[name=q]')
 
