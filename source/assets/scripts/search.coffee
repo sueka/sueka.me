@@ -34,7 +34,7 @@ fetch('/json/posts.json')
       div.innerHTML = ''
 
       if (q != '')
-        searchPatterns = q.split(' ').map((query) -> new RegExp(query, 'i'))
+        filterPatterns = q.split(' ').map((query) -> new RegExp(query, 'i'))
         findPatternString = q.trim().replace(/ /g, '|')
         excerptPattern = ///
           ^.*
@@ -49,7 +49,7 @@ fetch('/json/posts.json')
         ul = document.createElement('ul')
         liContainer = document.createDocumentFragment()
 
-        search(searchPatterns, posts).forEach (post) ->
+        search(filterPatterns, posts).forEach (post) ->
           li = document.createElement('li')
           a = document.createElement('a')
           a.href = post.url
