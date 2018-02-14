@@ -51,3 +51,4 @@ fetch('/json/posts.json')
         ul.appendChild(liContainer)
         div.appendChild(ul)
   , false
+.catch (error) -> throw error
