@@ -35,7 +35,12 @@ fetch('/json/posts.json')
 
       if (q != '')
         searchPatterns = q.split(' ').map((query) -> new RegExp(query, 'i'))
-        excerptPattern = new RegExp("(?:^|\\n)(.*)(#{q.replace(' ', '|')})(.*)(?:\\n|$)", 'i')
+        findPatternString = q.trim().replace(/ /g, '|')
+        excerptPattern = ///
+          ^.*
+          (?:#{findPatternString})
+          .*$
+        ///im
 
         ul = document.createElement('ul')
         liContainer = document.createDocumentFragment()
