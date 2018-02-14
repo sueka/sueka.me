@@ -103,7 +103,7 @@ a, span[lang] {
     font-family: $font-text-ja;
   }
 }
-code {
+pre, code {
   font-family: $font-code;
   &:lang(ja) {
     font-family: $font-code-ja;
