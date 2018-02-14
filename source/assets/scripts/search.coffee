@@ -42,6 +42,10 @@ fetch('/json/posts.json')
           .*$
         ///im
 
+        replacePattern = ///
+          (#{findPatternString})
+        ///gi
+
         ul = document.createElement('ul')
         liContainer = document.createDocumentFragment()
 
@@ -55,8 +59,12 @@ fetch('/json/posts.json')
             a.lang = post.lang
             a.hreflang = post.lang
             pre.lang = post.lang # FIXME: ignoring inline lang attributes
-          matches = excerptPattern.exec(post.textContent)
-          pre.innerHTML = "#{matches[1]}<mark>#{matches[2]}</mark>#{matches[3]}"
+          optionalMatches = excerptPattern.exec(post.textContent)
+          pre.innerHTML =
+            if optionalMatches
+              optionalMatches[0].replace(replacePattern, "<mark>$1</mark>")
+            else
+              ''
 
           li.appendChild(a)
           li.appendChild(pre)
