@@ -11,6 +11,12 @@ Element::matches = Element::oMatchesSelector || Element::msMatchesSelector unles
 
 array = (arrayLike) -> Array::slice.call(arrayLike)
 
+truncate = (str, length, omission) ->
+  if (length <= length - omission.length)
+    str
+  else
+    "#{ str.slice(0, length - omission.length).trim() }#{ omission }"
+
 search = (patterns, posts) ->
   posts.filter ({ title, textContent }) ->
     patterns.every (pattern) -> pattern.test(title) || pattern.test(textContent)
@@ -38,9 +44,9 @@ resultItem = (excerptPattern, replacePattern, { url, title, lang = undefined, te
   pre.innerHTML =
     if matchedsOrNull
       [matched] = matchedsOrNull
-      matched.slice(0, 256).replace(replacePattern, "<mark>$1</mark>")
+      truncate(matched, 256, ' ...').replace(replacePattern, "<mark>$1</mark>")
     else
-      removeTags(excerpt).slice(0, 256)
+      truncate(removeTags(excerpt), 256, ' ...')
 
   li.appendChild(a)
   li.appendChild(pre)
