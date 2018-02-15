@@ -22,7 +22,7 @@ removeTags = (->
     container.textContent
 )()
 
-resultItem = (excerptPattern, replacePattern, { url, title, lang = undefined, textContent }) ->
+resultItem = (excerptPattern, replacePattern, { url, title, lang = undefined, textContent, excerpt }) ->
   li = document.createElement('li')
   a = document.createElement('a')
   pre = document.createElement('pre')
@@ -36,11 +36,12 @@ resultItem = (excerptPattern, replacePattern, { url, title, lang = undefined, te
 
   matchedsOrNull = excerptPattern.exec(textContent)
   pre.innerHTML =
-    if matchedsOrNull != null
+    if matchedsOrNull
       [matched] = matchedsOrNull
-      matched.replace(replacePattern, "<mark>$1</mark>")
+      matched.slice(0, 256).replace(replacePattern, "<mark>$1</mark>")
     else
-      ''
+      removeTags(excerpt).slice(0, 256)
+
   li.appendChild(a)
   li.appendChild(pre)
   li
