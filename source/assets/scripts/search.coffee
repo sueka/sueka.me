@@ -30,6 +30,13 @@ removeTags = (->
     container.textContent
 )()
 
+Try = (tryClause) ->
+  try
+    success = tryClause()
+  catch ex
+    failure = ex
+  { success, failure }
+
 renderResultItem = (excerptPattern, replacePattern, { url, title, lang = undefined, textContent, excerpt }) ->
   () ->
     elementOpen('li')
@@ -64,13 +71,17 @@ fetch('/json/posts.json')
       div = input.parentNode.querySelector('div')
       patch(div, ({ q }) ->
         if (q != '')
-          filterPatterns = [/// #{q} ///i]
-          excerptPattern = /// ^.* (?:#{q}) .*$ ///im
-          replacePattern = /// (#{q}) ///gi
-          elementOpen('ul')
-          search(filterPatterns, posts).forEach (post) ->
-            renderResultItem(excerptPattern, replacePattern, post)()
-          elementClose('ul')
+          { success, failure } = Try () ->
+            filterPatterns = [/// #{q} ///i]
+            excerptPattern = /// ^.* (?:#{q}) .*$ ///im
+            replacePattern = /// (#{q}) ///gi
+            { filterPatterns, excerptPattern, replacePattern }
+          if success
+            { filterPatterns, excerptPattern, replacePattern } = success
+            elementOpen('ul')
+            search(filterPatterns, posts).forEach (post) ->
+              renderResultItem(excerptPattern, replacePattern, post)()
+            elementClose('ul')
       , { q })
   , false)
 .catch (error) -> throw error
