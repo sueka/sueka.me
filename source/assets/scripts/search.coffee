@@ -7,13 +7,14 @@ unless Array::includes
       throw new TypeError("Cannot read property 'includes' of #{this}") if (this == null)
       fromIndex <= this.indexOf(searchElement)
 
+Element::matches = Element::oMatchesSelector || Element::msMatchesSelector unless Element::matches
+
 array = (arrayLike) -> Array::slice.call(arrayLike)
 
 search = (patterns, posts) ->
   posts.filter ({ title, textContent }) ->
     patterns.every (pattern) -> pattern.test(title) || pattern.test(textContent)
 
-input = array document.querySelectorAll('input[name=q]')
 removeTags = (->
   container = document.createElement('div')
   (html) ->
@@ -53,10 +54,10 @@ fetch('/json/posts.json')
     post.textContent = container.textContent
 
   window.addEventListener 'keyup', (event) ->
-    if (input.includes event.target)
-      q = event.target.value
-
-      div = event.target.parentNode.querySelector('.search-result')
+    if event.target.matches('.search-io > input')
+      input = event.target
+      q = input.value.trim().replace(/\s+/g, ' ')
+      div = input.parentNode.querySelector('div')
       div.innerHTML = ''
 
       if (q != '')
