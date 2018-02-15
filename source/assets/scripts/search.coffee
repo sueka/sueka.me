@@ -53,7 +53,7 @@ fetch('/json/posts.json')
     container.innerHTML = post.content
     post.textContent = container.textContent
 
-  window.addEventListener 'keyup', (event) ->
+  window.addEventListener('keyup', (event) ->
     if event.target.matches('.search-io > input')
       input = event.target
       q = input.value.trim().replace(/\s+/g, ' ')
@@ -80,5 +80,5 @@ fetch('/json/posts.json')
           liContainer.appendChild resultItem(excerptPattern, replacePattern, post)
         ul.appendChild(liContainer)
         div.appendChild(ul)
-  , false
+  , false)
 .catch (error) -> throw error
