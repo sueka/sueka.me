@@ -48,6 +48,8 @@ resultItem = (excerptPattern, replacePattern, { url, title, lang = undefined, te
 fetch('/json/posts.json')
 .then (response) -> response.json()
 .then (posts) ->
+  posts.forEach (post) ->
+    post.textContent = removeTags(post.content)
   window.addEventListener('keyup', (event) ->
     if event.target.matches('.search-io > input')
       input = event.target
