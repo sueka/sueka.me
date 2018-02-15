@@ -61,18 +61,10 @@ fetch('/json/posts.json')
       div.innerHTML = ''
 
       if (q != '')
-        filterPatterns = q.split(' ').map((query) -> new RegExp(query, 'i'))
-        findPatternString = q.trim().replace(/ /g, '|')
-        excerptPattern = ///
-          ^.*
-          (?:#{findPatternString})
-          .*$
-        ///im
-
-        replacePattern = ///
-          (#{findPatternString})
-        ///gi
-
+        findPatternString = q.replace(/ /g, '|')
+        filterPatterns = q.split(' ').map (query) -> /// #{query} ///i
+        excerptPattern = /// ^.* (?:#{findPatternString}) .*$ ///im
+        replacePattern = /// (#{findPatternString}) ///gi
         ul = document.createElement('ul')
         liContainer = document.createDocumentFragment()
 
