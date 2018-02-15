@@ -60,14 +60,13 @@ fetch('/json/posts.json')
   window.addEventListener('keyup', (event) ->
     if event.target.matches('.search-io > input')
       input = event.target
-      q = input.value.trim().replace(/\s+/g, ' ')
+      q = input.value
       div = input.parentNode.querySelector('div')
       patch(div, ({ q }) ->
         if (q != '')
-          findPatternString = q.replace(/ /g, '|')
-          filterPatterns = q.split(' ').map (query) -> /// #{query} ///i
-          excerptPattern = /// ^.* (?:#{findPatternString}) .*$ ///im
-          replacePattern = /// (#{findPatternString}) ///gi
+          filterPatterns = [/// #{q} ///i]
+          excerptPattern = /// ^.* (?:#{q}) .*$ ///im
+          replacePattern = /// (#{q}) ///gi
           elementOpen('ul')
           search(filterPatterns, posts).forEach (post) ->
             renderResultItem(excerptPattern, replacePattern, post)()
