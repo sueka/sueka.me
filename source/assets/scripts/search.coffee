@@ -14,6 +14,12 @@ search = (patterns, posts) ->
     patterns.every (pattern) -> pattern.test(title) || pattern.test(textContent)
 
 input = array document.querySelectorAll('input[name=q]')
+removeTags = (->
+  container = document.createElement('div')
+  (html) ->
+    container.innerHTML = html
+    container.textContent
+)()
 
 fetch('/json/posts.json')
 .then (response) -> response.json()
