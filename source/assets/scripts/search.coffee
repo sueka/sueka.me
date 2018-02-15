@@ -12,7 +12,7 @@ Element::matches = Element::oMatchesSelector || Element::msMatchesSelector unles
 array = (arrayLike) -> Array::slice.call(arrayLike)
 
 truncate = (str, length, omission) ->
-  if (length <= length - omission.length)
+  if (str.length <= length - omission.length)
     str
   else
     "#{ str.slice(0, length - omission.length).trim() }#{ omission }"
