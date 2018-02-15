@@ -1,20 +1,17 @@
 ---
 ---
 
-if (!Array.prototype.includes)
-  Object.defineProperty Array.prototype, 'includes', {
+unless Array::includes
+  Object.defineProperty Array::, 'includes',
     value: (searchElement, fromIndex = 0) ->
-      if (this == null)
-        throw new TypeError("Cannot read property 'includes' of #{this}")
-
+      throw new TypeError("Cannot read property 'includes' of #{this}") if (this == null)
       fromIndex <= this.indexOf(searchElement)
-  }
 
-array = (arrayLike) ->
-  Array.prototype.slice.call(arrayLike)
+array = (arrayLike) -> Array::slice.call(arrayLike)
 
 search = (patterns, posts) ->
-  posts.filter((post) -> patterns.every((pattern) -> pattern.test(post.title) || pattern.test(post.textContent)))
+  posts.filter ({ title, textContent }) ->
+    patterns.every (pattern) -> pattern.test(title) || pattern.test(textContent)
 
 input = array document.querySelectorAll('input[name=q]')
 

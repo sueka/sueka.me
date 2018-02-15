@@ -14,6 +14,6 @@ scrollIndicate = () ->
     else
       100 * Math.min(1, scrollTop / scrollMaxY) + '%'
 
-window.addEventListener 'load', scrollIndicate, false
-window.addEventListener 'scroll', scrollIndicate, false
-window.addEventListener 'resize', scrollIndicate, false
+window.addEventListener('load', scrollIndicate, false)
+window.addEventListener('scroll', scrollIndicate, false)
+window.addEventListener('resize', scrollIndicate, false)

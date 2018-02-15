@@ -1,11 +1,9 @@
 ---
 ---
 
-array = (arrayLike) ->
-  Array.prototype.slice.call(arrayLike)
+array = (arrayLike) -> Array::slice.call(arrayLike)
 
-flatten = (xss) ->
-  Array.prototype.concat.apply([], xss)
+flatten = (xss) -> Array::concat.apply([], xss)
 
 mains = array document.querySelectorAll('main')
 
