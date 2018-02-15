@@ -1,6 +1,8 @@
 ---
 ---
 
+{ patch, elementOpen, elementOpenStart, elementOpenEnd, elementClose, elementVoid, text, attr } = IncrementalDOM
+
 unless Array::includes
   Object.defineProperty Array::, 'includes',
     value: (searchElement, fromIndex = 0) ->
@@ -28,29 +30,29 @@ removeTags = (->
     container.textContent
 )()
 
-resultItem = (excerptPattern, replacePattern, { url, title, lang = undefined, textContent, excerpt }) ->
-  li = document.createElement('li')
-  a = document.createElement('a')
-  pre = document.createElement('pre')
-  a.href = url
-  a.textContent = title
-
-  if (lang)
-    a.lang = lang
-    a.hreflang = lang
-    pre.lang = lang # FIXME: ignoring inline lang attributes
-
-  matchedsOrNull = excerptPattern.exec(textContent)
-  pre.innerHTML =
-    if matchedsOrNull
-      [matched] = matchedsOrNull
-      truncate(matched, 256, ' ...').replace(replacePattern, "<mark>$1</mark>")
-    else
-      truncate(removeTags(excerpt), 256, ' ...')
-
-  li.appendChild(a)
-  li.appendChild(pre)
-  li
+renderResultItem = (excerptPattern, replacePattern, { url, title, lang = undefined, textContent, excerpt }) ->
+  () ->
+    elementOpen('li')
+    elementOpenStart('a')
+    attr('href', url)
+    if lang
+      attr('lang', lang)
+      attr('hreflang', lang)
+    elementOpenEnd('a')
+    text(title)
+    elementClose('a')
+    elementOpenStart('pre')
+    attr('lang', lang) if lang
+    pre = elementVoid 'pre', ['lang', lang] # FIXME: ignoring inline lang attributes
+    matchedsOrNull = excerptPattern.exec(textContent)
+    pre.innerHTML =
+      if matchedsOrNull
+        [matched] = matchedsOrNull
+        truncate(matched, 256, ' ...').replace(replacePattern, "<mark>$1</mark>")
+      else
+        truncate(removeTags(excerpt), 256, ' ...')
+    pre
+    elementClose 'li'
 
 fetch('/json/posts.json')
 .then (response) -> response.json()
@@ -62,19 +64,16 @@ fetch('/json/posts.json')
       input = event.target
       q = input.value.trim().replace(/\s+/g, ' ')
       div = input.parentNode.querySelector('div')
-      div.innerHTML = ''
-
-      if (q != '')
-        findPatternString = q.replace(/ /g, '|')
-        filterPatterns = q.split(' ').map (query) -> /// #{query} ///i
-        excerptPattern = /// ^.* (?:#{findPatternString}) .*$ ///im
-        replacePattern = /// (#{findPatternString}) ///gi
-        ul = document.createElement('ul')
-        liContainer = document.createDocumentFragment()
-
-        search(filterPatterns, posts).forEach (post) ->
-          liContainer.appendChild resultItem(excerptPattern, replacePattern, post)
-        ul.appendChild(liContainer)
-        div.appendChild(ul)
+      patch(div, ({ q }) ->
+        if (q != '')
+          findPatternString = q.replace(/ /g, '|')
+          filterPatterns = q.split(' ').map (query) -> /// #{query} ///i
+          excerptPattern = /// ^.* (?:#{findPatternString}) .*$ ///im
+          replacePattern = /// (#{findPatternString}) ///gi
+          elementOpen('ul')
+          search(filterPatterns, posts).forEach (post) ->
+            renderResultItem(excerptPattern, replacePattern, post)()
+          elementClose('ul')
+      , { q })
   , false)
 .catch (error) -> throw error
