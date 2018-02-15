@@ -48,11 +48,6 @@ resultItem = (excerptPattern, replacePattern, { url, title, lang = undefined, te
 fetch('/json/posts.json')
 .then (response) -> response.json()
 .then (posts) ->
-  container = document.createElement('div')
-  posts.forEach (post) ->
-    container.innerHTML = post.content
-    post.textContent = container.textContent
-
   window.addEventListener('keyup', (event) ->
     if event.target.matches('.search-io > input')
       input = event.target
