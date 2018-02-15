@@ -41,18 +41,16 @@ renderResultItem = (excerptPattern, replacePattern, { url, title, lang = undefin
     elementOpenEnd('a')
     text(title)
     elementClose('a')
-    elementOpenStart('pre')
-    attr('lang', lang) if lang
-    pre = elementVoid 'pre', ['lang', lang] # FIXME: ignoring inline lang attributes
+    pre = elementOpenStart('pre')
+    attr('lang', lang) if lang # FIXME: ignoring inline lang attributes
+    elementOpenEnd('pre')
     matchedsOrNull = excerptPattern.exec(textContent)
-    pre.innerHTML =
-      if matchedsOrNull
-        [matched] = matchedsOrNull
-        truncate(matched, 256, ' ...').replace(replacePattern, "<mark>$1</mark>")
-      else
-        truncate(removeTags(excerpt), 256, ' ...')
-    pre
-    elementClose 'li'
+    text truncate(removeTags(excerpt), 256, ' ...') unless matchedsOrNull
+    pre = elementClose('pre')
+    if matchedsOrNull
+      [matched] = matchedsOrNull
+      pre.innerHTML = truncate(matched, 256, ' ...').replace(replacePattern, "<mark>$1</mark>")
+    elementClose('li')
 
 fetch('/json/posts.json')
 .then (response) -> response.json()
