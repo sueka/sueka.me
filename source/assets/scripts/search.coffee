@@ -21,6 +21,29 @@ removeTags = (->
     container.textContent
 )()
 
+resultItem = (excerptPattern, replacePattern, { url, title, lang = undefined, textContent }) ->
+  li = document.createElement('li')
+  a = document.createElement('a')
+  pre = document.createElement('pre')
+  a.href = url
+  a.textContent = title
+
+  if (lang)
+    a.lang = lang
+    a.hreflang = lang
+    pre.lang = lang # FIXME: ignoring inline lang attributes
+
+  matchedsOrNull = excerptPattern.exec(textContent)
+  pre.innerHTML =
+    if matchedsOrNull != null
+      [matched] = matchedsOrNull
+      matched.replace(replacePattern, "<mark>$1</mark>")
+    else
+      ''
+  li.appendChild(a)
+  li.appendChild(pre)
+  li
+
 fetch('/json/posts.json')
 .then (response) -> response.json()
 .then (posts) ->
@@ -53,26 +76,7 @@ fetch('/json/posts.json')
         liContainer = document.createDocumentFragment()
 
         search(filterPatterns, posts).forEach (post) ->
-          li = document.createElement('li')
-          a = document.createElement('a')
-          a.href = post.url
-          a.textContent = post.title
-          pre = document.createElement('pre')
-          if (post.lang)
-            a.lang = post.lang
-            a.hreflang = post.lang
-            pre.lang = post.lang # FIXME: ignoring inline lang attributes
-          optionalMatches = excerptPattern.exec(post.textContent)
-          pre.innerHTML =
-            if optionalMatches
-              optionalMatches[0].replace(replacePattern, "<mark>$1</mark>")
-            else
-              ''
-
-          li.appendChild(a)
-          li.appendChild(pre)
-          liContainer.appendChild(li)
-
+          liContainer.appendChild resultItem(excerptPattern, replacePattern, post)
         ul.appendChild(liContainer)
         div.appendChild(ul)
   , false
