@@ -151,6 +151,11 @@ html {
   line-height: 1.618;
 }
 
+pre {
+  text-align: left;
+  text-align: start;
+}
+
 q {
   &::before {
     content: '“';
