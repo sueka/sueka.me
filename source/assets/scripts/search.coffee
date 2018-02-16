@@ -87,6 +87,7 @@ fetch('/json/posts.json')
     if event.target.matches('.search-io > input')
       input = event.target
       output = input.nextElementSibling
+
       q = input.value
 
       patch(output, renderSearchResult, { q, posts })
@@ -95,6 +96,7 @@ fetch('/json/posts.json')
         url.searchParams.set('q', q)
       else
         url.searchParams.delete('q')
+
       history.pushState({ q }, "Posts including /#{q}/ - {{ site.title }}", url)
   , false)
 
@@ -105,6 +107,7 @@ fetch('/json/posts.json')
       history.replaceState({ q }, document.title, url)
     else
       history.replaceState({ q }, "Posts including /#{q}/ - {{ site.title }}", url)
+
       input = document.querySelector('.search-io > input')
       output = input.nextElementSibling
       input.value = q
