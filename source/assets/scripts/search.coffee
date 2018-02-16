@@ -19,10 +19,6 @@ truncate = (str, length, omission) ->
   else
     "#{ str.slice(0, length - omission.length).trim() }#{ omission }"
 
-search = (patterns, posts) ->
-  posts.filter ({ title, textContent }) ->
-    patterns.every (pattern) -> pattern.test(title) || pattern.test(textContent)
-
 removeTags = (->
   container = document.createElement('div')
   (html) ->
@@ -37,28 +33,6 @@ Try = (tryClause) ->
     failure = ex
   { success, failure }
 
-renderResultItem = (excerptPattern, replacePattern, { url, title, lang = undefined, textContent, excerpt }) ->
-  () ->
-    elementOpen('li')
-    elementOpenStart('a')
-    attr('href', url)
-    if lang
-      attr('lang', lang)
-      attr('hreflang', lang)
-    elementOpenEnd('a')
-    text(title)
-    elementClose('a')
-    pre = elementOpenStart('pre')
-    attr('lang', lang) if lang # FIXME: ignoring inline lang attributes
-    elementOpenEnd('pre')
-    matchedsOrNull = excerptPattern.exec(textContent)
-    text truncate(removeTags(excerpt), 256, ' ...') unless matchedsOrNull
-    pre = elementClose('pre')
-    if matchedsOrNull
-      [matched] = matchedsOrNull
-      pre.innerHTML = truncate(matched, 256, ' ...').replace(replacePattern, "<mark>$1</mark>")
-    elementClose('li')
-
 fetch('/json/posts.json')
 .then (response) -> response.json()
 .then (posts) ->
@@ -67,21 +41,43 @@ fetch('/json/posts.json')
   window.addEventListener('keyup', (event) ->
     if event.target.matches('.search-io > input')
       input = event.target
+      output = input.nextElementSibling
       q = input.value
-      div = input.parentNode.querySelector('div')
-      patch(div, ({ q }) ->
+
+      patch(output, ({ q, posts }) ->
         if (q != '')
           { success, failure } = Try () ->
-            filterPatterns = [/// #{q} ///i]
+            filterPattern = /// #{q} ///gi
             excerptPattern = /// ^.* (?:#{q}) .*$ ///im
             replacePattern = /// (#{q}) ///gi
-            { filterPatterns, excerptPattern, replacePattern }
+            { filterPattern, excerptPattern, replacePattern }
           if success
-            { filterPatterns, excerptPattern, replacePattern } = success
-            elementOpen('ul')
-            search(filterPatterns, posts).forEach (post) ->
-              renderResultItem(excerptPattern, replacePattern, post)()
-            elementClose('ul')
-      , { q })
+            { filterPattern, excerptPattern, replacePattern } = success
+            posts.filter ({ title, textContent }) ->
+              filterPattern.test(title) || filterPattern.test(textContent)
+            .forEach ({ url, lang, title, textContent, excerpt }) ->
+              elementOpen('section')
+              elementOpen('h6')
+              elementOpenStart('a', '', ['href', url])
+              if lang
+                attr('lang', lang)
+                attr('hreflang', lang)
+              elementOpenEnd('a')
+              text(title)
+              elementClose('a')
+              elementClose('h6')
+              elementOpenStart('p', '', ['class', 'search-result-excerpt'])
+              attr('lang', lang) if lang # FIXME: ignoring inline lang attributes
+              elementOpenEnd('p')
+              matchedsOrNull = excerptPattern.exec(textContent)
+              if matchedsOrNull
+                p = elementClose('p')
+                [matched] = matchedsOrNull
+                p.innerHTML = truncate(matched, 256, ' ...').replace(replacePattern, "<mark>$1</mark>")
+              else
+                text truncate(removeTags(excerpt), 256, ' ...')
+                elementClose('p')
+              elementClose('section')
+      , { q, posts })
   , false)
 .catch (error) -> throw error
