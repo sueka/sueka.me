@@ -104,6 +104,7 @@ fetch('/json/posts.json')
     q = url.searchParams.get('q')
 
     if !q
+      url.searchParams.delete('q')
       history.replaceState({ q }, document.title, url)
     else
       history.replaceState({ q }, "Posts including /#{q}/ - {{ site.title }}", url)
