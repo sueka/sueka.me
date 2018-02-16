@@ -448,6 +448,10 @@ body > header {
   background-color: mix($fg-color, $accent-color, 14.6%);
 }
 
+mark {
+  color: inherit;
+}
+
 //
 //    _|                _|        _|
 //  _|_|_|_|    _|_|_|  _|_|_|    _|    _|_|
