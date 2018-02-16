@@ -95,16 +95,16 @@ fetch('/json/posts.json')
         url.searchParams.set('q', q)
       else
         url.searchParams.delete('q')
-      history.pushState({ q }, "Posts including /#{q}/ - {{ site.title }}", url.toString())
+      history.pushState({ q }, "Posts including /#{q}/ - {{ site.title }}", url)
   , false)
 
   (->
     q = url.searchParams.get('q')
 
     if !q
-      history.replaceState({ q }, document.title, url.toString())
+      history.replaceState({ q }, document.title, url)
     else
-      history.replaceState({ q }, "Posts including /#{q}/ - {{ site.title }}", url.toString())
+      history.replaceState({ q }, "Posts including /#{q}/ - {{ site.title }}", url)
       input = document.querySelector('.search-io > input')
       output = input.nextElementSibling
       input.value = q
