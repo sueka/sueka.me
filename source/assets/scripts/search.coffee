@@ -53,9 +53,15 @@ fetch('/json/posts.json')
             { filterPattern, excerptPattern, replacePattern }
           if success
             { filterPattern, excerptPattern, replacePattern } = success
-            posts.filter ({ title, textContent }) ->
-              filterPattern.test(title) || filterPattern.test(textContent)
-            .forEach ({ url, lang, title, textContent, excerpt }) ->
+            posts.map (post) ->
+              { title, textContent } = post
+              matchRate =
+                1 - (1 - (title.match(filterPattern) || []).join('').length / title.length) *
+                    (1 - (textContent.match(filterPattern) || []).join('').length / textContent.length)
+              { post, matchRate }
+            .filter ({ matchRate }) -> matchRate > 0
+            .sort ({ matchRate: left }, { matchRate: right }) -> right - left
+            .forEach ({ post: { url, lang, title, textContent, excerpt } }) ->
               elementOpen('section')
               elementOpen('h6')
               elementOpenStart('a', '', ['href', url])
