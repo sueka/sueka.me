@@ -92,7 +92,7 @@ fetch('/json/posts.json')
       patch(output, renderSearchResult, { q, posts })
 
       url.searchParams.set('q', q)
-      history.pushState({ q }, document.title + q, url.toString())
+      history.pushState({ q }, "Posts including /#{q}/ - {{ site.title }}", url.toString())
   , false)
 
   (->
@@ -107,7 +107,7 @@ fetch('/json/posts.json')
 
   window.addEventListener('popstate', (event) ->
     { q } = event.state
-    history.replaceState({ q }, document.title + q, url.toString())
+    history.replaceState({ q }, "Posts including /#{q}/ - {{ site.title }}", url.toString())
 
     input = document.querySelector('.search-io > input')
     output = input.nextElementSibling
