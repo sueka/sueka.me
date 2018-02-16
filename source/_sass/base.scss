@@ -86,9 +86,11 @@ html {
 }
 h1, h2, h3, h4, h5, h6, th, dt, dt > b, strong {
   font-weight: 500;
-  font-family: $font-emph;
-  &:lang(ja) {
-    font-family: $font-emph-ja;
+  &, a[lang], span[lang] {
+    font-family: $font-emph;
+    &:lang(ja) {
+      font-family: $font-emph-ja;
+    }
   }
 }
 dt > dfn, dfn, em {
@@ -97,7 +99,7 @@ dt > dfn, dfn, em {
     font-family: $font-emph-ja;
   }
 }
-a, span[lang] {
+a[lang], span[lang] {
   font-family: $font-text;
   &:lang(ja) {
     font-family: $font-text-ja;
