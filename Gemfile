@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 ruby '>= 2.3.5', '~> 2.3'
-gem 'jekyll', '>= 3.6.2', '~> 3.6'
+gem 'jekyll', '>= 3.6.2',   '~> 3.6'
+gem 'rake',   '>= 12.3.0',  '~> 12.3'
 
 group :jekyll_plugins do
   gem 'jekyll-archives',      '>= 2.1.1', '~> 2.1'
