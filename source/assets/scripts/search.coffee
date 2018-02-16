@@ -64,7 +64,8 @@ fetch('/json/posts.json')
             .forEach ({ post: { url, lang, title, textContent, excerpt } }) ->
               elementOpen('section')
               elementOpen('h6')
-              elementOpenStart('a', '', ['href', url])
+              elementOpenStart('a')
+              attr('href', url)
               if lang
                 attr('lang', lang)
                 attr('hreflang', lang)
