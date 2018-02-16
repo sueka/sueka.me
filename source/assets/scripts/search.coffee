@@ -1,7 +1,7 @@
 ---
 ---
 
-{ patch, elementOpen, elementOpenStart, elementOpenEnd, elementClose, elementVoid, text, attr } = IncrementalDOM
+{ patch, elementOpen, elementOpenStart, elementOpenEnd, elementClose, text, attr } = IncrementalDOM
 
 unless Array::includes
   Object.defineProperty Array::, 'includes',
