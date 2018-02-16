@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '>= 2.3.5', '~> 2.3'
 gem 'jekyll', '>= 3.6.2', '~> 3.6'
 
 group :jekyll_plugins do
