@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '>= 2.4.3', '~> 2.4'
+ruby '>= 2.3.5', '~> 2.3'
 gem 'jekyll', '>= 3.6.2',   '~> 3.6'
 gem 'rake',   '>= 12.3.0',  '~> 12.3'
 
