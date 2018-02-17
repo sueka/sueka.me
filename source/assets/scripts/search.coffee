@@ -35,6 +35,11 @@ Try = (tryClause) ->
 
 url = new URL(location)
 
+nBytes = (str) ->
+  str.split('')
+  .map (c) -> c.charCodeAt(0).toString(16).length / 2
+  .reduce ((res, x) -> res + x), 0
+
 fetch('/json/posts.json')
 .then (response) -> response.json()
 .then (posts) ->
@@ -53,8 +58,8 @@ fetch('/json/posts.json')
         posts.map (post) ->
           { title, textContent } = post
           matchRate =
-            1 - (1 - (title.match(filterPattern) || []).join('').length / title.length) *
-                (1 - (textContent.match(filterPattern) || []).join('').length / textContent.length)
+            1 - (1 - nBytes((title.match(filterPattern) || []).join('')) / nBytes(title)) *
+                (1 - nBytes((textContent.match(filterPattern) || []).join('')) / nBytes(textContent))
           { post, matchRate }
         .filter ({ matchRate }) -> matchRate > 0
         .sort ({ matchRate: left }, { matchRate: right }) -> right - left
