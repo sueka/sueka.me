@@ -11,8 +11,6 @@ unless Array::includes
 
 Element::matches = Element::oMatchesSelector || Element::msMatchesSelector unless Element::matches
 
-array = (arrayLike) -> Array::slice.call(arrayLike)
-
 truncate = (str, length, omission) ->
   if (str.length <= length - omission.length)
     str
