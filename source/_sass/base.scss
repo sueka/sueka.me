@@ -106,8 +106,9 @@ dt > dfn, dfn, em {
     font-family: $font-emph-ja;
   }
 }
-a, span {
-  &[lang]:lang(ja) {
+a[lang], span[lang] {
+  font-family: $font-text;
+  &:lang(ja) {
     font-family: $font-text-ja;
   }
 }
