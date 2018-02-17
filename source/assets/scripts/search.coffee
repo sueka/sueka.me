@@ -11,8 +11,6 @@ unless Array::includes
 
 Element::matches = Element::oMatchesSelector || Element::msMatchesSelector unless Element::matches
 
-array = (arrayLike) -> Array::slice.call(arrayLike)
-
 truncate = (str, length, omission) ->
   if (str.length <= length - omission.length)
     str
@@ -26,19 +24,25 @@ removeTags = (->
     container.textContent
 )()
 
-Try = (tryClause) ->
+try_ = (errorClass, tryClause) ->
   try
-    success = tryClause()
+    right = tryClause()
   catch ex
-    failure = ex
-  { success, failure }
+    if ex instanceof errorClass
+      left = ex
+    else
+      throw ex
+  { left, right }
 
 url = new URL(location)
 
-nBytes = (str) ->
-  str.split('')
-  .map (c) -> c.charCodeAt(0).toString(16).length / 2
-  .reduce ((res, x) -> res + x), 0
+unless String::byteLength
+  Object.defineProperty String::, 'byteLength',
+    enumerable: true
+    get: () ->
+      this.split('')
+      .map (c) -> c.charCodeAt(0).toString(16).length / 2
+      .reduce ((res, x) -> res + x), 0
 
 fetch('/json/posts.json')
 .then (response) -> response.json()
@@ -48,18 +52,17 @@ fetch('/json/posts.json')
 
   renderSearchResult = ({ q, posts }) ->
     if (q != '')
-      { success, failure } = Try () ->
-        filterPattern = /// #{q} ///gi
-        excerptPattern = /// ^.* (?:#{q}) .*$ ///im
-        replacePattern = /// (#{q}) ///gi
-        { filterPattern, excerptPattern, replacePattern }
-      if success
-        { filterPattern, excerptPattern, replacePattern } = success
+      { left, right } = try_ SyntaxError, () ->
+        filterPattern: /// #{q} ///gi
+        excerptPattern: /// ^.* (?:#{q}) .*$ ///im
+        replacePattern: /// (#{q}) ///gi
+      if right
+        { filterPattern, excerptPattern, replacePattern } = right
         posts.map (post) ->
           { title, textContent } = post
           matchRate =
-            1 - (1 - nBytes((title.match(filterPattern) || []).join('')) / nBytes(title)) *
-                (1 - nBytes((textContent.match(filterPattern) || []).join('')) / nBytes(textContent))
+            1 - (1 - (title.match(filterPattern) || []).join('').byteLength / title.byteLength) *
+                (1 - (textContent.match(filterPattern) || []).join('').byteLength / textContent.byteLength)
           { post, matchRate }
         .filter ({ matchRate }) -> matchRate > 0
         .sort ({ matchRate: left }, { matchRate: right }) -> right - left
@@ -93,7 +96,7 @@ fetch('/json/posts.json')
   window.addEventListener('input', (event) ->
     if event.target.matches('.search-io > input')
       input = event.target
-      output = input.nextElementSibling
+      output = input.parentElement.querySelector('output')
 
       q = input.value
 

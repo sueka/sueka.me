@@ -1,6 +1,8 @@
 ---
 ---
 
+{ patchOuter, elementOpen, elementClose, text } = IncrementalDOM
+
 array = (arrayLike) -> Array::slice.call(arrayLike)
 
 flatten = (xss) -> Array::concat.apply([], xss)
@@ -18,12 +20,16 @@ anchorageAndIds =
   )
 
 anchorageAndIds.forEach ({ anchorage, id }) ->
-  space = document.createTextNode(' ')
-  a = document.createElement('a')
-  a.className = 'header-anchor'
-  a.href = '#' + id
-  a.textContent = '🔗'
-  anchorage.appendChild(space)
-  anchorage.appendChild(a)
+  headerAnchor = document.createElement('div')
+  anchorage.appendChild(headerAnchor)
+
+  patchOuter headerAnchor, () ->
+    text(' ')
+    elementOpen('a', null, [
+      'class', 'header-anchor',
+      'href', '#' + id,
+    ])
+    text('🔗')
+    elementClose('a')
 
 window.addEventListener('touchstart', (->), false)
