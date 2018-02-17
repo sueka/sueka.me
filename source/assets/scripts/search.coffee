@@ -26,10 +26,13 @@ removeTags = (->
 
 Try = (tryClause) ->
   try
-    success = tryClause()
+    right = tryClause()
   catch ex
-    failure = ex
-  { success, failure }
+    if ex instanceof SyntaxError
+      left = ex
+    else
+      throw ex
+  { left, right }
 
 unless String::byteLength
   Object.defineProperty String::, 'byteLength',
@@ -47,12 +50,12 @@ fetch('/json/posts.json')
 
   renderSearchResult = ({ q, posts }) ->
     if (q != '')
-      { success, failure } = Try () ->
+      { left, right } = Try () ->
         filterPattern: /// #{q} ///gi
         excerptPattern: /// ^.* (?:#{q}) .*$ ///im
         replacePattern: /// (#{q}) ///gi
-      if success
-        { filterPattern, excerptPattern, replacePattern } = success
+      if right
+        { filterPattern, excerptPattern, replacePattern } = right
         posts.map (post) ->
           { title, textContent } = post
           matchRate =
