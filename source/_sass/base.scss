@@ -80,6 +80,7 @@ $font-code-ja: CodeM, Ricty, 'Source Han Code JP', Myrica, 'IPAGothic', Menlo, '
 
 html {
   font: 19.2px $font-text;
+  font-feature-settings: 'palt' on;
   &:lang(ja) {
     font-family: $font-text-ja;
   }
