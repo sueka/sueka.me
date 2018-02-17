@@ -34,8 +34,6 @@ try_ = (errorClass, tryClause) ->
       throw ex
   { left, right }
 
-url = new URL(location)
-
 unless String::byteLength
   Object.defineProperty String::, 'byteLength',
     enumerable: true
@@ -92,6 +90,8 @@ fetch('/json/posts.json')
             [matched] = textContentExcerptOrNull
             p.innerHTML = truncate(matched, 256, ' ...').replace(replacePattern, "<mark>$1</mark>")
           elementClose('section')
+
+  url = new URL(location)
 
   window.addEventListener('input', (event) ->
     if event.target.matches('.search-io > input')
