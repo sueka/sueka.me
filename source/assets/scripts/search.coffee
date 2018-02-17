@@ -67,20 +67,22 @@ fetch('/json/posts.json')
             attr('lang', lang)
             attr('hreflang', lang)
           elementOpenEnd('a')
-          text(title)
-          elementClose('a')
+          titleExcerptOrNull = excerptPattern.exec(title)
+          text(title) unless titleExcerptOrNull
+          a = elementClose('a')
+          if titleExcerptOrNull
+            [matched] = titleExcerptOrNull
+            a.innerHTML = matched.replace(replacePattern, "<mark>$1</mark>")
           elementClose('h6')
           elementOpenStart('p', '', ['class', 'search-result-excerpt'])
           attr('lang', lang) if lang # FIXME: ignoring inline lang attributes
           elementOpenEnd('p')
-          matchedsOrNull = excerptPattern.exec(textContent)
-          if matchedsOrNull
-            p = elementClose('p')
-            [matched] = matchedsOrNull
+          textContentExcerptOrNull = excerptPattern.exec(textContent)
+          text truncate(removeTags(excerpt), 256, ' ...') unless textContentExcerptOrNull
+          p = elementClose('p')
+          if textContentExcerptOrNull
+            [matched] = textContentExcerptOrNull
             p.innerHTML = truncate(matched, 256, ' ...').replace(replacePattern, "<mark>$1</mark>")
-          else
-            text truncate(removeTags(excerpt), 256, ' ...')
-            elementClose('p')
           elementClose('section')
 
   window.addEventListener('input', (event) ->
