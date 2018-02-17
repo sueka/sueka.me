@@ -60,7 +60,7 @@ fetch('/json/posts.json')
         .sort ({ matchRate: left }, { matchRate: right }) -> right - left
         .forEach ({ post: { url, lang, title, textContent, excerpt } }) ->
           elementOpen('section')
-          elementOpen('h6')
+          elementOpen('h3')
           elementOpenStart('a')
           attr('href', url)
           if lang
@@ -73,7 +73,7 @@ fetch('/json/posts.json')
           if titleExcerptOrNull
             [matched] = titleExcerptOrNull
             a.innerHTML = matched.replace(replacePattern, "<mark>$1</mark>")
-          elementClose('h6')
+          elementClose('h3')
           elementOpenStart('p', '', ['class', 'search-result-excerpt'])
           attr('lang', lang) if lang # FIXME: ignoring inline lang attributes
           elementOpenEnd('p')
