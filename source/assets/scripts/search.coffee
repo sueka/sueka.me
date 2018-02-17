@@ -33,8 +33,6 @@ Try = (tryClause) ->
     failure = ex
   { success, failure }
 
-url = new URL(location)
-
 nBytes = (str) ->
   str.split('')
   .map (c) -> c.charCodeAt(0).toString(16).length / 2
@@ -98,36 +96,5 @@ fetch('/json/posts.json')
       q = input.value
 
       patch(output, renderSearchResult, { q, posts })
-
-      if q
-        url.searchParams.set('q', q)
-      else
-        url.searchParams.delete('q')
-
-      history.pushState({ q }, "Posts including /#{q}/ - {{ site.title }}", url)
-  , false)
-
-  (->
-    q = url.searchParams.get('q')
-
-    if !q
-      url.searchParams.delete('q')
-      history.replaceState({ q }, document.title, url)
-    else
-      history.replaceState({ q }, "Posts including /#{q}/ - {{ site.title }}", url)
-
-      input = document.querySelector('.search-io > input')
-      output = input.nextElementSibling
-      input.value = q
-
-      patch(output, renderSearchResult, { q, posts })
-  )()
-
-  window.addEventListener('popstate', ({ state: { q } }) ->
-    input = document.querySelector('.search-io > input')
-    output = input.nextElementSibling
-    input.value = q
-
-    patch(output, renderSearchResult, { q, posts })
   , false)
 .catch (error) -> throw error
