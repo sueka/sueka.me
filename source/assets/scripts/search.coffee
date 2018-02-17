@@ -24,11 +24,11 @@ removeTags = (->
     container.textContent
 )()
 
-try_ = (tryClause) ->
+try_ = (errorClass, tryClause) ->
   try
     right = tryClause()
   catch ex
-    if ex instanceof SyntaxError
+    if ex instanceof errorClass
       left = ex
     else
       throw ex
@@ -50,7 +50,7 @@ fetch('/json/posts.json')
 
   renderSearchResult = ({ q, posts }) ->
     if (q != '')
-      { left, right } = try_ () ->
+      { left, right } = try_ SyntaxError, () ->
         filterPattern: /// #{q} ///gi
         excerptPattern: /// ^.* (?:#{q}) .*$ ///im
         replacePattern: /// (#{q}) ///gi
