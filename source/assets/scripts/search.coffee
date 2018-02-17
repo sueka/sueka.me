@@ -51,7 +51,7 @@ fetch('/json/posts.json')
   renderSearchResult = ({ q, posts }) ->
     if (q != '')
       { left, right } = try_ SyntaxError, () ->
-        filterPattern: /// #{q} ///gi
+        filterPattern: /// #{q} ///gim
         excerptPattern: /// ^.* (?:#{q}) .*$ ///im
         replacePattern: /// (#{q}) ///gi
       if right
