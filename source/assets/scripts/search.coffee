@@ -48,10 +48,9 @@ fetch('/json/posts.json')
   renderSearchResult = ({ q, posts }) ->
     if (q != '')
       { success, failure } = Try () ->
-        filterPattern = /// #{q} ///gi
-        excerptPattern = /// ^.* (?:#{q}) .*$ ///im
-        replacePattern = /// (#{q}) ///gi
-        { filterPattern, excerptPattern, replacePattern }
+        filterPattern: /// #{q} ///gi
+        excerptPattern: /// ^.* (?:#{q}) .*$ ///im
+        replacePattern: /// (#{q}) ///gi
       if success
         { filterPattern, excerptPattern, replacePattern } = success
         posts.map (post) ->
@@ -92,7 +91,7 @@ fetch('/json/posts.json')
   window.addEventListener('input', (event) ->
     if event.target.matches('.search-io > input')
       input = event.target
-      output = input.nextElementSibling
+      output = input.parentElement.querySelector('output')
 
       q = input.value
 
