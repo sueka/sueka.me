@@ -42,6 +42,8 @@ unless String::byteLength
       .map (c) -> c.charCodeAt(0).toString(16).length / 2
       .reduce ((res, x) -> res + x), 0
 
+url = new URL(location)
+
 fetch('/json/posts.json')
 .then (response) -> response.json()
 .then (posts) ->
@@ -90,8 +92,6 @@ fetch('/json/posts.json')
             [matched] = textContentExcerptOrNull
             p.innerHTML = truncate(matched, 256, ' ...\n').replace(replacePattern, '<mark>$1</mark>')
           elementClose('section')
-
-  url = new URL(location)
 
   window.addEventListener('input', (event) ->
     if event.target.matches('.search-io > input')
