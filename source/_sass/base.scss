@@ -159,6 +159,12 @@ html {
   }
   line-height: 1.618;
 }
+p {
+  &:lang(ja) {
+    text-align: left;
+    text-align: start;
+  }
+}
 
 pre {
   text-align: left;
