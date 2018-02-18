@@ -88,7 +88,7 @@ fetch('/json/posts.json')
           p = elementClose('p')
           if textContentExcerptOrNull
             [matched] = textContentExcerptOrNull
-            p.innerHTML = truncate(matched, 256, ' ...').replace(replacePattern, '<mark>$1</mark>')
+            p.innerHTML = truncate(matched, 256, ' ...\n').replace(replacePattern, '<mark>$1</mark>')
           elementClose('section')
 
   url = new URL(location)
