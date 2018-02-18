@@ -297,6 +297,9 @@ input {
   font-size: 16px;
   font-size: unquote('max(16px, 100%)');
 }
+output {
+  display: block;
+}
 
 body > header {
   display: flex;
