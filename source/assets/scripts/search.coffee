@@ -42,8 +42,6 @@ unless String::byteLength
       .map (c) -> c.charCodeAt(0).toString(16).length / 2
       .reduce ((res, x) -> res + x), 0
 
-newLine = '\n'
-
 fetch('/json/posts.json')
 .then (response) -> response.json()
 .then (posts) ->
@@ -80,7 +78,7 @@ fetch('/json/posts.json')
           a = elementClose('a')
           if titleExcerptOrNull
             [matched] = titleExcerptOrNull
-            a.innerHTML = matched.replace(replacePattern, '<mark>$1</mark>')
+            a.innerHTML = matched.replace(replacePattern, "<mark>$1</mark>")
           elementClose('h3')
           elementOpenStart('p', '', ['class', 'search-result-excerpt'])
           attr('lang', lang) if lang # FIXME: ignoring inline lang attributes
@@ -90,10 +88,7 @@ fetch('/json/posts.json')
           p = elementClose('p')
           if textContentExcerptOrNull
             [matched] = textContentExcerptOrNull
-            p.innerHTML =
-              truncate(matched, 256, ' ...' + newLine)
-              .replace(replacePattern, '<mark>$1</mark>')
-              .replace(/\n/g, '<br />')
+            p.innerHTML = truncate(matched, 256, ' ...').replace(replacePattern, "<mark>$1</mark>")
           elementClose('section')
 
   url = new URL(location)
