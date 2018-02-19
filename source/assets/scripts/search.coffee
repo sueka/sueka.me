@@ -103,13 +103,13 @@ else
           "#{_location.host}"
       "#{_location.protocol}//#{authority}#{_location.pathname}#{@searchParams}#{_location.hash}"
 
-url = new URL(location)
-
 fetch('/json/posts.json')
 .then (response) -> response.json()
 .then (posts) ->
   posts.forEach (post) ->
     post.textContent = removeTags(post.content)
+
+  url = new URL(location)
 
   renderSearchResult = ({ q, posts }) ->
     if (q != '')
