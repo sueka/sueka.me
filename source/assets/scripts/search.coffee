@@ -77,21 +77,24 @@ unless window.URLSearchParams
       convertSearchMapToString(_urlSearchParams)
 
   class window.URL
-    constructor: (@location) ->
-      @searchParams = new URLSearchParams(@location.search)
+    _location = null
+
+    constructor: (location) ->
+      _location = location
+      @searchParams = new URLSearchParams(_location.search)
 
     toString: ->
       userinfo =
-        if @location.username and @location.password
-          "#{@location.username}:#{@location.password}"
+        if _location.username and _location.password
+          "#{_location.username}:#{_location.password}"
         else
           ''
       authority =
         if userinfo
-          "#{userinfo}@#{@location.host}"
+          "#{userinfo}@#{_location.host}"
         else
-          "#{@location.host}"
-      "#{@location.protocol}//#{authority}#{@location.pathname}#{@searchParams}#{@location.hash}"
+          "#{_location.host}"
+      "#{_location.protocol}//#{authority}#{_location.pathname}#{@searchParams}#{_location.hash}"
 
 url = new URL(location)
 
