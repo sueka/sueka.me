@@ -42,26 +42,43 @@ unless String::byteLength
       .map (c) -> c.charCodeAt(0).toString(16).length / 2
       .reduce ((res, x) -> res + x), 0
 
-unless URL
-  class window.URL
+unless URLSearchParams
+  class window.URLSearchParams
+    _urlSearchParams = null
+
     convertSearchStringToMap = (searchString) ->
       searchMap = new Map()
       searchString.replace(/^\?/, '').split('&')
       .map (kv) -> kv.split('=')
-      .forEach ([key, value]) ->
-        searchMap.set(key, value)
+      .forEach ([key, value = '']) ->
+        if key
+          searchMap.set(key, value)
       searchMap
 
     convertSearchMapToString = (searchMap) ->
       searchString = ''
-      console.log searchMap
       searchMap.forEach (value, key) ->
         searchString += "&#{key}=#{value}"
       searchString.replace(/^&/, '?')
 
+    constructor: (search) ->
+      _urlSearchParams = convertSearchStringToMap(search)
+
+    get: (key) ->
+      _urlSearchParams.get(key)
+
+    set: (key, value) ->
+      _urlSearchParams.set(key, value)
+
+    delete: (key) ->
+      _urlSearchParams.delete(key)
+
+    toString: ->
+      convertSearchMapToString(_urlSearchParams)
+
+  class window.URL
     constructor: (@location) ->
-      if @location.search
-        @searchParams = convertSearchStringToMap(@location.search)
+      @searchParams = new URLSearchParams(@location.search)
 
     toString: ->
       userinfo =
@@ -74,8 +91,7 @@ unless URL
           "#{userinfo}@#{@location.host}"
         else
           "#{@location.host}"
-      search = convertSearchMapToString(@searchParams)
-      "#{@location.protocol}//#{authority}#{@location.pathname}#{search}#{@location.hash}"
+      "#{@location.protocol}//#{authority}#{@location.pathname}#{@searchParams}#{@location.hash}"
 
 url = new URL(location)
 
