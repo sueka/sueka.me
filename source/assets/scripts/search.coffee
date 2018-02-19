@@ -65,7 +65,11 @@ unless window.URLSearchParams
       _urlSearchParams = convertSearchStringToMap(search)
 
     get: (key) ->
-      _urlSearchParams.get(key)
+      value = _urlSearchParams.get(key)
+      if value == undefined
+        null
+      else
+        value
 
     set: (key, value) ->
       _urlSearchParams.set(key, value)
