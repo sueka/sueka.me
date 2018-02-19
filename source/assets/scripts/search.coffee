@@ -42,7 +42,7 @@ unless String::byteLength
       .map (c) -> c.charCodeAt(0).toString(16).length / 2
       .reduce ((res, x) -> res + x), 0
 
-unless URLSearchParams
+unless window.URLSearchParams
   class window.URLSearchParams
     _urlSearchParams = null
 
