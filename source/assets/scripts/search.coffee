@@ -42,6 +42,41 @@ unless String::byteLength
       .map (c) -> c.charCodeAt(0).toString(16).length / 2
       .reduce ((res, x) -> res + x), 0
 
+unless URL
+  class window.URL
+    convertSearchStringToMap = (searchString) ->
+      searchMap = new Map()
+      searchString.replace(/^\?/, '').split('&')
+      .map (kv) -> kv.split('=')
+      .forEach ([key, value]) ->
+        searchMap.set(key, value)
+      searchMap
+
+    convertSearchMapToString = (searchMap) ->
+      searchString = ''
+      console.log searchMap
+      searchMap.forEach (value, key) ->
+        searchString += "&#{key}=#{value}"
+      searchString.replace(/^&/, '?')
+
+    constructor: (@location) ->
+      if @location.search
+        @searchParams = convertSearchStringToMap(@location.search)
+
+    toString: ->
+      userinfo =
+        if @location.username and @location.password
+          "#{@location.username}:#{@location.password}"
+        else
+          ''
+      authority =
+        if userinfo
+          "#{userinfo}@#{@location.host}"
+        else
+          "#{@location.host}"
+      search = convertSearchMapToString(@searchParams)
+      "#{@location.protocol}//#{authority}#{@location.pathname}#{search}#{@location.hash}"
+
 url = new URL(location)
 
 fetch('/json/posts.json')
