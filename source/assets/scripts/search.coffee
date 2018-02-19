@@ -42,8 +42,11 @@ unless String::byteLength
       .map (c) -> c.charCodeAt(0).toString(16).length / 2
       .reduce ((res, x) -> res + x), 0
 
-unless window.URLSearchParams
-  class window.URLSearchParams
+if window.URLSearchParams
+  URLSearchParams = window.URLSearchParams
+  URL = window.URL
+else
+  class URLSearchParams
     _urlSearchParams = null
 
     convertSearchStringToMap = (searchString) ->
@@ -80,7 +83,7 @@ unless window.URLSearchParams
     toString: ->
       convertSearchMapToString(_urlSearchParams)
 
-  class window.URL
+  class URL
     _location = null
 
     constructor: (location) ->
