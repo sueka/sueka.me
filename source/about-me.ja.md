@@ -10,7 +10,7 @@ lang: ja
 
 ## カレンダー
 
-私以外の人が参加者としてマークされてゐる予定の詳細を公開することはありません。
+他の参加者が追加されてゐる予定の詳細を公開することはありません。
 
 <iframe class="calendar-wrapper" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;hl=ja&amp;bgcolor=%23FFFFFF&amp;src=uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=Asia%2FTokyo" frameborder="0" scrolling="no"></iframe>
 
