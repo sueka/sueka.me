@@ -161,14 +161,14 @@ fetch('/json/posts.json')
 
       q = input.value
 
-      patch(output, renderSearchResult, { q, posts })
-
-      if q
-        url.searchParams.set('q', q)
-      else
+      if !q
         url.searchParams.delete('q')
+        history.pushState({ q }, document.title, url)
+      else
+        url.searchParams.set('q', q)
+        history.pushState({ q }, "Posts including /#{q}/ - {{ site.title }}", url)
 
-      history.pushState({ q }, "Posts including /#{q}/ - {{ site.title }}", url)
+      patch(output, renderSearchResult, { q, posts })
   , false)
 
   (->
