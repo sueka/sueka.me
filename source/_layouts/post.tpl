@@ -9,6 +9,7 @@
     {% include header.inc %}
     <main>
       <h1>{{ page.title }}</h1>
+      {% include post-meta.inc %}
       <div class="container">
         <div class="side-column">
           {% include tags.inc %}
@@ -16,7 +17,6 @@
           {% include toc.inc %}
         </div>
         <div class="main-column">
-          {% include post-meta.inc %}
           {{ content }}
           {% include main-source.inc %}
         </div>
