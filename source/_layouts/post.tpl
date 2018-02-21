@@ -16,6 +16,7 @@
           {% include toc.inc %}
         </div>
         <div class="main-column">
+          {% include post-meta.inc %}
           {{ content }}
           {% include main-source.inc %}
         </div>
