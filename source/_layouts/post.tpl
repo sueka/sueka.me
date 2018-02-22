@@ -7,7 +7,7 @@
   </head>
   <body>
     {% include header.inc %}
-    <main>
+    <main itemscope="" itemtype="http://schema.org/Article">
       <header>
         <h1>{{ page.title }}</h1>
         {% include post-meta.inc %}
