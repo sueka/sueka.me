@@ -369,12 +369,17 @@ main,
 .side-column,
 .main-column {
   > section, > aside, > nav,
+  > header,
   > h1, > h2, > h3, > h4, > h5, > h6, > hr,
   > ul, > ol,
   > p, > blockquote, > .blockquote-like {
     margin-left: 1rem;
     margin-right: 1rem;
   }
+}
+
+.post-meta {
+  margin: 0.618em 0 1em;
 }
 
 .header-anchor {

@@ -8,8 +8,10 @@
   <body>
     {% include header.inc %}
     <main>
-      <h1>{{ page.title }}</h1>
-      {% include post-meta.inc %}
+      <header>
+        <h1>{{ page.title }}</h1>
+        {% include post-meta.inc %}
+      </header>
       <div class="container">
         <div class="side-column">
           {% include tags.inc %}
