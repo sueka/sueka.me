@@ -111,44 +111,59 @@ fetch('/json/posts.json')
 
   url = new URL(location)
 
-  filterAndSort = ({ posts, filterPattern }) ->
-    posts.map (post) ->
-      { title, textContent } = post
-      matchRate =
-        1 - (1 - (title.match(filterPattern) || []).join('').byteLength / title.byteLength) *
-            (1 - (textContent.match(filterPattern) || []).join('').byteLength / textContent.byteLength)
-      { post, matchRate }
-    .filter ({ matchRate }) -> matchRate > 0
-    .sort ({ matchRate: left }, { matchRate: right }) -> right - left
-    .map ({ post }) -> post
+  filterAndSort = ({ posts, q }) ->
+    { _: left, right } = try_ SyntaxError, () ->
+      filterPattern: /// #{q} ///gim
 
-  render = ({ posts, excerptPattern, replacePattern }) ->
-    posts.forEach ({ url, lang, title, textContent, excerpt }) ->
-      elementOpen('section')
-      elementOpen('h3')
-      elementOpenStart('a')
-      attr('href', url)
-      if lang
-        attr('lang', lang)
-        attr('hreflang', lang)
-      elementOpenEnd('a')
-      titleExcerptOrNull = excerptPattern.exec(title)
-      text(title) unless titleExcerptOrNull
-      a = elementClose('a')
-      if titleExcerptOrNull
-        [matched] = titleExcerptOrNull
-        a.innerHTML = matched.replace(replacePattern, '<mark>$1</mark>')
-      elementClose('h3')
-      elementOpenStart('p', '', ['class', 'search-result-excerpt'])
-      attr('lang', lang) if lang # FIXME: ignoring inline lang attributes
-      elementOpenEnd('p')
-      textContentExcerptOrNull = excerptPattern.exec(textContent)
-      text truncate(removeTags(excerpt), 256, ' ...') unless textContentExcerptOrNull
-      p = elementClose('p')
-      if textContentExcerptOrNull
-        [matched] = textContentExcerptOrNull
-        p.innerHTML = truncate(matched, 256, ' ...\n').replace(replacePattern, '<mark>$1</mark>')
-      elementClose('section')
+    if right
+      { filterPattern } = right
+
+      posts.map (post) ->
+        { title, textContent } = post
+        matchRate =
+          1 - (1 - (title.match(filterPattern) || []).join('').byteLength / title.byteLength) *
+              (1 - (textContent.match(filterPattern) || []).join('').byteLength / textContent.byteLength)
+        { post, matchRate }
+      .filter ({ matchRate }) -> matchRate > 0
+      .sort ({ matchRate: left }, { matchRate: right }) -> right - left
+      .map ({ post }) -> post
+    else
+      []
+
+  render = ({ posts, q }) ->
+    { _: left, right } = try_ SyntaxError, () ->
+      excerptPattern: /// ^.* (?:#{q}) .*$ ///im
+      replacePattern: /// (#{q}) ///gi
+
+    if right
+      { excerptPattern, replacePattern } = right
+
+      posts.forEach ({ url, lang, title, textContent, excerpt }) ->
+        elementOpen('section')
+        elementOpen('h3')
+        elementOpenStart('a')
+        attr('href', url)
+        if lang
+          attr('lang', lang)
+          attr('hreflang', lang)
+        elementOpenEnd('a')
+        titleExcerptOrNull = excerptPattern.exec(title)
+        text(title) unless titleExcerptOrNull
+        a = elementClose('a')
+        if titleExcerptOrNull
+          [matched] = titleExcerptOrNull
+          a.innerHTML = matched.replace(replacePattern, '<mark>$1</mark>')
+        elementClose('h3')
+        elementOpenStart('p', '', ['class', 'search-result-excerpt'])
+        attr('lang', lang) if lang # FIXME: ignoring inline lang attributes
+        elementOpenEnd('p')
+        textContentExcerptOrNull = excerptPattern.exec(textContent)
+        text truncate(removeTags(excerpt), 256, ' ...') unless textContentExcerptOrNull
+        p = elementClose('p')
+        if textContentExcerptOrNull
+          [matched] = textContentExcerptOrNull
+          p.innerHTML = truncate(matched, 256, ' ...\n').replace(replacePattern, '<mark>$1</mark>')
+        elementClose('section')
 
   window.addEventListener('input', (event) ->
     if event.target.matches('.search-io > input')
@@ -164,14 +179,8 @@ fetch('/json/posts.json')
         url.searchParams.set('q', q)
         history.pushState({ q }, "Posts including /#{q}/ - {{ site.title }}", url)
 
-      { left, right } = try_ SyntaxError, () ->
-        filterPattern: /// #{q} ///gim
-        excerptPattern: /// ^.* (?:#{q}) .*$ ///im
-        replacePattern: /// (#{q}) ///gi
-      if right
-        { filterPattern, excerptPattern, replacePattern } = right
-        filteredPosts = filterAndSort({ posts, filterPattern })
-        patch(output, render, { posts: filteredPosts, excerptPattern, replacePattern })
+      filteredPosts = filterAndSort({ posts, q })
+      patch(output, render, { posts: filteredPosts, q })
   , false)
 
   (->
@@ -187,14 +196,8 @@ fetch('/json/posts.json')
       output = input.nextElementSibling
       input.value = q
 
-      { left, right } = try_ SyntaxError, () ->
-        filterPattern: /// #{q} ///gim
-        excerptPattern: /// ^.* (?:#{q}) .*$ ///im
-        replacePattern: /// (#{q}) ///gi
-      if right
-        { filterPattern, excerptPattern, replacePattern } = right
-        filteredPosts = filterAndSort({ posts, filterPattern })
-        patch(output, render, { posts: filteredPosts, excerptPattern, replacePattern })
+      filteredPosts = filterAndSort({ posts, q })
+      patch(output, render, { posts: filteredPosts, q })
   )()
 
   window.addEventListener('popstate', ({ state: { q } }) ->
@@ -202,13 +205,7 @@ fetch('/json/posts.json')
     output = input.nextElementSibling
     input.value = q
 
-    { left, right } = try_ SyntaxError, () ->
-      filterPattern: /// #{q} ///gim
-      excerptPattern: /// ^.* (?:#{q}) .*$ ///im
-      replacePattern: /// (#{q}) ///gi
-    if right
-      { filterPattern, excerptPattern, replacePattern } = right
-      filteredPosts = filterAndSort({ posts, filterPattern })
-      patch(output, render, { posts: filteredPosts, excerptPattern, replacePattern })
+    filteredPosts = filterAndSort({ posts, q })
+    patch(output, render, { posts: filteredPosts, q })
   , false)
 .catch (error) -> throw error
