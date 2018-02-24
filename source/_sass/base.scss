@@ -204,7 +204,7 @@ a:visited {
   border-bottom-color: $visited-color;
 }
 
-a:hover {
+a:link:hover {
   border-bottom-width: 1px;
 }
 
@@ -315,7 +315,7 @@ body > header {
         height: 24px;
       }
     }
-    & > a:hover > img {
+    & > a:link:hover > img {
       transform: rotate(180deg);
     }
   }
@@ -345,7 +345,7 @@ body > header {
     }
   }
 
-  a:hover {
+  a:link:hover {
     border: 0;
   }
 }
@@ -457,11 +457,11 @@ body > header {
   a:link, a:visited {
     color: $bg-color;
     border-color: $bg-color;
-  }
-  a:hover,
-  a.hover-like {
-    background-color: $bg-color;
-    color: mix($fg-color, $accent-color, 14.6%);
+    &:hover,
+    &.hover-like {
+      background-color: $bg-color;
+      color: mix($fg-color, $accent-color, 14.6%);
+    }
   }
 }
 
