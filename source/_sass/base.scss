@@ -367,13 +367,21 @@ body > header {
     font-family: $font-emph;
   }
   ul {
-    text-align: left;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: 0 -0.382em -0.382em 0;
     &:lang(he) {
-      text-align: right;
+      margin-left: -0.382em;
+      margin-right: 0;
     }
-    text-align: start;
     li {
-      display: inline;
+      display: block;
+      margin: 0 0.382em 0.382em 0;
+      &:lang(he) {
+        margin-left: 0.382em;
+        margin-right: 0;
+      }
       a:link {
         white-space: nowrap;
         border: 1px solid $ui-color;
