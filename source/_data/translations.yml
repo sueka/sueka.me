@@ -6,6 +6,7 @@
   search: 'Search'
   contents: 'Contents'
   recent-posts: 'Recent posts'
+  related-posts: 'Related posts'
   date-format: '%b. %-d, %Y'
 
 - langcode: 'he'
@@ -16,6 +17,7 @@
   search: 'לחפש'
   contents: 'תוכן עניינים'
   recent-posts: 'הודעות האחרונות'
+  related-posts: 'פוסטים קשורים'
   date-format: '%Y-%m-%d'
 
 - langcode: 'ja'
@@ -26,4 +28,5 @@
   search: '検索'
   contents: '目次'
   recent-posts: '最近の投稿'
+  related-posts: '関聯投稿'
   date-format: '%Y年%-m月%-d日'

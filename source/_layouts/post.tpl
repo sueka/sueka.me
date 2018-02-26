@@ -23,6 +23,7 @@
           {% include main-source.inc %}
         </div>
       </div>
+      {% include related-posts.inc %}
     </main>
     {% include footer.inc %}
     {% include scripts.inc %}
