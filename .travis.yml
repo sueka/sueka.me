@@ -38,6 +38,9 @@ deploy:
     branch: master
 
 addons:
+  apt:
+    packages:
+      - libgsl-dev
   ssh_known_hosts:
     - sueka.me
     - 133.130.114.209
