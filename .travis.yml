@@ -40,7 +40,7 @@ deploy:
 addons:
   apt:
     packages:
-      - libgsl-dev
+      - libgsl0-dev
   ssh_known_hosts:
     - sueka.me
     - 133.130.114.209
