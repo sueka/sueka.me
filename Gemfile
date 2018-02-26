@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '>= 3.6.2',    '~> 3.6'
-gem "rb-gsl", '>= 1.16.0.6', '~> 1.16'
+gem 'jekyll', '>= 3.6.2',   '~> 3.6'
+gem "gsl",    '>= 2.1.0.3', '~> 2.1'
 
 group :jekyll_plugins do
   gem 'classifier-reborn',    '>= 2.2.0', '~> 2.2'
