@@ -388,6 +388,9 @@ body > header {
         padding: 0.146em 0.382em;
         border-radius: 0.146em;
       }
+      a:visited {
+        border-color: $ui-color;
+      }
       a:link:hover {
         color: $bg-color;
         background-color: $link-color;
