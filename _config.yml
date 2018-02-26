@@ -17,6 +17,7 @@ twitter_username: hsueka
 github_username: sueka
 
 source: source/
+lsi: true
 
 collections:
   posts:
