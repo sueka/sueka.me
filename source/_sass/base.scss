@@ -241,8 +241,7 @@ pre {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 1em;
   margin-bottom: 0.618em;
-  padding: 0.618em 0.382rem 0;
-  border-bottom: 0.236ex solid $ui-color;
+  padding-top: 0.618em;
 }
 h1 {
   font-size: 196.6%;
@@ -308,7 +307,6 @@ body > header {
     font-size: 100%;
     margin: 0;
     padding: 0;
-    border-bottom: 0;
     & > a {
       display: flex;
       padding: 0.618em;
