@@ -6,10 +6,6 @@
     {% assign home-path = '/' %}
     {% assign about-me-path = '/about-me.html' %}
     {% assign about-me-anchor-text = 'About me' %}
-  {% when 'he' %}
-    {% assign home-path = '/index.he.html' %}
-    {% assign about-me-path = '/about-me.he.html' %}
-    {% assign about-me-anchor-text = 'עליי' %}
   {% when 'ja' %}
     {% assign home-path = '/index.ja.html' %}
     {% assign about-me-path = '/about-me.ja.html' %}

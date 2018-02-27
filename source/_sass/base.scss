@@ -327,10 +327,6 @@ body > header {
       white-space: nowrap;
       list-style: none;
       padding-left: 0;
-      &:lang(he) {
-        // padding-left: 0;
-        padding-right: 0;
-      }
       margin-top: 0;
       margin-bottom: 0;
       & > li {
@@ -362,7 +358,6 @@ body > header {
 
 .tags {
   font-family: $font-emph;
-  &:lang(he),
   &:lang(ja) {
     font-family: $font-emph;
   }
@@ -371,17 +366,9 @@ body > header {
     list-style: none;
     flex-wrap: wrap;
     margin: 0 -0.382em -0.382em 0;
-    &:lang(he) {
-      margin-left: -0.382em;
-      margin-right: 0;
-    }
     li {
       display: block;
       margin: 0 0.382em 0.382em 0;
-      &:lang(he) {
-        margin-left: 0.382em;
-        margin-right: 0;
-      }
       a:link {
         white-space: nowrap;
         border: 1px solid $ui-color;
@@ -548,17 +535,9 @@ table {
 
 ol {
   padding-left: 2em;
-  &:lang(he) {
-    padding-left: initial;
-    padding-right: 2em;
-  }
 }
 ul {
   padding-left: 1.5em;
-  &:lang(he) {
-    padding-left: initial;
-    padding-right: 1.5em;
-  }
 }
 li > p {
   margin-top: 0;

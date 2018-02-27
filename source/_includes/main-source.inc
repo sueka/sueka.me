@@ -7,8 +7,6 @@
 <hr />
 <aside><p>
   {% case include-lang %}
-  {% when 'he' %}
-    דף זה נוצר מ-<a href="{{ main-source-url }}">{{ main-source-path }}</a> וכמה תבניות.
   {% when 'ja' %}
     このページは <a href="{{ main-source-url }}">{{ main-source-path }}</a> といくつかのテンプレートから生成されてゐます。
   {% else %}

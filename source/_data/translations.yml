@@ -9,17 +9,6 @@
   related-posts: 'Related posts'
   date-format: '%b. %-d, %Y'
 
-- langcode: 'he'
-  name: 'עברית'
-  languages: 'דף זה בשפות אחרות'
-  tags: 'תגים'
-  archives: 'ארכיון'
-  search: 'לחפש'
-  contents: 'תוכן עניינים'
-  recent-posts: 'הודעות האחרונות'
-  related-posts: 'פוסטים קשורים'
-  date-format: '%Y-%m-%d'
-
 - langcode: 'ja'
   name: '日本語'
   languages: '他言語版'
