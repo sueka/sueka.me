@@ -395,6 +395,10 @@ body > header {
 main {
   // margin: 0 0.618em;
   margin: 0;
+  > h1,
+  > header > h1 {
+    padding-top: 0;
+  }
 }
 
 main,
