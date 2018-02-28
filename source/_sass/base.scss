@@ -296,6 +296,7 @@ blockquote,
 input {
   font-size: 16px;
   font-size: unquote('max(16px, 100%)');
+  font-family: $font-code;
 }
 output {
   display: block;
