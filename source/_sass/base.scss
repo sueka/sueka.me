@@ -56,6 +56,7 @@ $fg-color: #363636;
 $ui-color: #595959;
 $accent-color: springgreen;
 $accent-fill-color: mix($fg-color, $accent-color, 14.6%);
+$accent-mesh-color: rgba(mix($fg-color, $accent-color, 61.8%), 0.236);
 
 $link-color: dodgerblue;
 $visited-color: darkorchid;
@@ -387,14 +388,7 @@ body > header {
         border-color: $ui-color;
       }
       a:link:hover {
-        color: $bg-color;
-        background-color: $link-color;
-        border-color: $link-color;
-      }
-      a:visited:hover {
-        color: $bg-color;
-        background-color: $visited-color;
-        border-color: $visited-color;
+        background-color: $accent-mesh-color;
       }
     }
   }
