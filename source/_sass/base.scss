@@ -54,7 +54,8 @@ h1, p {
 $bg-color: white;
 $fg-color: #363636;
 $ui-color: #595959;
-$accent-color: mix($fg-color, springgreen, 14.6%);
+$accent-color: springgreen;
+$accent-fill-color: mix($fg-color, $accent-color, 14.6%);
 
 $link-color: dodgerblue;
 $visited-color: darkorchid;
@@ -492,7 +493,7 @@ aside {
 //
 
 body > header {
-  background-color: $accent-color;
+  background-color: $accent-fill-color;
   color: $bg-color;
   & > h1 > a > img {
     transition: 180ms ease;
@@ -503,13 +504,13 @@ body > header {
     &:hover,
     &.hover-like {
       background-color: $bg-color;
-      color: $accent-color;
+      color: $accent-fill-color;
     }
   }
 }
 
 .scroll-indicator {
-  background-color: $accent-color;
+  background-color: $accent-fill-color;
 }
 
 mark {
