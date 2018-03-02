@@ -81,7 +81,7 @@ $font-code-ja: CodeM, Ricty, 'Source Han Code JP', Myrica, 'IPAGothic', Menlo, '
 //
 
 html {
-  font: 19.2px $font-text;
+  font: 18px $font-text;
   font-feature-settings: 'palt' on;
   &:lang(ja) {
     font-family: $font-text-ja;
@@ -561,7 +561,7 @@ li > p {
 
 @media screen and (max-width: 1000px) {
   html {
-    font-size: unquote(calc(13.6px + 0.56vw));
+    font-size: unquote(calc(12.75px + 0.525vw));
   }
 }
 
