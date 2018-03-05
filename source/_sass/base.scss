@@ -193,21 +193,25 @@ q {
 
 a {
   text-decoration: none;
-  border-bottom: dashed $link-color 0;
+  border: dashed $link-color 0;
 }
 
 a:link {
   color: $link-color;
-  border-bottom-color: $link-color;
+  // border-color: $link-color;
 }
 
 a:visited {
   color: $visited-color;
-  border-bottom-color: $visited-color;
+  border-color: $visited-color;
 }
 
 a:link:hover {
   border-bottom-width: 1px;
+}
+
+a:link:active {
+  border-style: solid;
 }
 
 //
