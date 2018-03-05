@@ -60,7 +60,6 @@ $accent-mesh-color: rgba(mix($fg-color, $accent-color, 61.8%), 0.236);
 
 $link-color: dodgerblue;
 $visited-color: darkorchid;
-$active-color: #f33;
 
 $code-bg-color: gainsboro;
 $code-fg-color: #1f1f1f;
@@ -205,11 +204,6 @@ a:link {
 a:visited {
   color: $visited-color;
   border-bottom-color: $visited-color;
-}
-
-a:active {
-  color: $active-color;
-  border-bottom-color: $active-color;
 }
 
 a:link:hover {
