@@ -202,8 +202,12 @@ a:link {
 }
 
 a:visited {
-  color: $visited-color;
-  border-color: $visited-color;
+  &,
+  & > span,
+  & > mark {
+    color: $visited-color;
+    border-color: $visited-color;
+  }
 }
 
 a:link:hover {
@@ -514,6 +518,7 @@ body > header {
 }
 
 mark {
+  background-color: rgba(gold, 0.8);
   color: inherit;
 }
 
