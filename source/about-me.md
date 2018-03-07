@@ -1,6 +1,5 @@
 ---
 layout: page
-extra-stylesheets: calendar
 title: About me
 interlanguage-id: about-me
 ---
@@ -11,7 +10,8 @@ Hi.  I'm *{{ site.author }}*, an author of this website.
 
 I don't open the details of a schedule other participants are added to.
 
-<iframe class="calendar-wrapper" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;hl=en&amp;bgcolor=%23FFFFFF&amp;src=uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=Asia%2FTokyo" frameborder="0" scrolling="no"></iframe>
+- [HTML](//calendar.google.com/calendar/embed?src=uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com&hl=en)
+- [iCal](//calendar.google.com/calendar/ical/uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com/public/basic.ics)
 
 ## List of my accounts
 

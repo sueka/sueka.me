@@ -1,6 +1,5 @@
 ---
 layout: page
-extra-stylesheets: calendar
 title: 作者について
 interlanguage-id: about-me
 lang: ja
@@ -10,9 +9,10 @@ lang: ja
 
 ## カレンダー
 
-他の参加者が追加されてゐる予定の詳細は公開しません。
+他の参加者が追加されてゐる予定の詳細は公開してゐません。
 
-<iframe class="calendar-wrapper" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;hl=ja&amp;bgcolor=%23FFFFFF&amp;src=uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=Asia%2FTokyo" frameborder="0" scrolling="no"></iframe>
+- [HTML](//calendar.google.com/calendar/embed?src=uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com&hl=ja)
+- [iCal](//calendar.google.com/calendar/ical/uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com/public/basic.ics)
 
 ## アカウントの一覧
 
