@@ -107,7 +107,7 @@ fetch('/json/posts.json')
 .then (response) -> response.json()
 .then (posts) ->
   posts.forEach (post) ->
-    post.textContent = removeTags(post.content)
+    post.textContent = removeTags(post.content).replace(/ {2,}/g, ' ').replace(/^ | $/gm, '')
 
   url = new URL(location)
 
