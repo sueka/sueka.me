@@ -26,19 +26,6 @@ collections:
 liquid:
   error_mode: strict
 
-assets:
-  sources:
-    - _sass
-    - assets
-  plugins:
-    css:
-      autoprefixer: null
-  autoprefixer:
-    browsers:
-      - 'last 2 versions'
-      - '> 2%'
-      - 'IE >= 10'
-
 markdown: kramdown
 sass:
   style: compressed
