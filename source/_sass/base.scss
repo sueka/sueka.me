@@ -10,10 +10,7 @@
 body {
   -moz-osx-font-smoothing: grayscale;
    -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: none;
-     -moz-text-size-adjust: none;
-      -ms-text-size-adjust: none;
-          text-size-adjust: none;
+  text-size-adjust: none;
   text-autospace: none;
   margin: 0;
 }
@@ -365,7 +362,6 @@ body > header {
 
 .scroll-indicator {
   position: fixed;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
@@ -603,8 +599,7 @@ li > p {
   .side-column {
     flex-shrink: 0;
     flex-basis: 333px;
-    height: -moz-fit-content;
-    height:      fit-content;
+    height: fit-content;
     max-height: 100vh;
     position: sticky;
     top: 0;

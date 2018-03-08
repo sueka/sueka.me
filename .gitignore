@@ -4,6 +4,7 @@
 _drafts/
 _site/
 .jekyll-metadata
+.asset-cache
 
 # bundler
 .bundle

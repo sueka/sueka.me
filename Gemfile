@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'gsl',    '>= 2.1.0.3', '~> 2.1'
-gem 'jekyll', '>= 3.6.2',   '~> 3.6'
+gem 'autoprefixer-rails', '>= 8.1.0',   '~> 8.1'
+gem 'gsl',                '>= 2.1.0.3', '~> 2.1'
+gem 'jekyll',             '>= 3.6.2',   '~> 3.6'
 
 group :jekyll_plugins do
   gem 'classifier-reborn',    '>= 2.2.0', '~> 2.2'
   gem 'jekyll-archives',      '>= 2.1.1', '~> 2.1'
+  gem 'jekyll-assets',        '>= 2.3.0', '~> 2.3'
   gem 'jekyll-coffeescript',  '>= 1.1.0', '~> 1.1'
   gem 'jekyll-gist',          '>= 1.5.0', '~> 1.5'
   gem 'jekyll-git_metadata',  '~> 0.2.0'
