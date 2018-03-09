@@ -380,8 +380,6 @@ body > header {
   }
   ul {
     display: flex;
-    padding-left: 1.118em;
-    padding-left: unquote(calc(1.118em - 1px));
     list-style: none;
     flex-wrap: wrap;
     margin: 0 -0.382em -0.382em 0;
