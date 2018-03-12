@@ -86,6 +86,7 @@ html {
   &:lang(ja) {
     font-family: $font-text-ja;
   }
+  hyphens: auto;
 }
 p {
   // font-family: $font-text;
@@ -119,6 +120,7 @@ pre, code {
   &:lang(ja) {
     font-family: $font-code-ja;
   }
+  hyphens: none;
 }
 
 pre {
