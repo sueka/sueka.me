@@ -284,7 +284,7 @@ hr {
 p {
   margin: 1em 0 0.618em;
 }
-ul, ol {
+ul, ol, dl {
   margin: 0.618em 0 1em;
 }
 
@@ -420,7 +420,7 @@ main,
   > section, > aside, > nav,
   > header,
   > h1, > h2, > h3, > h4, > h5, > h6, > hr,
-  > ul, > ol,
+  > ul, > ol, > dl,
   > p, > blockquote, > .blockquote-like {
     margin-left: 1rem;
     margin-right: 1rem;
