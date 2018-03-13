@@ -553,6 +553,24 @@ table {
 
 ol {
   padding-left: 2em;
+  text-indent: -2em;
+  list-style: none;
+  counter-reset: i;
+  > li {
+    &::before {
+      counter-increment: i;
+      content: counters(i, '.') '. ';
+      font-family: $font-emph;
+      font-weight: 500;
+      display: inline-block;
+      width: 2em;
+      text-align: right;
+      white-space: pre;
+    }
+    &:lang(ja)::before {
+      font-family: $font-emph-ja;
+    }
+  }
 }
 ul {
   padding-left: 1.5em;
