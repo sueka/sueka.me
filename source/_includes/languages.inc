@@ -1,5 +1,5 @@
-{% assign include-lang = include.lang | default: page-lang %}
 {% if page.interlanguage-id %}
+  {% assign include-lang = include.lang | default: page-lang %}
   {% assign translation = site.data.translations | where: 'langcode', include-lang | first %}
   {% assign objects = site.posts | concat: site.pages | sort: 'lang' | where: 'interlanguage-id', page.interlanguage-id %}
   <nav class="languages">

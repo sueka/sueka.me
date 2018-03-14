@@ -1,20 +1,20 @@
 {% assign include-lang = include.lang | default: page-lang %}
+{% assign translation = site.data.translations | where: 'langcode', include-lang | first %}
+{% case include-lang %}
+{% when 'en' %}
+  {% assign home-path = '/' %}
+  {% assign about-path = '/about.html' %}
+  {% assign about-anchor-text = 'About' %}
+{% when 'ja' %}
+  {% assign home-path = '/index.ja.html' %}
+  {% assign about-path = '/about.ja.html' %}
+  {% assign about-anchor-text = 'About' %}
+{% endcase %}
+{% assign about-url = about-path | relative_url %}
+{% assign tag-list-url = '/tag-list.html' | relative_url %}
+{% assign archives-list-url = '/archives-list.html' | relative_url %}
+{% assign search-url = '/search.html' | relative_url %}
 <header>
-  {% assign translation = site.data.translations | where: 'langcode', include-lang | first %}
-  {% case include-lang %}
-  {% when 'en' %}
-    {% assign home-path = '/' %}
-    {% assign about-path = '/about.html' %}
-    {% assign about-anchor-text = 'About' %}
-  {% when 'ja' %}
-    {% assign home-path = '/index.ja.html' %}
-    {% assign about-path = '/about.ja.html' %}
-    {% assign about-anchor-text = 'About' %}
-  {% endcase %}
-  {% assign about-url = about-path | relative_url %}
-  {% assign tag-list-url = '/tag-list.html' | relative_url %}
-  {% assign archives-list-url = '/archives-list.html' | relative_url %}
-  {% assign search-url = '/search.html' | relative_url %}
   <h1 class="home">
     <a href="{{ home-path | relative_url }}">
       <img alt="home" width="24" height="24" src="{{ 'assets/images/favicon.svg' | relative_url }}" />

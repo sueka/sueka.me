@@ -1,6 +1,6 @@
-{% assign include-lang = include.lang | default: page-lang %}
-{% assign translation = site.data.translations | where: 'langcode', include-lang | first %}
 {% if site.lsi %}
+  {% assign include-lang = include.lang | default: page-lang %}
+  {% assign translation = site.data.translations | where: 'langcode', include-lang | first %}
   <nav class="related-posts">
     <h3>{{ translation.related-posts }}</h3>
     <ul>
