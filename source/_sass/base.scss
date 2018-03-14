@@ -614,13 +614,13 @@ dd > p {
 }
 
 @media screen and (max-width: 1332.984375px) {
-  .container {
+  .flexible-wrapper {
     max-width: 1000px;
   }
 }
 
 @media screen and (min-width: 1333px) {
-  .container {
+  .flexible-wrapper {
     display: flex;
     flex-direction: row-reverse;
   }

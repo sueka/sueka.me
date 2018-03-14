@@ -12,7 +12,7 @@
         <h1>{{ page.title }}</h1>
         {% include post-meta.inc %}
       </header>
-      <div class="container">
+      <div class="flexible-wrapper">
         <div class="side-column">
           {% include tags.inc %}
           {% include languages.inc %}

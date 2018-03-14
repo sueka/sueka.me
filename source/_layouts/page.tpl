@@ -17,7 +17,7 @@
     {% include header.inc %}
     <main>
       <h1>{{ page.title }}</h1>
-      <div class="container">
+      <div class="flexible-wrapper">
         <div class="side-column">
           {% include languages.inc %}
           {% include toc.inc %}
