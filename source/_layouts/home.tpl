@@ -16,7 +16,6 @@
         </div>
         <div class="main-column">
           {{ content }}
-          {% include recent-posts.inc %}
           {% include main-source.inc %}
         </div>
       </div>
