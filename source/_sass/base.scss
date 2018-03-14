@@ -96,7 +96,7 @@ p {
 }
 h1, h2, h3, h4, h5, h6, th, dt, dt > b, strong {
   font-weight: 500;
-  &, span[lang] {
+  &, a[lang], span[lang] {
     font-family: $font-emph;
     &:lang(ja) {
       font-family: $font-emph-ja;
@@ -109,16 +109,10 @@ dt > dfn, dfn, em {
     font-family: $font-emph-ja;
   }
 }
-span[lang] {
+a[lang], span[lang] {
   font-family: $font-text;
   &:lang(ja) {
     font-family: $font-text-ja;
-  }
-}
-a {
-  font-family: $font-emph;
-  &:lang(ja) {
-    font-family: $font-emph-ja;
   }
 }
 pre, code {
@@ -382,6 +376,10 @@ body > header {
 }
 
 .tags {
+  font-family: $font-emph;
+  &:lang(ja) {
+    font-family: $font-emph;
+  }
   ul {
     display: flex;
     padding-left: 0;
@@ -391,12 +389,6 @@ body > header {
     li {
       display: block;
       margin: 0 0.382em 0.382em 0;
-      a {
-        font-family: $font-emph;
-        &:lang(ja) {
-          font-family: $font-emph;
-        }
-      }
       a:link {
         white-space: nowrap;
         border: 1px solid $ui-color;
