@@ -137,7 +137,7 @@ pre {
 }
 
 body > header {
-  & > nav > ul > li > a {
+  > nav > ul > li > a {
     font-weight: 500;
     font-family: $font-emph;
     &:lang(ja) {
@@ -205,8 +205,8 @@ a:link {
 
 a:visited {
   &,
-  & > span,
-  & > mark {
+  > span,
+  > mark {
     color: $visited-color;
     border-color: $visited-color;
   }
@@ -322,35 +322,35 @@ output {
 
 body > header {
   display: flex;
-  & > h1 {
+  > h1 {
     font-size: 100%;
     margin: 0;
     padding: 0;
-    & > a {
+    > a {
       display: flex;
       padding: 0.618em;
-      & > img {
+      > img {
         width: 24px;
         height: 24px;
       }
     }
-    & > a:link:hover > img {
+    > a:link:hover > img {
       transform: rotate(180deg);
     }
   }
 
-  & > nav {
+  > nav {
     overflow-x: auto;
-    & > ul {
+    > ul {
       display: flex;
       white-space: nowrap;
       list-style: none;
       padding-left: 0;
       margin-top: 0;
       margin-bottom: 0;
-      & > li {
+      > li {
         display: block;
-        & > a {
+        > a {
           display: block;
           padding: 0.618em 1em;
           height: 24px;
@@ -466,7 +466,7 @@ footer {
   border-top: 1px dashed $ui-color;
   margin: 1.618em 0.618em 0;
   padding: 0.618em 0.382em;
-  & > p {
+  > p {
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -500,7 +500,7 @@ aside {
 body > header {
   background-color: $accent-fill-color;
   color: $bg-color;
-  & > h1 > a > img {
+  > h1 > a > img {
     transition: 180ms ease;
   }
   a:link, a:visited {

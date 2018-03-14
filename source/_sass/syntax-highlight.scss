@@ -19,13 +19,26 @@
 
 figure.highlight {
   margin: 0.618em 0;
-  & > pre {
+  > pre {
     white-space: pre;
     overflow-x: auto;
     margin: 0;
     padding: 0.382rem 1rem;
   }
 }
+
+// blockquote,
+// .blockquote-like {
+//   .highlighter-rouge pre.highlight {
+//     padding-left: 0.618rem;
+//     padding-right: 0;
+//   }
+//
+//   figure.highlight > pre {
+//     padding-left: 0.618rem;
+//     padding-right: 0;
+//   }
+// }
 
 .highlight {
 
@@ -34,13 +47,13 @@ figure.highlight {
     display: block;
     margin-top: 0;
     margin-bottom: 0;
-    & > tbody {
+    > tbody {
       display: block;
-      & > tr {
+      > tr {
         display: flex;
-        & > td {
+        > td {
           border: none;
-          & > pre {
+          > pre {
             margin-top: 0;
             margin-bottom: 0;
           }
