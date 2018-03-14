@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: sueka.me
 interlanguage-id: index
 lang: ja

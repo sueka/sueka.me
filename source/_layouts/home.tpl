@@ -2,7 +2,7 @@
 {% assign page-lang = page.lang | default: site.lang %}
 <html lang="{{ page-lang }}">
   <head>
-    <title>{{ page.title }} - {{ site.title }}</title>
+    <title>{{ page.title | default: site.title }}</title>
     {% include head.inc %}
   </head>
   <body>
@@ -16,11 +16,11 @@
         </div>
         <div class="main-column">
           {{ content }}
+          {% include recent-posts.inc %}
           {% include main-source.inc %}
         </div>
       </div>
     </main>
-    {% include recent-posts.inc %}
     {% include footer.inc %}
     {% include scripts.inc %}
   </body>
