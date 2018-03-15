@@ -596,13 +596,13 @@ dd > p {
 
 @media screen and (orientation: portrait) and (max-width: 1000px) {
   html {
-    font-size: unquote(calc(13.5px + 0.45vw));
+    font-size: unquote(calc(9px + 0.9vw));
   }
 }
 
 @media screen and (orientation: landscape) and (max-height: 1000px) {
   html {
-    font-size: unquote(calc(13.5px + 0.45vh));
+    font-size: unquote(calc(9px + 0.9vh));
   }
 }
 
