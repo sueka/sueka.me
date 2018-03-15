@@ -1,6 +1,6 @@
-{% assign include-lang = include.lang | default: page-lang %}
-{% assign translation = site.data.translations | where: 'langcode', include-lang | first %}
-{% case include-lang %}
+{% assign lang = include.lang | default: page.lang | default: site.lang %}
+{% assign translation = site.data.translations | where: 'langcode', lang | first %}
+{% case lang %}
 {% when 'en' %}
   {% assign home-path = '/' %}
   {% assign about-path = '/about.html' %}

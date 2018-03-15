@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-{% assign page-lang = page.lang | default: site.lang %}
-<html lang="{{ page-lang }}">
+<html lang="{{ page.lang | default: site.lang }}">
   <head>
     <title>{{ page.title | default: site.title }}</title>
     {% include head.inc %}

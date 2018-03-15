@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% assign page-lang = page.lang | default: site.lang %}
 {% case page.type %}
 {% when 'year' %}
   {% assign page-title = page.date | date: 'Posts of %Y' %}
@@ -8,7 +7,7 @@
 {% when 'tag' %}
   {% assign page-title = 'Posts tagged with ' | append: page.title %}
 {% endcase %}
-<html lang="{{ page-lang }}">
+<html lang="{{ page.lang | default: site.lang }}">
   <head>
     <title>{{ page-title }} - {{ site.title }}</title>
     {% include head.inc %}

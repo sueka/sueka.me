@@ -1,13 +1,13 @@
 {% if page.interlanguage-id %}
-  {% assign include-lang = include.lang | default: page-lang %}
-  {% assign translation = site.data.translations | where: 'langcode', include-lang | first %}
+  {% assign lang = include.lang | default: page.lang | default: site.lang %}
+  {% assign translation = site.data.translations | where: 'langcode', lang | first %}
   {% assign objects = site.posts | concat: site.pages | sort: 'lang' | where: 'interlanguage-id', page.interlanguage-id %}
   <nav class="languages">
     <h3>{{ translation.languages }}</h3>
     <ul>
       {% for object in objects %}
         {% assign object-lang = object.lang | default: site.lang %}
-        {% if object-lang != include-lang %}
+        {% if object-lang != lang %}
           {% assign translation = site.data.translations | where: 'langcode', object-lang | first %}
           <li><a lang="{{ object-lang }}" title="{{ object.title }}" rel="alternate" href="{{ object.url }}" hreflang="{{ object-lang }}">{{ translation.name }}</a></li>
         {% endif %}

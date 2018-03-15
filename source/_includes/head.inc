@@ -1,4 +1,4 @@
-{% assign include-lang = include.lang | default: page-lang %}
+{% assign lang = include.lang | default: page.lang | default: site.lang %}
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,7 +16,7 @@
   {% assign objects = site.posts | concat: site.pages | where: 'interlanguage-id', page.interlanguage-id %}
   {% for object in objects %}
     {% assign object-lang = object.lang | default: site.lang %}
-    {% if object-lang != include-lang %}
+    {% if object-lang != lang %}
       <link rel="alternate" href="{{ object.url }}" hreflang="{{ object-lang }}" />
     {% endif %}
   {% endfor %}

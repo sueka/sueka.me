@@ -1,8 +1,8 @@
-{% assign include-lang = include.lang | default: page-lang %}
+{% assign lang = include.lang | default: page.lang | default: site.lang %}
 {% capture license %}<a href="{{ site.license_url }}">{{ site.license }}</a>{% endcapture %}
 {% capture repository %}<a href="https://github.com/{{ site.github_repo }}">{{ site.github_repo }}</a>{% endcapture %}
 <footer><p>
-  {% case include-lang %}
+  {% case lang %}
   {% when 'ja' %}
     <a href="/index.ja.html">{{ site.title }}</a> のソースコードは {{ license }} でライセンスされ、 GitHub 上のリポジトリ {{ repository }} で公開されてゐます。
   {% else %}
