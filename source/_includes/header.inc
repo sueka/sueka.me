@@ -17,7 +17,7 @@
 <header>
   <h1 class="home">
     <a href="{{ home-path | relative_url }}">
-      <img alt="home" width="24" height="24" src="{{ 'assets/images/favicon.svg' | relative_url }}" />
+      <img alt="home" src="{{ 'assets/images/favicon.svg' | relative_url }}" />
     </a>
   </h1>
   <nav>
