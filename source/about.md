@@ -8,7 +8,7 @@ Hi.  I'm *{{ site.author }}*, an author of this website.
 
 ## Calendar
 
-This is my Google Calendar.  I don't open the details of a schedule other participants are added to.
+This is my Google Calendar.  I won't open the details of a schedule other participants are added to.
 
 - [HTML](//calendar.google.com/calendar/embed?src=uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com&hl=en)
 - [iCal](//calendar.google.com/calendar/ical/uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com/public/basic.ics)
