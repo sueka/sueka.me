@@ -21,6 +21,5 @@
     {% endif %}
   {% endfor %}
 {% endif %}
-<link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}" />
 <link rel="icon" sizes="any" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml" />
 <link rel="mask-icon" sizes="any" href="{{ '/assets/images/favicon.svg' | relative_url }}" />
