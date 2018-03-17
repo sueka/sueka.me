@@ -552,6 +552,7 @@ table {
 //
 
 ol {
+  display: table;
   padding-left: 0;
   list-style: none;
   counter-reset: i;
@@ -559,7 +560,7 @@ ol {
     display: table-row;
     &::before {
       counter-increment: i;
-      content: counters(i, '.') '. ';
+      content: ' ' counters(i, '.') '. ';
       font-family: $font-emph;
       font-weight: 500;
       display: table-cell;
