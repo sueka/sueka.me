@@ -552,18 +552,18 @@ table {
 //
 
 ol {
-  padding-left: 2em;
-  text-indent: -2em;
+  padding-left: 0;
   list-style: none;
   counter-reset: i;
   > li {
+    display: table-row;
     &::before {
       counter-increment: i;
       content: counters(i, '.') '. ';
       font-family: $font-emph;
       font-weight: 500;
-      display: inline-block;
-      width: 2em;
+      display: table-cell;
+      min-width: 1.618em;
       text-align: right;
       white-space: pre;
     }
