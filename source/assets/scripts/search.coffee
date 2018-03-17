@@ -138,12 +138,12 @@ fetch('/json/posts.json')
     if right
       { excerptPattern, replacePattern } = right
 
-      posts.forEach ({ url, lang, title, textContent, excerpt }) ->
+      posts.forEach ({ url, lang = "{{ site.lang }}", title, textContent, excerpt }) ->
         elementOpen('section')
         elementOpen('h3')
         elementOpenStart('a')
         attr('href', url)
-        if lang
+        if lang != document.documentElement.lang
           attr('lang', lang)
           attr('hreflang', lang)
         elementOpenEnd('a')
@@ -155,7 +155,7 @@ fetch('/json/posts.json')
           a.innerHTML = matched.replace(replacePattern, '<mark>$1</mark>')
         elementClose('h3')
         elementOpenStart('p', '', ['class', 'search-result-excerpt'])
-        attr('lang', lang) if lang # FIXME: ignoring inline lang attributes
+        attr('lang', lang) if lang != document.documentElement.lang # FIXME: ignoring inline lang attributes
         elementOpenEnd('p')
         textContentExcerptOrNull = excerptPattern.exec(textContent)
         text truncate(removeTags(excerpt), 256, ' ...') unless textContentExcerptOrNull

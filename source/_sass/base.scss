@@ -89,7 +89,7 @@ html {
   hyphens: auto;
 }
 p {
-  // font-family: $font-text;
+  font-family: $font-text;
   &:lang(ja) {
     font-family: $font-text-ja;
   }
