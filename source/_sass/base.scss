@@ -230,6 +230,7 @@ a:link:active {
 //                  _|_|
 
 html {
+  scroll-behavior: smooth;
   background-color: $bg-color;
   color: $fg-color;
 }
