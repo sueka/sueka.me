@@ -402,6 +402,10 @@ body > header {
       a:link:hover {
         background-color: $accent-mesh-color;
       }
+      .tag-size {
+        vertical-align: middle;
+        font-size: 75%;
+      }
     }
   }
 }
