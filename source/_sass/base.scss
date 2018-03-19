@@ -377,7 +377,6 @@ body > header {
 }
 
 .tags {
-  font-family: $font-emph;
   &:lang(ja) {
     font-family: $font-emph;
   }
@@ -387,6 +386,7 @@ body > header {
     list-style: none;
     flex-wrap: wrap;
     margin: 0 -0.382em -0.382em 0;
+    font-family: $font-emph;
     li {
       display: block;
       margin: 0 0.382em 0.382em 0;
