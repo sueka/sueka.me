@@ -28,3 +28,4 @@ PGP pubkey
 - [MDN](//developer.mozilla.org/en-US/profiles/sueka)
 - [Stack Overflow](//stackoverflow.com/users/8795737/h-sueka)
 - [pixiv](//www.pixiv.net/member.php?id=28203588)
+- [Hatena Bookmark](http://b.hatena.ne.jp/sueka/bookmark)

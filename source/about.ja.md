@@ -29,3 +29,4 @@ PGP 公開鍵
 - [MDN](//developer.mozilla.org/ja/profiles/sueka)
 - [Stack Overflow](//stackoverflow.com/users/8795737/h-sueka)
 - [pixiv](//www.pixiv.net/member.php?id=28203588)
+- [はてなブックマーク](http://b.hatena.ne.jp/sueka/bookmark)
