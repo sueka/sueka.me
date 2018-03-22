@@ -82,8 +82,7 @@ $font-code-ja: CodeM, Ricty, 'Source Han Code JP', Myrica, 'IPAGothic', Menlo, '
 
 html {
   font: 18px $font-text;
-  font-feature-settings: 'liga' on;
-  font-feature-settings: 'palt' on;
+  font-feature-settings: 'liga', 'palt';
   &:lang(ja) {
     font-family: $font-text-ja;
   }
