@@ -64,7 +64,7 @@ $visited-color: darkorchid;
 $code-bg-color: gainsboro;
 $code-fg-color: #1f1f1f;
 
-$font-text: 'Linux Libertine O', FreeSerif, 'Times New Roman', Times, Baskerville, 'Baskerville Old Face', serif;
+$font-text: 'Linux Libertine O', FreeSerif, Baskerville, 'Baskerville Old Face', 'Times New Roman', Times, serif;
 $font-emph: 'Linux Biolinum O', FreeSans, 'Myriad Pro', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Segoe UI, sans-serif;
 $font-code: 'Source Code Pro', Inconsolata, Menlo, Monaco, Consolas, monospace, serif;
 $font-text-ja: IPAexMincho, YuMincho, 'Hiragino Mincho ProN', 'Yu Mincho', HGSMinchoE, Meiryo, sans-serif;
@@ -82,6 +82,7 @@ $font-code-ja: CodeM, Ricty, 'Source Han Code JP', Myrica, 'IPAGothic', Menlo, '
 
 html {
   font: 18px $font-text;
+  font-feature-settings: 'liga' on;
   font-feature-settings: 'palt' on;
   &:lang(ja) {
     font-family: $font-text-ja;
