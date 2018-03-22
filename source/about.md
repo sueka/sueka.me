@@ -4,16 +4,22 @@ title: About
 interlanguage-id: about
 ---
 
-Hi.  I'm *{{ site.author }}*, an author of this website.
+## About this website
 
-## Calendar
+This website is my personal blog.  Its main topics are languages, computers, organisms, art, and other sciences.  It is my diary as well.
+
+## About me
+
+I'm *{{ site.author }}*, an author of this website.
+
+### Calendar
 
 This is my Google Calendar.  I won't open the details of a schedule other participants are added to.
 
 - [HTML](//calendar.google.com/calendar/embed?src=uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com&hl=en)
 - [iCal](//calendar.google.com/calendar/ical/uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com/public/basic.ics)
 
-## Contacts
+### Contacts
 
 Email address
 : <i>{{ site.email }}</i>
@@ -21,7 +27,7 @@ Email address
 PGP pubkey
 : [0x{{ site.pgp_key_id }}]({{ site.pks_url }})
 
-### List of accounts
+#### List of accounts
 
 - [Twitter](//twitter.com/{{ site.twitter_username }})
 - [GitHub](//github.com/{{ site.github_username }})
