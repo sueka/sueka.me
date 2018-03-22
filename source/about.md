@@ -4,8 +4,6 @@ title: About
 interlanguage-id: about
 ---
 
-## About this website
-
 This website is my personal blog.  Its main topics are languages, computers, organisms, art, and other sciences.  It is my diary as well.
 
 ## About me
