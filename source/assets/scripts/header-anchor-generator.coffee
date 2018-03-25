@@ -3,33 +3,32 @@
 
 { patchOuter, elementOpen, elementClose, text } = IncrementalDOM
 
-array = (arrayLike) -> Array::slice.call(arrayLike)
+array = (arrayLike) -> Array::slice.call arrayLike
 
-flatten = (xss) -> Array::concat.apply([], xss)
+flatten = (xss) -> Array::concat.apply [], xss
 
-mains = array document.querySelectorAll('main')
+mains = array document.querySelectorAll 'main'
 
-anchorageAndIds =
-  flatten mains.map (main) -> array main.querySelectorAll('h1, h2, h3, h4, h5, h6')
-  .filter (hn) -> hn.hasAttribute('id')
+anchorageAndIds = flatten [
+  flatten mains.map (main) -> array main.querySelectorAll 'h1, h2, h3, h4, h5, h6'
+  .filter (hn) -> hn.hasAttribute 'id'
   .map (hn) -> { anchorage: hn, id: hn.id }
-  .concat (
-    flatten mains.map (main) -> array main.querySelectorAll('section, article, nav, aside')
-    .filter (section) -> section.hasAttribute('id')
-    .map (section) -> { anchorage: section.querySelector('h1, h2, h3, h4, h5, h6'), id: section.id }
-  )
+  flatten mains.map (main) -> array main.querySelectorAll 'section, article, nav, aside'
+  .filter (section) -> section.hasAttribute 'id'
+  .map (section) -> { anchorage: section.querySelector('h1, h2, h3, h4, h5, h6'), id: section.id }
+]
 
 anchorageAndIds.forEach ({ anchorage, id }) ->
-  headerAnchor = document.createElement('div')
-  anchorage.appendChild(headerAnchor)
+  headerAnchor = document.createElement 'div'
+  anchorage.appendChild headerAnchor
 
   patchOuter headerAnchor, () ->
-    text(' ')
-    elementOpen('a', null, [
-      'class', 'header-anchor',
-      'href', '#' + id,
-    ])
-    text('🔗')
-    elementClose('a')
+    text ' '
+    elementOpen 'a', null, [
+      'class', 'header-anchor'
+      'href', '#' + id
+    ]
+    text '🔗'
+    elementClose 'a'
 
-window.addEventListener('touchstart', (->), false)
+window.addEventListener 'touchstart', (->), false

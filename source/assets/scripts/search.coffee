@@ -6,19 +6,19 @@
 unless Array::includes
   Object.defineProperty Array::, 'includes',
     value: (searchElement, fromIndex = 0) ->
-      throw new TypeError("Cannot read property 'includes' of #{this}") if (this == null)
-      fromIndex <= this.indexOf(searchElement)
+      throw new TypeError "Cannot read property 'includes' of #{this}" if this == null
+      fromIndex <= this.indexOf searchElement
 
 Element::matches = Element::oMatchesSelector || Element::msMatchesSelector unless Element::matches
 
 truncate = (str, length, omission) ->
-  if (str.length <= length - omission.length)
+  if str.length <= length - omission.length
     str
   else
     "#{ str.slice(0, length - omission.length).trim() }#{ omission }"
 
 removeTags = (->
-  container = document.createElement('div')
+  container = document.createElement 'div'
   (html) ->
     container.innerHTML = html
     container.textContent
@@ -38,7 +38,7 @@ unless String::byteLength
   Object.defineProperty String::, 'byteLength',
     enumerable: true
     get: () ->
-      this.split('')
+      this.split ''
       .map (c) -> c.charCodeAt(0).toString(16).length / 2
       .reduce ((res, x) -> res + x), 0
 
@@ -50,45 +50,45 @@ else
     _urlSearchParams = null
 
     convertSearchStringToMap = (searchString) ->
-      searchMap = new Map()
+      searchMap = new Map
       searchString.replace(/^\?/, '').split('&')
-      .map (kv) -> kv.split('=')
+      .map (kv) -> kv.split '='
       .forEach ([key, value = '']) ->
         if key
-          searchMap.set(key, value)
+          searchMap.set key, value
       searchMap
 
     convertSearchMapToString = (searchMap) ->
       searchString = ''
       searchMap.forEach (value, key) ->
         searchString += "&#{key}=#{value}"
-      searchString.replace(/^&/, '?')
+      searchString.replace /^&/, '?'
 
     constructor: (search) ->
-      _urlSearchParams = convertSearchStringToMap(search)
+      _urlSearchParams = convertSearchStringToMap search
 
     get: (key) ->
-      value = _urlSearchParams.get(key)
+      value = _urlSearchParams.get key
       if value == undefined
         null
       else
         value
 
     set: (key, value) ->
-      _urlSearchParams.set(key, value)
+      _urlSearchParams.set key, value
 
     delete: (key) ->
-      _urlSearchParams.delete(key)
+      _urlSearchParams.delete key
 
     toString: ->
-      convertSearchMapToString(_urlSearchParams)
+      convertSearchMapToString _urlSearchParams
 
   class URL
     _location = null
 
     constructor: (location) ->
       _location = location
-      @searchParams = new URLSearchParams(_location.search)
+      @searchParams = new URLSearchParams _location.search
 
     toString: ->
       userinfo =
@@ -103,13 +103,13 @@ else
           "#{_location.host}"
       "#{_location.protocol}//#{authority}#{_location.pathname}#{@searchParams}#{_location.hash}"
 
-fetch('/json/posts.json')
+fetch '/json/posts.json'
 .then (response) -> response.json()
 .then (posts) ->
   posts.forEach (post) ->
-    post.textContent = removeTags(post.content).replace(/ {2,}/g, ' ').replace(/^ | $/gm, '')
+    post.textContent = removeTags(post.content).replace(/ {2,}/g, ' ').replace /^ | $/gm, ''
 
-  url = new URL(location)
+  url = new URL location
 
   filterAndSort = ({ posts, q }) ->
     { _: left, right } = try_ SyntaxError, () ->
@@ -139,73 +139,73 @@ fetch('/json/posts.json')
       { excerptPattern, replacePattern } = right
 
       posts.forEach ({ url, lang = "{{ site.lang }}", title, textContent, excerpt }) ->
-        elementOpen('section')
-        elementOpen('h3')
-        elementOpenStart('a')
-        attr('href', url)
+        elementOpen 'section'
+        elementOpen 'h3'
+        elementOpenStart 'a'
+        attr 'href', url
         if lang != document.documentElement.lang
-          attr('lang', lang)
-          attr('hreflang', lang)
-        elementOpenEnd('a')
-        titleExcerptOrNull = excerptPattern.exec(title)
-        text(title) unless titleExcerptOrNull
-        a = elementClose('a')
+          attr 'lang', lang
+          attr 'hreflang', lang
+        elementOpenEnd 'a'
+        titleExcerptOrNull = excerptPattern.exec title
+        text title unless titleExcerptOrNull
+        a = elementClose 'a'
         if titleExcerptOrNull
           [matched] = titleExcerptOrNull
-          a.innerHTML = matched.replace(replacePattern, '<mark>$1</mark>')
-        elementClose('h3')
-        elementOpenStart('p', '', ['class', 'search-result-excerpt'])
-        attr('lang', lang) if lang != document.documentElement.lang # FIXME: ignoring inline lang attributes
-        elementOpenEnd('p')
-        textContentExcerptOrNull = excerptPattern.exec(textContent)
-        text truncate(removeTags(excerpt), 256, ' ...') unless textContentExcerptOrNull
-        p = elementClose('p')
+          a.innerHTML = matched.replace replacePattern, '<mark>$1</mark>'
+        elementClose 'h3'
+        elementOpenStart 'p', '', ['class', 'search-result-excerpt']
+        attr 'lang', lang if lang != document.documentElement.lang # FIXME: ignoring inline lang attributes
+        elementOpenEnd 'p'
+        textContentExcerptOrNull = excerptPattern.exec textContent
+        text truncate removeTags(excerpt), 256, ' ...' unless textContentExcerptOrNull
+        p = elementClose 'p'
         if textContentExcerptOrNull
           [matched] = textContentExcerptOrNull
-          p.innerHTML = truncate(matched, 256, ' ...\n').replace(replacePattern, '<mark>$1</mark>')
-        elementClose('section')
+          p.innerHTML = truncate(matched, 256, ' ...\n').replace replacePattern, '<mark>$1</mark>'
+        elementClose 'section'
 
-  window.addEventListener('input', (event) ->
-    if event.target.matches('.search-io > input')
+  window.addEventListener 'input', (event) ->
+    if event.target.matches '.search-io > input'
       input = event.target
-      output = input.parentElement.querySelector('output')
+      output = input.parentElement.querySelector 'output'
 
       q = input.value
 
       if !q
-        url.searchParams.delete('q')
-        history.pushState({ q }, document.title, url)
+        url.searchParams.delete 'q'
+        history.pushState { q }, document.title, url
       else
-        url.searchParams.set('q', q)
-        history.pushState({ q }, "Posts including /#{q}/ - {{ site.title }}", url)
+        url.searchParams.set 'q', q
+        history.pushState { q }, "Posts including /#{q}/ - {{ site.title }}", url
 
-      filteredPosts = filterAndSort({ posts, q })
-      patch(output, render, { posts: filteredPosts, q })
-  , false)
+      filteredPosts = filterAndSort { posts, q }
+      patch output, render, { posts: filteredPosts, q }
+  , false
 
   (->
-    q = url.searchParams.get('q')
+    q = url.searchParams.get 'q'
 
     if !q
-      url.searchParams.delete('q')
-      history.replaceState({ q }, document.title, url)
+      url.searchParams.delete 'q'
+      history.replaceState { q }, document.title, url
     else
-      history.replaceState({ q }, "Posts including /#{q}/ - {{ site.title }}", url)
+      history.replaceState { q }, "Posts including /#{q}/ - {{ site.title }}", url
 
-      input = document.querySelector('.search-io > input')
+      input = document.querySelector '.search-io > input'
       output = input.nextElementSibling
       input.value = q
 
-      filteredPosts = filterAndSort({ posts, q })
-      patch(output, render, { posts: filteredPosts, q })
+      filteredPosts = filterAndSort { posts, q }
+      patch output, render, { posts: filteredPosts, q }
   )()
 
-  window.addEventListener('popstate', ({ state: { q } }) ->
-    input = document.querySelector('.search-io > input')
+  window.addEventListener 'popstate', ({ state: { q } }) ->
+    input = document.querySelector '.search-io > input'
     output = input.nextElementSibling
     input.value = q
 
-    filteredPosts = filterAndSort({ posts, q })
-    patch(output, render, { posts: filteredPosts, q })
-  , false)
+    filteredPosts = filterAndSort { posts, q }
+    patch output, render, { posts: filteredPosts, q }
+  , false
 .catch (error) -> throw error
