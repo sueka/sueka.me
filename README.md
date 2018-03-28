@@ -21,4 +21,4 @@ To deploy manually, upload the `_site` directory to your server by executing a c
 
 ## License
 
-[CC0 1.0 Universal](./UNLICENSE.txt)
+[CC0 1.0 Universal](./LICENSE.txt)
