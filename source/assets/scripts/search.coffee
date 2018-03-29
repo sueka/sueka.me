@@ -115,7 +115,7 @@ else
       "#{_location.protocol}//#{authority}#{_location.pathname}#{@searchParams}#{_location.hash}"
 
 rendering = false
-inputting = false
+inputting_when_rendering = false
 
 fetch '/json/posts.json'
 .then (response) -> response.json()
@@ -156,7 +156,7 @@ fetch '/json/posts.json'
 
       breakable () ->
         posts.forEach ({ url, lang = "{{ site.lang }}", title, textContent, excerpt }) ->
-          break_() if inputting and rendering
+          break_() if inputting_when_rendering
 
           elementOpen 'section'
           elementOpen 'h3'
@@ -188,7 +188,7 @@ fetch '/json/posts.json'
 
   window.addEventListener 'input', (event) ->
     if event.target.matches '.search-io > input'
-      inputting = true
+      inputting_when_rendering = rendering
 
       input = event.target
       output = input.parentElement.querySelector 'output'
@@ -205,7 +205,7 @@ fetch '/json/posts.json'
       filteredPosts = filterAndSort { posts, q }
       patch output, render, { posts: filteredPosts, q }
 
-      inputting = false
+      inputting_when_rendering = false
   , false
 
   (->
