@@ -34,17 +34,6 @@ try_ = (errorClass, tryClause) ->
       throw ex
   { left, right }
 
-class BreakingError extends Error
-
-breakable = (procedure) ->
-  try
-    procedure()
-  catch ex
-    throw ex unless ex instanceof BreakingError
-  true
-
-break_ = () -> throw new BreakingError
-
 unless String::byteLength
   Object.defineProperty String::, 'byteLength',
     enumerable: true
@@ -114,9 +103,6 @@ else
           "#{_location.host}"
       "#{_location.protocol}//#{authority}#{_location.pathname}#{@searchParams}#{_location.hash}"
 
-rendering = false
-inputting = false
-
 fetch '/json/posts.json'
 .then (response) -> response.json()
 .then (posts) ->
@@ -145,8 +131,6 @@ fetch '/json/posts.json'
       []
 
   render = ({ posts, q }) ->
-    rendering = true
-
     { _: left, right } = try_ SyntaxError, () ->
       excerptPattern: /// ^.* (?:#{q}) .*$ ///im
       replacePattern: /// (#{q}) ///gi
@@ -154,42 +138,35 @@ fetch '/json/posts.json'
     if right
       { excerptPattern, replacePattern } = right
 
-      breakable () ->
-        posts.forEach ({ url, lang = "{{ site.lang }}", title, textContent, excerpt }) ->
-          break_() if inputting and rendering
-
-          elementOpen 'section'
-          elementOpen 'h3'
-          elementOpenStart 'a'
-          attr 'href', url
-          if lang != document.documentElement.lang
-            attr 'lang', lang
-            attr 'hreflang', lang
-          elementOpenEnd 'a'
-          titleExcerptOrNull = excerptPattern.exec title
-          text title unless titleExcerptOrNull
-          a = elementClose 'a'
-          if titleExcerptOrNull
-            [matched] = titleExcerptOrNull
-            a.innerHTML = matched.replace replacePattern, '<mark>$1</mark>'
-          elementClose 'h3'
-          elementOpenStart 'p', '', ['class', 'search-result-excerpt']
-          attr 'lang', lang if lang != document.documentElement.lang # FIXME: ignoring inline lang attributes
-          elementOpenEnd 'p'
-          textContentExcerptOrNull = excerptPattern.exec textContent
-          text truncate removeTags(excerpt), 256, ' ...' unless textContentExcerptOrNull
-          p = elementClose 'p'
-          if textContentExcerptOrNull
-            [matched] = textContentExcerptOrNull
-            p.innerHTML = truncate(matched, 256, ' ...\n').replace replacePattern, '<mark>$1</mark>'
-          elementClose 'section'
-
-    rendering = false
+      posts.forEach ({ url, lang = "{{ site.lang }}", title, textContent, excerpt }) ->
+        elementOpen 'section'
+        elementOpen 'h3'
+        elementOpenStart 'a'
+        attr 'href', url
+        if lang != document.documentElement.lang
+          attr 'lang', lang
+          attr 'hreflang', lang
+        elementOpenEnd 'a'
+        titleExcerptOrNull = excerptPattern.exec title
+        text title unless titleExcerptOrNull
+        a = elementClose 'a'
+        if titleExcerptOrNull
+          [matched] = titleExcerptOrNull
+          a.innerHTML = matched.replace replacePattern, '<mark>$1</mark>'
+        elementClose 'h3'
+        elementOpenStart 'p', '', ['class', 'search-result-excerpt']
+        attr 'lang', lang if lang != document.documentElement.lang # FIXME: ignoring inline lang attributes
+        elementOpenEnd 'p'
+        textContentExcerptOrNull = excerptPattern.exec textContent
+        text truncate removeTags(excerpt), 256, ' ...' unless textContentExcerptOrNull
+        p = elementClose 'p'
+        if textContentExcerptOrNull
+          [matched] = textContentExcerptOrNull
+          p.innerHTML = truncate(matched, 256, ' ...\n').replace replacePattern, '<mark>$1</mark>'
+        elementClose 'section'
 
   window.addEventListener 'input', (event) ->
     if event.target.matches '.search-io > input'
-      inputting = true
-
       input = event.target
       output = input.parentElement.querySelector 'output'
 
@@ -204,8 +181,6 @@ fetch '/json/posts.json'
 
       filteredPosts = filterAndSort { posts, q }
       patch output, render, { posts: filteredPosts, q }
-
-      inputting = false
   , false
 
   (->
