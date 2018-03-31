@@ -19,7 +19,7 @@ cache: bundler
 script:
   - bundle exec rspec --exclude-pattern **/browser/**/*.rb
   - bundle exec jekyll b --safe
-  - bundle exec htmlproofer _site/ --disable-external
+  - bundle exec htmlproofer _site/ --disable-external --check-html --log-level :warn
 
 before_deploy:
   - openssl aes-256-cbc -K "$encrypted_e735c587144c_key" -iv "$encrypted_e735c587144c_iv"
