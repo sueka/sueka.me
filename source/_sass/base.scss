@@ -220,6 +220,10 @@ a:link:active {
   border-style: solid;
 }
 
+strike a:link {
+  pointer-events: none;
+}
+
 //
 //  _|                                            _|
 //  _|    _|_|_|  _|    _|    _|_|    _|    _|  _|_|_|_|
