@@ -1,6 +1,6 @@
 ---
 layout: post
-title: unidiff に色を付けるシェルスクリプト
+title: unidiff を色付けするシェルスクリプト
 lang: ja
 tags: sh
 ---
