@@ -117,8 +117,10 @@ a[lang], span[lang] {
 }
 pre, code {
   font-family: $font-code;
+  font-variant-ligatures: none;
   &:lang(ja) {
     font-family: $font-code-ja;
+    font-variant-ligatures: none;
   }
   hyphens: none;
 }
@@ -318,6 +320,7 @@ input {
   font-size: 16px;
   font-size: unquote('max(16px, 100%)');
   font-family: $font-code;
+  font-variant-ligatures: none;
   padding: 0.236em 0.382em;
   border-radius: 0.236em;
 }

@@ -18,8 +18,10 @@
     line-height: unset !important;
     font-size: unset !important;
     font-family: $font-code !important;
+    font-variant-ligatures: none;
     &:lang(ja) {
-      font-family: $font-code-ja !important
+      font-family: $font-code-ja !important;
+      font-variant-ligatures: none;
     }
   }
 }
