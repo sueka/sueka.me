@@ -1,5 +1,8 @@
 .gist {
-  font-size: 1rem !important;
+  font-size: 88.7% !important;
+  &:lang(ja) {
+    font-size: 100% !important;
+  }
 
   margin-left: 1rem;
   margin-right: 1rem;
@@ -23,5 +26,10 @@
       font-family: $font-code-ja !important;
       font-variant-ligatures: none;
     }
+  }
+
+  .gist-meta {
+    font-size: 78.6% !important;
+    font-family: $font-emph !important;
   }
 }
