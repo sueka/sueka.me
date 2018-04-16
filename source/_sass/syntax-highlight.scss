@@ -105,6 +105,7 @@ figure.highlight {
   .nb { color: #39c } // built in
   .nt { color: #39c } // tag
   .nv { color: tomato } // variable
+  .nx { color: deepskyblue } // other
 
   // operator
   .o  {}
@@ -114,6 +115,7 @@ figure.highlight {
   .kt { color: khaki } // type
   .kc { color: sandybrown } // constant
   .kr { color: orchid } // reserved
+  .kd { color: orchid } // declaration
   .k, .kr {
     font-weight: 500;
   }
