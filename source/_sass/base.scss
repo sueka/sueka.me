@@ -384,6 +384,7 @@ body > header {
 }
 
 .tags {
+  overflow: hidden;
   &:lang(ja) {
     font-family: $font-emph;
   }
