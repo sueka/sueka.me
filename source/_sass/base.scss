@@ -384,6 +384,10 @@ body > header {
 }
 
 .tags {
+  padding-right: 0.382em;
+  padding-bottom: 0.382em;
+  margin-right: -0.382em;
+  margin-bottom: -0.382em;
   overflow: hidden;
   &:lang(ja) {
     font-family: $font-emph;
