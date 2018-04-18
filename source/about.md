@@ -6,7 +6,7 @@ interlanguage-id: about
 
 This website is my personal blog.
 
-## About me
+## Me
 
 I'm *{{ site.author }}*, an author of this website.
 
