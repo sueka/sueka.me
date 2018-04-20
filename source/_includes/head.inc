@@ -22,4 +22,4 @@
   {% endfor %}
 {% endif %}
 <link rel="icon" sizes="any" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml" />
-<link rel="mask-icon" sizes="any" href="{{ '/assets/images/favicon.svg' | relative_url }}" />
+<link rel="mask-icon" sizes="any" href="{{ '/assets/images/mask-icon.svg' | relative_url }}" color="#ffd700" />
