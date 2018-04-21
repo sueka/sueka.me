@@ -329,6 +329,12 @@ output {
   display: block;
 }
 
+.search-io {
+  > output section {
+    font-variant-ligatures: none;
+  }
+}
+
 body > header {
   display: flex;
   > h1 {
