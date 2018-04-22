@@ -327,12 +327,7 @@ input {
 }
 output {
   display: block;
-}
-
-.search-io {
-  > output section {
-    font-variant-ligatures: none;
-  }
+  font-variant-ligatures: none;
 }
 
 body > header {
