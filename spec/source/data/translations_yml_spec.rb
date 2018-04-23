@@ -10,7 +10,6 @@ RSpec.describe 'sueka.me' do
         'languages'     => anything,
         'tags'          => anything,
         'archives'      => anything,
-        'search'        => anything,
         'contents'      => anything,
         'recent-posts'  => anything,
         'related-posts' => anything,

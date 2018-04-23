@@ -315,21 +315,6 @@ blockquote,
   }
 }
 
-input {
-  box-sizing: border-box;
-  max-width: 100%;
-  font-size: 16px;
-  font-size: unquote('max(16px, 100%)');
-  font-family: $font-code;
-  font-variant-ligatures: none;
-  padding: 0.236em 0.382em;
-  border-radius: 0.236em;
-}
-output {
-  display: block;
-  font-variant-ligatures: none;
-}
-
 body > header {
   display: flex;
   > h1 {
