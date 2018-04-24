@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Tag list
+toc: true
 ---
 
 {% assign page-lang = page.lang | default: site.lang %}

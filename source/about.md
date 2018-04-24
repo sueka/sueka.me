@@ -2,6 +2,7 @@
 layout: page
 title: About
 interlanguage-id: about
+toc: true 
 ---
 
 This website is my personal blog.

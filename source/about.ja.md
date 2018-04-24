@@ -3,6 +3,7 @@ layout: page
 title: About
 interlanguage-id: about
 lang: ja
+toc: true
 ---
 
 このウェブサイトは私の個人的なブログです。
