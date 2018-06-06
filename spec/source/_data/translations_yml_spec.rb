@@ -6,14 +6,14 @@ RSpec.describe 'sueka.me' do
     it do
       expect(translations).to all match(
         'langcode'      => String,
-        'name'          => anything,
-        'languages'     => anything,
-        'tags'          => anything,
-        'archives'      => anything,
-        'contents'      => anything,
-        'recent-posts'  => anything,
-        'related-posts' => anything,
-        'date-format'   => anything
+        'name'          => String,
+        'languages'     => String,
+        'tags'          => String,
+        'archives'      => String,
+        'contents'      => String,
+        'recent-posts'  => String,
+        'related-posts' => String,
+        'date-format'   => String
       )
     end
     it { expect(translations).to include include 'langcode' => 'en' }
