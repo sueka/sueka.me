@@ -5,7 +5,7 @@ RSpec.describe 'sueka.me' do
     let(:translations) { YAML.load_file('source/_data/translations.yml') }
     it do
       expect(translations).to all match(
-        'langcode'      => anything,
+        'langcode'      => String,
         'name'          => anything,
         'languages'     => anything,
         'tags'          => anything,
