@@ -625,6 +625,10 @@ dd > p {
   .flexible-wrapper {
     max-width: 1000px;
   }
+
+  .main-column {
+    margin-top: 2.618em;
+  }
 }
 
 @media screen and (min-width: 1333px) {
