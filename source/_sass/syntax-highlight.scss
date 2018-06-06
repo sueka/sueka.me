@@ -128,9 +128,12 @@ figure.highlight {
   .p {}
 
   // comment
-  .c { color: gray; font-style: italic }
+  .c  { color: gray; font-style: italic }
+  .c1 { color: gray; font-style: italic } // single
 
   // string
+  .s  { color: yellowgreen }
   .s1 { color: yellowgreen } // single
   .s2 { color: yellowgreen } // double
+  .sc { color: khaki } // character
 }
