@@ -626,8 +626,13 @@ dd > p {
     max-width: 1000px;
   }
 
-  .main-column {
-    margin-top: 2.618em;
+  // NOTE: ad hoc solution
+  .side-column > nav:last-child {
+    margin-bottom: 2.618em;
+  }
+
+  .side-column:not(:has(nav)) {
+    margin-bottom: 2.618em;
   }
 }
 
