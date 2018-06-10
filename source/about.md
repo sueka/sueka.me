@@ -23,7 +23,7 @@ This is my Google Calendar.  I won't open the details of a schedule other partic
 Email address
 : <i>{{ site.email }}</i>
 
-PGP pubkey
+PGP public key
 : [0x{{ site.pgp_key_id }}]({{ site.pks_url }})
 
 #### List of accounts
