@@ -17,7 +17,7 @@ To browser test, starting a local server by running `bundle exec jekyll serve`, 
 
 It is necessary to execute `usermod --shell /bin/bash http` in advance for logging in as `http`.
 
-To deploy manually, upload the `_site` directory to your server by executing a command such as `scp -r _site/ http@203.0.113.89:/opt/local/http/me/sueka/www/html` or taking other ways.
+To deploy manually, upload the `_site` directory to your server by executing a command such as `scp -r _site/ http@203.0.113.0:/opt/local/http/me/sueka/www/html` or taking other ways.
 
 ## License
 
