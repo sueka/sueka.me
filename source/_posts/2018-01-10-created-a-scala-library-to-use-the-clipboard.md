@@ -10,7 +10,7 @@ I have created a Scala library to use the system clipboard.  It is available on 
 
 ## Summary
 
-The shell commands such as `xsel`, `pbcopy`, and `clip` have several differences, accessing the clipboard in a procedural way with Java and similar languages occurs side effects, and [Clipboard](//hackage.haskell.org/package/Clipboard) in the Hackage can't deal with non-string data.  Offhand, I have tried wrapping an access to the clipboard by Java with `scalaz.effect.IO` for these reasons.
+The shell commands such as `xsel`, `pbcopy` and `clip` have several differences, accessing the clipboard in a procedural way with Java and similar languages occurs side effects, and [Clipboard](//hackage.haskell.org/package/Clipboard) in the Hackage can't deal with non-string data.  Offhand, I have tried wrapping an access to the clipboard by Java with `scalaz.effect.IO` for these reasons.
 
 ## Usage
 
