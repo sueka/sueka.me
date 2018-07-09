@@ -20,9 +20,8 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara',           '>= 2.16.1',  '~> 2.16'
-  gem 'phantomjs-binaries', '>= 2.1.1.1', '~> 2.1'
-  gem 'poltergeist',        '>= 1.17.0',  '~> 1.17'
-  gem 'rspec',              '>= 3.7.0',   '~> 3.7'
-  gem 'selenium-webdriver', '>= 3.8.0',   '~> 3.8'
+  gem 'capybara',            '>= 2.18.0', '~> 2.18'
+  gem 'rack-jekyll',         '~> 0.5.0'
+  gem 'rspec',               '>= 3.7.0',  '~> 3.7'
+  gem 'selenium-webdriver',  '>= 3.8.0',  '~> 3.8'
 end
