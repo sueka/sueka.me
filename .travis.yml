@@ -17,7 +17,7 @@ install:
 cache: bundler
 
 script:
-  - bundle exec rspec --exclude-pattern **/browser/**/*.rb
+  - bundle exec rspec
   - bundle exec jekyll b --safe
   - bundle exec htmlproofer _site/ --disable-external --check-html --log-level :warn
 
