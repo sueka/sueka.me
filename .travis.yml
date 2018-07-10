@@ -17,8 +17,8 @@ install:
 cache: bundler
 
 script:
-  - bundle exec rspec -b
   - bundle exec jekyll b --safe
+  - bundle exec rspec
   - bundle exec htmlproofer _site/ --disable-external --check-html --log-level :warn
 
 before_deploy:
