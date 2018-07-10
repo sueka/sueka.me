@@ -9,11 +9,9 @@ sueka.me
 
 Running `bundle exec jekyll build` generates a `_site` directory.
 
-To browser test, starting a local server by running `bundle exec jekyll serve`, execute `bundle exec rspec`.
-
 ### Deployment
 
-[sueka.me](//sueka.me) has been auto-deployed with Travis CI.  When the `master` branch is committed to, Travis tests the source code, builds a document root directory, tests the web site, checks .html files, and then deploys the directory to my ConoHa VPS.
+[sueka.me](//sueka.me) has been auto-deployed with Travis CI.  When the `master` branch is committed to, Travis builds a document root directory, tests the application, and then deploys the directory to my ConoHa VPS.
 
 It is necessary to execute `usermod --shell /bin/bash http` in advance for logging in as `http`.
 
