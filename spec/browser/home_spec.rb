@@ -8,11 +8,11 @@ RSpec.describe 'sueka.me' do
     feature 'multilingual' do
       context 'with English' do
         before { visit '/index.html' }
-        it { expect(page).to have_link('日本語', href: '/index.ja.html') }
+        it { expect(page).to have_link('日本語', href: '/index.ja.html', exact: true) }
       end
       context 'with Japanese' do
         before { visit '/index.ja.html' }
-        it { expect(page).to have_link('English', href: '/') }
+        it { expect(page).to have_link('English', href: '/', exact: true) }
       end
     end
   end
