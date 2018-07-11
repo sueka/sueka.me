@@ -3,8 +3,10 @@ require 'yaml'
 RSpec.describe 'sueka.me' do
   describe 'translation data' do
     let(:translations) { YAML.load_file('source/_data/translations.yml') }
+    subject { translations }
+
     it do
-      expect(translations).to all match(
+      is_expected.to all match(
         'langcode'      => String,
         'name'          => String,
         'languages'     => String,
@@ -16,7 +18,7 @@ RSpec.describe 'sueka.me' do
         'date-format'   => String
       )
     end
-    it { expect(translations).to include include 'langcode' => 'en' }
-    it { expect(translations).to include include 'langcode' => 'ja' }
+    it { should include a_hash_including 'langcode' => 'en' }
+    it { should include a_hash_including 'langcode' => 'ja' }
   end
 end
