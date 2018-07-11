@@ -15,7 +15,7 @@ RSpec.describe 'sueka.me' do
         'contents'      => String,
         'recent-posts'  => String,
         'related-posts' => String,
-        'date-format'   => String
+        'date-format'   => String,
       )
     end
     it { should include a_hash_including 'langcode' => 'en' }
