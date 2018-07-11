@@ -12,6 +12,7 @@ RSpec.describe 'sueka.me' do
         before { visit '/index.html' }
         it { should have_link('日本語', href: '/index.ja.html', exact: true) }
       end
+
       context 'with Japanese' do
         before { visit '/index.ja.html' }
         it { should have_link('English', href: '/', exact: true) }
