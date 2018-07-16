@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: archive-list
 title: Tag list
 ---
 
