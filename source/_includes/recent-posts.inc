@@ -11,7 +11,7 @@
       {% endfor %}
     </ul>
     {% if site-posts.size > 10 %}
-      <p>There are <a href="{{ '/archives-list.html' | relative_url }}">more</a>.</p>
+      <p><a href="{{ '/archives-list.html' | relative_url }}">There</a> are more.</p>
     {% endif %}
   </nav>
 {% endif %}

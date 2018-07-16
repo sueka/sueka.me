@@ -18,7 +18,7 @@ title: Archives list
       {% endfor %}
     </ul>
     {% if posts.size > 10 %}
-      <p>There are <a href="{{ routing-to-year | replace: ':year', year.name }}">more</a>.</p>
+      <p><a href="{{ routing-to-year | replace: ':year', year.name }}">There</a> are all posts of {{ year.name }}.</p>
     {% endif %}
   </section>
 {% endfor %}

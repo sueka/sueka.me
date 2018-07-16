@@ -20,7 +20,7 @@ title: Tag list
       {% endfor %}
     </ul>
     {% if posts.size > 10 %}
-      <p>There are <a href="{{ routing-to-tags | replace: ':name', tag }}">more</a>.</p>
+      <p><a href="{{ routing-to-tags | replace: ':name', tag }}">There</a> are all posts tagged with {{ tag }}.</p>
     {% endif %}
   </section>
 {% endfor %}
