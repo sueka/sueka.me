@@ -384,15 +384,11 @@ body > header {
     list-style: none;
     flex-wrap: wrap;
     margin: 0 -0.382em -0.382em 0;
-    font-family: $font-emph;
     li {
       display: block;
       margin: 0 0.382em 0.382em 0;
       a:link {
-        white-space: nowrap;
-        border: 1px solid $ui-color;
-        padding: 0.146em 0.382em;
-        border-radius: 0.146em;
+        border-color: $ui-color;
       }
       a:visited {
         border-color: $ui-color;
@@ -400,11 +396,21 @@ body > header {
       a:link:hover {
         background-color: $accent-mesh-color;
       }
-      .tag-size {
-        vertical-align: middle;
-        font-size: 75%;
-      }
     }
+  }
+}
+
+.tag {
+  font-family: $font-emph;
+
+  white-space: nowrap;
+  border: 1px solid $ui-color;
+  padding: 0.146em 0.382em;
+  border-radius: 0.146em;
+
+  .tag-size {
+    vertical-align: middle;
+    font-size: 75%;
   }
 }
 

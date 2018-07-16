@@ -7,7 +7,7 @@
     <ul>
       {% for tag-name in page.tags %}
         {% assign tag-size = site.tags | map: tag-name | first | size %}
-        <li><a href="/tags/{{ tag-name | slugify }}.html">
+        <li><a href="/tags/{{ tag-name | slugify }}.html" class="tag">
           {{ tag-name }}
           <span class="tag-size">{{ tag-size }}</span>
         </a></li>
