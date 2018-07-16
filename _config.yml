@@ -35,7 +35,7 @@ plugins:
   - jemoji
 
 jekyll-archives:
-  layout: archives
+  layout: archive
   enabled:
     - year
     - month
