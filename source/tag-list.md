@@ -5,7 +5,7 @@ title: Tag list
 
 {% assign page-lang = page.lang | default: site.lang %}
 {% assign translation = site.data.translations | where: 'langcode', page-lang | first %}
-{% assign routing-to-tags = site.jekyll-archives.permalinks.tag %}
+{% assign routing-to-tag-archive = site.jekyll-archives.permalinks.tag %}
 {% assign tags = site.tags | sort %}
 {% for tag-posts-pair in tags %}
   {% assign tag = tag-posts-pair | first %}
@@ -20,7 +20,7 @@ title: Tag list
       {% endfor %}
     </ul>
     {% if posts.size > 10 %}
-      <p><a href="{{ routing-to-tags | replace: ':name', tag }}">There</a> are all posts tagged with {{ tag }}.</p>
+      <p><a href="{{ routing-to-tag-archive | replace: ':name', tag }}">There</a> are all posts tagged with {{ tag }}.</p>
     {% endif %}
   </section>
 {% endfor %}

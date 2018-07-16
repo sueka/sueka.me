@@ -5,7 +5,7 @@ title: Archives list
 
 {% assign page-lang = page.lang | default: site.lang %}
 {% assign translation = site.data.translations | where: 'langcode', page-lang | first %}
-{% assign routing-to-year = site.jekyll-archives.permalinks.year %}
+{% assign routing-to-year-archive = site.jekyll-archives.permalinks.year %}
 {% assign years = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' | sort: 'name' | reverse %}
 {% for year in years %}
   <section id="year_{{ year.name }}">
@@ -18,7 +18,7 @@ title: Archives list
       {% endfor %}
     </ul>
     {% if posts.size > 10 %}
-      <p><a href="{{ routing-to-year | replace: ':year', year.name }}">There</a> are all posts of {{ year.name }}.</p>
+      <p><a href="{{ routing-to-year-archive | replace: ':year', year.name }}">There</a> are all posts of {{ year.name }}.</p>
     {% endif %}
   </section>
 {% endfor %}
