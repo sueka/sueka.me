@@ -387,15 +387,6 @@ body > header {
     li {
       display: block;
       margin: 0 0.382em 0.382em 0;
-      a:link {
-        border-color: $ui-color;
-      }
-      a:visited {
-        border-color: $ui-color;
-      }
-      a:link:hover {
-        background-color: $accent-mesh-color;
-      }
     }
   }
 }
@@ -412,6 +403,15 @@ body > header {
     vertical-align: middle;
     font-size: 75%;
   }
+}
+a.tag:link {
+  border-color: $ui-color;
+}
+a.tag:visited {
+  border-color: $ui-color;
+}
+a.tag:link:hover {
+  background-color: $accent-mesh-color;
 }
 
 main {
