@@ -16,13 +16,11 @@ toc: true
 # Teletype for Atom がインストールされてゐるかどうかを返すスクリプト
 #
 
-_LF="
-"
-_PACKAGES=$(apm list -bip | sed -n 's/@.*//p')
+LF='
+'
+PACKAGES=$(apm list -bip | sed -n 's/@.*//p')
 
-if [ ! -z "${_PACKAGES##*$'${_LF}teletype$_LF'*}" ]; then
+if [ ! -z "${PACKAGES##*${LF}teletype${LF}*}" ]; then
   exit 1
 fi
-
-exit 0
 ```
