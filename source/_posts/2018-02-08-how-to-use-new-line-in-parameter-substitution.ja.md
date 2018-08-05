@@ -11,10 +11,12 @@ toc: true
 ## 実例
 
 ``` sh
-#!/bin/sh -eu
+#!/bin/sh
 #
 # Teletype for Atom がインストールされてゐるかどうかを返すスクリプト
 #
+
+set -eu
 
 LF='
 '
