@@ -9,7 +9,7 @@ This website is my personal blog.
 
 ## Me
 
-I'm *{{ site.author }}*, an author of this website.
+I'm Sueka, a web application developer in Tokyo.
 
 ### Calendar
 
