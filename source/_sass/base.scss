@@ -238,11 +238,11 @@ html {
   scroll-behavior: smooth;
   background-color: $bg-color;
   color: $fg-color;
+  overflow-y: scroll;
 }
 
 body {
   box-sizing: border-box;
-  overflow-y: scroll;
 }
 
 pre {
