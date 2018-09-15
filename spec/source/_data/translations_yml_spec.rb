@@ -9,6 +9,7 @@ RSpec.describe 'sueka.me' do
       is_expected.to all match(
         'langcode'      => String,
         'name'          => String,
+        'home'          => String,
         'languages'     => String,
         'tags'          => String,
         'archives'      => String,
