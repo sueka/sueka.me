@@ -315,24 +315,6 @@ blockquote,
 }
 
 body > header {
-  display: flex;
-  > h1 {
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    > a {
-      display: flex;
-      padding: 0.618em;
-      > img {
-        width: 1.272em;
-        height: 1.272em;
-      }
-    }
-    > a:link:hover > img {
-      transform: rotate(180deg);
-    }
-  }
-
   > nav {
     overflow-x: auto;
     > ul {

@@ -1,5 +1,6 @@
 - langcode: 'en'
   name: 'English'
+  home: 'Home'
   languages: 'Languages'
   tags: 'Tags'
   archives: 'Archives'
@@ -10,6 +11,7 @@
 
 - langcode: 'ja'
   name: '日本語'
+  home: 'ホーム'
   languages: '他言語版'
   tags: 'タグ'
   archives: 'アーカイブ'
