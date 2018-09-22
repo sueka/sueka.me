@@ -584,6 +584,30 @@ dd > p {
 }
 
 //
+//  _|                    _|
+//  _|  _|      _|_|_|  _|_|_|_|    _|_|    _|    _|
+//  _|_|      _|    _|    _|      _|_|_|_|    _|_|
+//  _|  _|    _|    _|    _|      _|        _|    _|
+//  _|    _|    _|_|_|      _|_|    _|_|_|  _|    _|
+//
+//
+
+.katex {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
+  math > semantics > annotation,
+  math > semantics > annotation-xml {
+    -webkit-user-select: auto;
+       -moz-user-select: auto;
+        -ms-user-select: auto;
+            user-select: auto;
+  }
+}
+
+//
 //      _|_|_|_|_|                                    _|  _|
 //    _|          _|  _|_|_|  _|_|      _|_|      _|_|_|        _|_|_|
 //  _|    _|_|_|  _|  _|    _|    _|  _|_|_|_|  _|    _|  _|  _|    _|
