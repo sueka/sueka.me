@@ -599,10 +599,10 @@ dd > p {
           user-select: none;
 
   math > semantics > annotation[encoding="application/x-tex"] {
-    -webkit-user-select: auto;
-       -moz-user-select: auto;
-        -ms-user-select: auto;
-            user-select: auto;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
   }
 }
 
