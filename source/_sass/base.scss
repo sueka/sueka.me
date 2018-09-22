@@ -598,8 +598,7 @@ dd > p {
       -ms-user-select: none;
           user-select: none;
 
-  math > semantics > annotation,
-  math > semantics > annotation-xml {
+  math > semantics > annotation[encoding="application/x-tex"] {
     -webkit-user-select: auto;
        -moz-user-select: auto;
         -ms-user-select: auto;
