@@ -38,7 +38,7 @@ GEM
     faraday (0.15.0)
       multipart-post (>= 1.2, < 3)
     fast-stemmer (1.0.2)
-    ffi (1.9.23)
+    ffi (1.9.25)
     forwardable-extended (2.6.0)
     gemoji (3.0.0)
     gsl (2.1.0.3)
@@ -149,7 +149,7 @@ GEM
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.9.0)
     ruby_dep (1.5.0)
-    rubyzip (1.2.1)
+    rubyzip (1.2.2)
     safe_yaml (1.0.4)
     sass (3.5.6)
       sass-listen (~> 4.0.0)
@@ -178,6 +178,7 @@ PLATFORMS
 DEPENDENCIES
   capybara (~> 2.18, >= 2.18.0)
   classifier-reborn (~> 2.2, >= 2.2.0)
+  ffi (~> 1.9, >= 1.9.24)
   gsl (~> 2.1, >= 2.1.0.3)
   html-proofer (~> 3.7, >= 3.7.6)
   jekyll (~> 3.6, >= 3.6.2)
@@ -191,6 +192,7 @@ DEPENDENCIES
   rack-jekyll (~> 0.5.0)
   rspec (~> 3.7, >= 3.7.0)
   rubocop (~> 0.52.0)
+  rubyzip (~> 1.2, >= 1.2.2)
   selenium-webdriver (~> 3.8, >= 3.8.0)
 
 BUNDLED WITH

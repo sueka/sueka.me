@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'ffi',    '>= 1.9.24',  '~> 1.9'
 gem 'gsl',    '>= 2.1.0.3', '~> 2.1'
 gem 'jekyll', '>= 3.6.2',   '~> 3.6'
 
@@ -20,8 +21,9 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara',            '>= 2.18.0', '~> 2.18'
-  gem 'rack-jekyll',         '~> 0.5.0'
-  gem 'rspec',               '>= 3.7.0',  '~> 3.7'
-  gem 'selenium-webdriver',  '>= 3.8.0',  '~> 3.8'
+  gem 'capybara',           '>= 2.18.0',  '~> 2.18'
+  gem 'rack-jekyll',        '~> 0.5.0'
+  gem 'rspec',              '>= 3.7.0',   '~> 3.7'
+  gem 'rubyzip',            '>= 1.2.2',   '~> 1.2'
+  gem 'selenium-webdriver', '>= 3.8.0',   '~> 3.8'
 end
