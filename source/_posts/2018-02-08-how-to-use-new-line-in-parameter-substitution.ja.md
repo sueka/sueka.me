@@ -10,7 +10,7 @@ toc: true
 
 ## 実例
 
-``` sh
+{% highlight sh %}
 #!/bin/sh
 #
 # Teletype for Atom がインストールされてゐるかどうかを返すスクリプト
@@ -25,4 +25,4 @@ PACKAGES=$(apm list -bip | sed -n 's/@.*//p')
 if [ ! -z "${PACKAGES##*${LF}teletype${LF}*}" ]; then
   exit 1
 fi
-```
+{% endhighlight %}

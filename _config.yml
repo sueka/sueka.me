@@ -25,6 +25,9 @@ liquid:
   error_mode: strict
 
 markdown: kramdown
+kramdown:
+  input: markdown # does not render mathematical expressions
+
 sass:
   style: compressed
 
