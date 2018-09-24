@@ -670,9 +670,8 @@ dd > p {
     top: 0;
     overflow-y: auto;
 
-    @-moz-document url-prefix() {
-      display: table;
-      width: 333px;
-    }
+    /* No support except Google Chrome 46+: fill, fit-content, max-content or min-content height */
+    display: table;
+    width: 333px;
   }
 }
