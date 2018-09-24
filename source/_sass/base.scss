@@ -669,5 +669,10 @@ dd > p {
     position: sticky;
     top: 0;
     overflow-y: auto;
+
+    @-moz-document url-prefix() {
+      display: table;
+      width: 333px;
+    }
   }
 }
