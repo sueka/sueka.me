@@ -7,7 +7,7 @@ tags: scala type
 
 Scala でコンパイル時に検出できる non-nullable 型っぽいものを書いた。強制するのは難しかった。
 
-{% highlight scala %}
+``` scala
 object Main extends App {
   trait Xor[A, B]
 
@@ -25,4 +25,4 @@ object Main extends App {
   f('c') // type mismatch
   f(null) // ambiguous implicit values
 }
-{% endhighlight %}
+```

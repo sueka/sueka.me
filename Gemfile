@@ -10,6 +10,7 @@ group :jekyll_plugins do
   gem 'jekyll-coffeescript',  '>= 1.1.0', '~> 1.1'
   gem 'jekyll-gist',          '>= 1.5.0', '~> 1.5'
   gem 'jekyll-git_metadata',  '~> 0.2.0'
+  gem 'jekyll-katex',         '~> 0.1.4'
   gem 'jekyll-toc',           '~> 0.6.0'
   gem 'jemoji',               '~> 0.9.0'
 end
