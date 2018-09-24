@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.5.1'
+
 gem 'ffi',    '>= 1.9.24',  '~> 1.9'
 gem 'gsl',    '>= 2.1.0.3', '~> 2.1'
 gem 'jekyll', '>= 3.6.2',   '~> 3.6'

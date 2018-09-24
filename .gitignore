@@ -9,8 +9,5 @@ _site/
 .bundle
 vendor/
 
-# rbenv
-.ruby-version
-
 # Linux
 .directory
