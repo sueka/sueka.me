@@ -45,3 +45,7 @@ jekyll-archives:
     year: /:year/
     month: /:year/:month/
     tag: /tags/:name.html
+
+katex:
+  rendering_options:
+    strict: true
