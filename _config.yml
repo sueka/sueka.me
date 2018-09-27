@@ -32,6 +32,7 @@ sass:
 plugins:
   - jekyll-archives
   - jekyll-coffeescript
+  - jekyll-feed
   - jekyll-gist
   - jemoji
 
