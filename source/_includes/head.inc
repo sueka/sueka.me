@@ -22,3 +22,4 @@
   {% endfor %}
 {% endif %}
 <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml" />
+{% feed_meta %}
