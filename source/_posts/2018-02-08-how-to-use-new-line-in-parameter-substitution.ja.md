@@ -1,7 +1,6 @@
 ---
 layout: post
 title: パラメーター展開の中で改行を使ふ方法
-lang: ja
 tags: sh tips
 toc: true
 ---

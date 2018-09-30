@@ -12,10 +12,13 @@ RSpec.describe 'sueka.me' do
         'home'          => String,
         'languages'     => String,
         'tags'          => String,
+        'about'         => String,
         'archives'      => String,
         'contents'      => String,
         'recent-posts'  => String,
         'related-posts' => String,
+        'year-format'   => String,
+        'month-format'  => String,
         'date-format'   => String,
       )
     end

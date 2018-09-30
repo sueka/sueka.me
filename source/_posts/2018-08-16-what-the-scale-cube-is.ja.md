@@ -1,7 +1,6 @@
 ---
 layout: post
 title: スケールキューブとは何か
-lang: ja
 tags: memo microservice scale-cube
 use-katex: true
 ---

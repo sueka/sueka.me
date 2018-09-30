@@ -1,8 +1,6 @@
 ---
 layout: post
 title: Scala でクリップボードを使ふためのライブラリを書いた
-interlanguage-id: created-a-scala-library-to-use-the-clipboard
-lang: ja
 tags: scala io clipboard
 toc: true
 ---

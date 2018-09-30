@@ -1,36 +1,35 @@
 ---
 layout: page
 title: About
-interlanguage-id: about
 toc: true
 ---
 
-This website is my personal blog.
+このウェブサイトは私の個人的なブログです。
 
-## Me
+## 私
 
-I'm Sueka, a web application developer in Tokyo.
+Sueka と言ひます。東京でウェブアプリケーションを開発してゐます。
 
-### Calendar
+### カレンダー
 
-This is my Google Calendar.  I won't open the details of a schedule other participants are added to.
+Google カレンダーです。他の参加者が追加されてゐる予定の詳細は公開してゐません。
 
-- [HTML](//calendar.google.com/calendar/embed?src=uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com&hl=en)
+- [HTML](//calendar.google.com/calendar/embed?src=uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com&hl=ja)
 - [iCal](//calendar.google.com/calendar/ical/uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com/public/basic.ics)
 
-### Contacts
+### 連絡先
 
-Email address
+メールアドレス
 : <i>{{ site.email }}</i>
 
-PGP public key
+PGP 公開鍵
 : [0x{{ site.pgp_key_id }}]({{ site.pks_url }})
 
-#### List of accounts
+#### アカウントの一覧
 
 - [Twitter](//twitter.com/{{ site.twitter_username }})
 - [GitHub](//github.com/{{ site.github_username }})
-- [MDN](//developer.mozilla.org/en-US/profiles/sueka)
+- [MDN](//developer.mozilla.org/ja/profiles/sueka)
 - [Stack Overflow](//stackoverflow.com/users/8795737/h-sueka)
 - [pixiv](//www.pixiv.net/member.php?id=28203588)
-- [Hatena Bookmark](http://b.hatena.ne.jp/sueka/bookmark)
+- [はてなブックマーク](http://b.hatena.ne.jp/sueka/bookmark)
