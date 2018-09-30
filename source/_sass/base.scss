@@ -352,6 +352,8 @@ body > header {
 }
 
 .tags {
+  padding: 1px;
+  margin: -1px;
   overflow: hidden;
   &:lang(ja) {
     font-family: $font-emph;
@@ -408,7 +410,7 @@ section,
 main,
 .side-column,
 .main-column {
-  > aside, > nav,
+  > aside, > nav, > nav.tags,
   > header,
   > h1, > h2, > h3, > h4, > h5, > h6, > hr,
   > ul, > ol, > dl,
