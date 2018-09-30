@@ -1,6 +1,3 @@
----
----
-
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:transform version="1.0"
   xmlns:a="http://www.w3.org/2005/Atom"
@@ -16,8 +13,6 @@
         <title>
           <xsl:value-of select="a:feed/a:title/text()" />
         </title>
-        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/{{ site.katex_version }}/katex.min.css" as="style" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/{{ site.katex_version }}/katex.min.css" />
       </head>
       <body>
         <xsl:apply-templates />
@@ -34,26 +29,16 @@
   </xsl:template>
 
   <xsl:template match="a:entry">
+    <hr />
     <article>
       <xsl:apply-templates />
     </article>
   </xsl:template>
 
-  <xsl:template match="a:title" />
-
-  <xsl:template match="a:link[@rel='alternate'][@href][parent::*/a:title]">
+  <xsl:template match="a:title">
     <h1>
-      <a>
-        <xsl:attribute name="href">
-          <xsl:value-of select="@href" />
-        </xsl:attribute>
-        <xsl:value-of select="parent::*/a:title" />
-      </a>
+      <xsl:value-of select="text()" />
     </h1>
-  </xsl:template>
-
-  <xsl:template match="a:content[@type='html']">
-    <xsl:value-of select="./text()" disable-output-escaping="yes" />
   </xsl:template>
 
   <xsl:template match="a:category/@term|a:link/@href">
@@ -80,5 +65,4 @@
       <dd><xsl:apply-templates /></dd>
     </dl>
   </xsl:template>
-
 </xsl:transform>
