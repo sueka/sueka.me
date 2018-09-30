@@ -1,6 +1,6 @@
 ---
 layout: home
+pagination:
+  enabled: true
 title: sueka.me
 ---
-
-{% include recent-posts.inc %}

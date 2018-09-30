@@ -8,16 +8,8 @@
     {% include header.inc %}
     <main>
       <h1>{{ page.title }}</h1>
-      <div class="flexible-wrapper">
-        <div class="side-column">
-          {% include languages.inc %}
-          {% include toc.inc %}
-        </div>
-        <div class="main-column">
-          {{ content }}
-          {% include main-source.inc %}
-        </div>
-      </div>
+      {% include post-summaries.inc %}
+      {% include main-source.inc %}
     </main>
     {% include footer.inc %}
     {% include scripts.inc %}

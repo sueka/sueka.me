@@ -303,7 +303,7 @@ blockquote,
   margin-top: 1em;
   margin-bottom: 0.618em;
 
-  > section, > aside, > nav,
+  > aside, > nav,
   > h1, > h2, > h3, > h4, > h5, > h6, > hr,
   > blockquote,
   > .blockquote-like,
@@ -408,16 +408,18 @@ main {
   }
 }
 
+section,
 main,
 .side-column,
 .main-column {
-  > section, > aside, > nav,
+  > aside,
+  > nav, // override .tags
   > header,
   > h1, > h2, > h3, > h4, > h5, > h6, > hr,
   > ul, > ol, > dl,
   > p, > blockquote, > .blockquote-like {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
   }
 }
 
@@ -480,6 +482,25 @@ aside {
   font-family: $font-emph;
   margin-left: -4.236em;
   float: left;
+}
+
+.post-summary {
+  .tags {
+    > h3 {
+      display: none;
+    }
+  }
+}
+
+.pagination-nav {
+  text-align: center;
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    > li {
+      display: inline-block;
+    }
+  }
 }
 
 //
