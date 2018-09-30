@@ -58,11 +58,4 @@
       </dd>
     </dl>
   </xsl:template>
-
-  <xsl:template match="*">
-    <dl>
-      <dt><xsl:value-of select="local-name()" /></dt>
-      <dd><xsl:apply-templates /></dd>
-    </dl>
-  </xsl:template>
 </xsl:transform>
