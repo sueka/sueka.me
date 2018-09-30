@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'ffi',    '>= 1.9.24',  '~> 1.9'
 gem 'gsl',    '>= 2.1.0.3', '~> 2.1'
-gem 'jekyll', '>= 3.6.2',   '~> 3.6'
+gem 'jekyll', '>= 3.8.4',   '~> 3.8'
 
 group :jekyll_plugins do
   gem 'classifier-reborn',    '>= 2.2.0', '~> 2.2'
