@@ -352,10 +352,6 @@ body > header {
 }
 
 .tags {
-  padding-right: 0.382em;
-  padding-bottom: 0.382em;
-  margin-right: -0.382em;
-  margin-bottom: -0.382em;
   overflow: hidden;
   &:lang(ja) {
     font-family: $font-emph;
@@ -412,14 +408,13 @@ section,
 main,
 .side-column,
 .main-column {
-  > aside,
-  > nav, // override .tags
+  > aside, > nav,
   > header,
   > h1, > h2, > h3, > h4, > h5, > h6, > hr,
   > ul, > ol, > dl,
   > p, > blockquote, > .blockquote-like {
-    margin-left: 1rem !important;
-    margin-right: 1rem !important;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 
