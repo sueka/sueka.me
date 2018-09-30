@@ -14,6 +14,11 @@
       </header>
       {% include tags.inc object=post %}
       {{ post.excerpt }}
+      {% if post.excerpt != post.content %}
+        <p>
+          <a class="read-more" href="{{ post.url }}">{{ translation.read-more }}</a>
+        </p>
+      {% endif %}
     </section>
   {% endfor %}
   {% include pagination-nav.inc paginator=paginator %}

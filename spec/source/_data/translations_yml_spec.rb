@@ -17,6 +17,7 @@ RSpec.describe 'sueka.me' do
         'contents'      => String,
         'recent-posts'  => String,
         'related-posts' => String,
+        'read-more'     => String,
         'year-format'   => String,
         'month-format'  => String,
         'date-format'   => String,
