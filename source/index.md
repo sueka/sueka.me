@@ -1,6 +1,7 @@
 ---
 layout: home
+title: sueka.me
 pagination:
   enabled: true
-title: sueka.me
+use-katex: true
 ---
