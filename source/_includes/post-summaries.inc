@@ -10,7 +10,9 @@
             {{ post.title }}
           </a>
         </h2>
-        {% include post-meta.inc date=post.date %}
+        <div class="post-meta">
+          <time itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema | slice: 0, 10 }}">{{ post.date | date: translation.date-format }}</time>
+        </div>
       </header>
       {% include tags.inc object=post %}
       {{ post.excerpt }}
