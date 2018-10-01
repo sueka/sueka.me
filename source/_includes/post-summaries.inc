@@ -5,11 +5,11 @@
     {% assign post-lang = post.lang | default: site.lang %}
     <section class="post-summary" lang="{{ post-lang }}" itemscope="" itemtype="http://schema.org/Article">
       <header>
-        <h1>
+        <h2>
           <a href="{{ post.url }}">
             {{ post.title }}
           </a>
-        </h1>
+        </h2>
         {% include post-meta.inc date=post.date %}
       </header>
       {% include tags.inc object=post %}
