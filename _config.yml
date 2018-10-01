@@ -7,12 +7,14 @@ license_url: https://creativecommons.org/publicdomain/zero/1.0/
 katex_version: 0.9.0
 incremental_dom_version: 0.5.1
 
-author: Sueka
-email: suekaq@gmail.com
-pgp_key_id: D178285D
-pks_url: https://sks-keyservers.net/pks/lookup?op=get&search=0x5B60E6C7D178285D
-twitter_username: hsueka
-github_username: sueka
+author:
+  name: Sueka
+  email: suekaq@gmail.com
+  pgp_key:
+    id: D178285D
+    url: https://sks-keyservers.net/pks/lookup?op=get&search=0x5B60E6C7D178285D
+  twitter: hsueka
+  github: sueka
 
 source: source/
 lsi: true
