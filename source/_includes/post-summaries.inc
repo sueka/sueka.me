@@ -3,7 +3,7 @@
   {% assign translation = site.data.translations | where: 'langcode', lang | first %}
   {% for post in paginator.posts %}
     {% assign post-lang = post.lang | default: site.lang %}
-    <section class="post-summary" lang="{{ post-lang }}" itemscope="" itemtype="http://schema.org/Article">
+    <section class="post-summary" {% if post-lang != lang %} lang="{{ post-lang }}" {% endif %} itemscope="" itemtype="http://schema.org/Article">
       <header>
         <h2>
           <a href="{{ post.url }}">
