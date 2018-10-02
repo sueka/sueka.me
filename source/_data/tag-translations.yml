@@ -1,25 +1,25 @@
 - langcode: 'ja'
-  scala: Scala
-  io-type-constructor: IO （型コンストラクタ）
   clipboard: クリップボード
-  sh: sh
-  tips: tips
+  io-type-constructor: IO （型コンストラクタ）
   javascript: JavaScript
-  poem: ポエム
-  type: 型
   memo: メモ
   microservice: マイクロサービス
-  scale-cube: スケールキューブ
-
-- langcode: 'en'
+  poem: ポエム
   scala: Scala
-  io-type-constructor: IO (type constructor)
-  clipboard: clipboard
+  scale-cube: スケールキューブ
   sh: sh
   tips: tips
+  type: 型
+
+- langcode: 'en'
+  clipboard: clipboard
+  io-type-constructor: IO (type constructor)
   javascript: JavaScript
-  poem: poem
-  type: type
   memo: memo
   microservice: microservice
+  poem: poem
+  scala: Scala
   scale-cube: scale cube
+  sh: sh
+  tips: tips
+  type: type
