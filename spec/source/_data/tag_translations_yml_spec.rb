@@ -7,6 +7,7 @@ RSpec.describe 'sueka.me' do
 
     it do
       is_expected.to all match(
+        'langcode'            => String,
         'clipboard'           => String,
         'io-type-constructor' => String,
         'javascript'          => String,
