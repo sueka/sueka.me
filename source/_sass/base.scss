@@ -387,9 +387,9 @@ body > header {
 .tag {
   font-family: $font-emph;
 
-  white-space: nowrap;
+  display: inline-block;
   border: 1px solid $ui-color;
-  padding: 0.146em 0.382em;
+  padding: 0 0.382em;
   border-radius: 0.146em;
 
   .tag-size {
