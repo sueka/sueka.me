@@ -352,9 +352,11 @@ body > header {
 }
 
 .tags {
-  padding: 1px;
-  margin: -1px;
+  padding: 0.382em;
+  margin: -0.382em;
+
   overflow: hidden;
+
   &:lang(ja) {
     font-family: $font-emph;
   }
@@ -371,6 +373,14 @@ body > header {
       display: block;
       margin: 0 0.382em 0.382em 0;
     }
+  }
+
+  section > &,
+  main > &,
+  .side-column > &,
+  .main-column > & {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
