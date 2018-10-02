@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 {% assign lang = page.lang | default: site.lang %}
 {% assign translation = site.data.translations | where: 'langcode', lang | first %}
+{% assign tag-translation = site.data.tag-translations | where: 'langcode', lang | first %}
 {% case page.type %}
 {% when 'year' %}
   {% assign page-title = page.date | date: translation.year-format %}
 {% when 'month' %}
   {% assign page-title = page.date | date: translation.month-format %}
 {% when 'tag' %}
-  {% assign page-title = page.title %}
+  {% assign page-title = tag-translation[page.title] %}
 {% endcase %}
 <html lang="{{ lang }}">
   <head>

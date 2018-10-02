@@ -5,13 +5,14 @@ title: タグの一覧
 
 {% assign page-lang = page.lang | default: site.lang %}
 {% assign translation = site.data.translations | where: 'langcode', page-lang | first %}
+{% assign tag-translation = site.data.tag-translations | where: 'langcode', page-lang | first %}
 {% assign routing-to-tag-archive = site.jekyll-archives.permalinks.tag %}
 {% assign tags = site.tags | sort %}
 {% for tag-posts-pair in tags %}
   {% assign tag = tag-posts-pair | first %}
   {% assign posts = tag-posts-pair | last | sort: 'date' | reverse %}
   <section id="tag_{{ tag }}">
-    <h2>{{ tag }}</h2>
+    <h2>{{ tag-translation[tag] }}</h2>
     <ul>
       {% for post in posts limit: 10 %}
         {% assign post-lang = post.lang | default: site.lang %}

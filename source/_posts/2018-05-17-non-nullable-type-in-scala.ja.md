@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scala で non-nullable 型
-tags: Scala type
+tags: scala type
 ---
 
 Scala でコンパイル時に検出できる non-nullable 型っぽいものを書いた。強制するのは難しかった。
