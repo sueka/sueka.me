@@ -3,6 +3,7 @@ layout: post
 title: スケールキューブとは何か
 tags: memo microservice
 use-katex: true
+published: false
 ---
 
 スケールキューブといふスケーラビリティのモデルがある。ロードバランシングによるスケーリングは、このモデルでは、 X 軸のスケーリングと言ふ。マイクロサービスアーキテクチャは Y 軸のスケーリングの応用である。
