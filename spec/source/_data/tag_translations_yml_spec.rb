@@ -15,7 +15,6 @@ RSpec.describe 'sueka.me' do
         'microservice'        => String,
         'poem'                => String,
         'scala'               => String,
-        'scale-cube'          => String,
         'sh'                  => String,
         'tips'                => String,
         'type'                => String,
