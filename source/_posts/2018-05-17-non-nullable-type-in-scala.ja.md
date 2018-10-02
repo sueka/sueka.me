@@ -4,7 +4,7 @@ title: Scala で non-nullable 型
 tags: scala type
 ---
 
-Scala でコンパイル時に検出できる non-nullable 型っぽいものを書いた。強制するのは難しかった。
+Scala でコンパイル時に検出できる non-nullable 型っぽいものを書きました。強制するのは難しかったです。
 
 ``` scala
 object Main extends App {
