@@ -9,7 +9,6 @@
     <main>
       <h1>{{ page.title }}</h1>
       {% include post-summaries.inc %}
-      {% include main-source.inc %}
     </main>
     {% include footer.inc %}
     {% include scripts.inc %}

@@ -10,7 +10,6 @@ group :jekyll_plugins do
   gem 'jekyll-coffeescript',  '>= 1.1.0', '~> 1.1'
   gem 'jekyll-feed',          '~> 0.11.0'
   gem 'jekyll-gist',          '>= 1.5.0', '~> 1.5'
-  gem 'jekyll-git_metadata',  '~> 0.2.0'
   gem 'jekyll-katex',         '~> 0.2.1'
   gem 'jekyll-paginate-v2',   '>= 2.0.0', '~> 2.0'
   gem 'jekyll-toc',           '~> 0.6.0'

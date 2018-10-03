@@ -15,7 +15,6 @@
         </div>
         <div class="main-column">
           {{ content }}
-          {% include main-source.inc %}
         </div>
       </div>
     </main>

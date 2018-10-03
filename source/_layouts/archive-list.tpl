@@ -9,7 +9,6 @@
     <main>
       <h1>{{ page.title }}</h1>
       {{ content }}
-      {% include main-source.inc %}
     </main>
     {% include footer.inc %}
     {% include scripts.inc %}
