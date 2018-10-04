@@ -1,6 +1,7 @@
 ---
 layout: archive-list
 title: アーカイブ
+lang: ja
 ---
 
 {% assign translation = site.data.translations | where: 'langcode', site.lang | first %}

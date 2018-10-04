@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Scala でクリップボードを使ふためのライブラリを書いた
+lang: ja
 tags: scala io-type-constructor clipboard
 toc: true
 ---

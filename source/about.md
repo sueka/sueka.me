@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+lang: ja
 toc: true
 ---
 

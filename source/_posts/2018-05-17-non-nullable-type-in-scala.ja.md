@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Scala で non-nullable 型
+lang: ja
 tags: scala type
 ---
 

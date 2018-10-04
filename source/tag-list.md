@@ -1,6 +1,7 @@
 ---
 layout: archive-list
 title: タグの一覧
+lang: ja
 ---
 
 {% assign page-lang = page.lang | default: site.lang %}
