@@ -137,6 +137,13 @@ pre {
   }
 }
 
+.tag {
+  font-family: $font-emph;
+  &:lang(ja) {
+    font-family: $font-emph-ja;
+  }
+}
+
 body > header {
   > nav > ul > li > a {
     font-weight: 500;
@@ -385,8 +392,6 @@ body > header {
 }
 
 .tag {
-  font-family: $font-emph;
-
   display: inline-block;
   border: 1px solid $ui-color;
   padding: 0 0.382em;
