@@ -14,7 +14,7 @@
           <time itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema | slice: 0, 10 }}">{{ post.date | date: translation.date-format }}</time>
         </div>
       </header>
-      {% include tags.inc object=post %}
+      {% include tags.inc object=post lang=lang %}
       {{ post.excerpt }}
       {% if post.excerpt != post.content %}
         <p>
