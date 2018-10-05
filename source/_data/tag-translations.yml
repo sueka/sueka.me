@@ -1,4 +1,4 @@
-- langcode: 'ja'
+- langcode: ja
   clipboard: クリップボード
   io-type-constructor: IO （型コンストラクタ）
   javascript: JavaScript
@@ -10,7 +10,7 @@
   tips: tips
   type: 型
 
-- langcode: 'en'
+- langcode: en
   clipboard: clipboard
   io-type-constructor: IO (type constructor)
   javascript: JavaScript
