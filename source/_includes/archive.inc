@@ -1,6 +1,6 @@
 {% assign lang = include.lang | default: page.lang | default: site.lang %}
 {% assign translation = site.data.translations | where: 'langcode', lang | first %}
-{% assign page-posts = page.posts | sort: 'date' | reverse %}
+{% assign page-posts = include.posts | default: page.posts | sort: 'date' | reverse %}
 <ul>
   {% for post in page-posts %}
     {% assign post-lang = post.lang | default: site.lang %}
