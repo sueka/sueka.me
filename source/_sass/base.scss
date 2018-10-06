@@ -90,10 +90,12 @@ html {
   font-feature-settings: 'liga', 'palt';
 }
 
-[lang] {
-  font-family: $font-text;
-  &:lang(ja) {
-    font-family: $font-text-ja;
+a, time {
+  &[lang] {
+    font-family: $font-text;
+    &:lang(ja) {
+      font-family: $font-text-ja;
+    }
   }
 }
 
