@@ -81,39 +81,49 @@ $font-code-ja: CodeM, Ricty, 'Source Han Code JP', Myrica, 'IPAGothic', Menlo, '
 
 html {
   font: 18px $font-text;
-  font-feature-settings: 'liga', 'palt';
+  @media screen and (orientation: portrait) and (max-width: 1000px) {
+    font-size: unquote(calc(12px + 0.6vw));
+  }
+  @media screen and (orientation: landscape) and (max-height: 1000px) {
+    font-size: unquote(calc(12px + 0.6vh));
+  }
   &:lang(ja) {
     font-family: $font-text-ja;
   }
-  hyphens: auto;
+
+  font-feature-settings: 'liga', 'palt';
 }
+
+[lang] {
+  font-family: $font-text;
+  &:lang(ja) {
+    font-family: $font-text-ja;
+  }
+}
+
 p {
   font-family: $font-text;
   &:lang(ja) {
     font-family: $font-text-ja;
   }
 }
+
 h1, h2, h3, h4, h5, h6, th, dt, dt > b, strong {
   font-weight: 500;
-  &, a[lang], span[lang] {
-    font-family: $font-emph;
-    &:lang(ja) {
-      font-family: $font-emph-ja;
-    }
+  font-family: $font-emph;
+  &:lang(ja) {
+    font-family: $font-emph-ja;
   }
 }
+
 dt > dfn, dfn, em {
+  font-family: $font-emph;
   &:lang(ja) {
     font-style: normal;
     font-family: $font-emph-ja;
   }
 }
-a[lang], span[lang] {
-  font-family: $font-text;
-  &:lang(ja) {
-    font-family: $font-text-ja;
-  }
-}
+
 pre, code {
   font-family: $font-code;
   font-variant-ligatures: none;
@@ -121,6 +131,7 @@ pre, code {
     font-family: $font-code-ja;
     font-variant-ligatures: none;
   }
+
   hyphens: none;
 }
 
@@ -130,6 +141,7 @@ pre {
     font-size: 100%;
   }
 }
+
 :not(pre) > code {
   font-size: 78.6%;
   &:lang(ja) {
@@ -137,20 +149,18 @@ pre {
   }
 }
 
-.tag {
+.tags {
   font-family: $font-emph;
   &:lang(ja) {
     font-family: $font-emph-ja;
   }
 }
 
-body > header {
-  > nav > ul > li > a {
-    font-weight: 500;
-    font-family: $font-emph;
-    &:lang(ja) {
-      font-family: $font-emph-ja;
-    }
+body > header > nav > ul > li > a {
+  font-weight: 500;
+  font-family: $font-emph;
+  &:lang(ja) {
+    font-family: $font-emph-ja;
   }
 }
 
@@ -169,13 +179,18 @@ html {
     text-align: left;
     text-align: start;
   }
-  line-height: 1.618;
-}
-p {
-  &:lang(ja) {
+  @media screen and (max-width: 999.984375px) {
     text-align: left;
     text-align: start;
   }
+
+  line-height: 1.618;
+  hyphens: auto;
+}
+
+p:lang(ja) {
+  text-align: left;
+  text-align: start;
 }
 
 pre {
@@ -369,9 +384,6 @@ body > header {
 
   overflow: hidden;
 
-  &:lang(ja) {
-    font-family: $font-emph;
-  }
   h3 {
     margin-right: -0.382rem;
   }
@@ -650,25 +662,6 @@ dd > p {
 //  _|    _|_|_|_|    _|    _|    _|    _|_|_|    _|_|_|  _|    _|_|_|
 //    _|
 //      _|_|_|_|_|_|
-
-@media screen and (orientation: portrait) and (max-width: 1000px) {
-  html {
-    font-size: unquote(calc(12px + 0.6vw));
-  }
-}
-
-@media screen and (orientation: landscape) and (max-height: 1000px) {
-  html {
-    font-size: unquote(calc(12px + 0.6vh));
-  }
-}
-
-@media screen and (max-width: 999.984375px) {
-  html {
-    text-align: left;
-    text-align: start;
-  }
-}
 
 @media screen and (max-width: 1332.984375px) {
   .flexible-wrapper {
