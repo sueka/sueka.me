@@ -442,7 +442,8 @@ main,
   > header,
   > h1, > h2, > h3, > h4, > h5, > h6, > hr,
   > ul, > ol, > dl,
-  > p, > blockquote, > .blockquote-like {
+  > p, > blockquote, > .blockquote-like,
+  > .footnotes {
     margin-left: 1rem;
     margin-right: 1rem;
   }

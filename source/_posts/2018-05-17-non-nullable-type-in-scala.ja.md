@@ -5,7 +5,9 @@ lang: ja
 tags: scala type
 ---
 
-Scala でコンパイル時に検出できる non-nullable 型っぽいものを書きました。強制するのは難しかったです。
+Scala でコンパイル時に検出できる non-nullable 型っぽいものを書きました。強制するのは難しかったです。[^fn-1]
+
+[^fn-1]: Dotty では合併型 (union type) が導入されます。（[参考](http://dotty.epfl.ch/docs/reference/overview.html#safety)）
 
 ``` scala
 object Main extends App {
@@ -26,5 +28,3 @@ object Main extends App {
   f(null) // ambiguous implicit values
 }
 ```
-
-Dotty では合併型 (union type) が導入されます。（[参考](http://dotty.epfl.ch/docs/reference/overview.html#safety)）
