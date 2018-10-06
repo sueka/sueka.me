@@ -26,3 +26,5 @@ object Main extends App {
   f(null) // ambiguous implicit values
 }
 ```
+
+Dotty では合併型 (union type) が導入されます。（[参考](http://dotty.epfl.ch/docs/reference/overview.html#safety)）
