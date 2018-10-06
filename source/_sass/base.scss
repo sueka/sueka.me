@@ -147,6 +147,10 @@ pre {
   }
 }
 
+sup, sub {
+  font-size: 0.618em;
+}
+
 .pagination-nav,
 .tags {
   font-family: $font-emph;
@@ -319,6 +323,7 @@ ul, ol, dl {
   margin: 1em 0 0.618em;
 }
 .footnote {
+  display: inline-block; // Firefox bug?
   // FIXME:
   padding-top: 0.618em;
 }
