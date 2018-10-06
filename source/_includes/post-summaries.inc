@@ -15,7 +15,19 @@
         </div>
       </header>
       {% include tags.inc object=post lang=lang %}
-      {{ post.excerpt }}
+
+      {% assign href-fn = 'href="#fn:' | append: post.url | append: ':' %}
+      {% assign href-fnref = 'href="#fnref:' | append: post.url | append: ':' %}
+      {% assign id-fn = 'id="fn:' | append: post.url | append: ':' %}
+      {% assign id-fnref = 'id="fnref:' | append: post.url | append: ':' %}
+
+      {{ post.excerpt
+        | replace: 'href="#fn:', href-fn
+        | replace: 'href="#fnref:', href-fnref
+        | replace: 'id="fn:', id-fn
+        | replace: 'id="fnref:', id-fnref
+      }}
+
       {% if post.excerpt != post.content %}
         <p>
           <a class="read-more" {% if post-lang != lang %} lang="{{ lang }}" {% endif %} href="{{ post.url }}">{{ translation.read-more }}</a>
