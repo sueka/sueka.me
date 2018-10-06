@@ -11,14 +11,14 @@
           </a>
         </h2>
         <div class="post-meta">
-          <time itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema | slice: 0, 10 }}">{{ post.date | date: translation.date-format }}</time>
+          <time {% if post-lang != lang %} lang="{{ lang }}" {% endif %} itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema | slice: 0, 10 }}">{{ post.date | date: translation.date-format }}</time>
         </div>
       </header>
       {% include tags.inc object=post lang=lang %}
       {{ post.excerpt }}
       {% if post.excerpt != post.content %}
         <p>
-          <a class="read-more" href="{{ post.url }}">{{ translation.read-more }}</a>
+          <a class="read-more" {% if post-lang != lang %} lang="{{ lang }}" {% endif %} href="{{ post.url }}">{{ translation.read-more }}</a>
         </p>
       {% endif %}
     </section>
