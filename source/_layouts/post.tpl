@@ -9,9 +9,7 @@
     <main itemscope="" itemtype="http://schema.org/Article">
       <header>
         <h1>{{ page.title }}</h1>
-        <div class="post-meta">
-          <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema | slice: 0, 10 }}">{{ page.date | date: translation.date-format }}</time>
-        </div>
+        {% include post-meta.inc %}
       </header>
       <div class="flexible-wrapper">
         <div class="side-column">
