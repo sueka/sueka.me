@@ -4,7 +4,7 @@
   {% for post in paginator.posts %}
     <section class="post-summary" {% if post.lang != lang %} lang="{{ post.lang }}" {% endif %} itemscope="" itemtype="http://schema.org/Article">
       <header>
-        <h2>
+        <h2 itemprop="headline">
           <a href="{{ post.url }}">
             {{ post.title }}
           </a>

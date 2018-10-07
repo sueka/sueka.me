@@ -8,7 +8,7 @@
     {% include header.inc %}
     <main itemscope="" itemtype="http://schema.org/Article">
       <header>
-        <h1>{{ page.title }}</h1>
+        <h1 itemplop="headline">{{ page.title }}</h1>
         {% include post-meta.inc %}
       </header>
       <div class="flexible-wrapper">
