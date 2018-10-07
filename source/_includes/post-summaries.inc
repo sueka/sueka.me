@@ -12,19 +12,12 @@
         {% include post-meta.inc object=post %}
       </header>
       {% include tags.inc object=post lang=lang %}
-
-      {% assign href-fn = 'href="#fn:' | append: post.url | append: ':' %}
-      {% assign href-fnref = 'href="#fnref:' | append: post.url | append: ':' %}
-      {% assign id-fn = 'id="fn:' | append: post.url | append: ':' %}
-      {% assign id-fnref = 'id="fnref:' | append: post.url | append: ':' %}
-
+      {% assign href = 'href="#' | append: post.url | append: ':' %}
+      {% assign id = 'id="' | append: post.url | append: ':' %}
       {{ post.excerpt
-        | replace: 'href="#fn:', href-fn
-        | replace: 'href="#fnref:', href-fnref
-        | replace: 'id="fn:', id-fn
-        | replace: 'id="fnref:', id-fnref
+        | replace: 'href="#', href
+        | replace: 'id="', id
       }}
-
       {% if post.excerpt != post.content %}
         <p>
           <a class="read-more" {% if post.lang != lang %} lang="{{ lang }}" {% endif %} href="{{ post.url }}">{{ translation.read-more }}</a>
