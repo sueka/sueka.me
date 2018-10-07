@@ -5,7 +5,7 @@
     <ul>
       <li>
         {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path }}" class="previous">←</a>
+          <a href="{{ paginator.previous_page_path }}" rel="prev">←</a>
         {% else %}
           ←
         {% endif %}
@@ -27,7 +27,7 @@
       {% endfor %}
       <li>
         {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path }}" class="next">→</a>
+          <a href="{{ paginator.next_page_path }}" rel="next">→</a>
         {% else %}
           →
         {% endif %}
