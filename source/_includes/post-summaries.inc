@@ -1,8 +1,8 @@
 {% if paginator.posts.size > 0 %}
-  {% assign lang = include.lang | default: page.lang | default: site.lang %}
+  {% assign lang = include.lang | default: page.lang %}
   {% assign translation = site.data.translations | where: 'langcode', lang | first %}
   {% for post in paginator.posts %}
-    {% assign post-lang = post.lang | default: site.lang %}
+    {% assign post-lang = post.lang %}
     <section class="post-summary" {% if post-lang != lang %} lang="{{ post-lang }}" {% endif %} itemscope="" itemtype="http://schema.org/Article">
       <header>
         <h2>

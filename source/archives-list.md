@@ -4,7 +4,7 @@ title: アーカイブ
 lang: ja
 ---
 
-{% assign lang = page.lang | default: site.lang %}
+{% assign lang = page.lang %}
 {% assign translation = site.data.translations | where: 'langcode', lang | first %}
 {% assign routing-to-year-archive = site.jekyll-archives.permalinks.year %}
 {% assign years = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' | sort: 'name' | reverse %}

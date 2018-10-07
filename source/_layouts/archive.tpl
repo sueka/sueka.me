@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% assign lang = page.lang | default: site.lang %}
+{% assign lang = page.lang %}
 {% assign translation = site.data.translations | where: 'langcode', lang | first %}
 {% assign tag-translation = site.data.tag-translations | where: 'langcode', lang | first %}
 {% case page.type %}

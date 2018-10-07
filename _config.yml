@@ -16,6 +16,9 @@ author:
   twitter: hsueka
   github: sueka
 
+defaults:
+  - values:
+      lang: ja
 source: source/
 lsi: true
 

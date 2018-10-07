@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang }}">
+<html lang="{{ page.lang }}">
   <head>
     <title>{{ page.title }} - {{ site.title }}</title>
     {% include head.inc %}
