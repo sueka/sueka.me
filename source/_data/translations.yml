@@ -1,29 +1,29 @@
 - langcode: ja
   name: 日本語
-  home: ホーム
-  languages: 他言語版
-  tags: タグ
   about: About
   archives: アーカイブ
   contents: 目次
+  home: ホーム
+  languages: 他言語版
+  read-more: 続きを読む
   recent-posts: 最近の投稿
   related-posts: 関聯投稿
-  read-more: 続きを読む
+  tags: タグ
   year-format: '%Y年'
   month-format: '%Y年%-m月'
   date-format: '%Y年%-m月%-d日'
 
 - langcode: en
   name: English
-  home: Home
-  languages: Languages
-  tags: Tags
   about: About
   archives: Archives
   contents: Contents
+  home: Home
+  languages: Languages
+  read-more: Read more
   recent-posts: Recent posts
   related-posts: Related posts
-  read-more: Read more
+  tags: Tags
   year-format: '%Y'
   month-format: '%B %Y'
   date-format: '%b. %-d, %Y'
