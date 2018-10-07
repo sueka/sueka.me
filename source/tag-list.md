@@ -4,9 +4,8 @@ title: タグの一覧
 lang: ja
 ---
 
-{% assign lang = page.lang %}
-{% assign translation = site.data.translations | where: 'langcode', lang | first %}
-{% assign tag-translation = site.data.tag-translations | where: 'langcode', lang | first %}
+{% assign translation = site.data.translations | where: 'langcode', page.lang | first %}
+{% assign tag-translation = site.data.tag-translations | where: 'langcode', page.lang | first %}
 {% assign routing-to-tag-archive = site.jekyll-archives.permalinks.tag %}
 {% assign tags = site.tags | sort %}
 {% for tag-posts-pair in tags %}

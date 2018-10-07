@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-{% assign lang = page.lang %}
-{% assign translation = site.data.translations | where: 'langcode', lang | first %}
-{% assign tag-translation = site.data.tag-translations | where: 'langcode', lang | first %}
+{% assign translation = site.data.translations | where: 'langcode', page.lang | first %}
+{% assign tag-translation = site.data.tag-translations | where: 'langcode', page.lang | first %}
 {% case page.type %}
 {% when 'year' %}
   {% assign page-title = page.date | date: translation.year-format %}
@@ -10,7 +9,7 @@
 {% when 'tag' %}
   {% assign page-title = tag-translation[page.title] %}
 {% endcase %}
-<html lang="{{ lang }}">
+<html lang="{{ page.lang }}">
   <head>
     <title>{{ page-title }} - {{ site.title }}</title>
     {% include head.inc %}
