@@ -15,9 +15,8 @@
 {% if page.interlanguage-id %}
   {% assign objects = site.posts | concat: site.pages | where: 'interlanguage-id', page.interlanguage-id %}
   {% for object in objects %}
-    {% assign object-lang = object.lang %}
-    {% if object-lang != lang %}
-      <link rel="alternate" href="{{ object.url }}" hreflang="{{ object-lang }}" />
+    {% if object.lang != lang %}
+      <link rel="alternate" href="{{ object.url }}" hreflang="{{ object.lang }}" />
     {% endif %}
   {% endfor %}
 {% endif %}

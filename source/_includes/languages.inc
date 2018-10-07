@@ -6,10 +6,9 @@
     <h3>{{ translation.languages }}</h3>
     <ul>
       {% for object in objects %}
-        {% assign object-lang = object.lang %}
-        {% if object-lang != lang %}
-          {% assign translation = site.data.translations | where: 'langcode', object-lang | first %}
-          <li><a lang="{{ object-lang }}" title="{{ object.title }}" rel="alternate" href="{{ object.url }}" hreflang="{{ object-lang }}">{{ translation.name }}</a></li>
+        {% if object.lang != lang %}
+          {% assign translation = site.data.translations | where: 'langcode', object.lang | first %}
+          <li><a lang="{{ object.lang }}" title="{{ object.title }}" rel="alternate" href="{{ object.url }}" hreflang="{{ object.lang }}">{{ translation.name }}</a></li>
         {% endif %}
       {% endfor %}
     </ul>
