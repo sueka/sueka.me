@@ -15,5 +15,10 @@ lang: ja
       <a href="{{ routing-to-year-archive | replace: ':year', year.name }}">{{ year.name | append: '-01-01' | date: translation.year-format }}</a>
     </h2>
     {% include archive.inc posts=posts-limited %}
+    {% if posts.size > 10 %}
+      <p>
+        <a class="see-more" href="{{ routing-to-year-archive | replace: ':year', year.name }}">{{ translation.see-more }}</a>
+      </p>
+    {% endif %}
   </section>
 {% endfor %}

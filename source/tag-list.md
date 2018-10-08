@@ -17,5 +17,10 @@ lang: ja
     </h2>
     {% comment %} May specified "lang: en" in the post {% endcomment %}
     {% include archive.inc posts=posts-limited %}
+    {% if posts.size > 10 %}
+      <p>
+        <a class="see-more" href="{{ routing-to-tag-archive | replace: ':tag', tag }}">{{ translation.see-more }}</a>
+      </p>
+    {% endif %}
   </section>
 {% endfor %}
