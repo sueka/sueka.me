@@ -624,6 +624,143 @@ pre {
   overflow-wrap: break-word;
 }
 
+.highlighter-rouge {
+  margin: 0.618em 0;
+
+  pre.highlight {
+    margin: 0;
+    padding: 0.382rem 1rem;
+    white-space: pre;
+    overflow-x: auto;
+  }
+}
+
+figure.highlight {
+  margin: 0.618em 0;
+
+  > pre {
+    margin: 0;
+    padding: 0.382rem 1rem;
+    white-space: pre;
+    overflow-x: auto;
+  }
+}
+
+// blockquote,
+// .blockquote-like {
+//   .highlighter-rouge pre.highlight {
+//     padding-left: 0.618rem;
+//     padding-right: 0;
+//   }
+//
+//   figure.highlight > pre {
+//     padding-left: 0.618rem;
+//     padding-right: 0;
+//   }
+// }
+
+.highlight {
+
+  > pre > code {
+    @media screen and (min-width: 1000px) {
+      white-space: pre-wrap;
+    }
+  }
+
+  // w/ linenos
+  table {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    > tbody {
+      display: block;
+
+      > tr {
+        display: flex;
+
+        > td {
+          border: none;
+
+          > pre {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          &.gutter {
+            margin-left: 0.5em;
+            margin-right: 1em;
+            padding: 0;
+            text-align: right;
+          }
+
+          &.code {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+//    _|      _|
+//  _|_|_|_|  _|_|_|      _|_|    _|_|_|  _|_|      _|_|
+//    _|      _|    _|  _|_|_|_|  _|    _|    _|  _|_|_|_|
+//    _|      _|    _|  _|        _|    _|    _|  _|
+//      _|_|  _|    _|    _|_|_|  _|    _|    _|    _|_|_|
+//
+//
+
+.highlight {
+  background-color: #333;
+  color: darkgray;
+
+  table > tbody > tr > td.gutter {
+    color: darkgray;
+  }
+
+  // name
+  .n  { color: silver }
+  .nn { color: tomato } // namespace
+  .nd { color: tomato } // decorator
+  .nc { color: tomato } // class
+  .nb { color: #39c } // built in
+  .nt { color: #39c } // tag
+  .nv { color: tomato } // variable
+  .nx { color: deepskyblue } // other
+
+  // operator
+  .o  {}
+
+  // keyword
+  .k  { color: orchid }
+  .kt { color: khaki } // type
+  .kc { color: sandybrown } // constant
+  .kr { color: orchid } // reserved
+  .kd { color: orchid } // declaration
+  .k, .kr {
+    font-weight: 500;
+  }
+
+  // number
+  .mi { color: khaki } // integer
+  .mf { color: khaki } // float
+
+  // punctuation
+  .p {}
+
+  // comment
+  .c  { color: gray; font-style: italic }
+  .c1 { color: gray; font-style: italic } // single
+
+  // string
+  .s  { color: yellowgreen }
+  .s1 { color: yellowgreen } // single
+  .s2 { color: yellowgreen } // double
+  .sc { color: sandybrown } // character
+}
+
 //
 //    _|                            _|
 //  _|_|_|_|    _|_|    _|    _|  _|_|_|_|
