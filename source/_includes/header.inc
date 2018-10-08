@@ -5,7 +5,7 @@
 {% assign about-url = '/about.html' | relative_url %}
 {% assign tag-list-url = '/tag-list.html' | relative_url %}
 {% assign archives-list-url = '/archives-list.html' | relative_url %}
-<header>
+<header class="header">
   <nav>
     <ul>
       <li><a {% if page-url == home-url %} class="hover-like" {% endif %} href="{{ home-url }}">{{ translation.home }}</a></li>
