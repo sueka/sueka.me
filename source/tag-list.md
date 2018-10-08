@@ -12,12 +12,11 @@ lang: ja
   {% assign tag = tag-posts-pair | first %}
   {% assign posts = tag-posts-pair | last | sort: 'date' | reverse %}
   {% assign posts-limited = posts | limit: 10 %}
-  <section id="tag_{{ tag }}">
-    <h2>{{ tag-translation[tag] }}</h2>
+  <section>
+    <h2>
+      <a href="{{ routing-to-tag-archive | replace: ':name', tag }}">{{ tag-translation[tag] }}</a>
+    </h2>
     {% comment %} May specified "lang: en" in the post {% endcomment %}
     {% include archive.inc posts=posts-limited %}
-    {% if posts.size > 10 %}
-      <p><a href="{{ routing-to-tag-archive | replace: ':name', tag }}">There</a> are all posts tagged with {{ tag }}.</p>
-    {% endif %}
   </section>
 {% endfor %}

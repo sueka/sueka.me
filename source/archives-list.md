@@ -10,11 +10,10 @@ lang: ja
 {% for year in years %}
   {% assign posts = year.items %}
   {% assign posts-limited = posts | limit: 10 %}
-  <section id="year_{{ year.name }}">
-    <h2>{{ year.name | append: '-01-01' | date: translation.year-format }}</h2>
+  <section>
+    <h2>
+      <a href="{{ routing-to-year-archive | replace: ':year', year.name }}">{{ year.name | append: '-01-01' | date: translation.year-format }}</a>
+    </h2>
     {% include archive.inc posts=posts-limited %}
-    {% if posts.size > 10 %}
-      <p><a href="{{ routing-to-year-archive | replace: ':year', year.name }}">There</a> are all posts of {{ year.name }}.</p>
-    {% endif %}
   </section>
 {% endfor %}
