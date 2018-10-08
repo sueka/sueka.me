@@ -49,16 +49,27 @@ pagination:
   permalink: /pages/:num/
   title: :title
 
+autopages:
+  enabled: true
+  categories:
+    enabled: false
+  collections:
+    enabled: false
+  tags:
+    layouts:
+      - tag.tpl
+    title: :tag
+    permalink: /tags/:tag/
+    # permalink: /tags/:tag.html
+
 jekyll-archives:
   layout: archive
   enabled:
     - year
     - month
-    - tags
   permalinks:
     year: /:year/
     month: /:year/:month/
-    tag: /tags/:name.html
 
 katex:
   rendering_options:
