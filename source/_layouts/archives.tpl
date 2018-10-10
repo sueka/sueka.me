@@ -15,7 +15,7 @@
     {% include header.inc %}
     <main>
       <h1>{{ page-title }}</h1>
-      {% include archive.inc %}
+      {% include archives.inc %}
     </main>
     {% include footer.inc %}
     {% include scripts.inc %}
