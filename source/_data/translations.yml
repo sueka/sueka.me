@@ -8,8 +8,8 @@
   languages: 他言語版
   later: 未来
   next-and-previous-posts: 前後の投稿
-  no-posts-newer-than-this-post: この投稿より新しい投稿はありません。
-  no-posts-older-than-this-post: この投稿より古い投稿はありません。
+  no-newer-posts: 新しい投稿はありません。
+  no-older-posts: 古い投稿はありません。
   read-more: 続きを読む
   recent-posts: 最近の投稿
   related-posts: 関聯投稿
@@ -29,8 +29,8 @@
   languages: Languages
   later: Later
   next-and-previous-posts: Next and previous posts
-  no-posts-newer-than-this-post: No posts newer than this post.
-  no-posts-older-than-this-post: No posts older than this post.
+  no-newer-posts: No newer posts.
+  no-older-posts: No older posts.
   read-more: Read more
   recent-posts: Recent posts
   related-posts: Related posts
