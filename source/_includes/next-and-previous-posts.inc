@@ -4,7 +4,7 @@
   <h3>{{ translation.next-and-previous-posts }}</h3>
   <dl>
     {% if page.next %}
-      <dt>{{ translation.next }}</dt>
+      <dt>{{ translation.later }}</dt>
       <dd>
         <a {% if page.next.lang != lang %} lang="{{ page.next.lang }}" {% endif %} href="{{ page.next.url }}" rel="next">
           {{ page.next.title }}
@@ -12,7 +12,7 @@
       </dd>
     {% endif %}
     {% if page.previous %}
-      <dt>{{ translation.previous }}</dt>
+      <dt>{{ translation.earlier }}</dt>
       <dd>
         <a {% if page.previous.lang != lang %} lang="{{ page.previous.lang }}" {% endif %} href="{{ page.previous.url }}" rel="prev">
           {{ page.previous.title }}

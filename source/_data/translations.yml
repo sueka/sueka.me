@@ -3,11 +3,11 @@
   about: About
   archives: アーカイブ
   contents: 目次
-  next: 後
+  earlier: 過去
   home: ホーム
   languages: 他言語版
+  later: 未来
   next-and-previous-posts: 前後の投稿
-  previous: 前
   read-more: 続きを読む
   recent-posts: 最近の投稿
   related-posts: 関聯投稿
@@ -22,11 +22,11 @@
   about: About
   archives: Archives
   contents: Contents
-  next: Next
+  earlier: Earlier
   home: Home
   languages: Languages
+  later: Later
   next-and-previous-posts: Next and previous posts
-  previous: Previous
   read-more: Read more
   recent-posts: Recent posts
   related-posts: Related posts
