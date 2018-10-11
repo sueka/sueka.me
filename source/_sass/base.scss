@@ -318,7 +318,7 @@ aside {
     &::after {
       display: block;
       content: '';
-      clear: right;
+      clear: both;
     }
   }
 }
