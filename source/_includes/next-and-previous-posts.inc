@@ -11,7 +11,7 @@
         </a>
       {% else %}
         <p>
-          <i>{{ translation.no-posts-newer-than-this }}</i>
+          <i>{{ translation.no-posts-newer-than-this-post }}</i>
         </p>
       {% endif %}
     </dd>
@@ -23,7 +23,7 @@
         </a>
       {% else %}
         <p>
-          <i>{{ translation.no-posts-older-than-this }}</i>
+          <i>{{ translation.no-posts-older-than-this-post }}</i>
         </p>
       {% endif %}
     </dd>
