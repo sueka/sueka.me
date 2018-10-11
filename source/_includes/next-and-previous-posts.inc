@@ -3,21 +3,21 @@
 <nav class="next-and-previous-posts">
   <h3>{{ translation.next-and-previous-posts }}</h3>
   <dl>
-    <dt>{{ translation.future }}</dt>
-    <dd title="{{ translation.future }}">
-      {% if page.next %}
+    {% if page.next %}
+      <dt>{{ translation.next }}</dt>
+      <dd>
         <a {% if page.next.lang != lang %} lang="{{ page.next.lang }}" {% endif %} href="{{ page.next.url }}" rel="next">
           {{ page.next.title }}
         </a>
-      {% endif %}
-    </dd>
-    <dt>{{ translation.past }}</dt>
-    <dd title="{{ translation.past }}">
-      {% if page.previous %}
+      </dd>
+    {% endif %}
+    {% if page.previous %}
+      <dt>{{ translation.previous }}</dt>
+      <dd>
         <a {% if page.previous.lang != lang %} lang="{{ page.previous.lang }}" {% endif %} href="{{ page.previous.url }}" rel="prev">
           {{ page.previous.title }}
         </a>
-      {% endif %}
-    </dd>
+      </dd>
+    {% endif %}
   </dl>
 </nav>

@@ -296,32 +296,6 @@ aside {
   }
 }
 
-/* nav */.next-and-previous-posts {
-  > dl {
-    > dt {
-      display: none;
-    }
-
-    > dd {
-      margin-left: 0;
-
-      &:nth-of-type(1) {
-        float: left;
-      }
-
-      &:nth-of-type(2) {
-        float: right;
-        margin-left: 1.618em;
-      }
-    }
-
-    &::after {
-      display: block;
-      content: '';
-      clear: both;
-    }
-  }
-}
 
 /* nav */.recent-posts {
   margin: 0 1em;
