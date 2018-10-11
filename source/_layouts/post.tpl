@@ -19,6 +19,7 @@
         </div>
         <div class="main-column">
           {{ content }}
+          {% include next-and-previous-posts.inc %}
         </div>
       </div>
       {% include related-posts.inc %}
