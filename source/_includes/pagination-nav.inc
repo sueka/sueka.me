@@ -2,14 +2,14 @@
 {% if paginator.total_pages != 1 %}
   {% assign routing-to-page = site.pagination.permalink %}
   <nav class="pagination-nav">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" rel="prev">
+        ←
+      </a>
+    {% else %}
+      ←
+    {% endif %}
     <ul>
-      <li>
-        {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path }}" rel="prev">←</a>
-        {% else %}
-          ←
-        {% endif %}
-      </li>
       {% for paginator_page_num in (1..paginator.total_pages) %}
         {% if paginator_page_num == 1 %}
           {% assign paginator_page_path = paginator.first_page_path %}
@@ -25,13 +25,13 @@
           {% endif %}
         </li>
       {% endfor %}
-      <li>
-        {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path }}" rel="next">→</a>
-        {% else %}
-          →
-        {% endif %}
-      </li>
     </ul>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" rel="next">
+        →
+      </a>
+    {% else %}
+      →
+    {% endif %}
   </nav>
 {% endif %}
