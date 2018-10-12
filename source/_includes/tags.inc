@@ -1,6 +1,6 @@
 {% assign object = include.object | default: page %}
 {% assign number-of-tags = object.tags | size %}
-{% if number-of-tags != 0 %}
+{% if number-of-tags > 0 %}
   {% assign lang = include.lang | default: object.lang %}
   {% assign translation = site.data.translations | where: 'langcode', lang | first %}
   {% assign tag-translation = site.data.tag-translations | where: 'langcode', lang | first %}
