@@ -2,7 +2,6 @@
 layout: page
 title: About
 lang: ja
-toc: true
 ---
 
 ## 作者
