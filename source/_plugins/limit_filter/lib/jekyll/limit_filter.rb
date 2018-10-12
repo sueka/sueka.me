@@ -1,6 +1,11 @@
+require 'contracts'
+
 module SuekaDotMe
   module Jekyll
     module LimitFilter
+      include Contracts::Core
+
+      Contract Array, Integer => Array
       def limit(xs, size)
         xs.take size
       end
