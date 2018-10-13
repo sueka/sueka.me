@@ -7,7 +7,7 @@ module SuekaDotMe
 
       Contract Array, Integer => Array
       def limit(xs, size)
-        xs.take size
+        xs.take(size)
       end
     end
   end
