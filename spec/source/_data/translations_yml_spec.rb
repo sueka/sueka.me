@@ -2,33 +2,31 @@ require 'yaml'
 
 RSpec.describe 'sueka.me' do
   describe 'translation data' do
-    let(:translations) { YAML.load_file('source/_data/translations.yml') }
-    subject { translations }
+    subject { YAML.load_file('source/_data/translations.yml') }
 
-    it do
-      is_expected.to all match(
-        'langcode'                => String,
-        'name'                    => String,
-        'about'                   => String,
-        'archives'                => String,
-        'contents'                => String,
-        'earlier'                 => String,
-        'home'                    => String,
-        'languages'               => String,
-        'later'                   => String,
-        'next-and-previous-posts' => String,
-        'no-newer-posts'          => String,
-        'no-older-posts'          => String,
-        'read-more'               => String,
-        'recent-posts'            => String,
-        'related-posts'           => String,
-        'see-more'                => String,
-        'tags'                    => String,
-        'year-format'             => String,
-        'month-format'            => String,
-        'date-format'             => String,
-      )
-    end
+    TRANSLATION_KEYS = %w[
+      name
+      about
+      archives
+      contents
+      earlier
+      home
+      languages
+      later
+      next-and-previous-posts
+      no-newer-posts
+      no-older-posts
+      read-more
+      recent-posts
+      related-posts
+      see-more
+      tags
+      year-format
+      month-format
+      date-format
+    ]
+
+    it { is_expected.to all match(TRANSLATION_KEYS.append('langcode').map { |key| [key, String] }.to_h) }
     it { should include a_hash_including 'langcode' => 'en' }
     it { should include a_hash_including 'langcode' => 'ja' }
   end

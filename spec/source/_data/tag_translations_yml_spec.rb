@@ -2,24 +2,22 @@ require 'yaml'
 
 RSpec.describe 'sueka.me' do
   describe 'tag translation data' do
-    let(:translations) { YAML.load_file('source/_data/tag-translations.yml') }
-    subject { translations }
+    subject { YAML.load_file('source/_data/tag-translations.yml') }
 
-    it do
-      is_expected.to all match(
-        'langcode'            => String,
-        'clipboard'           => String,
-        'io-type-constructor' => String,
-        'javascript'          => String,
-        'memo'                => String,
-        'microservice'        => String,
-        'poem'                => String,
-        'scala'               => String,
-        'sh'                  => String,
-        'tips'                => String,
-        'type'                => String,
-      )
-    end
+    TAG_TRANSLATION_KEYS = %w[
+      clipboard
+      io-type-constructor
+      javascript
+      memo
+      microservice
+      poem
+      scala
+      sh
+      tips
+      type
+    ]
+
+    it { is_expected.to all match(TAG_TRANSLATION_KEYS.append('langcode').map { |key| [key, String] }.to_h) }
     it { should include a_hash_including 'langcode' => 'en' }
     it { should include a_hash_including 'langcode' => 'ja' }
   end
