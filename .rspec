@@ -1,3 +1,4 @@
 --format documentation
 --color
 --profile
+-I source/_plugins/
