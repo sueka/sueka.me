@@ -497,6 +497,10 @@ blockquote,
 
 ul, ol, dl {
   margin: 0.618em 0 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 ul, ol {

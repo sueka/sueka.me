@@ -15,10 +15,10 @@
         </div>
         <div class="main-column">
           {{ content }}
+          {% include recent-posts.inc %}
         </div>
       </div>
     </main>
-    {% include recent-posts.inc %}
     {% include footer.inc %}
     {% include scripts.inc %}
   </body>

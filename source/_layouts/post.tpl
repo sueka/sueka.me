@@ -20,9 +20,9 @@
         <div class="main-column">
           {{ content }}
           {% include next-and-previous-posts.inc %}
+          {% include related-posts.inc %}
         </div>
       </div>
-      {% include related-posts.inc %}
     </main>
     {% include footer.inc %}
     {% include scripts.inc %}
