@@ -8,7 +8,7 @@ module SuekaDotMe
 
       Contract ArrayOf[::Jekyll::Document], String, String => ArrayOf[::Jekyll::Document]
       def reject(xs, attr_name, replacement)
-        xs.reject { |x| x.data[attr_name] == replacement }
+        xs.reject { |x| (x.data[attr_name] || x.send(attr_name.to_sym)) == replacement }
       end
     end
   end

@@ -8,7 +8,7 @@ module SuekaDotMe
 
       Contract ArrayOf[::Jekyll::Document], String, String => ArrayOf[::Jekyll::Document]
       def select(xs, attr_name, replacement)
-        xs.select { |x| x.data[attr_name] == replacement }
+        xs.select { |x| (x.data[attr_name] || x.send(attr_name.to_sym)) == replacement }
       end
     end
   end
