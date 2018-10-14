@@ -1,7 +1,9 @@
 ---
 ---
 
-scrollIndicators = document.querySelectorAll '.scroll-indicator'
+array = (arrayLike) -> Array::slice.call arrayLike
+
+scrollIndicators = array document.querySelectorAll '.scroll-indicator'
 
 scrollIndicate = () ->
   scrollingElement = document.scrollingElement || document.documentElement
