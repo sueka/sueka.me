@@ -2,8 +2,10 @@
 #
 # Original Copyright (c) 2015-present Ben Balter and jekyll-feed contributors
 
-class JekyllFeed::Generator
-  private def feed_source_path
-    @feed_source_path ||= File.expand_path "feed.xml", __dir__
+module JekyllFeed
+  class Generator < Jekyll::Generator
+    private def feed_source_path
+      @feed_source_path ||= File.expand_path "feed.xml", __dir__
+    end
   end
 end
