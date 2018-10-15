@@ -26,7 +26,7 @@ RSpec.describe 'sueka.me' do
       date-format
     ].freeze
 
-    it { is_expected.to all match(TRANSLATION_KEYS.append('langcode').map { |key| [key, String] }.to_h) }
+    it { is_expected.to all match(['langcode', *TRANSLATION_KEYS].map { |key| [key, String] }.to_h) }
     it { should include a_hash_including 'langcode' => 'en' }
     it { should include a_hash_including 'langcode' => 'ja' }
   end
