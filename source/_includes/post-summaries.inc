@@ -12,11 +12,13 @@
         {% include post-meta.inc object=post %}
       </header>
       {% include tags.inc object=post lang=lang %}
-      {% assign href = 'href="#' | append: post.url | append: ':' %}
-      {% assign id = 'id="' | append: post.url | append: ':' %}
+      {% assign id_for_fn = post.url | append: ':\1' %}
+      {% assign href_for_fn = '#' | append: post.url | append: ':\1' %}
+      {% assign other_href = post.url | append: '#\1' %}
       {{ post.excerpt
-        | replace: 'href="#', href
-        | replace: 'id="', id
+        | regexp_replace: '(?<=id=")(fn(?:ref)?:(?:[^"]|\\")*)(?=")', id_for_fn
+        | regexp_replace: '(?<=href=")#(fn(?:ref)?:(?:[^"]|\\")*)(?=")', href_for_fn
+        | regexp_replace: '(?<=href=")#(?!(?:(?:[^"]|\\")*:)?fn(?:ref)?:)((?:[^"]|\\")*)(?=")', other_href
       }}
       {% if post.excerpt != post.content %}
         <p>
