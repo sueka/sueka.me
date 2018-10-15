@@ -2,6 +2,7 @@ require 'contracts'
 
 module SuekaDotMe
   module Jekyll
+    # :nodoc:
     module LimitFilter
       include Contracts::Core
 

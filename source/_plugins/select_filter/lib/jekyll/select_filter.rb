@@ -2,6 +2,7 @@ require 'contracts'
 
 module SuekaDotMe
   module Jekyll
+    # :nodoc:
     module SelectFilter
       include Contracts::Core
       include Contracts::Builtin

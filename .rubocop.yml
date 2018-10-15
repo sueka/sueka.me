@@ -1,5 +1,19 @@
+Layout/ExtraSpacing:
+  Exclude:
+    - Gemfile
+
+Lint/ParenthesesAsGroupedExpression:
+  Exclude:
+    - spec/*/**/*.rb
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/*/**/*.rb
+
 Metrics/LineLength:
   Max: 100
+  Exclude:
+    - spec/*/**/*.rb
 
 Style/FrozenStringLiteralComment:
   Enabled: false

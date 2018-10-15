@@ -15,7 +15,7 @@ RSpec.describe 'sueka.me' do
       sh
       tips
       type
-    ]
+    ].freeze
 
     it { is_expected.to all match(TAG_TRANSLATION_KEYS.append('langcode').map { |key| [key, String] }.to_h) }
     it { should include a_hash_including 'langcode' => 'en' }
