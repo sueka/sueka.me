@@ -382,12 +382,12 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 0.618em;
 }
 
-h1 { font-size: 196.6%; }
-h2 { font-size: 161.8%; }
-h3 { font-size: 134.8%; }
-h4 { font-size: 115.5%; }
-h5 { font-size: 103.9%; }
-h6 { font-size: 100.0%; }
+h1 { font-size: 161.8%; } // φ^(5/5)
+h2 { font-size: 147.0%; } // φ^(4/5)
+h3 { font-size: 133.5%; } // φ^(3/5)
+h4 { font-size: 121.2%; } // φ^(2/5)
+h5 { font-size: 110.1%; } // φ^(1/5)
+h6 { font-size: 100.0%; } // φ^(0/5)
 
 %strong {
   font-family: $font-emph;
