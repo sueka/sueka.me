@@ -5,7 +5,7 @@
 {% assign page-title = translation.posts-tagged-with-tag | replace: ':tag', tag-translation[page.title] %}
 <html lang="{{ page.lang }}">
   <head>
-    <title>{{ page-title }} - {{ site.title }}</title>
+    <title>{{ page-title | strip_html }} - {{ site.title }}</title>
     {% include head.inc %}
   </head>
   <body>
