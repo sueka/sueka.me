@@ -13,7 +13,7 @@ lang: ja
   {% assign posts-limited = posts | limit: 10 %}
   <section>
     <h2>
-      <a href="{{ routing-to-tag-archives | replace: ':tag', tag }}">{{ tag-translation[tag] }}</a>
+      <a href="{{ routing-to-tag-archives | replace: ':tag', tag }}" class="tag">{{ tag-translation[tag] }}</a>
     </h2>
     {% comment %} May specified "lang: en" in the post {% endcomment %}
     {% include archives.inc posts=posts-limited %}
