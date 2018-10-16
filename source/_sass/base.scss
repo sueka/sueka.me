@@ -1,3 +1,23 @@
+// magic number description
+//
+// φ := (1 + √5) / 2
+// round x := (roundHalfAwayFromZero (1000 * x)) / 1000
+// 0.146 = round φ⁻⁴
+// 0.236 = round φ⁻³
+// 0.382 = round φ⁻²
+// 0.618 = round φ⁻¹
+// 0.786 = round √φ⁻¹
+// 0.887 = round √√φ⁻¹
+// 1.101 = round ⁵√φ
+// 1.212 = round ⁵√φ²
+// 1.272 = round √φ
+// 1.335 = round ⁵√φ³
+// 1.470 = round ⁵√φ⁴
+// 1.618 = round φ
+// 2.618 = round φ²
+// 4.236 = round φ³
+// 4.854 = round φ³ + φ⁻¹
+
 //
 //                      _|            _|
 //  _|    _|  _|_|_|          _|_|_|  _|    _|_|_|    _|_|_|    _|_|_|
@@ -382,12 +402,12 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 0.618em;
 }
 
-h1 { font-size: 161.8%; } // φ^(5/5)
-h2 { font-size: 147.0%; } // φ^(4/5)
-h3 { font-size: 133.5%; } // φ^(3/5)
-h4 { font-size: 121.2%; } // φ^(2/5)
-h5 { font-size: 110.1%; } // φ^(1/5)
-h6 { font-size: 100.0%; } // φ^(0/5)
+h1 { font-size: 161.8%; }
+h2 { font-size: 147.0%; }
+h3 { font-size: 133.5%; }
+h4 { font-size: 121.2%; }
+h5 { font-size: 110.1%; }
+h6 { font-size: 100.0%; }
 
 %strong {
   font-family: $font-emph;
