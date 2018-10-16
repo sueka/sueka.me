@@ -10,6 +10,7 @@
   next-and-previous-posts: 前後の投稿
   no-newer-posts: 新しい投稿はありません。
   no-older-posts: 古い投稿はありません。
+  posts-tagged-with-tag: <span class="tag">:tag</span> でタグ付けされた投稿
   read-more: 続きを読む
   recent-posts: 最近の投稿
   related-posts: 関聯投稿
@@ -31,6 +32,7 @@
   next-and-previous-posts: Next and previous posts
   no-newer-posts: No newer posts.
   no-older-posts: No older posts.
+  posts-tagged-with-tag: Posts tagged with <span class="tag">:tag</span>
   read-more: Read more
   recent-posts: Recent posts
   related-posts: Related posts
