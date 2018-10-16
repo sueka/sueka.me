@@ -9,11 +9,14 @@
 // 0.786 = round √φ⁻¹
 // 0.887 = round √√φ⁻¹
 // 1.101 = round ⁵√φ
+// 1.127 = round √√φ
 // 1.212 = round ⁵√φ²
 // 1.272 = round √φ
 // 1.335 = round ⁵√φ³
+// 1.434 = round √√φ³
 // 1.470 = round ⁵√φ⁴
 // 1.618 = round φ
+// 1.824 = round √√φ⁵
 // 2.618 = round φ²
 // 4.236 = round φ³
 // 4.854 = round φ³ + φ⁻¹
@@ -402,11 +405,11 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 0.618em;
 }
 
-h1 { font-size: 161.8%; }
-h2 { font-size: 147.0%; }
-h3 { font-size: 133.5%; }
-h4 { font-size: 121.2%; }
-h5 { font-size: 110.1%; }
+h1 { font-size: 182.4%; }
+h2 { font-size: 161.8%; }
+h3 { font-size: 143.4%; }
+h4 { font-size: 127.2%; }
+h5 { font-size: 112.7%; }
 h6 { font-size: 100.0%; }
 
 %strong {
