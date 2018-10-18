@@ -47,7 +47,7 @@ pagination:
   per_page: 10
   sort_reverse: true
   permalink: /pages/:num/
-  title: :title
+  title: ':title'
 
 autopages:
   enabled: true
@@ -58,7 +58,7 @@ autopages:
   tags:
     layouts:
       - tag.tpl
-    title: :tag
+    title: ':tag'
     permalink: /tags/:tag/
     # permalink: /tags/:tag.html
 
