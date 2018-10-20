@@ -9,7 +9,7 @@
     {% include head.inc %}
   </head>
   <body>
-    {% include header.inc %}
+    {% include header.inc hovered='tag-archives' %}
     <main>
       <h1>{{ page-title }}</h1>
       {% include post-summaries.inc %}

@@ -12,7 +12,7 @@
     {% include head.inc %}
   </head>
   <body>
-    {% include header.inc %}
+    {% include header.inc hovered='archives' %}
     <main>
       <h1>{{ page-title }}</h1>
       {% include archives.inc %}
