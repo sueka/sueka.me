@@ -6,10 +6,7 @@
   </head>
   <body>
     {% include header.inc hovered='home' %}
-    <main>
-      <h1>{{ page.title }}</h1>
-      {% include post-summaries.inc %}
-    </main>
+    {% include post-summaries.inc %}
     {% include footer.inc %}
     {% include scripts.inc %}
   </body>

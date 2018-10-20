@@ -6,10 +6,7 @@
   </head>
   <body>
     {% include header.inc %}
-    <main>
-      <h1>{{ page.title }}</h1>
-      {{ content }}
-    </main>
+    {{ content }}
     {% include footer.inc %}
     {% include scripts.inc %}
   </body>
