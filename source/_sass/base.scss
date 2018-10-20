@@ -173,17 +173,6 @@ body {
   }
 }
 
-.scroll-indicator {
-  position: fixed;
-  position: -webkit-sticky;
-  position:         sticky;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 0.382ex;
-  background-color: $accent-color;
-}
-
 .footer {
   margin: 1.618em 0.618em 0;
   border-top: 1px dashed $ui-color;
