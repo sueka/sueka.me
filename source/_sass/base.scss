@@ -344,7 +344,6 @@ aside {
 
   margin: -0.382em;
   padding: 0.382em;
-  overflow: hidden;
 
   h3 {
     margin-right: -0.382rem;
@@ -371,6 +370,7 @@ aside {
 
 .tag {
   display: inline-block;
+  box-sizing: border-box;
   border: 1px solid $ui-color;
   border-radius: 0.146em;
   padding: 0 0.382em;
