@@ -127,6 +127,7 @@ body {
 
   > nav {
     overflow-x: auto;
+    @extend %width-limited-container;
 
     > ul {
       margin-top: 0;
@@ -174,19 +175,20 @@ body {
 }
 
 .footer {
-  margin: 1.618em 0.618em 0;
+  @extend %width-limited-container;
+
+  margin-top: 1.618em;
   border-top: 1px dashed $ui-color;
-  padding: 0.618em 0.382em;
+  padding-bottom: 1px;
 
   > p {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 0.618em;
   }
 }
 
 main {
   // margin: 0 0.618em;
-  margin: 0;
+  @extend %width-limited-container;
 
   > h1,
   > header > h1 {
@@ -194,10 +196,24 @@ main {
   }
 }
 
+%width-limited-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1666px;
+}
+
+body {
+  > section,
+  > nav {
+    @extend %width-limited-container;
+  }
+}
+
 main,
 section,
 .side-column,
-.main-column {
+.main-column,
+.footer {
   > aside, > nav,
   > nav.tags,
   > header,
