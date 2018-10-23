@@ -145,7 +145,7 @@ body {
 
           display: block;
           height: 1.272em;
-          padding: 0.618em 1em;
+          padding: 0.618em 1rem;
           line-height: 1.272em;
         }
       }
@@ -210,10 +210,10 @@ body {
 }
 
 main,
-section,
 .side-column,
 .main-column,
 .footer {
+  > section,
   > aside, > nav,
   > nav.tags,
   > header,
@@ -362,10 +362,7 @@ aside {
     }
   }
 
-  main > &,
-  section > &,
-  .side-column > &,
-  .main-column > & {
+  .side-column > & {
     padding-left: 0;
     padding-right: 0;
   }

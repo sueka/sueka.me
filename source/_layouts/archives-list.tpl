@@ -6,7 +6,9 @@
   </head>
   <body>
     {% include header.inc %}
-    {{ content }}
+    <main>
+      {{ content }}
+    </main>
     {% include footer.inc %}
     {% include scripts.inc %}
   </body>
