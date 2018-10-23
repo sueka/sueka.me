@@ -658,22 +658,22 @@ pre {
 }
 
 .highlighter-rouge {
-  margin: 0.618em 0;
+  margin: 0.618em 1rem;
 
   pre.highlight {
     margin: 0;
-    padding: 0.382rem 1rem;
+    padding: 0.382em 1em;
     white-space: pre;
     overflow-x: auto;
   }
 }
 
 figure.highlight {
-  margin: 0.618em 0;
+  margin: 0.618em 1rem;
 
   > pre {
     margin: 0;
-    padding: 0.382rem 1rem;
+    padding: 0.382em 1em;
     white-space: pre;
     overflow-x: auto;
   }
@@ -746,39 +746,39 @@ figure.highlight {
 //
 
 .highlight {
-  background-color: #333;
-  color: darkgray;
+  background-color: $code-bg-color;
+  color: $code-fg-color;
 
   table > tbody > tr > td.gutter {
     color: darkgray;
   }
 
   // name
-  .n  { color: silver }
+  .n  { color: dodgerblue }
   .nn { color: tomato } // namespace
   .nd { color: tomato } // decorator
   .nc { color: tomato } // class
-  .nb { color: #39c } // built in
-  .nt { color: #39c } // tag
+  .nb { color: royalblue } // built in
+  .nt { color: royalblue } // tag
   .nv { color: tomato } // variable
-  .nx { color: deepskyblue } // other
+  .nx { color: royalblue } // other
 
   // operator
   .o  {}
 
   // keyword
-  .k  { color: orchid }
-  .kt { color: khaki } // type
-  .kc { color: sandybrown } // constant
-  .kr { color: orchid } // reserved
-  .kd { color: orchid } // declaration
+  .k  { color: mediumorchid }
+  .kt { color: goldenrod } // type
+  .kc { color: darkgoldenrod } // constant
+  .kr { color: mediumorchid } // reserved
+  .kd { color: mediumorchid } // declaration
   .k, .kr {
     font-weight: 500;
   }
 
   // number
-  .mi { color: khaki } // integer
-  .mf { color: khaki } // float
+  .mi { color: goldenrod } // integer
+  .mf { color: goldenrod } // float
 
   // punctuation
   .p {}
@@ -788,10 +788,10 @@ figure.highlight {
   .c1 { color: gray; font-style: italic } // single
 
   // string
-  .s  { color: yellowgreen }
-  .s1 { color: yellowgreen } // single
-  .s2 { color: yellowgreen } // double
-  .sc { color: sandybrown } // character
+  .s  { color: forestgreen }
+  .s1 { color: forestgreen } // single
+  .s2 { color: forestgreen } // double
+  .sc { color: darkgoldenrod } // character
 }
 
 //
