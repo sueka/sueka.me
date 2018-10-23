@@ -175,14 +175,16 @@ body {
 }
 
 .footer {
-  @extend %width-limited-container;
-
   margin-top: 1.618em;
   border-top: 1px dashed $ui-color;
   padding-bottom: 1px;
 
   > p {
+    @extend %width-limited-container;
+
+    box-sizing: border-box;
     margin-top: 0.618em;
+    padding: 0 1rem;
   }
 }
 
@@ -211,8 +213,7 @@ body {
 
 main,
 .side-column,
-.main-column,
-.footer {
+.main-column {
   > section,
   > aside, > nav,
   > nav.tags,
