@@ -657,15 +657,11 @@ pre {
   overflow-wrap: break-word;
 }
 
-.highlighter-rouge {
+.highlighter-rouge pre.highlight {
   margin: 0.618em 1rem;
-
-  pre.highlight {
-    margin: 0;
-    padding: 0.382em 1em;
-    white-space: pre;
-    overflow-x: auto;
-  }
+  padding: 0.382em 1em;
+  white-space: pre;
+  overflow-x: auto;
 }
 
 figure.highlight {
@@ -693,7 +689,6 @@ figure.highlight {
 // }
 
 .highlight {
-
   > pre > code {
     @media screen and (min-width: 1000px) {
       white-space: pre-wrap;
@@ -745,7 +740,7 @@ figure.highlight {
 //
 //
 
-.highlight {
+.highlighter-rouge pre.highlight {
   background-color: $code-bg-color;
   color: $code-fg-color;
 
