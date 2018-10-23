@@ -658,18 +658,18 @@ pre {
 }
 
 .highlighter-rouge pre.highlight {
-  margin: 0.618em 1rem;
-  padding: 0.382em 1em;
+  margin: 0.618em 0;
+  padding: 0.382rem 1rem;
   white-space: pre;
   overflow-x: auto;
 }
 
 figure.highlight {
-  margin: 0.618em 1rem;
+  margin: 0.618em 0;
 
   > pre {
     margin: 0;
-    padding: 0.382em 1em;
+    padding: 0.382rem 1rem;
     white-space: pre;
     overflow-x: auto;
   }
