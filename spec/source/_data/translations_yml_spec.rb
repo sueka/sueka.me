@@ -25,6 +25,8 @@ RSpec.describe 'sueka.me' do
       y-format
       ym-format
       ymd-format
+      md-format
+      d-format
     ].freeze
 
     it { is_expected.to all match(['langcode', *TRANSLATION_KEYS].map { |key| [key, String] }.to_h) }
