@@ -15,7 +15,7 @@ hovered: archives
     <h2>
       <a href="{{ routing-to-year-archives | replace: ':year', year.name }}">{{ year.name | append: '-01-01' | date: translation.y-format }}</a>
     </h2>
-    {% include archives.inc posts=posts-limited %}
+    {% include archives.inc posts=posts-limited date-format-key='md-format' %}
     {% if posts.size > 10 %}
       <p>
         <a class="see-more" href="{{ routing-to-year-archives | replace: ':year', year.name }}">{{ translation.see-more }}</a>

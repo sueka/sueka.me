@@ -63,10 +63,12 @@ autopages:
     # permalink: /tags/:tag.html
 
 jekyll-archives:
-  layout: archives
   enabled:
     - year
     - month
+  layouts:
+    year: year-archives
+    month: month-archives
   permalinks:
     year: /:year/
     month: /:year/:month/

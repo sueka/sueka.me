@@ -17,7 +17,7 @@ hovered: tag-archives
       <a href="{{ routing-to-tag-archives | replace: ':tag', tag }}">{{ tag-translation[tag] }}</a>
     </h2>
     {% comment %} May specified "lang: en" in the post {% endcomment %}
-    {% include archives.inc posts=posts-limited %}
+    {% include archives.inc posts=posts-limited date-format-key='ymd-format' %}
     {% if posts.size > 10 %}
       <p>
         <a class="see-more" href="{{ routing-to-tag-archives | replace: ':tag', tag }}">{{ translation.see-more }}</a>
