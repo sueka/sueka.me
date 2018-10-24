@@ -16,9 +16,9 @@
   related-posts: 関聯投稿
   see-more: 続きを見る
   tags: タグ
-  year-format: '%Y年'
-  month-format: '%Y年%-m月'
-  date-format: '%Y年%-m月%-d日'
+  y-format: '%Y年'
+  ym-format: '%Y年%-m月'
+  ymd-format: '%Y年%-m月%-d日'
 
 - langcode: en
   name: English
@@ -38,6 +38,6 @@
   related-posts: Related posts
   see-more: See more
   tags: Tags
-  year-format: '%Y'
-  month-format: '%B %Y'
-  date-format: '%b. %-d, %Y'
+  y-format: '%Y'
+  ym-format: '%B %Y'
+  ymd-format: '%b. %-d, %Y'

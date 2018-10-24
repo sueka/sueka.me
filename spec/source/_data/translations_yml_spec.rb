@@ -22,9 +22,9 @@ RSpec.describe 'sueka.me' do
       related-posts
       see-more
       tags
-      year-format
-      month-format
-      date-format
+      y-format
+      ym-format
+      ymd-format
     ].freeze
 
     it { is_expected.to all match(['langcode', *TRANSLATION_KEYS].map { |key| [key, String] }.to_h) }

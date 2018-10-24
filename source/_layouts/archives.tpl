@@ -2,9 +2,9 @@
 {% assign translation = site.data.translations | where: 'langcode', page.lang | first %}
 {% case page.type %}
 {% when 'year' %}
-  {% assign page-title = page.date | date: translation.year-format %}
+  {% assign page-title = page.date | date: translation.y-format %}
 {% when 'month' %}
-  {% assign page-title = page.date | date: translation.month-format %}
+  {% assign page-title = page.date | date: translation.ym-format %}
 {% endcase %}
 <html lang="{{ page.lang }}">
   <head>

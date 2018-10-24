@@ -6,7 +6,7 @@
     <h3>{{ translation.recent-posts }}</h3>
     <ul>
       {% for post in site-posts limit: 10 %}
-        <li><time datetime="{{ post.date | date_to_xmlschema | slice: 0, 10 }}">{{ post.date | date: translation.date-format }}</time> - <a {% if post.lang != lang %} lang="{{ post.lang }}" hreflang="{{ post.lang }}" {% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
+        <li><time datetime="{{ post.date | date_to_xmlschema | slice: 0, 10 }}">{{ post.date | date: translation.ymd-format }}</time> - <a {% if post.lang != lang %} lang="{{ post.lang }}" hreflang="{{ post.lang }}" {% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </ul>
   </nav>

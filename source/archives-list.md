@@ -13,7 +13,7 @@ hovered: archives
   {% assign posts-limited = posts | limit: 10 %}
   <section>
     <h2>
-      <a href="{{ routing-to-year-archives | replace: ':year', year.name }}">{{ year.name | append: '-01-01' | date: translation.year-format }}</a>
+      <a href="{{ routing-to-year-archives | replace: ':year', year.name }}">{{ year.name | append: '-01-01' | date: translation.y-format }}</a>
     </h2>
     {% include archives.inc posts=posts-limited %}
     {% if posts.size > 10 %}
