@@ -665,6 +665,7 @@ pre {
   @extend %followed-block;
 
   pre.highlight {
+    margin: 0;
     padding: 0.382em 1rem;
     white-space: pre;
     overflow-x: auto;
