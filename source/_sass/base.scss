@@ -521,12 +521,16 @@ blockquote,
   margin-bottom: 0;
 }
 
-ul, ol, dl {
+%followed-block {
   margin: 0.618em 0 1em;
 
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+ul, ol, dl {
+  @extend %followed-block;
 }
 
 ul, ol {
@@ -658,7 +662,8 @@ pre {
 }
 
 .highlighter-rouge pre.highlight {
-  margin: 0.618em 0;
+  @extend %followed-block;
+
   padding: 0.382em 1rem;
   white-space: pre;
   overflow-x: auto;
