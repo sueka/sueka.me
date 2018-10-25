@@ -177,7 +177,6 @@ body {
 .footer {
   margin-top: 1.618em;
   border-top: 1px dashed $ui-color;
-  padding-bottom: 1px;
 
   > p {
     @extend %width-limited-container;
