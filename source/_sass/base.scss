@@ -661,12 +661,14 @@ pre {
   overflow-wrap: break-word;
 }
 
-.highlighter-rouge pre.highlight {
+.highlighter-rouge {
   @extend %followed-block;
 
-  padding: 0.382em 1rem;
-  white-space: pre;
-  overflow-x: auto;
+  pre.highlight {
+    padding: 0.382em 1rem;
+    white-space: pre;
+    overflow-x: auto;
+  }
 }
 
 
