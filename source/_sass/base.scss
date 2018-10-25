@@ -669,16 +669,6 @@ pre {
   overflow-x: auto;
 }
 
-figure.highlight {
-  margin: 0.618em 0;
-
-  > pre {
-    margin: 0;
-    padding: 0.382em 1rem;
-    white-space: pre;
-    overflow-x: auto;
-  }
-}
 
 // blockquote,
 // .blockquote-like {
@@ -699,41 +689,6 @@ figure.highlight {
       white-space: pre-wrap;
     }
   }
-
-  // w/ linenos
-  table {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 0;
-
-    > tbody {
-      display: block;
-
-      > tr {
-        display: flex;
-
-        > td {
-          border: none;
-
-          > pre {
-            margin-top: 0;
-            margin-bottom: 0;
-          }
-
-          &.gutter {
-            margin-left: 0.5em;
-            margin-right: 1em;
-            padding: 0;
-            text-align: right;
-          }
-
-          &.code {
-            padding: 0;
-          }
-        }
-      }
-    }
-  }
 }
 
 //
@@ -748,10 +703,6 @@ figure.highlight {
 .highlighter-rouge pre.highlight {
   background-color: $code-bg-color;
   color: $code-fg-color;
-
-  table > tbody > tr > td.gutter {
-    color: darkgray;
-  }
 
   // name
   .n  { color: dodgerblue }
