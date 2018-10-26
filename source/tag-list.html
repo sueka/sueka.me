@@ -16,7 +16,6 @@ header-hovered: tag-archives
     <h2>
       <a href="{{ routing-to-tag-page | replace: ':tag', tag }}">{{ tag-translation[tag] }}</a>
     </h2>
-    {% comment %} May specified "lang: en" in the post {% endcomment %}
     {% include post-list.inc posts=posts-limited date-format-key='ymd-format' %}
     {% if posts.size > 10 %}
       <p>
