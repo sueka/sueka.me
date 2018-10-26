@@ -2,7 +2,7 @@
 layout: page
 title: About
 lang: ja
-hovered: about
+header-hovered: about
 ---
 
 ## 作者

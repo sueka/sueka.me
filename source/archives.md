@@ -2,7 +2,7 @@
 layout: archives-list
 title: アーカイブ
 lang: ja
-hovered: archives
+header-hovered: archives
 ---
 
 {% assign translation = site.data.translations | where: 'langcode', page.lang | first %}

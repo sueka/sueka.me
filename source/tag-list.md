@@ -2,7 +2,7 @@
 layout: archives-list
 title: タグの一覧
 lang: ja
-hovered: tag-archives
+header-hovered: tag-archives
 ---
 
 {% assign tag-translation = site.data.tag-translations | where: 'langcode', page.lang | first %}

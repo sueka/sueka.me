@@ -1,5 +1,5 @@
 {% assign lang = include.lang | default: page.lang %}
-{% assign hovered = include.hovered | default: page.hovered %}
+{% assign hovered = include.hovered | default: page.header-hovered %}
 {% assign translation = site.data.translations | where: 'langcode', lang | first %}
 {% assign page-url = page.url | replace: '/index.html', '/' %}
 {% assign home-url = '/' | relative_url %}
