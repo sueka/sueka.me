@@ -226,6 +226,10 @@ main,
   }
 }
 
+.main-column {
+  padding-top: 1px;
+}
+
 @media screen and (min-width: 1333px) {
   .flexible-wrapper {
     display: flex;
