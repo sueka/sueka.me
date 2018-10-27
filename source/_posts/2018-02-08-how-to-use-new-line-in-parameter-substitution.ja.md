@@ -21,7 +21,7 @@ LF='
 '
 PACKAGES=$(apm list -bip | sed -n 's/@.*//p')
 
-if [ ! -z "${PACKAGES##*${LF}teletype${LF}*}" ]; then
+if [ -n "${PACKAGES##*${LF}teletype${LF}*}" ]; then
   exit 1
 fi
 ```
