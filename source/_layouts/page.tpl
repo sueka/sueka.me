@@ -9,13 +9,14 @@
     <main>
       <h1>{{ page.title }}</h1>
       <div class="flexible-wrapper">
-        <div class="side-column">
-          {% include languages.inc %}
-          {% include toc.inc %}
-        </div>
+        {% if page.interlanguage-id or page.toc %}
+          <div class="side-column">
+            {% include languages.inc %}
+            {% include toc.inc %}
+          </div>
+        {% endif %}
         <div class="main-column">
           {{ content }}
-          {% include recent-posts.inc %}
         </div>
       </div>
     </main>

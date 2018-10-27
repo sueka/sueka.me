@@ -32,3 +32,5 @@ PGP 公開鍵
 - [Stack Overflow](//stackoverflow.com/users/8795737/h-sueka)
 - [pixiv](//www.pixiv.net/member.php?id=28203588)
 - [はてなブックマーク](http://b.hatena.ne.jp/sueka/bookmark)
+
+{% include recent-posts.inc %}
