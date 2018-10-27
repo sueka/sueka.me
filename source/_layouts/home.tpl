@@ -7,7 +7,7 @@
   <body>
     {% include header.inc hovered='home' %}
     <main>
-      {% include post-summaries.inc %}
+      {{ content }}
     </main>
     {% include footer.inc %}
     {% include scripts.inc %}
