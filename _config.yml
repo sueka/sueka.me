@@ -19,6 +19,7 @@ author:
 defaults:
   - values:
       lang: ja
+      h1: true
 source: source/
 lsi: true
 
