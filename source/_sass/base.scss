@@ -587,23 +587,6 @@ dl {
   }
 }
 
-.post-list {
-  display: table;
-  border-spacing: 0.618em 0;
-  margin-left: -0.618em;
-  margin-right: -0.618em;
-  padding-left: 0;
-
-  > li {
-    display: table-row;
-
-    > time {
-      display: table-cell;
-      white-space: nowrap;
-    }
-  }
-}
-
 .footnotes > ol {
   margin: 1em 0 0.618em;
 }
