@@ -291,8 +291,14 @@ aside {
   }
 }
 
-.post-meta {
-  margin: 0.618em 0 1em;
+/* nav */.post-meta > dl {
+  > dt {
+    display: none;
+  }
+
+  > dd {
+    margin-left: 0;
+  }
 }
 
 /* section */.post-summary {
@@ -528,6 +534,10 @@ blockquote,
 
 %followed-block {
   margin: 0.618em 0 1em;
+
+  &:first-child {
+    margin-top: 0;
+  }
 
   &:last-child {
     margin-bottom: 0;
