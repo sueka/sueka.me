@@ -306,6 +306,12 @@ aside {
 }
 
 /* section */.post-summary {
+  margin-top: 2.618em;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
   .tags {
     > h3 {
       display: none;
