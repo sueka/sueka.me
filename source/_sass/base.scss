@@ -355,7 +355,9 @@ aside {
   ul {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -0.382em -0.382em 0;
+    margin-top: 0;
+    margin-right: -0.382em;
+    margin-bottom: -0.382em !important; // prior to ul:last-child
     padding-left: 0;
     list-style: none;
 
