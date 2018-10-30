@@ -291,13 +291,17 @@ aside {
   }
 }
 
-/* nav */.post-meta > dl {
-  > dt {
-    display: none;
-  }
+/* nav */.post-meta {
+  margin: 0.618em 0 1em;
 
-  > dd {
-    margin-left: 0;
+  > dl {
+    > dt {
+      display: none;
+    }
+
+    > dd {
+      margin-left: 0;
+    }
   }
 }
 
