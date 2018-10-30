@@ -190,11 +190,6 @@ body {
 main {
   // margin: 0 0.618em;
   @extend %width-limited-container;
-
-  > h1,
-  > header > h1 {
-    padding-top: 0;
-  }
 }
 
 %width-limited-container {
@@ -307,10 +302,6 @@ aside {
 
 /* section */.post-summary {
   margin-top: 2.618em;
-
-  &:first-child {
-    margin-top: 0;
-  }
 
   .tags {
     > h3 {
