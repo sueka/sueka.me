@@ -300,6 +300,13 @@ aside {
   }
 }
 
+.post-date {
+  &::before {
+    display: inline;
+    content: '📆';
+  }
+}
+
 /* section */.post-summary {
   margin-top: 2.618em;
 
