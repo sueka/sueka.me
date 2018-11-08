@@ -7,11 +7,11 @@ header-hovered: about
 
 ## 作者
 
-Sueka と言ひます。東京でウェブアプリケーションを開発してゐます。<time datetime="2018-10">最近</time>の関心事はコンピューター・アーキテクチャと型理論です。
+Sueka と言います。東京でウェブアプリケーションを開発しています。<time datetime="2018-10">最近</time>の関心事はコンピューター・アーキテクチャと型理論です。
 
 ### カレンダー
 
-Google カレンダーです。他の参加者が追加されてゐる予定の詳細は公開してゐません。
+Google カレンダーです。他の参加者が追加されている予定の詳細は公開していません。
 
 - [HTML](//calendar.google.com/calendar/embed?src=uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com&hl=ja)
 - [iCal](//calendar.google.com/calendar/ical/uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com/public/basic.ics)

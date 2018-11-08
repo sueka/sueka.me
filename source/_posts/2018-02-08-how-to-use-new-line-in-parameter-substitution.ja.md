@@ -1,6 +1,6 @@
 ---
 layout: post
-title: パラメーター展開の中で改行を使ふ方法
+title: パラメーター展開の中で改行を使う方法
 lang: ja
 tags: sh tips
 ---
@@ -12,7 +12,7 @@ tags: sh tips
 ``` sh
 #!/bin/sh
 #
-# Teletype for Atom がインストールされてゐるかどうかを返すスクリプト
+# Teletype for Atom がインストールされているかどうかを返すスクリプト
 #
 
 set -eu
