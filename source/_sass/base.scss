@@ -256,9 +256,6 @@ main,
 }
 
 @media not screen and (min-width: 1333px) {
-  .flexible-wrapper {
-    max-width: 1000px;
-  }
 
   // NOTE: `:has` が十分にサポートされるまでのその場凌ぎ
   .side-column > nav:last-child {
