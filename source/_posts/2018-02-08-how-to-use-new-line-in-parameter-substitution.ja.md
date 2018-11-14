@@ -2,7 +2,7 @@
 layout: post
 title: パラメーター展開の中で改行を使う方法
 lang: ja
-tags: sh tips
+tags: sh tip
 ---
 
 改行を変数にするだけです。

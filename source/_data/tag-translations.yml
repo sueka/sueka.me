@@ -7,7 +7,7 @@
   poem: ポエム
   scala: Scala
   sh: sh
-  tips: tips
+  tip: tip
   type: 型
 
 - langcode: en
@@ -19,5 +19,5 @@
   poem: poem
   scala: Scala
   sh: sh
-  tips: tips
+  tip: tip
   type: type

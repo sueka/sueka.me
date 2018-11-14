@@ -13,7 +13,7 @@ RSpec.describe 'sueka.me' do
       poem
       scala
       sh
-      tips
+      tip
       type
     ].freeze
 
