@@ -28,7 +28,7 @@ anchorageAndIds.forEach ({ anchorage, id }) ->
       'class', 'header-anchor'
       'href', '#' + id
     ]
-    text '🔗'
+    text '#'
     elementClose 'a'
 
 window.addEventListener 'touchstart', (->), false
