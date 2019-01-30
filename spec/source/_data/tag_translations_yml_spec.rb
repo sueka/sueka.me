@@ -6,6 +6,7 @@ RSpec.describe 'sueka.me' do
 
     TAG_TRANSLATION_KEYS = %w[
       clipboard
+      git
       io-type-constructor
       javascript
       memo
