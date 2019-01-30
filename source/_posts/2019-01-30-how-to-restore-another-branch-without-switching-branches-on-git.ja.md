@@ -7,7 +7,7 @@ tags: memo git
 
 ``` sh
 git checkout $BRANCH -- `git diff --name-only --diff-filter=a $BRANCH`
-git rm `git diff --name-only --diff-filter=A $BRANCH`
+git rm -- `git diff --name-only --diff-filter=A $BRANCH`
 ```
 
 追加されたファイルは `git rm` し、その他のファイルは `git checkout` する。
