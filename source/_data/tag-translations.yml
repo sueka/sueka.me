@@ -1,5 +1,6 @@
 - langcode: ja
   clipboard: クリップボード
+  git: Git
   io-type-constructor: IO （型コンストラクタ）
   javascript: JavaScript
   memo: メモ
@@ -12,6 +13,7 @@
 
 - langcode: en
   clipboard: clipboard
+  git: Git
   io-type-constructor: IO (type constructor)
   javascript: JavaScript
   memo: memo
