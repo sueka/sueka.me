@@ -3,6 +3,7 @@ layout: post
 title: シェルスクリプトにおける複合条件
 lang: ja
 tags: sh memo
+excerpt_separator: <!-- excerpt separator -->
 ---
 
 シェルスクリプトの複合条件は、よく
@@ -14,6 +15,8 @@ fi
 ```
 
 のように書かれるが、 `test` ユーティリティの `-a`, `-o` プライマリは、 <abbr title="X/Open System Interfaces">XSI</abbr> の一部であり、 POSIX 互換ではない。
+
+<!-- excerpt separator -->
 
 そのため、 POSIX で動かなければならないときは
 
