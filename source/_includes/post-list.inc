@@ -15,6 +15,7 @@
         <dd>
           <a {% if post.lang != lang %} lang="{{ post.lang }}" hreflang="{{ post.lang }}" {% endif %} href="{{ post.url }}">{{ post.title }}</a>
         </dd>
+      </dl>
     </li>
   {% endfor %}
 </ul>
