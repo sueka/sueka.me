@@ -339,7 +339,7 @@ aside {
         margin-left: 0;
 
         &:nth-of-type(1) {
-          width: 7em;
+          word-break: keep-all;
         }
       }
     }
