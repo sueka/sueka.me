@@ -16,6 +16,7 @@ RSpec.describe 'sueka.me' do
       next-and-previous-posts
       no-newer-posts
       no-older-posts
+      post
       posted-on
       posts-tagged-with-tag
       read-more
