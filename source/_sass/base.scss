@@ -320,9 +320,9 @@ aside {
 /* ul */.post-list {
   display: table;
   padding-left: 0;
-  border-spacing: 1em 0;
-  margin-left: -1em;
-  margin-right: -1em;
+  border-spacing: 0.618em 0;
+  margin-left: -0.618em;
+  margin-right: -0.618em;
 
   > li {
     display: table-row-group;
