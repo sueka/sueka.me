@@ -324,6 +324,11 @@ aside {
   margin-left: -0.618em;
   margin-right: -0.618em;
 
+  main > & {
+    margin-left: calc(1rem + -0.618em);
+    margin-right: calc(1rem + -0.618em);
+  }
+
   > li {
     display: table-row-group;
 
