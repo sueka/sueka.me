@@ -5,6 +5,7 @@ interlanguage-id: created-a-scala-library-to-use-the-clipboard
 lang: en
 tags: scala io-type-constructor clipboard
 toc: true
+published: false
 ---
 
 I have created a Scala library to use the system clipboard.  It is available on GitHub at [sueka/clipboard](//github.com/sueka/clipboard).
