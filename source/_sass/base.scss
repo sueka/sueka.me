@@ -301,7 +301,7 @@ aside {
 }
 
 .post-date {
-  display: inline-table; // HACK: to remove an unexpected whitespace after ::before
+  display: table; // HACK: to remove an unexpected whitespace after ::before
 
   &::before {
     display: inline;
@@ -333,7 +333,7 @@ aside {
         margin-left: 0;
 
         &:first-of-type {
-          display: inline-table; // HACK: to remove an unexpected whitespace after ::before
+          display: table; // HACK: to remove an unexpected whitespace after ::before
           margin-top: 1em;
           opacity: 0.85;
           word-break: keep-all;
