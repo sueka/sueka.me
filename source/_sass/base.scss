@@ -301,9 +301,11 @@ aside {
 }
 
 .post-date {
+  display: inline-table; // HACK: to remove an unexpected whitespace after ::before
+
   &::before {
     display: inline;
-    content: '📆';
+    content: '🖋️';
   }
 }
 
@@ -318,33 +320,27 @@ aside {
 }
 
 /* ul */.post-list {
-  display: table;
+  list-style: none;
   padding-left: 0;
-  border-spacing: 0.618em 0;
-  margin-left: -0.618em;
-  margin-right: -0.618em;
-
-  main > & {
-    margin-left: calc(1rem + -0.618em);
-    margin-right: calc(1rem + -0.618em);
-  }
 
   > li {
-    display: table-row-group;
-
     > dl {
-      display: table-row;
-
       > dt {
         display: none;
       }
 
       > dd {
-        display: table-cell;
         margin-left: 0;
 
-        &:nth-of-type(1) {
+        &:first-of-type {
+          display: inline-table; // HACK: to remove an unexpected whitespace after ::before
+          margin-top: 1em;
+          opacity: 0.85;
           word-break: keep-all;
+
+          &::before {
+            content: '🖋️';
+          }
         }
       }
     }
