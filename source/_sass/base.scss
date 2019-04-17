@@ -337,7 +337,6 @@ aside {
         &:first-of-type {
           display: table; // HACK: to remove an unexpected whitespace after ::before
           margin-top: 1em;
-          opacity: 0.85;
           word-break: keep-all;
 
           &::before {
