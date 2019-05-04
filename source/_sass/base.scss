@@ -306,8 +306,7 @@ aside {
   display: inline-table; // HACK: to remove an unexpected whitespace after ::before
 
   &::before {
-    display: inline;
-    content: '🖋️';
+    content: '📆';
   }
 }
 
