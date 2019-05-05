@@ -81,12 +81,12 @@ $font-code-ja: CodeM, Ricty, 'Source Han Code JP', Myrica, 'IPAGothic', Menlo, '
 //
 
 html {
-  font: 18px $font-text;
+  font: 16px $font-text;
   @media screen and (orientation: portrait) and (max-width: 1000px) {
-    font-size: unquote(calc(12px + 0.6vw));
+    font-size: unquote(calc(12px + 0.4vw));
   }
   @media screen and (orientation: landscape) and (max-height: 1000px) {
-    font-size: unquote(calc(12px + 0.6vh));
+    font-size: unquote(calc(12px + 0.4vh));
   }
   text-align: justify;
   &:lang(ja) {
