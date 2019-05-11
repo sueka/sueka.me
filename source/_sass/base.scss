@@ -480,6 +480,7 @@ h1, h2, h3, h4, h5, h6 {
 hr {
   margin: 1.618em 0 1em;
   border: none;
+  border-top: solid $ui-color 1px;
 }
 
 // header-anchor
