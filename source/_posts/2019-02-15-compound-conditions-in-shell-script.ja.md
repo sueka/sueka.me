@@ -6,6 +6,20 @@ tags: sh memo
 excerpt_separator: <!-- excerpt separator -->
 ---
 
+## TL; DR
+
+複合条件の否定は
+
+``` sh
+if ! { [ -n "$foo" ] && [ -e "$file_path" ]; } then
+  echo no good
+fi
+```
+
+のように書くと良さそう。
+
+---
+
 シェルスクリプトの複合条件は、よく
 
 ``` sh
