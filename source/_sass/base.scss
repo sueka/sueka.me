@@ -161,7 +161,6 @@ body {
   }
 
   a:link, a:visited {
-    border-color: $bg-color;
     color: $bg-color;
 
     &.hover-like,
@@ -872,21 +871,17 @@ q {
 // link
 
 a {
-  border: dashed $link-color 0;
+  border: dashed currentColor 0;
   text-decoration: none;
 }
 
 a:link {
   color: $link-color;
-  // border-color: $link-color;
 }
 
-a:visited {
-  &,
-  > mark {
-    border-color: $visited-color;
-    color: $visited-color;
-  }
+a:visited,
+a:visited > mark {
+  color: $visited-color;
 }
 
 a:link:hover {
