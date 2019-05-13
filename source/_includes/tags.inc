@@ -7,11 +7,11 @@
 {% assign tag-translation = site.data.tag-translations | where: 'langcode', lang | first %}
 {% assign routing-to-tag-page = site.autopages.tags.permalink %}
 <nav class="tags">
-  <h3>{{ translation.tags }}</h3>
-  <ul>
+  <h3 class="tags-heading">{{ translation.tags }}</h3>
+  <ul class="tags-list">
     {% for tag-name in object.tags %}
       {% assign tag-size = site.tags | map: tag-name | first | size %}
-      <li><a href="{{ routing-to-tag-page | replace: ':tag', tag-name }}" class="tag">
+      <li class="tags-list-item"><a href="{{ routing-to-tag-page | replace: ':tag', tag-name }}" class="tag">
         {{ tag-translation[tag-name] }}
         <span class="tag-size">{{ tag-size }}</span>
       </a></li>

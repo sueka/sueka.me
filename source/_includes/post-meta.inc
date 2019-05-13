@@ -3,8 +3,8 @@
 {% assign object = include.object | default: page %}
 <nav class="post-meta">
   <dl>
-    <dt>{{ translation.posted-on }}</dt>
-    <dd class="post-date">
+    <dt class="post-meta-term">{{ translation.posted-on }}</dt>
+    <dd class="post-meta-details">
       <time {% if object.lang != lang %} lang="{{ lang }}" {% endif %} itemprop="datePublished" datetime="{{ object.date | date_to_xmlschema | slice: 0, 10 }}">{{ object.date | date: translation.ymd-format }}</time>
     </dd>
   </dl>

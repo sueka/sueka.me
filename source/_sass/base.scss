@@ -127,39 +127,6 @@ body {
   background-color: $accent-color;
   color: $bg-color;
 
-  > nav {
-    overflow-x: auto;
-    @extend %width-limited-container;
-
-    > ul {
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-left: 0;
-      list-style: none;
-      white-space: nowrap;
-
-      > li {
-        display: block;
-        float: left;
-
-        > a {
-          @extend %sans-serif;
-
-          display: block;
-          height: 1.272em;
-          padding: 0.618em 1rem;
-          line-height: 1.272em;
-        }
-      }
-
-      &::after {
-        display: block;
-        content: '';
-        clear: left;
-      }
-    }
-  }
-
   a:link, a:visited {
     color: $bg-color;
 
@@ -175,16 +142,60 @@ body {
   }
 }
 
+.header-nav {
+  overflow-x: auto;
+  @extend %width-limited-container;
+}
+
+%clear-fix-container {
+  &::after {
+    display: block;
+    content: '';
+    clear: left;
+  }
+}
+
+.header-nav-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  @extend %clear-fix-container;
+
+  .header-nav-list-item {
+    float: left;
+  }
+}
+
+.header-nav-list-item {
+  display: block;
+
+  > a {
+    @extend %sans-serif;
+
+    display: block;
+    height: 1.272em;
+    padding: 0.618em 1rem;
+    line-height: 1.272em;
+  }
+}
+
 .footer {
   margin-top: 1.618em;
   border-top: 0.0625em dashed $ui-color;
+}
 
-  > p {
-    @extend %width-limited-container;
+.footer-contents {
+  @extend %width-limited-container;
 
-    box-sizing: border-box;
-    margin-top: 0.618em;
-    padding: 0 1rem;
+  box-sizing: border-box;
+  margin-top: 0.618em;
+  margin-bottom: 0.618em;
+  padding: 0 1rem;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -289,16 +300,14 @@ aside {
 
 /* nav */.post-meta {
   margin: 0.618em 0 1em;
+}
 
-  > dl {
-    > dt {
-      display: none;
-    }
+.post-meta-term {
+  display: none;
+}
 
-    > dd {
-      margin-left: 0;
-    }
-  }
+.post-meta-details {
+  margin-left: 0;
 }
 
 .post-date {
@@ -312,10 +321,9 @@ aside {
 /* section */.post-summary {
   margin-top: 2.618em;
 
-  .tags {
-    > h3 {
-      display: none;
-    }
+  // NOTE: dependent on paths
+  .tags-heading {
+    display: none;
   }
 }
 
@@ -323,25 +331,25 @@ aside {
   list-style: none;
   padding-left: 0;
 
-  > li {
-    > dl {
-      > dt {
-        display: none;
-      }
+  .post-list-item {
+    display: list-item;
+  }
+}
 
-      > dd {
-        margin-left: 0;
+.post-list-item-term {
+  display: none;
+}
 
-        &:first-of-type {
-          display: inline-table; // HACK: to remove an unexpected whitespace after ::before
-          margin-top: 1em;
-          word-break: keep-all;
+.post-list-item-details {
+  margin-left: 0;
 
-          &::before {
-            content: '🖋️';
-          }
-        }
-      }
+  &:first-of-type {
+    display: inline-table; // HACK: to remove an unexpected whitespace after ::before
+    margin-top: 1em;
+    word-break: keep-all;
+
+    &::before {
+      content: '🖋️';
     }
   }
 }
@@ -357,18 +365,18 @@ aside {
   @extend %sans-serif;
 
   text-align: center;
+}
 
-  > ul {
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style-type: none;
+.pagination-nav-list {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
 
-    > li {
-      display: inline-block;
-    }
-  }
+.pagination-nav-list-item {
+  display: inline-block;
 }
 
 
@@ -391,29 +399,30 @@ aside {
   margin: -0.382em;
   padding: 0.382em;
 
-  h3 {
-    margin-right: -0.382rem;
-  }
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 0;
-    margin-right: -0.382em;
-    margin-bottom: -0.382em !important; // prior to ul:last-child
-    padding-left: 0;
-    list-style: none;
-
-    li {
-      display: block;
-      margin: 0 0.382em 0.382em 0;
-    }
-  }
-
+  // NOTE: dependent on paths
   .side-column > & {
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+.tags-heading {
+  margin-right: -0.382rem;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: -0.382em;
+  margin-bottom: -0.382em !important; // prior to ul:last-child
+  padding-left: 0;
+  list-style: none;
+}
+
+.tags-list-item {
+  display: block;
+  margin: 0 0.382em 0.382em 0;
 }
 
 .tag {

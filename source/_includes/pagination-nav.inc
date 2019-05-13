@@ -10,7 +10,7 @@
   {% else %}
     ←
   {% endif %}
-  <ul>
+  <ul class="pagination-nav-list">
     {% for paginator_page_num in (1..paginator.total_pages) %}
       {% if paginator_page_num == 1 %}
         {% assign paginator_page_path = paginator.first_page_path %}
@@ -18,7 +18,7 @@
         {% assign paginator_page_path = routing-to-page | replace: ':num', paginator_page_num %}
       {% endif %}
       {% assign paginator_page_index_path = paginator_page_path | append: 'index.html' %}
-      <li>
+      <li class="pagination-nav-list-item">
         {% if paginator_page_index_path != page.url %}
           <a href="{{ paginator_page_path }}">{{ paginator_page_num }}</a>
         {% else %}
