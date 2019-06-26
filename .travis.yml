@@ -2,8 +2,8 @@ sudo: false
 
 language: ruby
 rvm:
-  - 2.5.3
-  - 2.6.0
+  - 2.6.3
+  - 2.7.0-preview1
 
 branches:
   only:
@@ -34,7 +34,7 @@ deploy:
     find "$TRAVIS_BUILD_DIR/_site" -type d -exec chmod 701 {} \; &&
     rsync -qrpt --delete-after "$TRAVIS_BUILD_DIR/_site/" http@sueka.me:/opt/local/http/me/sueka/www/html
   on:
-    rvm: 2.5.3
+    rvm: 2.6.3
     branch: master
 
 addons:
