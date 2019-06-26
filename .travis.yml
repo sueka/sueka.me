@@ -3,7 +3,7 @@ sudo: false
 language: ruby
 rvm:
   - 2.6.3
-  - 2.7.0-preview1
+  # - 2.7.0-preview1
 
 branches:
   only:
@@ -43,7 +43,7 @@ addons:
       - libgsl0-dev
   ssh_known_hosts:
     - sueka.me
-    - 133.130.114.209
+    - 133.130.116.44
 
 notifications:
   email:
