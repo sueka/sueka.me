@@ -10,9 +10,6 @@ incremental_dom_version: 0.5.1
 author:
   name: Sueka
   email: suekaq@gmail.com
-  pgp_key:
-    id: D178285D
-    url: https://sks-keyservers.net/pks/lookup?op=get&search=0x5B60E6C7D178285D
   twitter: hsueka
   github: sueka
 
