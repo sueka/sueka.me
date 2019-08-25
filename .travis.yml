@@ -22,7 +22,7 @@ script:
   - bundle exec htmlproofer _site/ --disable-external --check-html --log-level :warn
 
 before_deploy:
-  - openssl aes-256-cbc -K "$encrypted_09ea18f0a444_key" -iv "$encrypted_09ea18f0a444_iv" -in .travis/id_rsa.enc -out /tmp/id_rsa -d
+  - openssl aes-256-cbc -K "$encrypted_ecea82995587_key" -iv "$encrypted_ecea82995587_iv" -in .travis/id_rsa.enc -out /tmp/id_rsa -d
   - eval "$(ssh-agent -s)"
   - chmod 600 /tmp/id_rsa
   - ssh-add /tmp/id_rsa
@@ -43,7 +43,7 @@ addons:
       - libgsl0-dev
   ssh_known_hosts:
     - sueka.me
-    - 133.130.116.44
+    - 150.95.157.107
 
 notifications:
   email:
