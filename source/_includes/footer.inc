@@ -6,7 +6,7 @@
     <p>
       {% case lang %}
       {% when 'ja' %}
-        <a href="/">{{ site.title }}</a> のソースコードは {{ license }} でライセンスされ、 GitHub 上のリポジトリ {{ repository }} で公開されています。
+        <a href="/">{{ site.title }}</a> のソースコードは {{ license }} でライセンスされ、 GitHub 上のリポジトリ {{ repository }} で公開されてゐます。
       {% else %}
         The source code of <a href="/">{{ site.title }}</a> is available on GitHub at {{ repository }} under the {{ license }}.
       {% endcase %}

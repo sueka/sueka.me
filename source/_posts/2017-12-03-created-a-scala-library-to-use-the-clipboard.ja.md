@@ -1,17 +1,16 @@
 ---
 layout: post
-title: Scala でクリップボードを使うためのライブラリを書いた
-interlanguage-id: created-a-scala-library-to-use-the-clipboard
+title: Scala でクリップボードを使ふためのライブラリを書いた
 lang: ja
 tags: scala io-type-constructor clipboard
 toc: true
 ---
 
-Scala でクリップボードを使うためのライブラリを書きました。 GitHub 上のリポジトリ [sueka/clipboard](//github.com/sueka/clipboard) で公開しています。
+Scala でクリップボードを使ふためのライブラリを書きました。 GitHub 上のリポジトリ [sueka/clipboard](//github.com/sueka/clipboard) で公開してゐます。
 
 ## 経緯
 
-`xsel`, `pbcopy`, `clip` といったシェル命令に差異があること、 Java などによる手続き的な方法には入出力による副作用があること、 Hackage の [Clipboard](//hackage.haskell.org/package/Clipboard) は文字列しか扱えないことなどから、 Java によるクリップボードアクセスを `scalaz.effect.IO` で安直に安全にしてみたものです。
+`xsel`, `pbcopy`, `clip` といったシェル命令に差異があること、 Java などによる手続き的な方法には入出力による副作用があること、 Hackage の [Clipboard](//hackage.haskell.org/package/Clipboard) は文字列しか扱へないことなどから、 Java によるクリップボードアクセスを `scalaz.effect.IO` で安直に安全にしてみたものです。
 
 ## 使用例
 
@@ -27,7 +26,7 @@ import scalaz.effect.IO.{ putLn, putStrLn, readLn }
 import me.sueka.clipboard.Clipboard
 ```
 
-クリップボードに格納されている文字列を出力するには
+クリップボードに格納されてゐる文字列を出力するには
 
 ``` scala
 val cbString = Clipboard.getClipboardString
@@ -38,23 +37,23 @@ val printCbStringLn = cbString map {
 printCbStringLn.unsafePerformIO
 ```
 
-のようにし、標準入力から読み込んだ文字列をクリップボードに格納するには
+のやうにし、標準入力から読み込んだ文字列をクリップボードに格納するには
 
 ``` scala
 val writeCb = readLn >>= Clipboard.setClipboardString
 writeCb.unsafePerformIO
 ```
 
-のようにします。
+のやうにします。
 
 ``` scala
 val reverseCb = Clipboard.modifyClipboardString(_.reverse)
 reverseCb.unsafePerformIO
 ```
 
-とすると、クリップボードに格納されている文字列を逆順にすることができます。
+とすると、クリップボードに格納されてゐる文字列を逆順にすることができます。
 
-クリップボードに画像が格納されている場合、
+クリップボードに画像が格納されてゐる場合、
 
 ``` scala
 implicit def OptionShow: Show[Option[_]] = showFromToString
@@ -64,7 +63,7 @@ val printCbImage = cbImage.map(_.toOption) >>= putLn[Option[_]]
 printCbImage.unsafePerformIO
 ```
 
-のようにすると `Option[java.awt.Image]` オブジェクトを `_.toString` したものを出力させることができます。
+のやうにすると `Option[java.awt.Image]` オブジェクトを `_.toString` したものを出力させることができます。
 
 ## 展望
 
