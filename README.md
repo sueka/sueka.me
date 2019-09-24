@@ -7,7 +7,7 @@ sueka.me
 
 ## Usage
 
-Running `bundle exec jekyll build` generates a `_site` directory.
+Running `bundle exec jekyll build` generates an `_site` directory.
 
 ### Deployment
 
