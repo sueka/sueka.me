@@ -16,10 +16,9 @@ install:
 cache: bundler
 
 script:
-  - bundle exec rspec --exclude-pattern spec/browser/**/*.rb
-  - bundle exec jekyll b
-  - bundle exec rspec --pattern spec/browser/**/*.rb
-  - bundle exec htmlproofer _site/ --disable-external --check-html --log-level :warn
+  - make source-check
+  - make
+  - make check
 
 before_deploy:
   - openssl aes-256-cbc -K "$encrypted_ecea82995587_key" -iv "$encrypted_ecea82995587_iv" -in .travis/id_rsa.enc -out /tmp/id_rsa -d
