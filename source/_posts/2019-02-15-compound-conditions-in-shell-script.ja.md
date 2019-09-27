@@ -28,7 +28,7 @@ if [ -n "$foo" -a -e "$file_path" ]; then
 fi
 ```
 
-のやうに書かれますが、 `test` ユーティリティの `-a`, `-o` プライマリは、 <abbr title="X/Open System Interfaces">XSI</abbr> の一部であって、 POSIX 互換ではありません。
+のやうに書かれますが、 `test` ユーティリティの `-a` 、 `-o` プライマリは、 <abbr title="X/Open System Interfaces">XSI</abbr> の一部であって、 POSIX 互換ではありません。
 
 <!-- excerpt separator -->
 
@@ -60,7 +60,7 @@ if ! [ -n "$foo" -a -e "$file_path" ]; then
 fi
 ```
 
-と書けさうですが、これでは `test` 以外のユーティリティ（ `grep`, `command`, `cmp` などが含まれます。）を複合条件に使ふことができなくてつらいです。 AND-OR リストを使ふ場合、
+と書けさうですが、これでは `test` 以外のユーティリティ（ `grep` 、 `command` 、 `cmp` などが含まれます。）を複合条件に使ふことができなくてつらいです。 AND-OR リストを使ふ場合、
 
 ``` sh
 if ! { [ -n "$foo" ] && [ -e "$file_path" ]; } then
