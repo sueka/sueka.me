@@ -29,6 +29,7 @@ serve : vendor/bundle
 prepare : vendor/bundle
 vendor/bundle : Gemfile Gemfile.lock
 	$(BUNDLE) install --path $@
+	touch $@
 
 clean :
 	rm -rf .sass-cache
