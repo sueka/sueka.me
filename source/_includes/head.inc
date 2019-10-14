@@ -4,6 +4,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <link rel="preload" href="{{ 'assets/stylesheets/main.css' | relative_url }}" as="style" />
 <link rel="stylesheet" href="{{ 'assets/stylesheets/main.css' | relative_url }}" />
+<link rel="preload" href="{{ 'assets/stylesheets/dark-mode.css' | relative_url }}" as="style" />
+<link rel="stylesheet" href="{{ 'assets/stylesheets/dark-mode.css' | relative_url }}" media="screen and (prefers-color-scheme: dark)" />
 {% for extra-stylesheet in page.extra-stylesheets %}
   <link rel="preload" href="{{ 'assets/stylesheets/' | append: extra-stylesheet | append: '.css' | relative_url }}" as="style" />
   <link rel="stylesheet" href="{{ 'assets/stylesheets/' | append: extra-stylesheet | append: '.css' | relative_url }}" />
