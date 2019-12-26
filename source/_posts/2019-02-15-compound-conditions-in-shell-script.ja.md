@@ -28,11 +28,7 @@ if [ -n "$foo" -a -e "$file_path" ]; then
 fi
 ```
 
-のやうに書かれますが、 `test` ユーティリティの `-a` 、 `-o` プライマリは、 <abbr title="X/Open System Interfaces">XSI</abbr> の一部であって、 POSIX 互換ではありません。
-
-<!-- excerpt separator -->
-
-そのため、 POSIX で動かなければならないときは
+のやうに書かれますが、 `test` ユーティリティの `-a` 、 `-o` プライマリは、 <abbr title="X/Open System Interfaces">XSI</abbr> の一部であって、 POSIX 互換ではない<!-- excerpt separator -->ので、 POSIX で動かすときは
 
 ``` sh
 if [ -n "$foo" ] && [ -e "$file_path" ]; then
@@ -40,9 +36,9 @@ if [ -n "$foo" ] && [ -e "$file_path" ]; then
 fi
 ```
 
-のやうに `&&` 演算子を使って書かれます。 `&&` や `||` は、被演算子にパイプラインを取り、 AND-OR リストを返す二項演算です。
+のやうに `&&` 演算子を使って書きます。 `&&` や `||` は、被演算子にパイプラインを取り、 AND-OR リストを返す二項演算です。
 
-こゝで、冒頭の条件が満たされないときにだけ何らかの処理をしたくなったとします。これは、 `:` ユーティリティを使って、
+こゝで、この複合条件が満たされないときにだけ何らかの処理をしたくなったとします。これは `:` ユーティリティを使って、
 
 ``` sh
 if [ -n "$foo" ] && [ -e "$file_path" ]; then
@@ -52,7 +48,7 @@ else
 fi
 ```
 
-と書くこともできますが、条件を反転させられゝばより読みやすくなります。 XSI があれば、
+と書くこともできますが、条件を反転させればより読みやすくなります。 XSI を使へば
 
 ``` sh
 if ! [ -n "$foo" -a -e "$file_path" ]; then
@@ -60,31 +56,31 @@ if ! [ -n "$foo" -a -e "$file_path" ]; then
 fi
 ```
 
-と書けさうですが、これでは `test` 以外のユーティリティ（ `grep` 、 `command` 、 `cmp` などが含まれます。）を複合条件に使ふことができなくてつらいです。 AND-OR リストを使ふ場合、
+と書けますが、これでは `test` 以外のユーティリティ（ `grep` 、 `command` 、 `cmp` などが含まれます。）を複合条件に使ふことができません。 AND-OR リストを使ふ場合、条件を
 
 ``` sh
-if ! { [ -n "$foo" ] && [ -e "$file_path" ]; } then
+if ! { [ -n "$foo" ] && [ -e "$file_path" ]; } then # w/ brace_group
   echo no good
 fi
 ```
 
-のやうに brace_group として書くか、 subshell で
+、
 
 ``` sh
-if ! ([ -n "$foo" ] && [ -e "$file_path" ]); then
+if ! ([ -n "$foo" ] && [ -e "$file_path" ]); then # w/ subshell
   echo no good
 fi
 ```
 
-と書くか、
+あるいは
 
 ``` sh
-if ! [ -n "$foo" ] || ! [ -e "$file_path" ]; then
+if ! [ -n "$foo" ] || ! [ -e "$file_path" ]; then # w/ De Morgan's laws
   echo no good
 fi
 ```
 
-と書き換へる（ド・モルガンの法則）か、が簡単な解法です。単独の `test` は
+とするのが簡単です。単一条件の否定は
 
 ``` sh
 if ! [ -n "$foo" ]; then
@@ -92,4 +88,6 @@ if ! [ -n "$foo" ]; then
 fi
 ```
 
-のやうに `exit` を潰さずに書きたいので、 brace_group を使っておくのがベターさうです。
+のやうに `exit` を潰さずに[^1]書きたいので、 brace_group を使っておくのが無難です。
+
+[^1]: `test` コマンドから `exit` すると if コマンドからも `exit` されるやうに
