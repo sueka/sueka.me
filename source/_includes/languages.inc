@@ -1,8 +1,11 @@
 {% if page.interlanguage-id %}
 
+{% assign objects = site.posts | concat: site.pages | sort: 'lang' | where: 'interlanguage-id', page.interlanguage-id %}
+
+{% if objects.size >= 2 %}
+
 {% assign lang = include.lang | default: page.lang %}
 {% assign translation = site.data.translations | where: 'langcode', lang | first %}
-{% assign objects = site.posts | concat: site.pages | sort: 'lang' | where: 'interlanguage-id', page.interlanguage-id %}
 <nav class="languages">
   <h3>{{ translation.languages }}</h3>
   <ul>
@@ -14,5 +17,7 @@
     {% endfor %}
   </ul>
 </nav>
+
+{% endif %}
 
 {% endif %}
