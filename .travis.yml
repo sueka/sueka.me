@@ -5,11 +5,6 @@ rvm:
   - 2.6.3
   # - 2.7.0-preview1
 
-branches:
-  only:
-    - master
-    - develop
-
 install:
   - gem install bundler
   - bundle install --deployment
