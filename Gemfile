@@ -28,7 +28,7 @@ group :test do
   gem 'rack',               '>= 1.6.12', '~> 1.6'
   gem 'rack-jekyll',                     '~> 0.5.0'
   gem 'rspec',              '>= 3.7.0',  '~> 3.7'
-  gem 'rubyzip',            '>= 1.2.2',  '~> 1.2'
+  gem 'rubyzip',            '~> 1.3'
   gem 'saharspec'
   gem 'selenium-webdriver', '>= 3.8.0',  '~> 3.8'
 end
