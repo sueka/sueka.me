@@ -15,7 +15,7 @@ Running `make` generates an `_site` directory.
 
 To deploy manually, upload the `_site` directory to your server by executing a command such as `scp -r _site/ http@203.0.113.0:/opt/local/http/me/sueka/www/html` or taking other ways.
 
-It is necessary to execute `usermod --shell /bin/bash http` in advance for logging in as `http`.
+Need to execute `usermod --shell /bin/bash http` in advance for logging in as `http`.
 
 ## License
 
