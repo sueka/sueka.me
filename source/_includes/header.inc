@@ -10,7 +10,7 @@
   <nav class="header-nav">
     <ul class="header-nav-list">
       <li class="header-nav-list-item">
-        <a 
+        <a
           {% if hovered == 'home' %} class="hover-like" {% endif %}
           href="{{ home-url }}"
         >
