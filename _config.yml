@@ -47,19 +47,6 @@ pagination:
   permalink: /pages/:num/
   title: ':title'
 
-autopages:
-  enabled: true
-  categories:
-    enabled: false
-  collections:
-    enabled: false
-  tags:
-    layouts:
-      - tag.tpl
-    title: ':tag'
-    permalink: /tags/:tag/
-    # permalink: /tags/:tag.html
-
 jekyll-archives:
   enabled:
     - year

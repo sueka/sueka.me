@@ -13,7 +13,6 @@
       </header>
       <div class="flexible-wrapper">
         <div class="side-column">
-          {% include tags.inc %}
           {% include languages.inc %}
           {% include toc.inc %}
         </div>

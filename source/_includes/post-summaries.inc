@@ -11,7 +11,6 @@
         </a>
       </h2>
       {% include post-meta.inc object=post %}
-      {% include tags.inc object=post lang=lang %}
     </header>
     {% assign id_for_fn = post.url | append: ':\1' %}
     {% assign href_for_fn = '#' | append: post.url | append: ':\1' %}

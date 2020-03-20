@@ -4,7 +4,6 @@
 {% assign page-url = page.url | replace: '/index.html', '/' %}
 {% assign home-url = '/' | relative_url %}
 {% assign about-url = '/about.html' | relative_url %}
-{% assign tag-list-url = '/tag-list.html' | relative_url %}
 {% assign archives-url = '/archives.html' | relative_url %}
 <header class="header">
   <nav class="header-nav">
@@ -23,14 +22,6 @@
           href="{{ about-url }}"
         >
           {{ translation.about }}
-        </a>
-      </li>
-      <li class="header-nav-list-item">
-        <a
-          {% if hovered == 'tag-archives' %} class="hover-like" {% endif %}
-          href="{{ tag-list-url }}"
-        >
-          {{ translation.tags }}
         </a>
       </li>
       <li class="header-nav-list-item">
