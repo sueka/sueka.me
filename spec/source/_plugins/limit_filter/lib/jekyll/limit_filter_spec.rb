@@ -1,6 +1,6 @@
 require 'saharspec/its'
 require 'saharspec/matchers'
-require 'rack/jekyll'
+require 'liquid'
 require 'limit_filter/lib/jekyll/limit_filter'
 
 RSpec.describe SuekaDotMe::Jekyll::LimitFilter do

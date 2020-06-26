@@ -1,7 +1,7 @@
 require 'capybara/rspec'
-require 'rack/jekyll'
+# require 'rack/jekyll'
 
-Capybara.app = Rack::Jekyll.new
+# Capybara.app = Rack::Jekyll.new
 
 RSpec.describe 'sueka.me' do
   describe 'home page' do

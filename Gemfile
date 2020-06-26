@@ -25,8 +25,7 @@ end
 
 group :test do
   gem 'capybara',           '>= 2.18.0', '~> 2.18'
-  gem 'rack',               '>= 1.6.12', '~> 1.6'
-  gem 'rack-jekyll',                     '~> 0.5.0'
+  gem 'liquid',             '>= 4.0.3',  '~> 4.0'
   gem 'rspec',              '>= 3.7.0',  '~> 3.7'
   gem 'rubyzip',            '>= 1.3.0',  '~> 1.3'
   gem 'saharspec'
