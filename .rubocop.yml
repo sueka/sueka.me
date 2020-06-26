@@ -17,3 +17,6 @@ Metrics/LineLength:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Naming/UncommunicativeMethodParamName:
+  MinNameLength: 2

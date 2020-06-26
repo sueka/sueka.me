@@ -20,7 +20,7 @@ end
 
 group :development, :test do
   gem 'html-proofer', '>= 3.7.6', '~> 3.7'
-  gem 'rubocop',                  '~> 0.52.0'
+  gem 'rubocop',                  '~> 0.75.0'
 end
 
 group :test do
