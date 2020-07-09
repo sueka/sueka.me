@@ -16,7 +16,7 @@ script:
   - make check
 
 before_deploy:
-  - openssl aes-256-cbc -K "$encrypted_ecea82995587_key" -iv "$encrypted_ecea82995587_iv" -in .travis/id_rsa.enc -out /tmp/id_rsa -d
+  - openssl aes-256-cbc -K "$encrypted_dc6ce25c5ee9_key" -iv "$encrypted_dc6ce25c5ee9_iv" -in .travis/id_rsa.enc -out /tmp/id_rsa -d
   - eval "$(ssh-agent -s)"
   - chmod 600 /tmp/id_rsa
   - ssh-add /tmp/id_rsa
@@ -37,7 +37,7 @@ addons:
       - libgsl0-dev
   ssh_known_hosts:
     - sueka.me
-    - 150.95.157.107
+    - 163.44.171.200
 
 notifications:
   email:
