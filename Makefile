@@ -4,7 +4,7 @@ RSPEC       := $(BUNDLE) exec rspec
 RUBOCOP     := $(BUNDLE) exec rubocop
 HTMLPROOFER := $(BUNDLE) exec htmlproofer
 
-sources = $(shell find source -type f)
+sources = $(shell find source -type f -exec bash -c 'echo {} | sed '"'"'s/ /\\ /g'"'" \;)
 specs = $(shell find spec -type f)
 
 .DEFAULT_GOAL = build
