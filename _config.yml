@@ -4,7 +4,7 @@ url: https://sueka.me
 github_repo: sueka/sueka.me
 license: CC0
 license_url: https://creativecommons.org/publicdomain/zero/1.0/
-katex_version: 0.9.0
+katex_version: 0.11.1
 incremental_dom_version: 0.5.1
 
 author:
