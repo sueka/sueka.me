@@ -23,7 +23,7 @@ jobs:
         with:
           name: _site
           path: _site
-        if: matrix.ruby-version == 2.6.3
+        if: matrix.ruby-version == '2.6.3'
     strategy:
       matrix:
         ruby-version:
