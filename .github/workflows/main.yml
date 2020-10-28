@@ -1,0 +1,52 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+      - name: Build
+        run: |
+          gem install bundler
+          bundle install --deployment
+          make source-check
+          make
+          make check
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: _site
+          path: _site
+        if: matrix.ruby-version == 2.6.3
+    strategy:
+      matrix:
+        ruby-version:
+          - 2.6.3
+          # - 2.7.0-preview1
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: _site
+          path: _site
+      - name: Install SSH private key
+        run: |
+          echo "$ID_ED25519_HTTP_SUEKA_ME" >/tmp/id_ed25519
+          chmod 600 /tmp/id_ed25519
+          eval "$(ssh-agent -s)"
+          ssh-add /tmp/id_ed25519
+      - name: Deploy
+        run: |
+          find _site -type f -exec chmod 604 {} \;
+          find _site -type d -exec chmod 701 {} \;
+          rsync -qrpt --delete-after _site/ http@sueka.me:/opt/local/http/me/sueka/www/html
+    needs:
+      - build
