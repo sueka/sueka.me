@@ -49,6 +49,6 @@ jobs:
         run: |
           find _site -type f -exec chmod 604 {} \;
           find _site -type d -exec chmod 701 {} \;
-          rsync --rsh='ssh -i /tmp/id_ed25519' -qrpt --delete-after _site/ http@sueka.me:/opt/local/http/me/sueka/www/html
+          rsync --rsh='ssh -i /tmp/id_ed25519 -o "IdentitiesOnly yes"' -qrpt --delete-after _site/ http@sueka.me:/opt/local/http/me/sueka/www/html
     needs:
       - build
