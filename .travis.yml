@@ -10,7 +10,7 @@ cache: bundler
 
 script:
   - make source-check
-  - make
+  - TZ=Asia/Tokyo make
   - make check
 
 before_deploy:
