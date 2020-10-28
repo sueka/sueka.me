@@ -45,12 +45,10 @@ jobs:
         run: |
           echo "$ID_ED25519_HTTP_SUEKA_ME" >/tmp/id_ed25519
           chmod 600 /tmp/id_ed25519
-          eval "$(ssh-agent -s)"
-          ssh-add /tmp/id_ed25519
       - name: Deploy
         run: |
           find _site -type f -exec chmod 604 {} \;
           find _site -type d -exec chmod 701 {} \;
-          rsync -qrpt --delete-after _site/ http@sueka.me:/opt/local/http/me/sueka/www/html
+          rsync --rsh='ssh -i /tmp/id_ed25519' -qrpt --delete-after _site/ http@sueka.me:/opt/local/http/me/sueka/www/html
     needs:
       - build
