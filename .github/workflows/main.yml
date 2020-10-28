@@ -45,6 +45,7 @@ jobs:
         run: |
           echo "$ID_ED25519_HTTP_SUEKA_ME" >/tmp/id_ed25519
           chmod 600 /tmp/id_ed25519
+          mkdir -p ~/.ssh
           ssh-keyscan sueka.me >>~/.ssh/known_hosts
           ssh-keyscan 163.44.171.200 >>~/.ssh/known_hosts
       - name: Deploy
