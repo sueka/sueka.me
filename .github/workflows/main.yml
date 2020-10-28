@@ -11,6 +11,10 @@ jobs:
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby-version }}
+      - name: Install libgsl0-dev
+        run: |
+          sudo apt update
+          sudo apt install libgsl0-dev
       - name: Build
         run: |
           gem install bundler
