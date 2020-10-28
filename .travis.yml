@@ -1,5 +1,3 @@
-sudo: false
-
 language: ruby
 rvm:
   - 2.6.3
@@ -22,7 +20,6 @@ before_deploy:
   - ssh-add /tmp/id_rsa
 deploy:
   provider: script
-  skip_cleanup: true
   script:
     find "$TRAVIS_BUILD_DIR/_site" -type f -exec chmod 604 {} \; &&
     find "$TRAVIS_BUILD_DIR/_site" -type d -exec chmod 701 {} \; &&
