@@ -16,6 +16,8 @@ jobs:
           sudo apt update
           sudo apt install libgsl0-dev
       - name: Build
+        env:
+          TZ: Asia/Tokyo
         run: |
           gem install bundler
           bundle install --deployment
