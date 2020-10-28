@@ -42,6 +42,8 @@ jobs:
           name: _site
           path: _site
       - name: Install SSH private key
+        env:
+          ID_ED25519_HTTP_SUEKA_ME: ${{ secrets.ID_ED25519_HTTP_SUEKA_ME }}
         run: |
           echo "$ID_ED25519_HTTP_SUEKA_ME" >/tmp/id_ed25519
           chmod 600 /tmp/id_ed25519
