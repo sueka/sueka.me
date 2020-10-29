@@ -256,7 +256,7 @@ main,
     max-height: 100vh;
     overflow-y: auto;
 
-    // NOTE: Google Chrome 46+ を除き、 fill, fit-content, max-content, min-content が height 値としてサポートされてゐない。
+    // NOTE: Google Chrome 46+ を除き、 fill, fit-content, max-content, min-content が height 値としてサポートされていない。
     display: table;
     width: 333px;
   }
@@ -822,7 +822,7 @@ pre {
 //
 //
 
-// NOTE: `*[lang]` としたいが、パフォーマンス上の理由で要素名を指定してゐる。
+// NOTE: `*[lang]` としたいが、パフォーマンス上の理由で要素名を指定している。
 a, time {
   &[lang] {
     @extend %plain-text;
