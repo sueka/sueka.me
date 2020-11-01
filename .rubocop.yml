@@ -15,7 +15,13 @@ Metrics/LineLength:
   Exclude:
     - spec/*/**/*.rb
 
+Metrics/MethodLength:
+  Max: 20
+
 Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Naming/HeredocDelimiterNaming:
   Enabled: false
 
 Naming/UncommunicativeMethodParamName:
