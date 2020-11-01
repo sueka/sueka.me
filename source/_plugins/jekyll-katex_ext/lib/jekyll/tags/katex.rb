@@ -20,13 +20,13 @@ module Jekyll
         )
 
         if rendering_options[:displayMode]
-          <<~EOS.strip.gsub(/\n\s*/) { ?\  }
+          <<~EOS.strip.gsub(/\n\s*/) { ' ' }
             <div class="katex-container">
               #{KATEX.call('katex.renderToString', latex_source, rendering_options)}
             </div>
           EOS
         else
-          <<~EOS.strip.gsub(/\n\s*/) { ?\  }
+          <<~EOS.strip.gsub(/\n\s*/) { ' ' }
             <span class="katex-wrapper">
               #{KATEX.call('katex.renderToString', latex_source, rendering_options)}
             </span>
