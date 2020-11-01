@@ -864,6 +864,29 @@ q {
   }
 }
 
+.katex-container {
+  @extend %followed-block;
+
+  > .katex-display {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: calc(1000px - 2rem);
+    padding: 0.618em 1rem;
+    white-space: pre;
+    overflow-x: auto;
+  }
+
+  > .katex-display,
+  > .katex-display > .katex,
+  > .katex-display > .katex > .katex-html {
+    display: inline-block;
+  }
+}
+
+.katex-wrapper {
+  // TODO
+}
+
 .katex {
   -webkit-user-select: none;
      -moz-user-select: none;
