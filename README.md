@@ -11,7 +11,7 @@ Running `make` generates an `_site` directory.
 
 ### Deployment
 
-[sueka.me](//sueka.me) has been auto-deployed with GitHub Actions.  When the `master` branch is committed to, GitHub Actions runner builds a document root directory, tests the application, and then deploys the directory to my ConoHa VPS.
+[sueka.me](//sueka.me) has been auto-deployed to GitHub Pages with GitHub Actions.
 
 To deploy manually, upload the `_site` directory to your server by executing a command such as `scp -r _site/ http@203.0.113.0:/opt/local/http/me/sueka/www/html` or taking other ways.
 
