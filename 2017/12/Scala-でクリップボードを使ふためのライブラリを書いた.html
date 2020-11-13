@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Scala でクリップボードを使ふためのライブラリを書いた - sueka.me</title>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="preload" href="/assets/stylesheets/main.css" as="style" />
+<link rel="stylesheet" href="/assets/stylesheets/main.css" />
+
+
+
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
+<link type="application/atom+xml" rel="alternate" href="https://sueka.me/feed.xml" title="sueka.me" />
+
+  </head>
+  <body>
+    
+
+
+
+
+
+
+<header class="header">
+  <nav class="header-nav">
+    <ul class="header-nav-list">
+      <li class="header-nav-list-item">
+        <a
+          
+          href="/"
+        >
+          ホーム
+        </a>
+      </li>
+      <li class="header-nav-list-item">
+        <a
+          
+          href="/about.html"
+        >
+          About
+        </a>
+      </li>
+      <li class="header-nav-list-item">
+        <a
+          
+          href="/archives.html"
+        >
+          アーカイブ
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+    <main itemscope="" itemtype="http://schema.org/Article">
+      <header>
+        <h1 itemplop="headline">Scala でクリップボードを使ふためのライブラリを書いた</h1>
+        
+
+
+<nav class="post-meta">
+  <dl>
+    <dt class="post-meta-term">投稿日</dt>
+    <dd class="post-meta-details">
+      <time  itemprop="datePublished" datetime="2017-12-03">2017年12月3日</time>
+    </dd>
+  </dl>
+</nav>
+
+      </header>
+      <div class="flexible-wrapper">
+        <div class="side-column">
+          
+
+          
+
+
+
+<nav class="toc">
+  <h3>目次</h3>
+  <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#経緯">経緯</a></li>
+<li class="toc-entry toc-h2"><a href="#使用例">使用例</a></li>
+<li class="toc-entry toc-h2"><a href="#展望">展望</a></li>
+</ul>
+</nav>
+
+
+
+        </div>
+        <div class="main-column">
+          <p>Scala でクリップボードを使ふためのライブラリを書きました。 GitHub 上のリポジトリ <a href="//github.com/sueka/clipboard">sueka/clipboard</a> で公開してゐます。</p>
+
+<h2 id="経緯">経緯</h2>
+
+<p><code class="language-plaintext highlighter-rouge">xsel</code> 、 <code class="language-plaintext highlighter-rouge">pbcopy</code> 、 <code class="language-plaintext highlighter-rouge">clip</code> といったシェル命令に差異があること、 Java などによる手続き的な方法には入出力による副作用があること、 Hackage の <a href="//hackage.haskell.org/package/Clipboard">Clipboard</a> は文字列しか扱へないことなどから、 Java によるクリップボードアクセスを <code class="language-plaintext highlighter-rouge">scalaz.effect.IO</code> で適当にラップしてみました。</p>
+
+<h2 id="使用例">使用例</h2>
+
+<p>説明に使用するオブジェクトをインポートします。:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">java.awt.Image</span>
+<span class="k">import</span> <span class="nn">scala.util.</span><span class="o">{</span> <span class="nc">Success</span><span class="o">,</span> <span class="nc">Failure</span> <span class="o">}</span>
+<span class="k">import</span> <span class="nn">scalaz.Scalaz.ToBindOps</span>
+<span class="k">import</span> <span class="nn">scalaz.Show</span>
+<span class="k">import</span> <span class="nn">scalaz.Show.showFromToString</span>
+<span class="k">import</span> <span class="nn">scalaz.effect.IO.</span><span class="o">{</span> <span class="n">putLn</span><span class="o">,</span> <span class="n">putStrLn</span><span class="o">,</span> <span class="n">readLn</span> <span class="o">}</span>
+<span class="k">import</span> <span class="nn">me.sueka.clipboard.Clipboard</span>
+</code></pre></div></div>
+
+<p>クリップボードに格納されてゐる文字列を出力するには</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">cbString</span> <span class="k">=</span> <span class="nv">Clipboard</span><span class="o">.</span><span class="py">getClipboardString</span>
+<span class="k">val</span> <span class="nv">printCbStringLn</span> <span class="k">=</span> <span class="n">cbString</span> <span class="n">map</span> <span class="o">{</span>
+  <span class="k">case</span> <span class="nc">Success</span><span class="o">(</span><span class="n">s</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">s</span>
+  <span class="k">case</span> <span class="nc">Failure</span><span class="o">(</span><span class="k">_</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="s">""</span>
+<span class="o">}</span> <span class="o">&gt;&gt;=</span> <span class="n">putStrLn</span>
+<span class="nv">printCbStringLn</span><span class="o">.</span><span class="py">unsafePerformIO</span>
+</code></pre></div></div>
+
+<p>のやうにし、標準入力から読み込んだ文字列をクリップボードに格納するには</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">writeCb</span> <span class="k">=</span> <span class="n">readLn</span> <span class="o">&gt;&gt;=</span> <span class="nv">Clipboard</span><span class="o">.</span><span class="py">setClipboardString</span>
+<span class="nv">writeCb</span><span class="o">.</span><span class="py">unsafePerformIO</span>
+</code></pre></div></div>
+
+<p>のやうにします。</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">reverseCb</span> <span class="k">=</span> <span class="nv">Clipboard</span><span class="o">.</span><span class="py">modifyClipboardString</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">reverse</span><span class="o">)</span>
+<span class="nv">reverseCb</span><span class="o">.</span><span class="py">unsafePerformIO</span>
+</code></pre></div></div>
+
+<p>とすると、クリップボードに格納されてゐる文字列を逆順にすることができます。</p>
+
+<p>クリップボードに画像が格納されてゐる場合、</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">implicit</span> <span class="k">def</span> <span class="nf">OptionShow</span><span class="k">:</span> <span class="kt">Show</span><span class="o">[</span><span class="kt">Option</span><span class="o">[</span><span class="k">_</span><span class="o">]]</span> <span class="k">=</span> <span class="n">showFromToString</span>
+
+<span class="k">val</span> <span class="nv">cbImage</span> <span class="k">=</span> <span class="nv">Clipboard</span><span class="o">.</span><span class="py">getClipboardImage</span>
+<span class="k">val</span> <span class="nv">printCbImage</span> <span class="k">=</span> <span class="nv">cbImage</span><span class="o">.</span><span class="py">map</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">toOption</span><span class="o">)</span> <span class="o">&gt;&gt;=</span> <span class="n">putLn</span><span class="o">[</span><span class="kt">Option</span><span class="o">[</span><span class="k">_</span><span class="o">]]</span>
+<span class="nv">printCbImage</span><span class="o">.</span><span class="py">unsafePerformIO</span>
+</code></pre></div></div>
+
+<p>のやうにすると <code class="language-plaintext highlighter-rouge">Option[java.awt.Image]</code> オブジェクトを <code class="language-plaintext highlighter-rouge">_.toString</code> したものを出力させることができます。</p>
+
+<h2 id="展望">展望</h2>
+
+<ul>
+  <li>FileList 対応</li>
+  <li>イベントハンドリング</li>
+</ul>
+
+          
+
+<nav class="next-and-previous-posts">
+  <h3>前後の投稿</h3>
+  <dl>
+    <dt>未来</dt>
+    <dd>
+      
+        <a  href="/2018/02/%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%83%BC%E5%B1%95%E9%96%8B%E3%81%AE%E4%B8%AD%E3%81%A7%E6%94%B9%E8%A1%8C%E3%82%92%E4%BD%BF%E3%81%B5%E6%96%B9%E6%B3%95.html" rel="next">
+          パラメーター展開の中で改行を使ふ方法
+        </a>
+      
+    </dd>
+    <dt>過去</dt>
+    <dd>
+      
+        <p>
+          <i>古い投稿はありません。</i>
+        </p>
+      
+    </dd>
+  </dl>
+</nav>
+
+          
+
+
+
+
+  
+  <nav class="related-posts">
+    <h3>関聯投稿</h3>
+    
+
+
+
+
+<ul class="post-list">
+  
+    <li class="post-list-item">
+      <dl>
+        <dt class="post-list-item-term">投稿日</dt>
+        <dd class="post-list-item-details">
+          <time datetime="2020-10-29">2020年10月29日</time>
+        </dd>
+        <dt class="post-list-item-term">投稿</dt>
+        <dd class="post-list-item-details">
+          <a  href="/2020/10/%E4%B8%80%E8%88%AC%E7%9B%B8%E5%AF%BE%E6%80%A7%E7%90%86%E8%AB%96%E3%82%92%E4%B8%80%E6%AD%A9%E4%B8%80%E6%AD%A9%E6%95%B0%E5%BC%8F%E3%81%A7%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B-%E7%AC%AC1%E7%AB%A0%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A0.html">『一般相対性理論を一歩一歩数式で理解する』第1章を読んだ</a>
+        </dd>
+      </dl>
+    </li>
+  
+    <li class="post-list-item">
+      <dl>
+        <dt class="post-list-item-term">投稿日</dt>
+        <dd class="post-list-item-details">
+          <time datetime="2018-04-10">2018年4月10日</time>
+        </dd>
+        <dt class="post-list-item-term">投稿</dt>
+        <dd class="post-list-item-details">
+          <a  href="/2018/04/unidiff-%E3%82%92%E8%89%B2%E4%BB%98%E3%81%91%E3%81%99%E3%82%8B%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88.html">unidiff を色付けするシェルスクリプト</a>
+        </dd>
+      </dl>
+    </li>
+  
+    <li class="post-list-item">
+      <dl>
+        <dt class="post-list-item-term">投稿日</dt>
+        <dd class="post-list-item-details">
+          <time datetime="2018-02-08">2018年2月8日</time>
+        </dd>
+        <dt class="post-list-item-term">投稿</dt>
+        <dd class="post-list-item-details">
+          <a  href="/2018/02/%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%83%BC%E5%B1%95%E9%96%8B%E3%81%AE%E4%B8%AD%E3%81%A7%E6%94%B9%E8%A1%8C%E3%82%92%E4%BD%BF%E3%81%B5%E6%96%B9%E6%B3%95.html">パラメーター展開の中で改行を使ふ方法</a>
+        </dd>
+      </dl>
+    </li>
+  
+    <li class="post-list-item">
+      <dl>
+        <dt class="post-list-item-term">投稿日</dt>
+        <dd class="post-list-item-details">
+          <time datetime="2018-05-17">2018年5月17日</time>
+        </dd>
+        <dt class="post-list-item-term">投稿</dt>
+        <dd class="post-list-item-details">
+          <a  href="/2018/05/Scala-%E3%81%A7-non-nullable-%E5%9E%8B.html">Scala で non-nullable 型</a>
+        </dd>
+      </dl>
+    </li>
+  
+    <li class="post-list-item">
+      <dl>
+        <dt class="post-list-item-term">投稿日</dt>
+        <dd class="post-list-item-details">
+          <time datetime="2019-02-15">2019年2月15日</time>
+        </dd>
+        <dt class="post-list-item-term">投稿</dt>
+        <dd class="post-list-item-details">
+          <a  href="/2019/02/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E8%A4%87%E5%90%88%E6%9D%A1%E4%BB%B6.html">シェルスクリプトにおける複合条件</a>
+        </dd>
+      </dl>
+    </li>
+  
+    <li class="post-list-item">
+      <dl>
+        <dt class="post-list-item-term">投稿日</dt>
+        <dd class="post-list-item-details">
+          <time datetime="2020-10-31">2020年10月31日</time>
+        </dd>
+        <dt class="post-list-item-term">投稿</dt>
+        <dd class="post-list-item-details">
+          <a  href="/2020/10/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%85%A5%E9%96%80-%E7%AC%AC1%E7%AB%A0%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A0.html">『量子力学入門』第1章を読んだ</a>
+        </dd>
+      </dl>
+    </li>
+  
+</ul>
+
+
+
+  </nav>
+
+
+
+
+        </div>
+      </div>
+    </main>
+    
+
+
+<footer class="footer">
+  <div class="footer-contents">
+    <p>
+      
+        <a href="/">sueka.me</a> のソースコードは <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license">CC0</a> でライセンスされ、 GitHub 上のリポジトリ <a href="https://github.com/sueka/sueka.me">sueka/sueka.me</a> で公開されてゐます。
+      
+    </p>
+  </div>
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/incremental-dom/0.5.1/incremental-dom-min.js"></script>
+<script src="/assets/scripts/header-anchor-generator.js"></script>
+
+
+  </body>
+</html>

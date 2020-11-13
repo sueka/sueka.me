@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:transform version="1.0"
+  xmlns:a="http://www.w3.org/2005/Atom"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+>
+  <xsl:output encoding="utf-8" method="html" doctype-system="about:legacy-compat" />
+
+  <xsl:strip-space elements="*" />
+
+  <xsl:template match="/">
+    <html>
+      <head>
+        <title>
+          <xsl:value-of select="a:feed/a:title/text()" />
+        </title>
+      </head>
+      <body>
+        <xsl:apply-templates />
+      </body>
+    </html>
+  </xsl:template>
+
+  <xsl:template match="a:feed">
+    <xsl:apply-templates />
+  </xsl:template>
+
+  <xsl:template match="a:author/a:name">
+    <xsl:value-of select="text()" />
+  </xsl:template>
+
+  <xsl:template match="a:entry">
+    <hr />
+    <article>
+      <xsl:apply-templates />
+    </article>
+  </xsl:template>
+
+  <xsl:template match="a:title">
+    <h1>
+      <xsl:value-of select="text()" />
+    </h1>
+  </xsl:template>
+
+  <xsl:template match="a:category/@term|a:link/@href">
+    <xsl:value-of select="." />
+  </xsl:template>
+
+  <xsl:template match="@*" />
+
+  <xsl:template match="a:*">
+    <dl>
+      <dt>
+        <xsl:value-of select="local-name()" />
+      </dt>
+      <dd>
+        <xsl:apply-templates select="@*" />
+        <xsl:apply-templates />
+      </dd>
+    </dl>
+  </xsl:template>
+</xsl:transform>
