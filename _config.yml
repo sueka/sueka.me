@@ -10,8 +10,6 @@ incremental_dom_version: 0.5.1
 author:
   name: Sueka
   email: suekaq@gmail.com
-  twitter: hsueka
-  github: sueka
 
 defaults:
   - values:
