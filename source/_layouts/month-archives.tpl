@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% assign translation = site.data.translations | where: 'langcode', page.lang | first %}
-{% assign page-title = page.date | date: translation.ym-format %}
+{% assign month = page.date | date: translation.ym-format %}
+{% assign page-title = translation.posts-on-month | replace: ':month', month %}
 <html lang="{{ page.lang }}">
   <head>
     <title>{{ page-title }} - {{ site.title }}</title>
