@@ -2,6 +2,9 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build:
@@ -55,3 +58,4 @@ jobs:
           publish_dir: ./_site
     needs:
       - build
+    if: github.ref == 'refs/heads/main'
