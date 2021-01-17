@@ -29,7 +29,8 @@ jobs:
           TZ: Asia/Tokyo
         run: |
           gem install bundler
-          bundle install --deployment
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
           make source-check
           make
           make check
