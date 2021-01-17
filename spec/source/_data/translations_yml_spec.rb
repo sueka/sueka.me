@@ -18,6 +18,8 @@ RSpec.describe 'sueka.me' do
       no-older-posts
       post
       posted-on
+      posts-of-year
+      posts-on-month
       posts-tagged-with-tag
       read-more
       recent-posts

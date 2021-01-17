@@ -12,8 +12,8 @@
   no-older-posts: 古い投稿はありません。
   post: 投稿
   posted-on: 投稿日
-  posts-of-year: :yearの投稿
-  posts-on-month: :monthの投稿
+  posts-of-year: ':yearの投稿'
+  posts-on-month: ':monthの投稿'
   posts-tagged-with-tag: <span class="tag">:tag</span> でタグ付けされた投稿
   read-more: 続きを読む
   recent-posts: 最近の投稿
