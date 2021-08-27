@@ -1,0 +1,51 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  --background-color: #fffefb;
+  --text-color: #675640;
+  --link-color: dodgerblue;
+  --visited-color: darkorchid;
+
+  line-height: 2;
+  font-family: serif;
+  font-feature-settings: "liga";
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6,
+dl > dt,
+dl > div > dt {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  border-block-start-width: 0;
+  border-inline-width: 0;
+  border-block-end-width: 0.0625rem; /* 1px when font-size = 16px (minimum) */
+  border-color: currentColor;
+
+  &:hover {
+    border-style: dashed;
+  }
+
+  &:active {
+    border-style: solid;
+  }
+}
+
+a:link {
+  color: var(--link-color);
+}
+
+a:visited {
+  color: var(--visited-color);
+}

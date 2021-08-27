@@ -1,0 +1,9 @@
+name: sueka.me
+language: ja
+url: https://sueka.me
+github_repo: sueka/sueka.me
+license:
+  nickname: MIT No Attribution
+  url: https://github.com/aws/mit-0
+author:
+  name: Sueka

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+  {%- if site.language %} xml:lang="{{ site.language }}" {%- endif -%}
+>
+  <title>{{ site.name }}</title>
+  <id>{{ '/' | url(true) | encodeUri }}</id>
+  <link href="{{ '/' | url(true) | encodeUri }}" rel="alternate" type="text/html" />
+  <link href="{{ url | url(true) | encodeUri }}" rel="self" type="application/atom+xml" />
+
+  <author>
+    <name>{{ site.author.name }}</name>
+    {% if site.author.email -%} <email>{{ site.author.email }}</email> {%- endif %}
+    {% if site.author.url -%} <uri>{{ site.author.url | encodeUri }}</uri> {%- endif %}
+  </author>
+
+  {% set lastPage = search.pages('', 'lastmod=desc date=desc') | first %}
+  <updated>{{ (lastPage.data.lastmod or lastPage.data.date) | date("ATOM") }}</updated>
+
+  {% for page in search.pages('', 'lastmod=desc date=desc') %}
+  <entry
+    {%- if page.data.language %} xml:lang="{{ page.data.language }}" {%- endif -%}
+  >
+    <title type="html">{{ page.data.title }}</title>
+    <id>{{ page.data.url | url(true) | encodeUri }}</id>
+    <link href="{{ page.data.url | url(true) | encodeUri }}" rel="alternate" type="text/html" />
+
+    {% if page.data.lastmod -%} <published>{{ page.data.date | date('ATOM') }}</published> {%- endif %}
+    <updated>{{ (page.data.lastmod or page.data.date) | date('ATOM') }}</updated>
+  </entry>
+  {% endfor %}
+</feed>

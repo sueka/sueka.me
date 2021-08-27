@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html
+  {%- if language %} lang={{ language }} {%- endif -%}
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{{ title }} {%- if title !== site.name %} - {{ site.name }} {%- endif %}</title>
+    <link href="{{ '~/main.css' | url }}" rel="stylesheet" />
+
+    {#- Use physical, not logical #}
+    {#- MinHeight(rem) = ⌈2 φ³ rem + 20 rem⌉ #}
+    <link href="{{ '~/horizontal.css' | url }}" rel="stylesheet" media="(max-height: 456px)" />
+    <link href="{{ '~/vertical.css' | url }}" rel="stylesheet" media="(min-height: 456px)" />
+  </head>
+  <body>
+    <main class="main">
+      {% include 'templates/title-page.njk' %}
+      <div class="body">
+        {{ content | safe }}
+      </div>
+    </main>
+    {% include 'templates/footer.njk' %}
+  </body>
+</html>
