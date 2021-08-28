@@ -9,6 +9,6 @@ body {
 }
 
 .title-page {
-  block-size: 38.196601vw; /* height/width = φ² */
-  block-size: 38.196601vi; /* height/width = φ² */
+  min-block-size: 38.196601vw; /* height/width = φ² */
+  min-block-size: 38.196601vi; /* height/width = φ² */
 }
