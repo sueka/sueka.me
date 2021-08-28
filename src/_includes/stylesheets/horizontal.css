@@ -1,10 +1,13 @@
+:root {
+  writing-mode: horizontal-tb;
+}
+
 html {
   font-size: max(16px, 2.106499vw); /* viewport width = 2 φ³ rem + 39 rem */
   font-size: max(16px, 2.106499vi); /* viewport inline-size = 2 φ³ rem + 39 rem */
 }
 
 body {
-  writing-mode: horizontal-tb;
   font-feature-settings: "liga", "palt", "hkna";
 }
 

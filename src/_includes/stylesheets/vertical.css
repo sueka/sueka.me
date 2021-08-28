@@ -1,10 +1,13 @@
+:root {
+  writing-mode: vertical-rl;
+}
+
 html {
   font-size: max(16px, 2.106499vh); /* viewport height = 2 φ³ rem + 39 rem */
   font-size: max(16px, 2.106499vi); /* viewport inline-size = 2 φ³ rem + 39 rem */
 }
 
 body {
-  writing-mode: vertical-rl;
   font-feature-settings: "liga", "vkna";
   text-align: justify;
 }
