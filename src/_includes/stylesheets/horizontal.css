@@ -1,17 +1,14 @@
 :root {
   writing-mode: horizontal-tb;
-}
-
-html {
   font-size: clamp(16px, 2.106499vw, 2.106499vw); /* viewport width = 2 φ³ rem + 39 rem */
   font-size: clamp(16px, 2.106499vi, 2.106499vi); /* viewport inline-size = 2 φ³ rem + 39 rem */
-}
 
-body {
-  font-feature-settings: "liga", "palt", "hkna";
-}
+  & body {
+    font-feature-settings: "liga", "palt", "hkna";
+  }
 
-.title-page {
-  min-block-size: 38.196601vw; /* height/width = φ² */
-  min-block-size: 38.196601vi; /* height/width = φ² */
+  & .title-page {
+    min-block-size: 38.196601vw; /* height/width = φ² */
+    min-block-size: 38.196601vi; /* height/width = φ² */
+  }
 }
