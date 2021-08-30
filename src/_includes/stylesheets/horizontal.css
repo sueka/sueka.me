@@ -2,8 +2,6 @@
 
 :root {
   writing-mode: horizontal-tb;
-  font-size: clamp(16px, 2.106499vw, 2.106499vw); /* viewport width = 2 φ³ rem + 39 rem */
-  font-size: clamp(16px, 2.106499vi, 2.106499vi); /* viewport inline-size = 2 φ³ rem + 39 rem */
 
   & body {
     min-block-size: 100vh;
