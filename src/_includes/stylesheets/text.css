@@ -10,7 +10,7 @@ body {
 
   line-height: 2;
   font-family: serif;
-  font-feature-settings: "liga";
+  font-variant-ligatures: common-ligatures;
 
   background-color: var(--background-color);
   color: var(--text-color);

@@ -9,7 +9,8 @@
     min-block-size: 100vh;
     min-block-size: 100vb;
 
-    font-feature-settings: "liga", "palt", "hkna";
+    font-kerning: normal;
+    font-feature-settings: "vkrn" 0, "palt", "hkna";
     text-align: initial;
   }
 

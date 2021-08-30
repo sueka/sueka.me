@@ -9,7 +9,8 @@
     min-block-size: 100vw;
     min-block-size: 100vb;
 
-    font-feature-settings: "liga", "vkna";
+    font-kerning: revert;
+    font-feature-settings: "vkrn", "vkna";
     text-align: justify;
   }
 
