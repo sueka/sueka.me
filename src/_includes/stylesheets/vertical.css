@@ -15,7 +15,8 @@
     }
 
     & .digits {
-      text-combine-upright: all;
+      -webkit-text-combine: horizontal; /* for Webkit and Blink */
+      text-combine-upright: all; /* for Blink and Gecko */
       text-combine-upright: digits 2;
     }
   }
