@@ -6,6 +6,9 @@
   font-size: clamp(16px, 2.106499vi, 2.106499vi); /* viewport inline-size = 2 φ³ rem + 39 rem */
 
   & body {
+    min-block-size: 100vw;
+    min-block-size: 100vb;
+
     font-feature-settings: "liga", "vkna";
     text-align: justify;
   }
