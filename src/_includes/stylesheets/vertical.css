@@ -1,23 +1,23 @@
-@media (min-height: 456px) { /* Use physical, not logical */ /* MinHeight(rem) = ⌈2 φ³ rem + 20 rem⌉ */
-  :root:lang(ja) {
-    writing-mode: vertical-rl;
-    font-size: clamp(16px, 2.106499vh, 2.106499vh); /* viewport height = 2 φ³ rem + 39 rem */
-    font-size: clamp(16px, 2.106499vi, 2.106499vi); /* viewport inline-size = 2 φ³ rem + 39 rem */
+/* Keep contrasting with horizontal.css */
 
-    & body {
-      font-feature-settings: "liga", "vkna";
-      text-align: justify;
-    }
+:root {
+  writing-mode: vertical-rl;
+  font-size: clamp(16px, 2.106499vh, 2.106499vh); /* viewport height = 2 φ³ rem + 39 rem */
+  font-size: clamp(16px, 2.106499vi, 2.106499vi); /* viewport inline-size = 2 φ³ rem + 39 rem */
 
-    & .title-page {
-      min-block-size: 38.196601vh; /* width/height = φ² */
-      min-block-size: 38.196601vi; /* width/height = φ² */
-    }
+  & body {
+    font-feature-settings: "liga", "vkna";
+    text-align: justify;
+  }
 
-    & .digits {
-      -webkit-text-combine: horizontal; /* for Webkit and Blink */
-      text-combine-upright: all; /* for Blink and Gecko */
-      text-combine-upright: digits 2;
-    }
+  & .title-page {
+    min-block-size: 38.196601vh; /* width/height = φ² */
+    min-block-size: 38.196601vi; /* width/height = φ² */
+  }
+
+  & .digits {
+    -webkit-text-combine: horizontal; /* for Webkit and Blink */
+    text-combine-upright: all; /* for Blink and Gecko */
+    text-combine-upright: digits 2;
   }
 }
