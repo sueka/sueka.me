@@ -1,3 +1,5 @@
+{% set language = language or site.language %}
+
 <!DOCTYPE html>
 <html
   {%- if language %} lang={{ language }} {%- endif -%}

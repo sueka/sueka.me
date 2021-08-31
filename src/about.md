@@ -2,7 +2,6 @@
 layout: layouts/page.njk
 title: About
 date: 2021-08-27
-language: ja
 ---
 
 ## 作者
