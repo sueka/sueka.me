@@ -24,6 +24,7 @@ const site = lume({
   plugins: [
     postcssPresetEnv({
       features: {
+        'font-variant-property': false,
         'logical-properties-and-values': false,
         'nesting-rules': true,
       },
