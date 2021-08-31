@@ -7,6 +7,7 @@ body {
   --text-color: #675640;
   --link-color: dodgerblue;
   --visited-color: darkorchid;
+  --code-background-color: #ece5df;
 
   line-height: 2;
   font-family: serif;
@@ -48,4 +49,9 @@ a:link {
 
 a:visited {
   color: var(--visited-color);
+}
+
+code {
+  font-variant-ligatures: none;
+  background-color: var(--code-background-color);
 }

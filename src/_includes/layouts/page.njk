@@ -18,7 +18,14 @@
     <link href="{{ '~/vertical.css' | url }}" rel="stylesheet" media="(min-height: 456px)" />
     {%- endif %}
 
+    {#- NOTE: Script is loaded in _config.js #}
+    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/gradient-light.min.css" rel="stylesheet" />
+
     <link href="{{ '~/feed.xml.njk' | url }}" rel="alternate" type="application/atom+xml" title="{{ site.name }}" />
+    <script src="https://unpkg.com/css-has-pseudo/browser"></script>
+    <script>
+      cssHasPseudo(document)
+    </script>
   </head>
   <body>
     <main class="main">

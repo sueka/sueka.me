@@ -45,12 +45,17 @@ p {
   margin-block: 1em;
 }
 
+/* TODO: Merge those rulesets if the bugs of css-has-pseudo are fixed: */
 ul, ol, dl {
   margin-block-start: 1em;
   margin-block-end: 1.618034em; /* φ */
 }
+pre:has(code) {
+  margin-block-start: 1em;
+  margin-block-end: 1.618034em; /* φ */
+}
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, dl {
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, pre {
   &:first-child {
     margin-block-start: 0;
   }
@@ -68,4 +73,23 @@ ul {
 
 dd {
   margin-inline-start: 2.618034em; /* φ² */
+}
+
+pre {
+  line-height: 1.618034; /* φ */
+}
+
+code {
+  text-orientation: sideways;
+}
+
+code.hljs {
+  border-radius: 0.381966em; /* φ⁻² */
+}
+
+/* code:root, */
+:not(pre) > code {
+  padding-block: 0.236068em; /* φ⁻³ */
+  padding-inline: 0.381966em; /* φ⁻² */
+  border-radius: 0.381966em; /* φ⁻² */
 }

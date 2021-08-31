@@ -1,8 +1,10 @@
 import lume from 'lume/mod.ts'
+import codeHighlight from 'lume/plugins/code_highlight.ts'
 import date from 'lume/plugins/date.ts'
 import postcss from 'lume/plugins/postcss.ts'
 import relativeUrls from 'lume/plugins/relative_urls.ts'
 import csso from 'https://esm.sh/postcss-csso'
+import postcssHasPseudo from 'https://jspm.dev/css-has-pseudo/postcss'
 import anchor from 'https://jspm.dev/markdown-it-anchor'
 import deflist from 'https://jspm.dev/markdown-it-deflist'
 import postcssPresetEnv from 'https://jspm.dev/postcss-preset-env'
@@ -19,6 +21,7 @@ const site = lume({
     ],
   },
 })
+.use(codeHighlight())
 .use(date())
 .use(postcss({
   plugins: [
@@ -29,6 +32,7 @@ const site = lume({
         'nesting-rules': true,
       },
     }),
+    postcssHasPseudo(),
     csso(),
   ],
   sourceMap: true,
