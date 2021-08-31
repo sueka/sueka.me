@@ -9,7 +9,7 @@
 
     font-kerning: normal;
     font-feature-settings: "vkrn" 0, "palt", "hkna";
-    text-align: initial;
+    text-align: unset;
   }
 
   & .title-page {
@@ -18,7 +18,7 @@
   }
 
   & .digits {
-    -webkit-text-combine: initial;
-    text-combine-upright: initial;
+    -webkit-text-combine: unset;
+    text-combine-upright: unset;
   }
 }

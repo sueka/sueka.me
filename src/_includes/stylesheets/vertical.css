@@ -7,7 +7,7 @@
     min-block-size: 100vw;
     min-block-size: 100vb;
 
-    font-kerning: revert;
+    font-kerning: unset;
     font-feature-settings: "vkrn", "vkna";
     text-align: justify;
   }
