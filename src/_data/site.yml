@@ -1,9 +1,6 @@
 name: sueka.me
 language: ja
-url: https://sueka.me
+url: https://sueka.me # TODO: Be used in _config.js
 github_repo: sueka/sueka.me
-license:
-  nickname: MIT No Attribution
-  url: https://github.com/aws/mit-0
 author:
   name: Sueka
