@@ -41,6 +41,7 @@ body {
     padding-inline-start: 0;
     list-style-type: none;
     display: flex;
+    justify-content: flex-end;
 
     & > li > a {
       display: flex;
