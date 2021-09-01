@@ -1,5 +1,10 @@
 <footer class="footer">
-  <p>
-    <a href="{{ '~/index.md' | url }}">このウェブサイト</a>のソースコードは <a href="{{ site.license.url }}" rel="external">{{ site.license.nickname }}</a> でライセンスされ、 GitHub 上のリポジトリ <a href="https://github.com/{{ site.github_repo }}" rel="external">{{ site.github_repo }}</a> で公開されてゐます。
-  </p>
+  <ul>
+    <li>
+      <a href="https://github.com/{{ site.github_repo }}" rel="external">
+        {#- FIXME: inline-size: 2rem #}
+        {% octicon 'mark-github', { width: 32 } %}
+      </a>
+    </li>
+  </ul>
 </footer>
