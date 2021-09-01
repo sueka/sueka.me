@@ -7,8 +7,8 @@ import csso from 'https://esm.sh/postcss-csso'
 import postcssHasPseudo from 'https://jspm.dev/css-has-pseudo/postcss'
 import anchor from 'https://jspm.dev/markdown-it-anchor'
 import deflist from 'https://jspm.dev/markdown-it-deflist'
-import postcssPresetEnv from 'https://jspm.dev/postcss-preset-env'
 import postcssExtendRule from 'https://jspm.dev/postcss-extend-rule'
+import postcssPresetEnv from 'https://jspm.dev/postcss-preset-env'
 
 const site = lume({
   src: 'src',
