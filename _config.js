@@ -8,6 +8,7 @@ import postcssHasPseudo from 'https://jspm.dev/css-has-pseudo/postcss'
 import anchor from 'https://jspm.dev/markdown-it-anchor'
 import deflist from 'https://jspm.dev/markdown-it-deflist'
 import postcssPresetEnv from 'https://jspm.dev/postcss-preset-env'
+import postcssExtendRule from 'https://jspm.dev/postcss-extend-rule'
 
 const site = lume({
   src: 'src',
@@ -32,6 +33,7 @@ const site = lume({
         'nesting-rules': true,
       },
     }),
+    postcssExtendRule(),
     postcssHasPseudo(),
     csso(),
   ],

@@ -12,6 +12,11 @@
     text-align: justify;
   }
 
+  & .upright {
+    font-feature-settings: "vkrn", "vkna", "fwid";
+    text-orientation: upright;
+  }
+
   & .title-page {
     min-block-size: 38.196601vh; /* width/height = φ² */
     min-block-size: 38.196601vi; /* width/height = φ² */
@@ -21,5 +26,14 @@
     -webkit-text-combine: horizontal; /* for Webkit and Blink */
     text-combine-upright: all; /* for Blink and Gecko */
     text-combine-upright: digits 2;
+  }
+
+  & em {
+    @extend :root .upright; /* TODO: :parent .upright */
+
+    font-style: unset;
+    font-family: unset;
+    text-emphasis-style: sesame;
+    text-emphasis-position: over right;
   }
 }

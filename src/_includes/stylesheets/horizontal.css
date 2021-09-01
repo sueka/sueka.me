@@ -12,6 +12,11 @@
     text-align: unset;
   }
 
+  & .upright {
+    font-feature-settings: unset;
+    text-orientation: unset;
+  }
+
   & .title-page {
     min-block-size: 38.196601vw; /* height/width = φ² */
     min-block-size: 38.196601vi; /* height/width = φ² */
@@ -20,5 +25,18 @@
   & .digits {
     -webkit-text-combine: unset;
     text-combine-upright: unset;
+  }
+
+  & em {
+    @extend :root .upright; /* TODO: :parent .upright */
+
+    font-style: revert;
+
+    &:where(:lang(ja)) {
+      font-style: unset;
+      font-family: sans-serif;
+    }
+
+    text-emphasis-style: unset;
   }
 }
