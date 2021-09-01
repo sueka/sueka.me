@@ -1,7 +1,3 @@
-html {
-  font-size: max(16px, min(2.106499vh, 2.106499vw)); /* v* = 2 φ³ rem + 39 rem */
-}
-
 body {
   --background-color: #fffefb;
   --text-color: #675640;
@@ -15,6 +11,12 @@ body {
 
   background-color: var(--background-color);
   color: var(--text-color);
+}
+
+.footer {
+  & > ul > li > a {
+    border-style: none;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {

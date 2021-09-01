@@ -1,3 +1,7 @@
+html {
+  font-size: max(16px, min(2.106499vh, 2.106499vw)); /* v* = 2 φ³ rem + 39 rem */
+}
+
 body {
   display: flex;
   flex-direction: column;
