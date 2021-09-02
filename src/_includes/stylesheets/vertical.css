@@ -28,7 +28,7 @@
     text-combine-upright: digits 2;
   }
 
-  & em {
+  & em:where(:lang(ja)) {
     @extend :root .upright; /* TODO: :parent .upright */
 
     font-style: unset;
