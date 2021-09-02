@@ -7,6 +7,8 @@ import csso from 'https://esm.sh/postcss-csso'
 import postcssHasPseudo from 'https://jspm.dev/css-has-pseudo/postcss'
 import octicons from 'https://jspm.dev/@primer/octicons'
 import anchor from 'https://jspm.dev/markdown-it-anchor'
+import attrs from 'https://jspm.dev/markdown-it-attrs'
+import bracketedSpans from 'https://jspm.dev/markdown-it-bracketed-spans'
 import deflist from 'https://jspm.dev/markdown-it-deflist'
 import postcssExtendRule from 'https://jspm.dev/postcss-extend-rule'
 import postcssPresetEnv from 'https://jspm.dev/postcss-preset-env'
@@ -19,6 +21,8 @@ const site = lume({
   markdown: {
     plugins: [
       [anchor, { level: 2, permalink: anchor.permalink.headerLink() }],
+      attrs,
+      bracketedSpans,
       deflist,
     ],
   },
@@ -36,7 +40,7 @@ const site = lume({
     }),
     postcssExtendRule(),
     postcssHasPseudo(),
-    csso(),
+    csso({ restructure: false }),
   ],
   sourceMap: true,
 }))
