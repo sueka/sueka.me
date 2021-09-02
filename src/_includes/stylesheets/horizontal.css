@@ -8,13 +8,13 @@
     min-block-size: 100vb;
 
     font-kerning: normal;
-    font-feature-settings: "vkrn" 0, "palt", "hkna";
-    text-align: unset;
+    font-feature-settings: "palt", "hkna";
+    text-align: revert;
   }
 
   & .upright {
-    font-feature-settings: unset;
-    text-orientation: unset;
+    font-feature-settings: revert;
+    text-orientation: revert;
   }
 
   & .title-page {
@@ -23,8 +23,8 @@
   }
 
   & .digits {
-    -webkit-text-combine: unset;
-    text-combine-upright: unset;
+    -webkit-text-combine: revert;
+    text-combine-upright: revert;
   }
 
   & em {
@@ -33,10 +33,10 @@
     font-style: revert;
 
     &:where(:lang(ja)) { /* Keep specificity the same as that of vertical.css */
-      font-style: unset;
+      font-style: revert;
       font-family: sans-serif;
     }
 
-    text-emphasis-style: unset;
+    text-emphasis-style: revert;
   }
 }

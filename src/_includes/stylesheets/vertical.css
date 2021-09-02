@@ -7,8 +7,8 @@
     min-block-size: 100vw;
     min-block-size: 100vb;
 
-    font-kerning: unset;
-    font-feature-settings: "vkrn", "vkna";
+    font-kerning: revert;
+    font-feature-settings: "vkrn", "vkna"; /* Don't set "vpal" */
     text-align: justify;
   }
 
@@ -31,8 +31,8 @@
   & em:where(:lang(ja)) {
     @extend :root .upright; /* TODO: :parent .upright */
 
-    font-style: unset;
-    font-family: unset;
+    font-style: revert;
+    font-family: revert;
     text-emphasis-style: sesame;
     text-emphasis-position: over right;
   }
