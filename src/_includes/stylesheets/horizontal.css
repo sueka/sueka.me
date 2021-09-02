@@ -32,7 +32,7 @@
 
     font-style: revert;
 
-    &:where(:lang(ja)) {
+    &:where(:lang(ja)) { /* Keep specificity the same as that of vertical.css */
       font-style: unset;
       font-family: sans-serif;
     }

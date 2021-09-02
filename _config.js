@@ -36,6 +36,7 @@ const site = lume({
         'font-variant-property': false,
         'logical-properties-and-values': false,
         'nesting-rules': true,
+        'custom-selectors': true,
       },
     }),
     postcssExtendRule(),

@@ -52,7 +52,10 @@ body {
 
 /* block-axis layout */
 
-h1, h2, h3, h4, h5, h6 {
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+@custom-selector :--list ul, menu, ol, dl;
+
+:--heading {
   margin-block-start: 1.618034em; /* φ */
   margin-block-end: 1em;
 }
@@ -62,7 +65,7 @@ p {
 }
 
 /* TODO: Merge those rulesets if the bugs of css-has-pseudo are fixed: */
-ul, ol, dl {
+:--list {
   margin-block-start: 1em;
   margin-block-end: 1.618034em; /* φ */
 }
@@ -71,7 +74,7 @@ pre:has(code) {
   margin-block-end: 1.618034em; /* φ */
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, dl, pre {
+:--heading, p, :--list, pre {
   &:first-child {
     margin-block-start: 0;
   }
