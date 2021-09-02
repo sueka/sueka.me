@@ -74,6 +74,10 @@ pre:has(code) {
   margin-block-end: 1.618034em; /* φ */
 }
 
+dl > dt {
+  margin-block-start: 1em;
+}
+
 :--heading, p, :--list, pre {
   &:first-child {
     margin-block-start: 0;
