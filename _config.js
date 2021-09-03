@@ -12,7 +12,6 @@ import attrs from 'https://jspm.dev/markdown-it-attrs'
 import bracketedSpans from 'https://jspm.dev/markdown-it-bracketed-spans'
 import deflist from 'https://jspm.dev/markdown-it-deflist'
 import footnote from 'https://jspm.dev/markdown-it-footnote'
-import postcssCustomSelectors from 'https://jspm.dev/postcss-custom-selectors'
 import postcssExtendRule from 'https://jspm.dev/postcss-extend-rule'
 
 const site = lume({
@@ -35,7 +34,6 @@ const site = lume({
 .use(postcss({
   plugins: [
     postcssNesting(),
-    postcssCustomSelectors(),
     postcssExtendRule(),
     postcssHasPseudo(),
     csso({ restructure: false }),

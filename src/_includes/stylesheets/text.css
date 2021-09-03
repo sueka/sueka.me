@@ -19,13 +19,11 @@ body {
   }
 }
 
-@custom-selector :--heading h1, h2, h3, h4, h5, h6;
-
-:--heading {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-:--heading,
+h1, h2, h3, h4, h5, h6,
 dl > dt,
 dl > div > dt {
   font-family: sans-serif;
