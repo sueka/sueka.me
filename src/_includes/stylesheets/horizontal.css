@@ -12,14 +12,19 @@
     text-align: revert;
   }
 
-  & .upright {
-    font-feature-settings: revert;
-    text-orientation: revert;
-  }
-
   & .title-page {
     min-block-size: 38.196601vw; /* height/width = φ² */
     min-block-size: 38.196601vi; /* height/width = φ² */
+  }
+
+  & .footnote-ref,
+  & .footnote-backref {
+    @extend :root .upright;
+  }
+
+  & .upright {
+    font-feature-settings: revert;
+    text-orientation: revert;
   }
 
   & .digits {

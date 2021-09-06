@@ -12,14 +12,19 @@
     text-align: justify;
   }
 
-  & .upright {
-    font-feature-settings: "vkrn", "vkna", "fwid";
-    text-orientation: upright;
-  }
-
   & .title-page {
     min-block-size: 38.196601vh; /* width/height = φ² */
     min-block-size: 38.196601vi; /* width/height = φ² */
+  }
+
+  & .footnote-ref,
+  & .footnote-backref {
+    @extend :root .upright;
+  }
+
+  & .upright {
+    font-feature-settings: "vkrn", "vkna", "fwid";
+    text-orientation: upright;
   }
 
   & .digits {
