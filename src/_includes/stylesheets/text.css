@@ -29,6 +29,11 @@ dl > div > dt {
   font-family: sans-serif;
 }
 
+p {
+  hanging-punctuation: allow-end;
+  /* hanging-punctuation: force-end; */
+}
+
 a {
   text-decoration: none;
   border-block-start-width: 0;
