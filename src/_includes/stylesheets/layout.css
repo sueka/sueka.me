@@ -95,13 +95,14 @@ h1, h2, h3, h4, h5, h6, p, ul, menu, ol, dl, pre {
 
 /* inline-axis layout */
 
-ul {
-  padding-inline-start: 2.618034em; /* φ² */
+ul, ol {
+  padding-inline-start: 2em;
 }
 
 dd {
-  margin-inline-start: 2.618034em; /* φ² */
+  margin-inline-start: 2em;
 }
+
 
 pre {
   line-height: 1.618034; /* φ */
