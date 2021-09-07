@@ -33,6 +33,8 @@ body {
 }
 
 .footnotes-list {
+  font-size: 88.636364%; /* 39/44 */
+
   & > .footnote-item > p {
     display: contents; /* for Gecko */
   }
