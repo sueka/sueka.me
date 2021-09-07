@@ -1,2 +1,5 @@
 # Lume
 /_site/
+
+# macOS
+.DS_Store
