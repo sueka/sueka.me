@@ -27,6 +27,14 @@ body {
   }
 }
 
+.incipit {
+  font-size: 161.8034%; /* φ */
+  line-height: 1.618034; /* φ */
+  float: left;
+  float: inline-start;
+  margin-inline-end: 1em;
+}
+
 .body {
   padding-block: clamp(1rem, min(7.647005vh, 7.647005vw), 2.618034rem); /* v* = (2 φ² rem + 29 rem) * (padding / φ² rem), φ² */
   padding-inline: clamp(1.618034rem, min(8.923272vh, 8.923272vw), 4.236068rem); /* φ, v* = (2 φ³ rem + 39 rem) * (padding / φ³ rem), φ³ */

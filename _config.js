@@ -14,6 +14,8 @@ import deflist from 'https://jspm.dev/markdown-it-deflist'
 import footnote from 'https://jspm.dev/markdown-it-footnote'
 import postcssExtendRule from 'https://jspm.dev/postcss-extend-rule'
 
+import getIncipit from './lib/getIncipit.ts'
+
 const site = lume({
   src: 'src',
   location: new URL('https://sueka.me'), // TODO: Use {{ site.data.url }}
@@ -42,6 +44,7 @@ const site = lume({
 }))
 .use(relativeUrls())
 .filter('encodeUri', encodeURI)
+.filter('getIncipit', getIncipit)
 .helper('octicon', (symbol, ...args) => octicons[symbol].toSVG(...args), {
   type: 'tag',
 })

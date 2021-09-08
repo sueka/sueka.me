@@ -1,5 +1,9 @@
 {% set language = language or site.language %}
 
+{% if not title %}
+  {% set incipit = content | safe | getIncipit %}
+{% endif %}
+
 <!DOCTYPE html>
 <html
   {%- if language %} lang={{ language }} {%- endif -%}
@@ -8,7 +12,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{{ title }} {%- if title !== site.name %} - {{ site.name }} {%- endif %}</title>
+    <title>{{ title or incipit }} {%- if title !== site.name %} - {{ site.name }} {%- endif %}</title>
     <link href="{{ '~/main.css' | url }}" rel="stylesheet" />
     <link href="{{ '~/horizontal.css' | url }}" rel="stylesheet" />
 
@@ -29,7 +33,7 @@
   </head>
   <body>
     <main class="main">
-      {% include 'templates/title-page.njk' %}
+      {% if title -%} {% include 'templates/title-page.njk' %} {%- endif %}
       <div class="body">
         {{ content | safe }}
       </div>
