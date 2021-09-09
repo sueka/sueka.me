@@ -1,3 +1,12 @@
+:root {
+  --font-text: serif;
+  --font-text-emphasized: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
+  --font-code: Menlo, Consolas, monospace;
+  --font-text-ja: "YuMincho +36p Kana", "Yu Mincho", serif;
+  --font-text-emphasized-ja: "Hiragino Sans", "Yu Gothic", sans-serif;
+  --font-code-ja: CodeM, Myrica, Ricty, "Source Han Code JP", monospace;
+}
+
 body {
   --background-color: #fffefb;
   --text-color: #675640;
@@ -6,7 +15,12 @@ body {
   --code-background-color: #ece5df;
 
   line-height: 2;
-  font-family: serif;
+
+  font-family: var(--font-text);
+  &:where(:lang(ja)) {
+    font-family: var(--font-text-ja);
+  }
+
   font-variant-ligatures: common-ligatures;
 
   background-color: var(--background-color);
@@ -33,7 +47,10 @@ h6 { font-size: 100% } /* φ^(0/5) */
 h1, h2, h3, h4, h5, h6,
 dl > dt,
 dl > div > dt {
-  font-family: sans-serif;
+  font-family: var(--font-text-emphasized);
+  &:where(:lang(ja)) {
+    font-family: var(--font-text-emphasized-ja);
+  }
 }
 
 p {
@@ -66,6 +83,11 @@ a:visited {
 }
 
 code {
+  font-family: var(--font-code);
+  &:where(:lang(ja)) {
+    font-family: var(--font-code-ja);
+  }
+
   font-variant-ligatures: none;
   background-color: var(--code-background-color);
 }

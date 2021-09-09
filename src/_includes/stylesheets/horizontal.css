@@ -40,7 +40,7 @@
     @extend :root .upright; /* TODO: :parent .upright */
 
     font-style: unset;
-    font-family: sans-serif;
+    font-family: var(--font-text-emphasized-ja);
     text-emphasis-style: revert;
   }
 }
