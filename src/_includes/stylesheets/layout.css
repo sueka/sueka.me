@@ -28,8 +28,14 @@ body {
 }
 
 .incipit {
+  /*
+  line-spacing = line-height * font-size - font-size
+  line-spacing(body) = 2(1rem) - 1rem = 1rem
+  line-spacing(incipit) = φ(φrem) - φrem = (φ-1)φrem = φ⁻¹φrem = 1rem
+  */
   font-size: 161.8034%; /* φ */
   line-height: 1.618034; /* φ */
+
   float: left;
   float: inline-start;
   margin-inline-end: 1em;
