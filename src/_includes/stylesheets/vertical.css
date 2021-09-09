@@ -40,7 +40,7 @@
   & em:where(:lang(ja)) {
     @extend :root .upright; /* TODO: :parent .upright */
 
-    font-style: revert;
+    font-style: unset;
     font-family: revert;
     text-emphasis-style: sesame;
     text-emphasis-position: over right;

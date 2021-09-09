@@ -36,16 +36,11 @@
     list-style-type: revert;
   }
 
-  & em {
+  & em:where(:lang(ja)) {
     @extend :root .upright; /* TODO: :parent .upright */
 
-    font-style: revert;
-
-    &:where(:lang(ja)) { /* Keep specificity the same as that of vertical.css */
-      font-style: revert;
-      font-family: sans-serif;
-    }
-
+    font-style: unset;
+    font-family: sans-serif;
     text-emphasis-style: revert;
   }
 }
