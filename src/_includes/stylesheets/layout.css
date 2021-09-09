@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
   inline-size: fit-content; /* Get Webkit outlines fit */
 }
 
-p {
+p, .blockquote-like {
   margin-block: 1em;
 }
 
@@ -93,7 +93,7 @@ dl > dt {
   margin-block-start: 1em;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, menu, ol, dl, pre {
+h1, h2, h3, h4, h5, h6, p, .blockquote-like, ul, menu, ol, dl, pre {
   &:first-child {
     margin-block-start: 0;
   }
@@ -114,6 +114,20 @@ dd {
 }
 
 
+.blockquote-like {
+  margin-inline: 0;
+  border-inline-start: 0.125rem solid #453ccc; /* 2/16 */
+
+  & > p {
+    margin-inline-start: 1em;
+  }
+}
+
+/* TODO: Swap blockquote and .blockquote-like when postcss-extend-rule gets better */
+blockquote {
+  @extend .blockquote-like;
+}
+
 pre {
   line-height: 1.618034; /* φ */
 }
@@ -131,4 +145,8 @@ code.hljs {
   padding-block: 0.236068em; /* φ⁻³ */
   padding-inline: 0.381966em; /* φ⁻² */
   border-radius: 0.381966em; /* φ⁻² */
+}
+
+.hidden {
+  display: none !important;
 }
