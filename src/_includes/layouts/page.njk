@@ -19,13 +19,13 @@
     {%- if vertical or vertical == null and language === 'ja' %}
     {#- Use physical, not logical #}
     {#- MinHeight(rem) = ⌈2 φ³ rem + 20 rem⌉ #}
-    <link href="{{ '~/vertical.css' | url }}" rel="stylesheet" media="(min-height: 456px)" />
+    <link href="{{ '~/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 456px)" />
     {%- endif %}
 
     {#- NOTE: Script is loaded in _config.js #}
     <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/gradient-light.min.css" rel="stylesheet" />
 
-    <link href="{{ '~/feed.xml.njk' | url }}" rel="alternate" type="application/atom+xml" title="{{ site.name }}" />
+    <link href="{{ '~/feed.xml.njk' | url(true) }}" rel="alternate" type="application/atom+xml" title="{{ site.name }}" />
     <script src="https://unpkg.com/css-has-pseudo/browser"></script>
     <script>
       cssHasPseudo(document)
