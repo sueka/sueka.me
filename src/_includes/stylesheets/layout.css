@@ -125,7 +125,7 @@ dd {
   border-inline-start: 0.125rem solid #453ccc; /* 2/16 */
 
   & > p {
-    margin-inline-start: 1em;
+    margin-inline-start: calc(1em - 0.125rem); /* 2/16 */
   }
 }
 
