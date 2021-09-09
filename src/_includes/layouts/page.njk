@@ -1,8 +1,8 @@
-{% set language = language or site.language %}
+{% set language = language or site.language -%}
 
-{% if not title %}
-  {% set incipit = content | safe | getIncipit %}
-{% endif %}
+{% if not title -%}
+  {% set incipit = content | safe | getIncipit -%}
+{% endif -%}
 
 <!DOCTYPE html>
 <html
