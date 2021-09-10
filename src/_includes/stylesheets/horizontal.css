@@ -1,46 +1,45 @@
 /* Keep contrasting with vertical.css */
 
-:root {
+html {
   writing-mode: horizontal-tb;
+  font-kerning: normal;
+  font-feature-settings: "palt", "hkna";
+  text-align: revert;
+}
 
-  & body {
-    min-block-size: 100vh;
-    min-block-size: 100vb;
+body {
+  min-block-size: 100vh;
+  min-block-size: 100vb;
+}
 
-    font-kerning: normal;
-    font-feature-settings: "palt", "hkna";
-    text-align: revert;
-  }
+.title-page {
+  min-block-size: 38.196601vw; /* height/width = φ² */
+  min-block-size: 38.196601vi; /* height/width = φ² */
+}
 
-  & .title-page {
-    min-block-size: 38.196601vw; /* height/width = φ² */
-    min-block-size: 38.196601vi; /* height/width = φ² */
-  }
+.footnote-ref,
+.footnote-backref {
+  @extend .upright;
+}
 
-  & .footnote-ref,
-  & .footnote-backref {
-    @extend :root .upright;
-  }
+.upright {
+  font-feature-settings: revert;
+  text-orientation: revert;
+}
 
-  & .upright {
-    font-feature-settings: revert;
-    text-orientation: revert;
-  }
+.digits {
+  -webkit-text-combine: revert;
+  text-combine-upright: revert;
+}
 
-  & .digits {
-    -webkit-text-combine: revert;
-    text-combine-upright: revert;
-  }
+ol {
+  list-style-type: revert;
+}
 
-  & ol {
-    list-style-type: revert;
-  }
+em:where(:lang(ja)) {
+  @extend .upright;
 
-  & em:where(:lang(ja)) {
-    @extend :root .upright; /* TODO: :parent .upright */
-
-    font-style: unset;
-    font-family: var(--font-text-emphasized-ja);
-    text-emphasis-style: revert;
-  }
+  font-style: unset;
+  font-family: var(--font-text-emphasized-ja);
+  text-emphasis-style: revert;
 }

@@ -1,48 +1,47 @@
 /* Keep contrasting with horizontal.css */
 
-:root {
+html {
   writing-mode: vertical-rl;
+  font-kerning: revert;
+  font-feature-settings: "vkrn", "vkna"; /* Don't set "vpal" */
+  text-align: justify;
+}
 
-  & body {
-    min-block-size: 100vw;
-    min-block-size: 100vb;
+body {
+  min-block-size: 100vw;
+  min-block-size: 100vb;
+}
 
-    font-kerning: revert;
-    font-feature-settings: "vkrn", "vkna"; /* Don't set "vpal" */
-    text-align: justify;
-  }
+.title-page {
+  min-block-size: 38.196601vh; /* width/height = φ² */
+  min-block-size: 38.196601vi; /* width/height = φ² */
+}
 
-  & .title-page {
-    min-block-size: 38.196601vh; /* width/height = φ² */
-    min-block-size: 38.196601vi; /* width/height = φ² */
-  }
+.footnote-ref,
+.footnote-backref {
+  @extend .upright;
+}
 
-  & .footnote-ref,
-  & .footnote-backref {
-    @extend :root .upright;
-  }
+.upright {
+  font-feature-settings: "vkrn", "vkna", "fwid";
+  text-orientation: upright;
+}
 
-  & .upright {
-    font-feature-settings: "vkrn", "vkna", "fwid";
-    text-orientation: upright;
-  }
+.digits {
+  -webkit-text-combine: horizontal; /* for Webkit and Blink */
+  text-combine-upright: all; /* for Blink and Gecko */
+  text-combine-upright: digits 2;
+}
 
-  & .digits {
-    -webkit-text-combine: horizontal; /* for Webkit and Blink */
-    text-combine-upright: all; /* for Blink and Gecko */
-    text-combine-upright: digits 2;
-  }
+ol {
+  list-style-type: cjk-ideographic;
+}
 
-  & ol {
-    list-style-type: cjk-ideographic;
-  }
+em:where(:lang(ja)) {
+  @extend .upright;
 
-  & em:where(:lang(ja)) {
-    @extend :root .upright; /* TODO: :parent .upright */
-
-    font-style: unset;
-    font-family: revert;
-    text-emphasis-style: sesame;
-    text-emphasis-position: over right;
-  }
+  font-style: unset;
+  font-family: revert;
+  text-emphasis-style: sesame;
+  text-emphasis-position: over right;
 }

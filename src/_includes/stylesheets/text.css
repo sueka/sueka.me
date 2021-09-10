@@ -5,17 +5,15 @@
   --font-text-ja: "YuMincho +36p Kana", "Yu Mincho", serif;
   --font-text-emphasized-ja: "Hiragino Sans", "Yu Gothic", sans-serif;
   --font-code-ja: CodeM, Myrica, Ricty, "Source Han Code JP", monospace;
-}
 
-body {
   --background-color: #fffefb;
   --text-color: #675640;
   --link-color: dodgerblue;
   --visited-color: darkorchid;
   --code-background-color: #ece5df;
+}
 
-  line-height: 2;
-
+html {
   font-family: var(--font-text);
   &:where(:lang(ja)) {
     font-family: var(--font-text-ja);
