@@ -1,5 +1,6 @@
 import { postcssNesting } from 'lume/deps/postcss.ts'
 import lume from 'lume/mod.ts'
+import bundler from 'lume/plugins/bundler.ts'
 import codeHighlight from 'lume/plugins/code_highlight.ts'
 import date from 'lume/plugins/date.ts'
 import postcss from 'lume/plugins/postcss.ts'
@@ -23,7 +24,16 @@ const site = lume({
 }, {
   markdown: {
     plugins: [
-      [anchor, { level: 2, permalink: anchor.permalink.headerLink() }],
+      [
+        anchor, {
+          level: 2,
+          tabIndex: false,
+          permalink: anchor.permalink.linkInsideHeader({
+            symbol: '&para;',
+            ariaHidden: true,
+          }),
+        },
+      ],
       attrs,
       bracketedSpans,
       deflist,
@@ -31,6 +41,7 @@ const site = lume({
     ],
   },
 })
+.use(bundler())
 .use(codeHighlight())
 .use(date())
 .use(postcss({

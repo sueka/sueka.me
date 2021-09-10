@@ -22,16 +22,6 @@ body {
   @extend .upright;
 }
 
-.upright {
-  font-feature-settings: revert;
-  text-orientation: revert;
-}
-
-.digits {
-  -webkit-text-combine: revert;
-  text-combine-upright: revert;
-}
-
 ol {
   list-style-type: revert;
 }
@@ -42,4 +32,18 @@ em:where(:lang(ja)) {
   font-style: unset;
   font-family: var(--font-text-emphasized-ja);
   text-emphasis-style: revert;
+}
+
+.upright {
+  font-feature-settings: revert;
+  text-orientation: revert;
+}
+
+.digits {
+  -webkit-text-combine: revert;
+  text-combine-upright: revert;
+}
+
+.header-anchor {
+  @extend .upright;
 }

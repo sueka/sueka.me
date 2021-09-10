@@ -160,6 +160,14 @@ code.hljs {
   border-radius: 0.381966em; /* φ⁻² */
 }
 
+.header-anchor {
+  visibility: hidden;
+}
+
+:hover > .header-anchor {
+  visibility: revert;
+}
+
 .hidden {
   display: none !important;
 }

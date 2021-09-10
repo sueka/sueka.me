@@ -22,17 +22,6 @@ body {
   @extend .upright;
 }
 
-.upright {
-  font-feature-settings: "vkrn", "vkna", "fwid";
-  text-orientation: upright;
-}
-
-.digits {
-  -webkit-text-combine: horizontal; /* for Webkit and Blink */
-  text-combine-upright: all; /* for Blink and Gecko */
-  text-combine-upright: digits 2;
-}
-
 ol {
   list-style-type: cjk-ideographic;
 }
@@ -44,4 +33,19 @@ em:where(:lang(ja)) {
   font-family: revert;
   text-emphasis-style: sesame;
   text-emphasis-position: over right;
+}
+
+.upright {
+  font-feature-settings: "vkrn", "vkna", "fwid";
+  text-orientation: upright;
+}
+
+.digits {
+  -webkit-text-combine: horizontal; /* for Webkit and Blink */
+  text-combine-upright: all; /* for Blink and Gecko */
+  text-combine-upright: digits 2;
+}
+
+.header-anchor {
+  @extend .upright;
 }
