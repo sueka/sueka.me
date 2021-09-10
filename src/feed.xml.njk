@@ -21,7 +21,7 @@
     {%- if page.data.language %} xml:lang="{{ page.data.language }}" {%- endif -%}
   >
     {% if not page.data.title -%}
-      {% set incipit = page.data.content | safe | getIncipit -%}
+      {% set incipit = page.data.content | md | safe | getIncipit -%}
     {% endif -%}
 
     <title type="html">{{ page.data.title or incipit }}</title>
