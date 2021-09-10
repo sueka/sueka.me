@@ -161,11 +161,11 @@ code.hljs {
 }
 
 .header-anchor {
-  visibility: hidden;
+  opacity: 0.1;
 }
 
 :hover > .header-anchor {
-  visibility: revert;
+  opacity: revert;
 }
 
 .hidden {
