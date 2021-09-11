@@ -13,8 +13,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{{ title or incipit }} {%- if title !== site.name %} - {{ site.name }} {%- endif %}</title>
-    <link href="{{ '~/main.css' | url }}" rel="stylesheet" />
-    <link href="{{ '~/horizontal.css' | url }}" rel="stylesheet" />
+    <link href="{{ '~/main.css' | url(true) }}" rel="stylesheet" />
+    <link href="{{ '~/horizontal.css' | url(true) }}" rel="stylesheet" />
 
     {%- if vertical or vertical == null and language === 'ja' %}
     {#- Use physical, not logical #}
