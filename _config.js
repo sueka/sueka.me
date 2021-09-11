@@ -42,6 +42,7 @@ const site = lume({
     ],
   },
 })
+.copy('/Logo blue.svg', 'assets/images/twitter-logo.svg')
 .use(bundler())
 .use(codeHighlight())
 .use(date())

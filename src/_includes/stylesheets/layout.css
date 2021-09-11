@@ -65,9 +65,14 @@ body {
     list-style-type: none;
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
 
-    & > li > a {
+    & > li {
+      flex: auto;
+      max-inline-size: calc(32px * 1.618034);
+
       display: flex;
+      justify-content: flex-end;
     }
   }
 }
