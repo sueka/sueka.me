@@ -1,3 +1,4 @@
+import { postcssNesting } from 'lume/deps/postcss.ts'
 import lume from 'lume/mod.ts'
 import bundler from 'lume/plugins/bundler.ts'
 import codeHighlight from 'lume/plugins/code_highlight.ts'
@@ -13,7 +14,7 @@ import bracketedSpans from 'https://jspm.dev/markdown-it-bracketed-spans'
 import deflist from 'https://jspm.dev/markdown-it-deflist'
 import footnote from 'https://jspm.dev/markdown-it-footnote'
 import postcssExtendRule from 'https://jspm.dev/postcss-extend-rule'
-import postcssPresetEnv from 'https://jspm.dev/postcss-preset-env'
+// import postcssPresetEnv from 'https://jspm.dev/postcss-preset-env'
 
 import getIncipit from './lib/getIncipit.ts'
 
@@ -46,13 +47,14 @@ const site = lume({
 .use(date())
 .use(postcss({
   plugins: [
-    postcssPresetEnv({
-      features: {
-        'font-variant-property': false,
-        'logical-properties-and-values': false,
-        'nesting-rules': true,
-      },
-    }),
+    // postcssPresetEnv({
+    //   features: {
+    //     'font-variant-property': false,
+    //     'logical-properties-and-values': false,
+    //     'nesting-rules': true,
+    //   },
+    // }),
+    postcssNesting(),
     postcssExtendRule(),
     postcssHasPseudo(),
     // csso({ restructure: false }),
