@@ -69,10 +69,14 @@ body {
 
     & > li {
       flex: auto;
-      max-inline-size: calc(32px * 1.618034);
+      max-inline-size: calc(32px * 1.618034); /* φ */
 
       display: flex;
       justify-content: flex-end;
+    }
+
+    & > li > a {
+      display: flex;
     }
   }
 }
