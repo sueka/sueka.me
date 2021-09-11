@@ -1,4 +1,4 @@
-import { postcssNesting } from 'lume/deps/postcss.ts'
+import { autoprefixer, postcssNesting } from 'lume/deps/postcss.ts'
 import lume from 'lume/mod.ts'
 import bundler from 'lume/plugins/bundler.ts'
 import codeHighlight from 'lume/plugins/code_highlight.ts'
@@ -55,6 +55,7 @@ const site = lume({
     //     'nesting-rules': true,
     //   },
     // }),
+    autoprefixer(),
     postcssNesting(),
     postcssExtendRule(),
     postcssHasPseudo(),
