@@ -4,7 +4,7 @@ import codeHighlight from 'lume/plugins/code_highlight.ts'
 import date from 'lume/plugins/date.ts'
 import postcss from 'lume/plugins/postcss.ts'
 import relativeUrls from 'lume/plugins/relative_urls.ts'
-import csso from 'https://esm.sh/postcss-csso'
+// import csso from 'https://esm.sh/postcss-csso'
 import postcssHasPseudo from 'https://jspm.dev/css-has-pseudo/postcss'
 import octicons from 'https://jspm.dev/@primer/octicons'
 import anchor from 'https://jspm.dev/markdown-it-anchor'
@@ -55,7 +55,7 @@ const site = lume({
     }),
     postcssExtendRule(),
     postcssHasPseudo(),
-    csso({ restructure: false }),
+    // csso({ restructure: false }),
   ],
   sourceMap: true,
 }))
