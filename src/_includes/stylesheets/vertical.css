@@ -26,7 +26,7 @@ ol {
   list-style-type: cjk-ideographic;
 }
 
-em:where(:lang(ja)) {
+:is(em, i):where(:lang(ja)) {
   @extend .upright;
 
   font-style: unset;
