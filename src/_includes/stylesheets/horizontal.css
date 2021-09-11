@@ -26,12 +26,12 @@ ol {
   list-style-type: revert;
 }
 
-:is(em, i):where(:lang(ja)) {
+b:where(:lang(ja)) {
   @extend .upright;
 
-  font-style: unset;
-  font-family: var(--font-text-emphasized-ja);
+  font-weight: unset;
   text-emphasis-style: revert;
+  text-decoration: underline;
 }
 
 .upright {

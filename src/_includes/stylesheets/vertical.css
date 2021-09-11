@@ -26,13 +26,13 @@ ol {
   list-style-type: cjk-ideographic;
 }
 
-:is(em, i):where(:lang(ja)) {
+b:where(:lang(ja)) {
   @extend .upright;
 
   font-style: unset;
-  font-family: revert;
   text-emphasis-style: sesame;
   text-emphasis-position: over right;
+  text-decoration: revert;
 }
 
 .upright {
