@@ -138,7 +138,7 @@ dd {
 
 .blockquote-like {
   margin-inline: 0;
-  border-inline-start: 0.125rem solid #453ccc; /* 2/16 */
+  border-inline-start: 0.125rem solid #565acf; /* 2/16 */
 
   & > p {
     margin-inline-start: calc(1em - 0.125rem); /* 2/16 */
