@@ -27,6 +27,10 @@
     text-combine-upright: revert;
   }
 
+  & ol {
+    list-style-type: revert;
+  }
+
   & em {
     @extend :root .upright; /* TODO: :parent .upright */
 
