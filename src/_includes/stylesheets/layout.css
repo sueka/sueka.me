@@ -140,10 +140,7 @@ dd {
 .blockquote-like {
   margin-inline: 0;
   border-inline-start: 0.125rem solid #565acf; /* 2/16 */
-
-  & > p {
-    margin-inline-start: calc(1em - 0.125rem); /* 2/16 */
-  }
+  padding-inline-start: calc(1em - 0.125rem); /* 2/16 */
 }
 
 /* TODO: Swap blockquote and .blockquote-like when postcss-extend-rule gets better */
