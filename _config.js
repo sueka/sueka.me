@@ -69,5 +69,8 @@ const site = lume({
 .helper('octicon', (symbol, ...args) => octicons[symbol].toSVG(...args), {
   type: 'tag',
 })
+.preprocess(['.html'], page => {
+  page.data.src = `${ page.src.path }${ page.src.ext }`
+})
 
 export default site
