@@ -31,6 +31,7 @@ const site = lume({
           tabIndex: false,
           permalink: anchor.permalink.linkInsideHeader({
             symbol: '&para;',
+            placement: 'before',
             ariaHidden: true,
           }),
         },

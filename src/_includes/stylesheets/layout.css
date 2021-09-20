@@ -94,6 +94,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-block-start: 1.618034em; /* φ */
   margin-block-end: 1em;
 
+  display: flex;
   inline-size: fit-content; /* Get Webkit outlines fit */
 }
 
@@ -169,7 +170,17 @@ code.hljs {
   border-radius: 0.381966em; /* φ⁻² */
 }
 
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+}
+
 .header-anchor {
+  position: absolute;
+  inset-block: 0; /* for Gecko */
+  inset-inline-start: -1.128205em; /* Ensure that φ rem (minimum inline-start *margin*) ≥ φ (font-size of <h1>) 39/44 (its font-size) x em */
+  font-size: 88.636364%; /* 39/44 */
+  line-height: 2.256410; /* 2 * 44/39 */
+
   opacity: 0.1;
 }
 
