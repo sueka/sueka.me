@@ -31,13 +31,15 @@ html {
   }
 }
 
-h1, h2, h3, h4, h5, h6, .incipit {
-  font-weight: 500;
+.incipit {
+  font-weight: 600;
 }
 
 h1, h2, h3, h4, h5, h6,
 dl > dt,
 dl > div > dt {
+  font-weight: initial;
+
   font-family: var(--font-text-emphasized);
   &:where(:lang(ja)) {
     font-family: var(--font-text-emphasized-ja);
