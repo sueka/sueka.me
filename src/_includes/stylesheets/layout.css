@@ -181,7 +181,8 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.1;
 }
 
-:hover > .header-anchor {
+:hover > .header-anchor,
+:target > .header-anchor {
   opacity: revert;
 }
 
