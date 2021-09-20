@@ -4,6 +4,8 @@
   {% set incipit = content | safe | getIncipit -%}
 {% endif -%}
 
+{% set verticalOk = vertical or vertical == null and language === 'ja' -%}
+
 <!DOCTYPE html>
 <html
   {%- if language %} lang={{ language }} {%- endif -%}
@@ -16,7 +18,7 @@
     <link href="{{ '~/main.css' | url(true) }}" rel="stylesheet" />
     <link href="{{ '~/horizontal.css' | url(true) }}" rel="stylesheet" />
 
-    {%- if vertical or vertical == null and language === 'ja' %}
+    {%- if verticalOk %}
     {#- Use physical, not logical #}
     {#- MinHeight(rem) = ⌈2 φ³ rem + 20 rem⌉ #}
     <link href="{{ '~/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 456px)" />
