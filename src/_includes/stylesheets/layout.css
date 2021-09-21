@@ -3,6 +3,7 @@ html {
   line-height: 2;
   text-size-adjust: none;
   word-break: break-word;
+  scroll-behavior: smooth;
 }
 
 body {
