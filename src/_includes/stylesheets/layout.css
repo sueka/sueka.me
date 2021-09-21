@@ -47,6 +47,16 @@ body {
   padding-inline: clamp(1.618034rem, min(8.923272vh, 8.923272vw), 4.236068rem); /* φ, v* = (2 φ³ rem + 39 rem) * (padding / φ³ rem), φ³ */
 }
 
+.footnote-ref {
+  & a[id] {
+    display: inline-block; /* Use line-height for the block size */
+
+    &:focus {
+      outline: none; /* for iOS */
+    }
+  }
+}
+
 .footnotes-list {
   font-size: 88.636364%; /* 39/44 */
 
