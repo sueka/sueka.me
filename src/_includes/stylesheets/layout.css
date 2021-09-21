@@ -1,3 +1,8 @@
+:root {
+  --quotation-line-color: #565acf;
+  --octicon-color: black;
+}
+
 html {
   font-size: max(16px, min(2.106499vh, 2.106499vw)); /* v* = 2 φ³ rem + 39 rem */
   line-height: 2;
@@ -92,6 +97,14 @@ body {
   }
 }
 
+.github-link:any-link {
+  color: var(--octicon-color);
+}
+
+.octicon {
+  fill: currentColor;
+}
+
 h1 { font-size: 161.8034% } /* φ^(5/5) */
 h2 { font-size: 146.9569% } /* φ^(4/5) */
 h3 { font-size: 133.4727% } /* φ^(3/5) */
@@ -150,7 +163,7 @@ dd {
 
 .blockquote-like {
   margin-inline: 0;
-  border-inline-start: 0.125rem solid #565acf; /* 2/16 */
+  border-inline-start: 0.125rem solid var(--quotation-line-color); /* 2/16 */
   padding-inline-start: calc(1em - 0.125rem); /* 2/16 */
 }
 

@@ -16,6 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{{ title or incipit }} {%- if title !== site.name %} - {{ site.name }} {%- endif %}</title>
     <link href="{{ '~/main.css' | url(true) }}" rel="stylesheet" />
+    <link href="{{ '~/dark.css' | url(true) }}" rel="stylesheet" media="(prefers-color-scheme: dark)" />
     <link href="{{ '~/horizontal.css' | url(true) }}" rel="stylesheet" />
 
     {%- if verticalOk %}
@@ -25,7 +26,8 @@
     {%- endif %}
 
     {#- NOTE: Script is loaded in _config.js #}
-    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/gradient-light.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/gradient-light.min.css" rel="stylesheet" media="(prefers-color-scheme: light)" />
+    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/gradient-dark.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)" />
 
     <link href="{{ '~/feed.xml.njk' | url(true) }}" rel="alternate" type="application/atom+xml" title="{{ site.name }}" />
     <script src="https://unpkg.com/css-has-pseudo/browser"></script>

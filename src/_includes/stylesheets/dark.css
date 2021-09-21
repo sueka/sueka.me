@@ -1,0 +1,9 @@
+:root {
+  --background-color: #222;
+  --text-color: #acacac;
+  /* --link-color: dodgerblue; */
+  --visited-color: #ba73dd;
+  --code-background-color: #24303d;
+  --quotation-line-color: #b264ea;
+  --octicon-color: #959595;
+}
