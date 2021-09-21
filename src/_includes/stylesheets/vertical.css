@@ -49,3 +49,11 @@ b:where(:lang(ja)) {
 .header-anchor {
   @extend .upright;
 }
+
+/* Keep contrasting with h# block-axis layout defined in layout.css */
+:is(h1, h2, h3, h4, h5, h6) /*- :has(.header-anchor) */ {
+  scroll-margin-right: 1.618034em; /* φ */
+  scroll-margin-left: 1em; /* NOTE: Firefox (92.0) では水平方向に移動するページ内リンクはアンカーがスクリーンに収まるまでの最小距離を移動するので、アンカーがスクリーンの左側にある場合、この値が意味を持つことがある。 */
+  scroll-margin-block-start: 1.618034em; /* φ */
+  scroll-margin-block-end: 1em; /* ditto */
+}
