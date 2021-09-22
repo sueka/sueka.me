@@ -5,6 +5,11 @@ html {
   font-kerning: normal;
   font-feature-settings: "palt", "hkna";
   text-align: revert;
+
+  /* Same as MinHeight(rem) to query vertical.css in page.njk */
+  @media (min-width: 487px) {
+    text-align: justify;
+  }
 }
 
 body {

@@ -163,8 +163,9 @@ dd {
 
 .blockquote-like {
   margin-inline: 0;
-  border-inline-start: 0.125rem solid var(--quotation-line-color); /* 2/16 */
-  padding-inline-start: calc(1em - 0.125rem); /* 2/16 */
+  border-inline: 0.125rem solid var(--quotation-line-color); /* 2/16 */
+  padding-inline: calc(1em - 0.125rem); /* 2/16 */
+  text-align: justify;
 }
 
 /* TODO: Swap blockquote and .blockquote-like when postcss-extend-rule gets better */
