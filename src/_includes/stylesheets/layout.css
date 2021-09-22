@@ -163,7 +163,12 @@ dd {
 
 .blockquote-like {
   margin-inline: 0;
-  border-inline: 0.125rem solid var(--color-indentation-guide-quotation); /* 2/16 */
+
+  /* NOTE: On iOS 14.5 Safari `border-inline` is recognized but broken */
+  border-inline-start: 0.125rem solid var(--color-indentation-guide-quotation); /* 2/16 */
+  border-inline-end: 0.125rem solid var(--color-indentation-guide-quotation); /* 2/16 */
+  /* border-inline: 0.125rem solid var(--color-indentation-guide-quotation); */ /* 2/16 */
+
   padding-inline: calc(1em - 0.125rem); /* 2/16 */
   text-align: justify;
 }

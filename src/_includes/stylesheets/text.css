@@ -47,6 +47,7 @@ dl > div > dt {
 }
 
 p {
+  /* NOTE: On Safari 10 `hanging-punctuation: force-end` is recognized but broken */
   hanging-punctuation: allow-end;
   /* hanging-punctuation: force-end; */
 }
