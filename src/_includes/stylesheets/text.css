@@ -6,11 +6,11 @@
   --font-text-emphasized-ja: "Hiragino Sans", "Yu Gothic", sans-serif;
   --font-code-ja: CodeM, Myrica, Ricty, "Source Han Code JP", monospace;
 
-  --background-color: #fffefb;
-  --text-color: #675640;
-  --link-color: dodgerblue;
-  --visited-color: darkorchid;
-  --code-background-color: #ece5df;
+  --color-background: #fffefb;
+  --color-text: #675640;
+  --color-link: dodgerblue;
+  --color-visited: darkorchid;
+  --color-background-code: #ece5df;
 }
 
 html {
@@ -21,8 +21,8 @@ html {
 
   font-variant-ligatures: common-ligatures;
 
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 .footer {
@@ -68,11 +68,11 @@ a {
 }
 
 a:link {
-  color: var(--link-color);
+  color: var(--color-link);
 }
 
 a:visited {
-  color: var(--visited-color);
+  color: var(--color-visited);
 }
 
 code {
@@ -82,5 +82,5 @@ code {
   }
 
   font-variant-ligatures: none;
-  background-color: var(--code-background-color);
+  background-color: var(--color-background-code);
 }

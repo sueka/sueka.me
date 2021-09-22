@@ -1,9 +1,9 @@
 :root {
-  --background-color: #222;
-  --text-color: #acacac;
-  /* --link-color: dodgerblue; */
-  --visited-color: #ba73dd;
-  --code-background-color: #24303d;
-  --quotation-line-color: #b264ea;
-  --octicon-color: #959595;
+  --color-background: #222;
+  --color-text: #acacac;
+  /* --color-link: dodgerblue; */
+  --color-visited: #ba73dd;
+  --color-background-code: #24303d;
+  --color-indentation-guide-quotation: #b264ea;
+  --color-octicon: #959595;
 }

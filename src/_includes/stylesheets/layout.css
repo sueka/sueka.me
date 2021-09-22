@@ -1,6 +1,6 @@
 :root {
-  --quotation-line-color: #565acf;
-  --octicon-color: black;
+  --color-indentation-guide-quotation: #565acf;
+  --color-octicon: black;
 }
 
 html {
@@ -98,7 +98,7 @@ body {
 }
 
 .github-link:any-link {
-  color: var(--octicon-color);
+  color: var(--color-octicon);
 }
 
 .octicon {
@@ -163,7 +163,7 @@ dd {
 
 .blockquote-like {
   margin-inline: 0;
-  border-inline: 0.125rem solid var(--quotation-line-color); /* 2/16 */
+  border-inline: 0.125rem solid var(--color-indentation-guide-quotation); /* 2/16 */
   padding-inline: calc(1em - 0.125rem); /* 2/16 */
   text-align: justify;
 }
