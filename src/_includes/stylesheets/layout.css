@@ -169,7 +169,7 @@ dd {
   border-inline-end: 0.125rem solid var(--color-indentation-guide-quotation); /* 2/16 */
   /* border-inline: 0.125rem solid var(--color-indentation-guide-quotation); */ /* 2/16 */
 
-  padding-inline: calc(1em - 0.125rem); /* 2/16 */
+  padding-inline: 0.875rem; /* 1 - 2/16 */
   text-align: justify;
 }
 
@@ -209,6 +209,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 2.256410; /* 2 * 44/39 */
 
   opacity: 0.1;
+
+  @nest .blockquote-like & {
+    inset-inline-start: calc(-1.128205em - 1rem); /* (the value of .header-anchor not in blockquote) - (blockquote indentation width) */
+  }
 }
 
 :hover > .header-anchor,
