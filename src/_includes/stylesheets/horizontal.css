@@ -7,7 +7,7 @@ html {
   text-align: revert;
 
   /* Same as MinHeight(rem) to query vertical.css in page.njk */
-  @media (min-width: 487px) {
+  @media (min-width: 526px) {
     text-align: justify;
   }
 }
