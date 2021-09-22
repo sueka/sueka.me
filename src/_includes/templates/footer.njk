@@ -7,7 +7,7 @@
     </li>
     <li>
       {# TODO: Replace `master' with Git commit hash #}
-      <a href="https://github.com/{{ site.github_repo }}/blob/master/src{{ src }}" rel="external" class="github-link">
+      <a href="https://github.com/{{ site.github_repo }}/blob/{{ gitCommitHash }}/src{{ src }}" rel="external" class="github-link">
         {#- FIXME: inline-size: 2rem #}
         {% octicon 'mark-github', { width: 32 } %}
       </a>

@@ -74,4 +74,21 @@ const site = lume({
   page.data.src = `${ page.src.path }${ page.src.ext }`
 })
 
+const process = Deno.run({
+  env: {
+    GIT_PAGER: '',
+  },
+  cmd: ['git', 'show', '-s', '--format=%H'],
+  stdout: 'piped',
+})
+
+const status = await process.status()
+
+// TODO: Abort building in a more normal way
+if (!status.success) {
+  throw new Error
+}
+
+site.data('gitCommitHash', new TextDecoder().decode(await process.output()))
+
 export default site
