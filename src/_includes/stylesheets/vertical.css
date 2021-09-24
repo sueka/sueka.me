@@ -35,15 +35,27 @@ b:where(:lang(ja)) {
   text-decoration: revert;
 }
 
+/* NOTE: 和文中の欧文はデフォルトで text-orientation: sideways のやうに表示されるが、その場合、 font-feature-settings は変更されない。 */
+/* See also: JIS X 4051:2004 4.7 b */
+.sideways {
+  font-feature-settings: "hkna";
+  &:where(:not(:lang(ja))) {
+    font-feature-settings: "palt", "hkna";
+  }
+
+  text-orientation: sideways;
+}
+
+/* See also: JIS X 4051:2004 4.7 b 備考 */
 .upright {
   font-feature-settings: "vkrn", "vkna", "fwid";
   text-orientation: upright;
 }
 
-.digits {
-  -webkit-text-combine: horizontal; /* for Webkit and Blink */
-  text-combine-upright: all; /* for Blink and Gecko */
-  text-combine-upright: digits 2;
+/* See also: JIS X 4051:2004 4.8 */
+.tate-chu-yoko {
+  -webkit-text-combine: horizontal; /* for Webkit */
+  text-combine-upright: all;
 }
 
 .header-anchor {

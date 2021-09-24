@@ -39,12 +39,17 @@ b:where(:lang(ja)) {
   text-decoration: underline;
 }
 
+.sideways {
+  font-feature-settings: revert;
+  text-orientation: revert;
+}
+
 .upright {
   font-feature-settings: revert;
   text-orientation: revert;
 }
 
-.digits {
+.tate-chu-yoko {
   -webkit-text-combine: revert;
   text-combine-upright: revert;
 }
