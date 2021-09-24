@@ -7,7 +7,7 @@ html {
   font-size: max(16px, min(2.106499vh, 2.106499vw)); /* v* = 2 φ³ rem + 39 rem */
   line-height: 2;
   text-size-adjust: none;
-  word-break: break-word;
+  overflow-wrap: break-word;
   scroll-behavior: smooth;
 }
 
