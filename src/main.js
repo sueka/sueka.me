@@ -23,13 +23,13 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
   const isChrome = browser.is('Chrome')
 
   if (isFirefox) {
-    loadStylesheet('{{ '~/gecko.css' | url(true) }}', {
+    loadStylesheet('{{ '~/vertical-gecko.css' | url(true) }}', {
       media: '(min-height: 526px)', // Same as the link to vertical.css
     })
   }
 
   if (isChrome) {
-    loadStylesheet('{{ '~/blink.css' | url(true) }}', {
+    loadStylesheet('{{ '~/vertical-blink.css' | url(true) }}', {
       media: '(min-height: 526px)', // Same as the link to vertical.css
     })
   }
