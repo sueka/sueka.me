@@ -1,31 +1,28 @@
-:root {
+:root, [lang] {
   --font-text: serif;
   --font-text-emphasized: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
   --font-code: Menlo, Consolas, monospace;
-  --font-text-ja: "YuMincho +36p Kana", "Yu Mincho", serif;
-  --font-text-emphasized-ja: "Hiragino Sans", "Yu Gothic", sans-serif;
-  --font-code-ja: CodeM, Myrica, Ricty, "Source Han Code JP", monospace;
+}
+
+[lang="ja"] {
+  --font-text: "YuMincho +36p Kana", "Yu Mincho", serif;
+  --font-text-emphasized: "Hiragino Sans", "Yu Gothic", sans-serif;
+  --font-code: CodeM, Myrica, Ricty, "Source Han Code JP", monospace;
 }
 
 html {
   @nest :where(&) { font-family: var(--font-text) }
-  @nest :where(&):where(:lang(ja)) { font-family: var(--font-text-ja) }
-  @nest :where(&) :where([lang]) { font-family: var(--font-text) }
-  @nest :where(&) :where([lang=ja]) { font-family: var(--font-text-ja) }
+  @nest :where(&) * { font-family: var(--font-text) }
 }
 
 h1, h2, h3, h4, h5, h6,
 dl > dt,
 dl > div > dt {
   @nest :where(&) { font-family: var(--font-text-emphasized) }
-  @nest :where(&):where(:lang(ja)) { font-family: var(--font-text-emphasized-ja) }
-  @nest :where(&) :where([lang]) { font-family: var(--font-text-emphasized) }
-  @nest :where(&) :where([lang=ja]) { font-family: var(--font-text-emphasized-ja) }
+  @nest :where(&) * { font-family: var(--font-text-emphasized) }
 }
 
 code {
   @nest :where(&) { font-family: var(--font-code) }
-  @nest :where(&):where(:lang(ja)) { font-family: var(--font-code-ja) }
-  @nest :where(&) :where([lang]) { font-family: var(--font-code) }
-  @nest :where(&) :where([lang=ja]) { font-family: var(--font-code-ja) }
+  @nest :where(&) * { font-family: var(--font-code) }
 }
