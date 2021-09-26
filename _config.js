@@ -91,6 +91,6 @@ if (!status.success) {
   throw new Error
 }
 
-site.data('gitCommitHash', new TextDecoder().decode(await process.output()))
+site.data('gitCommitHash', new TextDecoder().decode(await process.output()).trimEnd())
 
 export default site
