@@ -27,7 +27,8 @@ const site = lume({
   markdown: {
     plugins: [
       [
-        anchor, {
+        anchor,
+        {
           level: 2,
           tabIndex: false,
           permalink: anchor.permalink.linkInsideHeader({
