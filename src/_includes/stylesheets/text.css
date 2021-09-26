@@ -13,11 +13,18 @@ html {
   color: var(--color-text);
 }
 
-
 .footer {
   & > ul > li > a {
     border-style: none;
   }
+}
+
+.github-link:any-link {
+  color: var(--color-octicon);
+}
+
+.octicon {
+  fill: currentColor;
 }
 
 .incipit {
@@ -63,4 +70,10 @@ a:visited {
 code {
   font-variant-ligatures: none;
   background-color: var(--color-background-code);
+}
+
+.footnote-ref {
+  & a[id]:focus {
+    outline: none; /* for iOS */
+  }
 }

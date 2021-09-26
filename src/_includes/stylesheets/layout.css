@@ -55,10 +55,6 @@ body {
 .footnote-ref {
   & a[id] {
     display: inline-block; /* Use line-height for the block size */
-
-    &:focus {
-      outline: none; /* for iOS */
-    }
   }
 }
 
@@ -95,14 +91,6 @@ body {
       display: flex;
     }
   }
-}
-
-.github-link:any-link {
-  color: var(--color-octicon);
-}
-
-.octicon {
-  fill: currentColor;
 }
 
 h1 { font-size: 161.8034% } /* φ^(5/5) */
