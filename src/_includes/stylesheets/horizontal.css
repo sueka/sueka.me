@@ -72,10 +72,16 @@ b:where(:lang(ja)) {
   scroll-margin-block-end: 1em;
 }
 
+.footnote-ref a[id] {
+  scroll-margin: 1em 0;
+  scroll-margin-block: 1em;
+  scroll-margin-inline: 0;
+}
+
 .footnotes-list {
   & li:is([id]) {
     scroll-margin: 0.5em 0;
-    scroll-margin-block: 0.5em;
+    scroll-margin-block: 0.5em; /* half of (line-height - 1em) */
     scroll-margin-inline: 0;
   }
 }
