@@ -19,18 +19,7 @@ body {
 
 .title-page {
   min-block-size: 38.196601vw; /* height/width = φ² */
-  padding-block: clamp(1.618034rem, 8.923272vh, 4.236068rem);
-  padding-inline: clamp(1.618034rem, 8.923272vw, 4.236068rem);
   min-block-size: 38.196601vi; /* height/width = φ² */
-  padding-block: clamp(1.618034rem, 8.923272vb, 4.236068rem); /* φ, vb = (2 φ³ rem + 39 rem) * (padding / φ³ rem), φ³ */
-  padding-inline: clamp(1.618034rem, 8.923272vi, 4.236068rem); /* φ, vi = (2 φ³ rem + 39 rem) * (padding / φ³ rem), φ³ */
-}
-
-.body, .footer {
-  padding-block: clamp(1rem, 7.647005vh, 2.618034rem);
-  padding-inline: clamp(1.618034rem, 8.923272vw, 4.236068rem);
-  padding-block: clamp(1rem, 7.647005vb, 2.618034rem); /* vb = (2 φ² rem + 29 rem) * (padding / φ² rem), φ² */
-  padding-inline: clamp(1.618034rem, 8.923272vi, 4.236068rem); /* φ, vi = (2 φ³ rem + 39 rem) * (padding / φ³ rem), φ³ */
 }
 
 .footnote-ref,

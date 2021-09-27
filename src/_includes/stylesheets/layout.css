@@ -19,6 +19,8 @@ body {
 
 .title-page {
   box-sizing: border-box;
+  padding: clamp(1.618034rem, min(8.923272vh, 8.923272vw), 4.236068rem); /* φ, v* = (2 φ³ rem + 39 rem) * (padding / φ³ rem), φ³ */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,6 +47,11 @@ body {
   margin-inline-end: 1em;
 }
 
+.body {
+  padding-block: clamp(1rem, min(7.647005vh, 7.647005vw), 2.618034rem); /* v* = (2 φ² rem + 29 rem) * (padding / φ² rem), φ² */
+  padding-inline: clamp(1.618034rem, min(8.923272vh, 8.923272vw), 4.236068rem); /* φ, v* = (2 φ³ rem + 39 rem) * (padding / φ³ rem), φ³ */
+}
+
 .footnotes-list {
   font-size: 88.636364%; /* 39/44 */
 
@@ -55,6 +62,9 @@ body {
 
 .footer {
   font-size: 88.636364%; /* 39/44 */
+
+  padding-block: clamp(1rem, min(7.647005vh, 7.647005vw), 2.618034rem); /* v* = (2 φ² rem + 29 rem) * (padding / φ² rem), φ² */
+  padding-inline: clamp(1.618034rem, min(8.923272vh, 8.923272vw), 4.236068rem); /* φ, v* = (2 φ³ rem + 39 rem) * (padding / φ³ rem), φ³ */
 
   & > ul {
     padding-inline-start: 0;
