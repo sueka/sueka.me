@@ -14,7 +14,12 @@ html {
 
 body {
   min-block-size: 100vh;
+  max-inline-size: 100vh;
+  min-inline-size: min(760px, 100vw);
   min-block-size: 100vb;
+  max-inline-size: 100vb;
+  min-inline-size: min(760px, 100vi); /* ⌈2 * φ³ * 16 + 39 * 16⌉ */
+  margin-inline: auto;
 }
 
 .title-page {
