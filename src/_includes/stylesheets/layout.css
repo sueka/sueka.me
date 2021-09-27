@@ -190,7 +190,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes mark-once {
   50% {
-    @extend mark;
+    /* @extend mark; */
+    background-color: var(--color-mark); /* TODO: Firefox で、訪問済みリンクの color をアニメーションで変更すると、アニメーションが終了する直前に一時的にリンクの色が未訪問リンクの色になる。この問題が解決したら、この行を削除し、前行のコメントを解除する。 */
   }
 }
 
