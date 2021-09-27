@@ -27,6 +27,10 @@ body {
   @extend .upright;
 }
 
+.footnote-ref {
+  /* font-feature-settings: revert; */
+}
+
 ol {
   list-style-type: revert;
 }

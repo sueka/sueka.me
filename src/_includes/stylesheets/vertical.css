@@ -22,6 +22,10 @@ body {
   @extend .upright;
 }
 
+.footnote-ref {
+  font-feature-settings: "vkrn", "vkna", "fwid", "vpal"; /* .upright + "vpal" */
+}
+
 ol {
   list-style-type: cjk-ideographic;
 }
