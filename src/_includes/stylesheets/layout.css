@@ -184,6 +184,16 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+:target {
+  animation: mark-once 2s;
+}
+
+@keyframes mark-once {
+  50% {
+    @extend mark;
+  }
+}
+
 .header-anchor {
   position: absolute;
   inset-block: 0; /* for Gecko */

@@ -4,6 +4,7 @@
   --color-link: dodgerblue;
   --color-visited: darkorchid;
   --color-background-code: #ece5df;
+  --color-mark: #fe0d;
 }
 
 html {
@@ -70,6 +71,11 @@ a:visited {
 code {
   font-variant-ligatures: none;
   background-color: var(--color-background-code);
+}
+
+mark {
+  background-color: var(--color-mark);
+  color: currentColor;
 }
 
 .footnote-ref {
