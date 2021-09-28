@@ -77,9 +77,3 @@ mark {
   background-color: var(--color-mark);
   color: currentColor;
 }
-
-.footnote-ref {
-  & a[id]:focus {
-    outline: none; /* for iOS */
-  }
-}
