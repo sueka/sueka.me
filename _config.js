@@ -13,7 +13,7 @@ import attrs from 'https://jspm.dev/markdown-it-attrs'
 import bracketedSpans from 'https://jspm.dev/markdown-it-bracketed-spans'
 import deflist from 'https://jspm.dev/markdown-it-deflist'
 import footnote from 'https://jspm.dev/markdown-it-footnote'
-// import postcssExtendRule from 'https://jspm.dev/postcss-extend-rule'
+import postcssExtendRule from 'https://dev.jspm.io/postcss-extend-rule'
 // import postcssPresetEnv from 'https://jspm.dev/postcss-preset-env'
 
 import getIncipit from './lib/getIncipit.ts'
@@ -60,7 +60,7 @@ const site = lume({
     // }),
     autoprefixer(),
     postcssNesting(),
-    // postcssExtendRule(),
+    postcssExtendRule(),
     postcssHasPseudo(),
     // csso({ restructure: false }),
   ],
