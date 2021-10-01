@@ -6,7 +6,7 @@ import date from 'lume/plugins/date.ts'
 import postcss from 'lume/plugins/postcss.ts'
 import relativeUrls from 'lume/plugins/relative_urls.ts'
 // import csso from 'https://esm.sh/postcss-csso'
-// import postcssHasPseudo from 'https://jspm.dev/css-has-pseudo/postcss'
+import postcssHasPseudo from 'https://jspm.dev/css-has-pseudo/postcss'
 import octicons from 'https://jspm.dev/@primer/octicons'
 import anchor from 'https://jspm.dev/markdown-it-anchor'
 import attrs from 'https://jspm.dev/markdown-it-attrs'
@@ -61,7 +61,7 @@ const site = lume({
     autoprefixer(),
     postcssNesting(),
     // postcssExtendRule(),
-    // postcssHasPseudo(),
+    postcssHasPseudo(),
     // csso({ restructure: false }),
   ],
   sourceMap: true,
