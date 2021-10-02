@@ -32,6 +32,9 @@
     <link href="{{ '~/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 526px)" />
     {%- endif %}
 
+    <link href="{{ '~/horizontal.css' | url(true) }}" rel="stylesheet alternate" title="Prefer horizontal" />
+    <link href="{{ '~/vertical.css' | url(true) }}" rel="stylesheet alternate" title="Prefer vertical" />
+
     {#- NOTE: Script is loaded in _config.js #}
     <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/gradient-light.min.css" rel="stylesheet" media="(prefers-color-scheme: light)" />
     <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/gradient-dark.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)" />
