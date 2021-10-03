@@ -21,14 +21,14 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
     if (isGecko) {
       const linkForGecko = link.cloneNode()
 
-      linkForGecko.href = linkForGecko.href.replace(/(?=\.css$)/, '-gecko')
+      linkForGecko.href = linkForGecko.getAttribute('href').replace(/(?=\.css$)/, '-gecko')
       document.head.insertBefore(linkForGecko, link.nextSibling)
     }
 
     if (isBlink) {
       const linkForBlink = link.cloneNode()
 
-      linkForBlink.href = linkForBlink.href.replace(/(?=\.css$)/, '-blink')
+      linkForBlink.href = linkForBlink.getAttribute('href').replace(/(?=\.css$)/, '-blink')
       document.head.insertBefore(linkForBlink, link.nextSibling)
     }
   }
