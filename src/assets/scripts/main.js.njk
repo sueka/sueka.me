@@ -1,8 +1,3 @@
----
-url: /assets/scripts/main.js
-templateEngine: njk
----
-
 window.addEventListener('touchstart', () => {})
 
 import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser }) => {
@@ -15,7 +10,7 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
     return
   }
 
-  const links = document.querySelectorAll('link[href$="{{ '~/horizontal.css' | url }}"], link[href$="{{ '~/vertical.css' | url }}"]')
+  const links = document.querySelectorAll('link[href$="{{ '~/assets/stylesheets/horizontal.css' | url }}"], link[href$="{{ '~/assets/stylesheets/vertical.css' | url }}"]')
 
   for (const link of links) {
     if (isGecko) {
