@@ -11,23 +11,25 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
   const isGecko = browser.isEngine('Gecko')
   const isBlink = browser.isEngine('Blink')
 
-  const linksToVerticalCss = document.querySelectorAll('link[href$="{{ '~/vertical.css' | url }}"]')
+  if (!isGecko && !isBlink) {
+    return
+  }
 
-  for (const link of linksToVerticalCss) {
+  const links = document.querySelectorAll('link[href$="{{ '~/horizontal.css' | url }}"], link[href$="{{ '~/vertical.css' | url }}"]')
+
+  for (const link of links) {
     if (isGecko) {
-      const linkToVerticalGeckoCss = link.cloneNode()
+      const linkForGecko = link.cloneNode()
 
-      linkToVerticalGeckoCss.href = '{{ '~/vertical-gecko.css' | url(true) }}'
-
-      document.head.insertBefore(linkToVerticalGeckoCss, link.nextSibling)
+      linkForGecko.href = linkForGecko.href.replace(/(?=\.css$)/, '-gecko')
+      document.head.insertBefore(linkForGecko, link.nextSibling)
     }
 
     if (isBlink) {
-      const linkToVerticalBlinkCss = link.cloneNode()
+      const linkForBlink = link.cloneNode()
 
-      linkToVerticalBlinkCss.href = '{{ '~/vertical-blink.css' | url(true) }}'
-
-      document.head.insertBefore(linkToVerticalBlinkCss, link.nextSibling)
+      linkForBlink.href = linkForBlink.href.replace(/(?=\.css$)/, '-blink')
+      document.head.insertBefore(linkForBlink, link.nextSibling)
     }
   }
 })

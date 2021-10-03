@@ -31,6 +31,12 @@ body {
   /* font-feature-settings: revert; */
 }
 
+/* code:root, */
+:not(pre) > code {
+  padding-block: 0.236068em; /* φ⁻³ */
+  padding-inline: 0.381966em; /* φ⁻² */
+}
+
 ol {
   list-style-type: revert;
 }

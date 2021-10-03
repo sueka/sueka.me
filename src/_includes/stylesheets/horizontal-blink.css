@@ -1,0 +1,7 @@
+/* Keep contrasting with vertical-blink.css */
+
+/* code:root, */
+:not(pre) > code {
+  position: revert;
+  inset-block-start: revert;
+}
