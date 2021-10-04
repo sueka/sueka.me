@@ -2,6 +2,8 @@
 
 html {
   writing-mode: horizontal-tb;
+  font-size: clamp(16px, 2.106499vw, 2.949098vh);
+  font-size: clamp(16px, 2.106499vi, 2.949098vb); /* vi = 2 φ³ rem + 39 rem, vb = 105/147 (2 φ³ rem + 39 rem) */
   font-kerning: normal;
   font-feature-settings: "palt", "hkna";
   text-align: revert;
