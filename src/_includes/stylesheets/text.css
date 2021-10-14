@@ -73,6 +73,11 @@ code {
   background-color: var(--color-background-code);
 }
 
+ruby {
+  ruby-align: center;
+  ruby-overhang: auto;
+}
+
 mark {
   background-color: var(--color-mark);
   color: currentColor;

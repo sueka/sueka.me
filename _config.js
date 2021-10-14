@@ -5,6 +5,7 @@ import codeHighlight from 'lume/plugins/code_highlight.ts'
 import date from 'lume/plugins/date.ts'
 import postcss from 'lume/plugins/postcss.ts'
 import relativeUrls from 'lume/plugins/relative_urls.ts'
+import slugifyUrls from 'lume/plugins/slugify_urls.ts'
 // import csso from 'https://esm.sh/postcss-csso'
 import postcssHasPseudo from 'https://jspm.dev/css-has-pseudo/postcss'
 import octicons from 'https://jspm.dev/@primer/octicons'
@@ -67,6 +68,7 @@ const site = lume({
   sourceMap: true,
 }))
 .use(relativeUrls())
+.use(slugifyUrls())
 .filter('encodeUri', encodeURI)
 .filter('getIncipit', getIncipit)
 .filter('text', text)
