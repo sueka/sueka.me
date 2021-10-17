@@ -35,7 +35,7 @@ html {
 h1, h2, h3, h4, h5, h6,
 dl > dt,
 dl > div > dt {
-  font-weight: initial;
+  font-weight: unset;
 }
 
 p {
