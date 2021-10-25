@@ -18,7 +18,9 @@ body {
 }
 
 .main {
-  display: grid; /* Prevents margins of .title-page and .body from offsetting */
+  /* Prevents margins of .title-page and .body from offsetting */
+  display: flex;
+  flex-direction: column;
 }
 
 .title-page {
