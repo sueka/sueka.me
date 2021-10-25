@@ -8,3 +8,8 @@
   --color-indentation-guide-quotation: #b264ea;
   --color-octicon: #959595;
 }
+
+/* layout */
+hr {
+  border-style: outset;
+}

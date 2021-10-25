@@ -1,6 +1,7 @@
 :root {
   --color-indentation-guide-quotation: #565acf;
   --color-octicon: black;
+  --color-border: #7f7f7f;
 }
 
 html {
@@ -11,14 +12,18 @@ html {
 }
 
 body {
-  display: flex;
+  display: flex; /* Prevents margins of .body and .footer from offsetting, also */
   flex-direction: column;
   justify-content: space-between;
 }
 
+.main {
+  display: grid; /* Prevents margins of .title-page and .body from offsetting */
+}
+
 .title-page {
   box-sizing: border-box;
-  padding: clamp(1.618034rem, 8.923272vmin, 4.236068rem); /* φ, v* = (2 φ³ rem + 39 rem) * (padding / φ³ rem), φ³ */
+  margin: clamp(1.618034rem, 8.923272vmin, 4.236068rem); /* φ, v* = (2 φ³ rem + 39 rem) * (margin / φ³ rem), φ³ */
 
   display: flex;
   flex-direction: column;
@@ -47,8 +52,14 @@ body {
 }
 
 .body {
-  padding-block: clamp(1rem, 7.647005vmin, 2.618034rem); /* v* = (2 φ² rem + 29 rem) * (padding / φ² rem), φ² */
-  padding-inline: clamp(1.618034rem, 8.923272vmin, 4.236068rem); /* φ, v* = (2 φ³ rem + 39 rem) * (padding / φ³ rem), φ³ */
+  margin-block: clamp(1rem, 7.647005vmin, 2.618034rem); /* v* = (2 φ² rem + 29 rem) * (margin / φ² rem), φ² */
+  margin-inline: clamp(1.618034rem, 8.923272vmin, 4.236068rem); /* φ, v* = (2 φ³ rem + 39 rem) * (margin / φ³ rem), φ³ */
+}
+
+hr {
+  margin-block: clamp(1rem, 7.647005vmin, 2.618034rem); /* same as that of .body */
+  /* border-style: inset; */
+  border-color: var(--color-border);
 }
 
 .footnotes-list {
@@ -62,8 +73,8 @@ body {
 .footer {
   font-size: 88.636364%; /* 39/44 */
 
-  padding-block: clamp(1rem, 7.647005vmin, 2.618034rem); /* v* = (2 φ² rem + 29 rem) * (padding / φ² rem), φ² */
-  padding-inline: clamp(1.618034rem, 8.923272vmin, 4.236068rem); /* φ, v* = (2 φ³ rem + 39 rem) * (padding / φ³ rem), φ³ */
+  margin-block: clamp(1rem, 7.647005vmin, 2.618034rem); /* v* = (2 φ² rem + 29 rem) * (margin / φ² rem), φ² */
+  margin-inline: clamp(1.618034rem, 8.923272vmin, 4.236068rem); /* φ, v* = (2 φ³ rem + 39 rem) * (margin / φ³ rem), φ³ */
 
   & > ul {
     padding-inline-start: 0;
