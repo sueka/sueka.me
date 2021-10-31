@@ -17,6 +17,19 @@ body {
   justify-content: space-between;
 }
 
+body {
+  scroll-snap-type: block proximity;
+
+  & > * {
+    scroll-snap-stop: always;
+    scroll-snap-align: none;
+  }
+
+  & > .footer {
+    scroll-snap-align: end;
+  }
+}
+
 .main {
   /* Prevents margins of .title-page and .body from offsetting */
   display: flex;
@@ -77,6 +90,7 @@ hr {
 
   margin-block: clamp(1rem, 7.647005vmin, 2.618034rem); /* v* = (2 φ² rem + 29 rem) * (margin / φ² rem), φ² */
   margin-inline: clamp(1.618034rem, 8.923272vmin, 4.236068rem); /* φ, v* = (2 φ³ rem + 39 rem) * (margin / φ³ rem), φ³ */
+  scroll-margin-block: clamp(1rem, 7.647005vmin, 2.618034rem); /* same as margin-block */
 
   & > ul {
     padding-inline-start: 0;
