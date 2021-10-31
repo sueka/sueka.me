@@ -17,6 +17,8 @@ html {
 body {
   min-block-size: 100vh;
   min-block-size: 100vb;
+  margin-block-end: calc(100vh - (2 * clamp(1rem, 7.647005vmin, 2.618034rem) + 32px));
+  margin-block-end: calc(100vb - (2 * clamp(1rem, 7.647005vmin, 2.618034rem) + 32px)); /* screen block size - block size of the footer; FIXME: フッターに改行が含まれていると、最後までスクロールしたときにフッターの一部がスクリーン外に出ることがある。横書きで、スクリーン幅が 115 px 以下のときに発生する。 */
 }
 
 .title-page {
