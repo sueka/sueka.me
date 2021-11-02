@@ -1,14 +1,11 @@
 ---
 layout: layouts/page.njk
-templateEngine: njk, md
 title: このウェブサイトについて
 date: 2021-08-27
-lastmod: 2021-10-15
+lastmod: 2021-11-03
 ---
 
 このウェブサイトは[私](#作者)の個人ブログです。
-
-ブログらしいナビゲーション機能はありませんが、 [Atom フィード]({{ '~/feed.xml.njk' | url(true) }})で全てのページを配信してゐます。
 
 ## 作者
 
