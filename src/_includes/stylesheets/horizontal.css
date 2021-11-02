@@ -2,8 +2,19 @@
 
 html {
   writing-mode: horizontal-tb;
-  font-size: clamp(16px, 2.106499vw, 2.920896vh);
-  font-size: clamp(16px, 2.106499vi, 2.920896vb); /* vi = 2 φ³ rem + 39 rem, vb = (2 φ² + 29)/(2 φ³ + 39) (2 φ³ rem + 39 rem) */
+
+  font-size: clamp(
+    16px,
+    100vw / (2 * 4.236068 + 39),
+    100vh / (2 * 2.618034 + 29)
+  );
+
+  font-size: clamp(
+    16px,
+    100vi / (2 * 4.236068 + 39), /* φ³ */
+    100vb / (2 * 2.618034 + 29) /* φ³ */
+  );
+
   font-kerning: normal;
   font-feature-settings: "palt", "hkna";
   text-align: revert;
@@ -20,8 +31,8 @@ body {
 }
 
 .title-page {
-  min-block-size: 38.196601vw; /* height/width = φ² */
-  min-block-size: 38.196601vi; /* height/width = φ² */
+  min-block-size: 38.196601vw;
+  min-block-size: 38.196601vi; /* φ⁻²; height/width = φ² */
 }
 
 .footnote-ref,

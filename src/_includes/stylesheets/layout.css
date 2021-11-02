@@ -25,7 +25,11 @@ body {
 
 .title-page {
   box-sizing: border-box;
-  margin: clamp(1.618034rem, 8.923272vmin, 4.236068rem); /* φ, v* = (2 φ³ rem + 39 rem) * (margin / φ³ rem), φ³ */
+  margin: clamp(
+    1.618034rem, /* φ */
+    100vmin * 4.236068 / (2 * 4.236068 + 39), /* φ³ */
+    4.236068rem /* φ³ */
+  );
 
   display: flex;
   flex-direction: column;
@@ -54,18 +58,33 @@ body {
 }
 
 .body {
-  margin-block: clamp(1rem, 7.647005vmin, 2.618034rem); /* v* = (2 φ² rem + 29 rem) * (margin / φ² rem), φ² */
-  margin-inline: clamp(1.618034rem, 8.923272vmin, 4.236068rem); /* φ, v* = (2 φ³ rem + 39 rem) * (margin / φ³ rem), φ³ */
+  margin-block: clamp(
+    1rem,
+    100vmin * 2.618034 / (2 * 2.618034 + 29), /* φ² */
+    2.618034rem /* φ² */
+  );
+
+  margin-inline: clamp(
+    1.618034rem, /* φ */
+    100vmin * 4.236068 / (2 * 4.236068 + 39), /* φ³ */
+    4.236068rem /* φ³ */
+  );
 }
 
 hr {
-  margin-block: clamp(1rem, 7.647005vmin, 2.618034rem); /* same as that of .body */
+  /* same as that of .body */
+  margin-block: clamp(
+    1rem,
+    100vmin * 2.618034 / (2 * 2.618034 + 29), /* φ² */
+    2.618034rem /* φ² */
+  );
+
   /* border-style: inset; */
   border-color: var(--color-border);
 }
 
 .footnotes-list {
-  font-size: 88.636364%; /* 39/44 */
+  font-size: calc(39 / 44 * 100%);
 
   & > .footnote-item > p {
     display: contents; /* for Gecko */
@@ -73,10 +92,19 @@ hr {
 }
 
 .footer {
-  font-size: 88.636364%; /* 39/44 */
+  font-size: calc(39 / 44 * 100%);
 
-  margin-block: clamp(1rem, 7.647005vmin, 2.618034rem); /* v* = (2 φ² rem + 29 rem) * (margin / φ² rem), φ² */
-  margin-inline: clamp(1.618034rem, 8.923272vmin, 4.236068rem); /* φ, v* = (2 φ³ rem + 39 rem) * (margin / φ³ rem), φ³ */
+  margin-block: clamp(
+    1rem,
+    100vmin * 2.618034 / (2 * 2.618034 + 29), /* φ² */
+    2.618034rem /* φ² */
+  );
+
+  margin-inline: clamp(
+    1.618034rem, /* φ */
+    100vmin * 4.236068 / (2 * 4.236068 + 39), /* φ³ */
+    4.236068rem /* φ³ */
+  );
 
   & > ul {
     padding-inline-start: 0;
@@ -157,8 +185,8 @@ dd {
 .blockquote-like {
   margin-inline: 0;
   border: 0 solid var(--color-indentation-guide-quotation);
-  border-inline-width: 0.125rem; /* 2/16 */
-  padding-inline: 0.875rem; /* 1 - 2/16 */
+  border-inline-width: calc(2 / 16 * 1rem);
+  padding-inline: calc(1rem - 2 / 16 * 1rem);
   text-align: justify;
 }
 
@@ -203,14 +231,14 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-table;
   position: absolute;
   inset-block: 0; /* for Gecko */
-  inset-inline-start: -1.128205em; /* Ensure that φ rem (minimum inline-start *margin*) ≥ φ (font-size of <h1>) 39/44 (its font-size) x em */
-  font-size: 88.636364%; /* 39/44 */
-  line-height: 2.256410; /* 2 * 44/39 */
+  inset-inline-start: calc(-44 / 39 * 1em); /* Ensure that φ rem (minimum inline-start *margin*) ≥ φ (font-size of <h1>) 39/44 (its font-size) x em */
+  font-size: calc(39 / 44 * 100%);
+  line-height: calc(2 * 44 / 39);
 
   opacity: 0.1;
 
   @nest .blockquote-like & {
-    inset-inline-start: calc(-1.128205em - 1rem); /* (the value of .header-anchor not in blockquote) - (blockquote indentation width) */
+    inset-inline-start: calc(-44 / 39 * 1em - 1rem); /* (the value of .header-anchor not in blockquote) - (blockquote indentation width) */
   }
 }
 

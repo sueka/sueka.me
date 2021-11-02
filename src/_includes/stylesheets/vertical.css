@@ -2,8 +2,19 @@
 
 html {
   writing-mode: vertical-rl;
-  font-size: clamp(16px, 2.106499vh, 2.920896vw);
-  font-size: clamp(16px, 2.106499vi, 2.920896vb); /* vi = 2 φ³ rem + 39 rem, vb = (2 φ² + 29)/(2 φ³ + 39) (2 φ³ rem + 39 rem) */
+
+  font-size: clamp(
+    16px,
+    100vh / (2 * 4.236068 + 39),
+    100vw / (2 * 2.618034 + 29)
+  );
+
+  font-size: clamp(
+    16px,
+    100vi / (2 * 4.236068 + 39), /* φ³ */
+    100vb / (2 * 2.618034 + 29) /* φ³ */
+  );
+
   font-kerning: revert;
   font-feature-settings: "vkrn", "vkna"; /* Don't set "vpal" */
   text-align: justify;
@@ -15,8 +26,8 @@ body {
 }
 
 .title-page {
-  min-block-size: 38.196601vh; /* width/height = φ² */
-  min-block-size: 38.196601vi; /* width/height = φ² */
+  min-block-size: 38.196601vh;
+  min-block-size: 38.196601vi; /* φ⁻²; width/height = φ² */
 }
 
 .footnote-ref,
@@ -86,10 +97,10 @@ i:where(:lang(ja)) {
 :is(h1, h2, h3, h4, h5, h6):is([id]) /*- :has(.header-anchor) */ {
   scroll-margin-top: 0;
   scroll-margin-bottom: 0;
-  scroll-margin-right: 1.618034em; /* φ */
-  scroll-margin-left: 1em; /* NOTE: Firefox (92.0) では水平方向に移動するページ内リンクはアンカーがスクリーンに収まるまでの最小距離を移動するので、アンカーがスクリーンの左側にある場合、この値が意味を持つことがある。 */
+  scroll-margin-right: 1.618034em;
+  scroll-margin-left: 1em;
   scroll-margin-block-start: 1.618034em; /* φ */
-  scroll-margin-block-end: 1em; /* ditto */
+  scroll-margin-block-end: 1em; /* NOTE: Firefox (92.0) では水平方向に移動するページ内リンクはアンカーがスクリーンに収まるまでの最小距離を移動するので、アンカーがスクリーンの左側にある場合、この値が意味を持つことがある。 */
 }
 
 .footnote-ref a[id] {
