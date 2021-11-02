@@ -185,8 +185,8 @@ dd {
 .blockquote-like {
   margin-inline: 0;
   border: 0 solid var(--color-indentation-guide-quotation);
-  border-inline-width: calc(2 / 16 * 1rem);
-  padding-inline: calc(1rem - 2 / 16 * 1rem);
+  border-inline-width: calc(2 / 14 * 1rem);
+  padding-inline: calc(1rem - 2 / 14 * 1rem);
   text-align: justify;
 }
 

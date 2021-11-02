@@ -4,13 +4,13 @@ html {
   writing-mode: vertical-rl;
 
   font-size: clamp(
-    16px,
+    14px,
     100vh / (2 * 4.236068 + 39),
     100vw / (2 * 2.618034 + 29)
   );
 
   font-size: clamp(
-    16px,
+    14px,
     100vi / (2 * 4.236068 + 39), /* φ³ */
     100vb / (2 * 2.618034 + 29) /* φ³ */
   );

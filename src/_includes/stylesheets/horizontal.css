@@ -4,13 +4,13 @@ html {
   writing-mode: horizontal-tb;
 
   font-size: clamp(
-    16px,
+    14px,
     100vw / (2 * 4.236068 + 39),
     100vh / (2 * 2.618034 + 29)
   );
 
   font-size: clamp(
-    16px,
+    14px,
     100vi / (2 * 4.236068 + 39), /* φ³ */
     100vb / (2 * 2.618034 + 29) /* φ³ */
   );
@@ -20,7 +20,7 @@ html {
   text-align: revert;
 
   /* Same as MinHeight(rem) to query vertical.css in page.njk */
-  @media (min-width: 526px) {
+  @media (min-width: 461px) {
     text-align: justify;
   }
 }
