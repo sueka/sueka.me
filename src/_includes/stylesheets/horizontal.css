@@ -17,12 +17,6 @@ html {
 
   font-kerning: normal;
   font-feature-settings: "hkna";
-  text-align: revert;
-
-  /* Same as MinHeight(rem) to query vertical.css in page.njk */
-  @media (min-width: 461px) {
-    text-align: justify;
-  }
 }
 
 body {

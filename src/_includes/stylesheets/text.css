@@ -9,6 +9,7 @@
 
 html {
   font-variant-ligatures: common-ligatures;
+  text-align: justify;
   text-spacing: trim-start allow-end trim-adjacent;
 
   background-color: var(--color-background);
