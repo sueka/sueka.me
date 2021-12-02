@@ -15,6 +15,7 @@ body {
   display: flex; /* Prevents margins of .body and .footer from offsetting, also */
   flex-direction: column;
   justify-content: space-between;
+  margin-inline: auto;
 }
 
 .main {
