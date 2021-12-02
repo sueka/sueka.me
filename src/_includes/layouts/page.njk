@@ -29,7 +29,7 @@
     {%- if verticalOk %}
     {#- Keep using physical, not logical #}
     {#- ⌈(27 / 39) * (2 * 4.236068 + 39) * 14⌉; 2 * 8.923272/100 MinHeight(rem) + 27 rem ≤ MinHeight(rem); when vg ≥ 290px following from 14px ≤ rem ≤ 2.106499vg ∧ φ rem ≤ inline padding ≤ 8.923272vg #}
-    <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 461px)" />
+    <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 461px)" id="linkToVerticalCss" />
     {%- endif %}
 
     <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet alternate" title="Prefer horizontal" />
@@ -45,6 +45,21 @@
       cssHasPseudo(document)
     </script>
     <script src="{{ '~/assets/scripts/main.js.njk' | url(true) }}"></script>
+    <script>
+      (() => {
+        const link = document.querySelector('#linkToVerticalCss')
+
+        const observer = new MutationObserver((mutations) => {
+          for (const mutation of mutations) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
+              link.disabled = mutation.target.lang !== 'ja'
+            }
+          }
+        })
+
+        observer.observe(document.documentElement, { attributes: true })
+      })()
+    </script>
   </head>
   <body>
     <main class="main">
