@@ -11,15 +11,15 @@
 }
 
 html {
-  @nest :where(&), :where(&) * { font-family: var(--font-text) }
+  &, & * { font-family: var(--font-text) }
 }
 
 h1, h2, h3, h4, h5, h6,
 dl > dt,
 dl > div > dt {
-  @nest :where(&), :where(&) * { font-family: var(--font-text-emphasized) }
+  &, & * { font-family: var(--font-text-emphasized) }
 }
 
 code {
-  @nest :where(&), :where(&) * { font-family: var(--font-code) }
+  &, & * { font-family: var(--font-code) }
 }
