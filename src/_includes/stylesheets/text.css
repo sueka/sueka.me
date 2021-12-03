@@ -49,17 +49,13 @@ p {
 
 a {
   text-decoration: none;
-  border-block-start-width: 0;
-  border-inline-width: 0;
-  border-block-end-width: calc(1rem / 14); /* 1px when font-size = 14px (minimum) */
-  border-color: currentColor;
 
   &:hover {
-    border-style: dashed;
+    text-decoration: underline dashed;
   }
 
   &:active {
-    border-style: solid;
+    text-decoration: underline;
   }
 }
 

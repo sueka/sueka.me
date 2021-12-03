@@ -1,4 +1,4 @@
-/* Keep contrasting with horizontal.css and horizontal-gecko.css */
+/* Keep contrasting with horizontal-gecko.css */
 
 /* code:root, */
 :not(pre) > code {
@@ -6,4 +6,15 @@
   padding-block-end: calc(2 * 0.236068em); /* φ⁻³ */
   position: relative;
   inset-block-end: 0.236068em; /* φ⁻³ */
+}
+
+/* text.css */
+a {
+  &:hover {
+    text-decoration: overline dashed; /* left */
+  }
+
+  &:active {
+    text-decoration: overline; /* left */
+  }
 }

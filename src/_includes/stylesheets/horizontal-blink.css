@@ -5,3 +5,14 @@
   position: revert;
   inset-block-start: revert;
 }
+
+/* from text.css */
+a {
+  &:hover {
+    text-decoration: underline dashed;
+  }
+
+  &:active {
+    text-decoration: underline;
+  }
+}
