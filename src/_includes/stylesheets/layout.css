@@ -183,23 +183,41 @@ dl > dt {
   margin-block-start: 1em;
 }
 
-:not(:where(blockquote, .blockquote-like)) {
-  & > :where(h1, h2, h3, h4, h5, h6, p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):first-child {
+:not(:where(li, dd, blockquote, .blockquote-like)) {
+  & > :is(h1, h2, h3, h4, h5, h6, p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):first-child {
     margin-block-start: 0;
   }
 
-  & > :where(h1, h2, h3, h4, h5, h6, p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):last-child {
+  & > :is(h1, h2, h3, h4, h5, h6, p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):last-child {
+    margin-block-end: 0;
+  }
+}
+
+/* NOTE: li/dd 全体が blockquote の場合、margin を取り除くとインデントガイドが繋がってしまふ。 */
+:where(li, dd) {
+  /* NOTE: おそらく markdown-it の仕様で、最後でない list item の下に空行を置くと、同じレベルの list item の最初の段落（になれるテキスト）が全て段落になる。これの余白は不要なので取り除く。 */
+  & > p {
+    margin-block: 0;
+  }
+
+  /* NOTE: li/dd はネストしたリストよりも先にテキスト（段落）を持つので、リストは :first-child ではうまくいかない。 */
+  & > :is(ul, menu, ol, dl):first-of-type,
+  & > :is(h1, h2, h3, h4, h5, h6, pre):first-child {
+    margin-block-start: 0;
+  }
+
+  & > :is(h1, h2, h3, h4, h5, h6, ul, menu, ol, dl, pre):last-child {
     margin-block-end: 0;
   }
 }
 
 /* blockquote の真下では長い方の margin-block は取り除かない。 */
 :where(blockquote, .blockquote-like) {
-  & > :where(p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):first-child {
+  & > :is(p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):first-child {
     margin-block-start: 0;
   }
 
-  & > :where(h1, h2, h3, h4, h5, h6, p, blockquote, .blockquote-like):last-child {
+  & > :is(h1, h2, h3, h4, h5, h6, p, blockquote, .blockquote-like):last-child {
     margin-block-end: 0;
   }
 }
@@ -272,6 +290,10 @@ h1, h2, h3, h4, h5, h6 {
 
   @nest .blockquote-like & {
     inset-inline-start: calc(-44 / 39 * 1em - 1rem); /* (the value of .header-anchor not in blockquote) - (blockquote indentation width) */
+  }
+
+  @nest :is(li, dd) & {
+    inset-inline-start: calc(-44 / 39 * 1em - 2rem); /* (the value of .header-anchor not in list item) - (list item indentation width) */
   }
 }
 
