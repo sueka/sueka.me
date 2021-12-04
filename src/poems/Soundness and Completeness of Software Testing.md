@@ -2,6 +2,7 @@
 title: ソフトウェアテストの健全性と完全性
 vertical: false
 date: 2021-10-24
+lastmod: 2021-12-04
 ---
 
 製品にバグがあれば必ず失敗するテストを健全なテスト、バグが無ければ必ず通過するテストを完全なテストと言ふ。例へば、
@@ -63,7 +64,7 @@ testIdentity1(identity) // will be passed
 
 ``` ts
 function wrongIdentity(x: number) {
-  if (x === 54) return 42
+  if (x === 1 / 2) return 1 / 3
 
   return x
 }
