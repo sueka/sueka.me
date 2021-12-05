@@ -202,11 +202,11 @@ dl > dt {
 
   /* NOTE: li/dd はネストしたリストよりも先にテキスト（段落）を持つので、リストは :first-child ではうまくいかない。 */
   & > :is(ul, menu, ol, dl):first-of-type,
-  & > :is(h1, h2, h3, h4, h5, h6, pre):first-child {
+  & > :is(/* h1, h2, h3, h4, h5, h6, */pre):first-child {
     margin-block-start: 0;
   }
 
-  & > :is(h1, h2, h3, h4, h5, h6, ul, menu, ol, dl, pre):last-child {
+  & > :is(/* h1, h2, h3, h4, h5, h6, */ul, menu, ol, dl, pre):last-child {
     margin-block-end: 0;
   }
 }
