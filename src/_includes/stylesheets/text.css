@@ -85,3 +85,7 @@ mark {
 strong {
   font-weight: revert; /* bold */
 }
+
+.warichu {
+  text-combine: lines; /* NOTE: 主要ブラウザーでの実装無し */
+}
