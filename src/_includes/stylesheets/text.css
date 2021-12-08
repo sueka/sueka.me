@@ -77,6 +77,10 @@ ruby {
   ruby-overhang: auto;
 }
 
+ruby > rt:where(:not(:lang(ja))) {
+  text-align: center;
+}
+
 mark {
   background-color: var(--color-mark);
   color: currentColor;
