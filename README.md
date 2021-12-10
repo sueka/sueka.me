@@ -16,7 +16,8 @@ Except for [Logo blue.svg](./src/assets/images/Logo%20blue.svg) imported from ht
 <ol type="1">
   <li id="fn1">
     <a href="./README.md">README.md</a>,
-    <a href="./src/about.md">about.md</a> and
-    <a href="./src/poems/Soundness and Completeness of Software Testing.md">Soundness and Completeness of Software Testing.md</a>
+    <a href="./src/about.md">about.md</a>,
+    <a href="./src/poems/Soundness and Completeness of Software Testing.md">Soundness and Completeness of Software Testing.md</a> and
+    <a href="./src/poems/Disadvantages to Historical Kana Usage.md">Disadvantages to Historical Kana Usage.md</a>
   </li>
 </ol>
