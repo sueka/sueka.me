@@ -90,6 +90,10 @@ strong {
   font-weight: revert; /* bold */
 }
 
+sup, sub {
+  line-height: 1;
+}
+
 .warichu {
   text-combine: lines; /* NOTE: 主要ブラウザーでの実装無し */
 }
