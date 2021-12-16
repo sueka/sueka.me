@@ -1,13 +1,5 @@
 /* Keep contrasting with horizontal-blink.css */
 
-/* code:root, */
-:not(pre) > code {
-  padding-block-start: calc(2 * 0.236068em); /* φ⁻³ */
-  padding-block-end: 0;
-  position: relative;
-  inset-block-start: 0.236068em; /* φ⁻³ */
-}
-
 /* text.css */
 a {
   &:hover {
