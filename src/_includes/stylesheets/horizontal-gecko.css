@@ -2,10 +2,9 @@
 
 /* code:root, */
 :not(pre) > code {
+  display: revert;
   padding-block: 0.236068em; /* φ⁻³ */
-  padding-inline: 0.381966em; /* φ⁻² */
-  position: revert;
-  inset-block-start: revert;
+  line-height: revert;
 }
 
 /* from text.css */
