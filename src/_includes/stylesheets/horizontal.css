@@ -28,7 +28,7 @@ body {
 
 .title-page {
   min-block-size: 38.196601vw;
-  min-block-size: 38.196601vi; /* φ⁻²; height/width = φ² */
+  min-block-size: 38.196601vi; /* φ⁻²; width/height = φ² */
 }
 
 .footnote-ref,
