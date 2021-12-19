@@ -32,61 +32,84 @@ body {
 }
 
 .footnote-ref,
+.horizontal .footnote-ref, .footnote-ref.horizontal,
 .footnote-backref {
   @extend .upright;
 }
 
 .footnote-ref {
-  /* font-feature-settings: revert; */
+  @nest &, .horizontal & &.horizontal {
+    /* font-feature-settings: revert; */
+  }
 }
 
 ol {
-  list-style-type: revert;
+  @nest &, .horizontal & &.horizontal {
+    list-style-type: revert;
+  }
 }
 
 em {
-  font-style: revert; /* italic */
+  @nest &, .horizontal & &.horizontal {
+    font-style: revert; /* italic */
+  }
 }
 
 em:where(:lang(ja)) {
-  font-style: normal;
-  font-family: var(--font-text-emphasized);
+  @nest &, .horizontal & &.horizontal {
+    font-style: normal;
+    font-family: var(--font-text-emphasized);
+  }
 }
 
 b {
-  font-weight: unset;
-  text-emphasis-style: revert;
-  text-decoration: underline;
+  @nest &, .horizontal & &.horizontal {
+    font-weight: unset;
+    text-emphasis-style: revert;
+    text-decoration: underline;
+  }
 }
 
 /* mark { See text.css } */
 
 i {
-  font-style: revert; /* italic */
+  @nest &, .horizontal & &.horizontal {
+    font-style: revert; /* italic */
+  }
 }
 
 i:where(:lang(ja)) {
-  font-style: normal;
-  font-family: var(--font-text-emphasized);
+  @nest &, .horizontal & &.horizontal {
+    font-style: normal;
+    font-family: var(--font-text-emphasized);
+  }
 }
 
 .sideways {
-  font-feature-settings: revert;
-  text-orientation: revert;
+  @nest &, .horizontal & &.horizontal {
+    font-feature-settings: revert;
+    text-orientation: revert;
+  }
 }
 
 .upright {
-  font-feature-settings: revert;
-  text-orientation: revert;
+  @nest &, .horizontal & &.horizontal {
+    font-feature-settings: revert;
+    text-orientation: revert;
+  }
 }
 
 .tate-chu-yoko {
-  -webkit-text-combine: revert;
-  text-combine-upright: revert;
+  @nest &, .horizontal & &.horizontal {
+    -webkit-text-combine: revert;
+    text-combine-upright: revert;
+  }
 }
 
 .header-anchor {
-  @extend .upright;
+  @nest &, .horizontal & &.horizontal {
+    @extend .upright;
+  }
 }
 
 /* Keep contrasting with h# block-axis layout defined in layout.css */
@@ -103,6 +126,10 @@ i:where(:lang(ja)) {
   scroll-margin: 1em 0;
   scroll-margin-block: 1em;
   scroll-margin-inline: 0;
+
+  @nest .horizontal & &.horizontal {
+    scroll-margin: 1em; /* スクロール方向が分からないので四方に同じように取る */
+  }
 }
 
 .footnotes-list {

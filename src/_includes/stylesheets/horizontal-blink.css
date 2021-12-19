@@ -2,11 +2,13 @@
 
 /* from text.css */
 a {
-  &:hover {
-    text-decoration: underline dashed;
-  }
+  @nest &, .horizontal & &.horizontal {
+    &:hover {
+      text-decoration: underline dashed;
+    }
 
-  &:active {
-    text-decoration: underline;
+    &:active {
+      text-decoration: underline;
+    }
   }
 }

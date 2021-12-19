@@ -2,18 +2,22 @@
 
 /* code:root, */
 :not(pre) > code {
-  display: revert;
-  padding-block: 0.236068em; /* φ⁻³ */
-  line-height: revert;
+  @nest &, .horizontal & &.horizontal {
+    display: revert;
+    padding-block: 0.236068em; /* φ⁻³ */
+    line-height: revert;
+  }
 }
 
 /* from text.css */
 a {
-  &:hover {
-    text-decoration: underline dashed;
-  }
+  @nest &, .horizontal & &.horizontal {
+    &:hover {
+      text-decoration: underline dashed;
+    }
 
-  &:active {
-    text-decoration: underline;
+    &:active {
+      text-decoration: underline;
+    }
   }
 }
