@@ -1,14 +1,12 @@
 /* Keep contrasting with vertical-blink.css */
 
 /* from text.css */
-a {
-  @nest &, .horizontal &, &.horizontal {
-    &:hover {
-      text-decoration: underline dashed;
-    }
+a, .horizontal a, a.horizontal {
+  &:hover {
+    text-decoration: underline dashed;
+  }
 
-    &:active {
-      text-decoration: underline;
-    }
+  &:active {
+    text-decoration: underline;
   }
 }

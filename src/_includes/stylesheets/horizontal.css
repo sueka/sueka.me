@@ -31,85 +31,66 @@ body {
   min-block-size: 38.196601vi; /* φ⁻²; width/height = φ² */
 }
 
-.footnote-ref,
-.horizontal .footnote-ref, .footnote-ref.horizontal,
+.footnote-ref, .horizontal .footnote-ref, .footnote-ref.horizontal,
 .footnote-backref {
   @extend .upright;
 }
 
-.footnote-ref {
-  @nest &, .horizontal &, &.horizontal {
-    /* font-feature-settings: revert; */
-  }
+.footnote-ref, .horizontal .footnote-ref, .footnote-ref.horizontal {
+  /* font-feature-settings: revert; */
 }
 
-ol {
-  @nest &, .horizontal &, &.horizontal {
-    list-style-type: revert;
-  }
+ol, .horizontal ol, ol.horizontal {
+  list-style-type: revert;
 }
 
-em {
-  @nest &, .horizontal &, &.horizontal {
-    font-style: revert; /* italic */
-  }
+em, .horizontal em, em.horizontal {
+  font-style: revert; /* italic */
 }
 
-em:where(:lang(ja)) {
-  @nest &, .horizontal &, &.horizontal {
-    font-style: normal;
-    font-family: var(--font-text-emphasized);
-  }
+em:where(:lang(ja)),
+.horizontal em:where(:lang(ja)),
+em:where(:lang(ja)).horizontal {
+  font-style: normal;
+  font-family: var(--font-text-emphasized);
 }
 
-b {
-  @nest &, .horizontal &, &.horizontal {
-    font-weight: unset;
-    text-emphasis-style: revert;
-    text-decoration: underline;
-  }
+b, .horizontal b, b.horizontal {
+  font-weight: unset;
+  text-emphasis-style: revert;
+  text-decoration: underline;
 }
 
 /* mark { See text.css } */
 
-i {
-  @nest &, .horizontal &, &.horizontal {
-    font-style: revert; /* italic */
-  }
+i, .horizontal i, i.horizontal {
+  font-style: revert; /* italic */
 }
 
-i:where(:lang(ja)) {
-  @nest &, .horizontal &, &.horizontal {
-    font-style: normal;
-    font-family: var(--font-text-emphasized);
-  }
+i:where(:lang(ja)),
+.horizontal i:where(:lang(ja)),
+i:where(:lang(ja)).horizontal {
+  font-style: normal;
+  font-family: var(--font-text-emphasized);
 }
 
-.sideways {
-  @nest &, .horizontal &, &.horizontal {
-    font-feature-settings: revert;
-    text-orientation: revert;
-  }
+.sideways, .horizontal .sideways, .sideways.horizontal {
+  font-feature-settings: revert;
+  text-orientation: revert;
 }
 
-.upright {
-  @nest &, .horizontal &, &.horizontal {
-    font-feature-settings: revert;
-    text-orientation: revert;
-  }
+.upright, .horizontal .upright, .upright.horizontal {
+  font-feature-settings: revert;
+  text-orientation: revert;
 }
 
-.tate-chu-yoko {
-  @nest &, .horizontal &, &.horizontal {
-    -webkit-text-combine: revert;
-    text-combine-upright: revert;
-  }
+.tate-chu-yoko, .horizontal .tate-chu-yoko, .tate-chu-yoko.horizontal {
+  -webkit-text-combine: revert;
+  text-combine-upright: revert;
 }
 
-.header-anchor {
-  @nest &, .horizontal &, &.horizontal {
-    @extend .upright;
-  }
+.header-anchor, .horizontal .header-anchor, .header-anchor.horizontal {
+  @extend .upright;
 }
 
 /* Keep contrasting with h# block-axis layout defined in layout.css */
@@ -126,10 +107,12 @@ i:where(:lang(ja)) {
   scroll-margin: 1em 0;
   scroll-margin-block: 1em;
   scroll-margin-inline: 0;
+}
 
-  @nest .horizontal &, &.horizontal {
-    scroll-margin: 1em; /* スクロール方向が分からないので四方に同じように取る */
-  }
+.horizontal .footnote-ref a[id],
+.footnote-ref.horizontal a[id],
+.footnote-ref a[id].horizontal {
+  scroll-margin: 1em; /* スクロール方向が分からないので四方に同じように取る */
 }
 
 .footnotes-list {
