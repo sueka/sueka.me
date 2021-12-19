@@ -2,7 +2,7 @@
 
 /* code:root, */
 :not(pre) > code {
-  @nest &, .horizontal & &.horizontal {
+  @nest &, .horizontal &, &.horizontal {
     display: revert;
     padding-block: 0.236068em; /* φ⁻³ */
     line-height: revert;
@@ -11,7 +11,7 @@
 
 /* from text.css */
 a {
-  @nest &, .horizontal & &.horizontal {
+  @nest &, .horizontal &, &.horizontal {
     &:hover {
       text-decoration: underline dashed;
     }

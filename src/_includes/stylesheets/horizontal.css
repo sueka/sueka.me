@@ -38,32 +38,32 @@ body {
 }
 
 .footnote-ref {
-  @nest &, .horizontal & &.horizontal {
+  @nest &, .horizontal &, &.horizontal {
     /* font-feature-settings: revert; */
   }
 }
 
 ol {
-  @nest &, .horizontal & &.horizontal {
+  @nest &, .horizontal &, &.horizontal {
     list-style-type: revert;
   }
 }
 
 em {
-  @nest &, .horizontal & &.horizontal {
+  @nest &, .horizontal &, &.horizontal {
     font-style: revert; /* italic */
   }
 }
 
 em:where(:lang(ja)) {
-  @nest &, .horizontal & &.horizontal {
+  @nest &, .horizontal &, &.horizontal {
     font-style: normal;
     font-family: var(--font-text-emphasized);
   }
 }
 
 b {
-  @nest &, .horizontal & &.horizontal {
+  @nest &, .horizontal &, &.horizontal {
     font-weight: unset;
     text-emphasis-style: revert;
     text-decoration: underline;
@@ -73,41 +73,41 @@ b {
 /* mark { See text.css } */
 
 i {
-  @nest &, .horizontal & &.horizontal {
+  @nest &, .horizontal &, &.horizontal {
     font-style: revert; /* italic */
   }
 }
 
 i:where(:lang(ja)) {
-  @nest &, .horizontal & &.horizontal {
+  @nest &, .horizontal &, &.horizontal {
     font-style: normal;
     font-family: var(--font-text-emphasized);
   }
 }
 
 .sideways {
-  @nest &, .horizontal & &.horizontal {
+  @nest &, .horizontal &, &.horizontal {
     font-feature-settings: revert;
     text-orientation: revert;
   }
 }
 
 .upright {
-  @nest &, .horizontal & &.horizontal {
+  @nest &, .horizontal &, &.horizontal {
     font-feature-settings: revert;
     text-orientation: revert;
   }
 }
 
 .tate-chu-yoko {
-  @nest &, .horizontal & &.horizontal {
+  @nest &, .horizontal &, &.horizontal {
     -webkit-text-combine: revert;
     text-combine-upright: revert;
   }
 }
 
 .header-anchor {
-  @nest &, .horizontal & &.horizontal {
+  @nest &, .horizontal &, &.horizontal {
     @extend .upright;
   }
 }
@@ -127,7 +127,7 @@ i:where(:lang(ja)) {
   scroll-margin-block: 1em;
   scroll-margin-inline: 0;
 
-  @nest .horizontal & &.horizontal {
+  @nest .horizontal &, &.horizontal {
     scroll-margin: 1em; /* スクロール方向が分からないので四方に同じように取る */
   }
 }

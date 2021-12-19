@@ -2,7 +2,7 @@
 
 /* from text.css */
 a {
-  @nest &, .horizontal & &.horizontal {
+  @nest &, .horizontal &, &.horizontal {
     &:hover {
       text-decoration: underline dashed;
     }
