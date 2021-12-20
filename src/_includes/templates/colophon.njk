@@ -1,6 +1,10 @@
 <footer class="colophon">
   <div class="colophon-container horizontal">
     <div class="colophon-title">
+      {% if title_rubied -%}
+        {% set title = title_rubied | safe -%}
+      {% endif -%}
+
       {% if not title -%}
         {% set incipit = content | safe | getIncipit -%}
       {% endif -%}

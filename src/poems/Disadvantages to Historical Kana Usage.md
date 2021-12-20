@@ -1,5 +1,6 @@
 ---
 title: 歴史的仮名遣ひの欠点
+title_rubied: '<ruby>歴<rt>れき</rt>史<rt>し</rt>的<rt>てき</rt>仮<rt>か</rt>名<rt>な</rt>遣<rt>づか</ruby>ひの<ruby>欠<rt>けっ</rt>点<rt>てん</ruby>'
 date: 2021-12-14
 lastmod: 2021-12-15
 ---

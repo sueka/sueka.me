@@ -77,7 +77,11 @@ ruby {
   ruby-overhang: auto;
 }
 
-ruby > rt:where(:not(:lang(ja))) {
+ruby rt {
+  text-transform: full-size-kana;
+}
+
+ruby rt:where(:not(:lang(ja))) {
   text-align: center;
 }
 
