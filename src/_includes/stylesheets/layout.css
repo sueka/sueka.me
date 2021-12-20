@@ -115,10 +115,6 @@ hr {
   }
 }
 
-.horizontal {
-  writing-mode: horizontal-tb;
-}
-
 .colophon {
   --colophon-margin: clamp(
     1.618034rem, /* φ */

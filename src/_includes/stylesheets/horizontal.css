@@ -127,3 +127,28 @@ i:where(:lang(ja)).horizontal {
     scroll-margin-inline: 0;
   }
 }
+
+/* .horizontal {
+  writing-mode: revert;
+} */
+
+/* %revert-class-horizontal {
+  writing-mode: revert;
+} */
+
+blockquote.horizontal {
+  @extend %revert-class-horizontal;
+
+  overflow-y: revert;
+  overflow-inline: revert;
+}
+
+blockquote.horizontal > p {
+  @extend .horizontal;
+
+  leading-trim: revert;
+}
+
+.blockquote-like {
+  @extend blockquote;
+}
