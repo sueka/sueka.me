@@ -22,7 +22,7 @@ html {
   }
 }
 
-.github-link:any-link {
+.octicon-link:any-link {
   color: var(--color-octicon);
 }
 

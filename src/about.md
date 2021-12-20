@@ -1,6 +1,7 @@
 ---
 layout: layouts/page.njk
 title: このウェブサイトについて
+nocolophon: true
 date: 2021-08-27
 lastmod: 2021-11-03
 ---

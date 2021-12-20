@@ -31,6 +31,11 @@ body {
   min-block-size: 38.196601vi; /* φ⁻²; height/width = φ² */
 }
 
+.colophon {
+  width: calc((100vh - 2 * 4.236068rem) / 1.4); /* φ³; 余白が最大のときに、余白を含めた縦横比が 1.4 になる比率 */
+  max-width: calc(100vw - 2 * var(--colophon-margin-block)); /* 余白を含めた長さがビューポート幅と同じ */
+}
+
 .footnote-ref,
 .footnote-backref {
   @extend .upright;

@@ -6,6 +6,7 @@ import date from 'lume/plugins/date.ts'
 import postcss from 'lume/plugins/postcss.ts'
 import relativeUrls from 'lume/plugins/relative_urls.ts'
 import slugifyUrls from 'lume/plugins/slugify_urls.ts'
+import ja from 'https://deno.land/x/date_fns@v2.22.1/locale/ja/index.js'
 // import csso from 'https://esm.sh/postcss-csso'
 import postcssHasPseudo from 'https://jspm.dev/css-has-pseudo/postcss'
 import octicons from 'https://jspm.dev/@primer/octicons'
@@ -49,7 +50,7 @@ const site = lume({
 .copy('assets/images/Logo blue.svg', 'assets/images/twitter-logo.svg')
 .use(bundler())
 .use(codeHighlight())
-.use(date())
+.use(date({ locales: { ja } }))
 .use(postcss({
   plugins: [
     // postcssPresetEnv({

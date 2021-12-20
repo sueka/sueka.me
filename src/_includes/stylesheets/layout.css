@@ -40,9 +40,11 @@ body {
 }
 
 .main {
+  flex-grow: 1;
   /* Prevents margins of .title-page and .body from offsetting */
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .title-page {
@@ -110,6 +112,68 @@ hr {
 
   & > .footnote-item > p {
     display: contents; /* for Gecko */
+  }
+}
+
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+
+.colophon {
+  --colophon-margin: clamp(
+    1.618034rem, /* φ */
+    100vmin * 4.236068 / (2 * 4.236068 + 39), /* φ³ */
+    4.236068rem /* φ³ */
+  );
+
+  --colophon-margin-block: var(--colophon-margin);
+
+  font-size: calc(39 / 44 * 100%);
+  margin: var(--colophon-margin);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.colophon-container {
+  inline-size: 100%;
+}
+
+.colophon-title {
+  font-size: 110.1026%; /* Same as h5 */
+  font-size: 161.8034%;
+  font-weight: bold;
+}
+
+.colophon hr {
+  margin-block: 1em;
+}
+
+.colophon-dates {
+  margin-block: 1.618034em;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  row-gap: 1px;
+  column-gap: 1em;
+}
+
+.colophon-attrs {
+  margin-block-start: 1.618034em;
+  display: grid;
+  row-gap: 1px;
+  justify-items: flex-end;
+  text-align: right;
+  text-align: end;
+}
+
+ul.colophon-attrs {
+  padding-inline-start: 1.618em;
+  list-style-type: none;
+
+  & > li {
+    word-break: break-word;
   }
 }
 

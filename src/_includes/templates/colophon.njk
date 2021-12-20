@@ -1,0 +1,24 @@
+<footer class="colophon">
+  <div class="colophon-container horizontal">
+    <div class="colophon-title">
+      {% if not title -%}
+        {% set incipit = content | safe | getIncipit -%}
+      {% endif -%}
+
+      {{ title or incipit }}
+    </div>
+    <hr>
+    <div class="colophon-dates">
+      <meta itemprop="datePublished" content="{{ date | date('DATE') }}" />
+      <time datetime="{{ date | date('DATE') }}">{{ date | date('HUMAN_DATE', 'ja') }}</time>
+      公開
+      <meta itemprop="dateModified" content="{{ lastmod | date('DATE') }}" />
+      <time datetime="{{ lastmod | date('DATE') }}">{{ lastmod | date('HUMAN_DATE', 'ja') }}</time>
+      更新
+    </div>
+    <ul class="colophon-attrs">
+      <li><a href="{{ url | url(true) }}">このページのパーマリンク</a></li>
+      <li><a href="https://github.com/{{ site.github_repo }}/blob/{{ gitCommitHash }}/src{{ src }}" rel="external">{{ gitCommitHash }}</a></li>
+    </ul>
+  </div>
+</div>
