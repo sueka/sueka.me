@@ -19,7 +19,6 @@ import postcssExtendRule from 'https://dev.jspm.io/postcss-extend-rule'
 // import postcssPresetEnv from 'https://jspm.dev/postcss-preset-env'
 
 import getIncipit from './lib/getIncipit.ts'
-import text from './lib/text.ts'
 
 const site = lume({
   src: 'src',
@@ -72,7 +71,6 @@ const site = lume({
 .use(slugifyUrls())
 .filter('encodeUri', encodeURI)
 .filter('getIncipit', getIncipit)
-.filter('text', text)
 .helper('octicon', (symbol, ...args) => octicons[symbol].toSVG(...args), {
   type: 'tag',
 })
