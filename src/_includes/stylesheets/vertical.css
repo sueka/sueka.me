@@ -130,6 +130,7 @@ i:where(:lang(ja)) {
 /* .horizontal を元に戻す */
 %revert-class-horizontal {
   writing-mode: revert;
+  writing-mode: vertical-rl; /* Safari (15.1, iOS 15.2) では継承するか直接指定するかで振る舞いが変わることがあるので、明示的に指定している。 TODO: Delete this line if you can */
 }
 
 /* TODO: blockquote > p 以外の構造でもうまく動くようにする? */
