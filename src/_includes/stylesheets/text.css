@@ -101,3 +101,8 @@ sup, sub {
 .warichu {
   text-combine: lines; /* NOTE: 主要ブラウザーでの実装無し */
 }
+
+.sans-serif {
+  all: unset;
+  font-family: var(--font-text-emphasized);
+}
