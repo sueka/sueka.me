@@ -1,7 +1,6 @@
 ---
 title: ソフトウェアテストの健全性と完全性
 title_rubied: 'ソフトウェアテストの<ruby>健<rt>けん</rt>全<rt>ぜん</rt>性<rt>せい</ruby>と<ruby>完<rt>くゎん</rt>全<rt>ぜん</rt>性<rt>せい</ruby>'
-vertical: false
 date: 2021-10-24
 lastmod: 2021-12-29
 ---
