@@ -16,6 +16,7 @@ jobs:
           deno-version: 1.x
       - name: Build
         env:
+          GTM_CONTAINER_ID: GTM-THZM3F7
           TZ: Asia/Tokyo
         run: deno run --allow-all --quiet https://deno.land/x/lume/ci.ts
       - name: Upload build artifact

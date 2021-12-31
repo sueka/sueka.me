@@ -73,6 +73,9 @@ const site = lume({
 .use(slugifyUrls())
 .filter('encodeUri', encodeURI)
 .filter('getIncipit', getIncipit)
+.helper('env', (name) => Deno.env.get(name), {
+  type: 'tag',
+})
 .helper('octicon', (symbol, ...args) => octicons[symbol].toSVG(...args), {
   type: 'tag',
 })
