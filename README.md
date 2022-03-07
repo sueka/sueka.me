@@ -8,9 +8,9 @@
 
 [MIT No Attribution](./LICENSE.MIT-0)
 
-Some files<sup>[1](#fn1)</sup> are released under [Creative Commons Attribution-ShareAlike 4.0 International](./LICENSE.CC-BY-SA-4.0).
+The files below<sup>[1](#fn1)</sup>, however, are released under [Creative Commons Attribution-ShareAlike 4.0 International](./LICENSE.CC-BY-SA-4.0).
 
-Except for [Logo blue.svg](./src/assets/images/Logo%20blue.svg) imported from https://about.twitter.com/en/who-we-are/brand-toolkit.
+Except for [Logo blue.svg](./src/assets/images/Logo%20blue.svg), which is imported from https://about.twitter.com/en/who-we-are/brand-toolkit.
 
 <ol type="1">
   <li id="fn1">
