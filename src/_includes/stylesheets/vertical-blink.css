@@ -1,7 +1,7 @@
 /* Keep contrasting with horizontal-blink.css */
 
 /* text.css */
-a {
+a:lang(ja) {
   &:hover {
     text-decoration: overline dashed; /* left */
   }

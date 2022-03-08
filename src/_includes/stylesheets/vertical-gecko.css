@@ -8,7 +8,7 @@
 }
 
 /* text.css */
-a {
+a:lang(ja) {
   &:hover {
     text-decoration: overline dashed; /* left */
   }

@@ -12,10 +12,10 @@
 
 /* from text.css */
 /* NOTE: @nest すると :is に展開されることがあり、a の詳細度が上がってしまうので、セレクターをベタ書きする。他同様。 */
-a:hover, .horizontal a:hover, a.horizontal:hover {
+a:lang(ja):hover, .horizontal a:lang(ja):hover, a:lang(ja).horizontal:hover {
   text-decoration: underline dashed;
 }
 
-a:active, .horizontal a:active, a.horizontal:active {
+a:lang(ja):active, .horizontal a:lang(ja):active, a:lang(ja).horizontal:active {
   text-decoration: underline;
 }

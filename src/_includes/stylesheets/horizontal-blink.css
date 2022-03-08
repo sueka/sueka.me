@@ -1,10 +1,10 @@
 /* Keep contrasting with vertical-blink.css */
 
 /* from text.css */
-a:hover, .horizontal a:hover, a.horizontal:hover {
+a:lang(ja):hover, .horizontal a:lang(ja):hover, a:lang(ja).horizontal:hover {
   text-decoration: underline dashed;
 }
 
-a:active, .horizontal a:active, a.horizontal:active {
+a:lang(ja):active, .horizontal a:lang(ja):active, a:lang(ja).horizontal:active {
   text-decoration: underline;
 }
