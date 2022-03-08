@@ -10,13 +10,12 @@
 
 The files below<sup>[1](#fn1)</sup>, however, are released under [Creative Commons Attribution-ShareAlike 4.0 International](./LICENSE.CC-BY-SA-4.0).
 
-Except for [Logo blue.svg](./src/assets/images/Logo%20blue.svg), which is imported from https://about.twitter.com/en/who-we-are/brand-toolkit.
+Except for [Logo blue.svg](./src/assets/images/Logo%20blue.svg), which is imported from https://about.twitter.com/en/who-we-are/brand-toolkit.  I myself do not license it.
 
 <ol type="1">
   <li id="fn1">
     <a href="./README.md">README.md</a>,
-    <a href="./src/about.md">about.md</a>,
-    <a href="./src/poems/Soundness and Completeness of Software Testing.md">Soundness and Completeness of Software Testing.md</a> and
-    <a href="./src/poems/Disadvantages to Historical Kana Usage.md">Disadvantages to Historical Kana Usage.md</a>
+    <a href="./src/about.md">about.md</a> and
+    <a href="./src/poem">.md files in poem</a>
   </li>
 </ol>
