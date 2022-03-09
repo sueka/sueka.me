@@ -1,0 +1,20 @@
+.horizontal {
+  writing-mode: revert;
+}
+
+%revert-class-horizontal {
+  writing-mode: revert;
+}
+
+blockquote.horizontal {
+  @extend %revert-class-horizontal;
+
+  overflow-y: revert;
+  overflow-inline: revert;
+}
+
+blockquote.horizontal > p {
+  @extend .horizontal;
+
+  leading-trim: revert;
+}

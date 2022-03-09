@@ -123,31 +123,6 @@ i:where(:lang(ja)) {
   }
 }
 
-.horizontal {
-  writing-mode: horizontal-tb;
-}
-
-/* .horizontal を元に戻す */
-%revert-class-horizontal {
-  writing-mode: revert;
-  writing-mode: vertical-rl; /* Safari (15.1, iOS 15.2) では継承するか直接指定するかで振る舞いが変わることがあるので、明示的に指定している。 TODO: Delete this line if you can */
-}
-
-/* TODO: blockquote > p 以外の構造でもうまく動くようにする? */
-blockquote.horizontal {
-  /* インデントガイドを .horizontal でない blockquote と同じように表示するために、一度 .horizontal を元に戻し、p で改めて .horizontal を適用する。 */
-  @extend %revert-class-horizontal;
-
-  overflow-y: auto;
-  overflow-inline: auto;
-}
-
-blockquote.horizontal > p {
-  @extend .horizontal;
-
-  leading-trim: both;
-}
-
 .blockquote-like {
   @extend blockquote;
 }

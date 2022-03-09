@@ -1,0 +1,107 @@
+/**
+ * horizontal-in-vertical.css
+ *
+ * 縦書きのページで、部分的な横書きを実現する。
+ *
+ * **実装上の注意**
+ * : vertical.css が優先されているときもうまく動くようにするため、詳細度を `:where` 等で下げてはならない。
+ *
+ * <!-- FIXME: 自動展開したい -->
+*/
+
+/* cf. horizontal-horizontal.css */
+
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+
+/* .horizontal を元に戻す */
+%revert-class-horizontal {
+  writing-mode: revert;
+  writing-mode: vertical-rl; /* Safari (15.1, iOS 15.2) では継承するか直接指定するかで振る舞いが変わることがあるので、明示的に指定している。 TODO: Delete this line */
+}
+
+/* TODO: blockquote > p 以外の構造でもうまく動くようにする? */
+blockquote.horizontal {
+  /* インデントガイドを .horizontal でない blockquote と同じように表示するために、一度 .horizontal を元に戻し、p で改めて .horizontal を適用する。 */
+  @extend %revert-class-horizontal;
+
+  overflow-y: auto;
+  overflow-inline: auto;
+}
+
+blockquote.horizontal > p {
+  @extend .horizontal;
+
+  leading-trim: both;
+}
+
+/* cf. horizontal.css */
+
+.horizontal .footnote-ref,
+.footnote-ref.horizontal {
+  font-feature-settings: revert;
+}
+
+.horizontal ol,
+ol.horizontal {
+  list-style-type: revert;
+}
+
+.horizontal em,
+em.horizontal {
+  font-style: revert; /* italic */
+}
+
+.horizontal em:where(:lang(ja)),
+em:where(:lang(ja)).horizontal {
+  font-style: normal;
+  font-family: var(--font-text-emphasized);
+}
+
+.horizontal b,
+b.horizontal {
+  font-weight: unset;
+  text-emphasis-style: revert;
+  text-decoration: underline;
+}
+
+.horizontal i,
+i.horizontal {
+  font-style: revert; /* italic */
+}
+
+.horizontal i:where(:lang(ja)),
+i:where(:lang(ja)).horizontal {
+  font-style: normal;
+  font-family: var(--font-text-emphasized);
+}
+
+.horizontal .sideways,
+.sideways.horizontal {
+  font-feature-settings: revert;
+  text-orientation: revert;
+}
+
+.horizontal .upright,
+.upright.horizontal {
+  font-feature-settings: revert;
+  text-orientation: revert;
+}
+
+.horizontal .tate-chu-yoko,
+.tate-chu-yoko.horizontal {
+  -webkit-text-combine: revert;
+  text-combine-upright: revert;
+}
+
+.horizontal .header-anchor,
+.header-anchor.horizontal {
+  @extend .upright;
+}
+
+.horizontal .footnote-ref a[id],
+.footnote-ref.horizontal a[id],
+.footnote-ref a[id].horizontal {
+  scroll-margin: 1em; /* スクロール方向が分からないので四方に同じように取る */
+}

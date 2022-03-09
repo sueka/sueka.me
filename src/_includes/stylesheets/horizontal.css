@@ -1,24 +1,5 @@
 /* Keep contrasting with vertical.css */
 
-/*
-# `.horizontal` についての註記
-
-縦書きのページで部分的な横書きを実現するために、`.horizontal` クラスを使っている。
-
-ページの構造上書記方向が変わりえない要素 `html`, `body`, `.title-page`, `.footnote-backref`, `.colophon` と恐らく変わらない要素 `h#` に、次のように適用している。
-
-セレクターが子孫結合子も子結合子も含まない場合
-: `E` → `.horizontal E, E.horizontal`
-
-セレクターが子孫結合子または子結合子を含む場合
-: `E F` → `.horizontal E F, E.horizontal F, E F.horizontal`
-: `E > F` → `.horizontal E > F, E.horizontal > F, E > F.horizontal`
-
-**実装上の注意**: vertical.css が優先されているときもうまく動くようにするため、詳細度を `:where` 等で下げてはならない。
-
-<!-- FIXME: 自動展開したい -->
-*/
-
 html {
   writing-mode: horizontal-tb;
 
@@ -55,31 +36,29 @@ body {
   max-width: revert;
 }
 
-.footnote-ref, .horizontal .footnote-ref, .footnote-ref.horizontal,
+.footnote-ref,
 .footnote-backref {
   @extend .upright;
 }
 
-.footnote-ref, .horizontal .footnote-ref, .footnote-ref.horizontal {
-  /* font-feature-settings: revert; */
+.footnote-ref {
+  font-feature-settings: revert;
 }
 
-ol, .horizontal ol, ol.horizontal {
+ol {
   list-style-type: revert;
 }
 
-em, .horizontal em, em.horizontal {
+em {
   font-style: revert; /* italic */
 }
 
-em:where(:lang(ja)),
-.horizontal em:where(:lang(ja)),
-em:where(:lang(ja)).horizontal {
+em:where(:lang(ja)) {
   font-style: normal;
   font-family: var(--font-text-emphasized);
 }
 
-b, .horizontal b, b.horizontal {
+b {
   font-weight: unset;
   text-emphasis-style: revert;
   text-decoration: underline;
@@ -87,33 +66,31 @@ b, .horizontal b, b.horizontal {
 
 /* mark { See text.css } */
 
-i, .horizontal i, i.horizontal {
+i {
   font-style: revert; /* italic */
 }
 
-i:where(:lang(ja)),
-.horizontal i:where(:lang(ja)),
-i:where(:lang(ja)).horizontal {
+i:where(:lang(ja)) {
   font-style: normal;
   font-family: var(--font-text-emphasized);
 }
 
-.sideways, .horizontal .sideways, .sideways.horizontal {
+.sideways {
   font-feature-settings: revert;
   text-orientation: revert;
 }
 
-.upright, .horizontal .upright, .upright.horizontal {
+.upright {
   font-feature-settings: revert;
   text-orientation: revert;
 }
 
-.tate-chu-yoko, .horizontal .tate-chu-yoko, .tate-chu-yoko.horizontal {
+.tate-chu-yoko {
   -webkit-text-combine: revert;
   text-combine-upright: revert;
 }
 
-.header-anchor, .horizontal .header-anchor, .header-anchor.horizontal {
+.header-anchor {
   @extend .upright;
 }
 
@@ -133,39 +110,12 @@ i:where(:lang(ja)).horizontal {
   scroll-margin-inline: 0;
 }
 
-.horizontal .footnote-ref a[id],
-.footnote-ref.horizontal a[id],
-.footnote-ref a[id].horizontal {
-  scroll-margin: 1em; /* スクロール方向が分からないので四方に同じように取る */
-}
-
 .footnotes-list {
   & li:is([id]) {
     scroll-margin: 0.5em 0;
     scroll-margin-block: 0.5em; /* half of (line-height - 1em) */
     scroll-margin-inline: 0;
   }
-}
-
-/* .horizontal {
-  writing-mode: revert;
-} */
-
-/* %revert-class-horizontal {
-  writing-mode: revert;
-} */
-
-blockquote.horizontal {
-  @extend %revert-class-horizontal;
-
-  overflow-y: revert;
-  overflow-inline: revert;
-}
-
-blockquote.horizontal > p {
-  @extend .horizontal;
-
-  leading-trim: revert;
 }
 
 .blockquote-like {
