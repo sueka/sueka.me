@@ -16,6 +16,7 @@ import attrs from 'https://jspm.dev/markdown-it-attrs'
 import bracketedSpans from 'https://jspm.dev/markdown-it-bracketed-spans'
 import deflist from 'https://jspm.dev/markdown-it-deflist'
 import footnote from 'https://jspm.dev/markdown-it-footnote'
+import ruby from 'https://jspm.dev/markdown-it-ruby'
 import postcssExtendRule from 'https://dev.jspm.io/postcss-extend-rule'
 // import postcssPresetEnv from 'https://jspm.dev/postcss-preset-env'
 
@@ -45,6 +46,7 @@ const site = lume({
       bracketedSpans,
       deflist,
       footnote,
+      ruby,
     ],
   },
 })
