@@ -1,0 +1,18 @@
+.vertical {
+  writing-mode: revert;
+}
+
+%revert-class-vertical {
+  writing-mode: revert;
+  writing-mode: vertical-rl;
+}
+
+p.vertical,
+.blockquote-like.vertical {
+  @extend %revert-class-vertical;
+
+  margin: revert;
+  width: revert;
+  min-height: revert;
+  max-height: revert;
+}

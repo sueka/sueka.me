@@ -85,6 +85,11 @@ ruby rt:where(:not(:lang(ja))) {
   text-align: center;
 }
 
+.kaeriten {
+  font-size: 50%;
+  vertical-align: sub;
+}
+
 mark {
   background-color: var(--color-mark);
   color: currentColor;

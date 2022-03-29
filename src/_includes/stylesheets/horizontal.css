@@ -75,6 +75,10 @@ i:where(:lang(ja)) {
   font-family: var(--font-text-emphasized);
 }
 
+cite {
+  font-style: revert; /* italic */
+}
+
 .sideways {
   font-feature-settings: revert;
   text-orientation: revert;

@@ -4,6 +4,14 @@
 
 %revert-class-horizontal {
   writing-mode: revert;
+  writing-mode: horizontal-tb;
+}
+
+.horizontal p,
+p.horizontal {
+  margin: revert;
+  height: revert;
+  max-width: revert;
 }
 
 blockquote.horizontal {
