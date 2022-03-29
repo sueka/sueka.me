@@ -109,6 +109,7 @@ hr {
 
 .footnotes-list {
   font-size: calc(39 / 44 * 100%);
+  list-style-type: revert;
 
   & > .footnote-item > p {
     display: contents; /* for Gecko */

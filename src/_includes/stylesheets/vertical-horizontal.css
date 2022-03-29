@@ -38,11 +38,6 @@ blockquote.horizontal > p {
 
 /* cf. horizontal.css */
 
-.horizontal .footnote-ref,
-.footnote-ref.horizontal {
-  font-feature-settings: revert;
-}
-
 .horizontal ol,
 ol.horizontal {
   list-style-type: revert;
