@@ -10,7 +10,7 @@ date: 2022-03-29
 書き下し文は、言はゞ外国語（[文言]{lang=zh}）の翻訳なので、他言語の文の翻訳の表示に使っても、メカニズムとしてはをかしくない。例へば、『<cite lang="en">Nineteen eighty-four</cite>』の冒頭
 
 > It was a bright cold day in April, and the clocks were striking thirteen.
-{.horizontal}
+{lang=en .horizontal}
 
 には
 
