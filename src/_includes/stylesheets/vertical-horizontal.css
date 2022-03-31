@@ -49,9 +49,25 @@ em.horizontal {
 }
 
 .horizontal em:where(:lang(ja)),
-em:where(:lang(ja)).horizontal {
+.horizontal em:where(:lang(jpn-archaic)),
+em:where(:lang(ja)).horizontal,
+em:where(:lang(jpn-archaic)).horizontal {
   font-style: normal;
   font-family: var(--font-text-emphasized);
+
+  & :where([lang]) {
+    font-family: var(--font-text-emphasized);
+  }
+}
+
+.horizontal em:where(:lang(ja, jpn-archaic)),
+em:where(:lang(ja, jpn-archaic)).horizontal {
+  font-style: normal;
+  font-family: var(--font-text-emphasized);
+
+  & :where([lang]) {
+    font-family: var(--font-text-emphasized);
+  }
 }
 
 .horizontal b,
@@ -59,17 +75,6 @@ b.horizontal {
   font-weight: unset;
   text-emphasis-style: revert;
   text-decoration: underline;
-}
-
-.horizontal i,
-i.horizontal {
-  font-style: revert; /* italic */
-}
-
-.horizontal i:where(:lang(ja)),
-i:where(:lang(ja)).horizontal {
-  font-style: normal;
-  font-family: var(--font-text-emphasized);
 }
 
 .horizontal .sideways,

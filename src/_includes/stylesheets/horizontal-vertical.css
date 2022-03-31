@@ -30,3 +30,13 @@ p.vertical {
   min-height: 461px; /* Same as in page.njk */
   max-height: 61.8034vh; /* φ⁻¹ */
 }
+
+.vertical em,
+em.vertical {
+  font-style: normal;
+  font-family: var(--font-text-emphasized);
+
+  & :where([lang]) {
+    font-family: var(--font-text-emphasized);
+  }
+}

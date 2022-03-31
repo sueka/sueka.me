@@ -81,7 +81,12 @@ ruby rt {
   text-transform: full-size-kana;
 }
 
-ruby rt:where(:not(:lang(ja))) {
+ruby rt:where(:not(:lang(ja))),
+ruby rt:where(:not(:lang(jpn-archaic))) {
+  text-align: center;
+}
+
+ruby rt:where(:not(:lang(ja, jpn-archaic))) {
   text-align: center;
 }
 
@@ -99,9 +104,36 @@ strong {
   font-weight: revert; /* bold */
 }
 
+i {
+  font-style: revert; /* italic */
+}
+
+i:where(:lang(ja)),
+i:where(:lang(jpn-archaic)) {
+  font-style: normal;
+  font-family: var(--font-text-emphasized);
+
+  & :where([lang]) {
+    font-family: var(--font-text-emphasized);
+  }
+}
+
+i:where(:lang(ja, jpn-archaic)) {
+  font-style: normal;
+  font-family: var(--font-text-emphasized);
+
+  & :where([lang]) {
+    font-family: var(--font-text-emphasized);
+  }
+}
+
 sup, sub {
   line-height: 1;
 }
+
+/* cite :where([lang]) {
+  font-family: var(--font-text-emphasized);
+} */
 
 .warichu {
   text-combine: lines; /* NOTE: 主要ブラウザーでの実装無し */
@@ -110,4 +142,8 @@ sup, sub {
 .sans-serif {
   all: unset;
   font-family: var(--font-text-emphasized);
+
+  & :where([lang]) {
+    font-family: var(--font-text-emphasized);
+  }
 }

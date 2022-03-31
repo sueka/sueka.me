@@ -47,6 +47,10 @@ ol {
 em {
   font-style: normal;
   font-family: var(--font-text-emphasized);
+
+  & :where([lang]) {
+    font-family: var(--font-text-emphasized);
+  }
 }
 
 b {
@@ -58,29 +62,40 @@ b {
 
 /* mark { See text.css } */
 
-i {
-  font-style: revert; /* italic */
-}
-
-i:where(:lang(ja)) {
-  font-style: normal;
-  font-family: var(--font-text-emphasized);
-}
+/* i { See text.css } */
 
 cite {
   font-style: revert; /* italic */
 }
 
-cite:where(:lang(ja)) {
+cite:where(:lang(ja)),
+cite:where(:lang(jpn-archaic)) {
   font-style: normal;
   font-family: var(--font-text-emphasized);
+
+  & :where([lang]) {
+    font-family: var(--font-text-emphasized);
+  }
+}
+
+cite:where(:lang(ja, jpn-archaic)) {
+  font-style: normal;
+  font-family: var(--font-text-emphasized);
+
+  & :where([lang]) {
+    font-family: var(--font-text-emphasized);
+  }
 }
 
 /* NOTE: 和文中の欧文はデフォルトで text-orientation: sideways のやうに表示されるが、その場合、font-feature-settings は変更されない。 */
 /* See also: JIS X 4051:2004 4.7 b */
 .sideways {
   font-feature-settings: "hkna";
-  &:where(:not(:lang(ja))) {
+  &:where(:not(:lang(ja))),
+  &:where(:not(:lang(jpn-archaic))) {
+    font-feature-settings: "palt", "hkna";
+  }
+  &:where(:not(:lang(ja, jpn-archaic))) {
     font-feature-settings: "palt", "hkna";
   }
 

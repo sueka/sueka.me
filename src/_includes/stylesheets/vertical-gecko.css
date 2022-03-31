@@ -8,7 +8,18 @@
 }
 
 /* text.css */
-a:lang(ja) {
+a:lang(ja),
+a:lang(jpn-archaic) {
+  &:hover {
+    text-decoration: overline dashed; /* left */
+  }
+
+  &:active {
+    text-decoration: overline; /* left */
+  }
+}
+
+a:lang(ja, jpn-archaic) {
   &:hover {
     text-decoration: overline dashed; /* left */
   }

@@ -4,13 +4,21 @@
   --font-code: Menlo, Consolas, monospace;
 }
 
-[lang="ja"] {
+[lang="ja"],
+[lang="jpn-archaic"] {
   --font-text: "YuMincho +36p Kana", "Yu Mincho", serif;
   --font-text-emphasized: "Hiragino Sans", "Yu Gothic", sans-serif;
   --font-code: CodeM, Myrica, Ricty, "Source Han Code JP", monospace;
 }
 
-html {
+[lang="he"],
+[lang="hbo"] {
+  --font-text: "Noto Serif Hebrew", serif;
+  --font-text-emphasized: "Noto Sans Hebrew", sans-serif;
+}
+
+html,
+:where([lang]) { /* NOTE: サンセリフ体や等幅フォントが使われるべき要素に lang が設定されても適用されないように、詳細度を下げる。 */
   font-family: var(--font-text);
 }
 
@@ -18,8 +26,18 @@ h1, h2, h3, h4, h5, h6,
 dl > dt,
 dl > div > dt {
   font-family: var(--font-text-emphasized);
+
+  /* h1 ruby > rt[lang] のようなケースで :where([lang]) { font-family: var(--font-text) } をカスケードする。text.css、horizontal.css、vertical.css、vertical-horizontal.css にも同様の行がある。 */
+  & :where([lang]) {
+    font-family: var(--font-text-emphasized);
+  }
 }
 
 code {
   font-family: var(--font-code);
+
+  /* code の内部ではフォントの変更を無視する。 */
+  & * {
+    font-family: revert !important;
+  }
 }

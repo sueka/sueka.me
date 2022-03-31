@@ -16,6 +16,7 @@ html:lang(arc),
 html:lang(dv),
 html:lang(fa),
 html:lang(ha),
+html:lang(hbo),
 html:lang(he),
 html:lang(iw),
 html:lang(khw),
@@ -28,7 +29,7 @@ html:lang(yi) {
 }
 
 /* Set a proper direction when <html> has a lang attribute of an RtL language and has no dir attribute. For translators like Google Translate. */
-html:lang(ar, arc, dv, fa, ha, he, iw, khw, ks, ku, ps, ur, yi) {
+html:lang(ar, arc, dv, fa, ha, hbo, he, iw, khw, ks, ku, ps, ur, yi) {
   direction: rtl;
 }
 

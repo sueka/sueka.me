@@ -1,10 +1,32 @@
 /* Keep contrasting with vertical-blink.css */
 
 /* from text.css */
-a:lang(ja):hover, .horizontal a:lang(ja):hover, a:lang(ja).horizontal:hover {
+a:lang(ja):hover,
+a:lang(jpn-archaic):hover,
+.horizontal a:lang(ja):hover,
+.horizontal a:lang(jpn-archaic):hover,
+a:lang(ja).horizontal:hover,
+a:lang(jpn-archaic).horizontal:hover {
   text-decoration: underline dashed;
 }
 
-a:lang(ja):active, .horizontal a:lang(ja):active, a:lang(ja).horizontal:active {
+a:lang(ja):active,
+a:lang(jpn-archaic):active,
+.horizontal a:lang(ja):active,
+.horizontal a:lang(jpn-archaic):active,
+a:lang(ja).horizontal:active,
+a:lang(jpn-archaic).horizontal:active {
+  text-decoration: underline;
+}
+
+a:lang(ja, jpn-archaic):hover,
+.horizontal a:lang(ja, jpn-archaic):hover,
+a:lang(ja, jpn-archaic).horizontal:hover {
+  text-decoration: underline dashed;
+}
+
+a:lang(ja, jpn-archaic):active,
+.horizontal a:lang(ja, jpn-archaic):active,
+a:lang(ja, jpn-archaic).horizontal:active {
   text-decoration: underline;
 }

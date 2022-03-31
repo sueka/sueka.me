@@ -49,6 +49,10 @@
       cssHasPseudo(document)
     </script>
     <script src="{{ '~/assets/scripts/main.js.njk' | url(true) }}"></script>
+
+    {% if he %}
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+Hebrew|Noto+Sans+Hebrew" rel="stylesheet" />
+    {% endif %}
   </head>
   <body>
     <main class="main">
