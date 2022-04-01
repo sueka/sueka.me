@@ -4,15 +4,16 @@
 
 %revert-class-vertical {
   writing-mode: revert;
-  writing-mode: vertical-rl;
 }
 
-p.vertical,
-.blockquote-like.vertical {
-  @extend %revert-class-vertical;
+.vertical p,
+p.vertical {
+  margin-inline: 0;
+  margin-block: 1em;
 
-  margin: revert;
   width: revert;
   min-height: revert;
   max-height: revert;
+  overflow-x: revert;
+  overflow-inline: revert;
 }

@@ -4,14 +4,6 @@
 
 %revert-class-horizontal {
   writing-mode: revert;
-  writing-mode: horizontal-tb;
-}
-
-.horizontal p,
-p.horizontal {
-  margin: revert;
-  height: revert;
-  max-width: revert;
 }
 
 blockquote.horizontal {
@@ -25,4 +17,10 @@ blockquote.horizontal > p {
   @extend .horizontal;
 
   leading-trim: revert;
+}
+
+.horizontal .footnote-ref a[id],
+.footnote-ref.horizontal a[id],
+.footnote-ref a[id].horizontal {
+  scroll-margin: revert;
 }

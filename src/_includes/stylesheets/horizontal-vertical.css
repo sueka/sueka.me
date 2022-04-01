@@ -29,6 +29,8 @@ p.vertical {
   width: 100%;
   min-height: 461px; /* Same as in page.njk */
   max-height: 61.8034vh; /* φ⁻¹ */
+  overflow-x: auto;
+  overflow-inline: auto;
 }
 
 .vertical em,
