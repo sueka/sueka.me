@@ -14,11 +14,11 @@
     <hr>
     <div class="colophon-dates">
       <meta itemprop="datePublished" content="{{ date | date('DATE') }}" />
-      <time datetime="{{ date | date('DATE') }}">{{ date | date('HUMAN_DATE', 'ja') }}</time>
+      <time datetime="{{ date | date('DATE') }}">{{ date | date('HUMAN_DATE', 'ja') | replace(r/(\d+|\D+)/g, '<span>$1</span>') | safe }}</time>
       公開
       {%- if lastmod %}
       <meta itemprop="dateModified" content="{{ lastmod | date('DATE') }}" />
-      <time datetime="{{ lastmod | date('DATE') }}">{{ lastmod | date('HUMAN_DATE', 'ja') }}</time>
+      <time datetime="{{ lastmod | date('DATE') }}">{{ lastmod | date('HUMAN_DATE', 'ja') | replace(r/(\d+|\D+)/g, '<span>$1</span>') | safe }}</time>
       更新
       {%- endif %}
     </div>
