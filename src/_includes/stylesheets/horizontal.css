@@ -129,6 +129,13 @@ cite {
   }
 }
 
+blockquote {
+  /* See vertical.css */
+  width: -moz-available;
+  width: -webkit-fill-available;
+  height: revert;
+}
+
 .blockquote-like {
   @extend blockquote;
 }

@@ -21,6 +21,17 @@
   writing-mode: vertical-rl; /* Safari (15.1, iOS 15.2) では継承するか直接指定するかで振る舞いが変わることがあるので、明示的に指定している。 TODO: Delete this line */
 }
 
+.horizontal p,
+p.horizontal {
+  /* layout.css */
+  margin: 0 1em;
+
+  height: 100%;
+  max-width: 61.8034vh; /* φ⁻¹ */
+  overflow-y: auto;
+  overflow-inline: auto;
+}
+
 /* TODO: blockquote > p 以外の構造でもうまく動くようにする? */
 blockquote.horizontal {
   /* インデントガイドを .horizontal でない blockquote と同じように表示するために、一度 .horizontal を元に戻し、p で改めて .horizontal を適用する。 */
@@ -34,6 +45,11 @@ blockquote.horizontal > p {
   @extend .horizontal;
 
   leading-trim: both;
+  margin: 0;
+}
+
+.blockquote-like {
+  @extend blockquote;
 }
 
 /* cf. horizontal.css */

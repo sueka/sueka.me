@@ -7,6 +7,17 @@
   writing-mode: horizontal-tb; /* Safari (15.1, iOS 15.2) では継承するか直接指定するかで振る舞いが変わることがあるので、明示的に指定している。 TODO: Delete this line */
 }
 
+.horizontal p,
+p.horizontal {
+  margin-inline: 0;
+  margin-block: 1em;
+
+  height: revert;
+  max-width: revert;
+  overflow-y: revert;
+  overflow-inline: revert;
+}
+
 blockquote.horizontal {
   @extend %revert-class-horizontal;
 
@@ -18,6 +29,10 @@ blockquote.horizontal > p {
   @extend .horizontal;
 
   leading-trim: revert;
+}
+
+.blockquote-like {
+  @extend blockquote;
 }
 
 .horizontal .footnote-ref a[id],

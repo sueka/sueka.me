@@ -18,3 +18,21 @@ p.vertical {
   overflow-x: revert;
   overflow-inline: revert;
 }
+
+blockquote.vertical {
+  /* インデントガイドを .vertical でない blockquote と同じように表示するために、一度 .vertical を元に戻し、p で改めて .vertical を適用する。 */
+  @extend %revert-class-vertical;
+
+  overflow-x: revert;
+  overflow-inline: revert;
+}
+
+blockquote.vertical > p {
+  @extend .vertical;
+
+  leading-trim: revert;
+}
+
+.blockquote-like {
+  @extend blockquote;
+}

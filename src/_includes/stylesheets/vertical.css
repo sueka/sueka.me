@@ -142,6 +142,13 @@ cite:where(:lang(ja, jpn-archaic)) {
   }
 }
 
+blockquote {
+  /* NOTE: Firefox (98.0.2) で、writing-mode: vertical-rl 文脈で ol > li 直下に <p> などの display: block な要素を置くとマーカーが右に 1 em 程度ずれてしまうため、layout.css で .footnotes-list > .footnote-item > blockquote を display: inline-flex としてこれを回避している。この部分が削除されたら次の2行も削除する。 */
+  height: -moz-available;
+  height: -webkit-fill-available;
+  width: revert;
+}
+
 .blockquote-like {
   @extend blockquote;
 }

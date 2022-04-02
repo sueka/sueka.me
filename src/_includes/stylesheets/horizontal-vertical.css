@@ -33,6 +33,26 @@ p.vertical {
   overflow-inline: auto;
 }
 
+/* TODO: blockquote > p 以外の構造でもうまく動くようにする? */
+blockquote.vertical {
+  /* インデントガイドを .vertical でない blockquote と同じように表示するために、一度 .vertical を元に戻し、p で改めて .vertical を適用する。 */
+  @extend %revert-class-vertical;
+
+  overflow-x: auto;
+  overflow-inline: auto;
+}
+
+blockquote.vertical > p {
+  @extend .vertical;
+
+  leading-trim: both;
+  margin: 0;
+}
+
+.blockquote-like {
+  @extend blockquote;
+}
+
 .vertical em,
 em.vertical {
   font-style: normal;
