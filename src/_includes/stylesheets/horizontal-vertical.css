@@ -45,7 +45,6 @@ blockquote.vertical {
 blockquote.vertical > p {
   @extend .vertical;
 
-  leading-trim: both;
   margin: 0;
 }
 

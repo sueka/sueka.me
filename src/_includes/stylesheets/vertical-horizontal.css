@@ -44,7 +44,6 @@ blockquote.horizontal {
 blockquote.horizontal > p {
   @extend .horizontal;
 
-  leading-trim: both;
   margin: 0;
 }
 

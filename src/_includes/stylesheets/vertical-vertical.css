@@ -30,7 +30,8 @@ blockquote.vertical {
 blockquote.vertical > p {
   @extend .vertical;
 
-  leading-trim: revert;
+  margin-inline: 0;
+  margin-block: 1em;
 }
 
 .blockquote-like {
