@@ -95,6 +95,10 @@ ruby rt:where(:not(:lang(ja, jpn-archaic))) {
   vertical-align: sub;
 }
 
+.kunojiten {
+  text-justify: inter-word;
+}
+
 mark {
   background-color: var(--color-mark);
   color: currentColor;
