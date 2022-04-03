@@ -81,8 +81,7 @@ ruby rt {
   text-transform: full-size-kana;
 }
 
-ruby rt:where(:not(:lang(ja))),
-ruby rt:where(:not(:lang(jpn-archaic))) {
+ruby rt:where(:not(:lang(ja)):not(:lang(jpn-archaic))) {
   text-align: center;
 }
 

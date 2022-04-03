@@ -91,8 +91,7 @@ cite:where(:lang(ja, jpn-archaic)) {
 /* See also: JIS X 4051:2004 4.7 b */
 .sideways {
   font-feature-settings: "hkna";
-  &:where(:not(:lang(ja))),
-  &:where(:not(:lang(jpn-archaic))) {
+  &:where(:not(:lang(ja)):not(:lang(jpn-archaic))) {
     font-feature-settings: "palt", "hkna";
   }
   &:where(:not(:lang(ja, jpn-archaic))) {
