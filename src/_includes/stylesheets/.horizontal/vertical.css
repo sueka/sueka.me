@@ -32,17 +32,21 @@ p.horizontal {
 
 /* TODO: blockquote > p 以外の構造でもうまく動くようにする? */
 blockquote.horizontal {
-  /* インデントガイドを .horizontal でない blockquote と同じように表示するために、一度 .horizontal を元に戻し、p で改めて .horizontal を適用する。 */
-  @extend %revert-class-horizontal;
-
+  margin: 0 1em; /* ./reset.css */
+  border-width: calc(2 / 14 * 1rem) 0;
+  padding: calc(1rem - 2 / 14 * 1rem) 0;
+  box-sizing: border-box;
+  width: revert;
+  height: 100%;
+  overflow-x: revert;
   overflow-y: auto;
-  overflow-inline: auto;
 }
 
 blockquote.horizontal > p {
   @extend .horizontal;
 
-  margin: 0;
+  margin: revert;
+  height: revert;
 }
 
 .blockquote-like {

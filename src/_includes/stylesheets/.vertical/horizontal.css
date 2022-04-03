@@ -25,25 +25,28 @@ p.vertical {
   margin: 1em 0;
 
   width: 100%;
-  min-height: 461px; /* Same as in page.njk */
-  max-height: 61.8034vh; /* φ⁻¹ */
+  max-height: min(461px, 61.8034vh); /* Same as in page.njk, φ⁻¹ */
   overflow-x: auto;
   overflow-inline: auto;
 }
 
 /* TODO: blockquote > p 以外の構造でもうまく動くようにする? */
 blockquote.vertical {
-  /* インデントガイドを .vertical でない blockquote と同じように表示するために、一度 .vertical を元に戻し、p で改めて .vertical を適用する。 */
-  @extend %revert-class-vertical;
-
+  margin: 1em 0; /* ./reset.css */
+  border-width: 0 calc(2 / 14 * 1rem);
+  padding: 0 calc(1rem - 2 / 14 * 1rem);
+  box-sizing: border-box;
+  width: 100%;
+  height: revert;
   overflow-x: auto;
-  overflow-inline: auto;
+  overflow-y: revert;
 }
 
 blockquote.vertical > p {
   @extend .vertical;
 
-  margin: 0;
+  margin: revert;
+  width: revert;
 }
 
 .blockquote-like {

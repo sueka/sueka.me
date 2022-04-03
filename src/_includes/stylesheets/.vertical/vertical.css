@@ -9,9 +9,7 @@
 
 .vertical p,
 p.vertical {
-  margin-inline: 0;
-  margin-block: 1em;
-
+  margin: revert;
   width: revert;
   min-height: revert;
   max-height: revert;
@@ -20,18 +18,15 @@ p.vertical {
 }
 
 blockquote.vertical {
-  /* インデントガイドを .vertical でない blockquote と同じように表示するために、一度 .vertical を元に戻し、p で改めて .vertical を適用する。 */
-  @extend %revert-class-vertical;
-
-  overflow-x: revert;
-  overflow-inline: revert;
+  margin: 0 1em; /* ./reset.css */
+  border-width: calc(2 / 14 * 1rem) 0;
+  padding: calc(1rem - 2 / 14 * 1rem) 0;
+  width: revert;
+  overflow-y: revert;
 }
 
 blockquote.vertical > p {
   @extend .vertical;
-
-  margin-inline: 0;
-  margin-block: 1em;
 }
 
 .blockquote-like {
