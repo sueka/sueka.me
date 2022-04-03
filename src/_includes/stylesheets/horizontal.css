@@ -48,23 +48,30 @@ em {
   font-style: revert; /* italic */
 }
 
-em:where(:lang(ja)),
-em:where(:lang(jpn-archaic)) {
-  font-style: normal;
-  font-family: var(--font-text-emphasized);
-
-  & :where([lang]) {
-    font-family: var(--font-text-emphasized);
-  }
+/* em, */
+em :where(:not(:lang(ja)):not(:lang(jpn-archaic))) {
+  font-style: italic;
+  font-family: var(--font-text);
 }
 
-em:where(:lang(ja, jpn-archaic)) {
+/* em, */
+em :where(:not(:lang(ja, jpn-archaic))) {
+  font-style: italic;
+  font-family: var(--font-text);
+}
+
+em:where(:lang(ja)),
+em:where(:lang(jpn-archaic)),
+em :where(:lang(ja)),
+em :where(:lang(jpn-archaic)) {
   font-style: normal;
   font-family: var(--font-text-emphasized);
+}
 
-  & :where([lang]) {
-    font-family: var(--font-text-emphasized);
-  }
+em:where(:lang(ja, jpn-archaic)),
+em :where(:lang(ja, jpn-archaic)) {
+  font-style: normal;
+  font-family: var(--font-text-emphasized);
 }
 
 b {
@@ -80,10 +87,12 @@ b {
 cite {
   font-style: revert; /* italic */
   font-family: var(--font-text);
+}
 
-  & :where([lang]) {
-    font-family: var(--font-text);
-  }
+/* cite, */
+cite :where([lang]) {
+  font-style: italic;
+  font-family: var(--font-text);
 }
 
 .sideways {

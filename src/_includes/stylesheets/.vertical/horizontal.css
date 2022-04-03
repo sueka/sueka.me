@@ -57,8 +57,12 @@ blockquote.vertical > p {
 em.vertical {
   font-style: normal;
   font-family: var(--font-text-emphasized);
+}
 
-  & :where([lang]) {
-    font-family: var(--font-text-emphasized);
-  }
+/* .vertical em,
+em.vertical, */
+.vertical em :where([lang]),
+em.vertical :where([lang]),
+em .vertical:where([lang]) {
+  font-style: italic;
 }

@@ -111,32 +111,35 @@ i {
   font-style: revert; /* italic */
 }
 
-i:where(:lang(ja)),
-i:where(:lang(jpn-archaic)) {
-  font-style: normal;
-  font-family: var(--font-text-emphasized);
-
-  & :where([lang]) {
-    font-family: var(--font-text-emphasized);
-  }
+/* i, */
+i :where(:not(:lang(ja)):not(:lang(jpn-archaic))) {
+  font-style: italic;
+  font-family: var(--font-text);
 }
 
-i:where(:lang(ja, jpn-archaic)) {
+/* i, */
+i :where(:not(:lang(ja, jpn-archaic))) {
+  font-style: italic;
+  font-family: var(--font-text);
+}
+
+i:where(:lang(ja)),
+i:where(:lang(jpn-archaic)),
+i :where(:lang(ja)),
+i :where(:lang(jpn-archaic)) {
   font-style: normal;
   font-family: var(--font-text-emphasized);
+}
 
-  & :where([lang]) {
-    font-family: var(--font-text-emphasized);
-  }
+i:where(:lang(ja, jpn-archaic)),
+i :where(:lang(ja, jpn-archaic)) {
+  font-style: normal;
+  font-family: var(--font-text-emphasized);
 }
 
 sup, sub {
   line-height: 1;
 }
-
-/* cite :where([lang]) {
-  font-family: var(--font-text-emphasized);
-} */
 
 .warichu {
   text-combine: lines; /* NOTE: 主要ブラウザーでの実装無し */

@@ -65,26 +65,34 @@ em.horizontal {
   font-style: revert; /* italic */
 }
 
+/* .horizontal em,
+em.horizontal, */
+.horizontal em :where([lang]),
+em.horizontal :where([lang]),
+em .horizontal:where([lang]) {
+  font-style: italic;
+}
+
 .horizontal em:where(:lang(ja)),
 .horizontal em:where(:lang(jpn-archaic)),
 em:where(:lang(ja)).horizontal,
-em:where(:lang(jpn-archaic)).horizontal {
+em:where(:lang(jpn-archaic)).horizontal,
+.horizontal em :where(:lang(ja)),
+.horizontal em :where(:lang(jpn-archaic)),
+em.horizontal :where(:lang(ja)),
+em.horizontal :where(:lang(jpn-archaic)),
+em :where(:lang(ja)).horizontal,
+em :where(:lang(jpn-archaic)).horizontal {
   font-style: normal;
   font-family: var(--font-text-emphasized);
-
-  & :where([lang]) {
-    font-family: var(--font-text-emphasized);
-  }
 }
 
 .horizontal em:where(:lang(ja, jpn-archaic)),
-em:where(:lang(ja, jpn-archaic)).horizontal {
-  font-style: normal;
+em:where(:lang(ja, jpn-archaic)).horizontal,
+.horizontal em :where(:lang(ja, jpn-archaic)),
+em.horizontal :where(:lang(ja, jpn-archaic)),
+em :where(:lang(ja, jpn-archaic)).horizontal { font-style: normal;
   font-family: var(--font-text-emphasized);
-
-  & :where([lang]) {
-    font-family: var(--font-text-emphasized);
-  }
 }
 
 .horizontal b,
