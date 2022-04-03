@@ -1,6 +1,4 @@
 /**
- * horizontal-vertical.css
- *
  * 横書きのページで、部分的な縦書きを実現する。
  *
  * **実装上の注意**
@@ -9,7 +7,7 @@
  * <!-- FIXME: 自動展開したい -->
 */
 
-/* cf. vertical-vertical.css */
+/* cf. ./vertical.css */
 
 .vertical {
   writing-mode: vertical-rl;

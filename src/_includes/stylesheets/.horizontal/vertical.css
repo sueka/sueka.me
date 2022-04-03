@@ -1,6 +1,4 @@
 /**
- * vertical-horizontal.css
- *
  * 縦書きのページで、部分的な横書きを実現する。
  *
  * **実装上の注意**
@@ -9,7 +7,7 @@
  * <!-- FIXME: 自動展開したい -->
 */
 
-/* cf. horizontal-horizontal.css */
+/* cf. ./horizontal.css */
 
 .horizontal {
   writing-mode: horizontal-tb;
@@ -51,7 +49,7 @@ blockquote.horizontal > p {
   @extend blockquote;
 }
 
-/* cf. horizontal.css */
+/* cf. ../horizontal.css */
 
 .horizontal ol,
 ol.horizontal {

@@ -27,7 +27,7 @@ dl > dt,
 dl > div > dt {
   font-family: var(--font-text-emphasized);
 
-  /* h1 ruby > rt[lang] のようなケースで :where([lang]) { font-family: var(--font-text) } をカスケードする。text.css、horizontal.css、vertical.css、vertical-horizontal.css にも同様の行がある。 */
+  /* h1 ruby > rt[lang] のようなケースで :where([lang]) { font-family: var(--font-text) } をカスケードする。text.css、horizontal.css、vertical.css、.horizontal/vertical.css にも同様の行がある。 */
   & :where([lang]) {
     font-family: var(--font-text-emphasized);
   }

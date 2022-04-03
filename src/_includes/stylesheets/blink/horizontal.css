@@ -1,17 +1,6 @@
-/* Keep contrasting with vertical-gecko.css */
+/* Keep contrasting with ./vertical.css */
 
-/* code:root, */
-:not(pre) > code,
-.horizontal :not(pre) > code,
-:not(pre).horizontal > code,
-:not(pre) > code.horizontal {
-  display: revert;
-  padding-block: 0.236068em; /* φ⁻³ */
-  line-height: revert;
-}
-
-/* from text.css */
-/* NOTE: @nest すると :is に展開されることがあり、a の詳細度が上がってしまうので、セレクターをベタ書きする。他同様。 */
+/* from ../text.css */
 a:lang(ja):hover,
 a:lang(jpn-archaic):hover,
 .horizontal a:lang(ja):hover,

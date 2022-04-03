@@ -1,6 +1,13 @@
-/* Keep contrasting with horizontal-blink.css */
+/* Keep contrasting with ./horizontal.css */
 
-/* text.css */
+/* code:root, */
+:not(pre) > code {
+  display: inline flow-root;
+  padding-block: initial;
+  line-height: calc(1 + 2 * 0.236068); /* φ⁻³; Hatching height same as layout.css; NOTE: Line that consists only code is thinner. */
+}
+
+/* ../text.css */
 a:lang(ja),
 a:lang(jpn-archaic) {
   &:hover {
