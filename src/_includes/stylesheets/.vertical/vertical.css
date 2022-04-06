@@ -11,7 +11,7 @@
 p.vertical {
   margin: revert;
   width: revert;
-  min-height: revert;
+  height: revert;
   max-height: revert;
   overflow-x: revert;
   overflow-inline: revert;

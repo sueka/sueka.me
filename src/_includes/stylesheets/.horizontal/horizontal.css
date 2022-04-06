@@ -13,6 +13,7 @@ p.horizontal {
   margin-block: 1em;
 
   height: revert;
+  width: revert;
   max-width: revert;
   overflow-y: revert;
   overflow-inline: revert;
