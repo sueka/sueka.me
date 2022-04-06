@@ -25,7 +25,7 @@ p.horizontal {
   margin: 0 1em;
 
   height: 100%;
-  max-width: 61.8034vh; /* φ⁻¹ */
+  max-width: 61.8034vw; /* φ⁻¹ */
   overflow-y: auto;
   overflow-inline: auto;
 }

@@ -25,7 +25,7 @@ p.vertical {
   margin: 1em 0;
 
   width: 100%;
-  max-height: min(461px, 61.8034vh); /* Same as in page.njk, φ⁻¹ */
+  max-height: max(461px, 61.8034vh); /* Same as in page.njk, φ⁻¹ */
   overflow-x: auto;
   overflow-inline: auto;
 }
