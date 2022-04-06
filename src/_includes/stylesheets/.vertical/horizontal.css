@@ -26,7 +26,10 @@ p.vertical {
 
   width: 100%;
   height: max-content;
-  max-height: max(461px, 61.8034vh); /* Same as in page.njk, φ⁻¹ */
+  max-height: max(461px, 50vh - 2em); /* Same as in page.njk, vertical margin */
+  @media (orientation: landscape) {
+    max-height: max(461px, 100vh - 2em);
+  }
   overflow-x: auto;
   overflow-inline: auto;
 }

@@ -9,6 +9,7 @@
 
 .vertical p,
 p.vertical {
+  font-size: revert;
   margin: revert;
   width: revert;
   height: revert;

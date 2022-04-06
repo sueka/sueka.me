@@ -26,7 +26,10 @@ p.horizontal {
 
   height: 100%;
   width: max-content;
-  max-width: 61.8034vw; /* φ⁻¹ */
+  max-width: calc(50vw - 2em); /* horizontal margin */
+  @media (orientation: portrait) {
+    max-width: calc(100vw - 2em);
+  }
   overflow-y: auto;
   overflow-inline: auto;
 }

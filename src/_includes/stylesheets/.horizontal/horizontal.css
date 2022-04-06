@@ -9,9 +9,8 @@
 
 .horizontal p,
 p.horizontal {
-  margin-inline: 0;
-  margin-block: 1em;
-
+  font-size: revert;
+  margin: revert;
   height: revert;
   width: revert;
   max-width: revert;
