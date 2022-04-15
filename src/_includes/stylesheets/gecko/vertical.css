@@ -28,3 +28,16 @@ a:lang(ja, jpn-archaic) {
     text-decoration: overline; /* left */
   }
 }
+
+.footnotes-list > .footnote-item {
+  text-align: start;
+
+  & > p {
+    text-align: justify;
+    display: inline;
+  }
+
+  & > blockquote {
+    display: inline-flex;
+  }
+}

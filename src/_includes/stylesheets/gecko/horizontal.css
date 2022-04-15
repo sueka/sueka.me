@@ -21,6 +21,12 @@ a:lang(jpn-archaic).horizontal:hover {
   text-decoration: underline dashed;
 }
 
+a:lang(ja, jpn-archaic):hover,
+.horizontal a:lang(ja, jpn-archaic):hover,
+a:lang(ja, jpn-archaic).horizontal:hover {
+  text-decoration: underline dashed;
+}
+
 a:lang(ja):active,
 a:lang(jpn-archaic):active,
 .horizontal a:lang(ja):active,
@@ -30,14 +36,21 @@ a:lang(jpn-archaic).horizontal:active {
   text-decoration: underline;
 }
 
-a:lang(ja, jpn-archaic):hover,
-.horizontal a:lang(ja, jpn-archaic):hover,
-a:lang(ja, jpn-archaic).horizontal:hover {
-  text-decoration: underline dashed;
-}
-
 a:lang(ja, jpn-archaic):active,
 .horizontal a:lang(ja, jpn-archaic):active,
 a:lang(ja, jpn-archaic).horizontal:active {
   text-decoration: underline;
+}
+
+.footnotes-list > .footnote-item {
+  text-align: revert;
+
+  & > p {
+    text-align: revert;
+    display: revert;
+  }
+
+  & > blockquote {
+    display: revert;
+  }
 }
