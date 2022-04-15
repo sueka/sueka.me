@@ -61,7 +61,8 @@ em {
   font-style: normal;
   font-family: var(--font-text-emphasized);
 
-  & :where([lang]) {
+  & :where(*) {
+    font-style: normal;
     font-family: var(--font-text-emphasized);
   }
 }
