@@ -365,7 +365,8 @@ h1, h2, h3, h4, h5, h6 {
 
   opacity: 0.1;
 
-  @nest .blockquote-like & {
+  /* TODO: @extend */
+  @nest blockquote &, .blockquote-like & {
     inset-inline-start: calc(-44 / 39 * 1em - 1rem); /* (the value of .header-anchor not in blockquote) - (blockquote indentation width) */
   }
 
