@@ -26,7 +26,7 @@ p.horizontal {
 
   height: 100%;
   width: max-content;
-  max-width: calc(50vw - 2em); /* horizontal margin */
+  max-width: calc(100vmin - 2em); /* horizontal margin */
   @media (orientation: portrait) {
     max-width: calc(100vw - 2em);
   }

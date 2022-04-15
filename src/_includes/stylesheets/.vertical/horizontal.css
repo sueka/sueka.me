@@ -26,7 +26,7 @@ p.vertical {
 
   width: 100%;
   height: max-content;
-  max-height: max(461px, 50vh - 2em); /* Same as in page.njk, vertical margin */
+  max-height: max(461px, 100vmin - 2em); /* Same as in page.njk, vertical margin */
   @media (orientation: landscape) {
     max-height: max(461px, 100vh - 2em);
   }
