@@ -253,6 +253,11 @@ dl > dt {
   margin-block-start: 1em;
 }
 
+summary::-webkit-details-marker {
+  margin-right: unset;
+  margin-inline-end: 0.4em;
+}
+
 :not(:where(li, dd, blockquote, .blockquote-like)) {
   & > :is(h1, h2, h3, h4, h5, h6, p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):first-child {
     margin-block-start: 0;
