@@ -42,6 +42,19 @@ body {
 
 ol {
   list-style-type: cjk-ideographic;
+  list-style-type: japanese-informal;
+}
+
+/* japanese-informal で最初に2文字になる数は「十一」 */
+/* 11-20 */
+ol:has(li:nth-of-type(11)) {
+  padding-inline-start: 3em;
+}
+
+/* japanese-informal で最初に3文字になる数は「二十一」 */
+/* 21-120 */
+ol:has(li:nth-of-type(21)) {
+  padding-inline-start: 4em;
 }
 
 em {

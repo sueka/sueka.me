@@ -44,6 +44,16 @@ ol {
   list-style-type: revert;
 }
 
+ol:has(li:nth-of-type(11)),
+ol:has(li:nth-of-type(21)) {
+  padding-inline-start: 2em; /* Same as ol in layout.css */
+}
+
+/* 100-9999 */
+ol:has(li:nth-of-type(100)) {
+  padding-inline-start: 3em;
+}
+
 em {
   font-style: revert; /* italic */
 }
