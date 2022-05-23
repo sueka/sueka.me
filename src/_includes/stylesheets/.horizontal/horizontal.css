@@ -33,9 +33,3 @@ blockquote.horizontal > p {
 .blockquote-like {
   @extend blockquote;
 }
-
-.horizontal .footnote-ref a[id],
-.footnote-ref.horizontal a[id],
-.footnote-ref a[id].horizontal {
-  scroll-margin: revert;
-}

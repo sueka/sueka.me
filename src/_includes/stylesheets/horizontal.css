@@ -36,8 +36,13 @@ body {
   max-width: revert;
 }
 
+.footnote-ref,
 .footnote-backref {
   @extend .upright;
+}
+
+.footnote-ref {
+  font-feature-settings: revert;
 }
 
 ol {
