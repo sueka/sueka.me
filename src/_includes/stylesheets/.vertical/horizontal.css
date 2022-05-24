@@ -70,3 +70,16 @@ em.vertical :where([lang]),
 em .vertical:where([lang]) {
   font-style: italic;
 }
+
+/* Same as in vertical.css */
+.vertical .upright,
+.upright.vertical {
+  font-feature-settings: "vkrn", "vkna", "fwid";
+  text-orientation: upright;
+}
+
+.vertical .tate-chu-yoko,
+.tate-chu-yoko.vertical {
+  -webkit-text-combine: horizontal; /* for Webkit */
+  text-combine-upright: all;
+}
