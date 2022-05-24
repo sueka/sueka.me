@@ -2,7 +2,7 @@
 title: 訓点による和訳の表示
 title_rubied: '{訓点|くん|てむ}による{和訳|わ|やく}の{表示|へう|じ}'
 date: 2022-03-29
-lastmod: 2022-05-23
+lastmod: 2022-05-24
 he: true
 ---
 
@@ -19,7 +19,7 @@ he: true
 
 <div class="blockquote-like">
 
-  It <ruby>was<rt lang="ja">だった</ruby><span class="kaeriten">㆓</span> a㆐<ruby>bright<rt lang="ja">明るく</ruby>㆐<ruby>cold<rt lang="ja">寒い</ruby>㆐<ruby>day<rt lang="ja">日</ruby><span class="kaeriten">㆒㆑</span> <ruby>in<rt lang="ja">の</ruby><span class="kaeriten">㆑</span> <ruby>April<rt lang="ja">[4]{.upright}月</ruby>, and <ruby>the clocks<rt lang="ja">時計</ruby><ruby>&nbsp;<rt lang="ja">は</ruby> <ruby>were<rt lang="ja">た</ruby><span class="kaeriten">㆑</span> <ruby>striking<rt lang="ja">打ってゐ</ruby><span class="kaeriten">㆓</span> <ruby>thirteen<rt lang="ja">[13]{.tate-chu-yoko}時</ruby><span class="kaeriten">㆒</span><ruby>&nbsp;<rt lang="ja">を</ruby>.
+  It <ruby>was<rt lang="ja">だった</ruby><span class="kaeriten">㆑</span> a<span class="kaeriten">㆑</span>㆐<ruby>bright<rt lang="ja">明るく</ruby>㆐<ruby>cold<rt lang="ja">寒い</ruby>㆐<ruby>day<rt lang="ja">日</ruby> <ruby>in<rt lang="ja">の</ruby><span class="kaeriten">㆑</span> <ruby>April<rt lang="ja">[4]{.upright}月</ruby>, and <ruby>the clocks<rt lang="ja">時計</ruby><ruby>&nbsp;<rt lang="ja">は</ruby> <ruby>were<rt lang="ja">た</ruby><span class="kaeriten">㆑</span> <ruby>striking<rt lang="ja">打ってゐ</ruby><span class="kaeriten">㆓</span> <ruby>thirteen<rt lang="ja">[13]{.tate-chu-yoko}時</ruby><span class="kaeriten">㆒</span><ruby>&nbsp;<rt lang="ja">を</ruby>.
   {lang=en .vertical .kuntened}
 </div>
 
