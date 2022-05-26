@@ -19,7 +19,7 @@ Sueka と言ひます。東京でウェブアプリケーションを開発し�
 
 ### カレンダー
 
-ゲストが追加されてゐる{豫定|よてい}の詳細は公開してゐません。
+ゲストが追加されてゐる{豫定|よ|てい}の詳細は公開してゐません。
 
 - [HTML](https://calendar.google.com/calendar/embed?src=uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com&hl=ja)
 - [iCal](https://calendar.google.com/calendar/ical/uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com/public/basic.ics)
