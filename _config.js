@@ -1,6 +1,5 @@
 import { autoprefixer, postcssNesting } from 'lume/deps/postcss.ts'
 import lume from 'lume/mod.ts'
-import bundler from 'lume/plugins/bundler.ts'
 import codeHighlight from 'lume/plugins/code_highlight.ts'
 import date from 'lume/plugins/date.ts'
 import postcss from 'lume/plugins/postcss.ts'
@@ -51,7 +50,6 @@ const site = lume({
   },
 })
 .copy('assets/images/Logo blue.svg', 'assets/images/twitter-logo.svg')
-.use(bundler())
 .use(codeHighlight())
 .use(date({ locales: { ja } }))
 .use(postcss({
