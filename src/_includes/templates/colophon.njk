@@ -11,7 +11,7 @@
 
       {{ title or incipit }}
     </div>
-    <hr>
+    <div class="divider"></div>
     <div class="colophon-dates">
       <meta itemprop="datePublished" content="{{ date | date('DATE') }}" />
       <time datetime="{{ date | date('DATE') }}">{{ date | date('HUMAN_DATE', 'ja') | replace(r/(\d+|\D+)/g, '<span>$1</span>') | safe }}</time>

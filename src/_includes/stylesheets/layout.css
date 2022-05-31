@@ -108,6 +108,10 @@ hr {
   border-color: var(--color-border);
 }
 
+.divider {
+  border: 1px solid var(--color-border);
+}
+
 .footnotes-list {
   font-size: calc(39 / 44 * 100%);
 }
@@ -139,12 +143,12 @@ hr {
   font-weight: bold;
 }
 
-.colophon-title + hr ~ * {
+.colophon-title + .divider ~ * {
   line-height: 1.1;
   leading-trim: both;
 }
 
-.colophon hr {
+.colophon .divider {
   margin-block: 1em;
 }
 
