@@ -238,6 +238,10 @@ p, .blockquote-like {
   margin-block: 1em;
 }
 
+aside {
+  font-size: calc(39 / 44 * 100%);
+}
+
 /* TODO: Merge those rulesets if the bugs of css-has-pseudo are fixed: */
 ul, menu, ol, dl {
   margin-block-start: 1em;
@@ -257,7 +261,7 @@ summary::-webkit-details-marker {
   margin-inline-end: 0.4em;
 }
 
-:not(:where(li, dd, blockquote, .blockquote-like)) {
+:not(:where(aside, li, dd, blockquote, .blockquote-like)) {
   & > :is(h1, h2, h3, h4, h5, h6, p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):first-child {
     margin-block-start: 0;
   }
