@@ -1,6 +1,7 @@
 ---
 title: シェルスクリプト・ベタープラクティス
 date: 2022-06-12
+lastmod: 2022-06-13
 vertical: false
 ---
 
@@ -101,7 +102,7 @@ vertical: false
     +++
 
 [^5]:
-    [128]{.upright}は、シグナル番号が[0]{.upright}のシグナルを受け取って終了したときに<u>返却される</u>。[kill](https://pubs.opengroup.org/onlinepubs/9699919799/functions/kill.html){lang=en} には
+    [128]{.upright}は、シグナル番号が[0]{.upright}のシグナルを受け取って終了したときに<u>返される</u>。[kill](https://pubs.opengroup.org/onlinepubs/9699919799/functions/kill.html){lang=en} には
 
     <div class="blockquote-like">
       
@@ -131,7 +132,7 @@ vertical: false
 
     </div>
 
-    とある（行を抜粋した。）が、実際は `exit 3.14159` を実行すると[255]{.upright}が返却される。また、`exit -1` を実行すると[255]{.upright}が返却されるのは、[-1]{.tate-chu-yoko} の下位[8]{.upright}ビットが返却されてゐるだけである。なほ、この振る舞ひは<ruby>規定されてゐない<rt lang="en">unspecified</ruby>[^9]。
+    とある（行を抜粋した。）が、実際は `exit 3.14159` を実行すると[255]{.upright}が返る。また、`exit -1` を実行すると[255]{.upright}が返るのは、[-1]{.tate-chu-yoko} の下位[8]{.upright}ビットが返されてゐるだけである。なほ、この振る舞ひは<ruby>規定されてゐない<rt lang="en">unspecified</ruby>[^9]。
 
 [^7]:
     [2.8.2 Exit Status for Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_02){lang=en} には次のやうにある:
@@ -164,7 +165,7 @@ BSD 系の sysexits.h[^8] に従ふのも良い習慣だと思ふ。
 
 ---
 
-因みに、ほとんどの実装で、`exit` や `return` に範囲外の値を渡すと下位[8]{.upright}ビットがそのまゝ返却されるが、この動作は<ruby>未規定<rt lang="en">unspecified</ruby>である[^9]。
+因みに、ほとんどの実装で、`exit` や `return` に範囲外の値を渡すと下位[8]{.upright}ビットがそのまゝ返されるが、この動作は<ruby>未規定<rt lang="en">unspecified</ruby>である[^9]。
 
 [^9]:
     [return](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#return){lang=en} と [exit](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#exit){lang=en} にはそれ[〴〵]{.kunojiten}次のやうにある:
@@ -279,7 +280,7 @@ Bash では `pipefail`[^15] を有効にしてもよい:
 
     <div class="blockquote-like">
 
-      パイプラインに、[0]{.upright}以外の値を返したパイプ内の最後のコマンドの終了ステータスを返却させる。
+      パイプラインに、[0]{.upright}以外の値を返したパイプ内の最後のコマンドの終了ステータスを返させる。
 
     </div>
 
@@ -827,7 +828,7 @@ Bash 4.2+ では、`lastpipe` オプションを使ふと、パイプライン�
 </blockquote>
 +++
 
-とある。わざ[〳〵]{.kunojiten}<q lang="en">in the pipe</q>とか<q lang="en">specified in the pipeline</q>とか書かれてゐるのは、恐らく、時間的に最後に返却された値を使ふのではなく、字句的に最後に書かれてゐるコマンドによって返却された値を使ふといふことを明示してゐるのだと思ふ。
+とある。わざ[〳〵]{.kunojiten}<q lang="en">in the pipe</q>とか<q lang="en">specified in the pipeline</q>とか書かれてゐるのは、恐らく、時間的に最後に返された値を使ふのではなく、字句的に最後に書かれてゐるコマンドによって返された値を使ふといふことを明示してゐるのだと思ふ。
 
 ### 関数定義コマンド
 
@@ -1021,26 +1022,24 @@ fi
 ! ([ -n "$foo" ] && [ -e "$file_path" ])
 ```
 
-のやうにする方法は、一見すると良さゝうだが、サブシェルが終了したとき、あるいは `errexit` が有効な環境で、サブシェルで実行されるコマンドが[0]{.upright}以外の終了ステータスを返したとき[^40]に、現在のシェルが終了しなくなってしまふ。
+のやうにする方法は、一見すると良さゝうだが、かうすると、サブシェルで実行されるコマンドがシェルを終了させるやうな場合に、現在のシェルが終了しなくなってしまふ[^41]。
 
-[^40]:
-    終了ステータスを返すコマンドは関数か dot スクリプトを呼び出すはず。[return](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#return){lang=en} には
+[^41]: 
+    [exit](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#exit){lang=en} には次のやうにある:
 
     <div class="blockquote-like">
 
-      シェルが関数も <i>dot</i> スクリプトも実行してゐないなら、結果は<ruby>規定されない<rt lang="en">unspecified</ruby>。
+      現在の実行環境がサブシェル環境の場合、シェルは、指定された終了ステータスでサブシェル環境を終了し、そのサブシェル環境が呼び出された環境で続行する。
 
     </div>
 
     +++ 原文
     <blockquote lang="en">
 
-      If the shell is not currently executing a function or <i>dot</i> script, the results are unspecified.
+      If the current execution environment is a subshell environment, the shell shall exit from the subshell environment with the specified exit status and continue in the environment from which that subshell environment was invoked;
 
     </blockquote>
     +++
-
-    とある。
 
 なほ、`!` はパイプラインの一部なので、この条件を
 
