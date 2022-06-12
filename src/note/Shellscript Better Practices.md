@@ -568,7 +568,7 @@ foo=1 echo hello >"$foo"
         - 代入がステップ[4]{.upright}のその後の展開において可視かどうか
         - これらの展開の副作用として実行される変数代入がステップ[4]{.upright}のその後の展開、現在のシェル実行環境、またはその両方において可視かどうか
       - コマンド名が関数として実装された標準ユーティリティ（XBD [ユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_22){hreflang=en}を見よ。）の場合、変数代入の影響は、そのユーティリティが関数として実装されてゐないかのやうになる。
-      - コマンド名が特殊ビルトインユーティリティの場合、変数代入は現在の実行環境に影響する。set <b>-a</b> オプションが有効でない場合（[set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25){hreflang=en} を見よ。）、次は<ruby>規定されてゐない<rt lang="en">unspecified</ruby>:
+      - コマンド名が特殊ビルトインユーティリティの場合、変数代入は現在の実行環境に影響する。<i>set</i> <b>-a</b> オプションが有効でない場合（[set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25){hreflang=en} を見よ。）、次は<ruby>規定されてゐない<rt lang="en">unspecified</ruby>:
         - 特殊ビルトインユーティリティの実行中に変数が export 属性を得るかどうか
         - 特殊ビルトインユーティリティの完了後に、変数代入の結果として得た export 属性が永続するかどうか
       - コマンド名が関数として実装された標準ユーティリティでない関数の場合、その関数の実行中は、変数代入が現在の実行環境に影響する。次は<ruby>規定されてゐない<rt lang="en">unspecified</ruby>:
@@ -588,7 +588,7 @@ foo=1 echo hello >"$foo"
         - Whether or not the assignments are visible for subsequent expansions in step 4 
         - Whether variable assignments made as side-effects of these expansions are visible for subsequent expansions in step 4, or in the current shell execution environment, or both
       - If the command name is a standard utility implemented as a function (see XBD [Utility](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_22)), the effect of variable assignments shall be as if the utility was not implemented as a function. 
-      - If the command name is a special built-in utility, variable assignments shall affect the current execution environment. Unless the set <b>-a</b> option is on (see [set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25)), it is unspecified: 
+      - If the command name is a special built-in utility, variable assignments shall affect the current execution environment. Unless the <i>set</i> <b>-a</b> option is on (see [set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25)), it is unspecified: 
         - Whether or not the variables gain the export attribute during the execution of the special built-in utility 
         - Whether or not export attributes gained as a result of the variable assignments persist after the completion of the special built-in utility 
       - If the command name is a function that is not a standard utility implemented as a function, variable assignments shall affect the current execution environment during the execution of the function. It is unspecified: 
@@ -635,7 +635,7 @@ echo "$foo"
 
       1. チルダ展開（[チルダ展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_01){hreflang=en}を見よ）、パラメーター展開（[パラメーター展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02){hreflang=en}を見よ）、コマンド置換（[コマンド置換](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_03){hreflang=en}を見よ）、そして算術展開（[算術展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_04){hreflang=en}を見よ）が全て実行される。[トークン認識](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_03){hreflang=en}の第[5]{.upright}項目を見よ。
       2. <i>IFS</i> が null でなければ、ステップ[1]{.upright}で生成されたフィールドの部分に対して、フィールド分割（[フィールド分割](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05){hreflang=en}を見よ）が実行される。
-      3. `set -f` が有効でなければ、パス名展開（[パス名展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06){hreflang=en}を見よ）が実行される。
+      3. <i>set</i> <b>-f</b> が有効でなければ、パス名展開（[パス名展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06){hreflang=en}を見よ）が実行される。
       4. 最後に、引用符削除（[引用符削除](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_07){hreflang=en}を見よ）が常に実行される。
 
     </div>
@@ -647,7 +647,7 @@ echo "$foo"
 
       1. Tilde expansion (see [Tilde Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_01)), parameter expansion (see [Parameter Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02)), command substitution (see [Command Substitution](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_03)), and arithmetic expansion (see [Arithmetic Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_04)) shall be performed, beginning to end. See item 5 in [Token Recognition](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_03).
       2. Field splitting (see [Field Splitting](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05)) shall be performed on the portions of the fields generated by step 1, unless IFS is null.
-      3. Pathname expansion (see [Pathname Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06)) shall be performed, unless set -f is in effect.
+      3. Pathname expansion (see [Pathname Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06)) shall be performed, unless <i>set</i> <b>-f</b> is in effect.
       4. Quote removal (see [Quote Removal](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_07)) shall always be performed last.
 
     </blockquote>
@@ -893,7 +893,7 @@ done
 
 ### 返り値
 
-返り値は終了ステータスとして返される。終了ステータスは単なる[8]{.upright}ビット整数なので、関数やプログラムの結果を表すには心許ない。そのため、シェルでは、真偽値を返す場合を除いて、*結果は標準出力に送る*。
+返り値は終了ステータスとして返される。終了ステータスは単なる[8]{.upright}ビット非負整数なので、関数やプログラムの結果を表すには心許ない。そのため、シェルでは、真偽値を返す場合を除いて、*結果は標準出力に送る*。
 
 *スクリプトのほゞ全体を `main` といふ名前の関数にする*。例へば、
 
