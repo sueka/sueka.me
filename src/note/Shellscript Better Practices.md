@@ -105,7 +105,7 @@ vertical: false
     [128]{.upright}は、シグナル番号が[0]{.upright}のシグナルを受け取って終了したときに<u>返される</u>。[kill](https://pubs.opengroup.org/onlinepubs/9699919799/functions/kill.html){lang=en} には
 
     <div class="blockquote-like">
-      
+
       <i>sig</i> が[0]{.upright}（null シグナル）の場合、エラーチェックは実行されるが、シグナルは実際には送信されない。null シグナルは <i>pid</i> の妥当性を調べるために使はれることがある。
 
     </div>
@@ -489,219 +489,6 @@ UNIX 哲学も一種のベタープラクティスである。[<cite>BSTJ 57: 6.
 
 とある。
 
-## 変数代入
-
-シェルの変数代入はシンプルコマンドの一部で、コマンド名の左にあって、変数名の右に `=` と変数の値が続くものである。シンプルコマンドは[0]{.upright}個以上の変数代入を持つ。
-
-シンプルコマンドのコマンド名と引数は省略できるので、
-
-``` sh
-foo=1 bar=2
-```
-
-のやうに、[1]{.upright}つのコマンドで複数の変数代入だけを行ふこともできる。
-
-しかし、シンプルコマンドは、変数代入でもリダイレクトでもない部分を単語展開し、リダイレクトを実行し、変数代入を単語展開し、それから変数代入を行ふといふ順で実行される[^21]。例へば、
-
-[^21]:
-    [2.9.1 Simple Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01){lang=en} には次のやうにある:
-
-    <div class="blockquote-like">
-
-      与へられたシンプルコマンドが実行される必要がある場合（すなはち、AND-OR リストや case 文などの条件構造がそのシンプルコマンドをバイパスしてゐない場合）、次の展開、代入、そしてリダイレクトがコマンドテキストの最初から最後まで全て実行される:
-
-      1. [シェル文法規則](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02){hreflang=en}に従って、変数代入またはリダイレクトとして認識される単語が、ステップ[3]{.upright}とステップ[4]{.upright}で処理するために保存される。
-      2. 変数代入でもリダイレクトでもない単語が展開される。展開後にフィールドが残ってゐる場合、最初のフィールドはコマンド名と見做され、残りのフィールドはそのコマンドの引数と見做される。
-      3. [リダイレクト](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07)に記述されてゐるやうに、リダイレクトが実行される。
-      4. それ[〴〵]{.kunojiten}の変数代入は、値を代入する前に、チルダ展開、パラメーター展開、コマンド置換、算術展開、そして引用符削除される。
-
-      先のリストにおいて、ステップ[2]{.upright}からコマンド名が生じない場合、またはコマンド名が特殊ビルトインユーティリティ（[特殊ビルトインユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_14){hreflang=en}を見よ。）の名前に一致する場合、ステップ[3]{.upright}とステップ[4]{.upright}の順序は入れ替はってもよい。
-
-    </div>
-
-    +++ 原文
-    <blockquote lang="en">
-
-      When a given simple command is required to be executed (that is, when any conditional construct such as an AND-OR list or a case statement has not bypassed the simple command), the following expansions, assignments, and redirections shall all be performed from the beginning of the command text to the end:
-
-      1. The words that are recognized as variable assignments or redirections according to [Shell Grammar Rules](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02) are saved for processing in steps 3 and 4.
-      2. The words that are not variable assignments or redirections shall be expanded. If any fields remain following their expansion, the first field shall be considered the command name and remaining fields are the arguments for the command.
-      3. Redirections shall be performed as described in [Redirection](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07). 
-      4. Each variable assignment shall be expanded for tilde expansion, parameter expansion, command substitution, arithmetic expansion, and quote removal prior to assigning the value.
-
-      In the preceding list, the order of steps 3 and 4 may be reversed if no command name results from step 2 or if the command name matches the name of a special built-in utility; see [Special Built-In Utilities](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_14).
-
-    </blockquote>
-    +++
-
-``` sh
-foo=1 bar=$foo
-echo "$bar"
-```
-
-や
-
-``` sh
-foo=1 echo "$foo"
-```
-
-は空行を出力し、
-
-``` sh
-foo=1 echo hello >"$foo"
-```
-
-は `sh: $foo: ambiguous redirect` のやうなメッセージを標準エラー出力に印字する。この振る舞ひは見落としやすいので、**注意して使ふ**[^22]。
-
-[^22]: しばらく考へたけれど、実用性を犠牲にせずに構文でうまく立ち回る方法は思ひ付かなかった。
-
-コマンド名が存在する場合、そのコマンド名が標準ユーティリティなら変数代入はそのコマンドの環境にしか影響せず、特殊ビルトインや関数なら現在の環境に影響する[^23]。例へば、
-
-[^23]:
-    [2.9.1 Simple Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01){lang=en} には次のやうにある:
-
-    <div class="blockquote-like">
-
-      変数代入は次のやうに実行される:
-
-      - 結果としてコマンド名が無い場合、変数代入は現在の実行環境に影響する。
-      - コマンド名が特殊ビルトインユーティリティでも関数でもない場合、変数代入は、そのコマンドの実行環境にエクスポートされ、ステップ[4]{.upright}で実行される展開の副作用を除いて、現在の実行環境には影響しない。この場合、次は<ruby>規定されてゐない<rt lang="en">unspecified</ruby>:
-        - 代入がステップ[4]{.upright}のその後の展開において可視かどうか
-        - これらの展開の副作用として実行される変数代入がステップ[4]{.upright}のその後の展開、現在のシェル実行環境、またはその両方において可視かどうか
-      - コマンド名が関数として実装された標準ユーティリティ（XBD [ユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_22){hreflang=en}を見よ。）の場合、変数代入の影響は、そのユーティリティが関数として実装されてゐないかのやうになる。
-      - コマンド名が特殊ビルトインユーティリティの場合、変数代入は現在の実行環境に影響する。<i>set</i> <b>-a</b> オプションが有効でない場合（[set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25){hreflang=en} を見よ。）、次は<ruby>規定されてゐない<rt lang="en">unspecified</ruby>:
-        - 特殊ビルトインユーティリティの実行中に変数が export 属性を得るかどうか
-        - 特殊ビルトインユーティリティの完了後に、変数代入の結果として得た export 属性が永続するかどうか
-      - コマンド名が関数として実装された標準ユーティリティでない関数の場合、その関数の実行中は、変数代入が現在の実行環境に影響する。次は<ruby>規定されてゐない<rt lang="en">unspecified</ruby>:
-        - 関数の完了後に変数代入が永続するかどうか
-        - 関数の実行中に変数が export 属性を得るかどうか
-        - （関数の完了後に変数代入が永続する場合、）関数の完了後に変数代入の結果として得た export 属性が永続するかどうか
-
-    </div>
-
-    +++ 原文
-    <blockquote lang="en">
-
-      Variable assignments shall be performed as follows:
-
-      - If no command name results, variable assignments shall affect the current execution environment. 
-      - If the command name is not a special built-in utility or function, the variable assignments shall be exported for the execution environment of the command and shall not affect the current execution environment except as a side-effect of the expansions performed in step 4. In this case it is unspecified: 
-        - Whether or not the assignments are visible for subsequent expansions in step 4 
-        - Whether variable assignments made as side-effects of these expansions are visible for subsequent expansions in step 4, or in the current shell execution environment, or both
-      - If the command name is a standard utility implemented as a function (see XBD [Utility](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_22)), the effect of variable assignments shall be as if the utility was not implemented as a function. 
-      - If the command name is a special built-in utility, variable assignments shall affect the current execution environment. Unless the <i>set</i> <b>-a</b> option is on (see [set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25)), it is unspecified: 
-        - Whether or not the variables gain the export attribute during the execution of the special built-in utility 
-        - Whether or not export attributes gained as a result of the variable assignments persist after the completion of the special built-in utility 
-      - If the command name is a function that is not a standard utility implemented as a function, variable assignments shall affect the current execution environment during the execution of the function. It is unspecified: 
-        - Whether or not the variable assignments persist after the completion of the function 
-        - Whether or not the variables gain the export attribute during the execution of the function 
-        - Whether or not export attributes gained as a result of the variable assignments persist after the completion of the function (if variable assignments persist after the completion of the function)
-
-    </blockquote>
-    +++
-
-``` sh
-LC_TIME=C
-LC_TIME=ja_JP.UTF-8 date
-date
-```
-
-は
-
-``` txt
-2022年 6月12日 日曜日 13時04分20秒 JST
-Sun Jun 12 13:04:20 JST 2022
-```
-
-のやうなメッセージを印字し、
-
-``` sh
-foo=1
-foo=2 :
-echo "$foo"
-```
-
-は `2` を印字する。この振る舞ひもかなりやゝこしいので、*特殊ビルトインや関数を実行するときは、そのコマンドで変数代入を行はない*やうにする。POSIX の特殊ビルトインは `.` `:` `break` `continue` `eval` `exec` `exit` `export` `readonly` `return` `set` `shift` `times` `trap` `unset` の[15]{.tate-chu-yoko}個。なほ、`export` や `readonly` の右にあるものは引数であって、変数代入ではない。
-
-## 単語展開
-
-単語展開は、まづ、チルダ展開、パラメーター展開、コマンド置換、算術展開が同時に起こり、続いて、フィールド分割、パス名展開、引用符削除がこの順で起こる[^24]。引用符削除が最後に起こるため、単語[^25]を引用符で囲むと、他の種類の単語展開を{沮止|そ|し}できる。引用符には `"` と `'` が使へる。`"` で囲まれた部分では、`` ` `` `$` `\` が特別扱ひされる[^26]ので、パラメーター展開、コマンド置換、算術展開は起こる。したがって、*フィールド分割またはパス名展開が起こる部分で、チルダ展開、フィールド分割、およびパス名展開のいづれも使はずに、パラメーター展開、コマンド置換、または算術展開を使ふ場合、その部分を `"` で囲むのがベター*である。これに相当する部分には
-
-[^24]:
-    [2.6 Word Expansions](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06){lang=en} には次のやうにある:
-
-    <div class="blockquote-like">
-
-      単語展開の順序は次の通り:
-
-      1. チルダ展開（[チルダ展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_01){hreflang=en}を見よ）、パラメーター展開（[パラメーター展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02){hreflang=en}を見よ）、コマンド置換（[コマンド置換](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_03){hreflang=en}を見よ）、そして算術展開（[算術展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_04){hreflang=en}を見よ）が全て実行される。[トークン認識](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_03){hreflang=en}の第[5]{.upright}項目を見よ。
-      2. <i>IFS</i> が null でなければ、ステップ[1]{.upright}で生成されたフィールドの部分に対して、フィールド分割（[フィールド分割](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05){hreflang=en}を見よ）が実行される。
-      3. <i>set</i> <b>-f</b> が有効でなければ、パス名展開（[パス名展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06){hreflang=en}を見よ）が実行される。
-      4. 最後に、引用符削除（[引用符削除](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_07){hreflang=en}を見よ）が常に実行される。
-
-    </div>
-
-    +++ 原文
-    <blockquote lang="en">
-
-      The order of word expansion shall be as follows:
-
-      1. Tilde expansion (see [Tilde Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_01)), parameter expansion (see [Parameter Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02)), command substitution (see [Command Substitution](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_03)), and arithmetic expansion (see [Arithmetic Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_04)) shall be performed, beginning to end. See item 5 in [Token Recognition](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_03).
-      2. Field splitting (see [Field Splitting](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05)) shall be performed on the portions of the fields generated by step 1, unless IFS is null.
-      3. Pathname expansion (see [Pathname Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06)) shall be performed, unless <i>set</i> <b>-f</b> is in effect.
-      4. Quote removal (see [Quote Removal](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_07)) shall always be performed last.
-
-    </blockquote>
-    +++
-
-[^25]: 単語展開されるトークン。
-
-[^26]:
-    [2.2.3 Double-Quotes](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_02_03){lang=en} には次のやうにある:
-
-    <div class="blockquote-like">
-
-      二重引用符（`""`）で<ruby>文字<rt lang="en">characters</ruby>を囲むと、次のやうに、その二重引用符の中の（バッククォート、\<dollar-sign\>、および \<backslash\> を除く）全ての文字のリテラル値が保持される:
-
-    </div>
-
-    +++ 原文
-    <blockquote lang="en">
-
-      Enclosing characters in double-quotes ( `""` ) shall preserve the literal value of all characters within the double-quotes, with the exception of the characters backquote, \<dollar-sign\>, and \<backslash\>, as follows:
-
-    </blockquote>
-    +++
-
-- コマンド名
-- 引数
-- 変数代入の左辺
-- ヒアドキュメントの区切り文字を除く、リダイレクトの右辺
-- for 文の `in` の右の部分
-
-などがある。
-
-変数代入の右辺や case 文の `case` の右の部分では、フィールド分割とパス名展開が起こらないため、その部分をクォーテーションマークで囲んでも、チルダ展開が起こらなくなるだけである。変数代入の右辺や case 文の `case` の右にチルダを置くときは、大抵、チルダ展開を期待してゐる[^27]ので、これらの部分をクォーテーションマークで囲む理由は少ない。また、ヒアドキュメントの区切り文字は、引用符削除しか起こらないので、クォーテーションマークで囲む必要性は無い。
-
-[^27]:
-    次のやうなコマンドを想像すると分かりやすいと思ふ:
-
-    ``` sh
-    tilde="~"
-
-    home=~
-
-    case ~ in
-    	(/home/* | /Users/*) echo 'I'"'"'m a huperoffspring!'
-    esac
-    ```
-
----
-
-`${TMPDIR:-/tmp}` などの `$foo` 以外の形式のパラメーター展開は、パフォーマンスに貢献することが多いので、積極的に使ふ。
-
-*コマンド置換には `$(name)` を使ひ*、`` `name` `` は使はない。` `` ` もクォーテーションマークの中で展開されることに注意。``echo "`(cd ..; pwd)`"`` は作業ディレクトリの親ディレクトリのパスを印字する。
-
 ## コマンド
 
 シェルで実行可能な文をコマンドと言ふ。POSIX のコマンドは
@@ -880,6 +667,220 @@ done
 
 のやうな関数が書ける。
 
+## 変数代入
+
+シェルの変数代入はシンプルコマンドの一部で、コマンド名の左にあって、変数名の右に `=` と変数の値が続くものである。シンプルコマンドは[0]{.upright}個以上の変数代入を持つ。
+
+シンプルコマンドのコマンド名と引数は省略できるので、
+
+``` sh
+foo=1 bar=2
+```
+
+のやうに、[1]{.upright}つのコマンドで複数の変数代入だけを行ふこともできる。
+
+しかし、シンプルコマンドは、変数代入でもリダイレクトでもない部分を単語展開し、リダイレクトを実行し、変数代入を単語展開し、それから変数代入を行ふといふ順で実行される[^21]。例へば、
+
+[^21]:
+    [2.9.1 Simple Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01){lang=en} には次のやうにある:
+
+    <div class="blockquote-like">
+
+      与へられたシンプルコマンドが実行される必要がある場合（すなはち、AND-OR リストや case 文などの条件構造がそのシンプルコマンドをバイパスしてゐない場合）、次の展開、代入、そしてリダイレクトがコマンドテキストの最初から最後まで全て実行される:
+
+      1. [シェル文法規則](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02){hreflang=en}に従って、変数代入またはリダイレクトとして認識される単語が、ステップ[3]{.upright}とステップ[4]{.upright}で処理するために保存される。
+      2. 変数代入でもリダイレクトでもない単語が展開される。展開後にフィールドが残ってゐる場合、最初のフィールドはコマンド名と見做され、残りのフィールドはそのコマンドの引数と見做される。
+      3. [リダイレクト](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07)に記述されてゐるやうに、リダイレクトが実行される。
+      4. それ[〴〵]{.kunojiten}の変数代入は、値を代入する前に、チルダ展開、パラメーター展開、コマンド置換、算術展開、そして引用符削除される。
+
+      先のリストにおいて、ステップ[2]{.upright}からコマンド名が生じない場合、またはコマンド名が特殊ビルトインユーティリティ（[特殊ビルトインユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_14){hreflang=en}を見よ。）の名前に一致する場合、ステップ[3]{.upright}とステップ[4]{.upright}の順序は入れ替はってもよい。
+
+    </div>
+
+    +++ 原文
+    <blockquote lang="en">
+
+      When a given simple command is required to be executed (that is, when any conditional construct such as an AND-OR list or a case statement has not bypassed the simple command), the following expansions, assignments, and redirections shall all be performed from the beginning of the command text to the end:
+
+      1. The words that are recognized as variable assignments or redirections according to [Shell Grammar Rules](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02) are saved for processing in steps 3 and 4.
+      2. The words that are not variable assignments or redirections shall be expanded. If any fields remain following their expansion, the first field shall be considered the command name and remaining fields are the arguments for the command.
+      3. Redirections shall be performed as described in [Redirection](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07).
+      4. Each variable assignment shall be expanded for tilde expansion, parameter expansion, command substitution, arithmetic expansion, and quote removal prior to assigning the value.
+
+      In the preceding list, the order of steps 3 and 4 may be reversed if no command name results from step 2 or if the command name matches the name of a special built-in utility; see [Special Built-In Utilities](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_14).
+
+    </blockquote>
+    +++
+
+``` sh
+foo=1 bar=$foo
+echo "$bar"
+```
+
+や
+
+``` sh
+foo=1 echo "$foo"
+```
+
+は空行を出力し、
+
+``` sh
+foo=1 echo hello >"$foo"
+```
+
+は `sh: $foo: ambiguous redirect` のやうなメッセージを標準エラー出力に印字する。この振る舞ひは見落としやすいので、**注意して使ふ**[^22]。
+
+[^22]: しばらく考へたけれど、実用性を犠牲にせずに構文でうまく立ち回る方法は思ひ付かなかった。
+
+コマンド名が存在する場合、そのコマンド名が標準ユーティリティなら変数代入はそのコマンドの環境にしか影響せず、特殊ビルトインや関数なら現在の環境に影響する[^23]。例へば、
+
+[^23]:
+    [2.9.1 Simple Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01){lang=en} には次のやうにある:
+
+    <div class="blockquote-like">
+
+      変数代入は次のやうに実行される:
+
+      - 結果としてコマンド名が無い場合、変数代入は現在の実行環境に影響する。
+      - コマンド名が特殊ビルトインユーティリティでも関数でもない場合、変数代入は、そのコマンドの実行環境にエクスポートされ、ステップ[4]{.upright}で実行される展開の副作用を除いて、現在の実行環境には影響しない。この場合、次は<ruby>規定されてゐない<rt lang="en">unspecified</ruby>:
+        - 代入がステップ[4]{.upright}のその後の展開において可視かどうか
+        - これらの展開の副作用として実行される変数代入がステップ[4]{.upright}のその後の展開、現在のシェル実行環境、またはその両方において可視かどうか
+      - コマンド名が関数として実装された標準ユーティリティ（XBD [ユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_22){hreflang=en}を見よ。）の場合、変数代入の影響は、そのユーティリティが関数として実装されてゐないかのやうになる。
+      - コマンド名が特殊ビルトインユーティリティの場合、変数代入は現在の実行環境に影響する。<i>set</i> <b>-a</b> オプションが有効でない場合（[set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25){hreflang=en} を見よ。）、次は<ruby>規定されてゐない<rt lang="en">unspecified</ruby>:
+        - 特殊ビルトインユーティリティの実行中に変数が export 属性を得るかどうか
+        - 特殊ビルトインユーティリティの完了後に、変数代入の結果として得た export 属性が永続するかどうか
+      - コマンド名が関数として実装された標準ユーティリティでない関数の場合、その関数の実行中は、変数代入が現在の実行環境に影響する。次は<ruby>規定されてゐない<rt lang="en">unspecified</ruby>:
+        - 関数の完了後に変数代入が永続するかどうか
+        - 関数の実行中に変数が export 属性を得るかどうか
+        - （関数の完了後に変数代入が永続する場合、）関数の完了後に変数代入の結果として得た export 属性が永続するかどうか
+
+    </div>
+
+    +++ 原文
+    <blockquote lang="en">
+
+      Variable assignments shall be performed as follows:
+
+      - If no command name results, variable assignments shall affect the current execution environment.
+      - If the command name is not a special built-in utility or function, the variable assignments shall be exported for the execution environment of the command and shall not affect the current execution environment except as a side-effect of the expansions performed in step 4. In this case it is unspecified:
+        - Whether or not the assignments are visible for subsequent expansions in step 4
+        - Whether variable assignments made as side-effects of these expansions are visible for subsequent expansions in step 4, or in the current shell execution environment, or both
+      - If the command name is a standard utility implemented as a function (see XBD [Utility](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_22)), the effect of variable assignments shall be as if the utility was not implemented as a function.
+      - If the command name is a special built-in utility, variable assignments shall affect the current execution environment. Unless the <i>set</i> <b>-a</b> option is on (see [set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25)), it is unspecified:
+        - Whether or not the variables gain the export attribute during the execution of the special built-in utility
+        - Whether or not export attributes gained as a result of the variable assignments persist after the completion of the special built-in utility
+      - If the command name is a function that is not a standard utility implemented as a function, variable assignments shall affect the current execution environment during the execution of the function. It is unspecified:
+        - Whether or not the variable assignments persist after the completion of the function
+        - Whether or not the variables gain the export attribute during the execution of the function
+        - Whether or not export attributes gained as a result of the variable assignments persist after the completion of the function (if variable assignments persist after the completion of the function)
+
+    </blockquote>
+    +++
+
+``` sh
+LC_TIME=C
+LC_TIME=ja_JP.UTF-8 date
+date
+```
+
+は
+
+``` txt
+2022年 6月12日 日曜日 13時04分20秒 JST
+Sun Jun 12 13:04:20 JST 2022
+```
+
+のやうなメッセージを印字し、
+
+``` sh
+foo=1
+foo=2 :
+echo "$foo"
+```
+
+は `2` を印字する。この振る舞ひもかなりやゝこしいので、*特殊ビルトインや関数を実行するときは、そのコマンドで変数代入を行はない*やうにする。POSIX の特殊ビルトインは `.` `:` `break` `continue` `eval` `exec` `exit` `export` `readonly` `return` `set` `shift` `times` `trap` `unset` の[15]{.tate-chu-yoko}個。なほ、`export` や `readonly` の右にあるものは引数であって、変数代入ではない。
+
+## 単語展開
+
+単語展開は、まづ、チルダ展開、パラメーター展開、コマンド置換、算術展開が同時に起こり、続いて、フィールド分割、パス名展開、引用符削除がこの順で起こる[^24]。引用符削除が最後に起こるため、単語[^25]を引用符で囲むと、他の種類の単語展開を{沮止|そ|し}できる。引用符には `"` と `'` が使へる。`"` で囲まれた部分では、`` ` `` `$` `\` が特別扱ひされる[^26]ので、パラメーター展開、コマンド置換、算術展開は起こる。したがって、*フィールド分割またはパス名展開が起こる部分で、チルダ展開、フィールド分割、およびパス名展開のいづれも使はずに、パラメーター展開、コマンド置換、または算術展開を使ふ場合、その部分を `"` で囲むのがベター*である。これに相当する部分には
+
+[^24]:
+    [2.6 Word Expansions](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06){lang=en} には次のやうにある:
+
+    <div class="blockquote-like">
+
+      単語展開の順序は次の通り:
+
+      1. チルダ展開（[チルダ展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_01){hreflang=en}を見よ）、パラメーター展開（[パラメーター展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02){hreflang=en}を見よ）、コマンド置換（[コマンド置換](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_03){hreflang=en}を見よ）、そして算術展開（[算術展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_04){hreflang=en}を見よ）が全て実行される。[トークン認識](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_03){hreflang=en}の第[5]{.upright}項目を見よ。
+      2. <i>IFS</i> が null でなければ、ステップ[1]{.upright}で生成されたフィールドの部分に対して、フィールド分割（[フィールド分割](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05){hreflang=en}を見よ）が実行される。
+      3. <i>set</i> <b>-f</b> が有効でなければ、パス名展開（[パス名展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06){hreflang=en}を見よ）が実行される。
+      4. 最後に、引用符削除（[引用符削除](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_07){hreflang=en}を見よ）が常に実行される。
+
+    </div>
+
+    +++ 原文
+    <blockquote lang="en">
+
+      The order of word expansion shall be as follows:
+
+      1. Tilde expansion (see [Tilde Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_01)), parameter expansion (see [Parameter Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02)), command substitution (see [Command Substitution](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_03)), and arithmetic expansion (see [Arithmetic Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_04)) shall be performed, beginning to end. See item 5 in [Token Recognition](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_03).
+      2. Field splitting (see [Field Splitting](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05)) shall be performed on the portions of the fields generated by step 1, unless IFS is null.
+      3. Pathname expansion (see [Pathname Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06)) shall be performed, unless <i>set</i> <b>-f</b> is in effect.
+      4. Quote removal (see [Quote Removal](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_07)) shall always be performed last.
+
+    </blockquote>
+    +++
+
+[^25]: 単語展開されるトークン。
+
+[^26]:
+    [2.2.3 Double-Quotes](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_02_03){lang=en} には次のやうにある:
+
+    <div class="blockquote-like">
+
+      二重引用符（`""`）で<ruby>文字<rt lang="en">characters</ruby>を囲むと、次のやうに、その二重引用符の中の（バッククォート、\<dollar-sign\>、および \<backslash\> を除く）全ての文字のリテラル値が保持される:
+
+    </div>
+
+    +++ 原文
+    <blockquote lang="en">
+
+      Enclosing characters in double-quotes ( `""` ) shall preserve the literal value of all characters within the double-quotes, with the exception of the characters backquote, \<dollar-sign\>, and \<backslash\>, as follows:
+
+    </blockquote>
+    +++
+
+- コマンド名
+- 引数
+- 変数代入の左辺
+- ヒアドキュメントの区切り文字を除く、リダイレクトの右辺
+- for 文の `in` の右の部分
+
+などがある。
+
+変数代入の右辺や case 文の `case` の右の部分では、フィールド分割とパス名展開が起こらないため、その部分をクォーテーションマークで囲んでも、チルダ展開が起こらなくなるだけである。変数代入の右辺や case 文の `case` の右にチルダを置くときは、大抵、チルダ展開を期待してゐる[^27]ので、これらの部分をクォーテーションマークで囲む理由は少ない。また、ヒアドキュメントの区切り文字は、引用符削除しか起こらないので、クォーテーションマークで囲む必要性は無い。
+
+[^27]:
+    次のやうなコマンドを想像すると分かりやすいと思ふ:
+
+    ``` sh
+    tilde="~"
+    home=~
+    ```
+
+    ``` sh
+    case ~ in
+    	(/home/* | /Users/*) echo 'I'"'"'m a huperoffspring!'
+    esac
+    ```
+
+---
+
+`${TMPDIR:-/tmp}` などの `$foo` 以外の形式のパラメーター展開は、パフォーマンスに貢献することが多いので、積極的に使ふ。
+
+*コマンド置換には `$(name)` を使ひ*、`` `name` `` は使はない。` `` ` もクォーテーションマークの中で展開されることに注意。``echo "`(cd ..; pwd)`"`` は作業ディレクトリの親ディレクトリのパスを印字する。
+
 ## 関数
 
 関数は以下のことに注意して使ふ。
@@ -895,48 +896,6 @@ done
 ### 返り値
 
 返り値は終了ステータスとして返される。終了ステータスは単なる[8]{.upright}ビット非負整数なので、関数やプログラムの結果を表すには心許ない。そのため、シェルでは、真偽値を返す場合を除いて、*結果は標準出力に送る*。
-
-*スクリプトのほゞ全体を `main` といふ名前の関数にする*。例へば、
-
-``` sh
-#!/bin/sh
-set -eu
-
-main() {
-	echo OK
-}
-
-main "$@"
-```
-
-といふゝうにする。かうすると、[2]{.upright}つ良いことがある。[1]{.upright}つはエントリーポイントが明確になり、関数定義が `main` のロジックから自然に分離されることである。
-
-もう[1]{.upright}つは関数定義はキャッシュされるといふことである。例へば、
-
-``` sh:poc1.sh
-#!/bin/sh
-set -eu
-
-main() {
-	foo=1
-	sleep 2
-	# unset foo
-	echo "foo: $foo"
-}
-
-main "$@"
-```
-
-は、
-
-``` sh
-./poc1.sh &
-sleep 1
-sed "s/# //" <poc1.sh >/tmp/poc1.sh
-cat /tmp/poc1.sh >poc1.sh
-```
-
-のやうに実行しても、[2]{.upright}秒後に `foo: 1` を印字する。`main` が無ければ、`echo "foo: $foo"` でパラメーター展開に失敗して終了する。
 
 ## 条件
 
@@ -1024,7 +983,7 @@ fi
 
 のやうにする方法は、一見すると良さゝうだが、かうすると、サブシェルで実行されるコマンドがシェルを終了させるやうな場合に、現在のシェルが終了しなくなってしまふ[^41]。
 
-[^41]: 
+[^41]:
     [exit](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#exit){lang=en} には次のやうにある:
 
     <div class="blockquote-like">
@@ -1050,6 +1009,50 @@ fi
 と書くことはできない。かうすると、`! [ -n "$foo" ]` と `[ -e "$file_path" ]` の論理積として解釈されてしまふ。
 
 ## その他の一般的なパターン
+
+### エントリーポイント
+
+*スクリプトのほゞ全体を `main` といふ名前の関数にする*。例へば、
+
+``` sh
+#!/bin/sh
+set -eu
+
+main() {
+	echo OK
+}
+
+main "$@"
+```
+
+といふゝうにする。かうすると、[2]{.upright}つ良いことがある。[1]{.upright}つはエントリーポイントが明確になり、関数定義が `main` のロジックから自然に分離されることである。
+
+もう[1]{.upright}つは関数定義はキャッシュされるといふことである。例へば、
+
+``` sh:poc1.sh
+#!/bin/sh
+set -eu
+
+main() {
+	foo=1
+	sleep 2
+	# unset foo
+	echo "foo: $foo"
+}
+
+main "$@"
+```
+
+は、
+
+``` sh
+./poc1.sh &
+sleep 1
+sed "s/# //" <poc1.sh >/tmp/poc1.sh
+cat /tmp/poc1.sh >poc1.sh
+```
+
+のやうに実行しても、[2]{.upright}秒後に `foo: 1` を印字する。`main` が無ければ、`echo "foo: $foo"` でパラメーター展開に失敗して終了する。
 
 ### 無駄な〇〇を避ける
 
