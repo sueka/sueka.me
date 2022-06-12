@@ -59,17 +59,13 @@ ol:has(li:nth-of-type(100)) {
   padding-inline-start: 3em;
 }
 
-em {
-  font-style: revert; /* italic */
-}
-
-/* em, */
+em,
 em :where(:not(:lang(ja)):not(:lang(jpn-archaic))) {
   font-style: italic;
   font-family: var(--font-text);
 }
 
-/* em, */
+em,
 em :where(:not(:lang(ja, jpn-archaic))) {
   font-style: italic;
   font-family: var(--font-text);

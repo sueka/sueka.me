@@ -36,14 +36,14 @@ body {
   max-width: calc(100vw - 2 * var(--colophon-margin-block)); /* 余白を含めた長さがビューポート幅と同じ */
 }
 
-.footnote-ref,
+/* .footnote-ref, */
 .footnote-backref {
   @extend .upright;
 }
 
-.footnote-ref {
-  font-feature-settings: "vkrn", "vkna", "fwid", "vpal"; /* .upright + "vpal" */
-}
+/* .footnote-ref {
+  font-feature-settings: "vkrn", "vkna", "fwid", "vpal"; /* .upright + "vpal"
+} */
 
 ol {
   list-style-type: cjk-ideographic;
@@ -62,6 +62,34 @@ ol:has(li:nth-of-type(21)) {
   padding-inline-start: 4em;
 }
 
+ol:where(:not(:lang(ja)):not(:lang(jpn-archaic))) {
+  list-style-type: revert;
+}
+
+ol:where(:not(:lang(ja, jpn-archaic))) {
+  list-style-type: revert;
+}
+
+ol:where(:not(:lang(ja)):not(:lang(jpn-archaic))):has(li:nth-of-type(11)),
+ol:where(:not(:lang(ja)):not(:lang(jpn-archaic))):has(li:nth-of-type(21)) {
+  padding-inline-start: 2em; /* Same as ol in layout.css */
+}
+
+ol:where(:not(:lang(ja, jpn-archaic))):has(li:nth-of-type(11)),
+ol:where(:not(:lang(ja, jpn-archaic))):has(li:nth-of-type(21)) {
+  padding-inline-start: 2em; /* Same as ol in layout.css */
+}
+
+/* 100-9999 */
+ol:where(:not(:lang(ja)):not(:lang(jpn-archaic))):has(li:nth-of-type(100)) {
+  padding-inline-start: 3em;
+}
+
+/* 100-9999 */
+ol:where(:not(:lang(ja, jpn-archaic))):has(li:nth-of-type(100)) {
+  padding-inline-start: 3em;
+}
+
 em {
   font-style: normal;
   font-family: var(--font-text-emphasized);
@@ -72,7 +100,18 @@ em {
   }
 }
 
-b {
+b:where(:lang(ja)),
+b:where(:lang(jpn-archaic)),
+b :where(:lang(ja)),
+b :where(:lang(jpn-archaic)) {
+  font-weight: unset;
+  text-emphasis-style: sesame;
+  text-emphasis-position: over right;
+  text-decoration: revert;
+}
+
+b:where(:lang(ja, jpn-archaic)),
+b :where(:lang(ja, jpn-archaic)) {
   font-weight: unset;
   text-emphasis-style: sesame;
   text-emphasis-position: over right;
@@ -83,17 +122,13 @@ b {
 
 /* i { See text.css } */
 
-cite {
-  font-style: revert; /* italic */
-}
-
-/* cite, */
+cite,
 cite :where(:not(:lang(ja)):not(:lang(jpn-archaic))) {
   font-style: italic;
   font-family: var(--font-text);
 }
 
-/* cite, */
+cite,
 cite :where(:not(:lang(ja, jpn-archaic))) {
   font-style: italic;
   font-family: var(--font-text);

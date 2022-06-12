@@ -13,8 +13,12 @@ import abbr from 'https://jspm.dev/markdown-it-abbr'
 import anchor from 'https://jspm.dev/markdown-it-anchor'
 import attrs from 'https://jspm.dev/markdown-it-attrs'
 import bracketedSpans from 'https://jspm.dev/markdown-it-bracketed-spans'
+import collapsible from 'https://jspm.dev/markdown-it-collapsible'
 import deflist from 'https://jspm.dev/markdown-it-deflist'
 import footnote from 'https://jspm.dev/markdown-it-footnote'
+import mark from 'https://jspm.dev/markdown-it-mark'
+import multimdTable from 'https://jspm.dev/markdown-it-multimd-table'
+import namedCodeBlocks from 'https://jspm.dev/markdown-it-named-code-blocks'
 import ruby from 'https://jspm.dev/markdown-it-ruby'
 import postcssExtendRule from 'https://dev.jspm.io/postcss-extend-rule'
 // import postcssPresetEnv from 'https://jspm.dev/postcss-preset-env'
@@ -43,8 +47,12 @@ const site = lume({
       ],
       attrs,
       bracketedSpans,
+      collapsible,
       deflist,
       footnote,
+      mark,
+      multimdTable,
+      namedCodeBlocks,
       ruby,
     ],
   },

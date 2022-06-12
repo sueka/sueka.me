@@ -6,3 +6,7 @@ pre {
   margin-block: 1em;
   margin-inline: 0;
 }
+
+.revert, .r {
+  all: revert;
+}

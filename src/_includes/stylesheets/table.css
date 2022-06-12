@@ -1,0 +1,17 @@
+table {
+  table-layout: auto;
+  border-collapse: collapse;
+
+  font-size: calc(39 / 44 * 100%);
+  margin-inline: auto;
+}
+
+th, td {
+  border: 1px solid var(--color-border);
+  padding-inline: 0.5em; /* NOTE: ブロック方向には line-height による half-leading がある。 leading-trim が一般的になったら `leading-trim: both; padding: 0.5em` で置き換えたい。 */
+}
+
+th {
+  font-weight: unset;
+  font-family: var(--font-text-emphasized);
+}

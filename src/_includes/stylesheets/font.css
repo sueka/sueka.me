@@ -40,4 +40,14 @@ code {
   & * {
     font-family: revert !important;
   }
+
+  /* em */
+  @nest :is(
+    h1, h2, h3, h4, h5, h6,
+    dl > dt,
+    dl > div > dt,
+    em, cite, b, i
+  ) & {
+    font-family: var(--font-code);
+  }
 }

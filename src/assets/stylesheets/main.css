@@ -1,4 +1,6 @@
 @import "stylesheets/reset.css";
 @import "stylesheets/layout.css";
+@import "stylesheets/named-code-blocks.css";
+@import "stylesheets/table.css";
 @import "stylesheets/text.css";
 @import "stylesheets/font.css";
