@@ -846,10 +846,10 @@ echo "$foo"
 
       単語展開の順序は次の通り:
 
-      1. チルダ展開（[チルダ展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_01){hreflang=en}を見よ）、パラメーター展開（[パラメーター展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02){hreflang=en}を見よ）、コマンド置換（[コマンド置換](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_03){hreflang=en}を見よ）、そして算術展開（[算術展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_04){hreflang=en}を見よ）が全て実行される。[トークン認識](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_03){hreflang=en}の第[5]{.upright}項目を見よ。
-      2. <i>IFS</i> が null でなければ、ステップ[1]{.upright}で生成されたフィールドの部分に対して、フィールド分割（[フィールド分割](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05){hreflang=en}を見よ）が実行される。
-      3. <i>set</i> <b>-f</b> が有効でなければ、パス名展開（[パス名展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06){hreflang=en}を見よ）が実行される。
-      4. 最後に、引用符削除（[引用符削除](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_07){hreflang=en}を見よ）が常に実行される。
+      1. チルダ展開（[チルダ展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_01){hreflang=en}を見よ。）、パラメーター展開（[パラメーター展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02){hreflang=en}を見よ。）、コマンド置換（[コマンド置換](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_03){hreflang=en}を見よ。）、そして算術展開（[算術展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_04){hreflang=en}を見よ。）が全て実行される。[トークン認識](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_03){hreflang=en}の第[5]{.upright}項目を見よ。
+      2. <i>IFS</i> が null でなければ、ステップ[1]{.upright}で生成されたフィールドの部分に対して、フィールド分割（[フィールド分割](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05){hreflang=en}を見よ。）が実行される。
+      3. <i>set</i> <b>-f</b> が有効でなければ、パス名展開（[パス名展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06){hreflang=en}を見よ。）が実行される。
+      4. 最後に、引用符削除（[引用符削除](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_07){hreflang=en}を見よ。）が常に実行される。
 
     </div>
 
