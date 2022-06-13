@@ -4,13 +4,13 @@ html {
   writing-mode: horizontal-tb;
 
   font-size: clamp(
-    14px,
+    13px,
     min(100vw, 1.4 * 100vh) / (2 * 4.236068 + 39),
     100vh / (2 * 2.618034 + 29)
   );
 
   font-size: clamp(
-    14px,
+    13px,
     min(100vi, 1.4 * 100vb) / (2 * 4.236068 + 39), /* φ³ */
     100vb / (2 * 2.618034 + 29) /* φ² */
   );
