@@ -37,7 +37,7 @@ vertical: false
 シェルの*改行コードは LF (U+000A)* である。CR はほゞ本来の意味で使はれる[^2]。
 
 [^2]:
-    [3.86 Carriage-Return Character (\<carriage-return\>)](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_86){lang=en} には次のやうにある:
+    [3.86 Carriage-Return Character (\<carriage-return\>)](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_86){lang=en} には
 
     <div class="blockquote-like">
 
@@ -53,6 +53,8 @@ vertical: false
     </blockquote>
     +++
 
+    とある。
+
 ## 字下げ
 
 *TAB (`	`; U+0009) と空白 (` `; U+0020) を混在させない*。既存のファイルを{編輯|へん|しふ}するときは元の方法に従ふ。その他の場合は *TAB を使ふ*。
@@ -60,7 +62,7 @@ vertical: false
 字下げに TAB を使ってゐる場合、リダイレクト演算子に `<<-` を使へば、出力の行頭に TAB がある場合を除いて、ほとんどの場面でヒアドキュメントがインデントできる[^3]。空白を使ってゐる場合は、ヒアドキュメントのインデントを取り除かなければならない。ヒアドキュメントが忌避されて、代はりに無駄な一時ファイルや `echo` などが使はれる虞もある。
 
 [^3]:
-    [2.7.4 Here-Document](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07_04){lang=en} には次のやうにある:
+    [2.7.4 Here-Document](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07_04){lang=en} には
 
     <div class="blockquote-like">
 
@@ -76,6 +78,8 @@ vertical: false
     </blockquote>
     +++
 
+    とある。
+
 ## 終了ステータス
 
 *終了ステータスをよく設計する*。失敗を全て[1]{.upright}にするのはコードスメルである。[0]{.upright}と[1]{.upright}しか使ってゐない場合、失敗の種類を区別するために不要なパラメーターや、一時ファイル、標準入出力などを経由するはめになる。
@@ -85,7 +89,7 @@ vertical: false
 通常、*終了ステータスに使用できる値は[0]{.upright}から[127]{.upright}まで*ゞある。[126]{.upright}はコマンド名は見付かったが、実行可能なユーティリティでなかったときに使ひ、[127]{.upright}はコマンドが見付からなかったときに使ふ[^4]。[128]{.upright}は使はない[^5][^6]。[128]{.upright}より大きな値は、シグナルを受け取って終了したことを表す[^7]ので、他の用途では使はない。
 
 [^4]:
-    [2.8.2 Exit Status for Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#){lang=en} には次のやうにある:
+    [2.8.2 Exit Status for Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#){lang=en} には
 
     <div class="blockquote-like">
 
@@ -100,6 +104,8 @@ vertical: false
 
     </blockquote>
     +++
+
+    とある。
 
 [^5]:
     [128]{.upright}は、シグナル番号が[0]{.upright}のシグナルを受け取って終了したときに<u>返される</u>。[kill](https://pubs.opengroup.org/onlinepubs/9699919799/functions/kill.html){lang=en} には
@@ -135,7 +141,7 @@ vertical: false
     とある（行を抜粋した。）が、実際は `exit 3.14159` を実行すると[255]{.upright}が返る。また、`exit -1` を実行すると[255]{.upright}が返るのは、[-1]{.tate-chu-yoko} の下位[8]{.upright}ビットが返されてゐるだけである。なほ、この振る舞ひは<ruby>規定されてゐない<rt lang="en">unspecified</ruby>[^9]。
 
 [^7]:
-    [2.8.2 Exit Status for Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_02){lang=en} には次のやうにある:
+    [2.8.2 Exit Status for Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_02){lang=en} には
 
     <div class="blockquote-like">
 
@@ -150,6 +156,8 @@ vertical: false
 
     </blockquote>
     +++
+
+    とある。
 
 ### 設計方法
 
@@ -168,7 +176,7 @@ BSD 系の sysexits.h[^8] に従ふのも良い習慣だと思ふ。
 因みに、ほとんどの実装で、`exit` や `return` に範囲外の値を渡すと下位[8]{.upright}ビットがそのまゝ返されるが、この動作は<ruby>未規定<rt lang="en">unspecified</ruby>である[^9]。
 
 [^9]:
-    [return](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#return){lang=en} と [exit](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#exit){lang=en} にはそれ[〴〵]{.kunojiten}次のやうにある:
+    [return](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#return){lang=en} と [exit](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#exit){lang=en} にはそれ[〴〵]{.kunojiten}
 
     > If n is not an unsigned decimal integer, or is greater than 255, the results are unspecified.
     {lang=en}
@@ -176,14 +184,22 @@ BSD 系の sysexits.h[^8] に従ふのも良い習慣だと思ふ。
     > If n is specified, but its value is not between 0 and 255 inclusively, the exit status is undefined.
     {lang=en}
 
+    とある。
+
 ## [Shebang]{lang=en}
 
 シェルスクリプトは *[Shebang]{lang=en} で書きはじめる*。[Shebang]{lang=en} は、UNIX で、実行するファイルのインタープリターを指定する方法である。
 
-古い実装では [Shebang]{lang=en} `#!` の右側全部がコマンドインタープリターの名前として使はれた[^10]。よって、移植可能性を重視するときは、[Shebang]{lang=en} は次のやうに書く:
+古い実装では [Shebang]{lang=en} `#!` の右側全部がコマンドインタープリターの名前として使はれた[^10]。よって、移植可能性を重視するときは、[Shebang]{lang=en} は、
+
+``` sh
+#!/bin/sh
+```
+
+といふゝうに書く。
 
 [^10]:
-    [exec](https://pubs.opengroup.org/onlinepubs/9699919799/functions/exec.html){lang=en} には次のやうにある:
+    [exec](https://pubs.opengroup.org/onlinepubs/9699919799/functions/exec.html){lang=en} には
 
     <div class="blockquote-like">
 
@@ -199,9 +215,7 @@ BSD 系の sysexits.h[^8] に従ふのも良い習慣だと思ふ。
     </blockquote>
     +++
 
-``` sh
-#!/bin/sh
-```
+    とある。
 
 FreeBSD、Linux、Max OS X、Cygwin を含むほとんどの OS は引数が[1]{.upright}つだけなら同様に解釈する[^11]ので、
 
@@ -236,7 +250,7 @@ Bourne Shell 以外のシェルを使ひたいときはさうしてもよい。�
 `set` ビルトインを使って、シェルのオプションを設定する。`errexit`[^13] と `nounset`[^14] は最初に有効にする:
 
 [^13]:
-    [set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#set){lang=en} には次のやうにある:
+    [set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#set){lang=en} には
 
     <div class="blockquote-like">
 
@@ -252,8 +266,10 @@ Bourne Shell 以外のシェルを使ひたいときはさうしてもよい。�
     </blockquote>
     +++
 
+    とある。
+
 [^14]:
-    [set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#set){lang=en} には次のやうにある:
+    [set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#set){lang=en} には
 
     <div class="blockquote-like">
 
@@ -268,6 +284,8 @@ Bourne Shell 以外のシェルを使ひたいときはさうしてもよい。�
 
     </blockquote>
     +++
+
+    とある。
 
 ``` sh
 set -eu
@@ -300,7 +318,7 @@ set -eu -o pipefail
 
 ### 一時的な変更
 
-オプションを一時的に変更したいときは、次のやうにする:
+オプションを一時的に変更したいときは、
 
 ``` sh
 reset_cmd=$(set +o)
@@ -309,7 +327,7 @@ false
 eval "$reset_cmd"
 ```
 
-Bash ではうまくいかないので、一時ファイルを使ふ:
+のやうにする。Bash ではうまくいかないので、一時ファイルを使ふ:
 
 ``` sh
 reset=/tmp/reset_$(date +%s)
@@ -339,7 +357,7 @@ umask go-rw
 
 ### 一時的な変更
 
-ファイルモード作成マスクを一時的に変更したいときは、次のやうにする:
+ファイルモード作成マスクを一時的に変更したいときは、
 
 ``` sh
 current_umask=$(umask -S)
@@ -347,6 +365,8 @@ umask go-rw
 touch credentials
 umask "$current_umask"
 ```
+
+のやうにする。
 
 ## trap
 
@@ -369,7 +389,7 @@ tmpfile=$(mktemp)
 トラップアクションはシグナルごとに[1]{.upright}つしか設定できない[^17]。例へば、
 
 [^17]:
-    [trap](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#trap){lang=en} には次のやうにある:
+    [trap](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#trap){lang=en} には
 
     <div class="blockquote-like">
 
@@ -385,6 +405,8 @@ tmpfile=$(mktemp)
     </blockquote>
     +++
 
+    とある。
+
 ``` sh
 trap 'echo exit' EXIT SIGQUIT
 trap 'echo quit' SIGQUIT
@@ -395,7 +417,7 @@ trap 'echo quit' SIGQUIT
 複数のシグナルをトラップした場合のアクションの実行順序は<ruby>未規定<rt lang="en">unspecified</ruby>である[^18]。
 
 [^18]:
-    [2.11. Signals and Error Handling](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_11){lang=en} には次のやうにある:
+    [2.11. Signals and Error Handling](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_11){lang=en} には
 
     <div class="blockquote-like">
 
@@ -411,10 +433,12 @@ trap 'echo quit' SIGQUIT
     </blockquote>
     +++
 
+    とある。
+
 SIGKILL や SIGSTOP はトラップできないことがある[^19]。よって、*実行しなければならないコマンドをトラップアクションにしてはならない*。
 
 [^19]:
-    [trap](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#trap){lang=en} には次のやうにある:
+    [trap](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#trap){lang=en} には
 
     <div class="blockquote-like">
 
@@ -430,9 +454,11 @@ SIGKILL や SIGSTOP はトラップできないことがある[^19]。よって�
     </blockquote>
     +++
 
+    とある。
+
 ### 一時的な変更
 
-trap を一時的に変更したいときは、次のやうにする:
+trap を一時的に変更したいときは、
 
 ``` sh
 reset_trap=$(trap)
@@ -440,7 +466,7 @@ trap - EXIT
 eval "$reset_trap"
 ```
 
-`eval` は普通は使はない。この節は例外。
+のやうにする。`eval` は普通は使はない。この節は例外。
 
 ## 一時ファイル
 
@@ -525,7 +551,7 @@ $cmd
 [^29]: `|` が無い場合は現在のシェルで実行される。
 [^30]: POSIX では恐らく未規定。
 [^31]:
-    サブシェルの挙動については、[2.9.4 Compound Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_04){lang=en} に次のやうにある:
+    サブシェルの挙動については、[2.9.4 Compound Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_04){lang=en} に
 
     <div class="blockquote-like">
 
@@ -542,6 +568,8 @@ $cmd
 
     </blockquote>
     +++
+
+    とある。
 
 [^32]:
     別の実装:
@@ -583,7 +611,7 @@ echo $count
 Bash 4.2+ では、`lastpipe` オプションを使ふと、パイプラインの最後のコマンドを現在のシェルで実行することができる[^33]。
 
 [^33]:
-    [37.3. Bash, version 4](https://tldp.org/LDP/abs/html/bashver4.html){lang=en} には次のやうにある:
+    [37.3. Bash, version 4](https://tldp.org/LDP/abs/html/bashver4.html){lang=en} には
 
     <div class="blockquote-like">
 
@@ -598,6 +626,8 @@ Bash 4.2+ では、`lastpipe` オプションを使ふと、パイプライン�
 
     </blockquote>
     +++
+
+    とある。
 
 通常のパイプラインの終了ステータスについては [2.9.2 Pipelines](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_02){lang=en} に
 
@@ -682,7 +712,7 @@ foo=1 bar=2
 しかし、シンプルコマンドは、変数代入でもリダイレクトでもない部分を単語展開し、リダイレクトを実行し、変数代入を単語展開し、それから変数代入を行ふといふ順で実行される[^21]。例へば、
 
 [^21]:
-    [2.9.1 Simple Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01){lang=en} には次のやうにある:
+    [2.9.1 Simple Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01){lang=en} には
 
     <div class="blockquote-like">
 
@@ -712,6 +742,8 @@ foo=1 bar=2
     </blockquote>
     +++
 
+    とある。
+
 ``` sh
 foo=1 bar=$foo
 echo "$bar"
@@ -736,7 +768,7 @@ foo=1 echo hello >"$foo"
 コマンド名が存在する場合、そのコマンド名が標準ユーティリティなら変数代入はそのコマンドの環境にしか影響せず、特殊ビルトインや関数なら現在の環境に影響する[^23]。例へば、
 
 [^23]:
-    [2.9.1 Simple Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01){lang=en} には次のやうにある:
+    [2.9.1 Simple Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01){lang=en} には
 
     <div class="blockquote-like">
 
@@ -778,6 +810,8 @@ foo=1 echo hello >"$foo"
     </blockquote>
     +++
 
+    とある。
+
 ``` sh
 LC_TIME=C
 LC_TIME=ja_JP.UTF-8 date
@@ -806,7 +840,7 @@ echo "$foo"
 単語展開は、まづ、チルダ展開、パラメーター展開、コマンド置換、算術展開が同時に起こり、続いて、フィールド分割、パス名展開、引用符削除がこの順で起こる[^24]。引用符削除が最後に起こるため、単語[^25]を引用符で囲むと、他の種類の単語展開を{沮止|そ|し}できる。引用符には `"` と `'` が使へる。`"` で囲まれた部分では、`` ` `` `$` `\` が特別扱ひされる[^26]ので、パラメーター展開、コマンド置換、算術展開は起こる。したがって、*フィールド分割またはパス名展開が起こる部分で、チルダ展開、フィールド分割、およびパス名展開のいづれも使はずに、パラメーター展開、コマンド置換、または算術展開を使ふ場合、その部分を `"` で囲むのがベター*である。これに相当する部分には
 
 [^24]:
-    [2.6 Word Expansions](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06){lang=en} には次のやうにある:
+    [2.6 Word Expansions](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06){lang=en} には
 
     <div class="blockquote-like">
 
@@ -832,10 +866,12 @@ echo "$foo"
     </blockquote>
     +++
 
+    とある。
+
 [^25]: 単語展開されるトークン。
 
 [^26]:
-    [2.2.3 Double-Quotes](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_02_03){lang=en} には次のやうにある:
+    [2.2.3 Double-Quotes](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_02_03){lang=en} には
 
     <div class="blockquote-like">
 
@@ -850,6 +886,8 @@ echo "$foo"
 
     </blockquote>
     +++
+
+    とある。
 
 - コマンド名
 - 引数
@@ -981,10 +1019,10 @@ fi
 ! ([ -n "$foo" ] && [ -e "$file_path" ])
 ```
 
-のやうにする方法は、一見すると良さゝうだが、かうすると、サブシェルで実行されるコマンドがシェルを終了させるやうな場合に、現在のシェルが終了しなくなってしまふ[^41]。
+といふゝうにする方法は、一見すると良さゝうだが、かうすると、サブシェルで実行されるコマンドがシェルを終了させるやうな場合に、現在のシェルが終了しなくなってしまふ[^41]。
 
 [^41]:
-    [exit](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#exit){lang=en} には次のやうにある:
+    [exit](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#exit){lang=en} には
 
     <div class="blockquote-like">
 
@@ -999,6 +1037,8 @@ fi
 
     </blockquote>
     +++
+
+    とある。
 
 なほ、`!` はパイプラインの一部なので、この条件を
 
