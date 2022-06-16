@@ -362,7 +362,7 @@ umask go-rw
 ``` sh
 current_umask=$(umask -S)
 umask go-rw
-echo "username:bad password" >credentials
+echo "anon:bad password" >credentials
 umask "$current_umask"
 ```
 
