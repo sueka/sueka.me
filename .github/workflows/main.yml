@@ -21,6 +21,7 @@ jobs:
           timeout 300s deno run --allow-all --quiet https://deno.land/x/lume/ci.ts
           exit_status=$?
           (( $exit_status == 0 )) || (( $exit_status == 124 ))
+        shell: bash -o pipefail {0}
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         with:
