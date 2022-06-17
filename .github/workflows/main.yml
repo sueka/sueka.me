@@ -18,7 +18,7 @@ jobs:
         env:
           TZ: Asia/Tokyo
         run: |
-          timeout 300s deno run --allow-all --quiet https://deno.land/x/lume/ci.ts
+          timeout 60s deno run --allow-all --quiet https://deno.land/x/lume/ci.ts
           exit_status=$?
           (( $exit_status == 0 )) || (( $exit_status == 124 ))
         shell: bash -o pipefail {0}
