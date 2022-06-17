@@ -17,7 +17,10 @@ jobs:
       - name: Build
         env:
           TZ: Asia/Tokyo
-        run: 'timeout 300s deno run --allow-all --quiet https://deno.land/x/lume/ci.ts || :'
+        run: |
+          timeout 300s deno run --allow-all --quiet https://deno.land/x/lume/ci.ts
+          exit_status=$?
+          (( $exit_status == 0 )) || (( $exit_status == 124 ))
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         with:
