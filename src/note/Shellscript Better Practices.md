@@ -41,7 +41,7 @@ vertical: false
 
     <div class="blockquote-like">
 
-      出力ストリームで、キャリッジリターンが現れたのと同じ物理行の先頭から印字が始まるといふことを示す文字。[C]{.upright} 言語では `'\r'` で示される文字である。この文字が行の先頭への移動を達成するためにシステムが出力デバイスに送信する正確なシーケンスであるかどうかは<ruby>規定されてゐない<rt lang="en">unspecified</ruby>。
+      出力ストリームで、キャリッジリターンが現れたのと同じ物理行の先頭から印字が始まるといふことを示す文字。[C]{.upright} 言語では `'\r'` で示される文字である。この文字が行の先頭への移動を達成するためにシステムが出力デバイスに送信する正確なシーケンスであるかどうかは<ruby>未規定<rt lang="en">unspecified</ruby>である。
 
     </div>
 
@@ -138,7 +138,7 @@ vertical: false
 
     </div>
 
-    とある（行を抜粋した。）が、実際は `exit 3.14159` を実行すると[255]{.upright}が返る。また、`exit -1` を実行すると[255]{.upright}が返るのは、[-1]{.tate-chu-yoko} の下位[8]{.upright}ビットが返されてゐるだけである。なほ、この振る舞ひは<ruby>規定されてゐない<rt lang="en">unspecified</ruby>[^9]。
+    とある（行を抜粋した。）が、実際は `exit 3.14159` を実行すると[255]{.upright}が返る。また、`exit -1` を実行すると[255]{.upright}が返るのは、[-1]{.tate-chu-yoko} の下位[8]{.upright}ビットが返されてゐるだけである。なほ、この振る舞ひは<ruby>未規定<rt lang="en">unspecified</ruby>である[^9]。
 
 [^7]:
     [2.8.2 Exit Status for Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_02){lang=en} には
@@ -273,7 +273,7 @@ Bourne Shell 以外のシェルを使ひたいときはさうしてもよい。�
 
     <div class="blockquote-like">
 
-      シェルが<ruby>未定義<rt lang="en">unset</ruby>のパラメーター（`'@'` 特殊パラメーターと `'*'` 特殊パラメーターは除く。）を展開しようとすると、標準エラーにメッセージが書き込まれ、<ruby>[シェルエラーの結果](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_01)<rt lang="en">Consequences of Shell Errors</ruby>にある結果で展開が失敗する。
+      シェルが<ruby>未定義の<rt lang="en">unset</ruby>パラメーター（`'@'` 特殊パラメーターと `'*'` 特殊パラメーターは除く。）を展開しようとすると、標準エラーにメッセージが書き込まれ、<ruby>[シェルエラーの結果](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_01)<rt lang="en">Consequences of Shell Errors</ruby>にある結果で展開が失敗する。
 
     </div>
 
@@ -421,7 +421,7 @@ trap 'echo quit' SIGQUIT
 
     <div class="blockquote-like">
 
-      {関聯|くゎん|れん}するトラップアクションのあるシェルに対して複数のシグナルが保留されてゐる場合、トラップアクションの実行の順序は<ruby>規定されてゐない<rt lang="en">unspecified</ruby>。
+      {関聯|くゎん|れん}するトラップアクションのあるシェルに対して複数のシグナルが保留されてゐる場合、トラップアクションの実行の順序は<ruby>未規定<rt lang="en">unspecified</ruby>である。
 
     </div>
 
@@ -775,14 +775,14 @@ foo=1 echo hello >"$foo"
       変数代入は次のやうに実行される:
 
       - 結果としてコマンド名が無い場合、変数代入は現在の実行環境に影響する。
-      - コマンド名が特殊ビルトインユーティリティでも関数でもない場合、変数代入は、そのコマンドの実行環境にエクスポートされ、ステップ[4]{.upright}で実行される展開の副作用を除いて、現在の実行環境には影響しない。この場合、次は<ruby>規定されてゐない<rt lang="en">unspecified</ruby>:
+      - コマンド名が特殊ビルトインユーティリティでも関数でもない場合、変数代入は、そのコマンドの実行環境にエクスポートされ、ステップ[4]{.upright}で実行される展開の副作用を除いて、現在の実行環境には影響しない。この場合、次のことは<ruby>未規定<rt lang="en">unspecified</ruby>である:
         - 代入がステップ[4]{.upright}のその後の展開において可視かどうか
         - これらの展開の副作用として実行される変数代入がステップ[4]{.upright}のその後の展開、現在のシェル実行環境、またはその両方において可視かどうか
       - コマンド名が関数として実装された標準ユーティリティ（XBD [ユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_22){hreflang=en}を見よ。）の場合、変数代入の影響は、そのユーティリティが関数として実装されてゐないかのやうになる。
-      - コマンド名が特殊ビルトインユーティリティの場合、変数代入は現在の実行環境に影響する。<i>set</i> <b>-a</b> オプションが有効でない場合（[set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25){hreflang=en} を見よ。）、次は<ruby>規定されてゐない<rt lang="en">unspecified</ruby>:
+      - コマンド名が特殊ビルトインユーティリティの場合、変数代入は現在の実行環境に影響する。<i>set</i> <b>-a</b> オプションが有効でない場合（[set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25){hreflang=en} を見よ。）、次のことは<ruby>未規定<rt lang="en">unspecified</ruby>である:
         - 特殊ビルトインユーティリティの実行中に変数が export 属性を得るかどうか
         - 特殊ビルトインユーティリティの完了後に、変数代入の結果として得た export 属性が永続するかどうか
-      - コマンド名が関数として実装された標準ユーティリティでない関数の場合、その関数の実行中は、変数代入が現在の実行環境に影響する。次は<ruby>規定されてゐない<rt lang="en">unspecified</ruby>:
+      - コマンド名が関数として実装された標準ユーティリティでない関数の場合、その関数の実行中は、変数代入が現在の実行環境に影響する。次のことは<ruby>未規定<rt lang="en">unspecified</ruby>である:
         - 関数の完了後に変数代入が永続するかどうか
         - 関数の実行中に変数が export 属性を得るかどうか
         - （関数の完了後に変数代入が永続する場合、）関数の完了後に変数代入の結果として得た export 属性が永続するかどうか
@@ -962,7 +962,7 @@ if [ -n "$foo" ] && [ -e "$file_path" ]; then
 fi
 ```
 
-のやうに書く。`test` の `-a` `-o` プライマリは使はない。`test` は引数の個数が[4]{.upright}より大きい場合については<ruby>規定されてゐない<rt lang="en">unspecified</ruby>[^37]。例へば、
+のやうに書く。`test` の `-a` `-o` プライマリは使はない。`test` は引数の個数が[4]{.upright}より大きい場合については<ruby>未規定<rt lang="en">unspecified</ruby>である[^37]。例へば、
 
 [^37]: [test](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/test.html){lang=en} を参照。
 
