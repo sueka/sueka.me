@@ -1,4 +1,4 @@
-:root, [lang] {
+:root, [lang]:not([lang=""]) {
   --font-text: serif;
   --font-text-emphasized: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
   --font-code: Menlo, Consolas, monospace;
