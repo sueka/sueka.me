@@ -608,27 +608,6 @@ echo $count
 
 とするのが主流である。
 
-Bash 4.2+ では、`lastpipe` オプションを使ふと、パイプラインの最後のコマンドを現在のシェルで実行することができる[^33]。
-
-[^33]:
-    [37.3. Bash, version 4](https://tldp.org/LDP/abs/html/bashver4.html){lang=en} には
-
-    <div class="blockquote-like">
-
-      `lastpipe` シェルオプションが設定されてゐる場合、パイプの最後のコマンドは*サブシェルで実行されない*。
-
-    </div>
-
-    +++ 原文
-    <blockquote lang="en">
-
-      When the `lastpipe` shell option is set, the last command in a pipe *doesn't run in a subshell*.
-
-    </blockquote>
-    +++
-
-    とある。
-
 ファイルの内容ではなく標準出力をループに渡したいときは、名前付きパイプを使ふ。例へば、作業ディレクトリにある `.` で始まるファイルの個数を数へるプログラムは、
 
 ``` sh
@@ -660,6 +639,27 @@ echo $count
 ```
 
 としてもよい。
+
+Bash 4.2 以上では、`lastpipe` オプションを使ふと、パイプラインの最後のコマンドを現在のシェルで実行することができる[^33]。
+
+[^33]:
+    [37.3. Bash, version 4](https://tldp.org/LDP/abs/html/bashver4.html){lang=en} には
+
+    <div class="blockquote-like">
+
+      `lastpipe` シェルオプションが設定されてゐる場合、パイプの最後のコマンドは*サブシェルで実行されない*。
+
+    </div>
+
+    +++ 原文
+    <blockquote lang="en">
+
+      When the `lastpipe` shell option is set, the last command in a pipe *doesn't run in a subshell*.
+
+    </blockquote>
+    +++
+
+    とある。
 
 通常のパイプラインの終了ステータスについては [2.9.2 Pipelines](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_02){lang=en} に
 
