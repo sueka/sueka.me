@@ -1,7 +1,7 @@
 ---
 title: シェルスクリプト・ベタープラクティス
 date: 2022-06-12
-lastmod: 2022-06-13
+lastmod: 2022-06-19
 vertical: false
 ---
 
