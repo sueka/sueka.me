@@ -138,7 +138,7 @@ vertical: false
 
     </div>
 
-    とある（行を抜粋した。）が、実際は `exit 3.14159` を実行すると[255]{.upright}が返る。また、`exit -1` を実行すると[255]{.upright}が返るのは、[-1]{.tate-chu-yoko} の下位[8]{.upright}ビットが返されてゐるだけである。なほ、この振る舞ひは<ruby>未規定<rt lang="en">unspecified</ruby>である[^9]。
+    とある（行を抜粋した。）が、実際は `exit 3.14159` を実行すると[255]{.upright}が返る。また、`exit -1` を実行すると[255]{.upright}が返るのは、[-1]{.tate-chu-yoko} の下位[8]{.upright}ビットが返されてゐる（この振る舞ひは<ruby>未規定<rt lang="en">unspecified</ruby>[^9]。）だけである。
 
 [^7]:
     [2.8.2 Exit Status for Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_02){lang=en} には
