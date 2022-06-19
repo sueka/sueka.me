@@ -709,14 +709,14 @@ Bash 4.2 以上では、`lastpipe` オプションを使ふと、パイプライ
 
     <div class="blockquote-like">
 
-      「複合リスト」といふ用語は、Shell Grammar の文法から派生したもので、\<newline\> 文字で区切られた<i><ruby>リスト<rt lang="en">lists</ruby></i>のシーケンスであり、任意個の \<newline\> 文字が先行し、または後続することができるものである。
+      「複合リスト」といふ用語は、[シェル文法](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10){hreflang=en}にある文法に由来するもので、\<newline\> 文字で区切られた<i><ruby>リスト<rt lang="en">lists</ruby></i>のシーケンスであり、任意個の \<newline\> 文字が先行し、または後続することができるものである。
 
     </div>
 
     +++ 原文
     <blockquote lang="en">
 
-      The term "compound-list" is derived from the grammar in Shell Grammar; it is equivalent to a sequence of <i>lists</i>, separated by \<newline\> characters, that can be preceded or followed by an arbitrary number of \<newline\> characters.
+      The term "compound-list" is derived from the grammar in [Shell Grammar](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10); it is equivalent to a sequence of <i>lists</i>, separated by \<newline\> characters, that can be preceded or followed by an arbitrary number of \<newline\> characters.
 
     </blockquote>
     +++
