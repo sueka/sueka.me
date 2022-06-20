@@ -860,19 +860,12 @@ foo=1 echo hello >"$foo"
     とある。
 
 ``` sh
-LC_TIME=C
-LC_TIME=ja_JP.UTF-8 date
-date
+foo=1
+foo=2 true
+echo "$foo"
 ```
 
-は
-
-``` txt
-2022年 6月12日 日曜日 13時04分20秒 JST
-Sun Jun 12 13:04:20 JST 2022
-```
-
-のやうなメッセージを印字し、
+は `1` を印字し、
 
 ``` sh
 foo=1
@@ -880,7 +873,9 @@ foo=2 :
 echo "$foo"
 ```
 
-は `2` を印字する。この振る舞ひもかなりやゝこしいので、*特殊ビルトインや関数を実行するときは、そのコマンドで変数代入を行はない*やうにする。POSIX の特殊ビルトインは `.` `:` `break` `continue` `eval` `exec` `exit` `export` `readonly` `return` `set` `shift` `times` `trap` `unset` の[15]{.tate-chu-yoko}個。なほ、`export` や `readonly` の右にあるものは引数であって、変数代入ではない。
+は `2` を印字する。
+
+この振る舞ひもかなりやゝこしいので、*特殊ビルトインや関数を実行するときは、そのコマンドで変数代入を行はない*やうにする。POSIX の特殊ビルトインは `.` `:` `break` `continue` `eval` `exec` `exit` `export` `readonly` `return` `set` `shift` `times` `trap` `unset` の[15]{.tate-chu-yoko}個である。なほ、`export` や `readonly` の右にあるものは引数であって、変数代入ではない。
 
 ## 単語展開
 
