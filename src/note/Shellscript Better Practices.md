@@ -606,7 +606,7 @@ cat /path/to/filelist | while IFS= read file; do
 		(.*) (( ++count )) ;;
 	esac
 done
-echo $count
+echo "$count"
 ```
 
 と書くことはできない。代はりに、
@@ -618,7 +618,7 @@ while IFS= read file; do
 		(.*) (( ++count )) ;;
 	esac
 done </path/to/filelist
-echo $count
+echo "$count"
 ```
 
 とするのが主流である。
@@ -636,7 +636,7 @@ while IFS= read file; do
 		(.*) (( ++count )) ;;
 	esac
 done </tmp/filelist
-echo $count
+echo "$count"
 ```
 
 のやうに書く。
@@ -650,7 +650,7 @@ while IFS= read file; do
 		(.*) (( ++count )) ;;
 	esac
 done < <(ls -Ap | grep -v /$)
-echo $count
+echo "$count"
 ```
 
 としてもよい。
@@ -738,7 +738,7 @@ oldpwd() (cd -)
 
 ``` sh
 yes() while :; do
-	echo ${1-y}
+	echo "${1-y}"
 done
 ```
 
