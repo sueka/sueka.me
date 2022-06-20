@@ -176,7 +176,7 @@ BSD 系の sysexits.h[^8] に従ふのも良い習慣だと思ふ。
 因みに、ほとんどの実装で、`exit` や `return` に範囲外の値を渡すと下位[8]{.upright}ビットがそのまゝ返されるが、この動作は<ruby>未規定<rt lang="en">unspecified</ruby>である[^9]。
 
 [^9]:
-    [return](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#return){lang=en} と [exit](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#exit){lang=en} にはそれ[〴〵]{.kunojiten}
+    [return](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#return){lang=en} と [exit](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#exit){lang=en} にはそれぞれ
 
     > If n is not an unsigned decimal integer, or is greater than 255, the results are unspecified.
     {lang=en}
@@ -502,7 +502,7 @@ UNIX 哲学も一種のベタープラクティスである。[<cite>BSTJ 57: 6.
   UNIX システムの特徴的なスタイルを説明し、促進するために、UNIX システムのビルダーやユーザーの間で、多くの格言が注目を集めてゐる:
 
   1. ==[1]{.upright}つのプログラムには[1]{.upright}つのことをうまくやらせる==。新しい仕事をするためには、新しい「機能」を追加して古いプログラムを複雑にするのではなく、新しく構築する。
-  2. 全てのプログラムの出力は別の未知のプログラムへの入力になるといふことを{豫想|よ|さう}する。無関係な情報で出力をごちゃ[〳〵]{.kunojiten}させない。列指向入力形式やバイナリ入力形式は強く避ける。対話的な入力を要求しない。
+  2. 全てのプログラムの出力は別の未知のプログラムへの入力になるといふことを{豫想|よ|さう}する。無関係な情報で出力をごちゃごちゃさせない。列指向入力形式やバイナリ入力形式は強く避ける。対話的な入力を要求しない。
   3. ソフトウェアは、OS でさへも、早期に、理想的には数週間以内に試せるやうに設計し、構築する。大きくて扱ひづらい部品を捨てゝ再構築することを躊躇しない。
   4. プログラミングタスクを軽減するには、下手なヘルプよりもツールを使ふ。そのツールを構築するためには回り道する必要があり、使ひをはったらその一部を{破毀|は|き}するつもりでも。
 
@@ -692,7 +692,7 @@ Bash 4.2 以上では、`lastpipe` オプションを使ふと、パイプライ
 </blockquote>
 +++
 
-とある。わざ[〳〵]{.kunojiten}<q lang="en">in the pipe</q>とか<q lang="en">specified in the pipeline</q>とか書かれてゐるのは、恐らく、時間的に最後に返された値を使ふのではなく、字句的に最後に書かれてゐるコマンドによって返された値を使ふといふことを明示してゐるのだと思ふ。
+とある。わざわざ<q lang="en">in the pipe</q>とか<q lang="en">specified in the pipeline</q>とか書かれてゐるのは、恐らく、時間的に最後に返された値を使ふのではなく、字句的に最後に書かれてゐるコマンドによって返された値を使ふといふことを明示してゐるのだと思ふ。
 
 ### 関数定義コマンド
 
@@ -768,7 +768,7 @@ foo=1 bar=2
       1. [シェル文法規則](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02){hreflang=en}に従って、変数代入またはリダイレクトとして認識される単語が、ステップ[3]{.upright}とステップ[4]{.upright}で処理するために保存される。
       2. 変数代入でもリダイレクトでもない単語が展開される。展開後にフィールドが残ってゐる場合、最初のフィールドはコマンド名と見做され、残りのフィールドはそのコマンドの引数と見做される。
       3. [リダイレクト](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07)に記述されてゐるやうに、リダイレクトが実行される。
-      4. それ[〴〵]{.kunojiten}の変数代入は、値を代入する前に、チルダ展開、パラメーター展開、コマンド置換、算術展開、そして引用符削除される。
+      4. それぞれの変数代入は、値を代入する前に、チルダ展開、パラメーター展開、コマンド置換、算術展開、そして引用符削除される。
 
       先のリストにおいて、ステップ[2]{.upright}からコマンド名が生じない場合、またはコマンド名が特殊ビルトインユーティリティ（[特殊ビルトインユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_14){hreflang=en}を見よ。）の名前に一致する場合、ステップ[3]{.upright}とステップ[4]{.upright}の順序は入れ替はってもよい。
 
