@@ -501,7 +501,7 @@ UNIX 哲学も一種のベタープラクティスである。[<cite>BSTJ 57: 6.
 
   UNIX システムの特徴的なスタイルを説明し、促進するために、UNIX システムのビルダーやユーザーの間で、多くの格言が注目を集めてゐる:
 
-  1. ==[1]{.upright}つのプログラムには[1]{.upright}つのことをうまくやらせる==。新しい仕事をするためには、新しい「機能」を追加して古いプログラムを複雑にするのではなく、新しく構築する。
+  1. [1]{.upright}つのプログラムには[1]{.upright}つのことをうまくやらせる。新しい仕事をするためには、新しい「機能」を追加して古いプログラムを複雑にするのではなく、新しく構築する。
   2. 全てのプログラムの出力は別の未知のプログラムへの入力になるといふことを{豫想|よ|さう}する。無関係な情報で出力をごちゃごちゃさせない。列指向入力形式やバイナリ入力形式は強く避ける。対話的な入力を要求しない。
   3. ソフトウェアは、OS でさへも、早期に、理想的には数週間以内に試せるやうに設計し、構築する。大きくて扱ひづらい部品を捨てゝ再構築することを躊躇しない。
   4. プログラミングタスクを軽減するには、下手なヘルプよりもツールを使ふ。そのツールを構築するためには回り道する必要があり、使ひをはったらその一部を{破毀|は|き}するつもりでも。
@@ -513,7 +513,7 @@ UNIX 哲学も一種のベタープラクティスである。[<cite>BSTJ 57: 6.
 
   A number of maxims have gained currency among the builders and users of the UNIX system to explain and promote its characteristic style:
 
-  1. ==Make each program do one thing well==.  To do a new job, build afresh rather than complicate old programs by adding new “features.”
+  1. Make each program do one thing well.  To do a new job, build afresh rather than complicate old programs by adding new “features.”
   2. Expect the output of every program to become the input to another, as yet unknown, program.  Don't clutter output with extraneous information.  Avoid stringently columnar or binary input formats.  Don't insist on interactive input.
   3. Design and build software, even operating systems, to be tried early, ideally within weeks.  Don't hesitate to throw away the clumsy parts and rebuild them.
   4. Use tools in preference to unskilled help to lighten a programming task, even if you have to detour to build the tools and expect to throw some of them out after you've finished using them.
@@ -822,11 +822,11 @@ foo=1 echo hello >"$foo"
       変数代入は次のやうに実行される:
 
       - 結果としてコマンド名が無い場合、変数代入は現在の実行環境に影響する。
-      - コマンド名が特殊ビルトインユーティリティでも関数でもない場合、変数代入は、そのコマンドの実行環境にエクスポートされ、ステップ[4]{.upright}で実行される展開の副作用を除いて、現在の実行環境には影響しない。この場合、次のことは<ruby>未規定<rt lang="en">unspecified</ruby>である:
+      - ==コマンド名が特殊ビルトインユーティリティでも関数でもない場合、変数代入は、そのコマンドの実行環境にエクスポートされ==、ステップ[4]{.upright}で実行される展開の副作用を除いて、==現在の実行環境には影響しない==。この場合、次のことは<ruby>未規定<rt lang="en">unspecified</ruby>である:
         - 代入がステップ[4]{.upright}のその後の展開において可視かどうか
         - これらの展開の副作用として実行される変数代入がステップ[4]{.upright}のその後の展開、現在のシェル実行環境、またはその両方において可視かどうか
       - コマンド名が関数として実装された標準ユーティリティ（XBD [ユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_22){hreflang=en}を見よ。）の場合、変数代入の影響は、そのユーティリティが関数として実装されてゐないかのやうになる。
-      - コマンド名が特殊ビルトインユーティリティの場合、変数代入は現在の実行環境に影響する。<i>set</i> <b>-a</b> オプションが有効でない場合（[set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25){hreflang=en} を見よ。）、次のことは<ruby>未規定<rt lang="en">unspecified</ruby>である:
+      - ==コマンド名が特殊ビルトインユーティリティの場合、変数代入は現在の実行環境に影響する==。<i>set</i> <b>-a</b> オプションが有効でない場合（[set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25){hreflang=en} を見よ。）、次のことは<ruby>未規定<rt lang="en">unspecified</ruby>である:
         - 特殊ビルトインユーティリティの実行中に変数が export 属性を得るかどうか
         - 特殊ビルトインユーティリティの完了後に、変数代入の結果として得た export 属性が永続するかどうか
       - コマンド名が関数として実装された標準ユーティリティでない関数の場合、その関数の実行中は、変数代入が現在の実行環境に影響する。次のことは<ruby>未規定<rt lang="en">unspecified</ruby>である:
@@ -842,11 +842,11 @@ foo=1 echo hello >"$foo"
       Variable assignments shall be performed as follows:
 
       - If no command name results, variable assignments shall affect the current execution environment.
-      - If the command name is not a special built-in utility or function, the variable assignments shall be exported for the execution environment of the command and shall not affect the current execution environment except as a side-effect of the expansions performed in step 4. In this case it is unspecified:
+      - ==If the command name is not a special built-in utility or function, the variable assignments shall be exported for the execution environment of the command and shall not affect the current execution environment== except as a side-effect of the expansions performed in step 4. In this case it is unspecified:
         - Whether or not the assignments are visible for subsequent expansions in step 4
         - Whether variable assignments made as side-effects of these expansions are visible for subsequent expansions in step 4, or in the current shell execution environment, or both
       - If the command name is a standard utility implemented as a function (see XBD [Utility](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_22)), the effect of variable assignments shall be as if the utility was not implemented as a function.
-      - If the command name is a special built-in utility, variable assignments shall affect the current execution environment. Unless the <i>set</i> <b>-a</b> option is on (see [set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25)), it is unspecified:
+      - ==If the command name is a special built-in utility, variable assignments shall affect the current execution environment==. Unless the <i>set</i> <b>-a</b> option is on (see [set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25)), it is unspecified:
         - Whether or not the variables gain the export attribute during the execution of the special built-in utility
         - Whether or not export attributes gained as a result of the variable assignments persist after the completion of the special built-in utility
       - If the command name is a function that is not a standard utility implemented as a function, variable assignments shall affect the current execution environment during the execution of the function. It is unspecified:
@@ -1073,14 +1073,14 @@ fi
 
     <div class="blockquote-like">
 
-      現在の実行環境がサブシェル環境の場合、シェルは、指定された終了ステータスでサブシェル環境を終了し、そのサブシェル環境が呼び出された環境で続行する。
+      現在の実行環境がサブシェル環境の場合、シェルは、指定された終了ステータスでそのサブシェル環境を終了し、==そのサブシェル環境が呼び出された環境で続行する==。
 
     </div>
 
     +++ 原文
     <blockquote lang="en">
 
-      If the current execution environment is a subshell environment, the shell shall exit from the subshell environment with the specified exit status and continue in the environment from which that subshell environment was invoked;
+      If the current execution environment is a subshell environment, the shell shall exit from the subshell environment with the specified exit status and ==continue in the environment from which that subshell environment was invoked==;
 
     </blockquote>
     +++
