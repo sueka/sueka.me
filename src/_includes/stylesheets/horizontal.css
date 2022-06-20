@@ -159,3 +159,12 @@ cite :where([lang]) {
 .blockquote-like {
   @extend blockquote;
 }
+
+.kuntened {
+  & rt:lang(ja), & rt:lang(jpn-archaic) {
+    font-feature-settings: revert;
+  }
+  & rt:lang(ja, jpn-archaic) {
+    font-feature-settings: revert;
+  }
+}

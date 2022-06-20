@@ -212,3 +212,12 @@ cite :where(:lang(ja, jpn-archaic)) {
 .blockquote-like {
   @extend blockquote;
 }
+
+.kuntened {
+  & rt:lang(ja), & rt:lang(jpn-archaic) {
+    font-feature-settings: "vpal";
+  }
+  & rt:lang(ja, jpn-archaic) {
+    font-feature-settings: "vpal";
+  }
+}
