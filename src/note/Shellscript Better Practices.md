@@ -561,12 +561,29 @@ $cmd
 
 [1]{.upright}つ以上のコマンドを `|` で繋ぎ、左端に省略可能な `!` を附け加へたものをパイプラインと言ふ。
 
-*while 文や for 文にパイプしない*。`|` で接続されたコマンドはサブシェルで実行される[^29][^30]から、パイプラインで実行される変数代入やビルトインコマンドは、現在の環境には影響しない[^31]。そのため、ファイルリストにある名前が `.` で始まるファイルの個数を数へるプログラム[^32]を
+*while 文や for 文にパイプしない*。`|` で接続されたコマンドはサブシェルで実行される[^30]から、パイプラインで実行される変数代入やビルトインコマンドは、現在の環境には影響しない[^31]。そのため、ファイルリストにある名前が `.` で始まるファイルの個数を数へるプログラム[^32]を
 
-[^29]: `|` が無い場合は現在のシェルで実行される。
-[^30]: POSIX では恐らく未規定。
+[^30]: 
+    [2.12. Shell Execution Environment](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_12){lang=en} には
+
+    <div class="blockquote-like">
+
+      加へて、複数コマンドのパイプラインの各コマンドも、サブシェル環境にある。たゞし、拡張機能として、パイプラインの一部または全部のコマンドが現在の環境で実行されてもよい。他のコマンドは全て現在のシェル環境で実行される。
+
+    </div>
+
+    +++ 原文
+    <blockquote lang="en">
+
+      Additionally, each command of a multi-command pipeline is in a subshell environment; as an extension, however, any or all commands in a pipeline may be executed in the current environment. All other commands shall be executed in the current shell environment.
+
+    </blockquote>
+    +++
+
+    とある。
+
 [^31]:
-    サブシェルの挙動については、[2.9.4 Compound Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_04){lang=en} に
+    サブシェルの挙動については、[2.9.4 Compound Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_04){lang=en} や [2.12. Shell Execution Environment](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_12){lang=en} に
 
     <div class="blockquote-like">
 
@@ -580,6 +597,20 @@ $cmd
 
       ( <i>compound-list</i> )
       : Execute <i>compound-list</i> in a subshell environment; see [Shell Execution Environment](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_12). Variable assignments and built-in commands that affect the environment shall not remain in effect after the list finishes.
+
+    </blockquote>
+    +++
+
+    <div class="blockquote-like">
+
+      サブシェル環境は、無視されないシグナルトラップはデフォルトのアクションに設定されるといふことを除いて、シェル環境の複製として作られる。サブシェル環境に加へられた変更はシェル環境に影響しない。
+
+    </div>
+
+    +++ 原文
+    <blockquote lang="en">
+
+      A subshell environment shall be created as a duplicate of the shell environment, except that signal traps that are not being ignored shall be set to the default action. Changes made to the subshell environment shall not affect the shell environment.
 
     </blockquote>
     +++
@@ -609,7 +640,26 @@ done
 echo "$count"
 ```
 
-と書くことはできない。代はりに、
+と書いてはならない[^42]。代はりに、
+
+[^42]: 
+    [2.12. Shell Execution Environment](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_12){lang=en} には
+
+    <div class="blockquote-like">
+
+      たゞし、拡張機能として、パイプラインの一部または全部のコマンドが現在の環境で実行されてもよい。
+
+    </div>
+
+    +++ 原文
+    <blockquote lang="en">
+
+      as an extension, however, any or all commands in a pipeline may be executed in the current environment.
+
+    </blockquote>
+    +++
+
+    とあるため、シェルの実装によってはうまく動くこともある。
 
 ``` sh
 count=0
