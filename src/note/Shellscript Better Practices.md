@@ -1,7 +1,7 @@
 ---
 title: シェルスクリプト・ベタープラクティス
 date: 2022-06-12
-lastmod: 2022-06-21
+lastmod: 2022-06-22
 vertical: false
 ---
 
@@ -568,14 +568,14 @@ $cmd
 
     <div class="blockquote-like">
 
-      加へて、複数コマンドのパイプラインの各コマンドも、サブシェル環境にある。たゞし、拡張機能として、パイプラインの一部または全部のコマンドが現在の環境で実行されてもよい。他のコマンドは全て現在のシェル環境で実行される。
+      コマンド置換、丸括弧でグループされたコマンド、および非同期リストは、サブシェル環境で実行される。==加へて、複数コマンドのパイプラインの各コマンドも、サブシェル環境にある。たゞし、拡張機能として、パイプラインの一部または全部のコマンドが現在の環境で実行されてもよい==。他のコマンドは全て現在のシェル環境で実行される。
 
     </div>
 
     +++ 原文
     <blockquote lang="en">
 
-      Additionally, each command of a multi-command pipeline is in a subshell environment; as an extension, however, any or all commands in a pipeline may be executed in the current environment. All other commands shall be executed in the current shell environment.
+      Command substitution, commands that are grouped with parentheses, and asynchronous lists shall be executed in a subshell environment. ==Additionally, each command of a multi-command pipeline is in a subshell environment; as an extension, however, any or all commands in a pipeline may be executed in the current environment==. All other commands shall be executed in the current shell environment.
 
     </blockquote>
     +++
