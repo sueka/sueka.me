@@ -169,7 +169,7 @@ vertical: false
 
 BSD 系の sysexits.h[^8] に従ふのも良い習慣だと思ふ。
 
-[^8]: [sysexits(3)](https://www.freebsd.org/cgi/man.cgi?query=sysexits&manpath=FreeBSD+13.0-RELEASE+and+Ports){hreflang=en}
+[^8]: [sysexits(3)](https://www.freebsd.org/cgi/man.cgi?query=sysexits&manpath=FreeBSD+13.0-RELEASE+and+Ports){lang=en}
 
 ---
 
@@ -806,16 +806,16 @@ foo=1 bar=2
 
 のやうに、[1]{.upright}つのコマンドで複数の変数代入だけを行ふこともできる。
 
-しかし、シンプルコマンドは、変数代入でもリダイレクトでもない部分を単語展開し、リダイレクトを実行し、変数代入を単語展開し、それから変数代入を行ふといふ順で実行される[^21]。例へば、
+シンプルコマンドは、変数代入でもリダイレクトでもない部分を単語展開し、リダイレクトを実行し、変数代入を単語展開し、それから変数代入を行ふといふ順で実行される[^21]。例へば、
 
 [^21]:
     [2.9.1 Simple Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01){lang=en} には
 
     <div class="blockquote-like">
 
-      与へられたシンプルコマンドが実行される必要がある場合（すなはち、AND-OR リストや case 文などの条件構造がそのシンプルコマンドをバイパスしてゐない場合）、コマンドテキストの最初から最後まで、次の展開、代入、そしてリダイレクトが全て実行される:
+      与へられたシンプルコマンドが実行される必要がある場合（すなはち、AND-OR リストや case 文などの条件構造がそのシンプルコマンドをバイパスしてゐない場合）、コマンドテキストの最初から最後まで、次の展開、代入、およびリダイレクトが全て実行される:
 
-      1. [シェル文法規則](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02){hreflang=en}に従って、変数代入またはリダイレクトとして認識される単語が、ステップ[3]{.upright}とステップ[4]{.upright}で処理するために保存される。
+      1. [シェル文法規則](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02){hreflang=en}に従って、変数代入またはリダイレクトとして認識される単語が、ステップ[3]{.upright}とステップ[4]{.upright}の処理のために保存される。
       2. 変数代入でもリダイレクトでもない単語が展開される。展開後にフィールドが残ってゐる場合、最初のフィールドはコマンド名と見做され、残りのフィールドはそのコマンドの引数と見做される。
       3. [リダイレクト](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07)に記述されてゐるやうに、リダイレクトが実行される。
       4. それぞれの変数代入は、値を代入する前に、チルダ展開、パラメーター展開、コマンド置換、算術展開、そして引用符削除される。
@@ -876,7 +876,7 @@ foo=1 echo hello >"$foo"
         - 代入がステップ[4]{.upright}のその後の展開において可視かどうか
         - これらの展開の副作用として実行される変数代入がステップ[4]{.upright}のその後の展開、現在のシェル実行環境、またはその両方において可視かどうか
       - コマンド名が関数として実装された標準ユーティリティ（XBD [ユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_22){hreflang=en}を見よ。）の場合、変数代入の影響は、そのユーティリティが関数として実装されてゐなかったかのやうに現れる。
-      - ==コマンド名が特殊ビルトインユーティリティの場合、変数代入は現在の実行環境に影響する==。<i>set</i> <b>-a</b> オプションが有効でない場合（[set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25){hreflang=en} を見よ。）、次のことは<ruby>未規定<rt lang="en">unspecified</ruby>である:
+      - ==コマンド名が特殊ビルトインユーティリティの場合、変数代入は現在の実行環境に影響する==。<i>set</i> <b>-a</b> オプションが有効でない場合（[set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25){lang=en} を見よ。）、次のことは<ruby>未規定<rt lang="en">unspecified</ruby>である:
         - 特殊ビルトインユーティリティの実行中に変数が export 属性を得るかどうか
         - 特殊ビルトインユーティリティの完了後に、変数代入の結果として得た export 属性が永続するかどうか
       - コマンド名が関数として実装された標準ユーティリティでない関数の場合、その関数の実行中は、変数代入が現在の実行環境に影響する。次のことは<ruby>未規定<rt lang="en">unspecified</ruby>である:
