@@ -45,7 +45,12 @@ p {
   /* NOTE: On Safari 10 `force-end` for hanging-punctuation is recognized but broken */
   hanging-punctuation: allow-end last;
   /* hanging-punctuation: force-end last; */
+
+  &:has(mark) {
+    hanging-punctuation: revert;
+  }
 }
+
 
 a {
   text-decoration: none;
