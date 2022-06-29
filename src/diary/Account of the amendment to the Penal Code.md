@@ -20,7 +20,7 @@ lastmod: 2022-06-28
 
 この法律は[6]{.upright}月[17]{.tate-chu-yoko}日に公布された[^1]ので、*侮辱罪の法定刑の引き上げ*（改正法[1]{.upright}条）は[7]{.upright}月[7]{.upright}日に施行される。改正法[1]{.upright}条の条文は
 
-[^1]: <a href="https://kanpou.npb.go.jp/20220617/20220617g00129/20220617g001290000f.html">インターネット版官報号外第[129]{.upright}号</a>
+[^1]: <a href="https://kanpou.npb.go.jp/20220617/20220617g00129/20220617g001290000f.html">令和[4]{.upright}年[6]{.upright}月[17]{.tate-chu-yoko}日インターネット版官報号外第[129]{.upright}号</a>
 
 > 第一条　刑法（明治四十年法律第四十五号）の一部を次のように改正する。
 >
