@@ -27,6 +27,9 @@
     <title type="html">{{ page.data.title or incipit }}</title>
     <id>{{ page.data.url | url(true) | encodeUri }}</id>
     <link href="{{ page.data.url | url(true) | encodeUri }}" rel="alternate" type="text/html" />
+    <content type="html">
+      {{ page.data.content | md }}
+    </content>
 
     {% if page.data.lastmod -%} <published>{{ page.data.date | date('ATOM') }}</published> {%- endif %}
     <updated>{{ (page.data.lastmod or page.data.date) | date('ATOM') }}</updated>
