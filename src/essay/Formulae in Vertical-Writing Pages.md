@@ -29,8 +29,9 @@ MathML は
 
 <math style="writing-mode: horizontal-tb; transform: rotate(90deg)"> <mrow> <mi>x</mi> <mo>=</mo> <mfrac> <mrow> <mo>-</mo> <mi>b</mi> <mo>±</mo> <msqrt> <msup> <mi>b</mi> <mn>2</mn> </msup> <mo>-</mo> <mn>4</mn> <mi>a</mi> <mi>c</mi> </msqrt> </mrow> <mrow> <mn>2</mn> <mi>a</mi> </mrow> </mfrac> </mrow> </math>
 
-となる。Safari では中心を原点として回転し、Firefox では回転しない。後者の原因は、Firefox では MathML に CSS Transforms Module の効果が及ばない[^2]ことにある。よって、次のやうに、\<math\> の外に \<div\> のやうなコンテナーを置けば、Firefox でも回転する:
+となる。Safari では中心か左上[^5]を原点として回転し、Firefox では回転しない。後者の原因は、Firefox では MathML に CSS Transforms Module の効果が及ばない[^2]ことにある。よって、次のやうに、\<math\> の外に \<div\> のやうなコンテナーを置けば、Firefox でも回転する:
 
+[^5]: writing mode と Transforms のどちらが先に処理されるかによって異なる。あとで writing mode を \<math\> の外側で設定するやうに変更することで、この曖昧さは解消する。
 [^2]: 昔どこかで仕様を見た気がするけれど見付けられなかった。情報求む。
 
 <div style="transform: rotate(90deg)">
@@ -43,7 +44,7 @@ MathML は
 <math style="writing-mode: horizontal-tb"> <mrow> <mi>x</mi> <mo>=</mo> <mfrac> <mrow> <mo>-</mo> <mi>b</mi> <mo>±</mo> <msqrt> <msup> <mi>b</mi> <mn>2</mn> </msup> <mo>-</mo> <mn>4</mn> <mi>a</mi> <mi>c</mi> </msqrt> </mrow> <mrow> <mn>2</mn> <mi>a</mi> </mrow> </mfrac> </mrow> </math>
 </div>
 
-まだコンテナーの形を変へずに数式を回転させてゐるので、数式の左に余白がある。また、数式の幅とページの幅の小さい方がページの高さよりも大きい場合、数式が画面の下に出てしまふことにもなる。コンテナーの縦横を入れ替へるには JavaScript を使って、次のやうにする。writing mode は回転する要素で変更する:
+まだコンテナーの形を変へずに数式を回転させてゐるので、数式の左に余白がある。また、数式の幅とページの幅の小さい方がページの高さよりも大きい場合、数式が画面の下に出てしまふことにもなる。コンテナーの縦横を入れ替へるには JavaScript を使って、次のやうにする。writing mode は回転する要素で設定する:
 
 <div>
 <div class="container" style="writing-mode: horizontal-tb; display: flex; transform: rotate(90deg) translateX(100%); transform-origin: top right; overflow-x: auto; overflow-y: clip">
