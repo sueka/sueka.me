@@ -9,8 +9,12 @@
 
 /* cf. ./horizontal.css */
 
-.horizontal {
+%horizontal {
   writing-mode: horizontal-tb;
+}
+
+.horizontal {
+  @extend %horizontal
 }
 
 /* .horizontal を元に戻す */
@@ -47,7 +51,7 @@ blockquote.horizontal {
 }
 
 blockquote.horizontal > p {
-  @extend .horizontal;
+  @extend %horizontal;
 
   margin: revert;
   height: revert;

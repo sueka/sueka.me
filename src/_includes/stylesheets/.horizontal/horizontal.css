@@ -1,5 +1,9 @@
-.horizontal {
+%horizontal {
   writing-mode: revert;
+}
+
+.horizontal {
+  @extend %horizontal;
 }
 
 %revert-class-horizontal {
@@ -27,7 +31,7 @@ blockquote.horizontal {
 }
 
 blockquote.horizontal > p {
-  @extend .horizontal;
+  @extend %horizontal;
 }
 
 .blockquote-like {

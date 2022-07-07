@@ -1,5 +1,9 @@
-.vertical {
+%vertical {
   writing-mode: revert;
+}
+
+.vertical {
+  @extend %vertical;
 }
 
 %revert-class-vertical {
@@ -27,7 +31,7 @@ blockquote.vertical {
 }
 
 blockquote.vertical > p {
-  @extend .vertical;
+  @extend %vertical;
 }
 
 .blockquote-like {

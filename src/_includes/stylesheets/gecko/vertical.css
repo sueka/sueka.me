@@ -42,4 +42,8 @@ a:lang(ja, jpn-archaic) {
     display: inline-block;
     display: inline flow-root;
   }
+
+  & > .blockquote-like {
+    @extend .footnotes-list > .footnote-item > blockquote;
+  }
 }

@@ -9,8 +9,12 @@
 
 /* cf. ./vertical.css */
 
-.vertical {
+%vertical {
   writing-mode: vertical-rl;
+}
+
+.vertical {
+  @extend %vertical;
 }
 
 /* .vertical を元に戻す */
@@ -47,7 +51,7 @@ blockquote.vertical {
 }
 
 blockquote.vertical > p {
-  @extend .vertical;
+  @extend %vertical;
 
   margin: revert;
   width: revert;
