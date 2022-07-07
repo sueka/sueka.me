@@ -376,6 +376,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-anchor {
   display: inline-table;
+  display: inline table;
   position: absolute;
   inset-block: 0; /* for Gecko */
   inset-inline-start: calc(-44 / 39 * 1em); /* Ensure that φ rem (minimum inline-start *margin*) ≥ φ (font-size of <h1>) 39/44 (its font-size) x em */

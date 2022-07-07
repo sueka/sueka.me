@@ -2,6 +2,7 @@
 
 /* code:root, */
 :not(pre) > code {
+  display: inline-block;
   display: inline flow-root;
   padding-block: initial;
   line-height: calc(1 + 2 * 0.236068); /* φ⁻³; Hatching height same as layout.css; NOTE: Line that consists only code is thinner. */
@@ -38,7 +39,7 @@ a:lang(ja, jpn-archaic) {
   }
 
   & > blockquote {
-    display: inline-flex;
-    flex-direction: column;
+    display: inline-block;
+    display: inline flow-root;
   }
 }

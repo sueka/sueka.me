@@ -203,14 +203,14 @@ cite :where(:lang(ja, jpn-archaic)) {
 }
 
 .footnotes-list > .footnote-item > blockquote {
-  /* NOTE: Firefox (98.0.2) で、writing-mode: vertical-rl 文脈で ol > li 直下に <p> などの display: block な要素を置くとマーカーが右に 1 em 程度ずれてしまうため、layout.css で .footnotes-list > .footnote-item > blockquote を display: inline-flex としてこれを回避している。この部分が削除されたら次の3行も削除する。 */
+  /* NOTE: Firefox (98.0.2) で、writing-mode: vertical-rl 文脈で ol > li 直下に <p> などの display: block な要素を置くとマーカーが右に 1 em 程度ずれてしまうため、gecko/vertical.css で .footnotes-list > .footnote-item > blockquote を display: inline flow-root としてこれを回避している。この部分が削除されたら次の3行も削除する。 */
   height: -moz-available;
   height: -webkit-fill-available;
   width: revert;
 }
 
-.blockquote-like {
-  @extend blockquote;
+.footnotes-list > .footnote-item > .blockquote-like {
+  @extend .footnotes-list > .footnote-item > blockquote;
 }
 
 .kuntened {
