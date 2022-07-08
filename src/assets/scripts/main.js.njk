@@ -1,10 +1,8 @@
 window.addEventListener('touchstart', () => {})
 
-import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser }) => {
-  const browser = Bowser.getParser(navigator.userAgent)
-
-  const isGecko = browser.isEngine('Gecko')
-  const isBlink = browser.isEngine('Blink')
+;(() => {
+  const isGecko = /Gecko\/\d+/.test(navigator.userAgent)
+  const isBlink = /Chrome\/\d+/.test(navigator.userAgent)
 
   if (!isGecko && !isBlink) {
     return
@@ -27,7 +25,7 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
       document.head.insertBefore(linkForBlink, link.nextSibling)
     }
   }
-})
+})()
 
 ;(() => {
   const link = document.querySelector('#linkToVerticalCss')
