@@ -1,0 +1,1 @@
+cssHasPseudo(document)
