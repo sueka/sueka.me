@@ -149,17 +149,6 @@ cite :where([lang]) {
   }
 }
 
-.footnotes-list > .footnote-item > blockquote {
-  /* See vertical.css */
-  width: -moz-available;
-  width: -webkit-fill-available;
-  height: revert;
-}
-
-.blockquote-like {
-  @extend blockquote;
-}
-
 .kuntened {
   & rt:lang(ja), & rt:lang(jpn-archaic) {
     font-feature-settings: revert;

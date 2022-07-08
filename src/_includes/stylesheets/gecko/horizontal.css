@@ -51,6 +51,14 @@ a:lang(ja, jpn-archaic).horizontal:active {
   }
 
   & > blockquote {
+    /* See vertical.css */
     display: revert;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    height: revert;
+  }
+
+  & > .blockquote-like {
+    @extend .footnotes-list > .footnote-item > blockquote;
   }
 }
