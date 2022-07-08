@@ -47,6 +47,7 @@ a:lang(ja, jpn-archaic).horizontal:active {
 
   & > :first-child {
     display: revert;
+    height: revert;
   }
 
   & > p:first-child {
@@ -57,8 +58,6 @@ a:lang(ja, jpn-archaic).horizontal:active {
   & > blockquote:first-child {
     /* See vertical.css */
     display: revert;
-    width: -moz-available;
-    width: -webkit-fill-available;
     height: revert;
   }
 

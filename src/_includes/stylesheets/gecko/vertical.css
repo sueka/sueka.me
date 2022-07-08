@@ -35,6 +35,7 @@ a:lang(ja, jpn-archaic) {
 
   & > :first-child {
     display: inline flow-root;
+    height: -moz-available;
   }
 
   & > p:first-child {
@@ -44,11 +45,8 @@ a:lang(ja, jpn-archaic) {
 
   & > blockquote:first-child {
     /* Firefox (98.0.2) の writing-mode: vertical-rl 文脈で ol > li 直下に <p> などの display: block な要素を置くとマーカーが右に 1 em 程度ずれてしまう不具合を回避する。 */
-    display: inline-block;
     display: inline flow-root;
     height: -moz-available;
-    height: -webkit-fill-available;
-    width: revert;
   }
 
   & > .blockquote-like {
