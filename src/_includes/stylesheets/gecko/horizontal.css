@@ -45,12 +45,16 @@ a:lang(ja, jpn-archaic).horizontal:active {
 .footnotes-list > .footnote-item {
   text-align: revert;
 
-  & > p {
+  & > :first-child {
+    display: revert;
+  }
+
+  & > p:first-child {
     text-align: revert;
     display: revert;
   }
 
-  & > blockquote {
+  & > blockquote:first-child {
     /* See vertical.css */
     display: revert;
     width: -moz-available;
