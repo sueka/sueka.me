@@ -1,7 +1,7 @@
 ---
 title: シェルスクリプト・ベタープラクティス
 date: 2022-06-12
-lastmod: 2022-06-22
+lastmod: 2022-07-10
 vertical: false
 ---
 
@@ -563,7 +563,7 @@ $cmd
 
 *while 文や for 文にパイプしない*。`|` で接続されたコマンドはサブシェルで実行される[^30]から、パイプラインで実行される変数代入やビルトインコマンドは、現在の環境には影響しない[^31]。そのため、ファイルリストにある名前が `.` で始まるファイルの個数を数へるプログラム[^32]を
 
-[^30]: 
+[^30]:
     [2.12. Shell Execution Environment](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_12){lang=en} には
 
     <div class="blockquote-like">
@@ -642,7 +642,7 @@ echo "$count"
 
 と書いてはならない[^42]。代はりに、
 
-[^42]: 
+[^42]:
     [2.12. Shell Execution Environment](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_12){lang=en} には
 
     <div class="blockquote-like">
@@ -875,7 +875,7 @@ foo=1 echo hello >"$foo"
       - ==コマンド名が特殊ビルトインユーティリティでも関数でもない場合、変数代入は、そのコマンドの実行環境にエクスポートされ==、ステップ[4]{.upright}で実行される展開の副作用を除いて、==現在の実行環境には影響しない==。この場合、次のことは<ruby>未規定<rt lang="en">unspecified</ruby>である:
         - 代入がステップ[4]{.upright}のその後の展開において可視かどうか
         - これらの展開の副作用として実行される変数代入がステップ[4]{.upright}のその後の展開、現在のシェル実行環境、またはその両方において可視かどうか
-      - コマンド名が関数として実装された標準ユーティリティ（XBD [ユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_22){hreflang=en}を見よ。）の場合、変数代入の影響は、そのユーティリティが関数として実装されてゐなかったかのやうに現れる。
+      - コマンド名が関数として実装された標準ユーティリティ（XBD の[ユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_22){hreflang=en}を見よ。）の場合、変数代入の影響は、そのユーティリティが関数として実装されてゐなかったかのやうに現れる。
       - ==コマンド名が特殊ビルトインユーティリティの場合、変数代入は現在の実行環境に影響する==。<i>set</i> <b>-a</b> オプションが有効でない場合（[set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25){lang=en} を見よ。）、次のことは<ruby>未規定<rt lang="en">unspecified</ruby>である:
         - 特殊ビルトインユーティリティの実行中に変数が export 属性を得るかどうか
         - 特殊ビルトインユーティリティの完了後に、変数代入の結果として得た export 属性が永続するかどうか
@@ -1017,7 +1017,24 @@ echo "$foo"
 
 ### 引数
 
-引数は位置パラメーターとして渡される。位置パラメーターとは、`$0` `$1` といった数字で識別されるパラメーターである。引数に使はれるのは[1]{.upright}以上のものであり、`$0` はシェルかシェルスクリプトの名前を持つ。
+引数は位置パラメーターとして渡される。位置パラメーターとは、数字で識別され、`$0` `$1` といった形式で参照されるパラメーターである。[10]{.tate-chu-yoko}以上のものは `${10}` のやうに数字を波括弧で囲まなければならない[^43]。引数に使はれるのは[1]{.upright}以上のものであり、`$0` はシェルかシェルスクリプトの名前を持つ。
+
+[^43]:
+    [2.6.2 Parameter Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02){lang=en} には
+
+    <div class="blockquote-like">
+
+      パラメーターが波括弧で囲まれてをらず、かつ名前である場合、その名前で表される変数が存在するかどうかにかゝはらず、展開は最長の妥当な名前（XBD の[名前](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_235){hreflang=en}を見よ。）を使ふ。その他の場合、パラメーターは[1]{.upright}文字のシンボルであり、その文字が数字でも特殊パラメーター（[特殊パラメーター](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_05_02){hreflang=en}を見よ。）の内の一つでもない場合の振る舞ひは<ruby>未規定<rt lang="en">unspecified</ruby>である。
+
+    </div>
+
+    +++ 原文
+    <blockquote lang="en">
+
+      If the parameter is not enclosed in braces, and is a name, the expansion shall use the longest valid name (see XBD [Name](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_235)), whether or not the variable represented by that name exists. Otherwise, the parameter is a single-character symbol, and behavior is unspecified if that character is neither a digit nor one of the special parameters (see [Special Parameters](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_05_02)).
+
+    </blockquote>
+    +++
 
 読みづらいときは適当な名前のパラメーターに代入すると良い。位置が決まってゐるならそのまゝ代入し、さうでない場合は `getopts` を使ふ。シェルスクリプトでは `getopts` より複雑なことはしない方が良いと思ふ。位置パラメーターのまゝ使ふ場合、ドキュメントで役割を説明する。
 
