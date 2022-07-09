@@ -19,6 +19,13 @@ html {
   font-feature-settings: "hkna";
 }
 
+:lang(en), :lang(la) {
+  font-variant-ligatures: common-ligatures;
+}
+:lang(en, la) {
+  font-variant-ligatures: common-ligatures;
+}
+
 body {
   min-block-size: 100vh;
   min-block-size: 100vb;
