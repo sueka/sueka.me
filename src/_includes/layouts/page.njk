@@ -53,13 +53,15 @@
     {% endif %}
   </head>
   <body>
-    <main class="main">
-      {% if title -%} {% include 'templates/title-page.njk' %} {%- endif %}
-      <div class="body">
-        {{ content | safe }}
-      </div>
+    <div class="book">
+      <main class="main">
+        {% if title -%} {% include 'templates/title-page.njk' %} {%- endif %}
+        <div class="body">
+          {{ content | safe }}
+        </div>
+      </main>
       {% if not nocolophon -%} {% include 'templates/colophon.njk' %} {%- endif %}
-    </main>
+    </div>
     {% include 'templates/footer.njk' %}
   </body>
 </html>

@@ -40,12 +40,17 @@ body {
   margin-inline: auto;
 }
 
-.main {
+.book {
   flex-grow: 1;
-  /* Prevents margins of .title-page and .body from offsetting */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.main {
+  /* Prevents margins of .title-page and .body from offsetting */
+  display: flex;
+  flex-direction: column;
 }
 
 .title-page {
