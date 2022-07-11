@@ -298,7 +298,7 @@ Bash では `pipefail`[^15] を有効にしてもよい:
 
     <div class="blockquote-like">
 
-      パイプラインに、[0]{.upright}以外の値を返したパイプ内の最後のコマンドの終了ステータスを返させる。
+      パイプラインに、[0]{.upright}以外の返り値を返したパイプ内の最後のコマンドの終了ステータスを返させる。
 
     </div>
 
@@ -804,9 +804,9 @@ done
 foo=1 bar=2
 ```
 
-のやうに、[1]{.upright}つのコマンドで複数の変数代入だけを行ふこともできる。
+のやうに、[1]{.upright}つのコマンドで複数の変数代入を行ひ、その変数代入を現在の環境に影響させることもできる。
 
-シンプルコマンドは、変数代入でもリダイレクトでもない部分を単語展開し、リダイレクトを実行し、変数代入を単語展開し、それから変数代入を行ふといふ順で実行される[^21]。例へば、
+シンプルコマンドは、変数代入でもリダイレクトでもない部分を単語展開し、リダイレクトを実行し、変数代入を単語展開し、それから変数代入を行ふといふ順で実行される[^21]。コマンドは、コマンド名があれば、その後に実行される[^44]。よって、例へば、
 
 [^21]:
     [2.9.1 Simple Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01){lang=en} には
@@ -841,15 +841,28 @@ foo=1 bar=2
 
     とある。
 
+[^44]:
+    [2.9.1 Simple Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01){lang=en} には
+
+    <div class="blockquote-like">
+
+      コマンド名がある場合、[コマンドの検索と実行](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01_01){hreflang=en}に記述されてゐるやうに実行が続行する。コマンド名は無いが、コマンドはコマンド置換を含んでゐたやうな場合、コマンドは、最後に実行されたコマンド置換の終了ステータスで完了する。その他の場合、コマンドは終了ステータス[0]{.upright}で完了する。
+
+    </div>
+
+    +++ 原文
+    <blockquote lang="en">
+
+      If there is a command name, execution shall continue as described in [Command Search and Execution](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01_01) . If there is no command name, but the command contained a command substitution, the command shall complete with the exit status of the last command substitution performed. Otherwise, the command shall complete with a zero exit status.
+
+    </blockquote>
+    +++
+
+    とある。
+
 ``` sh
 foo=1 bar=$foo
 echo "$bar"
-```
-
-や
-
-``` sh
-foo=1 echo "$foo"
 ```
 
 は空行を出力し、
