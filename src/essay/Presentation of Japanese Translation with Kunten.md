@@ -23,8 +23,18 @@ he: true
 
 <div class="blockquote-like">
 
-  It <ruby>was<rt lang="ja">だった</rt></ruby><span class="kaeriten">㆑</span> a<span class="kaeriten">㆑</span>㆐<ruby>bright<rt lang="ja">明るく</rt></ruby>㆐<ruby>cold<rt lang="ja">寒い</rt></ruby>㆐<ruby>day<rt lang="ja">日</rt></ruby> <ruby>in<rt lang="ja">の</rt></ruby><span class="kaeriten">㆑</span> <ruby>April<rt lang="ja">[4]{.upright}月</rt></ruby>, and <ruby>the clocks<rt lang="ja">時計</rt></ruby><ruby>&nbsp;<rt lang="ja">は</rt></ruby> <ruby>were<rt lang="ja">た</rt></ruby><span class="kaeriten">㆑</span> <ruby>striking<rt lang="ja">打ってゐ</rt></ruby><span class="kaeriten">㆓</span> <ruby>thirteen<rt lang="ja">[13]{.tate-chu-yoko}時</rt></ruby><span class="kaeriten">㆒</span><ruby>&nbsp;<rt lang="ja">を</rt></ruby>.
+  It
+  <ruby>was<rt lang="ja">だった</rt></ruby><span class="kaeriten">㆑</span>
+  a<span class="kaeriten">㆑</span>㆐<ruby>bright<rt lang="ja">明るく</rt></ruby>㆐<ruby>cold<rt lang="ja">寒い</rt></ruby>㆐<ruby>day<rt lang="ja">日</rt></ruby>
+  <ruby>in<rt lang="ja">の</rt></ruby><span class="kaeriten">㆑</span>
+  <ruby>April<rt lang="ja">[4]{.upright}月</rt></ruby>,
+  and
+  <ruby>the clocks<rt lang="ja">時計</rt></ruby><ruby>&nbsp;<rt lang="ja">は</rt></ruby>
+  <ruby>were<rt lang="ja">た</rt></ruby><span class="kaeriten">㆑</span>
+  <ruby>striking<rt lang="ja">打ってゐ</rt></ruby><span class="kaeriten">㆓</span>
+  <ruby>thirteen<rt lang="ja">[13]{.tate-chu-yoko}時</rt></ruby><span class="kaeriten">㆒</span><ruby>&nbsp;<rt lang="ja">を</rt></ruby>.
   {lang=en .vertical .kuntened}
+
 </div>
 
 のやうな訓点を振る。総ルビで、ルビの無い単語はいはゆる置き字。訓点に従って書き下し文にして、適当に句読点を補ふと、
@@ -54,8 +64,22 @@ he: true
 
 <div class="blockquote-like">
 
-  <ruby>ו<rt lang="jpn-archaic">さて</rt></ruby><ruby>ימן<rt lang="jpn-archaic">すでに</rt></ruby><span class="kaeriten">㆑</span> <ruby>יהוה<rt lang="jpn-archaic">ヱホバ</rt></ruby> <ruby>דג<rt lang="jpn-archaic">魚</rt></ruby><span class="kaeriten">㆑</span><ruby>&nbsp;<rt lang="jpn-archaic">を備へおきて</rt></ruby> <ruby>גדול<rt lang="jpn-archaic">大なる</rt></ruby> <ruby>לבלע<rt lang="jpn-archaic">呑ましめ給</rt></ruby><span class="kaeriten">㆓</span><ruby>&nbsp;<rt lang="jpn-archaic">へり</rt></ruby> <ruby>את־יונה<rt lang="jpn-archaic">ヨナ</rt></ruby><span class="kaeriten">㆒</span><ruby>&nbsp;<rt lang="jpn-archaic">を</rt></ruby> <ruby>ויהי<rt lang="jpn-archaic">あ</rt></ruby><span class="kaeriten">㆓</span><ruby>&nbsp;<rt lang="jpn-archaic">りき</rt></ruby> <ruby>יונה<rt lang="jpn-archaic">ヨナ</rt></ruby><ruby>&nbsp;<rt lang="jpn-archaic">は</rt></ruby> <ruby>במעי<rt lang="jpn-archaic">腹の中</rt></ruby><span class="kaeriten">㆒㆑</span><ruby>&nbsp;<rt lang="jpn-archaic">に</rt></ruby> <ruby>הדג<rt lang="jpn-archaic">魚</rt></ruby><span class="kaeriten">㆓</span><ruby>&nbsp;<rt lang="jpn-archaic">の</rt></ruby> <ruby>שלשה<rt lang="jpn-archaic">三</rt></ruby> <ruby>ימים<rt lang="jpn-archaic">日</rt></ruby> <ruby>ושלשה<rt lang="jpn-archaic">三</rt></ruby> <ruby>לילות<rt lang="jpn-archaic">夜</rt></ruby><span class="kaeriten">㆒</span>׃
+  <ruby>ו<rt lang="jpn-archaic">さて</rt></ruby><ruby>ימן<rt lang="jpn-archaic">すでに</rt></ruby><span class="kaeriten">㆑</span>
+  <ruby>יהוה<rt lang="jpn-archaic">ヱホバ</rt></ruby>
+  <ruby>דג<rt lang="jpn-archaic">魚</rt></ruby><span class="kaeriten">㆑</span><ruby>&nbsp;<rt lang="jpn-archaic">を備へおきて</rt></ruby>
+  <ruby>גדול<rt lang="jpn-archaic">大なる</rt></ruby>
+  <ruby>לבלע<rt lang="jpn-archaic">呑ましめ給</rt></ruby><span class="kaeriten">㆓</span><ruby>&nbsp;<rt lang="jpn-archaic">へり</rt></ruby>
+  <ruby>את־יונה<rt lang="jpn-archaic">ヨナ</rt></ruby><span class="kaeriten">㆒</span><ruby>&nbsp;<rt lang="jpn-archaic">を</rt></ruby>
+  <ruby>ויהי<rt lang="jpn-archaic">あ</rt></ruby><span class="kaeriten">㆓</span><ruby>&nbsp;<rt lang="jpn-archaic">りき</rt></ruby>
+  <ruby>יונה<rt lang="jpn-archaic">ヨナ</rt></ruby><ruby>&nbsp;<rt lang="jpn-archaic">は</rt></ruby>
+  <ruby>במעי<rt lang="jpn-archaic">腹の中</rt></ruby><span class="kaeriten">㆒㆑</span><ruby>&nbsp;<rt lang="jpn-archaic">に</rt></ruby>
+  <ruby>הדג<rt lang="jpn-archaic">魚</rt></ruby><span class="kaeriten">㆓</span><ruby>&nbsp;<rt lang="jpn-archaic">の</rt></ruby>
+  <ruby>שלשה<rt lang="jpn-archaic">三</rt></ruby>
+  <ruby>ימים<rt lang="jpn-archaic">日</rt></ruby>
+  <ruby>ושלשה<rt lang="jpn-archaic">三</rt></ruby>
+  <ruby>לילות<rt lang="jpn-archaic">夜</rt></ruby><span class="kaeriten">㆒</span>׃
   {lang=hbo .vertical .kuntened}
+
 </div>
 
 原文はレニングラード写本（母音無し）、書き下し文は『文語訳 旧約聖書 Ⅳ 預言』（岩波書店、[2015]{.upright}年）。
