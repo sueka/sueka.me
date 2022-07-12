@@ -8,7 +8,7 @@
   {% set incipit = content | safe | getIncipit -%}
 {% endif -%}
 
-{% set prefersVertical = vertical or vertical == null and language === 'ja' -%}
+{% set verticalOk = vertical or vertical == null and language === 'ja' -%}
 
 <!DOCTYPE html>
 <html
@@ -25,14 +25,13 @@
     <link href="{{ '~/assets/stylesheets/main.css' | url(true) }}" rel="stylesheet" />
     <link href="{{ '~/assets/stylesheets/dark.css' | url(true) }}" rel="stylesheet" media="(prefers-color-scheme: dark)" />
 
-    {%- if prefersVertical %}
+    {%- if verticalOk %}
     <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" />
     {#- Keep using physical, not logical #}
     {#- ⌈(27 / 39) * (2 * 4.236068 + 39) * 13⌉; 2 * 8.923272/100 MinHeight(rem) + 27 rem ≤ MinHeight(rem) #}
     <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 428px)" id="linkToVerticalCss" />
-    {%- else %}{# Prefers horizontal #}
-    {# id は無くてもよいが、対称性のために残してある。 #}
-    <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" id="linkToVerticalCss" />
+    {%- else %}
+    {# <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" /> #}
     <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" />
     {%- endif %}
 
