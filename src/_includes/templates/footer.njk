@@ -1,12 +1,12 @@
 <footer class="footer">
   <ul>
     <li>
-      <a href="https://twitter.com/hsueka" rel="external">
-        <img height="32" width="32" src="{{ '~/assets/images/Logo blue.svg' | url(true) }}" />
+      <a href="https://twitter.com/hsueka" rel="external" aria-label="Twitter">
+        <img height="32" width="32" src="{{ '~/assets/images/Logo blue.svg' | url(true) }}" alt="Twitter logo" />
       </a>
     </li>
     <li>
-      <a href="https://github.com/{{ site.github_repo }}" rel="external" class="octicon-link">
+      <a href="https://github.com/{{ site.github_repo }}" rel="external" class="octicon-link" aria-label="GitHub">
         {#- FIXME: inline-size: 2rem #}
         {% octicon 'mark-github', { width: 32 } %}
       </a>
