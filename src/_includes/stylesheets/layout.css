@@ -274,6 +274,15 @@ summary::-webkit-details-marker {
   margin-inline-end: 0.4em;
 }
 
+summary::marker {
+  margin-right: unset;
+  margin-inline-end: 0.4em;
+}
+
+summary .details-marker {
+  display: none;
+}
+
 :not(:where(aside, li, dd, blockquote, .blockquote-like)) {
   & > :is(h1, h2, h3, h4, h5, h6):first-child {
     margin-block-start: 0;
