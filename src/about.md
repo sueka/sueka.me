@@ -27,7 +27,6 @@ Sueka と言ひます。東京でウェブアプリケーションを開発し�
 ### アカウントの一覧
 
 - [GitHub](https://github.com/sueka)
-- [MDN](https://developer.mozilla.org/ja/profiles/sueka)
 - [Stack Overflow](https://stackoverflow.com/users/8795737/h-sueka)
 - [Twitter](https://twitter.com/hsueka)
 - [pixiv](https://www.pixiv.net/member.php?id=28203588)
