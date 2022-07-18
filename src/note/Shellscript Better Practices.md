@@ -493,43 +493,6 @@ eval "echo \"$greeting\""
 
 [シェルオプションの一時的な変更](#一時的な変更)や [trap の一時的な変更](#一時的な変更-2)のやうな場合は、決まった方法で使ふ。
 
-## UNIX 哲学
-
-UNIX 哲学も一種のベタープラクティスである。[<cite>BSTJ 57: 6. July-August 1978: UNIX Time-Sharing System: Forward.</cite> (McIlroy, M.D.; Pinson, E.N.; Tague, B.A.)](https://archive.org/details/bstj57-6-1899/page/n3/mode/2up){lang=en} には
-
-<div class="blockquote-like">
-
-  UNIX システムの特徴的なスタイルを説明し、促進するために、UNIX システムを構築する人や使ふ人の間で、多くの格言が注目を集めてゐる:
-
-  1. [1]{.upright}つのプログラムには[1]{.upright}つのことをうまくやらせよ。新しい仕事をするには、新しい「機能」を追加して古いプログラムを複雑にするのではなく、新しく構築すること。
-  2. 全てのプログラムの出力は別の未知のプログラムへの入力になるといふことを{豫想|よ|さう}せよ。無関係な情報で出力をごちゃごちゃさせないこと。列指向入力形式やバイナリ入力形式は強く避けること。対話的な入力を要求しないこと。
-  3. ソフトウェアは、OS でさへも、早期に、理想的には数週間以内に試せるやうに設計し、構築せよ。大きくて扱ひづらい部品を捨てゝ再構築することを躊躇しないこと。
-  4. プログラミングタスクを軽減するには、下手なヘルプよりもツールを使へ。そのツールを構築するためには回り道する必要があり、使ひをはったらその一部を{破毀|は|き}するつもりでも。
-
-</div>
-
-+++ 原文
-<blockquote lang="en">
-
-  A number of maxims have gained currency among the builders and users of the UNIX system to explain and promote its characteristic style:
-
-  1. Make each program do one thing well.  To do a new job, build afresh rather than complicate old programs by adding new “features.”
-  2. Expect the output of every program to become the input to another, as yet unknown, program.  Don't clutter output with extraneous information.  Avoid stringently columnar or binary input formats.  Don't insist on interactive input.
-  3. Design and build software, even operating systems, to be tried early, ideally within weeks.  Don't hesitate to throw away the clumsy parts and rebuild them.
-  4. Use tools in preference to unskilled help to lighten a programming task, even if you have to detour to build the tools and expect to throw some of them out after you've finished using them.
-
-</blockquote>
-+++
-
-とある。
-
-「ツール」については、同じテキストの少し上に
-
-> UNIX utilities are usually thought of as tools—sharply honed programs that help with generic data processing tasks.
-{lang=en}
-
-とある。
-
 ## コマンド
 
 シェルで実行可能な文をコマンドと言ふ。POSIX のコマンドは
