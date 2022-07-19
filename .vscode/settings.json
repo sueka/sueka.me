@@ -1,6 +1,0 @@
-{
-  "files.associations": {
-    "*.js.njk": "javascript",
-    "*.xml.njk": "xml"
-  }
-}
