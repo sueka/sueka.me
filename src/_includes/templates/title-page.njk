@@ -1,4 +1,4 @@
 <header class="title-page">
-  <h1>{{ title | safe }}</h1>
+  <h1>{{ title | md | safe }}</h1>
   {% if description -%} <p>{{ description }}</p> {%- endif %}
 </header>

@@ -1,7 +1,7 @@
 {% set language = language or site.language -%}
 
 {% if title -%}
-  {% set titleText = title | safe | striptags -%}
+  {% set titleText = title | md | safe | striptags -%}
 {% endif -%}
 
 {% if not title -%}
