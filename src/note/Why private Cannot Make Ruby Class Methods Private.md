@@ -1,6 +1,6 @@
 ---
 title: なぜ Ruby のクラスメソッドは `private` で [private]{lang=en} にできないのか
-date: 2022-07-21
+date: 2022-07-22
 vertical: false
 ---
 
@@ -15,24 +15,6 @@ end
 [^1]: これがメソッドだといふ認識が無い人も少なくないと思ふ。本文ですぐに説明する。
 
 代はりに、`private_class_method` メソッドを使って、
-
-``` ruby
-class A
-  def self.f; end
-end
-
-A.private_class_method(:f)
-```
-
-``` ruby
-class A
-  def self.f; end
-
-  private_class_method :f
-end
-```
-
-あるいは
 
 ``` ruby
 class A
@@ -228,6 +210,28 @@ A.private :f
 つまり、`private :f` は、実質的には、暗黙のレシーバー `self` と引数 `:f` を取って、`self.instance_method(:f)` を [private]{lang=en} にする。これに対して、`private_class_method :f` は、`self` と `:f` を取って、`self.method(:f)` を [private]{lang=en} にする。
 
 `private` は `Module` のメソッドであって `Class` のメソッドではないが、`Module` は `Class` のスーパークラスであり、また、Ruby の [private]{lang=en} メソッドはサブクラスからも呼び出せるので、クラス定義の中でも、`private :f` みたいな文がうまく動作する。
+
+これに対して、`private_class_method` は [public]{lang=en} メソッドである。よって、冒頭のコードは
+
+``` ruby
+class A
+  def self.f; end
+end
+
+A.private_class_method(:f)
+```
+
+としてもうまく動作する。この設計は、`private` の場合と同様に危険だが、恐らく、クラスメソッドが特異クラス経由で定義される場合に配慮したものだと思ふ。特異クラスの中では、（元のクラスではなく）その特異クラス自身が暗黙のレシーバーとなるので、
+
+``` ruby
+class A; end
+
+class << A
+  private_class_method def f; end
+end
+```
+
+はうまく動かない。
 
 ところで、Ruby のクラスにはオープンクラスといふ性質があり、定義済みのクラスと同じ名前のクラスを再度定義して、元のクラスを変更することができる。例へば、
 
