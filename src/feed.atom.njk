@@ -20,11 +20,15 @@
   <entry
     {%- if page.data.language %} xml:lang="{{ page.data.language }}" {%- endif -%}
   >
+    {% if page.data.title -%}
+      {% set titleText = page.data.title | md | safe | striptags -%}
+    {% endif -%}
+
     {% if not page.data.title -%}
       {% set incipit = page.data.content | md | safe | getIncipit -%}
     {% endif -%}
 
-    <title type="html">{{ page.data.title or incipit }}</title>
+    <title type="html">{{ titleText or incipit }}</title>
     <id>{{ page.data.url | url(true) | encodeUri }}</id>
     <link href="{{ page.data.url | url(true) | encodeUri }}" rel="alternate" type="text/html" />
 
