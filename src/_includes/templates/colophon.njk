@@ -2,9 +2,9 @@
   <div class="colophon-container horizontal">
     <div class="colophon-title">
       {% if title_rubied -%}
-        {% set title = title_rubied | md(true) | safe -%}
+        {% set title = title_rubied | md(true) | safe | striptags -%}
       {% else -%}
-        {% set title = title | md(true) | safe -%}
+        {% set title = title | md(true) | safe | striptags -%}
       {% endif -%}
 
       {% if not title -%}
