@@ -21,14 +21,13 @@
     {%- if page.data.language %} xml:lang="{{ page.data.language }}" {%- endif -%}
   >
     {% if page.data.title -%}
-      {% set titleText = page.data.title | md | safe | striptags -%}
+    <title type="html">{{ page.data.title | md | safe | striptags }}</title>
     {% endif -%}
 
     {% if not page.data.title -%}
-      {% set incipit = page.data.content | md | safe | getIncipit -%}
+    <title type="html">{{ page.data.content | md | safe | getIncipit }}</title>
     {% endif -%}
 
-    <title type="html">{{ titleText or incipit }}</title>
     <id>{{ page.data.url | url(true) | encodeUri }}</id>
     <link href="{{ page.data.url | url(true) | encodeUri }}" rel="alternate" type="text/html" />
 
