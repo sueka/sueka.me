@@ -78,7 +78,7 @@ code {
 }
 
 :not(pre) > code {
-  white-space: pre-wrap;
+  /* white-space: pre; */
 }
 
 ruby {

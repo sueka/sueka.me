@@ -59,6 +59,16 @@ ol:has(li:nth-of-type(100)) {
   padding-inline-start: 3em;
 }
 
+:not(pre) > code {
+  @media (max-width: 427.25px) {
+    word-break: break-all;
+  }
+
+  @media (width < 428px) { /* Same as in page.njk */
+    word-break: break-all;
+  }
+}
+
 em,
 em :where(:not(:lang(ja)):not(:lang(jpn-archaic))) {
   font-style: italic;
