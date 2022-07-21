@@ -221,17 +221,19 @@ end
 A.private_class_method(:f)
 ```
 
-としてもうまく動作する。この設計は、`private` の場合と同様に危険だが、恐らく、クラスメソッドが特異クラス経由で定義される場合に配慮したものだと思ふ。特異クラスの中では、（元のクラスではなく）その特異クラス自身が暗黙のレシーバーとなるので、
+としてもうまく動作する。この設計は `private` の場合と同様に危険だが、クラスメソッド定義の中ではクラスが暗黙のレシーバーになるので、もし、このメソッドの可視性が [private]{lang=en} だとしても、次のやうにすれば、クラスメソッドの可視性を外から変更することができる:
 
 ``` ruby
-class A; end
-
-class << A
-  private_class_method def f; end
+class A
+  def self.f; end
 end
-```
 
-はうまく動かない。
+def A.private_A_method(name)
+  private_class_method name
+end
+
+A.private_A_method(:f)
+```
 
 ところで、Ruby のクラスにはオープンクラスといふ性質があり、定義済みのクラスと同じ名前のクラスを再度定義して、元のクラスを変更することができる。例へば、
 
