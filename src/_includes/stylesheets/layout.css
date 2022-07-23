@@ -303,11 +303,6 @@ summary .details-marker {
 
 /* NOTE: li/dd 全体が blockquote の場合、margin を取り除くとインデントガイドが繋がってしまふ。 */
 :where(li, dd) {
-  /* NOTE: おそらく markdown-it の仕様で、最後でない list item の下に空行を置くと、同じレベルの list item の最初の段落（になれるテキスト）が全て段落になる。これの余白は不要なので取り除く。 */
-  & > p {
-    margin-block: 0;
-  }
-
   /* NOTE: li/dd はネストしたリストよりも先にテキスト（段落）を持つので、リストは :first-child ではうまくいかない。 */
   & > :is(ul, menu, ol, dl):first-of-type,
   & > :is(/* h1, h2, h3, h4, h5, h6, */pre):first-child {
