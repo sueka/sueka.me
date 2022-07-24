@@ -1,6 +1,7 @@
 ---
 title: なぜ Ruby のクラスメソッドは `private` で [private]{lang=en} にできないのか
-date: 2022-07-25
+date: 2022-07-21
+lastmod: 2022-07-25
 vertical: false
 ---
 
