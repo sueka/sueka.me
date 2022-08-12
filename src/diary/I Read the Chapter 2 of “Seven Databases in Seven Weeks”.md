@@ -278,22 +278,7 @@ CREATE EXTENSION cube;
 
 > 他のオープンソースデータベースには複雑なライセンス規約があるが、PostgreSQL は純粋なオープンソースソフトウェアだ。誰もコードを所有していない。誰でも何でも好きなことができる（著作権を主張すること以外）。
 
-は重要だと思ふ。[*The PostgreSQL License*]{lang=en} はパーミッシブ・ライセンスの中でもかなり緩やかで、MIT ライセンスや[1]{.upright}条項 BSD ライセンスによく似てゐる。この本に登場する他のデータベースのライセンスは次の通り:
-
-| [データベース]{lang=ja}  | [ライセンス]{lang=ja}                     | [情報源]{lang=ja}                           |
-|:-------------------------|:------------------------------------------|:--------------------------------------------|
-| PostgreSQL               | The PostgreSQL License                    | https://www.postgresql.org/about/licence/   |
-| Riak                     | Apache License, Version 2.0               | https://riak.com/products/                  |
-| HBase                    | Apache License, Version 2.0               | https://hbase.apache.org                    |
-| MongoDB                  | Server Side Public License                | https://www.mongodb.com/community/licensing |
-| CouchDB                  | Apache License, Version 2.0               | https://couchdb.apache.org                  |
-| Neo4j Enterprise Edition | [次のいづれか]{lang=ja}:                  | https://neo4j.com/licensing/                | \
-|                          | - Neo4j Commercial License                |                                             | \
-|                          | - Neo4j Developer License                 |                                             | \
-|                          | - Neo4j Evaluation License                |                                             |
-| Redis                    | The 3-Clause BSD License                  | https://redis.io/docs/about/license/        |
-| DynamoDB                 | [プロプライエタリ・ソフトウェア]{lang=ja} | https://aws.amazon.com/dynamodb/            |
-{lang=en}
+は重要だと思ふ。[*The PostgreSQL License*]{lang=en} はパーミッシブ・ライセンスの中でもかなり緩やかで、MIT ライセンスや[1]{.upright}条項 BSD ライセンスによく似てゐる。
 
 ### 正誤表
 
