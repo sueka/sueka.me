@@ -13,12 +13,12 @@ jobs:
       - uses: actions/checkout@v2
       - uses: denoland/setup-deno@v1
         with:
-          deno-version: ~1.21
+          deno-version: ~1.24
       - name: Build
         env:
           TZ: Asia/Tokyo
         run: |
-          timeout 60s deno run --allow-all --quiet https://deno.land/x/lume@v1.9.1/ci.ts
+          timeout 60s deno run --allow-all --quiet https://deno.land/x/lume/ci.ts
           exit_status=$?
           (( $exit_status == 0 )) || (( $exit_status == 124 ))
         shell: bash -o pipefail {0}
