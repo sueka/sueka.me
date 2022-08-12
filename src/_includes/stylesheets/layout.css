@@ -293,11 +293,13 @@ summary .details-marker {
   }
 }
 
-:is(p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):first-child {
+:not(li, dd) > :is(p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):first-child,
+:is(li, dd):first-child > :is(p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):first-child {
   margin-block-start: 0;
 }
 
-:is(p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):last-child {
+:not(li, dd) > :is(p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):last-child,
+:is(li, dd):first-child > :is(p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):last-child {
   margin-block-end: 0;
 }
 
