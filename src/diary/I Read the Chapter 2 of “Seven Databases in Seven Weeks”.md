@@ -27,7 +27,7 @@ createdb book
 psql book
 ```
 
-``` pgsql
+``` sql
 CREATE EXTENSION tablefunc;
 CREATE EXTENSION dict_xsyn;
 CREATE EXTENSION fuzzystrmatch;
@@ -264,7 +264,7 @@ CREATE EXTENSION cube;
 
   [^5]: [First Edition]{lang=en} 用のページは恐らくもう公開されてゐない。
 
-  ``` pgsql
+  ``` sql
   \i /path/to/code/postgres/movies_data.sql 
   ```
 
