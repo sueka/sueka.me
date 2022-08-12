@@ -270,7 +270,7 @@ CREATE EXTENSION cube;
 
   を発行すると、[Bitmap Heap Scan on movies]{lang=en} プランを表示するやうになった。恐らく Postgres がどこかのバージョンで、行数が少ないときは全表スキャンするやうになったのだらう[^6]。
 
-  [^6]: PostgreSQL 9.1 では[0]{.upright}行でも [Bitmap Heap Scan on movies]{lang=en} プランが表示された。
+  [^6]: PostgreSQL 9.1 では、[0]{.upright}行でも [Bitmap Heap Scan on movies]{lang=en} プランが表示された。
 
   事前に `SET enable_seqscan = false;` としておけば、行数が少なくても [Bitmap Heap Scan on movies]{lang=en} プランを表示する。`enable_seqscan` を `false` にしても、全表スキャンが完全に制御されるわけではない。[20.7. Query Planning](https://www.postgresql.org/docs/14/runtime-config-query.html){lang=en} も参照。
 
