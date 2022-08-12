@@ -51,7 +51,12 @@ const site = lume({
       deflist,
       footnote,
       mark,
-      multimdTable,
+      [
+        multimdTable,
+        {
+          multiline: true,
+        },
+      ],
       namedCodeBlocks,
       ruby,
     ],

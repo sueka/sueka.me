@@ -30,13 +30,13 @@ a:lang(ja, jpn-archaic) {
   }
 }
 
-.footnotes-list > .footnote-item {
+ul > li, ol > li {
   text-align: start;
 
-  & > :first-child {
+  /* & > :first-child  {
     display: inline flow-root;
     height: -moz-available;
-  }
+  } */
 
   & > p:first-child {
     text-align: justify;

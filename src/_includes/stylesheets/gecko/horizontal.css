@@ -42,13 +42,13 @@ a:lang(ja, jpn-archaic).horizontal:active {
   text-decoration: underline;
 }
 
-.footnotes-list > .footnote-item {
+ul > li, ol > li {
   text-align: revert;
 
-  & > :first-child {
+  /* & > :first-child {
     display: revert;
     height: revert;
-  }
+  } */
 
   & > p:first-child {
     text-align: revert;
