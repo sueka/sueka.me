@@ -310,27 +310,27 @@ summary .details-marker {
   margin-block-end: 0;
 }
 
-/* TODO: 消した方がいいような気がする。 */
 /* NOTE: リスト項目全体が <blockquote> の場合、margin を取り除くとインデントガイドが繋がってしまう。そのため、<blockquote> には適用しない。 */
 :--list-item {
   /* NOTE: リスト項目はネストしたリストよりも先にテキスト（段落）を持つ（さもなければリストマーカーが同じ行に並ぶ。）ので、リストは :first-child ではうまくいかない。 */
   & > :--list:first-of-type,
-  & > :is(/* :--heading, */pre):first-child {
+  & > :is(/* :--heading, */aside, pre, p):first-child {
     margin-block-start: 0;
   }
 
-  & > :is(/* :--heading, */:--list, pre):last-child {
+  & > :is(/* :--heading, */:--list, aside, pre, p):last-child {
     margin-block-end: 0;
   }
 }
 
 /* blockquote の真下では長い方の margin-block は取り除かない。 */
 :--blockquote {
-  & > :--w-margins:first-child {
+  /* NOTE: .horizontal/vertical.css の :--blockquote.horizontal 等に対抗するために詳細度を上げる。 */
+  & > :where(:--w-margins):first-child:first-child {
     margin-block-start: 0;
   }
 
-  & > :is(:--heading, p, :--blockquote):last-child {
+  & > :where(:--heading, p, :--blockquote):last-child:last-child {
     margin-block-end: 0;
   }
 }

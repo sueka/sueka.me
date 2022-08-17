@@ -1,3 +1,5 @@
+@custom-selector :--blockquote blockquote, .blockquote-like;
+
 %horizontal {
   writing-mode: revert;
 }
@@ -30,10 +32,6 @@ blockquote.horizontal {
   overflow-y: revert;
 }
 
-blockquote.horizontal > p {
+:--blockquote.horizontal > p {
   @extend %horizontal;
-}
-
-.blockquote-like {
-  @extend blockquote;
 }

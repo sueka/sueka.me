@@ -1,3 +1,5 @@
+@custom-selector :--blockquote blockquote, .blockquote-like;
+
 %vertical {
   writing-mode: revert;
 }
@@ -22,7 +24,7 @@ p.vertical {
   overflow-inline: revert;
 }
 
-blockquote.vertical {
+:--blockquote.vertical {
   margin: 0 1em; /* ./reset.css */
   border-width: calc(2 / 14 * 1rem) 0;
   padding: calc(1rem - 2 / 14 * 1rem) 0;
@@ -30,10 +32,6 @@ blockquote.vertical {
   overflow-y: revert;
 }
 
-blockquote.vertical > p {
+:--blockquote.vertical > p {
   @extend %vertical;
-}
-
-.blockquote-like {
-  @extend blockquote;
 }

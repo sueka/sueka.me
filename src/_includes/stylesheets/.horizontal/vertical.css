@@ -9,6 +9,8 @@
 
 /* cf. ./horizontal.css */
 
+@custom-selector :--blockquote blockquote, .blockquote-like;
+
 %horizontal {
   writing-mode: horizontal-tb;
 }
@@ -39,7 +41,7 @@ p.horizontal {
 }
 
 /* TODO: blockquote > p 以外の構造でもうまく動くようにする? */
-blockquote.horizontal {
+:--blockquote.horizontal {
   margin: 0 1em; /* ./reset.css */
   border-width: calc(2 / 14 * 1rem) 0;
   padding: calc(1rem - 2 / 14 * 1rem) 0;
@@ -50,15 +52,11 @@ blockquote.horizontal {
   overflow-y: auto;
 }
 
-blockquote.horizontal > p {
+:--blockquote.horizontal > p {
   @extend %horizontal;
 
   margin: revert;
   height: revert;
-}
-
-.blockquote-like {
-  @extend blockquote;
 }
 
 /* cf. ../horizontal.css */

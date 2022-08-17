@@ -1,5 +1,7 @@
 /* Keep contrasting with ./vertical.css */
 
+@custom-selector :--blockquote blockquote, .blockquote-like;
+
 /* code:root, */
 :not(pre) > code,
 .horizontal :not(pre) > code,
@@ -55,13 +57,9 @@ ul > li, ol > li {
     display: revert;
   }
 
-  & > blockquote:first-child {
+  & > :--blockquote:first-child {
     /* See vertical.css */
     display: revert;
     height: revert;
-  }
-
-  & > .blockquote-like {
-    @extend .footnotes-list > .footnote-item > blockquote;
   }
 }
