@@ -20,6 +20,7 @@ import mark from 'https://jspm.dev/markdown-it-mark'
 import multimdTable from 'https://jspm.dev/markdown-it-multimd-table'
 import namedCodeBlocks from 'https://jspm.dev/markdown-it-named-code-blocks'
 import ruby from 'https://jspm.dev/markdown-it-ruby'
+import postcssCustomSelectors from 'https://jspm.dev/postcss-custom-selectors'
 import postcssExtendRule from 'https://jspm.dev/postcss-extend-rule'
 // import postcssPresetEnv from 'https://jspm.dev/postcss-preset-env'
 
@@ -77,6 +78,7 @@ const site = lume({
     // }),
     autoprefixer(),
     postcssNesting(),
+    postcssCustomSelectors(),
     postcssExtendRule(),
     postcssHasPseudo(),
     // csso({ restructure: false }),

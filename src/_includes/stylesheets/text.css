@@ -34,7 +34,9 @@ html {
   font-weight: 600;
 }
 
-h1, h2, h3, h4, h5, h6,
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+
+:--heading,
 dl > dt,
 dl > div > dt {
   font-weight: unset;

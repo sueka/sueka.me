@@ -236,7 +236,10 @@ h6 { font-size: 100% } /* φ^(0/5) */
 
 /* block-axis layout */
 
-h1, h2, h3, h4, h5, h6 {
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+@custom-selector :--list ul, menu, ol, dl;
+
+:--heading {
   margin-block-start: 1.618034em; /* φ */
   margin-block-end: 1em;
 
@@ -252,7 +255,7 @@ aside {
 }
 
 /* TODO: Merge those rulesets if the bugs of css-has-pseudo are fixed: */
-ul, menu, ol, dl {
+:--list {
   margin-block-start: 1em;
   margin-block-end: 1.618034em; /* φ */
 }
@@ -284,11 +287,11 @@ summary .details-marker {
 }
 
 :not(:where(aside, li, dd, blockquote, .blockquote-like)) {
-  & > :is(h1, h2, h3, h4, h5, h6):first-child {
+  & > :--heading:first-child {
     margin-block-start: 0;
   }
 
-  & > :is(h1, h2, h3, h4, h5, h6):last-child {
+  & > :--heading:last-child {
     margin-block-end: 0;
   }
 }
