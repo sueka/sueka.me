@@ -1,3 +1,10 @@
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+@custom-selector :--list ul, menu, ol, dl;
+@custom-selector :--list-item li, dd;
+@custom-selector :--blockquote blockquote, .blockquote-like;
+@custom-selector :--pass-thru :--list-item, aside, :--blockquote;
+@custom-selector :--w-margins :--heading, :--list, :--blockquote, aside, pre, p;
+
 :root {
   --color-indentation-guide-quotation: #565acf;
   --color-octicon: black;
@@ -236,9 +243,6 @@ h6 { font-size: 100% } /* φ^(0/5) */
 
 /* block-axis layout */
 
-@custom-selector :--heading h1, h2, h3, h4, h5, h6;
-@custom-selector :--list ul, menu, ol, dl;
-
 :--heading {
   margin-block-start: 1.618034em; /* φ */
   margin-block-end: 1em;
@@ -246,7 +250,7 @@ h6 { font-size: 100% } /* φ^(0/5) */
   inline-size: fit-content; /* Get Webkit outlines fit */
 }
 
-p, .blockquote-like {
+p, :--blockquote {
   margin-block: 1em;
 }
 
@@ -286,7 +290,7 @@ summary .details-marker {
   display: none;
 }
 
-:not(:where(aside, li, dd, blockquote, .blockquote-like)) {
+:not(:--pass-thru) {
   & > :--heading:first-child {
     margin-block-start: 0;
   }
@@ -296,36 +300,37 @@ summary .details-marker {
   }
 }
 
-:not(li, dd) > :is(p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):first-child,
-:is(li, dd):first-child > :is(p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):first-child {
+:not(:--pass-thru) > :--w-margins:first-child,
+:--pass-thru:first-child > :--w-margins:first-child {
   margin-block-start: 0;
 }
 
-:not(li, dd) > :is(p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):last-child,
-:is(li, dd):first-child > :is(p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):last-child {
+:not(:--pass-thru) > :--w-margins:last-child,
+:--pass-thru:first-child > :--w-margins:last-child {
   margin-block-end: 0;
 }
 
-/* NOTE: li/dd 全体が blockquote の場合、margin を取り除くとインデントガイドが繋がってしまふ。 */
-:where(li, dd) {
-  /* NOTE: li/dd はネストしたリストよりも先にテキスト（段落）を持つので、リストは :first-child ではうまくいかない。 */
-  & > :is(ul, menu, ol, dl):first-of-type,
-  & > :is(/* h1, h2, h3, h4, h5, h6, */pre):first-child {
+/* TODO: 消した方がいいような気がする。 */
+/* NOTE: リスト項目全体が <blockquote> の場合、margin を取り除くとインデントガイドが繋がってしまう。そのため、<blockquote> には適用しない。 */
+:--list-item {
+  /* NOTE: リスト項目はネストしたリストよりも先にテキスト（段落）を持つ（さもなければリストマーカーが同じ行に並ぶ。）ので、リストは :first-child ではうまくいかない。 */
+  & > :--list:first-of-type,
+  & > :is(/* :--heading, */pre):first-child {
     margin-block-start: 0;
   }
 
-  & > :is(/* h1, h2, h3, h4, h5, h6, */ul, menu, ol, dl, pre):last-child {
+  & > :is(/* :--heading, */:--list, pre):last-child {
     margin-block-end: 0;
   }
 }
 
 /* blockquote の真下では長い方の margin-block は取り除かない。 */
-:where(blockquote, .blockquote-like) {
-  & > :is(p, blockquote, .blockquote-like, ul, menu, ol, dl, pre):first-child {
+:--blockquote {
+  & > :--w-margins:first-child {
     margin-block-start: 0;
   }
 
-  & > :is(h1, h2, h3, h4, h5, h6, p, blockquote, .blockquote-like):last-child {
+  & > :is(:--heading, p, :--blockquote):last-child {
     margin-block-end: 0;
   }
 }
@@ -341,17 +346,12 @@ dd {
 }
 
 
-.blockquote-like {
+:--blockquote {
   margin-inline: 0;
   border: 0 solid var(--color-indentation-guide-quotation);
   border-inline-width: calc(2 / 14 * 1rem);
   padding-inline: calc(1rem - 2 / 14 * 1rem);
   text-align: justify;
-}
-
-/* TODO: Swap blockquote and .blockquote-like when postcss-extend-rule gets better */
-blockquote {
-  @extend .blockquote-like;
 }
 
 pre {
@@ -373,7 +373,7 @@ code.hljs {
   border-radius: 0.381966em; /* φ⁻² */
 }
 
-h1, h2, h3, h4, h5, h6 {
+:--heading {
   position: relative;
 }
 
@@ -399,12 +399,11 @@ h1, h2, h3, h4, h5, h6 {
 
   opacity: 0.1;
 
-  /* TODO: @extend */
-  @nest blockquote &, .blockquote-like & {
+  @nest :--blockquote & {
     inset-inline-start: calc(-44 / 39 * 1em - 1rem); /* (the value of .header-anchor not in blockquote) - (blockquote indentation width) */
   }
 
-  @nest :is(li, dd) & {
+  @nest :--list-item & {
     inset-inline-start: calc(-44 / 39 * 1em - 2rem); /* (the value of .header-anchor not in list item) - (list item indentation width) */
   }
 }
