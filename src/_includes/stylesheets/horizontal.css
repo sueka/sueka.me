@@ -22,10 +22,8 @@ html {
 body {
   min-block-size: 100vh;
   min-block-size: 100vb;
-
-  /* 100vb + max margin-inline of .body */
-  max-inline-size: calc(100vh + 2 * 4.236068rem); /* φ³ */
-  max-inline-size: calc(100vb + 2 * 4.236068rem); /* φ³ */
+  max-inline-size: calc(39 / 29 * 100vh);
+  max-inline-size: calc(39 / 29 * 100vb);
 }
 
 .title-page {
