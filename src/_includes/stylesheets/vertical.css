@@ -5,13 +5,13 @@ html {
 
   font-size: clamp(
     13px,
-    min(100vh, 1.4 * 100vw) / (2 * 4.236068 + 39),
+    100vmin / (2 * 4.236068 + 39),
     100vw / (2 * 2.618034 + 29)
   );
 
   font-size: clamp(
     13px,
-    min(100vi, 1.4 * 100vb) / (2 * 4.236068 + 39), /* φ³ */
+    100vmin / (2 * 4.236068 + 39), /* φ³ */
     100vb / (2 * 2.618034 + 29) /* φ² */
   );
 
@@ -22,8 +22,10 @@ html {
 body {
   min-block-size: 100vw;
   min-block-size: 100vb;
-  max-inline-size: calc(1.4 * 100vw);
-  max-inline-size: calc(1.4 * 100vb);
+
+  /* 100vb + max margin-inline of .body */
+  max-inline-size: calc(100vw + 2 * 4.236068rem); /* φ³ */
+  max-inline-size: calc(100vb + 2 * 4.236068rem); /* φ³ */
 }
 
 .title-page {
