@@ -2,8 +2,11 @@
 @custom-selector :--list ul, menu, ol, dl;
 @custom-selector :--list-item li, dd;
 @custom-selector :--blockquote blockquote, .blockquote-like;
-@custom-selector :--pass-thru :--list-item, aside, :--blockquote;
-@custom-selector :--w-margins :--heading, :--list, :--blockquote, aside, pre, p;
+@custom-selector :--sectioning article, aside, nav, section;
+@custom-selector :--pass-thru :--list-item, :--blockquote, :--sectioning;
+@custom-selector :--pass-thru-no-color :--list-item, :--sectioning;
+@custom-selector :--margins :--heading, :--list, pre, p, details, :--pass-thru;
+@custom-selector :--margins-no-color :--heading, :--list, p, details, :--pass-thru-no-color;
 
 :root {
   --color-indentation-guide-quotation: #565acf;
@@ -300,37 +303,37 @@ summary .details-marker {
   }
 }
 
-:not(:--pass-thru) > :--w-margins:first-child,
-:--pass-thru:first-child > :--w-margins:first-child {
+:not(:--pass-thru) > :--margins:first-child,
+:--pass-thru:first-child > :--margins:first-child {
   margin-block-start: 0;
 }
 
-:not(:--pass-thru) > :--w-margins:last-child,
-:--pass-thru:first-child > :--w-margins:last-child {
+:not(:--pass-thru) > :--margins:last-child,
+:--pass-thru:first-child > :--margins:last-child {
   margin-block-end: 0;
 }
 
-/* NOTE: リスト項目全体が <blockquote> の場合、margin を取り除くとインデントガイドが繋がってしまう。そのため、<blockquote> には適用しない。 */
+/* NOTE: 連続するリスト項目で、上のリスト項目の末尾と下のリスト項目の先頭がともに <blockquote> または <pre> の場合、margin を取り除くとインデントガイドや背景色が繋がってしまう。そのため、<blockquote> や <pre> には適用しない。 */
 :--list-item {
-  /* NOTE: リスト項目はネストしたリストよりも先にテキスト（段落）を持つ（さもなければリストマーカーが同じ行に並ぶ。）ので、リストは :first-child ではうまくいかない。 */
+  /* NOTE: リスト項目はネストしたリストよりも先にテキスト（段落）を持つ（さもなければリストマーカーが同じ行に並ぶ。）ので、リストは :first-child ではうまくいかない。生のテキストノードは使わない。 */
   & > :--list:first-of-type,
-  & > :is(/* :--heading, */aside, pre, p):first-child {
+  & > :--margins-no-color:first-child {
     margin-block-start: 0;
   }
 
-  & > :is(/* :--heading, */:--list, aside, pre, p):last-child {
+  & > :--margins-no-color:last-child {
     margin-block-end: 0;
   }
 }
 
-/* blockquote の真下では長い方の margin-block は取り除かない。 */
 :--blockquote {
   /* NOTE: .horizontal/vertical.css の :--blockquote.horizontal 等に対抗するために詳細度を上げる。 */
-  & > :where(:--w-margins):first-child:first-child {
+  & > :where(:--margins):first-child:first-child {
     margin-block-start: 0;
   }
 
-  & > :where(:--heading, p, :--blockquote):last-child:last-child {
+  /* :--margins のうち、margin-block-end よりも margin-block-start の方が長い、または同じもの。<blockquote> の下側では長い方の margin-block は取り除かない。 */
+  & > :where(:--heading, p, details, :--blockquote):last-child:last-child {
     margin-block-end: 0;
   }
 }
