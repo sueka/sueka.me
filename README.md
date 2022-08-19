@@ -6,14 +6,19 @@
 
 ## Licenses
 
-[MIT No Attribution](./LICENSE.MIT-0)
+The files below<sup>[1](#fn1)</sup> are licensed under [Creative Commons Attribution-ShareAlike 4.0 International](./LICENSE).
 
-The files below<sup>[1](#fn1)</sup>, however, are released under [Creative Commons Attribution-ShareAlike 4.0 International](./LICENSE.CC-BY-SA-4.0).
-
-Except for [Logo blue.svg](./src/assets/images/Logo%20blue.svg), which is imported from https://about.twitter.com/en/who-we-are/brand-toolkit.  I myself do not license it.
+The rest<sup>[2](#fn2)</sup> is released under [MIT No Attribution](./LICENSE.MIT-0).
 
 <ol type="1">
   <li id="fn1">
-    .md files
+    .md files (`git ls-files -- :*.md` prints them)
+  </li>
+  <li id="fn2">
+    You have a list of such files by running `git ls-files -- ':!*/Logo blue.svg' ':!:*.md'`.
   </li>
 </ol>
+
+### Exception
+
+[Logo blue.svg](./src/assets/images/Logo%20blue.svg) is imported from https://about.twitter.com/en/who-we-are/brand-toolkit.  I myself do not offer any license to it.

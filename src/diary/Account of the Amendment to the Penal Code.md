@@ -106,4 +106,4 @@ lastmod: 2022-07-14
 
 ---
 
-念のために補足すると、**このサイトは法解釈を行はず、法律意見を提供しない。**[CC-BY-SA-4.0](https://github.com/sueka/sueka.me/blob/master/LICENSE.CC-BY-SA-4.0){lang=en} <ruby>[5]{.upright}条<rt lang="en">Section 5</rt></ruby>も参照されたい。
+念のために補足すると、**このサイトは法解釈を行はず、法律意見を提供しない。**[CC-BY-SA-4.0](https://github.com/sueka/sueka.me/blob/master/LICENSE){lang=en} <ruby>[5]{.upright}条<rt lang="en">Section 5</rt></ruby>も参照されたい。
