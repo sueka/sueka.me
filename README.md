@@ -12,10 +12,10 @@ The rest<sup>[2](#fn2)</sup> is released under [MIT No Attribution](./LICENSE.MI
 
 <ol type="1">
   <li id="fn1">
-    .md files (`git ls-files -- :*.md` prints them)
+    .md files (<code>git ls-files -- :*.md</code> prints them)
   </li>
   <li id="fn2">
-    You have a list of such files by running `git ls-files -- ':!*/Logo blue.svg' ':!:*.md'`.
+    You have a list of such files by running <code>git ls-files -- ':!*/Logo blue.svg' ':!:*.md'</code>.
   </li>
 </ol>
 
