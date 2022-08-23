@@ -41,7 +41,7 @@ vertical: false
 
     <div class="blockquote-like">
 
-      出力ストリームで、キャリッジリターンが現れたのと同じ物理行の先頭から印字が始まるといふことを示す文字。[C]{.upright} 言語では `'\r'` で示される文字である。この文字が行の先頭への移動を達成するためにシステムが出力デバイスに送信する正確なシーケンスであるかどうかは<ruby>規定されてゐない<rt lang="en">unspecified</rt></ruby>。
+      出力ストリームで、キャリッジリターンが現れたのと同じ物理行の先頭から印字が始まるといふことを示す文字。[C]{.upright} 言語では `'\r'` で示される文字である。この文字が行の先頭への移動を達成するためにシステムが出力デバイスに送信する正確なシーケンスであるかどうかは<ruby>規定されてゐない<rt lang="en">unspecified</ruby>。
 
     </div>
 
@@ -138,7 +138,7 @@ vertical: false
 
     </div>
 
-    とある（行を抜粋した。）が、実際は `exit 3.14159` を実行すると[255]{.upright}が返る。また、`exit -1` を実行すると[255]{.upright}が返るのは、[-1]{.tate-chu-yoko} の下位[8]{.upright}ビットが返されてゐる（この振る舞ひは<ruby>未規定<rt lang="en">unspecified</rt></ruby>[^9]。）だけである。
+    とある（行を抜粋した。）が、実際は `exit 3.14159` を実行すると[255]{.upright}が返る。また、`exit -1` を実行すると[255]{.upright}が返るのは、[-1]{.tate-chu-yoko} の下位[8]{.upright}ビットが返されてゐる（この振る舞ひは<ruby>未規定<rt lang="en">unspecified</ruby>[^9]。）だけである。
 
 [^7]:
     [2.8.2 Exit Status for Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_02){lang=en} には
@@ -173,7 +173,7 @@ BSD 系の sysexits.h[^8] に従ふのも良い習慣だと思ふ。
 
 ---
 
-因みに、ほとんどの実装で、`exit` や `return` に範囲外の値を渡すと下位[8]{.upright}ビットがそのまゝ返されるが、この動作は<ruby>未規定<rt lang="en">unspecified</rt></ruby>である[^9]。
+因みに、ほとんどの実装で、`exit` や `return` に範囲外の値を渡すと下位[8]{.upright}ビットがそのまゝ返されるが、この動作は<ruby>未規定<rt lang="en">unspecified</ruby>である[^9]。
 
 [^9]:
     [return](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#return){lang=en} と [exit](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#exit){lang=en} にはそれぞれ
@@ -254,7 +254,7 @@ Bourne Shell 以外のシェルを使ひたいときはさうしてもよい。�
 
     <div class="blockquote-like">
 
-      このオプションが有効な場合、（<ruby>[シェルエラーの結果](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_01)<rt lang="en">Consequences of Shell Errors</rt></ruby>に列挙されてゐる理由のいづれかで、あるいは[0]{.upright}より大きな終了ステータスの返却によって、）コマンドが失敗すると、シェルが即座に終了する。
+      このオプションが有効な場合、（<ruby>[シェルエラーの結果](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_01)<rt lang="en">Consequences of Shell Errors</ruby>に列挙されてゐる理由のいづれかで、あるいは[0]{.upright}より大きな終了ステータスの返却によって、）コマンドが失敗すると、シェルが即座に終了する。
 
     </div>
 
@@ -273,7 +273,7 @@ Bourne Shell 以外のシェルを使ひたいときはさうしてもよい。�
 
     <div class="blockquote-like">
 
-      シェルが<ruby>未定義の<rt lang="en">unset</rt></ruby>パラメーター（`'@'` 特殊パラメーターと `'*'` 特殊パラメーターは除く。）を展開しようとすると、標準エラーにメッセージが書き込まれ、<ruby>[シェルエラーの結果](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_01)<rt lang="en">Consequences of Shell Errors</rt></ruby>にある結果で展開が失敗する。
+      シェルが<ruby>未定義の<rt lang="en">unset</ruby>パラメーター（`'@'` 特殊パラメーターと `'*'` 特殊パラメーターは除く。）を展開しようとすると、標準エラーにメッセージが書き込まれ、<ruby>[シェルエラーの結果](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_01)<rt lang="en">Consequences of Shell Errors</ruby>にある結果で展開が失敗する。
 
     </div>
 
@@ -414,14 +414,14 @@ trap 'echo quit' SIGQUIT
 
 としてから SIGQUIT を受信すると、`quit` とだけ印字される。
 
-複数のシグナルをトラップした場合のアクションの実行順序は<ruby>規定されてゐない<rt lang="en">unspecified</rt></ruby>[^18]。
+複数のシグナルをトラップした場合のアクションの実行順序は<ruby>規定されてゐない<rt lang="en">unspecified</ruby>[^18]。
 
 [^18]:
     [2.11. Signals and Error Handling](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_11){lang=en} には
 
     <div class="blockquote-like">
 
-      {関聯|くゎん|れん}するトラップアクションのあるシェルに対して複数のシグナルが保留されてゐる場合、トラップアクションの実行の順序は<ruby>規定されない<rt lang="en">unspecified</rt></ruby>。
+      {関聯|くゎん|れん}するトラップアクションのあるシェルに対して複数のシグナルが保留されてゐる場合、トラップアクションの実行の順序は<ruby>規定されない<rt lang="en">unspecified</ruby>。
 
     </div>
 
@@ -740,7 +740,7 @@ Bash 4.2 以上では、`lastpipe` オプションを使ふと、パイプライ
 
     <div class="blockquote-like">
 
-      「複合リスト」といふ用語は、[シェル文法](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10){hreflang=en}にある文法に由来するもので、\<newline\> 文字で区切られた<i><ruby>リスト<rt lang="en">lists</rt></ruby></i>のシーケンスであり、任意個数の \<newline\> 文字が先行し、または後続することができるものである。
+      「複合リスト」といふ用語は、[シェル文法](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10){hreflang=en}にある文法に由来するもので、\<newline\> 文字で区切られた<i><ruby>リスト<rt lang="en">lists</ruby></i>のシーケンスであり、任意個数の \<newline\> 文字が先行し、または後続することができるものである。
 
     </div>
 
@@ -866,14 +866,14 @@ foo=1 echo hello >"$foo"
       変数代入は次のやうに実行される:
 
       - 結果としてコマンド名が無い場合、変数代入は現在の実行環境に影響する。
-      - ==コマンド名が特殊ビルトインユーティリティでも関数でもない場合、変数代入は、そのコマンドの実行環境にエクスポートされ==、ステップ[4]{.upright}で実行される展開の副作用を除いて、==現在の実行環境には影響しない==。この場合、次のことは<ruby>規定されない<rt lang="en">unspecified</rt></ruby>:
+      - ==コマンド名が特殊ビルトインユーティリティでも関数でもない場合、変数代入は、そのコマンドの実行環境にエクスポートされ==、ステップ[4]{.upright}で実行される展開の副作用を除いて、==現在の実行環境には影響しない==。この場合、次のことは<ruby>規定されない<rt lang="en">unspecified</ruby>:
         - 代入がステップ[4]{.upright}のその後の展開において可視かどうか
         - これらの展開の副作用として実行される変数代入がステップ[4]{.upright}のその後の展開、現在のシェル実行環境、またはその両方において可視かどうか
       - コマンド名が関数として実装された標準ユーティリティ（XBD の[ユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_22){hreflang=en}を見よ。）の場合、変数代入の影響は、そのユーティリティが関数として実装されてゐなかったかのやうに現れる。
-      - ==コマンド名が特殊ビルトインユーティリティの場合、変数代入は現在の実行環境に影響する==。<i>set</i> <b>-a</b> オプションが有効でない場合（[set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25){lang=en} を見よ。）、次のことは<ruby>規定されない<rt lang="en">unspecified</rt></ruby>:
+      - ==コマンド名が特殊ビルトインユーティリティの場合、変数代入は現在の実行環境に影響する==。<i>set</i> <b>-a</b> オプションが有効でない場合（[set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25){lang=en} を見よ。）、次のことは<ruby>規定されない<rt lang="en">unspecified</ruby>:
         - 特殊ビルトインユーティリティの実行中に変数が export 属性を得るかどうか
         - 特殊ビルトインユーティリティの完了後に、変数代入の結果として得た export 属性が永続するかどうか
-      - コマンド名が関数として実装された標準ユーティリティでない関数の場合、その関数の実行中は、変数代入が現在の実行環境に影響する。次のことは<ruby>規定されない<rt lang="en">unspecified</rt></ruby>:
+      - コマンド名が関数として実装された標準ユーティリティでない関数の場合、その関数の実行中は、変数代入が現在の実行環境に影響する。次のことは<ruby>規定されない<rt lang="en">unspecified</ruby>:
         - 関数の完了後に変数代入が永続するかどうか
         - 関数の実行中に変数が export 属性を得るかどうか
         - （関数の完了後に変数代入が永続する場合、）関数の完了後に変数代入の結果として得た export 属性が永続するかどうか
@@ -961,7 +961,7 @@ echo "$foo"
 
     <div class="blockquote-like">
 
-      二重引用符（`""`）で<ruby>文字<rt lang="en">characters</rt></ruby>を囲むと、次のやうに、その二重引用符の中の（バッククォート、\<dollar-sign\>、および \<backslash\> を除く）全ての文字のリテラル値が保持される:
+      二重引用符（`""`）で<ruby>文字<rt lang="en">characters</ruby>を囲むと、次のやうに、その二重引用符の中の（バッククォート、\<dollar-sign\>、および \<backslash\> を除く）全ての文字のリテラル値が保持される:
 
     </div>
 
@@ -1022,7 +1022,7 @@ echo "$foo"
 
     <div class="blockquote-like">
 
-      パラメーターが波括弧で囲まれてをらず、かつ名前である場合、その名前で表される変数が存在するかどうかにかゝはらず、展開は最長の妥当な名前（XBD の[名前](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_235){hreflang=en}を見よ。）を使ふ。その他の場合、パラメーターは[1]{.upright}文字のシンボルであり、その文字が数字でも特殊パラメーター（[特殊パラメーター](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_05_02){hreflang=en}を見よ。）の内の一つでもない場合の振る舞ひは<ruby>未規定<rt lang="en">unspecified</rt></ruby>である。
+      パラメーターが波括弧で囲まれてをらず、かつ名前である場合、その名前で表される変数が存在するかどうかにかゝはらず、展開は最長の妥当な名前（XBD の[名前](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_235){hreflang=en}を見よ。）を使ふ。その他の場合、パラメーターは[1]{.upright}文字のシンボルであり、その文字が数字でも特殊パラメーター（[特殊パラメーター](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_05_02){hreflang=en}を見よ。）の内の一つでもない場合の振る舞ひは<ruby>未規定<rt lang="en">unspecified</ruby>である。
 
     </div>
 
@@ -1071,7 +1071,7 @@ if [ -n "$foo" ] && [ -e "$file_path" ]; then
 fi
 ```
 
-のやうに書く。`test` の `-a` `-o` プライマリは使はない。`test` は引数の個数が[4]{.upright}より大きい場合については<ruby>規定されてゐない<rt lang="en">unspecified</rt></ruby>[^37]。例へば、
+のやうに書く。`test` の `-a` `-o` プライマリは使はない。`test` は引数の個数が[4]{.upright}より大きい場合については<ruby>規定されてゐない<rt lang="en">unspecified</ruby>[^37]。例へば、
 
 [^37]: [test](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/test.html){lang=en} を参照。
 

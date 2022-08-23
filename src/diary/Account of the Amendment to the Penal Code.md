@@ -55,7 +55,7 @@ lastmod: 2022-07-14
 [^6]: 刑法[29]{.tate-chu-yoko}条。
 [^7]: 刑法[34]{.tate-chu-yoko}条の[2]{.upright}。
 
-かういふ効果があることを踏まへると、見掛け以上の影響がある改正だと思ふ。いはゆる見せしめ逮捕も行はれるだらう[^8]。なほ、改正法も<b>法律</b>なので、刑法[38]{.tate-chu-yoko}条[3]{.upright}項により、<em><ruby>法の不知は害する<rt lang="la">Ignorantia juris non excusat</rt></ruby></em>。
+かういふ効果があることを踏まへると、見掛け以上の影響がある改正だと思ふ。いはゆる見せしめ逮捕も行はれるだらう[^8]。なほ、改正法も<b>法律</b>なので、刑法[38]{.tate-chu-yoko}条[3]{.upright}項により、<em><ruby>法の不知は害する<rt lang="la">Ignorantia juris non excusat</ruby></em>。
 
 [^8]: 是非はともかく。
 
@@ -106,4 +106,4 @@ lastmod: 2022-07-14
 
 ---
 
-念のために補足すると、**このサイトは法解釈を行はず、法律意見を提供しない。**[CC-BY-SA-4.0](https://github.com/sueka/sueka.me/blob/master/LICENSE){lang=en} <ruby>[5]{.upright}条<rt lang="en">Section 5</rt></ruby>も参照されたい。
+念のために補足すると、**このサイトは法解釈を行はず、法律意見を提供しない。**[CC-BY-SA-4.0](https://github.com/sueka/sueka.me/blob/master/LICENSE){lang=en} <ruby>[5]{.upright}条<rt lang="en">Section 5</ruby>も参照されたい。

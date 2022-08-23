@@ -24,15 +24,15 @@ he: true
 <div class="blockquote-like">
 
   It
-  <ruby>was<rt lang="ja">だった</rt></ruby><span class="kaeriten">㆑</span>
-  a<span class="kaeriten">㆑</span>㆐<ruby>bright<rt lang="ja">明るく</rt></ruby>㆐<ruby>cold<rt lang="ja">寒い</rt></ruby>㆐<ruby>day<rt lang="ja">日</rt></ruby>
-  <ruby>in<rt lang="ja">の</rt></ruby><span class="kaeriten">㆑</span>
-  <ruby>April<rt lang="ja">[4]{.upright}月</rt></ruby>,
+  <ruby>was<rt lang="ja">だった</ruby><span class="kaeriten">㆑</span>
+  a<span class="kaeriten">㆑</span>㆐<ruby>bright<rt lang="ja">明るく</ruby>㆐<ruby>cold<rt lang="ja">寒い</ruby>㆐<ruby>day<rt lang="ja">日</ruby>
+  <ruby>in<rt lang="ja">の</ruby><span class="kaeriten">㆑</span>
+  <ruby>April<rt lang="ja">[4]{.upright}月</ruby>,
   and
-  <ruby>the clocks<rt lang="ja">時計</rt></ruby><ruby>&nbsp;<rt lang="ja">は</rt></ruby>
-  <ruby>were<rt lang="ja">た</rt></ruby><span class="kaeriten">㆑</span>
-  <ruby>striking<rt lang="ja">打ってゐ</rt></ruby><span class="kaeriten">㆓</span>
-  <ruby>thirteen<rt lang="ja">[13]{.tate-chu-yoko}時</rt></ruby><span class="kaeriten">㆒</span><ruby>&nbsp;<rt lang="ja">を</rt></ruby>.
+  <ruby>the clocks<rt lang="ja">時計</ruby><ruby>&nbsp;<rt lang="ja">は</ruby>
+  <ruby>were<rt lang="ja">た</ruby><span class="kaeriten">㆑</span>
+  <ruby>striking<rt lang="ja">打ってゐ</ruby><span class="kaeriten">㆓</span>
+  <ruby>thirteen<rt lang="ja">[13]{.tate-chu-yoko}時</ruby><span class="kaeriten">㆒</span><ruby>&nbsp;<rt lang="ja">を</ruby>.
   {lang=en .vertical .kuntened}
 
 </div>
@@ -64,20 +64,20 @@ he: true
 
 <div class="blockquote-like">
 
-  <ruby>ו<rt lang="jpn-archaic">さて</rt></ruby><ruby>ימן<rt lang="jpn-archaic">すでに</rt></ruby><span class="kaeriten">㆑</span>
-  <ruby>יהוה<rt lang="jpn-archaic">ヱホバ</rt></ruby>
-  <ruby>דג<rt lang="jpn-archaic">魚</rt></ruby><span class="kaeriten">㆑</span><ruby>&nbsp;<rt lang="jpn-archaic">を備へおきて</rt></ruby>
-  <ruby>גדול<rt lang="jpn-archaic">大なる</rt></ruby>
-  <ruby>לבלע<rt lang="jpn-archaic">呑ましめ給</rt></ruby><span class="kaeriten">㆓</span><ruby>&nbsp;<rt lang="jpn-archaic">へり</rt></ruby>
-  <ruby>את־יונה<rt lang="jpn-archaic">ヨナ</rt></ruby><span class="kaeriten">㆒</span><ruby>&nbsp;<rt lang="jpn-archaic">を</rt></ruby>
-  <ruby>ויהי<rt lang="jpn-archaic">あ</rt></ruby><span class="kaeriten">㆓</span><ruby>&nbsp;<rt lang="jpn-archaic">りき</rt></ruby>
-  <ruby>יונה<rt lang="jpn-archaic">ヨナ</rt></ruby><ruby>&nbsp;<rt lang="jpn-archaic">は</rt></ruby>
-  <ruby>במעי<rt lang="jpn-archaic">腹の中</rt></ruby><span class="kaeriten">㆒㆑</span><ruby>&nbsp;<rt lang="jpn-archaic">に</rt></ruby>
-  <ruby>הדג<rt lang="jpn-archaic">魚</rt></ruby><span class="kaeriten">㆓</span><ruby>&nbsp;<rt lang="jpn-archaic">の</rt></ruby>
-  <ruby>שלשה<rt lang="jpn-archaic">三</rt></ruby>
-  <ruby>ימים<rt lang="jpn-archaic">日</rt></ruby>
-  <ruby>ושלשה<rt lang="jpn-archaic">三</rt></ruby>
-  <ruby>לילות<rt lang="jpn-archaic">夜</rt></ruby><span class="kaeriten">㆒</span>׃
+  <ruby>ו<rt lang="jpn-archaic">さて</ruby><ruby>ימן<rt lang="jpn-archaic">すでに</ruby><span class="kaeriten">㆑</span>
+  <ruby>יהוה<rt lang="jpn-archaic">ヱホバ</ruby>
+  <ruby>דג<rt lang="jpn-archaic">魚</ruby><span class="kaeriten">㆑</span><ruby>&nbsp;<rt lang="jpn-archaic">を備へおきて</ruby>
+  <ruby>גדול<rt lang="jpn-archaic">大なる</ruby>
+  <ruby>לבלע<rt lang="jpn-archaic">呑ましめ給</ruby><span class="kaeriten">㆓</span><ruby>&nbsp;<rt lang="jpn-archaic">へり</ruby>
+  <ruby>את־יונה<rt lang="jpn-archaic">ヨナ</ruby><span class="kaeriten">㆒</span><ruby>&nbsp;<rt lang="jpn-archaic">を</ruby>
+  <ruby>ויהי<rt lang="jpn-archaic">あ</ruby><span class="kaeriten">㆓</span><ruby>&nbsp;<rt lang="jpn-archaic">りき</ruby>
+  <ruby>יונה<rt lang="jpn-archaic">ヨナ</ruby><ruby>&nbsp;<rt lang="jpn-archaic">は</ruby>
+  <ruby>במעי<rt lang="jpn-archaic">腹の中</ruby><span class="kaeriten">㆒㆑</span><ruby>&nbsp;<rt lang="jpn-archaic">に</ruby>
+  <ruby>הדג<rt lang="jpn-archaic">魚</ruby><span class="kaeriten">㆓</span><ruby>&nbsp;<rt lang="jpn-archaic">の</ruby>
+  <ruby>שלשה<rt lang="jpn-archaic">三</ruby>
+  <ruby>ימים<rt lang="jpn-archaic">日</ruby>
+  <ruby>ושלשה<rt lang="jpn-archaic">三</ruby>
+  <ruby>לילות<rt lang="jpn-archaic">夜</ruby><span class="kaeriten">㆒</span>׃
   {lang=hbo .vertical .kuntened}
 
 </div>
