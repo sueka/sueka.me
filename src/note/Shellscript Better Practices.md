@@ -542,7 +542,7 @@ $cmd
 
 [^45]: [2.9.2 Pipelines](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_02){lang=en} を参照。
 
-*while 文や for 文にパイプしない*。パイプラインの各コマンドはサブシェルで実行される[^30]から、パイプラインで実行される変数代入やビルトインコマンドは、現在の環境には影響しない[^31]。そのため、ファイルリストにある名前が `.` で始まるファイルの個数を数へるプログラム[^32]を
+*while 文や for 文にパイプしない*。パイプラインの各コマンドはサブシェルで実行される[^30]から、パイプラインで実行される変数代入やビルトインコマンドは、現在の環境には影響しない[^31]。そのため、ファイルリストにある名前が `.` で始まるファイルの個数を数へるプログラム[^32]は、
 
 [^30]:
     [2.12. Shell Execution Environment](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_12){lang=en} には
@@ -621,7 +621,7 @@ done
 echo "$count"
 ```
 
-と書いてはならない[^42]。代はりに、
+と書くべきではない[^42]。代はりに、
 
 [^42]:
     [2.12. Shell Execution Environment](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_12){lang=en} には
