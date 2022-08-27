@@ -1,7 +1,7 @@
 ---
 title: GDPR 対応の必要性
 date: 2022-08-27
-lastmod: 2022-08-27
+lastmod: 2022-08-28
 ---
 
 ## TL;DR
@@ -62,13 +62,13 @@ lastmod: 2022-08-27
 
 よって、日本の<ruby>十分性認定<rt lang="en">Adequacy decision</ruby>は、個人情報保護法の適用を受ける組織への、<i>追加条件</i>に従ふ<ruby>移転<rt lang="en">Transfer</ruby>に限定されてゐる。
 
-なほ、日本が<b>十分性認定</b>を行ふ*外国*[^5]は、クロアチアを含む EU 加盟国、スイスを除く EFTA 加盟国、およびイギリスの[31]{.tate-chu-yoko}か国のみであり、イギリスは [Brexit]{lang=en} 時点（[2020]{.upright}年[1]{.upright}月[31]{.tate-chu-yoko}日）における EU の十分性認定を*暫定的に*そのまゝ引き継いでゐる。[UK approach to international data transfers - GOV.UK](https://www.gov.uk/government/publications/uk-approach-to-international-data-transfers){lang=en} も参照。
+なほ、日本が<b>十分性認定</b>を行ふ*外国*[^5]は、クロアチアを含む EU 加盟国、スイスを除く EFTA 加盟国、およびイギリスの[31]{.tate-chu-yoko}か国のみ。イギリスは [Brexit]{lang=en} 時点（[2020]{.upright}年[1]{.upright}月[31]{.tate-chu-yoko}日）における EU の十分性認定を*暫定的に*そのまゝ引き継いでゐる。[UK approach to international data transfers - GOV.UK](https://www.gov.uk/government/publications/uk-approach-to-international-data-transfers){lang=en} も参照。
 
 [^5]: 個人情報保護法[28]{.tate-chu-yoko}条[1]{.upright}項における「個人の権利利益を保護する上で我が国と同等の水準にあると認められる個人情報の保護に関する制度を有している外国」。
 
 ## 公共部門団体への移転
 
-行政機関個人情報保護法と独立行政法人等個人情報保護法はデジタル社会の形成を図るための関係法律の整備に関する法律によって廃止されたが、<i>決定</i>リサイタル[10]{.tate-chu-yoko}には、
+EU 域内から日本の行政機関や独立行政法人等への移転は、<i>決定</i>では認められてゐない。<i>決定</i>リサイタル[10]{.tate-chu-yoko}には、
 
 <div class="blockquote-like">
 
@@ -93,9 +93,15 @@ lastmod: 2022-08-27
 > 3. 独立行政法人等
 > 4. 地方独立行政法人
 
-とあるから、現在も、EU 域内から日本の行政機関や独立行政法人等への移転は十分性認定を受けてゐないと解するのが妥当だと思はれる。
+とある。
 
-なほ、<i>決定</i>リサイタル[181]{.upright}では、発効後[2]{.upright}年以内に最初のレビューを行ひ、その後は少なくとも[4]{.upright}年ごとにレビューを行ふとしてをり、最初のレビューは[2021]{.upright}年[10]{.tate-chu-yoko}月[26]{.tate-chu-yoko}日に行はれた。[3]{.upright}年後のレビューでは、この改正についても議論されるだらう[^6]。
+---
+
+デジタル社会の形成を図るための関係法律の整備に関する法律では、<i>学術研究分野を含めた GDPR（EU 一般データ保護規則）の十分性認定への対応を目指し、学術研究に係る適用除外規定について、一律の適用除外ではなく、義務ごとの例外規定として精緻化</i>することゝなり[^7]、整備法[50]{.tate-chu-yoko}条は[2022]{.upright}年[4]{.upright}月[1]{.upright}日に施行された。また、<i>決定</i>リサイタル[181]{.upright}は、発効後[2]{.upright}年以内に最初のレビューを行ひ、その後は少なくとも[4]{.upright}年ごとにレビューを行ふとしてをり、最初のレビューは[2021]{.upright}年[10]{.tate-chu-yoko}月[26]{.tate-chu-yoko}日に行はれた。
+
+[^7]: [法令｜デジタル庁](https://www.digital.go.jp/laws/)も参照。
+
+<i>整備法</i>[50]{.tate-chu-yoko}条は、<i>最初のレビュー</i>の[5]{.upright}か月後に施行されたゝめ、<i>決定</i>にはまだ反映されてゐない。[3]{.upright}年後のレビューでは、この改正についても議論されるだらう[^6]。
 
 [^6]:
     GDPR <ruby>[45]{.tate-chu-yoko}条[3]{.upright}項<rt lang="en">Article 45(3)</ruby>には、
@@ -121,7 +127,7 @@ lastmod: 2022-08-27
 <i>追加条件</i>については、個人情報保護委員会によって、附属書 I の日本語版と附属書 II の参考仮訳が公開されてゐる:
 
 附属書 I
-: [個人情報の保護に関する法律に係るEU域内及び英国から十分性認定により移転を受けた個人データの取扱いに関する補完的ルール (PDF)](https://www.ppc.go.jp/files/pdf/Supplementary_Rules.pdf)
+: [個人情報の保護に関する法律に係る EU 域内及び英国から十分性認定により移転を受けた個人データの取扱いに関する補完的ルール (PDF)](https://www.ppc.go.jp/files/pdf/Supplementary_Rules.pdf)
 
 附属書 II
 : [法執行及び国家安全保障目的の日本の公的機関による個人情報の収集及び使用 (PDF)](https://www.ppc.go.jp/files/pdf/kariyaku_government_access.pdf)
