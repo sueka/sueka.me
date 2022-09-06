@@ -32,6 +32,10 @@ a:lang(ja, jpn-archaic) {
   }
 }
 
+u {
+  text-decoration: overline; /* left */
+}
+
 ul > li, ol > li {
   text-align: start;
 

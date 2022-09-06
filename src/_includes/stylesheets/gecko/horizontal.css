@@ -44,6 +44,10 @@ a:lang(ja, jpn-archaic).horizontal:active {
   text-decoration: underline;
 }
 
+u {
+  text-decoration: revert;
+}
+
 ul > li, ol > li {
   text-align: revert;
 

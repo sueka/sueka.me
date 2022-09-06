@@ -21,3 +21,7 @@ a:lang(ja, jpn-archaic) {
     text-decoration: overline; /* left */
   }
 }
+
+u {
+  text-decoration: overline; /* left */
+}
