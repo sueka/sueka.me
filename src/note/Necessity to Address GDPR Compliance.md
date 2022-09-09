@@ -1,7 +1,7 @@
 ---
 title: GDPR 対応の必要性
 date: 2022-08-27
-lastmod: 2022-08-31
+lastmod: 2022-09-09
 ---
 
 ## TL;DR
@@ -62,7 +62,7 @@ lastmod: 2022-08-31
 
 よって、日本の<ruby>十分性認定<rt lang="en">Adequacy decision</ruby>は、個人情報保護法の適用を受ける組織への、<i>追加条件</i>に従ふ<ruby>移転<rt lang="en">Transfer</ruby>に限定されてゐる。
 
-なほ、日本が<b>十分性認定</b>を行ふ*外国*[^5]は、クロアチアを含む EU 加盟国、スイスを除く EFTA 加盟国、およびイギリスの[31]{.tate-chu-yoko}か国のみ。イギリスは [Brexit]{lang=en} 時点（[2020]{.upright}年[1]{.upright}月[31]{.tate-chu-yoko}日）における EU の十分性認定を*暫定的に*そのまゝ引き継いでゐる。[UK approach to international data transfers - GOV.UK](https://www.gov.uk/government/publications/uk-approach-to-international-data-transfers){lang=en} も参照。
+なほ、日本が十分性認定を行ふ外国[^5]は、クロアチアを含む EU 加盟国、スイスを除く EFTA 加盟国、およびイギリスの[31]{.tate-chu-yoko}か国のみ。イギリスは [Brexit]{lang=en} 時点（[2020]{.upright}年[1]{.upright}月[31]{.tate-chu-yoko}日）における EU の十分性認定をそのまゝ引き継いでゐる。[UK approach to international data transfers - GOV.UK](https://www.gov.uk/government/publications/uk-approach-to-international-data-transfers){lang=en} も参照。
 
 [^5]: 個人情報保護法[28]{.tate-chu-yoko}条[1]{.upright}項における「個人の権利利益を保護する上で我が国と同等の水準にあると認められる個人情報の保護に関する制度を有している外国」。
 
