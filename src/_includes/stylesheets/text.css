@@ -125,7 +125,7 @@ html {
   isolation: isolate;
 }
 
-mark code {
+code {
   mix-blend-mode: multiply;
 }
 
