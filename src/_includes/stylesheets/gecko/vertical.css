@@ -2,6 +2,7 @@
 
 @custom-selector :--blockquote blockquote, .blockquote-like;
 
+.sideways,
 /* code:root, */
 :not(pre) > code {
   display: inline-block;
