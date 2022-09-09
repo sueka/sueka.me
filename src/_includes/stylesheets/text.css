@@ -121,6 +121,14 @@ mark {
   color: currentColor;
 }
 
+html {
+  isolation: isolate;
+}
+
+mark code {
+  mix-blend-mode: multiply;
+}
+
 .mark-like {
   @extend mark;
 }
