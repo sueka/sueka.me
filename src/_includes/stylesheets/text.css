@@ -16,6 +16,10 @@ html {
 
   background-color: var(--color-background);
   color: var(--color-text);
+}
+
+/* NOTE: Webkit and Blink don't support isolation at :root */
+body {
   isolation: isolate;
 }
 
