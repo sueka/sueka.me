@@ -13,3 +13,8 @@
 hr {
   border-style: outset;
 }
+
+/* text */
+:not(pre) > code {
+  mix-blend-mode: lighten;
+}
