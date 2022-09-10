@@ -15,6 +15,7 @@ hr {
 }
 
 /* text */
+mark,
 :not(pre) > code {
   mix-blend-mode: lighten;
 }
