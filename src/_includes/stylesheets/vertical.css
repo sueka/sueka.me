@@ -92,12 +92,10 @@ ol:where(:not(:lang(ja, jpn-archaic))):has(li:nth-of-type(100)) {
 
 :not(pre) > code {
   @media (max-height: 427.25px) {
-    white-space: pre-wrap;
     word-break: break-all;
   }
 
   @media (height < 428px) { /* Same as in page.njk */
-    white-space: pre-wrap;
     word-break: break-all;
   }
 }

@@ -86,7 +86,7 @@ code {
 :not(pre) > code {
   background-color: var(--color-background-code);
   mix-blend-mode: multiply;
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
 ruby {
