@@ -20,7 +20,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
       {{- titleText or incipit }}
-      {%- if titleText !== site.name and incipit !== site.name %} - {{ site.name }} {%- endif -%}
+      {%- if titleText != site.name and incipit != site.name %} - {{ site.name }} {%- endif -%}
     </title>
     <link href="{{ '~/assets/stylesheets/main.css' | url(true) }}" rel="stylesheet" />
     <link href="{{ '~/assets/stylesheets/dark.css' | url(true) }}" rel="stylesheet" media="(prefers-color-scheme: dark)" />
