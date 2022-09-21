@@ -166,6 +166,10 @@ i :where(:lang(ja, jpn-archaic)) {
   font-family: var(--font-text-emphasized);
 }
 
+small {
+  font-size: calc(39 / 44 * 100%);
+}
+
 sup, sub {
   line-height: 1;
 }
