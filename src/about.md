@@ -1,12 +1,12 @@
 ---
 layout: layouts/page.njk
-title: このウェブサイトについて
+title: このサイトについて
 nocolophon: true
 date: 2021-08-27
 lastmod: 2021-11-03
 ---
 
-このウェブサイトは[私](#作者)の個人ブログです。
+このサイトは[私](#作者)の個人ブログです。
 
 ## 作者
 
