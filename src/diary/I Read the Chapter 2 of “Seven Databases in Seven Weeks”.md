@@ -49,7 +49,7 @@ CREATE EXTENSION cube;
 - [Loompaland]{lang=en} は『[Charlie and the Chocolate Factory]{lang=en}』に登場する地名らしい。
 - `events.venue_id` の型は `integer` にした。
 - <i>宿題</i>では [5.4. Constraints](https://www.postgresql.org/docs/14/ddl-constraints.html){lang=en} や [52.11. pg_class](https://www.postgresql.org/docs/14/catalog-pg-class.html){lang=en} などを参考にした。
-- <i>宿題</i>の<i>やってみよう[1]{.upright}</i>の「選択」は `SELECT` のこと。
+- <i>宿題</i>の<i>やってみよう[1]{.upright}</i>の<q>選択</q>は `SELECT` のこと。
 
 [2]{.upright}日目に入る前に、`psql` では補完がうまくいかないことが多かったので、`pgcli` をインストールした。こゝからは `pgcli book` でサーバーに接続する。
 
