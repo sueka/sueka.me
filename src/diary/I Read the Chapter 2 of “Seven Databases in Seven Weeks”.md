@@ -5,7 +5,13 @@ date: 2022-08-12
 vertical: false
 ---
 
-『<a href="https://www.ohmsha.co.jp/book/9784274069086/">[7]{.upright}つのデータベース [7]{.upright}つの世界</a>』（[2013]{.upright}年、オーム社）第[2]{.upright}章を読んだ。この記事は単なる日記であって、書籍の内容を要約しようとしたり、抜粋しようとしたりするものではない。
+『<a href="https://www.ohmsha.co.jp/book/9784274069086/">[7]{.upright}つのデータベース [7]{.upright}つの世界</a>』（[2013]{.upright}年、オーム社）第[2]{.upright}章を読んだ。
+
+<small>
+
+  この記事は単なる日記であって、書籍の内容を要約しようとしたり、抜粋しようとしたりするものではありません。
+
+</small>
 
 ## PostgreSQL
 
