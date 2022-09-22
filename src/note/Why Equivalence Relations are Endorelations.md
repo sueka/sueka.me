@@ -1,7 +1,7 @@
 ---
 title: なぜ同値関係は自己関係なのか
 date: 2022-09-07
-lastmod: 2022-09-13
+lastmod: 2022-09-23
 vertical: false
 templateEngine: njk, md
 ---
@@ -157,7 +157,7 @@ templateEngine: njk, md
 
 とある。（[マーク]{.mark-like}は引用者による。）
 
-よって、同値関係の検査を値の等価性として提供するなら、インスタンス化可能なクラスを拡張して、同値関係にとって<em><ruby>意味のある<rt lang="en">significant</ruby></em>フィールドを追加することはできない。『Effective Java 第[3]{.upright}版』p.46 にも次のやうにある:
+よって、インスタンス化可能なクラスを拡張して、同値関係にとって<em><ruby>意味のある<rt lang="en">significant</ruby></em>フィールドを追加することはできない。『Effective Java 第[3]{.upright}版』p.46 にも次のやうにある:
 
 > インスタンス化可能なクラスを拡張して値要素を追加するための、満足できる方法はありませんが、素晴らしい回避策があります。項目[18]{.tate-chu-yoko}「継承よりもコンポジションを選ぶ」の助言に従うことです。`ColorPoint` に `Point` を拡張させる代わりに、`ColorPoint` に [private]{lang=en} の `Point` フィールドを持たせて、そのカラーポイントと同じ位置のポイントを返す [public]{lang=en} の*ビュー* [(*view*)]{lang=en} メソッド（項目[6]{.upright}）を持たせてください。
 
