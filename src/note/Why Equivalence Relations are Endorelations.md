@@ -33,22 +33,6 @@ templateEngine: njk, md
   </blockquote>
   +++
 
-  とある。また、[<cite>A Behavioral Notion of Subtyping</cite> (Liskov, Wing, 1994)]{lang=en} には、
-
-  <div class="blockquote-like">
-
-    部分型要件: 𝜑(𝑥) を型 𝑇 の<ruby>オブジェクト<rt lang="en">objects</ruby> 𝑥 についての証明可能な性質とする。このとき、型 𝑆 の<ruby>オブジェクト<rt lang="en">objects</ruby> 𝑦 について、𝜑(𝑦) が真でなければならない。たゞし、𝑆 は 𝑇 の部分型である。
-
-  </div>
-
-  +++ 原文
-  <blockquote lang="en">
-
-    Subtype Requirement: Let 𝜑(𝑥) be a property provable about objects 𝑥 of type 𝑇. Then 𝜑(𝑦) should be true for objects 𝑦 of type 𝑆 where 𝑆 is a subtype of 𝑇.
-
-  </blockquote>
-  +++
-
   とある。
 
 ---
