@@ -66,6 +66,43 @@ ol.horizontal {
   list-style-type: revert;
 }
 
+/* TODO: 主要ブラウザーと css-has-pseudo が :lang(ja, zh) をサポートしたら、この行を削除する。 */
+/* .horizontal ruby:not(lang(ja)):not(lang(jpn-archaic)):not(lang(zh)):has(rt:not(lang(ja)):not(lang(jpn-archaic)):not(lang(zh))), */
+.horizontal ruby:lang(ja):has(rt:lang(ja)),
+.horizontal ruby:lang(ja):has(rt:lang(jpn-archaic)),
+.horizontal ruby:lang(ja):has(rt:lang(zh)),
+.horizontal ruby:lang(jpn-archaic):has(rt:lang(ja)),
+.horizontal ruby:lang(jpn-archaic):has(rt:lang(jpn-archaic)),
+.horizontal ruby:lang(jpn-archaic):has(rt:lang(zh)),
+.horizontal ruby:lang(zh):has(rt:lang(ja)),
+.horizontal ruby:lang(zh):has(rt:lang(jpn-archaic)),
+.horizontal ruby:lang(zh):has(rt:lang(zh)),
+/* ruby:not(lang(ja)):not(lang(jpn-archaic)):not(lang(zh)):has(rt:not(lang(ja)):not(lang(jpn-archaic)):not(lang(zh))).horizontal, */
+ruby:lang(ja):has(rt:lang(ja)).horizontal,
+ruby:lang(ja):has(rt:lang(jpn-archaic)).horizontal,
+ruby:lang(ja):has(rt:lang(zh)).horizontal,
+ruby:lang(jpn-archaic):has(rt:lang(ja)).horizontal,
+ruby:lang(jpn-archaic):has(rt:lang(jpn-archaic)).horizontal,
+ruby:lang(jpn-archaic):has(rt:lang(zh)).horizontal,
+ruby:lang(zh):has(rt:lang(ja)).horizontal,
+ruby:lang(zh):has(rt:lang(jpn-archaic)).horizontal,
+ruby:lang(zh):has(rt:lang(zh)),.horizontal
+{
+  ruby-align: revert;
+  ruby-overhang: revert;
+}
+
+/* .horizontal ruby:not(:lang(ja, jpn-archaic, zh)):has(rt:not(:lang(ja, jpn-archaic, zh))), */
+.horizontal ruby:lang(ja, jpn-archaic, zh):has(rt:lang(ja, jpn-archaic, zh)),
+/* ruby:not(:lang(ja, jpn-archaic, zh)):has(rt:not(:lang(ja, jpn-archaic, zh))).horizontal, */
+ruby:lang(ja, jpn-archaic, zh):has(rt:lang(ja, jpn-archaic, zh)).horizontal {
+  /* TODO: 熟字訓のグループルビは中央寄せする。 */
+  /* TODO: 4文字以上のルビは下から順に上下に1文字づつ追い出す。 */
+  /* TODO: 行頭、行末ではルビを版面の外に出さない。 */
+  ruby-align: revert;
+  ruby-overhang: revert;
+}
+
 .horizontal em,
 em.horizontal {
   font-style: revert; /* italic */

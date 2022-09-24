@@ -59,6 +59,42 @@ p.vertical {
   width: revert;
 }
 
+/* TODO: 主要ブラウザーと css-has-pseudo が :lang(ja, zh) をサポートしたら、この行を削除する。 */
+/* .vertical ruby:not(lang(ja)):not(lang(jpn-archaic)):not(lang(zh)):has(rt:not(lang(ja)):not(lang(jpn-archaic)):not(lang(zh))), */
+.vertical ruby:lang(ja):has(rt:lang(ja)),
+.vertical ruby:lang(ja):has(rt:lang(jpn-archaic)),
+.vertical ruby:lang(ja):has(rt:lang(zh)),
+.vertical ruby:lang(jpn-archaic):has(rt:lang(ja)),
+.vertical ruby:lang(jpn-archaic):has(rt:lang(jpn-archaic)),
+.vertical ruby:lang(jpn-archaic):has(rt:lang(zh)),
+.vertical ruby:lang(zh):has(rt:lang(ja)),
+.vertical ruby:lang(zh):has(rt:lang(jpn-archaic)),
+.vertical ruby:lang(zh):has(rt:lang(zh)),
+/* ruby:not(lang(ja)):not(lang(jpn-archaic)):not(lang(zh)):has(rt:not(lang(ja)):not(lang(jpn-archaic)):not(lang(zh))).vertical, */
+ruby:lang(ja):has(rt:lang(ja)).vertical,
+ruby:lang(ja):has(rt:lang(jpn-archaic)).vertical,
+ruby:lang(ja):has(rt:lang(zh)).vertical,
+ruby:lang(jpn-archaic):has(rt:lang(ja)).vertical,
+ruby:lang(jpn-archaic):has(rt:lang(jpn-archaic)).vertical,
+ruby:lang(jpn-archaic):has(rt:lang(zh)).vertical,
+ruby:lang(zh):has(rt:lang(ja)).vertical,
+ruby:lang(zh):has(rt:lang(jpn-archaic)).vertical,
+ruby:lang(zh):has(rt:lang(zh)).vertical {
+  ruby-align: start;
+  ruby-overhang: auto;
+}
+
+/* .vertical ruby:not(:lang(ja, jpn-archaic, zh)):has(rt:not(:lang(ja, jpn-archaic, zh))), */
+.vertical ruby:lang(ja, jpn-archaic, zh):has(rt:lang(ja, jpn-archaic, zh)),
+/* ruby:not(:lang(ja, jpn-archaic, zh)):has(rt:not(:lang(ja, jpn-archaic, zh))).vertical, */
+ruby:lang(ja, jpn-archaic, zh):has(rt:lang(ja, jpn-archaic, zh)).vertical {
+  /* TODO: 熟字訓のグループルビは中央寄せする。 */
+  /* TODO: 4文字以上のルビは下から順に上下に1文字づつ追い出す。 */
+  /* TODO: 行頭、行末ではルビを版面の外に出さない。 */
+  ruby-align: start;
+  ruby-overhang: auto;
+}
+
 .vertical em,
 em.vertical {
   font-style: normal;
