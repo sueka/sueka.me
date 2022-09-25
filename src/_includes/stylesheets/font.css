@@ -52,3 +52,8 @@ code {
     font-family: var(--font-code);
   }
 }
+
+sup, sub {
+  font-size: 61.8034%;
+  font-weight: bold;
+}
