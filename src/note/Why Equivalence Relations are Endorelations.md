@@ -1,7 +1,7 @@
 ---
 title: なぜ同値関係は自己関係なのか
 date: 2022-09-07
-lastmod: 2022-09-23
+lastmod: 2022-09-25
 vertical: false
 templateEngine: njk, md
 ---
@@ -17,9 +17,7 @@ templateEngine: njk, md
 : 値の集合と演算の組を型と言ふ。例へば、ブール型は、{True, False} といふ値の集合と論理否定や論理和などの演算からなる。〈[2]{.upright}の補数表現された[32]{.tate-chu-yoko}ビット整数型〉みたいなものも型である。
 
 部分型
-: [<cite>Data Abstraction and Hierarchy</cite> (Liskov, 1988)]{lang=en} には、
-
-  <div class="blockquote-like">
+: <div class="blockquote-like">
 
     型 𝑆 のオブジェクト 𝑜<sub>1</sub> にそれぞれ、型 𝑇 によって定義された全てのプログラム 𝑃 について、𝑜<sub>1</sub> が型 𝑇 のオブジェクト 𝑜<sub>2</sub> の代はりに使はれても 𝑃 の動作が変はらないやうな 𝑜<sub>2</sub> が存在するなら、𝑆 は 𝑇 の部分型である。
 
@@ -33,7 +31,7 @@ templateEngine: njk, md
   </blockquote>
   +++
 
-  とある。
+  [<cite>Data Abstraction and Hierarchy</cite> (Liskov, 1988)]{lang=en} より。
 
 ---
 
