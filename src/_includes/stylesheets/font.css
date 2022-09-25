@@ -1,7 +1,6 @@
 :root, [lang]:where(:not([lang=""])) {
   --font-text: serif;
   --font-text-emphasized: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
-  --font-super-subscript: Georgia, serif;
   --font-code: Menlo, Consolas, monospace;
 }
 
@@ -52,9 +51,4 @@ code {
   ) & {
     font-family: var(--font-code);
   }
-}
-
-sup, sub {
-  font-family: var(--font-super-subscript);
-  font-variant-numeric: oldstyle-nums;
 }
