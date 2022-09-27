@@ -92,9 +92,7 @@ templateEngine: njk, md
 
 ``` java
 @Override public int hashCode() {
-  int result = value;
-  result = result % 2;
-  return result;
+  return value % 2;
 }
 ```
 
