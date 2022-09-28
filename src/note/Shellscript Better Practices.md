@@ -2,7 +2,7 @@
 title: シェルスクリプト・ベタープラクティス
 date: 2022-06-12
 lastmod: 2022-09-27
-vertical: false
+writing: horizontal
 ---
 
 自分用のメモ。

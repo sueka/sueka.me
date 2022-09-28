@@ -2,7 +2,7 @@
 title: なぜ同値関係は自己関係なのか
 date: 2022-09-07
 lastmod: 2022-09-26
-vertical: false
+writing: horizontal
 templateEngine: njk, md
 ---
 

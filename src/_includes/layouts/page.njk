@@ -8,7 +8,9 @@
   {% set incipit = content | safe | getIncipit -%}
 {% endif -%}
 
-{% set verticalOk = vertical or vertical == null and language === 'ja' -%}
+{% set verticalOk = vertical or vertical == null -%}
+
+{% set prefersVertical = verticalOk and (writing == 'vertical' or writing == null and language === 'ja') -%}
 
 <!DOCTYPE html>
 <html
@@ -25,18 +27,20 @@
     <link href="{{ '~/assets/stylesheets/main.css' | url(true) }}" rel="stylesheet" />
     <link href="{{ '~/assets/stylesheets/dark.css' | url(true) }}" rel="stylesheet" media="(prefers-color-scheme: dark)" />
 
-    {%- if verticalOk %}
+    {%- if prefersVertical %}
     <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" />
     {#- Keep using physical, not logical #}
     {#- ⌈(27 / 39) * (2 * 4.236068 + 39) * 13⌉; 2 * 8.923272/100 MinHeight(rem) + 27 rem ≤ MinHeight(rem) #}
     <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 428px)" id="linkToVerticalCss" />
-    {%- else %}
+    {%- else %} {#- Prefers horizontal #}
     {# <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" /> #}
     <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" />
     {%- endif %}
 
+    {%- if verticalOk %}
     <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet alternate" title="Horizontal Writing" />
     <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet alternate" title="Vertical Writing" />
+    {%- endif %}
 
     {#- NOTE: Script is loaded in _config.js #}
     <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/gradient-light.min.css" rel="stylesheet" media="(prefers-color-scheme: light)" />
