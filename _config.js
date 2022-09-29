@@ -1,28 +1,28 @@
-import { autoprefixer, postcssNesting } from 'lume/deps/postcss.ts'
-import lume from 'lume/mod.ts'
-import codeHighlight from 'lume/plugins/code_highlight.ts'
-import date from 'lume/plugins/date.ts'
-import postcss from 'lume/plugins/postcss.ts'
-import relativeUrls from 'lume/plugins/relative_urls.ts'
-import slugifyUrls from 'lume/plugins/slugify_urls.ts'
-import ja from 'https://deno.land/x/date_fns@v2.22.1/locale/ja/index.js'
-// import csso from 'https://esm.sh/postcss-csso'
-import postcssHasPseudo from 'https://jspm.dev/css-has-pseudo/postcss'
-import octicons from 'https://jspm.dev/@primer/octicons'
-import abbr from 'https://jspm.dev/markdown-it-abbr'
-import anchor from 'https://jspm.dev/markdown-it-anchor'
-import attrs from 'https://jspm.dev/markdown-it-attrs'
-import bracketedSpans from 'https://jspm.dev/markdown-it-bracketed-spans'
-import collapsible from 'https://jspm.dev/markdown-it-collapsible'
-import deflist from 'https://jspm.dev/markdown-it-deflist'
-import footnote from 'https://jspm.dev/markdown-it-footnote'
-import mark from 'https://jspm.dev/markdown-it-mark'
-import multimdTable from 'https://jspm.dev/markdown-it-multimd-table'
-import namedCodeBlocks from 'https://jspm.dev/markdown-it-named-code-blocks'
-import ruby from 'https://jspm.dev/markdown-it-ruby'
-import postcssCustomSelectors from 'https://jspm.dev/postcss-custom-selectors'
-import postcssExtendRule from 'https://jspm.dev/postcss-extend-rule'
-// import postcssPresetEnv from 'https://jspm.dev/postcss-preset-env'
+import {
+  autoprefixer, postcssNesting,
+  lume,
+  codeHighlight,
+  date,
+  postcss,
+  relativeUrls,
+  slugifyUrls,
+  ja,
+  postcssHasPseudo,
+  octicons,
+  abbr,
+  anchor,
+  attrs,
+  bracketedSpans,
+  collapsible,
+  deflist,
+  footnote,
+  mark,
+  multimdTable,
+  namedCodeBlocks,
+  ruby,
+  postcssCustomSelectors,
+  postcssExtendRule
+} from './deps.ts'
 
 import getIncipit from './lib/getIncipit.ts'
 
