@@ -244,3 +244,8 @@ cite :where(:lang(ja, jpn-archaic)) {
     font-feature-settings: "vpal";
   }
 }
+
+/* .katex-display {
+  overflow-y: auto;
+  overflow-x: clip;
+} */

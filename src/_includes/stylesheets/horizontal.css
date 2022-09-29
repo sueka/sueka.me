@@ -191,3 +191,8 @@ cite :where([lang]) {
     font-feature-settings: revert;
   }
 }
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: clip;
+}

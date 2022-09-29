@@ -53,7 +53,8 @@ p {
   hanging-punctuation: allow-end last;
   /* hanging-punctuation: force-end last; */
 
-  &:has(mark) {
+  &:has(mark),
+  &:has(.katex) {
     hanging-punctuation: revert;
   }
 }

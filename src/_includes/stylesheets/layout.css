@@ -424,3 +424,8 @@ code.hljs {
   line-height: 2.5;
   text-align: initial;
 }
+
+.katex-display {
+  overflow-inline: auto;
+  overflow-block: clip;
+}

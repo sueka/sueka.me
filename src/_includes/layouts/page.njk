@@ -8,7 +8,8 @@
   {% set incipit = content | safe | getIncipit -%}
 {% endif -%}
 
-{% set verticalOk = vertical or vertical == null -%}
+{# TODO: Remove `and not useKaTeX` -#}
+{% set verticalOk = (vertical or vertical == null) and not useKaTeX -%}
 
 {% set prefersVertical = verticalOk and (writing == 'vertical' or writing == null and language === 'ja') -%}
 
@@ -46,14 +47,20 @@
     <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/gradient-light.min.css" rel="stylesheet" media="(prefers-color-scheme: light)" />
     <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/gradient-dark.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)" />
 
+    {%- if useKaTeX %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous" />
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body, { throwOnError: true })"></script>
+    {%- endif %}
+
     <link href="{{ '~/feed.atom.njk' | url(true) }}" rel="alternate" type="application/atom+xml" title="{{ site.name }}" />
     <script defer src="https://unpkg.com/css-has-pseudo@1.0.0/browser"></script>
     <script defer src="{{ '~/assets/scripts/run-css-has-pseudo.js.njk' | url(true) }}"></script>
     <script src="{{ '~/assets/scripts/main.js.njk' | url(true) }}"></script>
 
-    {% if he %}
+    {%- if he %}
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+Hebrew|Noto+Sans+Hebrew" rel="stylesheet" />
-    {% endif %}
+    {%- endif %}
   </head>
   <body>
     <div class="book">
