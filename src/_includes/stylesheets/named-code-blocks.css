@@ -16,6 +16,6 @@
   background-color: var(--color-background-code);
   opacity: 0.9;
 
-  border-start-end-radius: 0.381966em; /* φ⁻² */
-  border-end-start-radius: 0.381966em; /* φ⁻² */
+  border-start-end-radius: 0.236068em; /* φ⁻² */
+  border-end-start-radius: 0.236068em; /* φ⁻² */
 }
