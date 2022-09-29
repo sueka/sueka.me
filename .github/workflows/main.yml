@@ -14,6 +14,12 @@ jobs:
       - uses: denoland/setup-deno@v1
         with:
           deno-version: ~1.24
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache/deno # Linux
+            ~/.deno # fallback
+          key: ${{ hashFiles('lock.json') }}
       - name: Build
         env:
           TZ: Asia/Tokyo
