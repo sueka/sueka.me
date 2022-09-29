@@ -16,9 +16,10 @@ jobs:
           deno-version: ~1.24
       - uses: actions/cache@v3
         with:
+          # See also https://deno.land/manual@v1.24.3/linking_to_external_code
           path: |
-            ~/.cache/deno # Linux
-            ~/.deno # fallback
+            ~/.cache/deno
+            ~/.deno
           key: ${{ hashFiles('lock.json') }}
       - name: Build
         env:
