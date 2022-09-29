@@ -1,7 +1,7 @@
 ---
 title: シェルスクリプト・ベタープラクティス
 date: 2022-06-12
-lastmod: 2022-09-27
+lastmod: 2022-09-29
 writing: horizontal
 ---
 
@@ -18,8 +18,6 @@ writing: horizontal
 
 シェルスクリプトは *UTF-8（BOM 無し）で保存する*。シェルはファイルの先頭の EF BB BF を BOM として解釈できず、そのまゝトークン化してしまふ。例へば、
 
-*[BOM]: Byte Order Mark
-
 ``` sh:okbom.sh
 () {
 	echo OK
@@ -28,9 +26,10 @@ writing: horizontal
 ﻿ # こゝに EF BB BF がある。
 ```
 
-を UTF-8（BOM 附き）で保存して Bash で[^1]実行すると、`OK` と印字される。
+を UTF-8（BOM 附き）で保存して Bash[^47] で実行する[^1]と、`OK` と印字される。
 
-[^1]: [Shebang]{lang=en} が無いので、現在のシェルで実行される。Bourne Shell では関数名は `[A-Z_a-z][0-9A-Z_a-z]*` (ERE) に従ふので、BOM は関数名にならない。
+[^47]: Bourne Shell では、関数名は `[A-Z_a-z][0-9A-Z_a-z]*` (ERE) に従ふので、BOM (EF BB BF) は関数名にならない。
+[^1]: `bash okbom.sh` を実行するか、実行可能にしてから Bash シェル上で `./okbom.sh` を実行する。
 
 ## 改行コード
 
