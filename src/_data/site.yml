@@ -1,6 +1,6 @@
 name: sueka.me
 language: ja
-url: https://sueka.me # TODO: Be used in _config.js
+url: https://sueka.me
 github_repo: sueka/sueka.me
 author:
   name: Sueka

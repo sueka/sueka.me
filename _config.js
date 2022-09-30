@@ -6,6 +6,7 @@ import {
   postcss,
   relativeUrls,
   slugifyUrls,
+  parse,
   ja,
   postcssHasPseudo,
   octicons,
@@ -26,9 +27,11 @@ import {
 
 import getIncipit from './lib/getIncipit.ts'
 
+const data = parse(await Deno.readTextFile('./src/_data/site.yml'))
+
 const site = lume({
   src: 'src',
-  location: new URL('https://sueka.me'), // TODO: Use {{ site.data.url }}
+  location: new URL(data.url),
   prettyUrls: false,
 }, {
   markdown: {
