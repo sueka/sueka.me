@@ -6,7 +6,7 @@
 
 ## Licenses
 
-The files below<sup>[1](#fn1)</sup> are licensed under [Creative Commons Attribution-ShareAlike 4.0 International](./LICENSE).
+Contents<sup>[1](#fn1)</sup> are licensed under [Creative Commons Attribution-ShareAlike 4.0 International](./LICENSE).
 
 The rest<sup>[2](#fn2)</sup> is released under [MIT No Attribution](./LICENSE.MIT-0).
 
