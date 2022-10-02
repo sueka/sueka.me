@@ -229,10 +229,10 @@ FreeBSD、Linux、Max OS X、Cygwin を含むほとんどの OS は引数が[1]{
 たゞし、*`env` を使って `$PATH` の `sh` を使はうとするのはやめた方が良い*。`env` の場所が変はることもあるし、別のプログラムによって `$PATH` が書き換へられてゐることもある[^12]。
 
 [^12]: 
-    `sh` が空ファイルに差し替へられると、[Shebang]{lang=en} に `env` を使ってゐるプログラムは動作しなくなる。次のスクリプトを実行すると、`sh is concealed.` と印字される。
+    `sh` が空ファイルに差し替へられると、[Shebang]{lang=en} に `env` を使ってゐるプログラムは動作しなくなる。次のスクリプトを実行すると、`sh is concealed.` と印字される:
 
     ``` sh:env-on-path.sh
-    #!/bin/sh
+    #!/bin/sh -eu
 
     tmpdir=$(mktemp -d)
 
