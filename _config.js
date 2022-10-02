@@ -102,7 +102,7 @@ const site = lume({
   page.data.src = `${ page.src.path }${ page.src.ext }`
 })
 
-// Remove the origin from an absolute URL; NOTE: Retains feed.xml and sitemap.xml
+// Remove the origin from an absolute URL; NOTE: Retains feed.xml
 site.process(['.html', '.js'], page => {
   page.content = page.content.replace(new RegExp(`(?<=")${ site.options.location.origin }(?=/)`, 'g'), '')
   // page.content = page.content.replace(new RegExp(`(?<=")${ site.options.location.origin }(?=")`, 'g'), '/')
