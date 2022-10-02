@@ -234,6 +234,8 @@ FreeBSD、Linux、Max OS X、Cygwin を含むほとんどの OS は引数が[1]{
     ``` sh:env-on-path.sh
     #!/bin/sh -eu
 
+    umask go-w
+
     tmpdir=$(mktemp -d)
 
     cat <<-EOD >"$tmpdir/demo.sh"
