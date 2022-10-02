@@ -229,35 +229,27 @@ FreeBSD、Linux、Max OS X、Cygwin を含むほとんどの OS は引数が[1]{
 たゞし、*`env` を使って `$PATH` の `sh` を使はうとするのはやめた方が良い*。`env` の場所が変はることもあるし、別のプログラムによって `$PATH` が書き換へられてゐることもある[^12]。
 
 [^12]: 
-    `sh` が空ファイルに差し替へられると、[Shebang]{lang=en} に `env` を使ってゐるプログラムは動作しなくなる。次のコマンド列を実行すると、`sh is concealed.` と印字される。
+    `sh` が空ファイルに差し替へられると、[Shebang]{lang=en} に `env` を使ってゐるプログラムは動作しなくなる。次のスクリプトを実行すると、`sh is concealed.` と印字される。
 
-    ``` sh
-    readonly WORKDIR=$PWD
+    ``` sh:env-on-path.sh
+    #!/bin/sh
 
-    cleanup() {
-    	rm "$WORKDIR/demo.sh"
-    	rm "$WORKDIR/sh"
-    }
+    tmpdir=$(mktemp -d)
 
-    trap cleanup EXIT
-
-    cat <<-EOD >"$WORKDIR/demo.sh"
+    cat <<-EOD >"$tmpdir/demo.sh"
     	#!/usr/bin/env sh
 
     	echo demo.sh executes successfully.
     EOD
 
-    echo echo sh is concealed. >"$WORKDIR/sh"
+    echo echo sh is concealed. >"$tmpdir/sh"
 
-    chmod +x "$WORKDIR/demo.sh"
-    chmod +x "$WORKDIR/sh"
+    chmod +x "$tmpdir/demo.sh"
+    chmod +x "$tmpdir/sh"
 
-    OLDPATH=$PATH
-    export PATH=$WORKDIR:$PATH
+    export PATH=$tmpdir:$PATH
 
-    ./demo.sh
-
-    export PATH=$OLDPATH
+    "$tmpdir/demo.sh"
     ```
 
     脆弱性のある `sh` がインストールされるとさらに悪いことが起こる。[Shebang]{lang=en} が `#!/bin/sh` なら、<i>/bin/sh</i> 自体が書き換へられない限り、このやうな攻撃に遭ふことはない。念のために附すと、`$PATH` が書き換へられてゐる時点で、サーバーにログインされたり、不審なプログラムを自ら実行したりしてゐるはずなので、`env` 自体が脆弱といふわけではない。
