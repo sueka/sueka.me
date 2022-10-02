@@ -1,7 +1,7 @@
 ---
 title: シェルスクリプト・ベタープラクティス
 date: 2022-06-12
-lastmod: 2022-09-29
+lastmod: 2022-10-02
 writing: horizontal
 ---
 
@@ -228,7 +228,39 @@ FreeBSD、Linux、Max OS X、Cygwin を含むほとんどの OS は引数が[1]{
 
 たゞし、*`env` を使って `$PATH` の `sh` を使はうとするのはやめた方が良い*。`env` の場所が変はることもあるし、別のプログラムによって `$PATH` が書き換へられてゐることもある[^12]。
 
-[^12]: 例へば、`sh` が空ファイルに差し替へられると、[Shebang]{lang=en} に `env` を使ってゐるプログラムは動作しなくなる。脆弱性のある `sh` がインストールされるとさらに悪いことが起こる。念のために附け加へると、`$PATH` が書き換へられたり、さういふ `sh` がインストールされたりしてゐる時点で、サーバーにログインされたり、不審なプログラムを自ら実行したりしてゐるはずなので、`env` 自体が脆弱といふわけではない。
+[^12]: 
+    `sh` が空ファイルに差し替へられると、[Shebang]{lang=en} に `env` を使ってゐるプログラムは動作しなくなる。次のコマンド列を実行すると、`sh is concealed.` と印字される。
+
+    ``` sh
+    readonly WORKDIR=$PWD
+
+    cleanup() {
+    	rm "$WORKDIR/demo.sh"
+    	rm "$WORKDIR/sh"
+    }
+
+    trap cleanup EXIT
+
+    cat <<-EOD >"$WORKDIR/demo.sh"
+    	#!/usr/bin/env sh
+
+    	echo demo.sh executes successfully.
+    EOD
+
+    echo echo sh is concealed. >"$WORKDIR/sh"
+
+    chmod +x "$WORKDIR/demo.sh"
+    chmod +x "$WORKDIR/sh"
+
+    OLDPATH=$PATH
+    export PATH=$WORKDIR:$PATH
+
+    ./demo.sh
+
+    export PATH=$OLDPATH
+    ```
+
+    脆弱性のある `sh` がインストールされるとさらに悪いことが起こる。[Shebang]{lang=en} が `#!/bin/sh` なら、<i>/bin/sh</i> 自体が書き換へられない限り、このやうな攻撃に遭ふことはない。念のために附すと、`$PATH` が書き換へられてゐる時点で、サーバーにログインされたり、不審なプログラムを自ら実行したりしてゐるはずなので、`env` 自体が脆弱といふわけではない。
 
 Bourne Shell 以外のシェルを使ひたいときはさうしてもよい。この文章では主に Bourne Shell について書き、時々 Bash に触れる。Bash を使ふ場合、[Shebang]{lang=en} は、
 
