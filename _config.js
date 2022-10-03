@@ -1,5 +1,5 @@
 import {
-  autoprefixer, postcssNesting,
+  autoprefixer,
   lume,
   codeHighlight,
   date,
@@ -22,7 +22,8 @@ import {
   namedCodeBlocks,
   ruby,
   postcssCustomSelectors,
-  postcssExtendRule
+  postcssExtendRule,
+  postcssPresetEnv
 } from './deps.ts'
 
 import getIncipit from './lib/getIncipit.ts'
@@ -72,15 +73,13 @@ const site = lume({
 .use(date({ locales: { ja } }))
 .use(postcss({
   plugins: [
-    // postcssPresetEnv({
-    //   features: {
-    //     'font-variant-property': false,
-    //     'logical-properties-and-values': false,
-    //     'nesting-rules': true,
-    //   },
-    // }),
+    postcssPresetEnv({
+      features: {
+        'font-variant-property': false,
+        'nesting-rules': true,
+      },
+    }),
     autoprefixer(),
-    postcssNesting(),
     postcssCustomSelectors(),
     postcssExtendRule(),
     postcssHasPseudo(),

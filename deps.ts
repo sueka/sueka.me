@@ -1,4 +1,4 @@
-export { autoprefixer, postcssNesting } from 'lume/deps/postcss.ts'
+export { autoprefixer } from 'lume/deps/postcss.ts'
 export { default as lume } from 'lume/mod.ts'
 export { default as codeHighlight } from 'lume/plugins/code_highlight.ts'
 export { default as date } from 'lume/plugins/date.ts'
@@ -23,4 +23,4 @@ export { default as namedCodeBlocks } from 'https://jspm.dev/markdown-it-named-c
 export { default as ruby } from 'https://jspm.dev/markdown-it-ruby'
 export { default as postcssCustomSelectors } from 'https://jspm.dev/postcss-custom-selectors'
 export { default as postcssExtendRule } from 'https://jspm.dev/postcss-extend-rule'
-// export { default as postcssPresetEnv } from 'https://jspm.dev/postcss-preset-env'
+export { default as postcssPresetEnv } from 'https://jspm.dev/postcss-preset-env'
