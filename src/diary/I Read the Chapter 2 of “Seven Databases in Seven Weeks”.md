@@ -238,7 +238,7 @@ CREATE EXTENSION cube;
   > ``` sql
   > SELECT show_trgm('Avatar');
   > ```
-  > 
+  >
   > ``` txt
   >               show_trgm              
   > -------------------------------------
@@ -271,7 +271,7 @@ CREATE EXTENSION cube;
   [^5]: [First Edition]{lang=en} 用のページは恐らくもう公開されてゐない。
 
   ``` sql
-  \i /path/to/code/postgres/movies_data.sql 
+  \i /path/to/code/postgres/movies_data.sql
   ```
 
   を発行すると、[Bitmap Heap Scan on movies]{lang=en} プランを表示するやうになった。恐らく Postgres がどこかのバージョンで、行数が少ないときは全表スキャンするやうになったのだらう[^6]。
