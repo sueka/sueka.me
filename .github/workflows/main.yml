@@ -16,10 +16,9 @@ jobs:
           deno-version: ~1.25
       - uses: actions/cache@v3
         with:
-          # See also https://deno.land/manual@v1.24.3/linking_to_external_code
-          path: |
-            ~/.cache/deno
-            ~/.deno
+          # See also https://deno.land/manual@v1.25.4/linking_to_external_code
+          path: ~/.cache/deno
+          # Run `deno cache --unstable --lock=lock.json --lock-write deps.ts` to keep lock.json up-to-date
           key: ${{ hashFiles('lock.json') }}
       - name: Build
         env:
