@@ -32,7 +32,7 @@
     <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" />
     {#- Keep using physical, not logical #}
     {#- ⌈(27 / 39) * (2 * 4.236068 + 39) * 13⌉; 2 * 8.923272/100 MinHeight(rem) + 27 rem ≤ MinHeight(rem) #}
-    <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 428px)" id="linkToVerticalCss" />
+    <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 428px)" class="linkToVerticalCss" />
     {%- else %} {#- Prefers horizontal #}
     {# <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" /> #}
     <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" />
@@ -46,6 +46,18 @@
     {#- NOTE: Script is loaded in _config.js #}
     <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/gradient-light.min.css" rel="stylesheet" media="(prefers-color-scheme: light)" />
     <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/gradient-dark.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)" />
+
+    {%- if prefersVertical %}
+    <link href="{{ '~/assets/stylesheets/gradient/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 428px)" class="linkToVerticalCss" />
+    <link href="{{ '~/assets/stylesheets/gradient/vertical-dark.css' | url(true) }}" rel="stylesheet" media="(min-height: 428px) and (prefers-color-scheme: dark)" class="linkToVerticalCss" />
+    {%- endif %}
+
+    {%- if verticalOk %}
+    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/gradient-light.min.css" rel="stylesheet alternate" media="(prefers-color-scheme: light)" title="Horizontal Writing" />
+    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/gradient-dark.min.css" rel="stylesheet alternate" media="(prefers-color-scheme: dark)" title="Horizontal Writing" />
+    <link href="{{ '~/assets/stylesheets/gradient/vertical.css' | url(true) }}" rel="stylesheet alternate" title="Vertical Writing" />
+    <link href="{{ '~/assets/stylesheets/gradient/vertical-dark.css' | url(true) }}" rel="stylesheet alternate" media="(prefers-color-scheme: dark)" title="Vertical Writing" />
+    {%- endif %}
 
     {#- Don't use lume/plugins/katex.ts now #}
     {%- if useKaTeX %}

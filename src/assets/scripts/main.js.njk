@@ -30,20 +30,22 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
 })
 
 ;(() => {
-  const link = document.querySelector('#linkToVerticalCss')
+  const links = document.querySelectorAll('.linkToVerticalCss')
 
   // Skip on horizontal-writing pages
-  if (link == null) {
+  if (links.length === 0) {
     return
   }
 
-  const observer = new MutationObserver((mutations) => {
-    for (const mutation of mutations) {
-      if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
-        link.disabled = mutation.target.lang !== 'ja'
+  for (const link of links) {
+    const observer = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
+          link.disabled = mutation.target.lang !== 'ja'
+        }
       }
-    }
-  })
+    })
 
-  observer.observe(document.documentElement, { attributes: true })
+    observer.observe(document.documentElement, { attributes: true })
+  }
 })()

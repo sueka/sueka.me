@@ -16,3 +16,6 @@ The rest[^2] is released under [MIT No Attribution](./LICENSE.MIT-0).
 ### Exception
 
 [Logo blue.svg](./src/assets/images/Logo%20blue.svg) is imported from https://about.twitter.com/en/who-we-are/brand-toolkit.  I myself do not offer any license to it.
+
+[gradient/vertical.css](./src/_includes/stylesheets/gradient/vertical.css) and 
+[gradient/vertical-dark.css](./src/_includes/stylesheets/gradient/vertical-dark.css) are derivative works.  The original works for them have been licensed under BSD-3-Clause, so redistributions of them must retain the copyright notice and [the license](./LICENSE.highlight.js).
