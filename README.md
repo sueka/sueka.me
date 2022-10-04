@@ -6,18 +6,12 @@
 
 ## Licenses
 
-Contents<sup>[1](#fn1)</sup> are licensed under [Creative Commons Attribution-ShareAlike 4.0 International](./LICENSE).
+Contents[^1] are licensed under [Creative Commons Attribution-ShareAlike 4.0 International](./LICENSE).
 
-The rest<sup>[2](#fn2)</sup> is released under [MIT No Attribution](./LICENSE.MIT-0).
+The rest[^2] is released under [MIT No Attribution](./LICENSE.MIT-0).
 
-<ol type="1">
-  <li id="fn1">
-    .md files (<code>git ls-files -- :*.md</code> prints them)
-  </li>
-  <li id="fn2">
-    You have a list of such files by running <code>git ls-files -- ':!*/Logo blue.svg' ':!:*.md'</code>.
-  </li>
-</ol>
+[^1]: .md files (`git ls-files -- :*.md` prints them)
+[^2]: You have a list of such files by running `git ls-files -- ':!*/Logo blue.svg' ':!:*.md'`.
 
 ### Exception
 
