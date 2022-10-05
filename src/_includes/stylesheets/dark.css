@@ -1,11 +1,11 @@
 :root {
-  --color-background: #222;
-  --color-text: #acacac;
-  /* --color-link: dodgerblue; */
-  --color-visited: #ba73dd;
-  --color-background-code: #343434dd;
+  --color-background: #101012;
+  --color-text: #9e9d9d;
+  --color-link: #0080ff;
+  --color-visited: #b05fd8;
+  --color-background-code: #282828dd;
   --color-mark: #00ffff40;
-  --color-indentation-guide-quotation: #b264ea;
+  --color-indentation-guide-quotation: #a850e7;
   --color-octicon: #959595;
 }
 
