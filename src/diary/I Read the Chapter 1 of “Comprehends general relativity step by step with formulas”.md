@@ -250,7 +250,7 @@ $$
 
 よって、\\( -\\frac{1}{c^2} \\) は定数なので、\\( -\\frac{1}{c^2} \\frac{\\partial^2}{\\partial t^2} \\left( f \\left( \\boldsymbol{y}, t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\right) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\right) \\) の \\( \\frac{\\partial^2}{\\partial u^2} f(\\boldsymbol{y}, u) \\) の項の係数は \\( -\\frac{1}{c^2} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\) となる。
 
-## 汎関数と変分法
+## 汎函数と変分法
 
 §17 では、汎函数、変分法および極値函数が導入され、オイラー・ラグランジュの方程式が導出される。
 
