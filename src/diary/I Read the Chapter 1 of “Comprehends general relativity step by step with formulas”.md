@@ -2,7 +2,7 @@
 title: 『一般相対性理論を一歩一歩数式で理解する』第1章を読んだ
 url: ./i-read-comprehends-general-relativity-1-math.html
 date: 2020-10-29
-lastmod: 2022-10-09
+lastmod: 2022-10-10
 useKaTeX: true
 ---
 
@@ -236,7 +236,10 @@ $$
 \\( \\frac{\\partial}{\\partial t} \\frac{\\partial}{\\partial u} f(\\boldsymbol{y}, u) \\) と \\( \\frac{\\partial}{\\partial u} \\frac{\\partial}{\\partial t} f(\\boldsymbol{y}, u) \\) が共に連続であると仮定する[^4]と、
 
 $$
-= \\frac{\\partial}{\\partial u} \\left( \\frac{\\partial}{\\partial u} f(\\boldsymbol{y}, u) \\frac{\\partial}{\\partial t} u(t) \\right) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\\\
+\\begin{aligned}
+& = \\frac{\\partial}{\\partial u} \\frac{\\partial}{\\partial t} f(\\boldsymbol{y}, u) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\\\
+& = \\frac{\\partial}{\\partial u} \\left( \\frac{\\partial}{\\partial u} f(\\boldsymbol{y}, u) \\frac{\\partial}{\\partial t} u(t) \\right) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\\\
+\\end{aligned}
 $$
 
 \\( \\frac{\\partial}{\\partial t} u(t) = 1 \\) なので、
