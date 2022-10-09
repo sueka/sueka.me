@@ -429,3 +429,10 @@ code.hljs {
   overflow-inline: auto;
   overflow-block: clip;
 }
+
+.katex * {
+  font-style: revert;
+  font-weight: revert;
+  font-size: revert;
+  font-family: revert;
+}
