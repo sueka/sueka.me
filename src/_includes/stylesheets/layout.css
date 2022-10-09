@@ -426,6 +426,7 @@ code.hljs {
 }
 
 .katex-display {
+  padding-block: 2px;
   overflow-inline: auto;
   overflow-block: clip;
 }
