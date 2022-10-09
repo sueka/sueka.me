@@ -57,6 +57,10 @@ p {
   &:has(.katex) {
     hanging-punctuation: revert;
   }
+
+  &:has(.katex) {
+    text-align: start;
+  }
 }
 
 
