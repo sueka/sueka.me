@@ -216,9 +216,7 @@ $$
 \\( \\frac{\\partial}{\\partial t} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} = 0 \\) なので、
 
 $$
-\\begin{aligned}
-= \\frac{\\partial^2}{\\partial t^2} f(\\boldsymbol{y}, u) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\\\
-\\end{aligned}
+= \\frac{\\partial^2}{\\partial t^2} f(\\boldsymbol{y}, u) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|}
 $$
 
 \\( \\frac{d^2}{d x^2} f(g(x)) = \\frac{d}{dx} \\frac{d}{dx} f(g(x)) = \\frac{d}{dx} \\left( \\frac{d}{dg} f(g(x)) \\frac{d}{dx} g(x) \\right) = \\frac{d}{dx} \\frac{d}{dg} f(g(x)) \\frac{d}{dx} g(x) + \\frac{d}{dg} f(g(x)) \\frac{d^2}{d x^2} g(x) \\) より、
