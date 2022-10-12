@@ -357,6 +357,10 @@ dd {
   text-align: justify;
 }
 
+small:has(> p) {
+  display: block;
+}
+
 pre {
   line-height: 1.618034; /* φ */
 }
