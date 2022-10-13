@@ -17,19 +17,9 @@ useKaTeX: true
 
 </small>
 
-- \\( a \\times a = 0 \\) は、反交換法則[^1]から直接導ける:
+- p.20 では<u>交換法則</u>として \\( a \\times b = -(b \\times a) \\) が導入されてゐるが、これは<i>反交換法則</i>だと思ふ。
 
-  $$
-  \\begin{aligned}
-  \\phantom{\\iff}    & a \\times a = -(a \\times a) \\\\
-            \\iff     & 2 (a \\times a) = 0 \\\\
-            \\implies & a \\times a = 0 \\\\
-  \\end{aligned}
-  $$
-
-  [^1]: テキストでは<q><i>交換法則</i></q>として導入されてゐる。
-
-- 積の微分法則が内積に拡張できることを示す。\\( \\boldsymbol{a}(t) = \\begin{pmatrix} x(t) \\\\ y(t) \\\\ z(t) \\end{pmatrix} \\)、\\( \\boldsymbol{b}(t) = \\begin{pmatrix} \\alpha(t) \\\\ \\beta(t) \\\\ \\gamma(t) \\end{pmatrix} \\) とする。このとき、
+- pp.26–27 に関聯して、積の微分法則が内積に拡張できることを示す。\\( \\boldsymbol{a}(t) = \\begin{pmatrix} x(t) \\\\ y(t) \\\\ z(t) \\end{pmatrix} \\)、\\( \\boldsymbol{b}(t) = \\begin{pmatrix} \\alpha(t) \\\\ \\beta(t) \\\\ \\gamma(t) \\end{pmatrix} \\) とする。このとき、
 
   $$
   \\begin{aligned}
@@ -42,15 +32,11 @@ useKaTeX: true
   \\end{aligned}
   $$
 
-- <small>
-
-    p.35 では、函数の微分可能性について、<q>この本では，関数が何回でも微分可能なものしか扱いません</q>と言及されてゐる。
-
-  </small>
+- p.35 では、函数の微分可能性について、<q>この本では，関数が何回でも微分可能なものしか扱いません</q>と言及されてゐる。
 
 - p.39 の (2) 左図の \\( (a, b) \\) は、直線 \\( l \\) 上で \\( t = 0 \\) の点を指してゐる。
 
-- p.40 の数式は、\\( \\nabla f \\left( = \\begin{pmatrix} \\frac{\\partial f}{\\partial x} \\\\[1ex] \\frac{\\partial f}{\\partial y} \\end{pmatrix} \\right) \\) と \\( \\begin{pmatrix} \\cos \\theta \\\\ \\sin \\theta \\end{pmatrix} \\) の内積であることを確認しながら読むと読みやすくなる:
+- p.40 の数式は \\( \\nabla f \\left( = \\begin{pmatrix} \\frac{\\partial f}{\\partial x} \\\\[1ex] \\frac{\\partial f}{\\partial y} \\end{pmatrix} \\right) \\) と \\( \\begin{pmatrix} \\cos \\theta \\\\ \\sin \\theta \\end{pmatrix} \\) の内積であることを確認しながら読むと読みやすくなる:
 
   $$
   \\begin{aligned}
@@ -66,12 +52,6 @@ useKaTeX: true
 
 - p.68 では<i>弧度法の定義（単位円の円周）</i>を使ふ。たまに度忘れするので注意したい。
 
-- <small>
-
-    p.82 以降、いくつかの \\( d \\boldsymbol{S} \\) が \\( dS \\) と書かれてゐる。
-
-  </small>
-
 - p.88 で \\( C_1 \\)、\\( C_2 \\)、\\( C_3 \\) に使はれてゐる \\( x \\)、\\( y \\) はパラメーター。
 
 - p.89 の \\( \\int_a^0 A_x \\left( x, b \\left( 1 - \\frac{x}{a} \\right) , 0 \\right) dx + \\int_0^b A_y \\left( a \\left( 1 - \\frac{y}{b} \\right) , y, 0 \\right) dy \\) は pp.72–73 で導入された \\( \\int_C \\boldsymbol{F} \\cdot d \\boldsymbol{r} = \\int_{x(a)}^{x(b)} F_x(x, y) dx + \\int_{y(a)}^{y(b)} F_y(x, y) dy \\) の適用例。
@@ -80,7 +60,7 @@ useKaTeX: true
 
   [^3]: これを書いてゐるときは「一貫性があれば十分」と思ってゐる。
 
-- \\( \\nabla \\cdot \\frac{\\boldsymbol{x} - \\boldsymbol{a}}{\|\\boldsymbol{x} - \\boldsymbol{a}\|^n} = 0 \\) となる \\( n \\) が \\( 3 \\) 以外にあるかを確認する。左辺の \\( \\nabla \\) を展開すると、
+- p.98 に関聯して、\\( \\nabla \\cdot \\frac{\\boldsymbol{x} - \\boldsymbol{a}}{\|\\boldsymbol{x} - \\boldsymbol{a}\|^n} = 0 \\) となる \\( n \\) が \\( 3 \\) 以外にあるかを確認する。左辺の \\( \\nabla \\) を展開すると、
 
   $$
   \\begin{aligned}
@@ -110,13 +90,8 @@ useKaTeX: true
   \\end{aligned}
   $$
 
-- §15 では、1次元の波動方程式の一般解と、3次元の波動方程式の解の一つが示されてゐる。
-
-  <small>
-
-    テキストには <q>1次</q>、<q>3次</q> と書かれてゐるけれど、これは次数ではない気がする。
-
-  </small>
+- p.99 では \\( \\left( \\frac{\\partial^2}{\\partial x^2} - \\frac{1}{c^2} \\frac{\\partial^2}{\\partial t^2} \\right) \\varphi(x, t) = 0 \\) が<q>波動方程式（1次）</q>として導入されるが、これは次数ではない気がする。
+  - p.102 の<q>波動方程式（3次）</q>も同じ。
 
 - p.107 に<q>\\( \\Delta \\left( \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|^{1 - \\alpha}} \\right) \\) の符号が負</q>とあるが、これが負となるには、p.105 で \\( \\alpha \\) を定義するときに \\( 0 < \\alpha < 1 \\) としておく必要がある。\\( \\alpha \\to +0 \\) に飛ばすのはこれより後。
 
