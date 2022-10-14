@@ -5,11 +5,11 @@ templateEngine:
   - njk
   - md
 date: 2020-10-29
-lastmod: 2022-10-13
+lastmod: 2022-10-14
 useKaTeX: true
 ---
 
-[『一般相対性理論を一歩一歩数式で理解する』](https://www.beret.co.jp/books/detail/638) 第1章（数学の準備）を読んだ。
+[『一般相対性理論を一歩一歩数式で理解する』](https://www.beret.co.jp/books/detail/638)第1章（数学の準備）を読んだ。
 
 <small>
 
@@ -19,7 +19,7 @@ useKaTeX: true
 
 - p.20 では<u>交換法則</u>として \\( a \\times b = -(b \\times a) \\) が導入されてゐるが、これは<i>反交換法則</i>だと思ふ。
 
-- pp.26–27 に関聯して、積の微分法則が内積に拡張できることを示す。\\( \\boldsymbol{a}(t) = \\begin{pmatrix} x(t) \\\\ y(t) \\\\ z(t) \\end{pmatrix} \\)、\\( \\boldsymbol{b}(t) = \\begin{pmatrix} \\alpha(t) \\\\ \\beta(t) \\\\ \\gamma(t) \\end{pmatrix} \\) とする。このとき、
+- pp.26–27 に{関聯|くゎん|れん}して、積の微分法則が内積に拡張できることを示す。\\( \\boldsymbol{a}(t) = \\begin{pmatrix} x(t) \\\\ y(t) \\\\ z(t) \\end{pmatrix} \\)、\\( \\boldsymbol{b}(t) = \\begin{pmatrix} \\alpha(t) \\\\ \\beta(t) \\\\ \\gamma(t) \\end{pmatrix} \\) とする。このとき、
 
   $$
   \\begin{aligned}
@@ -90,8 +90,7 @@ useKaTeX: true
   \\end{aligned}
   $$
 
-- p.99 では \\( \\left( \\frac{\\partial^2}{\\partial x^2} - \\frac{1}{c^2} \\frac{\\partial^2}{\\partial t^2} \\right) \\varphi(x, t) = 0 \\) が<q>波動方程式（1次）</q>として導入されるが、これは次数ではない気がする。
-  - p.102 の<q>波動方程式（3次）</q>も同じ。
+- p.99 では \\( \\left( \\frac{\\partial^2}{\\partial x^2} - \\frac{1}{c^2} \\frac{\\partial^2}{\\partial t^2} \\right) \\varphi(x, t) = 0 \\) が<q>波動方程式（1次）</q>として導入されるが、これは次数ではない気がする。p.102 の<q>波動方程式（3次）</q>も同じ。
 
 - p.107 に<q>\\( \\Delta \\left( \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|^{1 - \\alpha}} \\right) \\) の符号が負</q>とあるが、これが負となるには、p.105 で \\( \\alpha \\) を定義するときに \\( 0 < \\alpha < 1 \\) としておく必要がある。\\( \\alpha \\to +0 \\) に飛ばすのはこれより後。
 
