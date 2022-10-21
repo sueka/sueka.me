@@ -143,7 +143,7 @@ templateEngine: njk, md
 
 とある。（[マーク]{.mark-like}は引用者による。）
 
-よって、インスタンス化可能なクラスを拡張して、同値関係にとって<em><ruby>意味のある<rt lang="en">significant</ruby></em>フィールドを追加することはできない。『Effective Java 第[3]{.upright}版』p.46 にも次のやうにある（[マーク]{.mark-like}は引用者による。）:
+したがって、インスタンス化可能なクラスを拡張して、同値関係にとって<em><ruby>意味のある<rt lang="en">significant</ruby></em>フィールドを追加することはできない。『Effective Java 第[3]{.upright}版』p.46 にも次のやうにある（[マーク]{.mark-like}は引用者による。）:
 
 > ==インスタンス化可能なクラスを拡張して値要素を追加するための、満足できる方法はありません==が、素晴らしい回避策があります。項目[18]{.tate-chu-yoko}「継承よりもコンポジションを選ぶ」の助言に従うことです。`ColorPoint` に `Point` を拡張させる代わりに、`ColorPoint` に [private]{lang=en} の `Point` フィールドを持たせて、そのカラーポイントと同じ位置のポイントを返す [public]{lang=en} の*ビュー* [(*view*)]{lang=en} メソッド（項目[6]{.upright}）を持たせてください。
 
