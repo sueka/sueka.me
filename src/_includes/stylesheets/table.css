@@ -1,14 +1,21 @@
 table {
   table-layout: auto;
   border-collapse: collapse;
+  border-block: 2px solid var(--color-border);
 
   font-size: calc(39 / 44 * 100%);
   margin-inline: auto;
 }
 
+thead > tr:last-of-type,
+table:not(:has(thead)) > tr:first-of-type {
+  border-block-end: 1px solid var(--color-border);
+}
+
 th, td {
-  border: 1px solid var(--color-border);
-  padding-inline: 0.5em; /* NOTE: ブロック方向には line-height による half-leading がある。 leading-trim が一般的になったら `leading-trim: both; padding: 0.5em` で置き換えたい。 */
+  /* NOTE: ブロック方向には line-height による half-leading がある。 leading-trim が一般的になったら `leading-trim: both; padding: 1em` で置き換える。 */
+  padding-block: 0.5em;
+  padding-inline: 1em;
 }
 
 th {
