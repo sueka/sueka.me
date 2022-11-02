@@ -365,6 +365,13 @@ pre {
   line-height: 1.618034; /* φ */
 }
 
+@media print {
+  pre {
+    white-space: pre-wrap;
+    white-space: break-spaces;
+  }
+}
+
 code {
   text-orientation: sideways;
 }
