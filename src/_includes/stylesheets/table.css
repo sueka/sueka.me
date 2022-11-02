@@ -1,10 +1,11 @@
 table {
   table-layout: auto;
   border-collapse: collapse;
-  border-block: 2px solid var(--color-border);
 
   font-size: calc(39 / 44 * 100%);
+  overflow-wrap: revert;
   margin-inline: auto;
+  border-block: 2px solid var(--color-border);
 }
 
 thead > tr:last-of-type,
@@ -20,4 +21,5 @@ th, td {
 
 th {
   font-weight: unset;
+  word-break: keep-all;
 }
