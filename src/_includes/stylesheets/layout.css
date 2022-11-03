@@ -262,7 +262,9 @@ aside {
 }
 
 /* TODO: Merge those rulesets if the bugs of css-has-pseudo are fixed: */
-:--list, table {
+:--list,
+.table-wrapper,
+:not(.table-wrapper) > table {
   margin-block-start: 1em;
   margin-block-end: 1.618034em; /* φ */
 }

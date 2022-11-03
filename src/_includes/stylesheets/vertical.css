@@ -91,6 +91,11 @@ ol:where(:not(:lang(ja, jpn-archaic))):has(li:nth-of-type(100)) {
   padding-inline-start: 3em;
 }
 
+.table-wrapper {
+  overflow-y: auto;
+  overflow-inline: auto;
+}
+
 :not(pre) > code {
   @media (max-height: 427.25px) {
     word-break: break-all;

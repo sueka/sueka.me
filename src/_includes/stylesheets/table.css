@@ -1,3 +1,7 @@
+.table-wrapper {
+  word-break: keep-all;
+}
+
 table {
   table-layout: auto;
   border-collapse: collapse;
