@@ -172,6 +172,8 @@ small {
 }
 
 sup, sub {
+  font-weight: 500;
+  font-size: 61.8034%;
   line-height: 1;
 }
 
