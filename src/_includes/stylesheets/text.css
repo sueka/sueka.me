@@ -96,15 +96,17 @@ ruby {
 }
 
 ruby rt {
-  text-transform: none;
-}
-
-ruby rt:where(:not(:lang(ja)):not(:lang(jpn-archaic))) {
+  font-variant-caps: small-caps;
   text-align: center;
 }
 
-ruby rt:where(:not(:lang(ja, jpn-archaic))) {
-  text-align: center;
+ruby rt:lang(ja),
+ruby rt:lang(jpn-archaic) {
+  text-align: revert;
+}
+
+ruby rt:lang(ja, jpn-archaic) {
+  text-align: revert;
 }
 
 .kaeriten {
