@@ -129,7 +129,7 @@ CREATE EXTENSION cube;
 
   と出力された。あとは<i>学校のルール？</i>から続行した。
 - <i>宿題</i>の<i>やってみよう[3]{.upright}</i>はかなり難しかった。次のやうにして解いた:
-  1.  ピボットテーブルは値を集約することはできるが、値の無い箇所を埋めることはできない。よって、目標の月に含まれる日の一覧が必要だ。これは
+  1.  ピボットテーブルは値を集約することはできるが、値の無い箇所を埋めることはできない。よって、目標の月に含まれる日の一覧が必要となる。これは、
 
       ``` sql
       SELECT * FROM generate_series(
@@ -186,7 +186,7 @@ CREATE EXTENSION cube;
       ⋮
       ```
 
-      週が変はるところと曜日が[0]{.upright}に戻るところとが異なるやうに見えるが、これは、`extract` の `week` は ISO 週（月曜日で始まる。）を返し、`dow` は日曜始まりの値を返すからである。[9.9. Date/Time Functions and Operators](https://www.postgresql.org/docs/14/functions-datetime.html){lang=en} も参照。
+      週が変はるところと曜日が[0]{.upright}に戻るところとが異なってゐるが、これは、`extract` の `week` は ISO 週（月曜日で始まる。）を返し、`dow` は日曜始まりの値を返すからである。[9.9. Date/Time Functions and Operators](https://www.postgresql.org/docs/14/functions-datetime.html){lang=en} も参照。
   5.  よって、日曜始まりのカレンダーを作るには、`week` を補正する必要がある。`dow` が[0]{.upright}なら `week` を[1]{.upright}だけ増やす。
 
       ``` sql
