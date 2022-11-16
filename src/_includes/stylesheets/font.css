@@ -56,3 +56,8 @@ code {
 sup, sub {
   font-family: var(--font-text-emphasized);
 }
+
+.ipa {
+  /* lang にかかわらず同じ */
+  font-family: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
+}

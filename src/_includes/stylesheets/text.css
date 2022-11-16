@@ -183,6 +183,17 @@ sup, sub {
   text-combine: lines; /* NOTE: 主要ブラウザーでの実装無し */
 }
 
+.ipa {
+  font-variant-ligatures: none;
+
+  /* Reset <b> as some decoration seems like an IPA symbol. */
+  & b {
+    font-weight: revert;
+    text-decoration: revert; /* horizontal */
+    text-emphasis: revert; /* vertical */
+  }
+}
+
 .sans-serif {
   all: unset;
   font-family: var(--font-text-emphasized);
