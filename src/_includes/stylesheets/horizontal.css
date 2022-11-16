@@ -62,6 +62,14 @@ ol:has(li:nth-of-type(100)) {
 .table-wrapper {
   overflow-x: auto;
   overflow-inline: auto;
+
+  @media (max-width: 427.25px) {
+    word-break: keep-all;
+  }
+
+  @media (width < 428px) { /* Same as in page.njk */
+    word-break: keep-all;
+  }
 }
 
 :not(pre) > code {

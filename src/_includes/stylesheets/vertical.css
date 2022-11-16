@@ -94,6 +94,14 @@ ol:where(:not(:lang(ja, jpn-archaic))):has(li:nth-of-type(100)) {
 .table-wrapper {
   overflow-y: auto;
   overflow-inline: auto;
+
+  @media (max-height: 427.25px) {
+    word-break: keep-all;
+  }
+
+  @media (height < 428px) { /* Same as in page.njk */
+    word-break: keep-all;
+  }
 }
 
 :not(pre) > code {

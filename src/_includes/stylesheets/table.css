@@ -1,7 +1,3 @@
-.table-wrapper {
-  word-break: keep-all;
-}
-
 table {
   table-layout: auto;
   border-collapse: collapse;
@@ -24,5 +20,6 @@ th, td {
 }
 
 th {
+  word-break: keep-all;
   font-weight: unset;
 }
