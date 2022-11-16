@@ -38,6 +38,8 @@ p.horizontal {
   }
   overflow-y: auto;
   overflow-inline: auto;
+
+  hanging-punctuation: none; /* 左右に余白が無いため、句読点をぶら下げると水平スクロールが発生する。 */
 }
 
 /* TODO: blockquote > p 以外の構造でもうまく動くようにする? */

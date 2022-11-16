@@ -22,6 +22,7 @@ p.vertical {
   max-height: revert;
   overflow-x: revert;
   overflow-inline: revert;
+  hanging-punctuation: revert;
 }
 
 :--blockquote.vertical {
