@@ -11,6 +11,10 @@
   line-height: calc(1 + 2 * 0.236068); /* φ⁻³; Hatching height same as layout.css; NOTE: Line that consists only code is thinner. */
 }
 
+:is(span, i):lang(iu) {
+  @extend .sideways;
+}
+
 /* ../text.css */
 a:lang(ja),
 a:lang(jpn-archaic) {

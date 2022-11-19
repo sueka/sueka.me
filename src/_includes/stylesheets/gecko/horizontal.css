@@ -2,6 +2,7 @@
 
 @custom-selector :--blockquote blockquote, .blockquote-like;
 
+.sideways,
 /* code:root, */
 :not(pre) > code,
 .horizontal :not(pre) > code,
@@ -10,6 +11,10 @@
   display: revert;
   padding-block: 0.236068em; /* φ⁻³ */
   line-height: revert;
+}
+
+:is(span, i):lang(iu) {
+  @extend .sideways;
 }
 
 /* from ../text.css */

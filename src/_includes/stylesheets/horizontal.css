@@ -160,6 +160,10 @@ cite :where([lang]) {
   text-orientation: revert;
 }
 
+:is(span, i):lang(iu) {
+  @extend .sideways;
+}
+
 .upright {
   font-feature-settings: revert;
   text-orientation: revert;

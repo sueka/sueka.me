@@ -212,6 +212,11 @@ cite :where(:lang(ja, jpn-archaic)) {
   text-orientation: sideways;
 }
 
+/* 主要ブラウザー (Firefox 106, Safari 16.1, Chrome 107) で、カナダ先住民文字が直立してしまう。 */
+:is(span, i):lang(iu) {
+  @extend .sideways;
+}
+
 /* See also: JIS X 4051:2004 4.7 b 備考 */
 .upright {
   font-feature-settings: "vkrn", "vkna", "fwid";
