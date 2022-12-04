@@ -21,4 +21,5 @@ th, td {
 
 th {
   font-weight: unset;
+  word-break: keep-all;
 }
