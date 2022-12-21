@@ -8,10 +8,13 @@
 
 Contents[^1] are licensed under [Creative Commons Attribution-ShareAlike 4.0 International](./LICENSE).
 
-The rest[^2] is released under [MIT No Attribution](./LICENSE.MIT-0).
+Translations of Wikipedia articles[^2] are also available under [Creative Commons Attribution-ShareAlike 3.0 Unported](./LICENSE.CC-BY-SA-3.0).
+
+The rest[^3] is released under [MIT No Attribution](./LICENSE.MIT-0).
 
 [^1]: .md files (`git ls-files -- :*.md` prints them)
-[^2]: You have a list of such files by running `git ls-files -- ':!*/Logo blue.svg' ':!:*.md'`.
+[^2]: .md files in transl/*.wikipedia.org (`git ls-files -- ://src/transl/*.wikipedia.org/*.md` does)
+[^3]: You have a list of such files by running `git ls-files -- ':!*/Logo blue.svg' ':!:*.md'`.
 
 ### Exception
 

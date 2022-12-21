@@ -120,9 +120,27 @@ ruby rt:lang(ja, jpn-archaic) {
   text-justify: inter-word;
 }
 
+.shiroten {
+  color: transparent;
+  -webkit-text-stroke: calc(1em / 26) var(--color-text);
+  /* TODO: 書体によっても適切な太さが変わる。 */
+}
+
 /* NOTE: <q> の lang ではなく、一つ上の要素の lang によって、引用符を変更する。 */
 :lang(ja) > q {
   quotes: "「" "」" "『" "』";
+}
+
+:lang(ja) > .q-like {
+  @extend :lang(ja) > q;
+
+  &::before {
+    content: open-quote;
+  }
+
+  &::after {
+    content: close-quote;
+  }
 }
 
 mark {

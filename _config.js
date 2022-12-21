@@ -41,7 +41,6 @@ const site = lume({
       [
         anchor,
         {
-          level: 2,
           tabIndex: false,
           permalink: anchor.permalink.linkInsideHeader({
             symbol: '&para;',
@@ -60,6 +59,7 @@ const site = lume({
         multimdTable,
         {
           multiline: true,
+          headerless: true,
         },
       ],
       namedCodeBlocks,
