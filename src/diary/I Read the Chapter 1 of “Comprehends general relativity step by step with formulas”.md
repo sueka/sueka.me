@@ -19,7 +19,9 @@ useKaTeX: true
 
 - p.20 では<u>交換法則</u>として \\( a \\times b = -(b \\times a) \\) が導入されてゐるが、これは<i>反交換法則</i>だと思ふ。
 
-- pp.26–27 に{関聯|くゎん|れん}して、積の微分法則が内積に拡張できることを示す。\\( \\boldsymbol{a}(t) = \\begin{pmatrix} x(t) \\\\ y(t) \\\\ z(t) \\end{pmatrix} \\)、\\( \\boldsymbol{b}(t) = \\begin{pmatrix} \\alpha(t) \\\\ \\beta(t) \\\\ \\gamma(t) \\end{pmatrix} \\) とする。このとき、
+- pp.26–27 に{関聯|くゎん|れん}して、積の微分法則が内積に拡張できることを示す:
+
+  \\( \\boldsymbol{a}(t) = \\begin{pmatrix} x(t) \\\\ y(t) \\\\ z(t) \\end{pmatrix} \\)、\\( \\boldsymbol{b}(t) = \\begin{pmatrix} \\alpha(t) \\\\ \\beta(t) \\\\ \\gamma(t) \\end{pmatrix} \\) とする。このとき、
 
   $$
   \\begin{aligned}
@@ -60,7 +62,9 @@ useKaTeX: true
 
   [^3]: これを書いてゐるときは「一貫性があれば十分」と思ってゐる。
 
-- p.98 に関聯して、\\( \\nabla \\cdot \\frac{\\boldsymbol{x} - \\boldsymbol{a}}{\|\\boldsymbol{x} - \\boldsymbol{a}\|^n} = 0 \\) となる \\( n \\) が \\( 3 \\) 以外にあるかを確認する。左辺の \\( \\nabla \\) を展開すると、
+- p.98 に関聯して、\\( \\nabla \\cdot \\frac{\\boldsymbol{x} - \\boldsymbol{a}}{\|\\boldsymbol{x} - \\boldsymbol{a}\|^n} = 0 \\) となる \\( n \\) が \\( 3 \\) 以外にあるかを確認する:
+
+  左辺の \\( \\nabla \\) を展開すると、
 
   $$
   \\begin{aligned}
@@ -92,13 +96,15 @@ useKaTeX: true
 
 - p.99 では \\( \\left( \\frac{\\partial^2}{\\partial x^2} - \\frac{1}{c^2} \\frac{\\partial^2}{\\partial t^2} \\right) \\varphi(x, t) = 0 \\) が<q>波動方程式（1次）</q>として導入されるが、これは次数ではない気がする。p.102 の<q>波動方程式（3次）</q>も同じ。
 
-- p.107 に<q>\\( \\Delta \\left( \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|^{1 - \\alpha}} \\right) \\) の符号が負</q>とあるが、これが負となるには、p.105 で \\( \\alpha \\) を定義するときに \\( 0 < \\alpha < 1 \\) としておく必要がある。\\( \\alpha \\to +0 \\) に飛ばすのはこれより後。
+- p.107 に<q>\\( \\Delta \\left( \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|^{1 - \\alpha}} \\right) \\) の符号が負</q>とあるが、これが負となるには、p.105 で \\( \\alpha \\) を定義するときに \\( 0 < \\alpha < 1 \\) としておく必要がある。\\( \\alpha \\to +0 \\) に飛ばすのはこれより後である。
 
 - p.110 の<q>(1.21) より</q>とある変形では、偏微分の順序が入れ替へられてゐる[^4]。
 
   [^4]: 中扉には<q>微分と積分の順序も，2変数関数の偏微分の順序も常に交換可能とします</q>とある。
 
-- p.111 の \\( \\frac{\\partial^2}{\\partial u^2} f(\\boldsymbol{y}, u) \\) の項の係数に \\( -\\frac{1}{c^2} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\) といふ項があるが、\\( \\frac{\\partial^2}{\\partial t^2} \\left( f \\left( \\boldsymbol{y}, t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\right) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\right) \\) はテキストでは計算されてゐないので、確認しておく。\\( u(t) = t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\) とおく。\\( (f g)'' = ((f g)')' = (f' g + f g')' = f'' g + 2 f' g' + f g'' \\) より、
+- p.111 の \\( \\frac{\\partial^2}{\\partial u^2} f(\\boldsymbol{y}, u) \\) の項の係数に \\( -\\frac{1}{c^2} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\) といふ項があるが、\\( \\frac{\\partial^2}{\\partial t^2} \\left( f \\left( \\boldsymbol{y}, t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\right) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\right) \\) はテキストでは計算されてゐないので、確認しておく:
+
+  \\( u(t) = t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\) とおく。\\( (f g)'' = ((f g)')' = (f' g + f g')' = f'' g + 2 f' g' + f g'' \\) より、
 
   $$
   \\begin{aligned}

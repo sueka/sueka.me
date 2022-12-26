@@ -4,7 +4,7 @@ templateEngine:
   - njk
   - md
 date: 2022-06-12
-lastmod: 2022-10-03
+lastmod: 2022-12-27
 writing: horizontal
 ---
 
@@ -61,7 +61,48 @@ writing: horizontal
 
 *TAB (`	`; U+0009) と空白 (` `; U+0020) を混在させない*。既存のファイルを{編輯|へん|しふ}するときは元の方法に従ふ。その他の場合は *TAB を使ふ*。
 
-字下げに TAB を使ってゐる場合、リダイレクト演算子に `<<-` を使へば、出力の行頭に TAB がある場合を除いて、ほとんどの場面でヒアドキュメントがインデントできる[^3]。空白を使ってゐる場合は、ヒアドキュメントのインデントを取り除かなければならず、ヒアドキュメントが忌避されて、代はりに無駄な一時ファイルや `echo` などが使はれるおそれがある。
+字下げに TAB を使ふと、リダイレクト演算子を `<<-` にするだけで、出力の行頭に TAB がある場合を除いて、ほとんどの場面でヒアドキュメントがインデントできる[^3]:
+
+``` sh
+bold=$(tput bold)
+normal=$(tput sgr0)
+
+man_name() {
+	aliases=$1 && shift
+	description=$1 && shift
+	
+	cat <<-EOD
+	${bold}NAME${normal}
+	     ${bold}$aliases${normal} - $description
+	EOD
+}
+```
+
+空白を使ふ場合、ヒアドキュメントのインデントを取り除かなければならない:
+
+``` sh
+man_name() {
+  aliases=$1 && shift
+  description=$1 && shift
+
+  cat <<EOD
+${bold}NAME${normal}
+     ${bold}$aliases${normal} - $description
+EOD
+}
+```
+
+ヒアドキュメントが忌避されて、代はりに無駄な一時ファイルや `echo` が使はれるおそれもある:
+
+``` sh
+man_name() {
+  aliases=$1 && shift
+  description=$1 && shift
+
+  echo ${bold}NAME${normal}
+  echo "     ${bold}$aliases${normal} - $description"
+}
+```
 
 [^3]:
     [2.7.4 Here-Document](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07_04){lang=en} には
@@ -84,7 +125,7 @@ writing: horizontal
 
 ## 終了ステータス
 
-*終了ステータスをよく設計する*。失敗を全て[1]{.upright}にするのはコードスメルである。[0]{.upright}と[1]{.upright}しか使ってゐない場合、失敗の種類を区別するために不要なパラメーターや、一時ファイル、標準入出力などを経由するはめになる。
+*終了ステータスは慎重に設計する*。失敗を全て[1]{.upright}にするのはコードスメルになる。[0]{.upright}と[1]{.upright}しか使ってゐない場合、失敗の種類を区別するために不要なパラメーターや、一時ファイル、標準入出力などを経由するはめになる。
 
 ### 使用できる値
 
@@ -114,14 +155,14 @@ writing: horizontal
 
     <div class="blockquote-like">
 
-      <i>sig</i> が[0]{.upright}（null シグナル）の場合、エラーチェックは実行されるが、シグナルは実際には送信されない。null シグナルは <i>pid</i> の妥当性を調べるために使はれることがある。
+      ==<i>sig</i> が[0]{.upright}（null シグナル）の場合==、エラーチェックは実行されるが、==シグナルは実際には送信されない==。null シグナルは <i>pid</i> の妥当性を調べるために使はれることがある。
 
     </div>
 
     +++ 原文
     <blockquote lang="en">
 
-      If <i>sig</i> is 0 (the null signal), error checking is performed but no signal is actually sent. The null signal can be used to check the validity of <i>pid</i>.
+      ==If <i>sig</i> is 0 (the null signal)==, error checking is performed but ==no signal is actually sent==. The null signal can be used to check the validity of <i>pid</i>.
 
     </blockquote>
     +++
@@ -192,7 +233,7 @@ BSD 系の sysexits.h[^8] に従ふのも良い習慣だと思ふ。
 
 シェルスクリプトは *[Shebang]{lang=en} で書きはじめる*。[Shebang]{lang=en} は、UNIX で、実行するファイルのインタープリターを指定する方法である。
 
-古い実装では [Shebang]{lang=en} `#!` の右側全部がコマンドインタープリターの名前として使はれた[^10]。よって、移植可能性を重視するときは、[Shebang]{lang=en} は、
+古い実装では [Shebang]{lang=en} (`#!`) の右側全部がコマンドインタープリターの名前として使はれた[^10]。よって、移植可能性が重要なときは、[Shebang]{lang=en} は、
 
 ``` sh
 #!/bin/sh
@@ -219,7 +260,7 @@ BSD 系の sysexits.h[^8] に従ふのも良い習慣だと思ふ。
 
     とある。
 
-FreeBSD、Linux、Max OS X、Cygwin を含むほとんどの OS は引数が[1]{.upright}つだけなら同様に解釈する[^11]ので、
+FreeBSD、Linux、Max OS X、Cygwin を含むほとんどの OS は、引数が[1]{.upright}つだけなら同様に解釈する[^11]ので、
 
 [^11]: [The #! magic, details about the shebang/hash-bang mechanism on various Unix flavours](https://www.in-ulm.de/~mascheck/various/shebang/){lang=en} を参照。
 
@@ -242,9 +283,9 @@ FreeBSD、Linux、Max OS X、Cygwin を含むほとんどの OS は引数が[1]{
     tmpdir=$(mktemp -d)
 
     cat <<-EOD >"$tmpdir/demo.sh"
-    	#!/usr/bin/env sh
+    #!/usr/bin/env sh
 
-    	echo demo.sh executes successfully.
+    echo demo.sh executes successfully.
     EOD
 
     echo echo sh is concealed. >"$tmpdir/sh"
@@ -572,7 +613,7 @@ $cmd
 
 [^45]: [2.9.2 Pipelines](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_02){lang=en} を参照。
 
-*while 文や for 文にパイプしない*。パイプラインの各コマンドはサブシェルで実行される[^30]から、パイプラインで実行される変数代入やビルトインコマンドは、現在の環境には影響しない[^31]。そのため、ファイルリストにあり、名前が `.` で始まるファイルの個数を数へるプログラム[^32]は、
+*while 文や for 文にパイプしない*。パイプラインの各コマンドはサブシェルで実行される[^30]ので、パイプラインで実行される変数代入やビルトインコマンドは、現在の環境には影響しない[^31]。そのため、ファイルリストにあり、名前が `.` で始まるファイルの個数を数へるプログラム[^32]は、
 
 [^30]:
     [2.12. Shell Execution Environment](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_12){lang=en} には
@@ -826,7 +867,7 @@ foo=1 bar=2
 
     <div class="blockquote-like">
 
-      与へられたシンプルコマンドが実行される必要がある場合（すなはち、AND-OR リストや case 文などの条件構造がそのシンプルコマンドをバイパスしてゐない場合）、コマンドテキストの最初から最後まで、次の展開、代入、およびリダイレクトが全て実行される:
+      与へられたシンプルコマンドが実行される必要がある場合（すなはち、AND-OR リストや case 文などの条件構造がそのシンプルコマンドをバイパスしてゐない場合）、コマンドテキストの最初から最後にかけて、次の展開、代入、およびリダイレクトが全て実行される:
 
       1. [シェル文法規則](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02){hreflang=en}に従って、変数代入またはリダイレクトとして認識される単語が、ステップ[3]{.upright}とステップ[4]{.upright}の処理のために保存される。
       2. 変数代入でもリダイレクトでもない単語が展開される。展開後にフィールドが残ってゐる場合、最初のフィールドはコマンド名と見做され、残りのフィールドはそのコマンドの引数と見做される。
@@ -1087,7 +1128,7 @@ echo "$foo"
     ``` sh
     if case $PWD in ($HOME*) true ;; (*) false; esac; then
     	cat <<-'EOD'
-    		I'm in my own $HOME.
+    	I'm in my own $HOME.
     	EOD
     fi
     ```
@@ -1096,7 +1137,7 @@ echo "$foo"
 
 ### 複合条件
 
-*複合条件は、AND-OR リスト `&&` `||` を使って*、
+*複合条件は、AND-OR リストを使って*、
 
 ``` sh
 if [ -n "$foo" ] && [ -e "$file_path" ]; then
@@ -1186,7 +1227,7 @@ fi
 ! [ -n "$foo" ] && [ -e "$file_path" ]
 ```
 
-と書くことはできない。`!` はパイプラインの一部であり、AND-OR リスト `&&` `||` はパイプラインを被演算子に取るので、かうすると、`! [ -n "$foo" ]` と `[ -e "$file_path" ]` の論理積として解釈されてしまふ。
+と書くことはできない。`!` はパイプラインの一部であり、AND-OR リストの `&&` `||` はパイプラインを被演算子に取るので、かうすると、`! [ -n "$foo" ]` と `[ -e "$file_path" ]` の論理積として解釈されてしまふ。
 
 ## その他の一般的なパターン
 
@@ -1247,7 +1288,7 @@ cat /tmp/poc1.sh >poc1.sh
 	echo "line 2" >&2
 ```
 
-よりも
+ではなく
 
 ``` sh
 	cat <<-EOF >&2
@@ -1256,4 +1297,4 @@ cat /tmp/poc1.sh >poc1.sh
 	EOF
 ```
 
-と書くやうにする。
+と書く。
