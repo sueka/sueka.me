@@ -16,7 +16,7 @@ html {
     100vmin / (2 * 2.618034 + 29) φ²
   ); */
 
-  font-kerning: revert;
+  /* font-kerning: revert; */
   font-feature-settings: "vkna"; /* Don't set "vkrn" nor "vpal" */
 }
 
