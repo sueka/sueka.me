@@ -114,7 +114,7 @@ em .vertical:where([lang]) {
 /* Same as in vertical.css */
 .vertical .upright,
 .upright.vertical {
-  font-feature-settings: "vkrn", "vkna", "fwid";
+  font-feature-settings: "vkna", "fwid";
   text-orientation: upright;
 }
 

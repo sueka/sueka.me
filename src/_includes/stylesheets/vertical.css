@@ -17,7 +17,7 @@ html {
   ); */
 
   font-kerning: revert;
-  font-feature-settings: "vkrn", "vkna"; /* Don't set "vpal" */
+  font-feature-settings: "vkna"; /* Don't set "vkrn" nor "vpal" */
 }
 
 body {
@@ -43,7 +43,7 @@ body {
 }
 
 /* .footnote-ref {
-  font-feature-settings: "vkrn", "vkna", "fwid", "vpal"; /* .upright + "vpal"
+  font-feature-settings: "vkna", "fwid", "vpal"; /* .upright + "vpal"
 } */
 
 ol {
@@ -211,7 +211,7 @@ cite :where(:lang(ja, jpn-archaic)) {
 
 /* See also: JIS X 4051:2004 4.7 b 備考 */
 .upright {
-  font-feature-settings: "vkrn", "vkna", "fwid";
+  font-feature-settings: "vkna", "fwid";
   text-orientation: upright;
 }
 
