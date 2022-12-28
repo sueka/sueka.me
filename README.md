@@ -8,7 +8,7 @@
 
 Contents[^1] are licensed under [CC BY-SA 4.0](./LICENSE). Translations of Wikipedia articles[^2] are also available under [CC BY-SA 3.0](./LICENSE.CC-BY-SA-3.0).
 
-The rest[^3] is released under [MIT No Attribution](./LICENSE.MIT-0).
+The rest[^3] is released under [MIT-0](./LICENSE.MIT-0).
 
 [^1]: .md files (`git ls-files -- :*.md` prints them)
 [^2]: .md files in transl/*.wikipedia.org (`git ls-files -- ://src/transl/*.wikipedia.org/*.md` does)
@@ -16,4 +16,4 @@ The rest[^3] is released under [MIT No Attribution](./LICENSE.MIT-0).
 
 ### Exception
 
-[Logo blue.svg](./src/assets/images/Logo%20blue.svg) is imported from https://about.twitter.com/en/who-we-are/brand-toolkit.  I myself do not offer any license to it.
+I don’t offer any license to _Logo blue.svg_ (imported from [Twitter Brand toolkit](https://about.twitter.com/en/who-we-are/brand-toolkit)).
