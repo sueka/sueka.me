@@ -6,14 +6,10 @@
 
 ## Licenses
 
-Contents[^1] are licensed under [CC BY-SA 4.0](./LICENSE). Translations of Wikipedia articles[^2] are also available under [CC BY-SA 3.0](./LICENSE.CC-BY-SA-3.0).
+Contents[^1] are licensed under [CC BY-SA 4.0](./LICENSE) and others[^3] under [MIT-0](./LICENSE.MIT-0).
 
-The rest[^3] is released under [MIT-0](./LICENSE.MIT-0).
+Translations of Wikipedia articles[^2] are _also_ available under [CC BY-SA 3.0](./LICENSE.CC-BY-SA-3.0).
 
-[^1]: .md files (`git ls-files -- :*.md` prints them)
-[^2]: .md files in transl/*.wikipedia.org (`git ls-files -- ://src/transl/*.wikipedia.org/*.md` does)
+[^1]: .md files
+[^2]: .md files in transl/*.wikipedia.org (`git ls-files -- ://src/transl/*.wikipedia.org/*.md` prints them)
 [^3]: You have a list of such files by running `git ls-files -- ':!*/Logo blue.svg' ':!:*.md'`.
-
-### Exception
-
-I don’t offer any license to _Logo blue.svg_ (imported from [Twitter Brand toolkit](https://about.twitter.com/en/who-we-are/brand-toolkit)).
