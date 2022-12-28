@@ -6,7 +6,7 @@
 
 ## Licenses
 
-Contents[^1] are licensed under [Creative Commons Attribution-ShareAlike 4.0 International](./LICENSE). Translations of Wikipedia articles[^2] are also available under [Creative Commons Attribution-ShareAlike 3.0 Unported](./LICENSE.CC-BY-SA-3.0).
+Contents[^1] are licensed under [CC BY-SA 4.0](./LICENSE). Translations of Wikipedia articles[^2] are also available under [CC BY-SA 3.0](./LICENSE.CC-BY-SA-3.0).
 
 The rest[^3] is released under [MIT No Attribution](./LICENSE.MIT-0).
 
