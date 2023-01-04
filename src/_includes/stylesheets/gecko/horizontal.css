@@ -7,7 +7,8 @@
 :not(pre) > code,
 .horizontal :not(pre) > code,
 :not(pre).horizontal > code,
-:not(pre) > code.horizontal {
+:not(pre) > code.horizontal,
+kbd {
   display: revert;
   padding-block: 0.236068em; /* φ⁻³ */
   line-height: revert;

@@ -90,6 +90,12 @@ code {
   white-space: pre-wrap;
 }
 
+kbd {
+  font-variant-ligatures: none;
+  /* mix-blend-mode: multiply; */
+  white-space: pre-wrap;
+}
+
 ruby {
   ruby-align: center;
   ruby-overhang: none;

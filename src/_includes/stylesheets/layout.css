@@ -390,6 +390,14 @@ code.hljs {
   border-radius: 0.236068em; /* φ⁻² */
 }
 
+kbd {
+  text-orientation: sideways;
+  padding-block: 0.236068em; /* φ⁻³ */
+  padding-inline: 0.381966em; /* φ⁻² */
+  border: 2px solid var(--color-background-code);
+  border-radius: 0.236068em; /* φ⁻² */
+}
+
 :--heading {
   position: relative;
 }

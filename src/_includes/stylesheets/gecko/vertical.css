@@ -4,7 +4,8 @@
 
 .sideways,
 /* code:root, */
-:not(pre) > code {
+:not(pre) > code,
+kbd {
   display: inline-block;
   display: inline flow-root;
   padding-block: initial;
