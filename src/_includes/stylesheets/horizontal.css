@@ -64,6 +64,24 @@ ol:has(li:nth-of-type(100)) {
   overflow-inline: auto;
 }
 
+pre, code {
+  @media (max-width: 427.25px) {
+    tab-size: 4;
+  }
+
+  @media (width < 428px) { /* Same as in page.njk */
+    tab-size: 4;
+  }
+
+  @media (max-height: 427.25px) {
+    tab-size: revert;
+  }
+
+  @media (height < 428px) { /* Same as in page.njk */
+    tab-size: revert;
+  }
+}
+
 :not(pre) > code {
   @media (max-width: 427.25px) {
     word-break: break-all;
@@ -71,6 +89,14 @@ ol:has(li:nth-of-type(100)) {
 
   @media (width < 428px) { /* Same as in page.njk */
     word-break: break-all;
+  }
+
+  @media (max-height: 427.25px) {
+    word-break: revert;
+  }
+
+  @media (height < 428px) { /* Same as in page.njk */
+    word-break: revert;
   }
 }
 

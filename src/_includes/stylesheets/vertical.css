@@ -96,6 +96,24 @@ ol:where(:not(:lang(ja, jpn-archaic))):has(li:nth-of-type(100)) {
   overflow-inline: auto;
 }
 
+pre, code {
+  @media (max-height: 427.25px) {
+    tab-size: 4;
+  }
+
+  @media (height < 428px) { /* Same as in page.njk */
+    tab-size: 4;
+  }
+
+  @media (max-width: 427.25px) {
+    tab-size: revert;
+  }
+
+  @media (width < 428px) { /* Same as in page.njk */
+    tab-size: revert;
+  }
+}
+
 :not(pre) > code {
   @media (max-height: 427.25px) {
     word-break: break-all;
@@ -103,6 +121,14 @@ ol:where(:not(:lang(ja, jpn-archaic))):has(li:nth-of-type(100)) {
 
   @media (height < 428px) { /* Same as in page.njk */
     word-break: break-all;
+  }
+
+  @media (max-width: 427.25px) {
+    word-break: revert;
+  }
+
+  @media (width < 428px) { /* Same as in page.njk */
+    word-break: revert;
   }
 }
 

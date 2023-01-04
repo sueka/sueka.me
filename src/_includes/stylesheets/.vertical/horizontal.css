@@ -36,6 +36,9 @@ p.vertical {
   @media (orientation: landscape) {
     max-height: max(428px, 100vh - 2em);
   }
+  @media (orientation: portrait) {
+    max-width: revert;
+  }
   overflow-x: auto;
   overflow-inline: auto;
 
