@@ -260,7 +260,7 @@ BSD 系の sysexits.h[^8] に従ふのも良い習慣だと思ふ。
 
     とある。
 
-FreeBSD、Linux、Max OS X、Cygwin を含むほとんどの OS は、引数が[1]{.upright}つだけなら同様に解釈する[^11]ので、
+FreeBSD、Linux、macOS、Cygwin を含むほとんどの OS は、引数が[1]{.upright}つだけなら同様に解釈する[^11]ので、
 
 [^11]: [The #! magic, details about the shebang/hash-bang mechanism on various Unix flavours](https://www.in-ulm.de/~mascheck/various/shebang/){lang=en} を参照。
 
