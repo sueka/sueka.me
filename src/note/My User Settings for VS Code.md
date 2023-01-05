@@ -4,7 +4,7 @@ date: 2023-01-04
 lastmod: 2023-01-05
 ---
 
-先日、多分元日、はてなブックマークで、[VScodeの設定（settings.json）まとめ【<span class="upright">2023</span>年<span class="upright">1</span>月更新】](https://zenn.dev/sayuki_coding/articles/c389d9ad48feaa)なる記事を見た。[settings]{lang=en} か [setting]{lang=en} かなどゞうでもよい[^1]けれど、蓋し VS Code の設定で最も重大なのは以下の項目だと思ふ。誤解のないやうに明記すると、リンク先の記事は、ツールとしての VS Code の設定について、誰にでも馴染むものではないにせよ、丁寧に記述されてゐると思ふ。
+先日、多分元日、はてなブックマークで、[VScodeの設定（settings.json）まとめ【<span class="upright">2023</span>年<span class="upright">1</span>月更新】](https://zenn.dev/sayuki_coding/articles/c389d9ad48feaa)なる記事を見た。[settings]{lang=en} か [setting]{lang=en} かなどゞうでもよい[^1]けれど、蓋し VS Code の設定で最も重大なのは以下の項目だと思ふ。誤解のないやうに明記すると、リンク先の記事は、ツールとしての VS Code の設定について、誰にでも馴染むものではないにせよ、丁寧に記述されてゐる。
 
 [^1]: 英語表現としては [settings]{lang=en} しかないと思ふ。私がその機能に見出しやタイトルを付けるなら、設定項目が[1]{.upright}つしかなくても [setting<b>s</b>]{lang=en} とする。
 
@@ -16,7 +16,7 @@ lastmod: 2023-01-05
 "files.eol": "\n"
 ```
 
-CSV のやうな例外は個別に設定してもよいが、ほとんどの場合、言語サポートや EditorConfig などで適切に設定されるので、何もしなくてもよいと思ふ:
+CSV のやうな例外は個別に設定してもよいが、ほとんどの場合、言語サポートや EditorConfig などで適切に設定されるので、何もしなくてもよい:
 
 ``` json
 "[csv]": {
@@ -26,7 +26,7 @@ CSV のやうな例外は個別に設定してもよいが、ほとんどの場�
 
 ### ファイルの自動保存
 
-手動保存する習慣が無い[^2]ので、エディターからフォーカスが外れたらファイルが自動保存されるやうにする。`off` でなければ何でもよいと思ふ:
+手動保存する習慣が無い[^2]ので、エディターからフォーカスが外れたらファイルが自動保存されるやうにする。`off` でなければ何でもよい:
 
 ``` json
 "files.autoSave": "onFocusChange"
