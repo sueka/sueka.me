@@ -132,6 +132,7 @@ pre, code {
   }
 }
 
+/* NOTE: iOS Safari では、横スクロールのページで縦スクロールしようとすると、スクロール対象があっても、スワイプで更新する機能のために、ページ全体を掴んでしまう。 */
 pre:has(code.hljs) {
   white-space: pre-wrap;
 }
