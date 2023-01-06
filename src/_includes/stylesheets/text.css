@@ -124,6 +124,8 @@ ruby rt:lang(ja, jpn-archaic) {
   writing-mode: vertical-rl;
   vertical-align: top;
   text-justify: inter-word;
+  display: inline-block;
+  display: inline flow-root; /* for browsers that don't support inter-word: Safari */
 }
 
 .shiroten {
