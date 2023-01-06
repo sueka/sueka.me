@@ -132,6 +132,10 @@ pre, code {
   }
 }
 
+pre:has(code.hljs) {
+  white-space: pre-wrap;
+}
+
 /* TODO: 主要ブラウザーと css-has-pseudo が :lang(ja, zh) をサポートしたら、この行を削除する。 */
 /* ruby:not(lang(ja)):not(lang(jpn-archaic)):not(lang(zh)):has(rt:not(lang(ja)):not(lang(jpn-archaic)):not(lang(zh))), */
 ruby:lang(ja):has(rt:lang(ja)),
