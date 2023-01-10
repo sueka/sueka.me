@@ -5,7 +5,7 @@ templateEngine:
   - njk
   - md
 date: 2020-10-29
-lastmod: 2022-10-14
+lastmod: 2023-01-10
 useKaTeX: true
 ---
 
@@ -33,8 +33,6 @@ useKaTeX: true
     & = \\boldsymbol{a}'(t) \\cdot \\boldsymbol{b}(t) + \\boldsymbol{a}(t) \\cdot \\boldsymbol{b}'(t) \\\\
   \\end{aligned}
   $$
-
-- p.35 では、函数の微分可能性について、<q>この本では，関数が何回でも微分可能なものしか扱いません</q>と言及されてゐる。
 
 - p.39 の (2) 左図の \\( (a, b) \\) は、直線 \\( l \\) 上で \\( t = 0 \\) の点を指してゐる。
 
@@ -94,7 +92,7 @@ useKaTeX: true
   \\end{aligned}
   $$
 
-- p.99 では \\( \\left( \\frac{\\partial^2}{\\partial x^2} - \\frac{1}{c^2} \\frac{\\partial^2}{\\partial t^2} \\right) \\varphi(x, t) = 0 \\) が<q>波動方程式（1次）</q>として導入されるが、これは次数ではない気がする。p.102 の<q>波動方程式（3次）</q>も同じ。
+- p.99 では \\( \\left( \\frac{\\partial^2}{\\partial x^2} - \\frac{1}{c^2} \\frac{\\partial^2}{\\partial t^2} \\right) \\varphi(x, t) = 0 \\) が<q>波動方程式（1次）</q>として導入されるが、これは次数ではなく次元数だと思ふ。p.102 も同じ。
 
 - p.107 に<q>\\( \\Delta \\left( \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|^{1 - \\alpha}} \\right) \\) の符号が負</q>とあるが、これが負となるには、p.105 で \\( \\alpha \\) を定義するときに \\( 0 < \\alpha < 1 \\) としておく必要がある。\\( \\alpha \\to +0 \\) に飛ばすのはこれより後である。
 
