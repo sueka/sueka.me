@@ -431,6 +431,11 @@ umask go-rw
 ファイルモード作成マスクを一時的に変更したいときは、
 
 ``` sh
+# 読者が誤って credentials といふ名前のファイルを破壊しないやうに、credentials が存在しないことを確認してゐる。実用上は不要。
+if [ -e credentials ]; then
+	exit 64
+fi
+
 current_umask=$(umask -S)
 umask go-rw
 echo "anon:bad password" >credentials
