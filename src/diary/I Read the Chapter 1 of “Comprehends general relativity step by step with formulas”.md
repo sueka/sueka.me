@@ -108,7 +108,7 @@ useKaTeX: true
   \\begin{aligned}
   & \\phantom{=} \\frac{\\partial^2}{\\partial t^2} \\left( f \\left( \\boldsymbol{y}, t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\right) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\right) \\\\
   &           =  \\frac{\\partial^2}{\\partial t^2} \\left( f(\\boldsymbol{y}, u) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\right) \\\\
-  &           =  \\frac{\\partial^2}{\\partial t^2} f(\\boldsymbol{y}, u) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} + 2 \\frac{\\partial}{\\partial t} f(\\boldsymbol{y}, u) \\frac{\\partial}{\\partial t} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} + f(\\boldsymbol{y}, u) \\frac{\\partial^2}{\\partial tｃ^2} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\\\
+  &           =  \\frac{\\partial^2}{\\partial t^2} f(\\boldsymbol{y}, u) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} + 2 \\frac{\\partial}{\\partial t} f(\\boldsymbol{y}, u) \\frac{\\partial}{\\partial t} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} + f(\\boldsymbol{y}, u) \\frac{\\partial^2}{\\partial t^2} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\\\
   \\end{aligned}
   $$
 
