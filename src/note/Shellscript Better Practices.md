@@ -4,7 +4,7 @@ templateEngine:
   - njk
   - md
 date: 2022-06-12
-lastmod: 2022-12-27
+lastmod: 2023-01-17
 writing: horizontal
 ---
 
@@ -29,9 +29,9 @@ writing: horizontal
 ﻿ # こゝに EF BB BF がある。
 ```
 
-を UTF-8（BOM 附き）で保存して Bash[^47] で実行する[^1]と、`OK` と印字される。
+を UTF-8（BOM 附き）で保存して Bash で[^47]実行する[^1]と、`OK` と印字される。
 
-[^47]: Bourne Shell では、関数名は `[A-Z_a-z][0-9A-Z_a-z]*` (ERE) に従ふので、BOM (EF BB BF) は関数名にならない。
+[^47]: POSIX sh では、関数名は [3.235 Name](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_235){lang=en} に従ふので、BOM (EF BB BF) は関数名にならない。
 [^1]: `bash okbom.sh` を実行するか、実行可能にしてから Bash シェル上で `./okbom.sh` を実行する。
 
 ## 改行コード
@@ -300,7 +300,9 @@ FreeBSD、Linux、macOS、Cygwin を含むほとんどの OS は、引数が[1]{
 
     脆弱性のある `sh` がインストールされるとさらに悪いことが起こる。[Shebang]{lang=en} が `#!/bin/sh` なら、<i>/bin/sh</i> 自体が書き換へられない限り、このやうな攻撃に遭ふことはない。なほ、念のために附すと、`$PATH` が書き換へられてゐる時点で、サーバーにログインされたり、不審なプログラムを自ら実行したりしてゐるはずなので、`env` 自体が脆弱といふわけではない。
 
-Bourne Shell 以外のシェルを使ひたいときはさうしてもよい。この文章では主に Bourne Shell について書き、時々 Bash に触れる。Bash を使ふ場合、[Shebang]{lang=en} は、
+POSIX でないシェル言語を使ひたいとき[^48]はさうしてもよい。この記事では主に POSIX sh について書き、時々 Bash に触れる。Bash を使ふ場合、[Shebang]{lang=en} は、
+
+[^48]: 元ひ、POSIX に準拠したくないとき。POSIX 準拠のシェルスクリプトを書くのは意外に難しいので、この記事では深く立ち入らないやうにしてゐる。
 
 ``` sh
 #!/bin/bash
@@ -736,7 +738,7 @@ echo "$count"
 umask go-w
 trap "rm /tmp/filelist" EXIT
 mkfifo /tmp/filelist
-ls -Ap | grep -v /$ >/tmp/filelist &
+find * .* ! -path . -prune -type f >/tmp/filelist &
 count=0
 while IFS= read file; do
 	case $file in
@@ -746,7 +748,14 @@ done </tmp/filelist
 echo "$count"
 ```
 
-のやうに書く。
+のやうに書く[^49]。
+
+[^49]:
+    このコードは while 文へのパイプについて説明するためのものであり、その他の部分には無駄がある。より良い別の実装:
+
+    ``` sh
+    find .* ! -path . -prune -type f -exec printf %c {} + | wc -c
+    ```
 
 Bash ならプロセス置換を使って、
 
@@ -756,7 +765,7 @@ while IFS= read file; do
 	case $file in
 		(.*) (( ++count )) ;;
 	esac
-done < <(ls -Ap | grep -v /$)
+done < <(find * .* ! -path . -prune -type f)
 echo "$count"
 ```
 
