@@ -738,7 +738,7 @@ echo "$count"
 umask go-w
 trap "rm /tmp/filelist" EXIT
 mkfifo /tmp/filelist
-find * .* ! -path . -prune -type f >/tmp/filelist &
+ls -Ap | grep -v /$ >/tmp/filelist &
 count=0
 while IFS= read file; do
 	case $file in
@@ -765,7 +765,7 @@ while IFS= read file; do
 	case $file in
 		(.*) (( ++count )) ;;
 	esac
-done < <(find * .* ! -path . -prune -type f)
+done < <(ls -Ap | grep -v /$)
 echo "$count"
 ```
 
