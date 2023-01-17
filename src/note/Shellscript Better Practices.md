@@ -4,7 +4,7 @@ templateEngine:
   - njk
   - md
 date: 2022-06-12
-lastmod: 2023-01-17
+lastmod: 2023-01-18
 writing: horizontal
 ---
 
@@ -499,7 +499,7 @@ trap 'echo quit' SIGQUIT
 
     <div class="blockquote-like">
 
-      {関聯|くゎん|れん}するトラップアクションのあるシェルに対して複数のシグナルが保留されてゐる場合、トラップアクションの実行の順序は<ruby>規定されない<rt lang="en">unspecified</ruby>。
+      関聯するトラップアクションのあるシェルに対して複数のシグナルが保留されてゐる場合、トラップアクションの実行の順序は<ruby>規定されない<rt lang="en">unspecified</ruby>。
 
     </div>
 
@@ -745,6 +745,7 @@ while IFS= read file; do
 		(.*) (( ++count )) ;;
 	esac
 done </tmp/filelist
+rm /tmp/filelist
 echo "$count"
 ```
 
