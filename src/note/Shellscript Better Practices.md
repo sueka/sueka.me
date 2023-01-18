@@ -241,10 +241,10 @@ POSIX シェルを使ふ場合、[Shebang]{lang=en} は、
 
 とする[^50]。FreeBSD、Linux、macOS、Cygwin を含むほとんどの OS は、引数が[1]{.upright}つだけなら同様に解釈する[^11]。
 
-[^50]: 以前の版では `#!/bin/sh` を推してゐたが、そのやうな OS には専用のスクリプトが書かれるべきだと思ひ直したので、撤回する。
+[^50]: 以前の版では `#!/bin/sh` を推してゐたが、そのやうな OS には専用のスクリプトが書かれるべきだと思ひ直したので、撤回した。
 [^11]: [The #! magic, details about the shebang/hash-bang mechanism on various Unix flavours](https://www.in-ulm.de/~mascheck/various/shebang/){lang=en} を参照。
 
-たゞし、*`env` を使って `$PATH` の `sh` を使はうとするのはやめた方が良い*。`env` の場所が変はることもあるし、別のプログラムによって `$PATH` が書き換へられてゐることもある[^12]。
+*`env` を使って `$PATH` の `sh` を使はうとするのはやめた方が良い*。`env` の場所が変はることもあるし、別のプログラムによって `$PATH` が書き換へられてゐることもある[^12]。
 
 [^12]:
     `sh` が差し替へられると、[Shebang]{lang=en} に `env` を使ってゐるプログラムは動作しなくなることがある。次のスクリプトを実行すると `sh is concealed.` と印字される:
