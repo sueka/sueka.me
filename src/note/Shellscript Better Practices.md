@@ -4,7 +4,7 @@ templateEngine:
   - njk
   - md
 date: 2022-06-12
-lastmod: 2023-01-18
+lastmod: 2023-01-19
 writing: horizontal
 ---
 
@@ -233,42 +233,16 @@ BSD 系の sysexits.h[^8] に従ふのも良い習慣だと思ふ。
 
 シェルスクリプトは *[Shebang]{lang=en} で書きはじめる*。[Shebang]{lang=en} は、UNIX で、実行するファイルのインタープリターを指定する方法である。
 
-古い実装では [Shebang]{lang=en} (`#!`) の右側全部がコマンドインタープリターの名前として使はれた[^10]。よって、移植可能性が重要なときは、[Shebang]{lang=en} は、
-
-``` sh
-#!/bin/sh
-```
-
-といふゝうに書く。
-
-[^10]:
-    [exec](https://pubs.opengroup.org/onlinepubs/9699919799/functions/exec.html){lang=en} には
-
-    <div class="blockquote-like">
-
-      いくつかの歴史的な実装がシェルスクリプトを処理する方法は、そのファイルの最初の[2]{.upright}バイトが文字列 `"#!"` であることを認識すると、そのファイルの最初の行の残りを、実行するコマンドインタープリターの名前として使ふといふものである。
-
-    </div>
-
-    +++ 原文
-    <blockquote lang="en">
-
-      Another way that some historical implementations handle shell scripts is by recognizing the first two bytes of the file as the character string `"#!"` and using the remainder of the first line of the file as the name of the command interpreter to execute.
-
-    </blockquote>
-    +++
-
-    とある。
-
-FreeBSD、Linux、macOS、Cygwin を含むほとんどの OS は、引数が[1]{.upright}つだけなら同様に解釈する[^11]ので、
-
-[^11]: [The #! magic, details about the shebang/hash-bang mechanism on various Unix flavours](https://www.in-ulm.de/~mascheck/various/shebang/){lang=en} を参照。
+POSIX シェルを使ふ場合、[Shebang]{lang=en} は、
 
 ``` sh
 #!/bin/sh -eu
 ```
 
-としても大抵は問題無い。
+とする[^50]。FreeBSD、Linux、macOS、Cygwin を含むほとんどの OS は、引数が[1]{.upright}つだけなら同様に解釈する[^11]。
+
+[^50]: 以前の版では `#!/bin/sh` を推してゐたが、そのやうな OS には専用のスクリプトが書かれるべきだと思ひ直したので、撤回する。
+[^11]: [The #! magic, details about the shebang/hash-bang mechanism on various Unix flavours](https://www.in-ulm.de/~mascheck/various/shebang/){lang=en} を参照。
 
 たゞし、*`env` を使って `$PATH` の `sh` を使はうとするのはやめた方が良い*。`env` の場所が変はることもあるし、別のプログラムによって `$PATH` が書き換へられてゐることもある[^12]。
 
@@ -300,15 +274,9 @@ FreeBSD、Linux、macOS、Cygwin を含むほとんどの OS は、引数が[1]{
 
     脆弱性のある `sh` がインストールされるとさらに悪いことが起こる。[Shebang]{lang=en} が `#!/bin/sh` なら、<i>/bin/sh</i> 自体が書き換へられない限り、このやうな攻撃に遭ふことはない。なほ、念のために附すと、`$PATH` が書き換へられてゐる時点で、サーバーにログインされたり、不審なプログラムを自ら実行したりしてゐるはずなので、`env` 自体が脆弱といふわけではない。
 
-POSIX でないシェル言語を使ひたいとき[^48]はさうしてもよい。この記事では主に POSIX シェルについて書き、時々 Bash に触れる。Bash を使ふ場合、[Shebang]{lang=en} は、
+POSIX でないシェル言語を使ひたいとき[^48]はさうしてもよい。この記事では主に POSIX シェルについて書き、時々 Bash に触れる。Bash を使ふときは
 
 [^48]: 元ひ、POSIX に準拠したくないとき。POSIX 準拠のシェルスクリプトを書くのは意外に難しいので、この記事では深く立ち入らないやうにしてゐる。
-
-``` sh
-#!/bin/bash
-```
-
-または
 
 ``` sh
 #!/bin/bash -eu
