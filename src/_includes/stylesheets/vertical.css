@@ -91,7 +91,7 @@ ol:where(:not(:lang(ja, jpn-archaic))):has(li:nth-of-type(100)) {
   padding-inline-start: 3em;
 }
 
-.table-wrapper {
+table {
   overflow-y: auto;
   overflow-inline: auto;
 }

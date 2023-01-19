@@ -59,7 +59,7 @@ ol:has(li:nth-of-type(100)) {
   padding-inline-start: 3em;
 }
 
-.table-wrapper {
+table {
   overflow-x: auto;
   overflow-inline: auto;
 }
