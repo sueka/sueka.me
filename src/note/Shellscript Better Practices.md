@@ -132,7 +132,7 @@ man_name() {
 通常、*終了ステータスに使用できる値は[0]{.upright}から[127]{.upright}まで*ゞある。[126]{.upright}はコマンド名は見付かったが、実行可能なユーティリティでなかったときに使ひ、[127]{.upright}はコマンドが見付からなかったときに使ふ[^4]。[128]{.upright}は使はない[^5][^6]。[128]{.upright}より大きな値は、シグナルを受け取って終了したことを表す[^7]ので、他の用途では使はない。
 
 [^4]:
-    [2.8.2 Exit Status for Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#){lang=en} には
+    [2.8.2 Exit Status for Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_02){lang=en} には
 
     <div class="blockquote-like">
 
@@ -221,10 +221,10 @@ BSD 系の sysexits.h[^8] に従ふのも良い習慣だと思ふ。
 [^9]:
     [return](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#return){lang=en} と [exit](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#exit){lang=en} にはそれぞれ
 
-    > If n is not an unsigned decimal integer, or is greater than 255, the results are unspecified.
+    > If <i>n</i> is not an unsigned decimal integer, or is greater than 255, the results are unspecified.
     {lang=en}
 
-    > If n is specified, but its value is not between 0 and 255 inclusively, the exit status is undefined.
+    > If <i>n</i> is specified, but its value is not between 0 and 255 inclusively, the exit status is undefined.
     {lang=en}
 
     とある。
@@ -293,14 +293,14 @@ POSIX でないシェル言語を使ひたいとき[^48]はさうしてもよい
 
     <div class="blockquote-like">
 
-      このオプションが有効な場合、（<ruby>[シェルエラーの結果](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_01)<rt lang="en">Consequences of Shell Errors</ruby>に列挙されてゐる理由のいづれかで、あるいは[0]{.upright}より大きな終了ステータスの返却によって、）コマンドが失敗すると、シェルが即座に終了する。
+      このオプションが有効な場合、（<ruby>[シェルエラーの結果](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_01)<rt lang="en">Consequences of Shell Errors</ruby>に列挙されてゐる理由のいづれかで、あるいは[0]{.upright}より大きな終了ステータスの返却によって、）コマンドが失敗すると、次の例外を除いて、あたかも <i>exit</i> 特殊ビルトインユーティリティを引数無しで実行したかのやうに、シェルが即座に終了する:
 
     </div>
 
     +++ 原文
     <blockquote lang="en">
 
-      When this option is on, when any command fails (for any of the reasons listed in [Consequences of Shell Errors](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_01) or by returning an exit status greater than zero), the shell immediately shall exit,
+      When this option is on, when any command fails (for any of the reasons listed in [Consequences of Shell Errors](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_01) or by returning an exit status greater than zero), the shell immediately shall exit, as if by executing the <i>exit</i> special built-in utility with no arguments, with the following exceptions:
 
     </blockquote>
     +++
@@ -312,7 +312,7 @@ POSIX でないシェル言語を使ひたいとき[^48]はさうしてもよい
 
     <div class="blockquote-like">
 
-      シェルが<ruby>未定義の<rt lang="en">unset</ruby>パラメーター（`'@'` 特殊パラメーターと `'*'` 特殊パラメーターは除く。）を展開しようとすると、標準エラーにメッセージが書き込まれ、<ruby>[シェルエラーの結果](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_01)<rt lang="en">Consequences of Shell Errors</ruby>にある結果で展開が失敗する。
+      シェルが<ruby>未定義<rt lang="en">unset</ruby>のパラメーター（`'@'` 特殊パラメーターと `'*'` 特殊パラメーターは除く。）を展開しようとすると、標準エラーにメッセージが書き込まれ、<ruby>[シェルエラーの結果](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_08_01)<rt lang="en">Consequences of Shell Errors</ruby>にある結果で展開が失敗する。
 
     </div>
 
