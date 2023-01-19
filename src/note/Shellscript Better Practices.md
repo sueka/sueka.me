@@ -615,7 +615,7 @@ $cmd
     <div class="blockquote-like">
 
       ( <i>compound-list</i> )
-      : <i>compound-list</i> をサブシェル環境で実行する。[シェル実行環境](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_12){hreflang=en}を見よ。変数代入と環境に影響を与へるビルトインコマンドは、リストが終了した後も有効なまゝであってはならない。
+      : <i>compound-list</i> をサブシェル環境で実行する。[シェル実行環境](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_12)を見よ。変数代入と環境に影響を与へるビルトインコマンドは、リストが終了した後も有効なまゝであってはならない。
 
     </div>
 
@@ -794,7 +794,7 @@ Bash 4.2 以上では、`lastpipe` オプションを使ふと、パイプライ
 
     <div class="blockquote-like">
 
-      「複合リスト」といふ用語は、[シェル文法](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10){hreflang=en}にある文法に由来するもので、\<newline\> 文字で区切られた<i><ruby>リスト<rt lang="en">lists</ruby></i>のシーケンスであり、任意個数の \<newline\> 文字が先行し、または後続することができるものである。
+      「複合リスト」といふ用語は、[シェル文法](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10)にある文法に由来するもので、\<newline\> 文字で区切られた<i><ruby>リスト<rt lang="en">lists</ruby></i>のシーケンスであり、任意個数の \<newline\> 文字が先行し、または後続することができるものである。
 
     </div>
 
@@ -852,12 +852,12 @@ foo=1 bar=2
 
       与へられたシンプルコマンドが実行される必要がある場合（すなはち、AND-OR リストや case 文などの条件構造がそのシンプルコマンドをバイパスしてゐない場合）、コマンドテキストの最初から最後にかけて、次の展開、代入、およびリダイレクトが全て実行される:
 
-      1. [シェル文法規則](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02){hreflang=en}に従って、変数代入またはリダイレクトとして認識される単語が、ステップ[3]{.upright}とステップ[4]{.upright}の処理のために保存される。
+      1. [シェル文法規則](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02)に従って、変数代入またはリダイレクトとして認識される単語が、ステップ[3]{.upright}とステップ[4]{.upright}の処理のために保存される。
       2. 変数代入でもリダイレクトでもない単語が展開される。展開後にフィールドが残ってゐる場合、最初のフィールドはコマンド名と見做され、残りのフィールドはそのコマンドの引数と見做される。
       3. [リダイレクト](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07)に記述されてゐるやうに、リダイレクトが実行される。
       4. それぞれの変数代入は、値を代入する前に、チルダ展開、パラメーター展開、コマンド置換、算術展開、そして引用符削除される。
 
-      先のリストにおいて、ステップ[2]{.upright}からコマンド名が生じない場合、またはコマンド名が特殊ビルトインユーティリティ（[特殊ビルトインユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_14){hreflang=en}を見よ。）の名前に一致する場合、ステップ[3]{.upright}とステップ[4]{.upright}の順序は入れ替はってもよい。
+      先のリストにおいて、ステップ[2]{.upright}からコマンド名が生じない場合、またはコマンド名が特殊ビルトインユーティリティ（[特殊ビルトインユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_14)を見よ。）の名前に一致する場合、ステップ[3]{.upright}とステップ[4]{.upright}の順序は入れ替はってもよい。
 
     </div>
 
@@ -883,7 +883,7 @@ foo=1 bar=2
 
     <div class="blockquote-like">
 
-      コマンド名がある場合、[コマンドの検索と実行](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01_01){hreflang=en}に記述されてゐるやうに実行が続行する。コマンド名は無いが、コマンドはコマンド置換を含んでゐるやうな場合、コマンドは、最後に実行されたコマンド置換の終了ステータスで完了する。その他の場合、コマンドは終了ステータス[0]{.upright}で完了する。
+      コマンド名がある場合、[コマンドの検索と実行](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01_01)に記述されてゐるやうに実行が続行する。コマンド名は無いが、コマンドはコマンド置換を含んでゐるやうな場合、コマンドは、最後に実行されたコマンド置換の終了ステータスで完了する。その他の場合、コマンドは終了ステータス[0]{.upright}で完了する。
 
     </div>
 
@@ -925,7 +925,7 @@ foo=1 echo hello >"$foo"
       - ==コマンド名が特殊ビルトインユーティリティでも関数でもない場合、変数代入は、そのコマンドの実行環境にエクスポートされ==、ステップ[4]{.upright}で実行される展開の副作用を除いて、==現在の実行環境には影響しない==。この場合、次のことは<ruby>規定されない<rt lang="en">unspecified</ruby>:
         - 代入がステップ[4]{.upright}のその後の展開において可視かどうか
         - これらの展開の副作用として実行される変数代入がステップ[4]{.upright}のその後の展開、現在のシェル実行環境、またはその両方において可視かどうか
-      - コマンド名が関数として実装された標準ユーティリティ（XBD の[ユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_22){hreflang=en}を見よ。）の場合、変数代入の影響は、そのユーティリティが関数として実装されてゐなかったかのやうに現れる。
+      - コマンド名が関数として実装された標準ユーティリティ（XBD の[ユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_22)を見よ。）の場合、変数代入の影響は、そのユーティリティが関数として実装されてゐなかったかのやうに現れる。
       - ==コマンド名が特殊ビルトインユーティリティの場合、変数代入は現在の実行環境に影響する==。<i>set</i> <b>-a</b> オプションが有効でない場合（[set](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_25){lang=en} を見よ。）、次のことは<ruby>規定されない<rt lang="en">unspecified</ruby>:
         - 特殊ビルトインユーティリティの実行中に変数が export 属性を得るかどうか
         - 特殊ビルトインユーティリティの完了後に、変数代入の結果として得た export 属性が永続するかどうか
@@ -988,10 +988,10 @@ echo "$foo"
 
       単語展開の順序は次の通り:
 
-      1. チルダ展開（[チルダ展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_01){hreflang=en}を見よ。）、パラメーター展開（[パラメーター展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02){hreflang=en}を見よ。）、コマンド置換（[コマンド置換](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_03){hreflang=en}を見よ。）、そして算術展開（[算術展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_04){hreflang=en}を見よ。）が全て実行される。[トークン認識](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_03){hreflang=en}の第[5]{.upright}項目を見よ。
-      2. <i>IFS</i> が null でなければ、ステップ[1]{.upright}で生成されたフィールドの部分に対して、フィールド分割（[フィールド分割](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05){hreflang=en}を見よ。）が実行される。
-      3. <i>set</i> <b>-f</b> が有効でなければ、パス名展開（[パス名展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06){hreflang=en}を見よ。）が実行される。
-      4. 最後に、引用符削除（[引用符削除](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_07){hreflang=en}を見よ。）が常に実行される。
+      1. チルダ展開（[チルダ展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_01)を見よ。）、パラメーター展開（[パラメーター展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02)を見よ。）、コマンド置換（[コマンド置換](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_03)を見よ。）、そして算術展開（[算術展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_04)を見よ。）が全て実行される。[トークン認識](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_03)の第[5]{.upright}項目を見よ。
+      2. <i>IFS</i> が null でなければ、ステップ[1]{.upright}で生成されたフィールドの部分に対して、フィールド分割（[フィールド分割](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05)を見よ。）が実行される。
+      3. <i>set</i> <b>-f</b> が有効でなければ、パス名展開（[パス名展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06)を見よ。）が実行される。
+      4. 最後に、引用符削除（[引用符削除](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_07)を見よ。）が常に実行される。
 
     </div>
 
@@ -1079,7 +1079,7 @@ echo "$foo"
 
     <div class="blockquote-like">
 
-      パラメーターが波括弧で囲まれてをらず、かつ名前である場合、その名前で表される変数が存在するかどうかにかゝはらず、展開は最長の妥当な名前（XBD の[名前](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_235){hreflang=en}を見よ。）を使ふ。その他の場合、パラメーターは[1]{.upright}文字のシンボルであり、その文字が数字でも特殊パラメーター（[特殊パラメーター](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_05_02){hreflang=en}を見よ。）の内の一つでもない場合の振る舞ひは<ruby>未規定<rt lang="en">unspecified</ruby>である。
+      パラメーターが波括弧で囲まれてをらず、かつ名前である場合、その名前で表される変数が存在するかどうかにかゝはらず、展開は最長の妥当な名前（XBD の[名前](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_235)を見よ。）を使ふ。その他の場合、パラメーターは[1]{.upright}文字のシンボルであり、その文字が数字でも特殊パラメーター（[特殊パラメーター](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_05_02)を見よ。）の内の一つでもない場合の振る舞ひは<ruby>未規定<rt lang="en">unspecified</ruby>である。
 
     </div>
 
