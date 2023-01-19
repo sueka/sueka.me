@@ -94,13 +94,13 @@ CREATE EXTENSION cube;
 
   <ruby>結果集合<rt lang="en">the result set</ruby>といふのは恐らく、`FROM` 句や `WHERE` 句などの結果のことだらう。
 - `createlang` は PostgreSQL 9.1 で非推奨になり、10 で廃止された。p.28 では `createlang book --list` の代はりに `psql book -c \\dL` を使った。
-- PostgreSQL 9.3 では<i>自動的に更新可能な VIEW</i> が導入された。[リリースノート](https://www.postgresql.org/about/news/postgresql-93-released-1481/)。[CREATE VIEW](https://www.postgresql.org/docs/14/sql-createview.html#SQL-CREATEVIEW-UPDATABLE-VIEWS) には
+- PostgreSQL 9.3 では<i>自動的に更新可能な VIEW</i> が導入された。[リリースノート](https://www.postgresql.org/about/news/postgresql-93-released-1481/)。[CREATE VIEW](https://www.postgresql.org/docs/14/sql-createview.html#SQL-CREATEVIEW-UPDATABLE-VIEWS) には、
 
   <div class="blockquote-like">
 
     ビューは、次の条件を全て満たす場合、自動的に更新可能です:
 
-    - ビューが FROM リストにたゞ[1]{.upright}つのエントリーを持つ。そのエントリーはテーブルまたは他の更新可能なビューである。
+    - ビューが `FROM` リストにたゞ[1]{.upright}つのエントリーを持つ。そのエントリーはテーブルまたは他の更新可能なビューである。
     - ビューの定義がトップレベルに `WITH` 句、`DISTINCT` 句、`GROUP BY` 句、`HAVING` 句、`LIMIT` 句および `OFFSET` 句のいづれも含まない。
     - ビューの定義がトップレベルに集合演算（`UNION`、`INTERSECT` および `EXCEPT`）を含まない。
     - ビューの<ruby>選択<rt lang="en">select</ruby>リストがいかなる集約、ウィンドウ関数、あるいは集合を返す関数をも含まない。
@@ -112,7 +112,7 @@ CREATE EXTENSION cube;
 
     A view is automatically updatable if it satisfies all of the following conditions:
 
-    - The view must have exactly one entry in its FROM list, which must be a table or another updatable view.
+    - The view must have exactly one entry in its `FROM` list, which must be a table or another updatable view.
     - The view definition must not contain `WITH`, `DISTINCT`, `GROUP BY`, `HAVING`, `LIMIT`, or `OFFSET` clauses at the top level.
     - The view definition must not contain set operations (`UNION`, `INTERSECT` or `EXCEPT`) at the top level.
     - The view's select list must not contain any aggregates, window functions or set-returning functions.
