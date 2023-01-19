@@ -4,7 +4,7 @@ templateEngine:
   - njk
   - md
 date: 2022-06-12
-lastmod: 2023-01-19
+lastmod: 2023-01-20
 writing: horizontal
 ---
 
@@ -706,7 +706,7 @@ echo "$count"
 umask go-w
 trap "rm /tmp/filelist" EXIT
 mkfifo /tmp/filelist
-ls -Ap | grep -v /$ >/tmp/filelist &
+ls -Apq | grep -v /$ >/tmp/filelist &
 count=0
 while IFS= read file; do
 	case $file in
@@ -734,7 +734,7 @@ while IFS= read file; do
 	case $file in
 		(.*) (( ++count )) ;;
 	esac
-done < <(ls -Ap | grep -v /$)
+done < <(ls -Apq | grep -v /$)
 echo "$count"
 ```
 
