@@ -1,5 +1,7 @@
 /* Keep contrasting with horizontal.css */
 
+@custom-selector :--image figure, img, picture, svg;
+
 html {
   writing-mode: vertical-rl;
 
@@ -135,6 +137,21 @@ pre, code {
 /* NOTE: iOS Safari では、横スクロールのページで縦スクロールしようとすると、スクロール対象があっても、スワイプで更新する機能のために、ページ全体を掴んでしまう。 */
 pre:has(code.hljs) {
   white-space: pre-wrap;
+}
+
+a:not(:has(:--image)):any-link.external::before {
+  display: inline-block;
+  display: inline flow-root;
+  font: var(--fa-font-solid);
+  content: '\f35d'; /* fa-up-right-from-square */
+  font-size: 61.8034%; /* φ⁻¹ */
+  color: var(--color-text-dimmed);
+  vertical-align: super;
+  margin-inline-end: 0.236068em;
+}
+
+a:not(:has(:--image)):any-link.external::after {
+  content: none;
 }
 
 /* TODO: 主要ブラウザーと css-has-pseudo が :lang(ja, zh) をサポートしたら、この行を削除する。 */

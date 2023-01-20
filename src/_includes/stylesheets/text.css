@@ -3,6 +3,7 @@
 :root {
   --color-background: #fffefb;
   --color-text: #675640;
+  --color-text-dimmed: #A99075;
   --color-link: dodgerblue;
   --color-visited: darkorchid;
   --color-background-code: #e9e1dbdd;

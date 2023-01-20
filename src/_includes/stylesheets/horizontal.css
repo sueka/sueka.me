@@ -1,5 +1,7 @@
 /* Keep contrasting with vertical.css */
 
+@custom-selector :--image figure, img, picture, svg;
+
 html {
   writing-mode: horizontal-tb;
 
@@ -102,6 +104,21 @@ pre:has(code.hljs) {
   @media (height < 428px) { /* Same as in page.njk */
     word-break: revert;
   }
+}
+
+a:not(:has(:--image)):any-link.external::before {
+  content: none;
+}
+
+a:not(:has(:--image)):any-link.external::after {
+  display: inline-block;
+  display: inline flow-root;
+  font: var(--fa-font-solid);
+  content: '\f35d'; /* fa-up-right-from-square */
+  font-size: 61.8034%; /* φ⁻¹ */
+  color: var(--color-text-dimmed);
+  vertical-align: super;
+  margin-inline-start: 0.236068em;
 }
 
 /* TODO: 主要ブラウザーと css-has-pseudo が :lang(ja, zh) をサポートしたら、この行を削除する。 */

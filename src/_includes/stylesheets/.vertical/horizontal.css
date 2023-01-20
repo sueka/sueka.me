@@ -10,6 +10,7 @@
 /* cf. ./vertical.css */
 
 @custom-selector :--blockquote blockquote, .blockquote-like;
+@custom-selector :--image figure, img, picture, svg;
 
 %vertical {
   writing-mode: vertical-rl;
@@ -62,6 +63,23 @@ p.vertical {
 
   margin: revert;
   width: revert;
+}
+
+.vertical a:not(:has(:--image)):any-link.external::before,
+a:not(:has(:--image)):any-link.external.vertical::before {
+  display: inline-block;
+  display: inline flow-root;
+  font: var(--fa-font-solid);
+  content: '\f35d'; /* fa-up-right-from-square */
+  font-size: 61.8034%; /* φ⁻¹ */
+  color: var(--color-text-dimmed);
+  vertical-align: super;
+  margin-inline-end: 0.236068em;
+}
+
+.vertical a:not(:has(:--image)):any-link.external::after,
+a:not(:has(:--image)):any-link.external.vertical::after {
+  content: none;
 }
 
 /* TODO: 主要ブラウザーと css-has-pseudo が :lang(ja, zh) をサポートしたら、この行を削除する。 */

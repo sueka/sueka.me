@@ -27,6 +27,7 @@ import {
 
 import getIncipit from './lib/getIncipit.ts'
 import wrapTables from './lib/wrapTables.ts'
+import addClassExternal from './lib/addClassExternal.ts'
 
 const data = parse(await Deno.readTextFile('./src/_data/site.yml'))
 
@@ -103,6 +104,7 @@ const site = lume({
   page.data.src = `${ page.src.path }${ page.src.ext }`
 })
 .process(['.html'], wrapTables)
+.process(['.html'], addClassExternal)
 
 // Remove the origin from an absolute URL; NOTE: Retains feed.xml
 site.process(['.html', '.js'], page => {

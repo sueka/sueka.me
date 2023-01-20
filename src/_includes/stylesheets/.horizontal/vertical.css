@@ -10,6 +10,7 @@
 /* cf. ./horizontal.css */
 
 @custom-selector :--blockquote blockquote, .blockquote-like;
+@custom-selector :--image figure, img, picture, svg;
 
 %horizontal {
   writing-mode: horizontal-tb;
@@ -69,6 +70,23 @@ p.horizontal {
 .horizontal ol,
 ol.horizontal {
   list-style-type: revert;
+}
+
+.horizontal a:not(:has(:--image)):any-link.external::before,
+a:not(:has(:--image)):any-link.external.horizontal::before {
+  content: none;
+}
+
+.horizontal a:not(:has(:--image)):any-link.external::after,
+a:not(:has(:--image)):any-link.external.horizontal::after {
+  display: inline-block;
+  display: inline flow-root;
+  font: var(--fa-font-solid);
+  content: '\f35d'; /* fa-up-right-from-square */
+  font-size: 61.8034%; /* φ⁻¹ */
+  color: var(--color-text-dimmed);
+  vertical-align: super;
+  margin-inline-start: 0.236068em;
 }
 
 /* TODO: 主要ブラウザーと css-has-pseudo が :lang(ja, zh) をサポートしたら、この行を削除する。 */
