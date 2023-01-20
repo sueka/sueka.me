@@ -894,7 +894,7 @@ templateEngine:
 
 [^a1]: 原注　カナディアン・レイジングを伴ふアクセントでは、有声子音の変異によって、先行する二重母音の音（[/aʊ/]{.ipa} または [/aɪ/]{.ipa}）に変化が生ずることがある。［訳注　通常、カナディアン・レイジングによって変化するのは*無声子音の前の*二重母音である。］
 [^a2]: 原注　有声化した [/mɒ<b>ð</b>z/]{.ipa} はまれだが、ニューイングランドとカナダでは現れる<sup>\[要出典\]</sup>。
-[^a3]: 原注　<i lang="en">dwarf</i> について、その複数形の一般的な形式は、[J・R・R・トールキン](https://en.wikipedia.org/wiki/J._R._R._Tolkien)が <i lang="en">dwarves</i> を普及させるまでは、例へば、[ウォルト・ディズニー](https://en.wikipedia.org/wiki/Walt_Disney)の<ruby>『白雪姫』<rt lang="en"><i>Snow White and the Seven Dwarfs</i></ruby>に見られるやうに、<wbr><i lang="en">dwarfs</i> だった。トールキンは、自身の小説に登場する空想上の種族「ドワーフ」をおとぎ話で一般的なよりキュートでシンプルな存在と区別するために、変更された綴りを意図的に使ったが、その後、この用法が広まった。たゞし、天文学的矮星と非神話的な背の低い人類は <i lang="en">dwarfs</i> のまゝである。
+[^a3]: 原注　<i lang="en">dwarf</i> について、その複数形の一般的な形式は、[J・R・R・トールキン](https://en.wikipedia.org/wiki/J._R._R._Tolkien)が <i lang="en">dwarves</i> を普及させるまでは、例へば、[ウォルト・ディズニー](https://en.wikipedia.org/wiki/Walt_Disney)の『<ruby>白雪姫<rt lang="en">Snow White and the Seven Dwarfs</ruby>』に見られるやうに、<wbr><i lang="en">dwarfs</i> だった。トールキンは、自身の小説に登場する空想上の種族「ドワーフ」をおとぎ話で一般的なよりキュートでシンプルな存在と区別するために、変更された綴りを意図的に使ったが、その後、この用法が広まった。たゞし、天文学的矮星と非神話的な背の低い人類は <i lang="en">dwarfs</i> のまゝである。
 [^a4]: 原注　<i lang="en">hooves</i> と韻を踏むやうに [/ɹuː<b>v</b>z/]{.ipa} と発音されることは一般的だが、<wbr><i lang="en">rooves</i> は古風で珍しい綴り。
 [^a5]: 原注　「従業員全体」といふ意味の <i lang="en">staff</i><wbr>（[/stæf/]{.ipa} または [/stɑːf/]{.ipa}）については、その複数形は常に <i lang="en">staff</i> となる。その他の場合、<wbr><i lang="en">flagstaffs</i> のやうな複合語を除いて、<wbr><i lang="en">staffs</i> と <i lang="en">staves</i> の両方が許容される。<wbr><i lang="en">staves</i> は、「魔法の杖」や記譜ツールを意味する場合を除き、北アメリカではまれである。樽の胴板を意味する <i lang="en">stave</i> は、その複数形である <i lang="en">staves</i> からの逆成の結果である。（上の[逆成](#逆成)の節を見よ。）
 
