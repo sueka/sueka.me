@@ -6,7 +6,7 @@ import html from './html.ts'
 
 const data = parse(await Deno.readTextFile('./src/_data/site.yml'))
 
-const internalPat = RegExp(`^(${ data.url }|/|\\.||about:blank)(\$|#)`)
+const internalPat = RegExp(`^((${ data.url }\b|/|\\.).+||about:blank)(\$|#)`)
 
 export default function externalLink(page: Page) {
   const dom = new jsdom.JSDOM(page.content)
