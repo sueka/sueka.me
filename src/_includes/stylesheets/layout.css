@@ -417,7 +417,6 @@ kbd {
   display: inline-table;
   display: inline table;
   position: absolute;
-  inset-block-end: 0; /* ルビがある場合、ベースに合わせる。 */
   inset-inline-start: calc(-44 / 39 * 1em); /* Ensure that φ rem (minimum inline-start *margin*) ≥ φ (font-size of <h1>) 39/44 (its font-size) x em */
   font-size: calc(39 / 44 * 100%);
   line-height: calc(2 * 44 / 39);
