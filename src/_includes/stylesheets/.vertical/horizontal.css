@@ -74,7 +74,7 @@ a:not(:has(:--image)):any-link.external.vertical::before {
   font-size: 61.8034%; /* φ⁻¹ */
   color: var(--color-text-dimmed);
   vertical-align: super;
-  margin-inline-end: 0.236068em;
+  margin-inline-end: 2px;
 }
 
 .vertical a:not(:has(:--image)):any-link.external::after,

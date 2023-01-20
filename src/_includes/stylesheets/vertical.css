@@ -147,7 +147,7 @@ a:not(:has(:--image)):any-link.external::before {
   font-size: 61.8034%; /* φ⁻¹ */
   color: var(--color-text-dimmed);
   vertical-align: super;
-  margin-inline-end: 0.236068em; /* φ⁻³ */
+  margin-inline-end: 2px;
 }
 
 a:not(:has(:--image)):any-link.external::after {

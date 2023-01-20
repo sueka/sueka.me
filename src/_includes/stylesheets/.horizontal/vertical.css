@@ -86,7 +86,7 @@ a:not(:has(:--image)):any-link.external.horizontal::after {
   font-size: 61.8034%; /* φ⁻¹ */
   color: var(--color-text-dimmed);
   vertical-align: super;
-  margin-inline-start: 0.236068em;
+  margin-inline-start: 2px;
 }
 
 /* TODO: 主要ブラウザーと css-has-pseudo が :lang(ja, zh) をサポートしたら、この行を削除する。 */
