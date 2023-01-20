@@ -9,7 +9,7 @@ lastmod: 2023-01-10
 useKaTeX: true
 ---
 
-[『一般相対性理論を一歩一歩数式で理解する』](https://www.beret.co.jp/books/detail/638)第1章（数学の準備）を読んだ。気付いたことを箇条書きにする。
+『[一般相対性理論を一歩一歩数式で理解する](https://www.beret.co.jp/books/detail/638)』第1章（数学の準備）を読んだ。気付いたことを箇条書きにする。
 
 <small>
 
