@@ -4,7 +4,7 @@ import { parse } from '../deps.ts'
 
 import html from './html.ts'
 
-const data = parse(await Deno.readTextFile('./src/_data/site.yml'))
+const data = parse(await Deno.readTextFile('./src/_data/site.yaml'))
 
 // TODO: Escape を普通の方法で
 const internalPat = RegExp(`^(${ data.url.replace('.', '\\.') }\\b|/|\\.|(|about:blank)(\$|#))`)

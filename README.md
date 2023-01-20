@@ -2,7 +2,7 @@
 
 [sueka.me](https://sueka.me) is my personal blog. This repository hosts its source code.
 
-[![Actions Status](https://github.com/sueka/sueka.me/workflows/.github/workflows/main.yml/badge.svg)](https://github.com/sueka/sueka.me/actions?query=workflow%3A.github%2Fworkflows%2Fmain.yml)
+[![Actions Status](https://github.com/sueka/sueka.me/workflows/.github/workflows/main.yaml/badge.svg)](https://github.com/sueka/sueka.me/actions?query=workflow%3A.github%2Fworkflows%2Fmain.yaml)
 
 ## Licenses
 

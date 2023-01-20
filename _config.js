@@ -29,7 +29,7 @@ import getIncipit from './lib/getIncipit.ts'
 import wrapTables from './lib/wrapTables.ts'
 import addClassExternal from './lib/addClassExternal.ts'
 
-const data = parse(await Deno.readTextFile('./src/_data/site.yml'))
+const data = parse(await Deno.readTextFile('./src/_data/site.yaml'))
 
 const site = lume({
   src: 'src',
