@@ -1,4 +1,0 @@
-.diagram-wrapper {
-  /* NOTE: 恐らく Safari と Firefox のバグ（Mermaid の仕様も関係するか）で、縦書きで、Mermaid のレンダリングによって図の高さが <pre> よりも大きくなったときに、回り込む要素（テキスト）が図の領域に侵入してしまう。Chrome では起こらない。これを回避するために、当面の間、縦書きでは float を解除する。 */
-  float: revert;
-}

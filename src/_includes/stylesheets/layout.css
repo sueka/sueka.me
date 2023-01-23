@@ -460,22 +460,16 @@ kbd {
   font-family: revert;
 }
 
-:has(.diagram-wrapper)::after {
-  display: block;
-  content: '';
-  clear: both;
-}
-
-.diagram-wrapper::after {
-  display: block;
-  content: '';
-  clear: both;
+.diagram-wrapper {
+  margin-inline: auto;
+  max-height: fit-content;
+  max-width: fit-content;
+  display: flex; /* Safari では block のままだとオーバーフローしたときに .mermaid の高さが0になることがある。 */
+  overflow-y: auto; /* Chrome */
+  overflow-inline: auto;
 }
 
 .mermaid {
   width: fit-content;
-}
-
-.footnotes-sep {
-  clear: both;
+  writing-mode: horizontal-tb;
 }

@@ -5,9 +5,8 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
 
   const isGecko = browser.isEngine('Gecko')
   const isBlink = browser.isEngine('Blink')
-  const isSafari = browser.isBrowser('Safari')
 
-  if (!isGecko && !isBlink && !isSafari) {
+  if (!isGecko && !isBlink) {
     return
   }
 
@@ -26,14 +25,6 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
 
       linkForBlink.href = linkForBlink.getAttribute('href').replace(/(?=\.css$)/, '-blink')
       document.head.insertBefore(linkForBlink, link.nextSibling)
-    }
-
-    if (isSafari) {
-      const linkForWebkit = link.cloneNode()
-
-      linkForWebkit.href = linkForWebkit.getAttribute('href').replace(/(?=\.css$)/, '-safari')
-      console.log(linkForWebkit)
-      document.head.insertBefore(linkForWebkit, link.nextSibling)
     }
   }
 })

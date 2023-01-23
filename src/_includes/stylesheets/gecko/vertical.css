@@ -63,6 +63,6 @@ ul > li, ol > li {
 }
 
 .diagram-wrapper {
-  /* NOTE: See ../safari/vertical.css */
-  float: revert;
+  /* Firefox では load 時の Mermaid レンダー後に fit-content (height) が変更されないようなので、当面の間、これを使わないようにする。 */
+  max-height: revert;
 }

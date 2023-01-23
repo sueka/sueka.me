@@ -139,12 +139,6 @@ pre:has(code.hljs) {
   white-space: pre-wrap;
 }
 
-.diagram-wrapper {
-  float: left; /* top */
-  margin-inline-start: 0;
-  margin-inline-end: 1.618034em; /* bottom */
-}
-
 a:not(:has(:--image)):any-link.external::before {
   display: inline-block;
   display: inline flow-root;

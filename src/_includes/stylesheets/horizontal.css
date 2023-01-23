@@ -106,13 +106,6 @@ pre:has(code.hljs) {
   }
 }
 
-.diagram-wrapper {
-  float: right; /* Chrome hasn't yet supported logical properties */
-  float: inline-end; /* RtL Supported! */
-  margin-inline-start: 1.618034em;
-  margin-inline-end: 0;
-}
-
 a:not(:has(:--image)):any-link.external::before {
   content: none;
 }
