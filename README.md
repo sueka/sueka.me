@@ -10,6 +10,6 @@ Contents[^1] are licensed under [CC BY-SA 4.0](./LICENSE) and others[^3] under [
 
 Translations of Wikipedia articles[^2] are _also_ available under [CC BY-SA 3.0](./LICENSE.CC-BY-SA-3.0).
 
-[^1]: .md files
-[^2]: .md files in transl/*.wikipedia.org (`git ls-files -- ://src/transl/*.wikipedia.org/*.md` prints them)
+[^1]: All .md files
+[^2]: All .md files in transl/*.wikipedia.org (`git ls-files -- ://src/transl/*.wikipedia.org/*.md` prints them)
 [^3]: You have a list of such files by running `git ls-files -- ':!*/Logo blue.svg' ':!:*.md'`.
