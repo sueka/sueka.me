@@ -72,6 +72,11 @@ ol.horizontal {
   list-style-type: revert;
 }
 
+/* TODO: Remove */
+.mermaid {
+  @extend .horizontal;
+}
+
 .horizontal a:not(:has(:--image)):any-link.external::before,
 a:not(:has(:--image)):any-link.external.horizontal::before {
   content: none;

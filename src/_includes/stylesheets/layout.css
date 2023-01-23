@@ -265,7 +265,8 @@ aside {
 /* TODO: Merge those rulesets if the bugs of css-has-pseudo are fixed: */
 :--list,
 .table-wrapper,
-:not(.table-wrapper) > table {
+:not(.table-wrapper) > table,
+.diagram-wrapper {
   margin-block-start: 1em;
   margin-block-end: 1.618034em; /* φ */
 }
@@ -457,4 +458,24 @@ kbd {
   font-weight: revert;
   font-size: revert;
   font-family: revert;
+}
+
+:has(.diagram-wrapper)::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.diagram-wrapper::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.mermaid {
+  width: fit-content;
+}
+
+.footnotes-sep {
+  clear: both;
 }

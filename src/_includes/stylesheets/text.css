@@ -7,6 +7,7 @@
   --color-link: dodgerblue;
   --color-visited: darkorchid;
   --color-background-code: #e9e1dbdd;
+  --color-background-diagram: #e8e5e3;
   --color-mark: #fe0d;
 }
 
@@ -60,6 +61,17 @@ p {
   }
 }
 
+.mermaid {
+  border-radius: 8px; /* mermaid がデフォルトで取る余白 */
+  background-color: white;
+  background-image: conic-gradient(
+    transparent 0.25turn,
+    var(--color-background-diagram) 0.25turn 0.5turn,
+    transparent 0.5turn 0.75turn,
+    var(--color-background-diagram) 0.75turn
+  );
+  background-size: 2rem 2rem;
+}
 
 a {
   text-decoration: none;

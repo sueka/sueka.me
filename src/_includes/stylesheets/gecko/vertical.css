@@ -61,3 +61,8 @@ ul > li, ol > li {
     height: -moz-available;
   }
 }
+
+.diagram-wrapper {
+  /* NOTE: See ../safari/vertical.css */
+  float: revert;
+}
