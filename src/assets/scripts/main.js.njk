@@ -58,3 +58,25 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
     observer.observe(document.documentElement, { attributes: true })
   }
 })()
+
+;(() => {
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      if (mutation.type === 'childList') {
+        for (const node of mutation.addedNodes) {
+          if (node instanceof SVGElement) {
+            node.style.width = node.style.maxWidth
+          }
+        }
+      }
+    }
+  })
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const mermaids = document.querySelectorAll('.mermaid')
+
+    for (const mermaid of mermaids) {
+      observer.observe(mermaid, { childList: true })
+    }
+  })
+})()

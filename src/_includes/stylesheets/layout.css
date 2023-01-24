@@ -473,3 +473,7 @@ kbd {
   /* max-height: fit-content; */
   writing-mode: horizontal-tb;
 }
+
+/* .mermaid >  */svg {
+  display: block;
+}
