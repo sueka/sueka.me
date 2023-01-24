@@ -65,7 +65,11 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
       if (mutation.type === 'childList') {
         for (const node of mutation.addedNodes) {
           if (node instanceof SVGElement) {
-            node.style.width = node.style.maxWidth
+            const theirMaxWidth = node.style.maxWidth
+
+            node.style.width = theirMaxWidth
+            node.style.maxWidth = '100%'
+            node.style.minWidth = `calc(${ theirMaxWidth } * 13 / 16)`
           }
         }
       }
