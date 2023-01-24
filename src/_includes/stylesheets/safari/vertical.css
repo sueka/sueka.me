@@ -1,0 +1,4 @@
+.diagram-wrapper {
+  /* Safari では block ではリサイズ時、flex ではロード時に fit-content の計算に失敗することがある。 */
+  display: grid;
+}

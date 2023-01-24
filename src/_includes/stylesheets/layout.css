@@ -464,12 +464,12 @@ kbd {
   margin-inline: auto;
   max-height: fit-content;
   max-width: fit-content;
-  display: flex; /* Safari では block のままだとオーバーフローしたときに .mermaid の高さが0になることがある。 */
   overflow-y: auto; /* Chrome */
   overflow-inline: auto;
 }
 
 .mermaid {
   width: fit-content;
+  /* max-height: fit-content; */
   writing-mode: horizontal-tb;
 }
