@@ -1,7 +1,7 @@
 ---
 title: 『English Plurals - Wikipedia』の日本語訳
 date: 2022-12-26
-lastmod: 2023-01-17
+lastmod: 2023-01-26
 writing: horizontal
 templateEngine:
   - njk
@@ -666,7 +666,7 @@ templateEngine:
 
 ### 主要部の無い名詞
 
-言語学者の[スティーブン・ピンカー](https://en.wikipedia.org/wiki/Steven_Pinker)は、『言語を生み出す本能』で、<wbr><i lang="en">lowlife</i> や <i lang="en">flatfoot</i> のやうな、ピンカー自身は「<ruby>主要部の無い<rt lang="en">headless</ruby>単語」と呼び、典型的には<ruby>所有複合語<rt lang="en">bahuvrihi compounds</ruby>と呼ばれるものについて論じてゐる。これらの単語の中では、<wbr><i lang="en">life</i> や <i lang="en">foot</i> は、意味的には、主要部ではない。つまり、<ruby>ごろつき<rt lang="en">lowlife</ruby>は<ruby>命<rt lang="en">life</ruby>の一種ではないし、<ruby>扁平足<rt lang="en">flatfoot</ruby>は<ruby>足<rt lang="en">foot</ruby>の一種ではない。このやうな単語の通常の形式が単数なら、その単語の最後の構成素が通常は不規則な方法で複数化されるとしても、その単語は規則的な複数形を持つものとして扱はれる。ピンカーによれば、したがって、<wbr><i lang="en">lowlife</i> の複数形は <i lang="en">lowlifes</i> であって、「[lowlives]{lang=en}」ではない。その他の提案された例には、次のものが含まれる:
+言語学者の[スティーブン・ピンカー](https://en.wikipedia.org/wiki/Steven_Pinker)は、『言語を生み出す本能』で、<wbr><i lang="en">lowlife</i> や <i lang="en">flatfoot</i> のやうな、彼［ピンカー］自身は「<ruby>主要部の無い<rt lang="en">headless</ruby>単語」と呼び、典型的には<ruby>所有複合語<rt lang="en">bahuvrihi compounds</ruby>と呼ばれるものについて論じてゐる。これらの単語の中では、<wbr><i lang="en">life</i> や <i lang="en">foot</i> は、意味的には、主要部ではない。つまり、<ruby>ごろつき<rt lang="en">lowlife</ruby>は<ruby>命<rt lang="en">life</ruby>の一種ではないし、<ruby>扁平足<rt lang="en">flatfoot</ruby>は<ruby>足<rt lang="en">foot</ruby>の一種ではない。このやうな単語の通常の形式が単数なら、その単語の最後の構成素が通常は不規則な方法で複数化されるとしても、その単語は規則的な複数形を持つものとして扱はれる。ピンカーによれば、したがって、<wbr><i lang="en">lowlife</i> の複数形は <i lang="en">lowlifes</i> であって、「[lowlives]{lang=en}」ではない。その他の提案された例には、次のものが含まれる:
 
 |-|-
 |[sabretooth]{lang=en}|[sabretooths]{lang=en}
