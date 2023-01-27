@@ -5,7 +5,12 @@ import html from './html.ts'
 
 export default function wrapDiagrams(page: Page) {
   const dom = new jsdom.JSDOM(page.content)
-  const diagrams = dom.window.document.querySelectorAll('.mermaid')
+  const figures =
+    [...dom.window.document.querySelectorAll('figure')]
+    .filter(_ => _.querySelector(':scope > .mermaid') !== null)
+  const mermaids = dom.window.document.querySelectorAll('.mermaid')
+  const diagrams = [...figures, ...mermaids]
+  // const diagrams = dom.window.document.querySelectorAll('figure:has(> .mermaid), :not(figure) > .mermaid')
 
   for (const diagram of diagrams) {
     const diagramClone = diagram.cloneNode(true)
