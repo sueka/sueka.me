@@ -1,7 +1,7 @@
 ---
 title: なぜ同値関係は自己関係なのか
 date: 2022-09-07
-lastmod: 2022-10-21
+lastmod: 2023-01-27
 writing: horizontal
 templateEngine: njk, md
 ---
@@ -46,7 +46,53 @@ templateEngine: njk, md
 
 [^9]: 『プログラミング原論』で挙げられてゐるもの。これは、一世紀以上の期間の暦年からなる集合を[100]{.upright}による剰余によって分割（暦年の集合は大抵、群ではない。）し、その分割の各類の最小の元を値としたものである。類別が表現する型は、単集合でない類を含むなら、曖昧である。
 
-{# TODO: 図解 #}
+<figure>
+  <pre class="mermaid">
+    graph LR
+      subgraph Value[値]
+        VPlusZero(+0)
+        VMinusZero("-0")
+      end
+      subgraph AbstractEntity[抽象実体]
+        AeZero(0)
+      end
+      VPlusZero --> AeZero
+      VMinusZero --> AeZero
+  </pre>
+  <figcaption>IEEE 754 浮動小数点数型</figcaption>
+</figure>
+
+<figure>
+  <pre class="mermaid">
+    graph LR
+      subgraph Value[値]
+        VCapitalA("&amp;quot;A&amp;quot;")
+        VSmallA("&amp;quot;a&amp;quot;")
+      end
+      subgraph AbstractEntity[抽象実体]
+        AeA(A)
+      end
+      VCapitalA --> AeA
+      VSmallA --> AeA
+  </pre>
+  <figcaption>大文字と小文字を区別しない文字列型</figcaption>
+</figure>
+
+<figure>
+  <pre class="mermaid">
+    graph LR
+      subgraph Value[値]
+        V97(97)
+      end
+      subgraph AbstractEntity[抽象実体]
+        Ae1897(1897)
+        Ae1997(1997)
+      end
+      V97 --> Ae1897
+      V97 --> Ae1997
+  </pre>
+  <figcaption><q><span class="upright">2</span>桁の数値として一世紀以上の期間の暦年を表現している型</q></figcaption>
+</figure>
 
 よって、*等価性は、同値関係とは異なり、推移律を要求しない*[^3]。一意に表現されてをらず、かつ曖昧な型には、次のやうなものが存在しうる。値の集合が {𝑎, 𝑏, 𝑐}、抽象実体の集合が {𝜈<sub>1</sub>, 𝜈<sub>2</sub>} であり、値の集合と抽象実体の集合上の二項関係が {(𝑎, 𝜈<sub>1</sub>), (𝑏, 𝜈<sub>1</sub>), (𝑏, 𝜈<sub>2</sub>), (𝑐, 𝜈<sub>2</sub>)} であるやうなもの。このとき、𝑎 と 𝑏、𝑏 と 𝑐 はそれぞれ同じ解釈を持つから等価だが、𝑎 と 𝑐 は同じ解釈を持たないから等価ではない。
 
