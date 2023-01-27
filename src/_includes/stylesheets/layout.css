@@ -295,6 +295,14 @@ figcaption {
   max-inline-size: fit-content;
 }
 
+figure {
+  display: flex;
+  flex-direction: column;
+}
+pre.mermaid.mermaid.mermaid {
+  margin-block: auto;
+}
+
 dl > dt {
   margin-block-start: 1em;
 }
