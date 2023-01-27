@@ -498,6 +498,10 @@ figure > .mermaid {
   margin-inline: auto;
 }
 
+figure:has(.mermaid),
+.mermaid {
+  writing-mode: horizontal-tb;
+}
 figure:has(> .mermaid),
 .mermaid {
   writing-mode: horizontal-tb;
