@@ -68,22 +68,6 @@ templateEngine: njk, md
   <pre class="mermaid">
     graph LR
       subgraph Value[値]
-        VCapitalA("&amp;quot;A&amp;quot;")
-        VSmallA("&amp;quot;a&amp;quot;")
-      end
-      subgraph AbstractEntity[抽象実体]
-        AeA(A)
-      end
-      VCapitalA --> AeA
-      VSmallA --> AeA
-  </pre>
-  <figcaption>大文字と小文字を区別しない文字列型</figcaption>
-</figure>
-
-<figure>
-  <pre class="mermaid">
-    graph LR
-      subgraph Value[値]
         V97(97)
       end
       subgraph AbstractEntity[抽象実体]
