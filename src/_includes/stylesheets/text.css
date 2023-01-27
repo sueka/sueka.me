@@ -73,6 +73,10 @@ p {
   background-size: 2rem 2rem;
 }
 
+figcaption {
+  font-size: calc(39 / 44 * 100%);
+}
+
 a {
   text-decoration: none;
 
