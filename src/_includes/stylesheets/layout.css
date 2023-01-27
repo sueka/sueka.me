@@ -287,9 +287,12 @@ figure > figcaption + .mermaid {
 figure > .mermaid:has(+ figcaption) {
   margin-block-end: 0;
 }
-figure > figcaption:has(+ .mermaid),
-figure > .mermaid + figcaption {
-  white-space: nowrap;
+figure {
+  inline-size: fit-content;
+}
+figcaption {
+  margin-inline: auto;
+  max-inline-size: fit-content;
 }
 
 dl > dt {
