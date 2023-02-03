@@ -4,7 +4,7 @@ date: 2023-01-04
 lastmod: 2023-01-05
 ---
 
-先日、多分元日、はてなブックマークで、[VScodeの設定（settings.json）まとめ【<span class="upright">2023</span>年<span class="upright">1</span>月更新】](https://zenn.dev/sayuki_coding/articles/c389d9ad48feaa)なる記事を見た。[settings]{lang=en} か [setting]{lang=en} かなどゞうでもよい[^1]けれど、蓋し VS Code の設定で最も重大なのは以下の項目だと思ふ。誤解のないやうに明記すると、リンク先の記事は、ツールとしての VS Code の設定について、誰にでも馴染むものではないにせよ、丁寧に記述されてゐる。
+先日、多分元日、はてなブックマークで、[VScodeの設定（settings.json）まとめ【<span class="upright">2023</span>年<span class="upright">1</span>月更新】](https://zenn.dev/sayuki_coding/articles/c389d9ad48feaa)なる記事を見た。[settings]{lang=en} か [setting]{lang=en} かなどゞうでもよい[^1]けれど、蓋し VS Code の設定で最も重大なのは以下の項目だらう。誤解のないやうに明記すると、リンク先の記事は、ツールとしての VS Code の設定について、誰にでも馴染むものではないにせよ、丁寧に記述された、良い記事だと思ふ。
 
 [^1]: 英語表現としては [settings]{lang=en} しかないと思ふ。私がその機能に見出しやタイトルを付けるなら、設定項目が[1]{.upright}つしかなくても [setting<b>s</b>]{lang=en} とする。
 
@@ -13,7 +13,7 @@ lastmod: 2023-01-05
 改行コードを LF にする。多くの言語で、言語仕様かコーディング規約で LF が要求されてゐる。<ruby>メモ帳<rt lang="en">Notepad</ruby>が CRLF しか扱へなかったのも昔の話となった:
 
 ``` json
-"files.eol": "\n"
+"files.eol": "\n",
 ```
 
 CSV のやうな例外は個別に設定してもよいが、ほとんどの場合、言語サポートや EditorConfig などで適切に設定されるので、何もしなくてもよい:
@@ -29,31 +29,31 @@ CSV のやうな例外は個別に設定してもよいが、ほとんどの場�
 手動保存する習慣が無い[^2]ので、エディターからフォーカスが外れたらファイルが自動保存されるやうにする。`off` でなければ何でもよいと思ふ:
 
 ``` json
-"files.autoSave": "onFocusChange"
+"files.autoSave": "onFocusChange",
 ```
 
 [^2]: 以前はあったが、SaaS が増えてきたのでやめた。
 
 ## エクスプローラー
 
-Unicode 順に竝べ替へる。README や COPYING をかうしたのはこのためだったはずだ。また、GitHub と同じ順で表示されることにもなる:
+Unicode 順に竝べ替へる。README や COPYING をかうしたのはこのためだったはずだ。また、結果として GitHub と同じ順で表示されることにもなる:
 
 ``` json
-"explorer.sortOrderLexicographicOptions": "unicode"
+"explorer.sortOrderLexicographicOptions": "unicode",
 ```
 
 ## ターミナル
 
-拡張機能が環境に参加したがってゐるときに、ターミナルが自動的に再起動しないやうにする。手動で増設したり、再起動させたりすればよい。ターミナルみたいなものが勝手に再起動して嬉しかったことはない:
+拡張機能が環境に参加したがってゐるときに、ターミナルが自動的に再起動しないやうにする。さういふときは手動で増設したり、再起動させたりすればよい。ターミナルみたいなものが勝手に再起動して嬉しかったことはない:
 
 ``` json
-"terminal.integrated.environmentChangesRelaunch": false
+"terminal.integrated.environmentChangesRelaunch": false,
 ```
 
 ターミナルが子プロセスを実行してゐるときに VS Code を終了させようとすると、確認が入るやうにする:
 
 ``` json
-"terminal.integrated.confirmOnExit": "hasChildProcesses"
+"terminal.integrated.confirmOnExit": "hasChildProcesses",
 ```
 
 ## オーディオキュー
@@ -61,23 +61,23 @@ Unicode 順に竝べ替へる。README や COPYING をかうしたのはこの�
 オーディオキューの音量を 100 % にする。オーディオキューは、主にスクリーンリーダーで VS Code を操作するときに使ふ、特定の状態に遭遇したことを特別な音で通知する機能だ。私は VoiceOver くらゐしか使はないけれど、VO の場合、行を移動すると、移動先の内容がすぐに読み上げられる。この声のボリュームは結構大きいので、読み上げの音量設定にもよるが、デフォルト (70 %) では、キューがほとんど聞こえないことがある:
 
 ``` json
-"audioCues.volume": 100
+"audioCues.volume": 100,
 ```
 
 ## 自動更新
 
-拡張機能は有効なものゝみ自動更新する。特定のワークスペースで有効にしてゐる拡張機能は、そのワークスペースを開くまで更新しなくてもよいはず:
+拡張機能は有効なものゝみ自動更新する。特定のワークスペースで有効にしてゐる拡張機能は、そのワークスペースを開くまで更新しなくてもよいはずだ:
 
 ``` json
-"extensions.autoUpdate": "onlyEnabledExtensions"
+"extensions.autoUpdate": "onlyEnabledExtensions",
 ```
 
 ## テレメトリ
 
-無効にする。匿名化されたデータを VS Code 開発チームや Microsoft が{蒐集|しう|しふ}することは差󠄂し支へないが、サードパーティの拡張機能開発者にはさういふものも渡したくない。そも<span class="kunojiten">〳〵</span>私は<i>使用状況の共有</i>といふ概念に否定的だ:
+無効にする。匿名化されたデータを VS Code 開発チームや Microsoft が{蒐集|しう|しふ}することは差󠄂し支へないが、サードパーティの拡張機能開発者にはさういふものも渡したくない。そも<span class="kunojiten">〳〵</span>私は<i>使用状況の共有</i>といふ概念が好きではない:
 
 ``` json
-"telemetry.telemetryLevel": "off"
+"telemetry.telemetryLevel": "off",
 ```
 
 拡張機能は、追加の情報を蒐集する場合、テレメトリのための固有の設定を持ってゐることがある。さういふ設定の ID は大抵、`*.telemetry.enabled` のやうな形をしてゐるので、<kbd>⌘ ,</kbd> または <kbd>^ ,</kbd> で設定を開き、検索して無効にする。
@@ -97,5 +97,5 @@ Unicode 順に竝べ替へる。README や COPYING をかうしたのはこの�
 カラースキームを自動検出する。私は OS のライトテーマ[/]{.upright}ダークテーマをよく（と言っても、日に数回程度だが、）変更するので、できるだけ多くのアプリを同様に設定してゐる:
 
 ``` json
-"window.autoDetectColorScheme": true
+"window.autoDetectColorScheme": true,
 ```
