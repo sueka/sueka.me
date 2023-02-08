@@ -5,14 +5,14 @@
 :root, [lang]:where(:not([lang=""])) {
   --font-text: serif;
   --font-text-emphasized: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
-  --font-code: Menlo, Consolas, monospace;
+  --font-code: ui-monospace, Consolas, Inconsolata, monospace;
 }
 
 [lang="ja"],
 [lang="jpn-archaic"] {
   --font-text: "YuMincho +36p Kana", "Yu Mincho", serif;
   --font-text-emphasized: "Hiragino Sans", "Yu Gothic Medium", sans-serif;
-  --font-code: CodeM, Myrica, Ricty, "Source Han Code JP", monospace;
+  --font-code: CodeM, "Myrica M", Ricty, ui-monospace, monospace;
 }
 
 [lang="he"],
