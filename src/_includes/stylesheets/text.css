@@ -64,6 +64,7 @@ p {
 .mermaid {
   border-radius: 8px; /* mermaid がデフォルトで取る余白 */
   background-color: #fffefb; /* TODO: Prefers the color scheme */
+  border: 4px solid var(--color-border); /* border-radius の半分 */
 }
 
 figcaption {
