@@ -65,11 +65,13 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
       if (mutation.type === 'childList') {
         for (const node of mutation.addedNodes) {
           if (node instanceof SVGElement) {
-            const theirMaxWidth = node.style.maxWidth
+            const widthBeforeResizing = node.clientWidth
 
-            node.style.width = theirMaxWidth
-            node.style.maxWidth = '100%'
-            node.style.minWidth = `calc(${ theirMaxWidth } * 13 / 16)`
+            resizeMermaid(node, widthBeforeResizing)
+
+            window.addEventListener('resize', (_event) => {
+              resizeMermaid(node, widthBeforeResizing)
+            })
           }
         }
       }
@@ -84,3 +86,10 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
     }
   })
 })()
+
+function resizeMermaid(svg, intrinsicWidth) {
+  const root = document.querySelector(':root')
+  const rem = window.getComputedStyle(root).fontSize
+
+  svg.style.width = `calc(${ intrinsicWidth } * ${ rem } / 16)`
+}

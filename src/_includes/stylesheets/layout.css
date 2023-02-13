@@ -517,4 +517,6 @@ figure:has(> .mermaid),
 
 /* .mermaid >  */svg {
   display: block;
+  height: fit-content;
+  width: fit-content;
 }
