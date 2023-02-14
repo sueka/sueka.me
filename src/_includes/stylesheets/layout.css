@@ -384,8 +384,8 @@ dd {
 :--blockquote {
   margin-inline: 0;
   border: 0 solid var(--color-indentation-guide-quotation);
-  border-inline-width: calc(2 / 14 * 1rem);
-  padding-inline: calc(1rem - 2 / 14 * 1rem);
+  border-inline-width: calc(2 / 13 * 1rem);
+  padding-inline: calc(1rem - 2 / 13 * 1rem);
   text-align: justify;
 }
 

@@ -27,8 +27,8 @@ p.horizontal {
 
 blockquote.horizontal {
   margin: 1em 0; /* ./reset.css */
-  border-width: 0 calc(2 / 14 * 1rem);
-  padding: 0 calc(1rem - 2 / 14 * 1rem);
+  border-width: 0 calc(2 / 13 * 1rem);
+  padding: 0 calc(1rem - 2 / 13 * 1rem);
   height: revert;
   overflow-y: revert;
 }

@@ -49,9 +49,9 @@ p.horizontal {
 /* TODO: blockquote > p 以外の構造でもうまく動くようにする? */
 :--blockquote.horizontal {
   margin: 0 1em; /* ./reset.css */
-  border-width: calc(2 / 14 * 1rem) 0;
-  /* padding: calc(1rem - 2 / 14 * 1rem) 0; */
-  padding: calc(0.5rem - 2 / 14 * 1rem) 0; /* TODO: CSS Inline Layout Module Level 3 の leading-trim が十分実装されたら元に戻す。 */
+  border-width: calc(2 / 13 * 1rem) 0;
+  /* padding: calc(1rem - 2 / 13 * 1rem) 0; */
+  padding: calc(0.5rem - 2 / 13 * 1rem) 0; /* TODO: CSS Inline Layout Module Level 3 の leading-trim が十分実装されたら元に戻す。 */
   box-sizing: border-box;
   width: revert;
   height: 100%;

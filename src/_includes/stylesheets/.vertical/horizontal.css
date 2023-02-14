@@ -49,8 +49,8 @@ p.vertical {
 /* TODO: blockquote > p 以外の構造でもうまく動くようにする? */
 :--blockquote.vertical {
   margin: 1em 0; /* ./reset.css */
-  border-width: 0 calc(2 / 14 * 1rem);
-  padding: 0 calc(1rem - 2 / 14 * 1rem);
+  border-width: 0 calc(2 / 13 * 1rem);
+  padding: 0 calc(1rem - 2 / 13 * 1rem);
   box-sizing: border-box;
   width: 100%;
   height: revert;
