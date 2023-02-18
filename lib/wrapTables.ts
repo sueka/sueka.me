@@ -1,6 +1,4 @@
-import jsdom from 'https://jspm.dev/jsdom@20.0.1'
-import type { Page } from 'lume/core.ts'
-
+import { Page, jsdom } from '../deps.ts'
 import html from './html.ts'
 
 export default function wrapTables(page: Page) {

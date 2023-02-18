@@ -18,8 +18,8 @@ jobs:
         with:
           # See also https://deno.land/manual@v1.25.4/linking_to_external_code
           path: ~/.cache/deno
-          # Run `deno cache --unstable --lock=lock.json --lock-write deps.ts` to keep lock.json up-to-date
-          key: ${{ hashFiles('lock.json') }}
+          # Run `deno task serve` to keep deno.lock up-to-date
+          key: ${{ hashFiles('deno.lock') }}
       - name: Build
         env:
           TZ: Asia/Tokyo

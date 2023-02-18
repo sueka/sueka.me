@@ -592,12 +592,6 @@
     "https://deno.land/x/date_fns@v2.22.1/locale/en-US/_lib/localize/index.js": "623f4a38b01dcdca56d1dfce7aa886b67560902f8b4fcb0e5d57f896fe438b0b",
     "https://deno.land/x/date_fns@v2.22.1/locale/en-US/_lib/match/index.js": "2c34feeac250cdf789df040d4946cd083e5d76220272c8eb604b91b964639830",
     "https://deno.land/x/date_fns@v2.22.1/locale/en-US/index.js": "0f8be92f548a2141d7d75d7d538576ef1b0fc528d31f5916bf2105b57bb8b554",
-    "https://deno.land/x/date_fns@v2.22.1/locale/ja/_lib/formatDistance/index.js": "3c6f589a5fc6caad41163a90cf91d66af9b671d7e9235fcf3efa886c35f5b268",
-    "https://deno.land/x/date_fns@v2.22.1/locale/ja/_lib/formatLong/index.js": "31cec3214f3c45159973fa4f98c03e441ae864ca772939286a27b1e53a8f157c",
-    "https://deno.land/x/date_fns@v2.22.1/locale/ja/_lib/formatRelative/index.js": "706ec3eceb75bd261cab060f2b5416d42206e38ddb5e07162f503cffe487b865",
-    "https://deno.land/x/date_fns@v2.22.1/locale/ja/_lib/localize/index.js": "15bbff1c820dcc3d7c07fb22b54d3b30cdedec5f43196a6ae6673cd467128cdd",
-    "https://deno.land/x/date_fns@v2.22.1/locale/ja/_lib/match/index.js": "33f494fe6f87c0bc7923842585372edf17e07ba342f35370953613892c5401eb",
-    "https://deno.land/x/date_fns@v2.22.1/locale/ja/index.js": "2878d0be315c85a999577a9134e9f57de5d25722abc62a09e9fd9d50a2496d37",
     "https://deno.land/x/date_fns@v2.22.1/parseISO/index.js": "e024db1aa7b8b6f73c5166e0a9ce7667d496ce2a8316029c0770efd7e850cad8",
     "https://deno.land/x/date_fns@v2.22.1/subMilliseconds/index.ts": "9320b22b3ee1630654bd3376f738e5413ec9ec4d4b22cf6e4b751c92ef30f828",
     "https://deno.land/x/date_fns@v2.22.1/toDate/index.ts": "212facd1ac2edfca2a84430dad7d96c2b65509643b9d2cd40b4f1c92a6e58aef",
@@ -1306,6 +1300,7 @@
   },
   "npm": {
     "specifiers": {
+      "date-fns@^2.22.1": "date-fns@2.29.3",
       "highlight.js@11.6.0": "highlight.js@11.6.0",
       "markdown-it-attrs@4.1.3": "markdown-it-attrs@4.1.3",
       "markdown-it-deflist@2.1.0": "markdown-it-deflist@2.1.0",
@@ -1316,6 +1311,10 @@
     "packages": {
       "argparse@2.0.1": {
         "integrity": "sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==",
+        "dependencies": {}
+      },
+      "date-fns@2.29.3": {
+        "integrity": "sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==",
         "dependencies": {}
       },
       "entities@2.1.0": {
