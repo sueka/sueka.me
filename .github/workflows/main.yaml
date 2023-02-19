@@ -18,7 +18,7 @@ jobs:
         with:
           # See also https://deno.land/manual@v1.29.4/tools/dependency_inspector#cache-location
           path: ~/.cache/deno
-          # Run `deno task serve` to keep deno.lock up-to-date
+          # Run `deno cache --reload --lock=deno.lock --lock-write deps.ts && deno task serve` to keep deno.lock up-to-date
           key: ${{ hashFiles('deno.lock') }}
       - name: Build
         env:
