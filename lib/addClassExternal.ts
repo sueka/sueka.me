@@ -11,7 +11,7 @@ export default function externalLink(page: Page) {
   const links = document.querySelectorAll('a:any-link')
 
   for (const link of links) {
-    if (internalPat.test(link.href)) {
+    if (internalPat.test(link.getAttribute('href'))) {
       continue;
     }
 
