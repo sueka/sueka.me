@@ -1,9 +1,8 @@
-import { jsdom } from '../deps.ts'
+import { DOMParser } from '../deps.ts'
 
 export default function getIncipit(safeContent: string) {
-  const dom = new jsdom.JSDOM(safeContent)
-
-  const incipit = dom.window.document.querySelector('.incipit').textContent
+  const document = new DOMParser().parseFromString(safeContent, 'text/html')!
+  const incipit = document.querySelector('.incipit').textContent
 
   return incipit
 }

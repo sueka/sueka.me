@@ -1,4 +1,4 @@
-import { Page, parse, jsdom } from '../deps.ts'
+import { DOMParser, Page, parse } from '../deps.ts'
 import html from './html.ts'
 
 const data = parse(await Deno.readTextFile('./src/_data/site.yaml'))
@@ -7,8 +7,8 @@ const data = parse(await Deno.readTextFile('./src/_data/site.yaml'))
 const internalPat = RegExp(`^(${ data.url.replace('.', '\\.') }\\b|/|\\.|(|about:blank)(\$|#))`)
 
 export default function externalLink(page: Page) {
-  const dom = new jsdom.JSDOM(page.content)
-  const links = dom.window.document.querySelectorAll('a:any-link')
+  const document = new DOMParser().parseFromString(page.content, 'text/html')!
+  const links = document.querySelectorAll('a:any-link')
 
   for (const link of links) {
     if (internalPat.test(link.href)) {
@@ -19,7 +19,7 @@ export default function externalLink(page: Page) {
   }
 
   page.content = html`
-    ${ dom.window.document.doctype }
-    ${ dom.window.document.documentElement.outerHTML }
+    ${ document.doctype }
+    ${ document.documentElement.outerHTML }
   `
 }

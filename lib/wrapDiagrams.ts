@@ -1,18 +1,18 @@
-import { Page, jsdom } from '../deps.ts'
+import { Page, DOMParser } from '../deps.ts'
 import html from './html.ts'
 
 export default function wrapDiagrams(page: Page) {
-  const dom = new jsdom.JSDOM(page.content)
+  const document = new DOMParser().parseFromString(page.content, 'text/html')!
   const figures =
-    [...dom.window.document.querySelectorAll('figure')]
+    [...document.querySelectorAll('figure')]
     .filter(_ => _.querySelector(':scope > .mermaid') !== null)
-  const mermaids = dom.window.document.querySelectorAll('.mermaid')
+  const mermaids = document.querySelectorAll('.mermaid')
   const diagrams = [...figures, ...mermaids]
-  // const diagrams = dom.window.document.querySelectorAll('figure:has(> .mermaid), :not(figure) > .mermaid')
+  // const diagrams = document.querySelectorAll('figure:has(> .mermaid), :not(figure) > .mermaid')
 
   for (const diagram of diagrams) {
     const diagramClone = diagram.cloneNode(true)
-    const wrapper = dom.window.document.createElement('div')
+    const wrapper = document.createElement('div')
 
     wrapper.className = 'diagram-wrapper'
     wrapper.append(diagramClone)
@@ -21,7 +21,7 @@ export default function wrapDiagrams(page: Page) {
   }
 
   page.content = html`
-    ${ dom.window.document.doctype }
-    ${ dom.window.document.documentElement.outerHTML }
+    ${ document.doctype }
+    ${ document.documentElement.outerHTML }
   `
 }
