@@ -15,8 +15,5 @@ export default function wrapTables(page: Page) {
     table.replaceWith(wrapper)
   }
 
-  page.content = html`
-    ${ document.doctype }
-    ${ document.documentElement.outerHTML }
-  `
+  page.content = html(document.doctype, document.documentElement.outerHTML)
 }

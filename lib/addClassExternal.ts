@@ -18,8 +18,5 @@ export default function externalLink(page: Page) {
     link.classList.add('external')
   }
 
-  page.content = html`
-    ${ document.doctype }
-    ${ document.documentElement.outerHTML }
-  `
+  page.content = html(document.doctype, document.documentElement.outerHTML)
 }

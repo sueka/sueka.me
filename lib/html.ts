@@ -22,6 +22,6 @@ function tag(doctype: DocType) {
   return `<${ tagBuilder.join(' ') }>`
 }
 
-export default function html(_strings: TemplateStringsArray, doctype: DocType, content: string) {
+export default function html(doctype: DocType, content: string) {
   return tag(doctype) + '\n' + content
 }

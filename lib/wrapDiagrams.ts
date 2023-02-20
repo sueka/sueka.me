@@ -20,8 +20,5 @@ export default function wrapDiagrams(page: Page) {
     diagram.replaceWith(wrapper)
   }
 
-  page.content = html`
-    ${ document.doctype }
-    ${ document.documentElement.outerHTML }
-  `
+  page.content = html(document.doctype, document.documentElement.outerHTML)
 }
