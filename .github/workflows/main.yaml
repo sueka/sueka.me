@@ -25,10 +25,7 @@ jobs:
       - name: Build
         env:
           TZ: Asia/Tokyo
-        run: |
-          timeout 60s deno task lume --quiet
-          exit_status=$?
-          (( $exit_status == 0 )) || (( $exit_status == 124 ))
+        run: deno task build
         shell: bash -o pipefail {0}
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v1
