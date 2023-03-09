@@ -1,7 +1,7 @@
 ---
 title: VS Code のユーザー設定
 date: 2023-01-04
-lastmod: 2023-01-05
+lastmod: 2023-03-09
 ---
 
 先日、多分元日、はてなブックマークで、[VScodeの設定（settings.json）まとめ【<span class="upright">2023</span>年<span class="upright">1</span>月更新】](https://zenn.dev/sayuki_coding/articles/c389d9ad48feaa)なる記事を見た。[settings]{lang=en} か [setting]{lang=en} かなどゞうでもよい[^1]けれど、蓋し VS Code の設定で最も重大なのは以下の項目だらう。誤解のないやうに明記すると、リンク先の記事は、ツールとしての VS Code の設定について、誰にでも馴染むものではないにせよ、丁寧に記述された、良い記事だと思ふ。
@@ -32,11 +32,11 @@ CSV のやうな例外は個別に設定してもよいが、ほとんどの場�
 "files.autoSave": "onFocusChange",
 ```
 
-[^2]: 以前はあったが、SaaS が増えてきたのでやめた。
+[^2]: 以前はあったが、SaaS が増えてきたのでやめた。ブラウザー上で動作する SaaS で <kbd>⌘ S</kbd> あるいは <kbd>^ S</kbd> とすると、ウェブページを保存しようとしてしまふ。
 
 ## エクスプローラー
 
-Unicode 順に竝べ替へる。README や COPYING をかうしたのはこのためだったはずだ。また、結果として GitHub と同じ順で表示されることにもなる:
+Unicode 順に竝べ替へる。README や COPYING をかうしたのはこのためだったはずだ。結果として、GitHub と同じ順で表示されることにもなる:
 
 ``` json
 "explorer.sortOrderLexicographicOptions": "unicode",

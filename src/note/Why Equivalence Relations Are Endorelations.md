@@ -1,7 +1,7 @@
 ---
 title: なぜ同値関係は自己関係なのか
 date: 2022-09-07
-lastmod: 2023-01-31
+lastmod: 2023-03-09
 writing: horizontal
 templateEngine: njk, md
 ---
@@ -77,7 +77,7 @@ templateEngine: njk, md
       V97 --> Ae1897
       V97 --> Ae1997
   </pre>
-  <figcaption><q><span class="upright">2</span>桁の数値として一世紀以上の期間の暦年を表現している型</q></figcaption>
+  <figcaption><span class="upright">2</span>桁の数値として一世紀以上の期間の暦年を表現する型</figcaption>
 </figure>
 
 値の集合が {𝑎, 𝑏, 𝑐}、抽象実体の集合が {𝜈<sub>1</sub>, 𝜈<sub>2</sub>} をそれぞれ含み、値の集合と抽象実体の集合上の二項関係が {(𝑎, 𝜈<sub>1</sub>), (𝑏, 𝜈<sub>1</sub>), (𝑏, 𝜈<sub>2</sub>), (𝑐, 𝜈<sub>2</sub>)} を含むやうな型[^11]を考へる。このとき、𝑎 と 𝑏、𝑏 と 𝑐 はそれぞれ同じ解釈を持つから等価だが、𝑎 と 𝑐 は同じ解釈を持たないから等価ではない。よって、*等価性は、同値関係とは異なり、推移律を要求しない*[^3]。
