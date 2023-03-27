@@ -88,8 +88,8 @@ CREATE EXTENSION cube;
 
   とでもすべきだったと思ふ。*集合の分割*は次の性質を持つ:
 
-  - 空集合を含まない。
-  - 分割前の集合の被覆である。
+  - 空集合を含まず、
+  - 分割前の集合の被覆であり、
   - [pairwise disjoint]{lang=en} である。
 
   <ruby>結果集合<rt lang="en">the result set</ruby>といふのは恐らく、`FROM` 句や `WHERE` 句などの結果のことだらう。

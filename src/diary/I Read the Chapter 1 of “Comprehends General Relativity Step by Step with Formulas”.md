@@ -130,7 +130,7 @@ useKaTeX: true
   = \\frac{\\partial}{\\partial t} \\frac{\\partial}{\\partial u} f(\\boldsymbol{y}, u) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\\\
   $$
 
-  \\( \\frac{\\partial}{\\partial t} \\frac{\\partial}{\\partial u} f(\\boldsymbol{y}, u) \\) と \\( \\frac{\\partial}{\\partial u} \\frac{\\partial}{\\partial t} f(\\boldsymbol{y}, u) \\) が共に連続であると仮定する[^4]と、
+  \\( \\frac{\\partial}{\\partial t} \\frac{\\partial}{\\partial u} f(\\boldsymbol{y}, u) \\) と \\( \\frac{\\partial}{\\partial u} \\frac{\\partial}{\\partial t} f(\\boldsymbol{y}, u) \\) が共に連続だと仮定する[^4]と、
 
   $$
   \\begin{aligned}
