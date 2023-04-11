@@ -78,21 +78,26 @@ CREATE EXTENSION cube;
   > We like to think of `PARTITION BY` as akin to `GROUP BY`, but rather than grouping the results outside of the `SELECT` attribute list (and thus combining the results into fewer rows), it returns grouped values as any other field (calculating on the grouped variable but otherwise just another attribute). Or in *SQL* parlance, ==it returns the results of an aggregate function `OVER` a `PARTITION` of the result set==.
   {lang=en}
 
-  だった。最後の文の<q lang="en">OVER</q>は前置詞として使はれてをり、<q lang="en">PARTITION</q>にもわざわざ不定冠詞が付けてあった。それなら、[マーク]{.mark-like}した部分の訳は、
+  だった。<q lang="en">OVER</q>が前置詞として使はれてゐることや、<q lang="en">PARTITION</q>にもわざわざ不定冠詞が付けてあることから考へると、[マーク]{.mark-like}した部分の訳は、
 
   <div class="blockquote-like">
 
-    結果集合の<ruby>分割<rt lang="en">PARTITION</ruby><ruby>全体に亙って<rt lang="en">OVER</ruby>集約関数を適用した結果を返す
+    結果集合の<ruby>分割<rt lang="en">PARTITION</ruby>[^7]<ruby>全体に亙って<rt lang="en">OVER</ruby>集約関数を適用した結果を返す
 
   </div>
 
-  とでもすべきだったと思ふ。*集合の分割*は次の性質を持つ:
+  [^7]:
+      *集合の分割*とは、
 
-  - 空集合を含まず、
-  - 分割前の集合の被覆であり、
-  - [pairwise disjoint]{lang=en} である。
+      - 空集合を含まず、
+      - 分割前の集合の被覆であり、
+      - [pairwise disjoint]{lang=en} である
 
-  <ruby>結果集合<rt lang="en">the result set</ruby>といふのは恐らく、`FROM` 句や `WHERE` 句などの結果のことだらう。
+      やうな集合族のことである。集合の被覆は、こゝでは、その集合の部分集合族であって、その族の和集合が元の集合と*一致*するものを言ふ。
+
+  とでもすべきだったと思ふ。
+
+  <ruby>結果集合<rt lang="en">the result set</ruby>といふのは恐らく、`FROM` 句や `WHERE` 句などの結果のことだと思ふ。
 - `createlang` は PostgreSQL 9.1 で非推奨になり、10 で廃止された。p.28 では `createlang book --list` の代はりに `psql book -c \\dL` を使った。
 - PostgreSQL 9.3 では<i>自動的に更新可能な VIEW</i> が導入された。[リリースノート](https://www.postgresql.org/about/news/postgresql-93-released-1481/)。[CREATE VIEW](https://www.postgresql.org/docs/14/sql-createview.html#SQL-CREATEVIEW-UPDATABLE-VIEWS) には、
 
