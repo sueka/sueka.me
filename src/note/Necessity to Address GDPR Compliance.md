@@ -1,7 +1,7 @@
 ---
 title: GDPR 対応の必要性
 date: 2022-08-27
-lastmod: 2022-09-21
+lastmod: 2023-05-22
 ---
 
 ## TL;DR
@@ -16,9 +16,9 @@ lastmod: 2022-09-21
 
 場合は、GDPR に関して、何らかの対策を講ずる必要がある。
 
----
+## 十分性認定
 
-日本[^1]は EU と相互認証してゐる。[Adequacy decisions | European Commission](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en){lang=en} には次のやうにある[^2]:
+日本[^1]は EU と相互認証してゐる。EU から日本への移転については、[Adequacy decisions | European Commission](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en){lang=en} に次のやうにある[^2]:
 
 [^1]: この記事では日本と EU の関係だけに集中する。
 [^2]: LED は、<ruby>決定<rt lang="en">Decision</ruby> (EU) 2021/1772 と合はせて、EU がイギリスの十分性認定を行ふものである。
@@ -41,9 +41,15 @@ lastmod: 2022-09-21
 </blockquote>
 +++
 
+日本から EU への移転については、平成[31]{.tate-chu-yoko}年個人情報保護委員会告示第[1]{.upright}号による。この告示は<i>個人情報保護法施行規則[15]{.tate-chu-yoko}条[1]{.upright}項の各号のいづれにも該当する外国等</i>を定めるものであり、同条は
+
+> 第十五条　==法第二十八条==第一項の規定による個人情報の保護に関する制度を有している外国として……
+
+としてゐることに注意。個人情報保護法[71]{.tate-chu-yoko}条の規定には係らず、したがって、日本の行政機関から EU への個人データの移転は、十分性認定の枠組みでは認められてゐない。逆（[公共部門団体への移転](#公共部門団体への移転)）も同様。
+
 たゞし、EU[^3] 域内で取得した個人データが無条件に日本に<ruby>移転<rt lang="en">Transfer</ruby>できるわけではない[^4]。[Commission Implementing Decision (EU) 2019/419](https://eur-lex.europa.eu/eli/dec_impl/2019/419/oj){lang=en} リサイタル[4]{.upright}には次のやうにある（脚注は省略した。）:
 
-[^3]: 右引用に倣って、この記事では、地域について言ふときは、クロアチアを含む EU 加盟国[27]{.tate-chu-yoko}か国、およびスイスを除く EFTA 加盟国[3]{.upright}か国、合はせて[30]{.tate-chu-yoko}か国を差して「EU」と言ふ。
+[^3]: 右引用に倣って、この記事では、地域について言ふときは、クロアチアを含む EU 加盟国[27]{.tate-chu-yoko}か国、およびスイスを除く EFTA 加盟国[3]{.upright}か国、合はせて[30]{.tate-chu-yoko}か国を差して「EU」と言ふ。なほ、クロアチアは、[2014]{.upright}年から EEA を暫定的に適用してゐるが、EEA 加盟国ではない。
 [^4]: カナダと同じやうに「[\(private-sector organisations\)]{lang=en}」などゝ付記した方が良いと思ふ。
 
 <div class="blockquote-like">
@@ -84,7 +90,7 @@ EU 域内から日本の行政機関や独立行政法人等への移転は、<i
 </blockquote>
 +++
 
-とあり、個人情報の保護に関する法律[16]{.tate-chu-yoko}条[2]{.upright}項には、
+とあり、個人情報保護法[16]{.tate-chu-yoko}条[2]{.upright}項には、
 
 > この章及び第六章から第八章までにおいて「個人情報取扱事業者」とは、個人情報データベース等を事業の用に供している者をいう。ただし、次に掲げる者を除く。
 >
@@ -101,7 +107,9 @@ EU 域内から日本の行政機関や独立行政法人等への移転は、<i
 
 [^7]: [法令｜デジタル庁](https://www.digital.go.jp/laws/)も参照。
 
-また、<i>決定</i>リサイタル[181]{.upright}は、発効後[2]{.upright}年以内に最初のレビューを行ひ、その後は少なくとも[4]{.upright}年ごとにレビューを行ふとした。最初のレビューは[2021]{.upright}年[10]{.tate-chu-yoko}月[26]{.tate-chu-yoko}日に行はれた。
+また、<i>決定</i>リサイタル[181]{.upright}は、発効後[2]{.upright}年以内に最初のレビューを行ひ、その後は少なくとも[4]{.upright}年ごとにレビューを行ふとしてゐる。最初のレビュー会合は、オンラインで、[2021]{.upright}年[10]{.tate-chu-yoko}月[26]{.tate-chu-yoko}日に行はれた[^8]。
+
+[^8]: [Joint statement](https://ec.europa.eu/newsroom/just/items/724795/en){lang=en}
 
 <i>整備法</i>[50]{.tate-chu-yoko}条は、<i>最初のレビュー</i>の[5]{.upright}か月後に施行されたゝめ、<i>決定</i>にはまだ反映されてゐない。[3]{.upright}年後のレビューでは、この改正についても議論されるだらう[^6]。
 
@@ -124,15 +132,19 @@ EU 域内から日本の行政機関や独立行政法人等への移転は、<i
 
     とある。
 
+[2023]{.upright}年[4]{.upright}月[4]{.upright}日に行はれたレビュー会合では、左整備法[50]{.tate-chu-yoko}条の施行など（同法[51]{.tate-chu-yoko}条の施行なども考慮された。）を受けて、EU から日本への十分性認定の範囲を学術研究分野や公的部門などに拡大する可能性を模索することで合意された[^9]。
+
+[^9]: [Joint Press Statement](https://commission.europa.eu/news/joint-press-statement-conclusion-first-review-japan-eu-mutual-adequacy-arrangement-2023-04-04_en){lang=en}
+
 ## 追加条件
 
 <i>追加条件</i>については、個人情報保護委員会が附属書 I の日本語版と附属書 II の参考仮訳を公開してゐる:
 
 附属書 I
-: [個人情報の保護に関する法律に係る EU 域内及び英国から十分性認定により移転を受けた個人データの取扱いに関する補完的ルール (PDF)](https://www.ppc.go.jp/files/pdf/Supplementary_Rules.pdf)
+: [個人情報の保護に関する法律に係る EU 域内及び英国から十分性認定により移転を受けた個人データの取扱いに関する補完的ルール \(PDF\)](https://www.ppc.go.jp/files/pdf/Supplementary_Rules.pdf)
 
 附属書 II
-: [法執行及び国家安全保障目的の日本の公的機関による個人情報の収集及び使用 (PDF)](https://www.ppc.go.jp/files/pdf/kariyaku_government_access.pdf)
+: [法執行及び国家安全保障目的の日本の公的機関による個人情報の収集及び使用 \(PDF\)](https://www.ppc.go.jp/files/pdf/kariyaku_government_access.pdf)
 
 ---
 
