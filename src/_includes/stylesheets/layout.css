@@ -515,7 +515,7 @@ figure:has(> .mermaid),
   writing-mode: horizontal-tb;
 }
 
-/* .mermaid >  */svg {
+.mermaid > svg {
   display: block;
   height: auto;
   width: auto;
