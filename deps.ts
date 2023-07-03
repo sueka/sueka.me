@@ -7,7 +7,7 @@ export { default as date } from 'lume/plugins/date.ts'
 export { default as postcss } from 'lume/plugins/postcss.ts'
 export { default as relativeUrls } from 'lume/plugins/relative_urls.ts'
 export { default as slugifyUrls } from 'lume/plugins/slugify_urls.ts'
-export { parse } from 'https://deno.land/std/encoding/yaml.ts'
+export { parse } from 'https://deno.land/std@0.183.0/encoding/yaml.ts' // FIXME
 export { default as ja } from 'https://deno.land/x/date_fns@v2.22.1/locale/ja/index.js'
 // export { default as csso } from 'https://esm.sh/postcss-csso'
 export { default as postcssHasPseudo } from 'https://jspm.dev/css-has-pseudo/postcss'
