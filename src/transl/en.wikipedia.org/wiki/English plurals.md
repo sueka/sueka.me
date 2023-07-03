@@ -1,7 +1,7 @@
 ---
 title: 『English Plurals - Wikipedia』の日本語訳
 date: 2022-12-26
-lastmod: 2023-02-10
+lastmod: 2023-07-03
 writing: horizontal
 templateEngine:
   - njk
@@ -207,7 +207,7 @@ templateEngine:
 - <i lang="en">squid</i>
 - <i lang="en">trout</i>
 
-一般的な規則として、スポーツの文脈では、狩猟鳥獣その他の動物はしばしば、単数形で複数形に言及される。例へば、<wbr>[“He shot six brace of pheasant”]{lang=en}、<wbr>[“Carruthers bagged a dozen tiger last year”]{lang=en}。しかし、動物学や観光のやうな別の文脈では、規則的な複数形が使用される。[エリック・パートリッジ](https://en.wikipedia.org/wiki/Eric_Partridge)は、これらのスポーツ用語を「<ruby>通ぶった複数形<rt lang="en">snob plurals</ruby>」と呼び、一般的な英語の不規則な複数形の動物の単語である <i>[dear]{lang=en}</i>、<wbr><i>[sheep]{lang=en}</i> または <i>[trout]{lang=en}</i> からの類推によって発展した可能性があると推測してゐる。ほとんど全ての種類の魚も同じく、異なる複数形を持たない。（たゞし、<wbr>[rays]{lang=en}、<wbr>[sharks]{lang=en}、<wbr>[lampreys]{lang=en} のやうな例外もある。）[ ]{.upright}<i lang="en">fish</i> といふ単語自体については、複数形は、通常は単数形と同一だが、とくに「魚の<ruby>種<rt>しゅ</ruby>」を意味するときは <i lang="en">fishes</i> が使はれることもある。<i lang="en">fishes</i> はまた、聖書のパンと魚の物語や、『ゴッドファーザー』の台詞、<wbr>[“Luca Brasi sleeps with the fishes.”]{lang=en} のやうな象徴的な文脈でも使はれる。魚の名前の複数形は、語尾に [-s]{lang=en} を付けるか、単数形と同じかである。
+一般的な規則として、スポーツの文脈では、狩猟鳥獣その他の動物はしばしば、単数形で複数形に言及される。例へば、<wbr>[“He shot six brace of pheasant”]{lang=en}、<wbr>[“Carruthers bagged a dozen tiger last year”]{lang=en}。しかし、動物学や観光のやうな別の文脈では、規則的な複数形が使用される。[エリック・パートリッジ](https://en.wikipedia.org/wiki/Eric_Partridge)は、これらのスポーツ用語を「<ruby>通ぶった複数形<rt lang="en">snob plurals</ruby>」と呼び、一般的な英語の不規則な複数形の動物の単語である <i>[dear]{lang=en}</i>、<wbr><i>[sheep]{lang=en}</i> または <i>[trout]{lang=en}</i> からの類推によって発展した可能性があると推測してゐる。ほとんど全ての種類の魚も同じく、異なる複数形を持たない。（たゞし、<wbr>[rays]{lang=en}、<wbr>[sharks]{lang=en}、<wbr>[lampreys]{lang=en} のやうな例外もある。）[ ]{.upright}<i lang="en">fish</i> といふ単語自体については、複数形は、通常は単数形と同一だが、とくに「魚類の<ruby>種<rt>しゅ</ruby>」を意味するときは <i lang="en">fishes</i> が使はれることもある。<i lang="en">fishes</i> はまた、聖書のパンと魚の物語や、『ゴッドファーザー』の台詞、<wbr>[“Luca Brasi sleeps with the fishes.”]{lang=en} のやうな象徴的な文脈でも使はれる。魚の名前の複数形は、語尾に [-s]{lang=en} を付けるか、単数形と同じかである。
 
 同一の単数形と複数形を持つ他の名詞には、次のものが含まれる:
 
@@ -307,7 +307,7 @@ templateEngine:
 
 英語は、古典ラテン語と古代ギリシア語から非常に多くの単語を借用してゐる。古典ラテン語には、名詞、形容詞および代名詞に[5]{.upright}つの分類または格変化（一部は副分類を含む。）がある、非常に複雑な語尾の体系がある。通常、ラテン語から単語を借用する場合、主格の語尾が使はれる。<wbr><i lang="en">-a</i> で終はる単数主格を持つ名詞（第一格変化）は <i lang="en">-ae</i> で終はる複数形を持ち（<i lang="en">anima</i>、<i lang="en">animae</i>）、<wbr><i lang="en">-m</i> で終はる単数主格を持つ名詞（中性、第二格変化）は <i lang="en">-a</i> で終はる複数形を持つ（<i lang="en">stadium</i>、<wbr><i lang="en">stadia</i>[、]{.shiroten}<wbr><i lang="en">datum</i>、<wbr><i lang="en">data</i>）。（完全な取り扱ひについては、[ラテン語の格変化](https://en.wikipedia.org/wiki/Latin_declensions)を見よ。）
 
-古代ギリシア語には、［古典ラテン語と比較すると］よりシンプルだが、英語のそれよりはやはり複雑な体系がある。英語にある、ギリシア語からの借用語は、古アテナイ方言（プラトン、アリストテレスその他の偉大な作家の<ruby>アテナイのギリシア語<rt lang="en">the Athenian Greek</ruby>）からのものであり、デモティキ、コイネー（聖書ギリシア語）および現代ギリシア語からのものではないことに注意すること。これは、古アテナイ方言が西ヨーロッパの学級で教へられてゐたものであり、したがって、単語を借用する人が知ってゐるギリシア語だったからである。
+古代ギリシア語には、［古典ラテン語と比較すると］よりシンプルだが、英語のそれよりはやはり複雑な体系がある。英語にある、ギリシア語からの借用語は、アッティカ方言（プラトン、アリストテレスその他の偉大な作家の<ruby>アテナイのギリシア語<rt lang="en">the Athenian Greek</ruby>）からのものであり、デモティキ、コイネー（聖書ギリシア語）および現代ギリシア語からのものではないことに注意すること。これは、アッティカ方言が西ヨーロッパの学級で教へられてゐたものであり、したがって、単語を借用する人が知ってゐるギリシア語だったからである。
 
 ###### <ruby>英語化<rt lang="en">Anglicisation</ruby>
 
@@ -942,4 +942,3 @@ templateEngine:
   - かういふ場合、既存の項目を発展させるべきだと考へてゐます。
   - これらの記事には独自の記述もあります。例へば、個数の絶対値が[1]{.upright}未満であっても単数形が文法的な場合があるといふことは、[English plurals](https://en.wikipedia.org/wiki/English_plurals){lang=en} からは読み取れません。
 - [English plurals](https://en.wikipedia.org/wiki/English_plurals){lang=en} の内容は、英語話者にとっては百科事典的だが、さうでない人にとっては教科書的なものに見える。
-- 原文を紙幅を割かずに併記したい。
