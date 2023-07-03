@@ -1,7 +1,7 @@
 ---
 title: 『English Plurals - Wikipedia』の日本語訳
 date: 2022-12-26
-lastmod: 2023-07-03
+lastmod: 2023-07-04
 writing: horizontal
 templateEngine:
   - njk
@@ -315,7 +315,7 @@ templateEngine:
 
 この形式の選択は文脈に依存することがよくある。例へば、人文系の学者にとっては、<wbr><i lang="en">appendix</i> の複数形は（元の言語に従って）<wbr><i lang="en">appendices</i> だが、一部の医師にとっては、<wbr><i lang="en">appendix</i> の複数形は <i lang="en">appendixes</i> である。同様に、無線従事者やレーダーエンジニアは<i><ruby>アンテナ<rt lang="en">antennas</ruby></i>を使って仕事をするが、昆虫学者は<i><ruby>触角<rt lang="en">antennae</ruby></i>を扱ふ。この形式の選択は談話のレベルにも依存する。学術的な、あるいは科学的な文脈では、伝統的なラテン語の複数形の方が多く見られるが、日常会話では、英語化された形式の方が一般的である。次の表では、英語化された形式の方が一般的な場合はその形式とゝもに、ラテン語の複数形が列挙されてゐる。
 
-［ラテン語由来の名詞について、］ラテン語の発音の<ruby>活用<rt lang="en">paradigms</ruby>が異なると、当該名詞の数や性に関する混乱を招くことがある。ラテン語の名詞は、科学的、医学的および法的な文脈を含む英語で伝統的に使はれてゐるため、綴りに関しては古典的な屈折を維持するが、それらの屈折は英語化された発音を使ふ。例へば、［触角を扱ふ］昆虫学者は、<wbr><i lang="en">antennae</i> を [/ænˈtɛni/]{.ipa} と発音する。これは、古典ラテン語の発音 [/ænˈtɛnaɪ/]{.ipa} をよく知ってゐる人を混乱させる可能性がある。<wbr><i lang="en">alumni</i><wbr>（男性複数）や <i lang="en">alumnae</i><wbr>（女性複数）といった単語は、<wbr><i lang="en">alumni</i> の英語化された発音が古典ラテン語の <i lang="la">alumnae</i> の発音と同じやうに聞こえることから、この点で悪名高い。
+［ラテン語由来の名詞について、］ラテン語の発音の<ruby>活用<rt lang="en">paradigms</ruby>が異なると、当該名詞の数や性に関する混乱を招くことがある。ラテン語の名詞は、科学的、医学的および法的な文脈を含む英語で伝統的に使はれてゐるため、綴りに関しては古典的な屈折を維持するが、それらの屈折は英語化された発音を使ふ。例へば、［触角を扱ふ］昆虫学者は、<wbr><i lang="en">antennae</i> を [/ænˈtɛni/]{.ipa} と発音する。このことは、古典ラテン語の発音 [/ænˈtɛnaɪ/]{.ipa} をよく知ってゐる人を混乱させる可能性がある。<wbr><i lang="en">alumni</i> の英語化された発音は古典ラテン語の <i lang="la">alumnae</i> の発音と同じやうに聞こえるため、<wbr><i lang="en">alumni</i><wbr>（男性複数）や <i lang="en">alumnae</i><wbr>（女性複数）といった単語は、この［訳注　上で説明されたやうな混乱を招くことがあるといふ］点で悪名高い。
 
 これらの複数形の多くは <i lang="en">-s</i> で終はらないため、一部が単数形として再解釈されてゐる。とくに <i lang="en">datum</i> や <i lang="en">medium</i><wbr>（「[medium of communication]{lang=en}」に見られる。）といった単語［がさうである］。元の複数形である <i lang="en">data</i> や <i lang="en">media</i> は、今日では、多くの文脈で、一部の人々によって不可算名詞の単数形として使はれてゐる。例へば、<wbr>[“The media is biased”]{lang=en}、<wbr>[“This data shows us that ...”]{lang=en}。（たゞし、多くの科学者、とくにイギリス出身の科学者は、今日でも [“These data show us that ...”]{lang=en} と言ふ。）[ ]{.upright}詳細は[下](#datum_data)を見よ。<wbr><i lang="en">criteria</i> や <i lang="en">phenomena</i> のやうな単語も同様に、一部の話者によって単数として使はれることがあるが、これは標準的な用法ではまだ正しくないと見做されてゐる。（[下](#phenomenon)を見よ。）
 
