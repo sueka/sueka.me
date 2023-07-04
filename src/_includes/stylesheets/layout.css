@@ -404,6 +404,10 @@ pre {
   }
 }
 
+pre:has(code) {
+  direction: ltr;
+}
+
 code {
   text-orientation: sideways;
 }
