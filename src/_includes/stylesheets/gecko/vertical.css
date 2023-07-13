@@ -10,6 +10,8 @@ kbd {
   display: inline flow-root;
   padding-block: initial;
   line-height: calc(1 + 2 * 0.236068); /* φ⁻³; Hatching height same as layout.css; NOTE: Line that consists only code is thinner. */
+  vertical-align: middle;
+  vertical-align: -moz-middle-with-baseline;
 }
 
 :is(span, i):lang(iu) {
