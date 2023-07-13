@@ -975,7 +975,7 @@ echo "$foo"
 
 は `2` を印字する。
 
-この振る舞ひもかなりやゝこしいので、*特殊ビルトインや関数を実行するときは、そのコマンドで変数代入を行はない*やうにする。POSIX の特殊ビルトインは `.` `:` `break` `continue` `eval` `exec` `exit` `export` `readonly` `return` `set` `shift` `times` `trap` `unset` の[15]{.tate-chu-yoko}個。なほ、`export` や `readonly` の右にあるものは引数であって、変数代入ではない。
+この振る舞ひはかなりやゝこしいので、*特殊ビルトインや関数を実行するときは、そのコマンドで変数代入を行はない*やうにする。POSIX の特殊ビルトインは `.` `:` `break` `continue` `eval` `exec` `exit` `export` `readonly` `return` `set` `shift` `times` `trap` `unset` の[15]{.tate-chu-yoko}個。なほ、`export` や `readonly` の右にあるものは引数であって、変数代入ではない。
 
 ## 単語展開
 
