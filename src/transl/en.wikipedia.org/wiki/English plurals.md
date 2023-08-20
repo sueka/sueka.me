@@ -43,7 +43,7 @@ templateEngine:
 
 ## 意味
 
-<i><ruby>複数<rt lang="en">plural</ruby></i>の日常的な意味は「[1]{.upright}よりも多い」だが、この文法用語にはそれとは少し異なった専門的な意味がある。英語の文法的数の体系では、単数は「[1]{.upright}（またはマイナス[1]{.upright}）」を意味し、複数は「単数でない」を意味する。言ひ換へれば、複数は「[1]{.upright}よりも多い」だけでなく「[1]{.upright}よりも少ない」も意味する。この<ruby>よりも少ない<rt lang="en">less-than</ruby>といふ側面は、<wbr><i lang="en">the temperature is zero degrees</i><wbr>（<i lang="en">*zero degree</i> ではない。）や <i lang="en">0.5 children per woman</i><wbr>（<i lang="en">*0.5 child per woman</i> ではない。）のやうな場合に見られる。
+<i><ruby>複数<rt lang="en">plural</ruby></i>の日常的な意味は「[1]{.upright}よりも多い」だが、この文法用語にはそれとは少し異なった専門的な意味がある。英語の文法的数の<ruby>體<rt>たい</rt>系<rt>けい</ruby>では、単数は「[1]{.upright}（またはマイナス[1]{.upright}）」を意味し、複数は「単数でない」を意味する。言ひ換へれば、複数は「[1]{.upright}よりも多い」だけでなく「[1]{.upright}よりも少ない」も意味する。この<ruby>よりも少ない<rt lang="en">less-than</ruby>といふ側面は、<wbr><i lang="en">the temperature is zero degrees</i><wbr>（<i lang="en">*zero degree</i> ではない。）や <i lang="en">0.5 children per woman</i><wbr>（<i lang="en">*0.5 child per woman</i> ではない。）のやうな場合に見られる。
 
 ## 形式
 
@@ -53,7 +53,7 @@ templateEngine:
 
 #### 歯擦音
 
-英語には[6]{.upright}つの歯擦子音がある。すなはち、<wbr>[/s z ʃ ʒ tʃ dʒ/]{.ipa} である。単数名詞が歯擦音で終はる場合、複数形は [/ɪz/]{.ipa} か [/əz/]{.ipa}（一部の転写体系では [/ᵻz/]{.ipa} と省略される。）を附け加へることで形成される。綴りは <i lang="en">-es</i> か、単数形がすでに <i lang="en">-e</i> で終はってゐるなら <i lang="en">-s</i> を附加する:
+英語には[6]{.upright}つの歯擦子音がある。すなはち、<wbr>[/s z ʃ ʒ tʃ dʒ/]{.ipa} である。単数名詞が歯擦音で終はる場合、複数形は [/ɪz/]{.ipa} か [/əz/]{.ipa}（一部の転写<ruby>體<rt>たい</rt>系<rt>けい</ruby>では [/ᵻz/]{.ipa} と省略される。）を附け加へることで形成される。綴りは <i lang="en">-es</i> か、単数形がすでに <i lang="en">-e</i> で終はってゐるなら <i lang="en">-s</i> を附加する:
 
 |-|-|-
 |[kiss]{lang=en}|[kisses]{lang=en}|[/ˈkɪs<b>ᵻz</b>/]{.ipa}
@@ -207,17 +207,17 @@ templateEngine:
 - <i lang="en">squid</i>
 - <i lang="en">trout</i>
 
-一般的な規則として、スポーツの文脈では、狩猟鳥獣その他の動物はしばしば、単数形で複数形に言及される。例へば、<wbr>[“He shot six brace of pheasant”]{lang=en}、<wbr>[“Carruthers bagged a dozen tiger last year”]{lang=en}。しかし、動物学や観光のやうな別の文脈では、規則的な複数形が使用される。[エリック・パートリッジ](https://en.wikipedia.org/wiki/Eric_Partridge)は、これらのスポーツ用語を「<ruby>通ぶった複数形<rt lang="en">snob plurals</ruby>」と呼び、一般的な英語の不規則な複数形の動物の単語である <i>[dear]{lang=en}</i>、<wbr><i>[sheep]{lang=en}</i> または <i>[trout]{lang=en}</i> からの類推によって発展した可能性があると推測してゐる。ほとんど全ての種類の魚も同じく、異なる複数形を持たない。（たゞし、<wbr>[rays]{lang=en}、<wbr>[sharks]{lang=en}、<wbr>[lampreys]{lang=en} のやうな例外もある。）[ ]{.upright}<i lang="en">fish</i> といふ単語自体については、複数形は、通常は単数形と同一だが、とくに「魚類の<ruby>種<rt>しゅ</ruby>」を意味するときは <i lang="en">fishes</i> が使はれることもある。<i lang="en">fishes</i> はまた、聖書のパンと魚の物語や、『ゴッドファーザー』の台詞、<wbr>[“Luca Brasi sleeps with the fishes.”]{lang=en} のやうな象徴的な文脈でも使はれる。魚の名前の複数形は、語尾に [-s]{lang=en} を付けるか、単数形と同じかである。
+一般的な規則として、スポーツの文脈では、狩猟鳥獣その他の動物はしばしば、単数形で複数形に言及される。例へば、<wbr>[“He shot six brace of pheasant”]{lang=en}、<wbr>[“Carruthers bagged a dozen tiger last year”]{lang=en}。しかし、動物学や観光のやうな別の文脈では、規則的な複数形が使用される。[エリック・パートリッジ](https://en.wikipedia.org/wiki/Eric_Partridge)は、これらのスポーツ用語を「<ruby>通ぶった複数形<rt lang="en">snob plurals</ruby>」と呼び、一般的な英語の不規則な複数形の動物の単語である <i>[dear]{lang=en}</i>、<wbr><i>[sheep]{lang=en}</i> または <i>[trout]{lang=en}</i> からの類推によって発展した可能性があると推測してゐる。ほとんど全ての種類の魚も同じく、異なる複数形を持たない。（たゞし、<wbr>[rays]{lang=en}、<wbr>[sharks]{lang=en}、<wbr>[lampreys]{lang=en} のやうな例外もある。）[ ]{.upright}<i lang="en">fish</i> といふ単語<ruby>自<rt>じ</rt>體<rt>たい</ruby>については、複数形は、通常は単数形と同一だが、とくに「魚類の<ruby>種<rt>しゅ</ruby>」を意味するときは <i lang="en">fishes</i> が使はれることもある。<i lang="en">fishes</i> はまた、聖書のパンと魚の物語や、『ゴッドファーザー』の臺詞、<wbr>[“Luca Brasi sleeps with the fishes.”]{lang=en} のやうな象徴的な文脈でも使はれる。魚の名前の複数形は、語尾に [-s]{lang=en} を付けるか、単数形と同じかである。
 
 同一の単数形と複数形を持つ他の名詞には、次のものが含まれる:
 
-- <i lang="en">craft</i><wbr>（「<ruby>乗り物<rt lang="en">vessel</ruby>」を意味する。）[ ]{.upright}<i lang="en">aircraft</i>、<wbr><i lang="en">watercraft</i>、<wbr><i lang="en">spacecraft</i>、<wbr><i lang="en">hovercraft</i> を含む。（たゞし、技芸を意味する場合、複数形は規則的であり、<wbr><i lang="en">crafts</i> となる。）
+- <i lang="en">craft</i><wbr>（「<ruby>乗り物<rt lang="en">vessel</ruby>」を意味する。）[ ]{.upright}<i lang="en">aircraft</i>、<wbr><i lang="en">watercraft</i>、<wbr><i lang="en">spacecraft</i>、<wbr><i lang="en">hovercraft</i> を含む。（たゞし、<ruby>技<rt>ぎ</rt>藝<rt>げい</ruby>を意味する場合、複数形は規則的であり、<wbr><i lang="en">crafts</i> となる。）
 - <i lang="en">blues</i><wbr>（ブルーズ音楽スタイルの個々の曲を指す。例へば、<wbr>[“play me a blues”]{lang=en}、<wbr>[“he sang three blues and a calypso”]{lang=en}。）
 - <i lang="en">cannon</i><wbr>（北アメリカとオーストラリアでは <i lang="en">cannons</i> の方が一般的だが、イギリスでは複数としても <i lang="en">cannon</i> の方が一般的。）
 - <i lang="en">chassis</i><wbr>（綴りのみ同一。単数形は [/(t)ʃæsi/]{.ipa} と発音されるが、複数形は [/(t)ʃæsiz/]{.ipa} と発音される。）
 - <i lang="en">counsel</i><wbr>（<i><ruby>法律家<rt lang="en">lawyer</ruby></i>といふ意味で。）
 - <i lang="en">head</i><wbr>（複数形のものは動物の群れを指す。例へば、<wbr>[“fifty head of cattle”]{lang=en}。上の <i lang="en">brace</i> を参照せよ。） <!-- FIXME: 「」のほうがいいかも -->
-- <i lang="en">iris</i><wbr>（通常は <i lang="en">irises</i> だが、<wbr><i lang="en">iris</i> が複数の植物を指す複数形になることがある。医学的な文脈では <i lang="en">irides</i> が使はれる。下の[ラテン語とギリシア語に由来する不規則な複数形の節](#ラテン語とギリシア語に由来する不規則な複数形)を見よ。）
+- <i lang="en">iris</i><wbr>（通常は <i lang="en">irises</i> だが、<wbr><i lang="en">iris</i> が複数の植物を指す複数形になることがある。<ruby>醫<rt>い</rt>学<rt>がく</ruby>的な文脈では <i lang="en">irides</i> が使はれる。下の[ラテン語とギリシア語に由来する不規則な複数形の節](#ラテン語とギリシア語に由来する不規則な複数形)を見よ。）
 - <i lang="en">series</i>、<wbr><i lang="en">species</i><wbr>（およびその他の <i lang="en">-ies</i> で終はる単語で、ラテン語の第五格変化に由来するもの）（<i lang="en">specie</i> といふ単語は、<wbr><i lang="en">in specie</i> といふ成句に含まれる、ラテン語の単数奪格形に由来するもので、金銭、硬貨［訳注　正金、本位貨幣。］のみを指す。複数形は無い。）
 - <i lang="en">stone</i>——[14]{.tate-chu-yoko}ポンドに等しい重さの単位として。（時折 <i lang="en">stones</i> となる。）
 
@@ -237,7 +237,7 @@ templateEngine:
 
 例外には <i lang="en">Algonquins</i>、<wbr><i lang="en">Apaches</i>、<wbr><i lang="en">Aztecs</i>、<wbr><i lang="en">Chippewas</i>、<wbr><i lang="en">Hurons</i>、<wbr><i lang="en">Incas</i>、<wbr><i lang="en">Mohawks</i>、<wbr><i lang="en">Oneidas</i> および <i lang="en">Seminoles</i> がある。
 
-英語では、<ruby>地域の住民の名称<rt lang="en">demonym</ruby>または民族名の規則的な複数形（例へば、<wbr>[“five Dutchmen”]{lang=en}、<wbr>[“several Irishmen”]{lang=en}。）と、国民全体を纏めて指すために使はれる不可算な複数形（例へば、<wbr>[“the Dutch”]{lang=en}、<wbr>[“the Irish”]{lang=en}。）とを区別することがある。
+英語では、<ruby>地域の住民の名称<rt lang="en">demonym</ruby>または民族名の規則的な複数形（例へば、<wbr>[“five Dutchmen”]{lang=en}、<wbr>[“several Irishmen”]{lang=en}。）と、国民<ruby>全<rt>ぜん</rt>體<rt>たい</ruby>を纏めて指すために使はれる不可算な複数形（例へば、<wbr>[“the Dutch”]{lang=en}、<wbr>[“the Irish”]{lang=en}。）とを区別することがある。
 
 日本語やマオリ語のやうな外国語から借用されたその他の単語のいくつかは、*正しくは*、複数形で屈折しないが、多くの人はこの規則に気付いてゐない。下の[その他の言語に由来する不規則な複数形の節](#その他の言語に由来する不規則な複数形)を見よ。
 
@@ -292,7 +292,7 @@ templateEngine:
 いくつかの単語には、こゝで与へられたどの種類のものにも合はない不規則な複数形がある。
 
 - <i lang="en">person</i>—<i lang="en">people</i><wbr>（より形式的な——法的な、あるいは専門的な——文脈では <i lang="en">persons</i> もある。<i lang="en">people</i> は、<wbr><i lang="en">peoples</i> といふ複数形を持つ単数名詞となることもある。）
-- <i lang="en">die</i>—<i lang="en">dice</i><wbr>（遊戯の文脈では、<wbr><i lang="en">dice</i> は単数形としてもよく使はれる。また、半導体産業でも使はれる。その他の場合は <i lang="en">dies</i> が使はれる。）
+- <i lang="en">die</i>—<i lang="en">dice</i><wbr>（遊戯の文脈では、<wbr><i lang="en">dice</i> は単数形としてもよく使はれる。また、<ruby>半<rt>はん</rt>導<rt>だう</rt>體<rt>たい</ruby>産業でも使はれる。その他の場合は <i lang="en">dies</i> が使はれる。）
 - <i lang="en">penny</i>—<i lang="en">pence</i><wbr>（スターリング・ポンドの金額の文脈で。）[ ]{.upright}[1p]{lang=en} <ruby>硬貨<rt lang="en">coins</ruby>や[1]{.upright}セント<ruby>硬貨<rt lang="en">coins</ruby>は <i lang="en">pennies</i> と呼ばれる。<wbr><i lang="en">pence</i> は <i lang="en">p</i><wbr>（会話では [“pee”]{lang=en}。）と省略される。<wbr><i lang="en">10 pences</i> については下の[主要部の無い名詞の節](#主要部の無い名詞)を見よ。
 
 #### 外国語に由来する不規則な複数形
@@ -305,17 +305,17 @@ templateEngine:
 
 </aside>
 
-英語は、古典ラテン語と古代ギリシア語から非常に多くの単語を借用してゐる。古典ラテン語には、名詞、形容詞および代名詞に[5]{.upright}つの分類または格変化（一部は副分類を含む。）がある、非常に複雑な語尾の体系がある。通常、ラテン語から単語を借用する場合、主格の語尾が使はれる。<wbr><i lang="en">-a</i> で終はる単数主格を持つ名詞（第一格変化）は <i lang="en">-ae</i> で終はる複数形を持ち（<i lang="en">anima</i>、<i lang="en">animae</i>）、<wbr><i lang="en">-m</i> で終はる単数主格を持つ名詞（中性、第二格変化）は <i lang="en">-a</i> で終はる複数形を持つ（<i lang="en">stadium</i>、<wbr><i lang="en">stadia</i>[、]{.shiroten}<wbr><i lang="en">datum</i>、<wbr><i lang="en">data</i>）。（完全な取り扱ひについては、[ラテン語の格変化](https://en.wikipedia.org/wiki/Latin_declensions)を見よ。）
+英語は、古典ラテン語と古代ギリシア語から非常に多くの単語を借用してゐる。古典ラテン語には、名詞、形容詞および代名詞に[5]{.upright}つの分類または格変化（一部は副分類を含む。）がある、非常に複雑な語尾の<ruby>體<rt>たい</rt>系<rt>けい</ruby>がある。通常、ラテン語から単語を借用する場合、主格の語尾が使はれる。<wbr><i lang="en">-a</i> で終はる単数主格を持つ名詞（第一格変化）は <i lang="en">-ae</i> で終はる複数形を持ち（<i lang="en">anima</i>、<i lang="en">animae</i>）、<wbr><i lang="en">-m</i> で終はる単数主格を持つ名詞（中性、第二格変化）は <i lang="en">-a</i> で終はる複数形を持つ（<i lang="en">stadium</i>、<wbr><i lang="en">stadia</i>[、]{.shiroten}<wbr><i lang="en">datum</i>、<wbr><i lang="en">data</i>）。（完全な取り扱ひについては、[ラテン語の格変化](https://en.wikipedia.org/wiki/Latin_declensions)を見よ。）
 
-古代ギリシア語には、［古典ラテン語と比較すると］よりシンプルだが、英語のそれよりはやはり複雑な体系がある。英語にある、ギリシア語からの借用語は、アッティカ方言（プラトン、アリストテレスその他の偉大な作家の<ruby>アテナイのギリシア語<rt lang="en">the Athenian Greek</ruby>）からのものであり、デモティキ、コイネー（聖書ギリシア語）および現代ギリシア語からのものではないことに注意すること。これは、アッティカ方言が西ヨーロッパの学級で教へられてゐたものであり、したがって、単語を借用する人が知ってゐるギリシア語だったからである。
+古代ギリシア語には、［古典ラテン語と比較すると］よりシンプルだが、英語のそれよりはやはり複雑な<ruby>體<rt>たい</rt>系<rt>けい</ruby>がある。英語にある、ギリシア語からの借用語は、アッティカ方言（プラトン、アリストテレスその他の偉大な作家の<ruby>アテナイのギリシア語<rt lang="en">the Athenian Greek</ruby>）からのものであり、デモティキ、コイネー（聖書ギリシア語）および現代ギリシア語からのものではないことに注意すること。これは、アッティカ方言が西ヨーロッパの学級で教へられてゐたものであり、したがって、単語を借用する人が知ってゐるギリシア語だったからである。
 
 ###### <ruby>英語化<rt lang="en">Anglicisation</ruby>
 
 借用語の一般的な傾向は、<em><ruby>英語化<rt lang="en">Anglicisation</ruby></em>あるいは<em><ruby>帰化<rt lang="en">naturalisation</ruby></em>と呼ばれるもの、すなはち、通常の英語の単語としての、単語とその屈折の再形成に向かってゐる。多くの名詞は、元の形（通常はラテン語。）に落ち着いたり、元の形（同上）から現代的な形を獲得したりしてゐる。その他の名詞は英語化され、通常の語尾 <i>[-s]{lang=en}</i> を取るやうになった。場合によっては、両方の形式がまだ競合してゐることがある。
 
-この形式の選択は文脈に依存することがよくある。例へば、人文系の学者にとっては、<wbr><i lang="en">appendix</i> の複数形は（元の言語に従って）<wbr><i lang="en">appendices</i> だが、一部の医師にとっては、<wbr><i lang="en">appendix</i> の複数形は <i lang="en">appendixes</i> である。同様に、無線従事者やレーダーエンジニアは<i><ruby>アンテナ<rt lang="en">antennas</ruby></i>を使って仕事をするが、昆虫学者は<i><ruby>触角<rt lang="en">antennae</ruby></i>を扱ふ。この形式の選択は談話のレベルにも依存する。学術的な、あるいは科学的な文脈では、伝統的なラテン語の複数形の方が多く見られるが、日常会話では、英語化された形式の方が一般的である。次の表では、英語化された形式の方が一般的な場合はその形式とゝもに、ラテン語の複数形が列挙されてゐる。
+この形式の選択は文脈に依存することがよくある。例へば、人文系の学者にとっては、<wbr><i lang="en">appendix</i> の複数形は（元の言語に従って）<wbr><i lang="en">appendices</i> だが、一部の<ruby>醫<rt>い</rt>師<rt>し</ruby>にとっては、<wbr><i lang="en">appendix</i> の複数形は <i lang="en">appendixes</i> である。同様に、無線従事者やレーダーエンジニアは<i><ruby>アンテナ<rt lang="en">antennas</ruby></i>を使って仕事をするが、<ruby>昆<rt>こん</rt>蟲<rt>ちう</ruby>学者は<i><ruby>触角<rt lang="en">antennae</ruby></i>を扱ふ。この形式の選択は談話のレベルにも依存する。学術的な、あるいは科学的な文脈では、伝統的なラテン語の複数形の方が多く見られるが、日常会話では、英語化された形式の方が一般的である。次の表では、英語化された形式の方が一般的な場合はその形式とゝもに、ラテン語の複数形が列挙されてゐる。
 
-［ラテン語由来の名詞について、］ラテン語の発音の<ruby>活用<rt lang="en">paradigms</ruby>が異なると、当該名詞の数や性に関する混乱を招くことがある。ラテン語の名詞は、科学的、医学的および法的な文脈を含む英語で伝統的に使はれてゐるため、綴りに関しては古典的な屈折を維持するが、それらの屈折は英語化された発音を使ふ。例へば、［触角を扱ふ］昆虫学者は、<wbr><i lang="en">antennae</i> を [/ænˈtɛni/]{.ipa} と発音する。このことは、古典ラテン語［式］の発音 [/ænˈtɛnaɪ/]{.ipa} をよく知ってゐる人を混乱させる可能性がある。<wbr><i lang="en">alumni</i> の英語化された発音は古典ラテン語の <i lang="la">alumnae</i> の発音と同じやうに聞こえるため、<wbr><i lang="en">alumni</i><wbr>（男性複数）や <i lang="en">alumnae</i><wbr>（女性複数）といった単語は、この［訳注　上で説明されたやうな混乱を招くことがあるといふ］点で悪名高い。
+［ラテン語由来の名詞について、］ラテン語の発音の<ruby>活用<rt lang="en">paradigms</ruby>が異なると、当該名詞の数や性に関する混乱を招くことがある。ラテン語の名詞は、科学的、<ruby>醫<rt>い</rt>学<rt>がく</ruby>的および法的な文脈を含む英語で伝統的に使はれてゐるため、綴りに関しては古典的な屈折を維持するが、それらの屈折は英語化された発音を使ふ。例へば、［触角を扱ふ］<ruby>昆<rt>こん</rt>蟲<rt>ちう</ruby>学者は、<wbr><i lang="en">antennae</i> を [/ænˈtɛni/]{.ipa} と発音する。このことは、古典ラテン語［式］の発音 [/ænˈtɛnaɪ/]{.ipa} をよく知ってゐる人を混乱させる可能性がある。<wbr><i lang="en">alumni</i> の英語化された発音は古典ラテン語の <i lang="la">alumnae</i> の発音と同じやうに聞こえるため、<wbr><i lang="en">alumni</i><wbr>（男性複数）や <i lang="en">alumnae</i><wbr>（女性複数）といった単語は、この［訳注　上で説明されたやうな混乱を招くことがあるといふ］点で悪名高い。
 
 これらの複数形の多くは <i lang="en">-s</i> で終はらないため、一部が単数形として再解釈されてゐる。とくに <i lang="en">datum</i> や <i lang="en">medium</i><wbr>（「[medium of communication]{lang=en}」に見られる。）といった単語［がさうである］。元の複数形である <i lang="en">data</i> や <i lang="en">media</i> は、今日では、多くの文脈で、一部の人々によって不可算名詞の単数形として使はれてゐる。例へば、<wbr>[“The media is biased”]{lang=en}、<wbr>[“This data shows us that ...”]{lang=en}。（たゞし、多くの科学者、とくにイギリス出身の科学者は、今日でも [“These data show us that ...”]{lang=en} と言ふ。）[ ]{.upright}詳細は[下](#datum_data)を見よ。<wbr><i lang="en">criteria</i> や <i lang="en">phenomena</i> のやうな単語も同様に、一部の話者によって単数として使はれることがあるが、これは標準的な用法ではまだ正しくないと見做されてゐる。（[下](#phenomenon)を見よ。）
 
@@ -374,9 +374,9 @@ templateEngine:
 |[agendum]{lang=en}（廃語。ほとんどの辞書で立項されてゐない。）|[agenda]{lang=en} は、「会議における議題の一覧」を意味し、<wbr><i lang="en">agendas</i> といふ複数形を持つ。
 |[corrigendum]{lang=en}|[corrigenda]{lang=en}
 |[curriculum]{lang=en}|[curricula]{lang=en}/[curriculums]{lang=en}
-|[datum]{lang=en}|[data]{lang=en}（現在、通常は、会話体の用法でも教養ある用法でも、不可算名詞の単数形として扱はれるが、科学出版物における用法は、アメリカ英語とイギリス英語の強い分断を示してゐる。アメリカ英語の用法では、一般的に、本格的な学術出版を含む全ての文脈で、<wbr><i lang="en">data</i> を単数として扱ふことが好まれる<sup>==[\[11\]](https://en.wikipedia.org/w/index.php?title=English_plurals&oldid=1112889518#cite_note-16)==\[要文献特定詳細情報\]</sup>。イギリス英語の用法では、今日では、少なくとも非科学的に使ふ場合、教養ある日常の用法を含め、標準的な英語で、<wbr><i lang="en">data</i> を単数として扱ふことが広く受け入れられてゐる<sup>==[\[15\]](https://en.wikipedia.org/w/index.php?title=English_plurals&oldid=1112889518#cite_note-20)==\[<ruby>具体性不十分による検証不可<rt lang="en">not specific enough to verify</ruby>\]</sup>。イギリスの科学出版では、通常、依然として <i lang="en">data</i> を複数形として扱ふことが好まれる。イギリスの大学のスタイルガイドは、一部は単数形で使ふ場合も複数形で使ふ場合も <i lang="en">data</i> を使ふことを推奨してをり、また一部は、コンピューターに関連して、<wbr><i lang="en">data</i> を単数形としてのみ扱ふことを推奨してゐる。）|\
+|[datum]{lang=en}|[data]{lang=en}（現在、通常は、<ruby>会<rt>くゎい</rt>話<rt>わ</rt>體<rt>たい</ruby>の用法でも教養ある用法でも、不可算名詞の単数形として扱はれるが、科学出版物における用法は、アメリカ英語とイギリス英語の強い分断を示してゐる。アメリカ英語の用法では、一般的に、本格的な学術出版を含む全ての文脈で、<wbr><i lang="en">data</i> を単数として扱ふことが好まれる<sup>==[\[11\]](https://en.wikipedia.org/w/index.php?title=English_plurals&oldid=1112889518#cite_note-16)==\[要文献特定詳細情報\]</sup>。イギリス英語の用法では、今日では、少なくとも非科学的に使ふ場合、教養ある日常の用法を含め、標準的な英語で、<wbr><i lang="en">data</i> を単数として扱ふことが広く受け入れられてゐる<sup>==[\[15\]](https://en.wikipedia.org/w/index.php?title=English_plurals&oldid=1112889518#cite_note-20)==\[<ruby>具體性不十分による<ruby>検<rt>けむ</rt>證<rt>しょう</ruby>不可<rt lang="en">not specific enough to verify</ruby>\]</sup>。イギリスの科学出版では、通常、依然として <i lang="en">data</i> を複数形として扱ふことが好まれる。イギリスの大学のスタイルガイドは、一部は単数形で使ふ場合も複数形で使ふ場合も <i lang="en">data</i> を使ふことを推奨してをり、また一部は、コンピューターに関連して、<wbr><i lang="en">data</i> を単数形としてのみ扱ふことを推奨してゐる。）|\
 |||\
-||工学、製図、測量もしくは測地学、または航空機の重量と平衡の計算では、<wbr>==[datum](https://en.wikipedia.org/wiki/Datum_(geodesy)){lang=en}==（複数は [datums]{lang=en} または [data]{lang=en}。）は、測定が行はれる物体の基準点、基準面もしくは基準軸、または測定が行はれる地球の表面である。
+||工学、製図、測量もしくは測地学、または航空機の重量と平衡の計算では、<wbr>==[datum](https://en.wikipedia.org/wiki/Datum_(geodesy)){lang=en}==（複数は [datums]{lang=en} または [data]{lang=en}。）は、測定が行はれる<ruby>物<rt>ぶっ</rt>體<rt>たい</ruby>の基準点、基準面もしくは基準軸、または測定が行はれる地球の表面である。
 |[forum]{lang=en}|[fora]{lang=en}/[forums]{lang=en}（<i lang="en">fora</i> はまれだが、[1]{.upright}つよりも多くの、元来のローマのフォルムを指して使はれることがある。）
 |[medium]{lang=en}|[media]{lang=en}（通信システムとデジタルコンピューターで。今日では単数の不可算名詞として扱はれることが多い。）、<wbr>[mediums]{lang=en}（<i>降霊術者</i>または<i>ミディアムサイズのもの</i>）。
 |[memorandum]{lang=en}|[memoranda]{lang=en}/[memorandums]{lang=en}
@@ -465,7 +465,7 @@ templateEngine:
 
 下の[フランス語の複合語の節](#フランス語の複合語)も見よ。
 
-イタリア語の名詞、とくに音楽と芸術の専門用語は、イタリア語の複数形を維持することがよくある:
+イタリア語の名詞、とくに音楽と藝術の専門用語は、イタリア語の複数形を維持することがよくある:
 
 |-|-
 |[cello]{lang=en}|[celli]{lang=en}
@@ -509,10 +509,10 @@ templateEngine:
 |[tui]{lang=en}|[tuis]{lang=en}/[tui]{lang=en}
 |[waka]{lang=en}|[waka]{lang=en}
 
-[^b1]: 原注　鳥を指す場合、<wbr><i lang="en">kiwi</i> は <i lang="en">-s</i> の形を取ることも取らないこともある。<ruby>ニュージーランド人<rt lang="en">New Zealander</ruby>を指す会話体の用語として使はれる場合、常に <i lang="en">-s</i> の形を取る。
+[^b1]: 原注　鳥を指す場合、<wbr><i lang="en">kiwi</i> は <i lang="en">-s</i> の形を取ることも取らないこともある。<ruby>ニュージーランド人<rt lang="en">New Zealander</ruby>を指す<ruby>会<rt>くゎい</rt>話<rt>わ</rt>體<rt>たい</ruby>の用語として使はれる場合、常に <i lang="en">-s</i> の形を取る。
 [^b2]: 原注　<i lang="en">Māori</i> は、人を指す場合、大抵 <i lang="en">-s</i> の形を取らない。多くの話者は <i lang="en">Māori</i> を名詞として使ふことを避け、代はりに形容詞としてのみ使ふ。
 
-カナダ、グリーンランドおよびアラスカのイヌイットによって話されるイヌクティトゥット語と{関聯|くゎん|れん}言語から借用した一部の単語は、元の複数形を維持してゐる。<wbr><i lang="en">Inuit</i> といふ単語自体は複数形である。カナダ英語はイヌクティトゥット語の単数の <i lang="en">Inuk</i> も借用してゐるが、これはカナダ以外の英語では一般的ではない。
+カナダ、グリーンランドおよびアラスカのイヌイットによって話されるイヌクティトゥット語と{関聯|くゎん|れん}言語から借用した一部の単語は、元の複数形を維持してゐる。<wbr><i lang="en">Inuit</i> といふ単語<ruby>自<rt>じ</rt>體<rt>たい</ruby>は複数形である。カナダ英語はイヌクティトゥット語の単数の <i lang="en">Inuk</i> も借用してゐるが、これはカナダ以外の英語では一般的ではない。
 
 |-|-
 |[Inuk]{lang=en}（一般的ではない。）|[Inuit]{lang=en}
@@ -679,7 +679,7 @@ templateEngine:
 
 別の類例として、<ruby>マイアミ・マーリンズ<rt lang="en">Miami Marlins</ruby>や<ruby>トロント・メープルリーフス<rt lang="en">Toronto Maple Leafs</ruby>のやうなスポーツチーム名の事例がある。これについては、下の[チームとそのメンバーの節](#チームとそのメンバー)を見よ。
 
-### <ruby>欠如名詞<rt lang="en">Defective nouns</ruby>
+### <ruby>{缺如|けつ|じょ}名詞<rt lang="en">Defective nouns</ruby>
 
 #### 単数形の無い複数形
 
@@ -707,7 +707,7 @@ templateEngine:
 |[victual]{lang=en}|[victuals]{lang=en}
 |[viscus]{lang=en}|[viscera]{lang=en}
 
-[^d1]: 原注　医学用語では、<wbr><i lang="en">phalanx</i> は指または趾の骨である。軍事的な <i lang="en">phalanx</i> は <i lang="en">phalanxes</i> と複数化される。
+[^d1]: 原注　<ruby>醫<rt>い</rt>学<rt>がく</ruby>用語では、<wbr><i lang="en">phalanx</i> は指または趾の骨である。軍事的な <i lang="en">phalanx</i> は <i lang="en">phalanxes</i> と複数化される。
 
 #### 複数形の無い単数形
 
@@ -720,18 +720,18 @@ templateEngine:
 <ruby>質量名詞<rt lang="en">Mass nouns</ruby>（または不可算名詞）は別々の対象物を表現しないため、単数の意味論と複数の意味論は、同じ方法では適用されない。いくつか例をあげる:
 
 - <b>抽象名詞</b>。<wbr>[deceit]{lang=en}、<wbr>[information]{lang=en}、<wbr>[cunning]{lang=en}、および [honesty]{lang=en}、<wbr>[wisdom]{lang=en}、<wbr>[beauty]{lang=en}、<wbr>[intelligence]{lang=en}、<wbr>[poverty]{lang=en}、<wbr>[stupidity]{lang=en}、<wbr>[curiosity]{lang=en} などの形容詞由来の名詞、および [goodness]{lang=en}、<wbr>[freshness]{lang=en}、<wbr>[laziness]{lang=en} などの <i>[-ness]{lang=en}</i> で終はる単語、および [good]{lang=en}、<wbr>[bad]{lang=en}（[goodness]{lang=en} と [badness]{lang=en} も使ふことがある。）、<wbr>[hot]{lang=en}、<wbr>[cold]{lang=en} などの似た意味の形容詞の<ruby>同形同音異義語<rt lang="en">homonym</ruby>である名詞。
-- <b>芸術と科学で</b>。<wbr>[chemistry]{lang=en}、<wbr>[geometry]{lang=en}、<wbr>[surgery]{lang=en}、<wbr>[the blues]{lang=en}[^e1]、<wbr>[jazz]{lang=en}、<wbr>[rock and roll]{lang=en}、<wbr>[impressionism]{lang=en}、<wbr>[surrealism]{lang=en}。複数に見えるが、英語では文法上単数として機能するもの（例: [“Mathematics <i>is</i> fun”]{lang=en}、<wbr>[“thermodynamics <i>is</i> the science of heat”]{lang=en}）を含む。<wbr>[mathematics]{lang=en}（イギリス英語では短縮形の [maths]{lang=en}。）、<wbr>[physics]{lang=en}、<wbr>[mechanics]{lang=en}、<wbr>[dynamics]{lang=en}、<wbr>[statics]{lang=en}、<wbr>[thermodynamics]{lang=en}、<wbr>[aerodynamics]{lang=en}、<wbr>[electronics]{lang=en}、<wbr>[hydrodynamics]{lang=en}、<wbr>[robotics]{lang=en}、<wbr>[acoustics]{lang=en}、<wbr>[optics]{lang=en}、<wbr>[computer graphics]{lang=en}、<wbr>[ethics]{lang=en}、<wbr>[linguistics]{lang=en} 他。
-- <b>元素および他の物理的実体</b>。<wbr>[aluminum]{lang=en}（アメリカ英語）/ [aluminium]{lang=en}（イギリス英語）、<wbr>[copper]{lang=en}、<wbr>[gold]{lang=en}、<wbr>[oxygen]{lang=en}、<wbr>[nitrogen]{lang=en}、<wbr>[carbon]{lang=en}、<wbr>[equipment]{lang=en}、<wbr>[furniture]{lang=en}、<wbr>[traffic]{lang=en}、<wbr>[air]{lang=en} および [water]{lang=en}。
+- <b>藝術と科学で</b>。<wbr>[chemistry]{lang=en}、<wbr>[geometry]{lang=en}、<wbr>[surgery]{lang=en}、<wbr>[the blues]{lang=en}[^e1]、<wbr>[jazz]{lang=en}、<wbr>[rock and roll]{lang=en}、<wbr>[impressionism]{lang=en}、<wbr>[surrealism]{lang=en}。複数に見えるが、英語では文法上単数として機能するもの（例: [“Mathematics <i>is</i> fun”]{lang=en}、<wbr>[“thermodynamics <i>is</i> the science of heat”]{lang=en}）を含む。<wbr>[mathematics]{lang=en}（イギリス英語では短縮形の [maths]{lang=en}。）、<wbr>[physics]{lang=en}、<wbr>[mechanics]{lang=en}、<wbr>[dynamics]{lang=en}、<wbr>[statics]{lang=en}、<wbr>[thermodynamics]{lang=en}、<wbr>[aerodynamics]{lang=en}、<wbr>[electronics]{lang=en}、<wbr>[hydrodynamics]{lang=en}、<wbr>[robotics]{lang=en}、<wbr>[acoustics]{lang=en}、<wbr>[optics]{lang=en}、<wbr>[computer graphics]{lang=en}、<wbr>[ethics]{lang=en}、<wbr>[linguistics]{lang=en} 他。
+- <b>元素および他の物理的<ruby>実<rt>じっ</rt>體<rt>たい</ruby></b>。<wbr>[aluminum]{lang=en}（アメリカ英語）/ [aluminium]{lang=en}（イギリス英語）、<wbr>[copper]{lang=en}、<wbr>[gold]{lang=en}、<wbr>[oxygen]{lang=en}、<wbr>[nitrogen]{lang=en}、<wbr>[carbon]{lang=en}、<wbr>[equipment]{lang=en}、<wbr>[furniture]{lang=en}、<wbr>[traffic]{lang=en}、<wbr>[air]{lang=en} および [water]{lang=en}。
 
-[^e1]: 原注　全体としての音楽スタイルを指す。
+[^e1]: 原注　<ruby>全<rt>ぜん</rt>體<rt>たい</ruby>としての音楽スタイルを指す。
 
 一部の不可算名詞は複数化することがあるが、この場合の意味は多少異なることがある。例へば、誰かゞ<i><ruby>[2]{.upright}粒の砂<rt lang="en">two grains of sand</ruby></i>を持ってゐる場合は、その人は<ruby>[2]{.upright}つの砂<rt lang="en">two sands</ruby>ではなく<ruby>砂<rt lang="en">sand</ruby>［訳注　不可算。］を持ってゐることになる。しかし、「[sands of Africa]{lang=en}」には、［<ruby>アフリカ<rt lang="en">Africa</ruby>にある］多くの別々の<ruby>砂の広がり<rt lang="en">stretches of sand</ruby>、地質学者や建設業者にとっては興味深い別々の種類の砂、あるいは『<ruby>火星の砂<rt lang="en">The Sands of Mars</ruby>』のやうな単なる比喩といった多くのものがありうる。
 
 <i lang="en">furniture</i> をこの方法で複数化するのは（かつてはより一般的だったが）まれであり、また、<i lang="en">information</i> は決して複数化されない。
 
-酸素にはいくつかの同位体があり、それらは相異なる<ruby>酸素<rt lang="en">oxygens</ruby>として言及されることがある。カジュアルな会話では、<wbr><i lang="en">oxygen</i> は「<ruby>[1]{.upright}個の酸素原子<rt lang="en">an oxygen atom</ruby>」の省略記法として使はれるが、この場合の <i lang="en">oxygen</i> は不可算名詞ではないため、「同じ分子に含まれる複数の<ruby>酸素<rt lang="en">oxygens</ruby>」に言及することができる。
+酸素にはいくつかの<ruby>同<rt>どう</rt>位<rt>ゐ</rt>體<rt>たい</ruby>があり、それらは相異なる<ruby>酸素<rt lang="en">oxygens</ruby>として言及されることがある。カジュアルな会話では、<wbr><i lang="en">oxygen</i> は「<ruby>[1]{.upright}個の酸素原子<rt lang="en">an oxygen atom</ruby>」の省略記法として使はれるが、この場合の <i lang="en">oxygen</i> は不可算名詞ではないため、「同じ分子に含まれる複数の<ruby>酸素<rt lang="en">oxygens</ruby>」に言及することができる。
 
-「<ruby>ボブの<i>知恵</i><rt lang="en">Bob’s <i>wisdoms</i></ruby>」は「ボブの知恵の一つ一つ」（すなはち、「はさみを持って走るな」、「より豊富な知識のある人に従へ」。）として、<i><ruby>欺瞞<rt lang="en">deceits</ruby></i>は一連の欺瞞的な行動の具体例（所得税について嘘をついて、妻とデートした。）として、そして労働者の相異なる<i><ruby>遊休<rt lang="en">idlenesses</ruby></i>は、遊休といふ数へられない概念の複数の別々の現れとして（あるいは、異なる種類の遊休——「全くの怠惰」と「すべき仕事が無い」——として）解釈されよう。
+「<ruby>ボブの<i>知恵</i><rt lang="en">Bob’s <i>wisdoms</i></ruby>」は「ボブの知恵の一つ一つ」（すなはち、「はさみを持って走るな」、「より豐富な知識のある人に従へ」。）として、<i><ruby>欺瞞<rt lang="en">deceits</ruby></i>は一連の欺瞞的な行動の<ruby>具<rt>ぐ</rt>體<rt>たい</ruby>例（所得税について嘘をついて、妻とデートした。）として、そして労働者の相異なる<i><ruby>遊休<rt lang="en">idlenesses</ruby></i>は、遊休といふ数へられない概念の複数の別々の現れとして（あるいは、異なる種類の遊休——「全くの怠惰」と「すべき仕事が無い」——として）解釈されよう。
 
 <i lang="en">specie</i> と <i lang="en">species</i> のペアはともに「<ruby>種類または現物<rt lang="en">kind</ruby>」を意味するラテン語の単語から来てゐるが、これは単数と複数のペアを形成するものではない。ラテン語では、<wbr><i lang="la">specie</i> は単数奪格形だが、<wbr><i lang="la">species</i> は主格形であり、［後者は］単数と複数の両方で［偶然］同じ形になる。英語では、<wbr><i lang="en">species</i> は同様に——同一の単数と複数を持つ名詞として——振る舞ふが、<wbr><i lang="en">specie</i> は<ruby>硬貨<rt lang="en">coins</ruby>［訳注　金銀で作られた<i>*本位貨幣*</i>を指す。］の形式のお金を指す（この発想は「<ruby>現物で（支払ふこと）<rt lang="en">\[payment\] in kind</ruby>」から来てゐる。）不可算名詞として扱はれる。
 
@@ -773,8 +773,8 @@ templateEngine:
 |[phenomenon]{lang=en}|[phenomena]{lang=en}
 
 [^f1]: 原注　<i lang="en">an agenda</i> は、<ruby>議題の一覧<rt lang="en">a list of agenda</ruby>を意味するために使はれる。
-[^f2]: 原注　[1]{.upright}個の [data]{lang=en} は <i lang="en">a data point</i> と呼ばれることがある。工学、製図、測量もしくは測地学、または航空機の重量と平衡の計算では、<wbr>==[datum](https://en.wikipedia.org/wiki/Datum_(geodesy)){lang=en}==（複数は [datums]{lang=en} または [data]{lang=en}。）は、測定が行はれる物体の基準点、基準面もしくは基準軸、または測定が行はれる地球の表面である。
-[^f3]: 原注　<i lang="en">magnum opus</i>［といふ表現］の中に残ってをり、また、同じ作曲家による音楽作品を体系的に命名するための<ruby>作品番号システム<rt lang="en">the opus numbering system</ruby>のために維持されてゐる。
+[^f2]: 原注　[1]{.upright}個の [data]{lang=en} は <i lang="en">a data point</i> と呼ばれることがある。工学、製図、測量もしくは測地学、または航空機の重量と平衡の計算では、<wbr>==[datum](https://en.wikipedia.org/wiki/Datum_(geodesy)){lang=en}==（複数は [datums]{lang=en} または [data]{lang=en}。）は、測定が行はれる<ruby>物<rt>ぶっ</rt>體<rt>たい</ruby>の基準点、基準面もしくは基準軸、または測定が行はれる地球の表面である。
+[^f3]: 原注　<i lang="en">magnum opus</i>［といふ表現］の中に残ってをり、また、同じ作曲家による音楽作品を<ruby>體<rt>たい</rt>系<rt>けい</ruby>的に命名するための<ruby>作品番号システム<rt lang="en">the opus numbering system</ruby>のために維持されてゐる。
 
 #### 逆成
 
@@ -788,13 +788,13 @@ templateEngine:
 
 #### 単数として使はれる地理的な複数形
 
-地名は、国家のやうな単一の実体を表現すると見做される場合、仮令形式上は複数であっても、単数として扱はれることがある。例へば、<wbr><i lang="en">The United States <b>is</b> a country in North America</i><wbr>（<i lang="en">the Netherlands</i>、<wbr><i lang="en">the Philippines</i>、<wbr><i lang="en">Trinidad and Tobago</i>、<wbr><i lang="en">the United Nations</i> 他も同様。）。しかし、その意味が島や山のやうな地理的なものゝ一群なら、複数形の名称は複数として扱はれる。例へば、<wbr><i lang="en">The Hebrides <b>are</b> a group of islands off the coast of Scotland</i>。
+地名は、国家のやうな単一の<ruby>実<rt>じっ</rt>體<rt>たい</ruby>を表現すると見做される場合、仮令形式上は複数であっても、単数として扱はれることがある。例へば、<wbr><i lang="en">The United States <b>is</b> a country in North America</i><wbr>（<i lang="en">the Netherlands</i>、<wbr><i lang="en">the Philippines</i>、<wbr><i lang="en">Trinidad and Tobago</i>、<wbr><i lang="en">the United Nations</i> 他も同様。）。しかし、その意味が島や山のやうな地理的なものゝ一群なら、複数形の名称は複数として扱はれる。例へば、<wbr><i lang="en">The Hebrides <b>are</b> a group of islands off the coast of Scotland</i>。
 
 #### 複数として扱はれる集合的な意味を持つ単数形
 
-<i lang="en">army</i>、<wbr><i lang="en">company</i>、<wbr><i lang="en">crowd</i>、<wbr><i lang="en">family</i>、<wbr><i lang="en">fleet</i>、<wbr><i lang="en">government</i>、<wbr><i lang="en">majority</i>、<wbr><i lang="en">mess</i>、<wbr><i lang="en">number</i>、<wbr><i lang="en">pack</i>、<wbr><i lang="en">party</i> および <i lang="en">team</i> のやうな単語は、単一の実体を指すことも、それを構成する集合の<ruby>メンバー<rt lang="en">members</ruby>を指すこともある。後者の意味が意図される場合、その単語は、（形式上は単数であっても、）複数の動詞を取り、複数の代名詞で置き換へられることがあるといふ点で、まるで複数形であるかのやうに扱はれることがある。例へば、（イギリス英語では）<wbr><i lang="en">the government <b>are</b> considering <b>their</b> position</i><wbr>（あるいは <i lang="en">the government is considering its position</i>）。[<ruby>シュネシス<rt lang="en">synesis</ruby>](https://en.wikipedia.org/wiki/Synesis)を見よ。
+<i lang="en">army</i>、<wbr><i lang="en">company</i>、<wbr><i lang="en">crowd</i>、<wbr><i lang="en">family</i>、<wbr><i lang="en">fleet</i>、<wbr><i lang="en">government</i>、<wbr><i lang="en">majority</i>、<wbr><i lang="en">mess</i>、<wbr><i lang="en">number</i>、<wbr><i lang="en">pack</i>、<wbr><i lang="en">party</i> および <i lang="en">team</i> のやうな単語は、単一の<ruby>実<rt>じっ</rt>體<rt>たい</ruby>を指すことも、それを構成する集合の<ruby>メンバー<rt lang="en">members</ruby>を指すこともある。後者の意味が意図される場合、その単語は、（形式上は単数であっても、）複数の動詞を取り、複数の代名詞で置き換へられることがあるといふ点で、まるで複数形であるかのやうに扱はれることがある。例へば、（イギリス英語では）<wbr><i lang="en">the government <b>are</b> considering <b>their</b> position</i><wbr>（あるいは <i lang="en">the government is considering its position</i>）。[<ruby>シュネシス<rt lang="en">synesis</ruby>](https://en.wikipedia.org/wiki/Synesis)を見よ。
 
-したがって、[H・W・ファウラー](https://en.wikipedia.org/wiki/H._W._Fowler){.upright}が述べるやうに、イギリス英語では、それらは、*裁量で、単数または複数として扱はれる*。ファウラーは、裁量的な複数によって、時折り*繊細な区別*が可能になるといふことを次のやうに指摘してゐる。<span class="q-like">思考の順序として、全体は分割よりも先に無ければならないため、<i lang="en">The Cabinet is divided</i> の方が良く、合意には[2]{.upright}人以上を必要とするため、<i lang="en">The Cabinet are agreed</i> の方が良い。</span>
+したがって、[H・W・ファウラー](https://en.wikipedia.org/wiki/H._W._Fowler){.upright}が述べるやうに、イギリス英語では、それらは、*裁量で、単数または複数として扱はれる*。ファウラーは、裁量的な複数によって、時折り*繊細な区別*が可能になるといふことを次のやうに指摘してゐる。<span class="q-like">思考の順序として、<ruby>全<rt>ぜん</rt>體<rt>たい</ruby>は分割よりも先に無ければならないため、<i lang="en">The Cabinet is divided</i> の方が良く、合意には[2]{.upright}人以上を必要とするため、<i lang="en">The Cabinet are agreed</i> の方が良い。</span>
 
 ### 数の複数形
 
@@ -810,13 +810,15 @@ templateEngine:
 
 ### 属性的に使はれる名詞
 
-一般に、他の名詞を修飾するために属性的に使はれる名詞は、例へば、<wbr>[<i>a dog catcher</i> catches more than one dog]{lang=en}、あるいは [<i>a department store</i> has more than one department]{lang=en} のやうな場合であっても、単数形である。<wbr><i lang="en">a trouser mangle</i> や <i lang="en">the scissor kick</i> のやうに、単数形が独立して見られない、一部のバイナリー名詞についても同様である。また、<wbr><i lang="en">a twenty-dollar bill</i>、<wbr><i lang="en">a ten-foot pole</i> あるいは <i lang="en">a two-man tent</i> のやうに、属性名詞自体が数に修飾されてゐる場合もさうである。［訳注　<i lang="en">a six-month-old baby</i> のやうな形容詞もこれに当たる。］[ ]{.upright} 絶対複数の名詞については複数形が使はれる。<wbr>[<i>a glasses case</i> is for eyeglasses]{lang=en} に対して、<wbr>[<i>a glass case</i> is made of glass]{lang=en}。（<i lang="en">eyeglass case</i> とも比較せよ。）[ ]{.upright}<i lang="en">an arms race</i> に対する <i lang="en">arm wrestling</i> も。複数形は、とくにイギリス英語では、<wbr><i lang="en">a careers advisor</i>、<wbr><i lang="en">a languages expert</i> のやうに、その属性の複数性を強調するために使はれることがあるが、アメリカ英語ではごくまれである。複数形は、様々な属性に対応した不規則な複数形もより一般的である。<wbr><i lang="en">women killers</i> は生き物を殺す<ruby>婦人<rt lang="en">women</ruby>だが、<wbr><i lang="en">woman killers</i> は婦人を殺す人々である。
+一般に、他の名詞を修飾するために属性的に使はれる名詞は、例へば、<wbr>[<i>a dog catcher</i> catches more than one dog]{lang=en}、あるいは [<i>a department store</i> has more than one department]{lang=en} のやうな場合であっても、単数形である。<wbr><i lang="en">a trouser mangle</i> や <i lang="en">the scissor kick</i> のやうに、単数形が独立して見られない、一部のバイナリー名詞についても同様である。また、<wbr><i lang="en">a twenty-dollar bill</i>、<wbr><i lang="en">a ten-foot pole</i> あるいは <i lang="en">a two-man tent</i> のやうに、属性名詞<ruby>自<rt>じ</rt>體<rt>たい</ruby>が数に修飾されてゐる場合もさうである。［訳注　<i lang="en">a six-month-old baby</i> のやうな形容詞もこれに当たる。］[ ]{.upright} 絶対複数の名詞については複数形が使はれる。<wbr>[<i>a glasses case</i> is for eyeglasses]{lang=en} に対して、<wbr>[<i>a glass case</i> is made of glass]{lang=en}。（<i lang="en">eyeglass case</i> とも比較せよ。）[ ]{.upright}<i lang="en">an arms race</i> に対する <i lang="en">arm wrestling</i> も。複数形は、とくにイギリス英語では、<wbr><i lang="en">a careers advisor</i>、<wbr><i lang="en">a languages expert</i> のやうに、その属性の複数性を強調するために使はれることがあるが、アメリカ英語ではごくまれである。複数形は、様々な属性に対応した不規則な複数形もより一般的である。<wbr><i lang="en">women killers</i> は生き物を殺す<ruby>婦人<rt lang="en">women</ruby>だが、<wbr><i lang="en">woman killers</i> は婦人を殺す人々である。
 
 属性的に使はれる可算名詞が、英語と異なり、複数であり、単語の最後に来るやうな他言語からの借用語の単数形と複数形は、英語の用法に入るときに変化することがある。例へば、スペイン語では、動詞とその複数形の目的語から構成される名詞は、通常、最初に動詞を、最後に目的語の名詞を持ち（例: 伝説上の怪物<em><ruby>チュパカブラ<rt lang="es">chupacabras</ruby></em>は、逐語的には「[sucks-goats]{lang=en}」であり、より自然な英語の形では「[goatsucker]{lang=en}」である。）、その目的語名詞の複数形は、複合語の単数形と複数形の両方で維持される（単数は <i lang="es">el chupacabras</i>、複数は <i lang="es">los chupacabras</i>。）。しかし、英語に入ると、<wbr><i lang="en">chupacabras</i> の最後の [s]{lang=en} は、その動詞の目的語（ヤギ）の複数形ではなく、その複合語（その怪物）の複数形として扱はれたゝめ、スペイン語では <i lang="es">chupacabra</i> は字義的にはたゞ[1]{.upright}匹のヤギの血を吸ふ生き物と解釈されるにもかゝはらず、英語では [s]{lang=en} の無い「[chupacabra]{lang=en}」が単数形である。
 
 ### チームとそのメンバー
 
-スポーツチーム名では、通常の使用ではその名詞には不規則な複数形があるにもかゝはらず、ある名詞に -s の形の規則的な複数形が与へられることがある。（上で述べられた[主要部の無い名詞](#主要部の無い名詞)の具体的な事例。）[ ]{.upright}例へば、<wbr><i lang="en">marlin</i> といふ単語は、通常、単数形と同一の複数形を持ち、また <i lang="en">leaf</i> の複数形は <i lang="en">leaves</i> であるにもかゝはらず、<ruby>マイアミ・マーリンズ<rt lang="en">Miami Marlins</ruby>や<ruby>トロント・メープルリーフス<rt lang="en">Toronto Maple Leafs</ruby>と呼ばれるチームがある。（これはいつも適用されるわけではない。例へば、<ruby>ミネソタ・リンクス<rt lang="en">Minnesota Lynx</ruby>がある。<wbr><i lang="en">*Lynxes</i> ではない。）[ ]{.upright}<ruby>ボストン・レッドソックス<rt lang="en">Boston Red Sox</ruby>や<ruby>シカゴ・ホワイトソックス<rt lang="en">Chicago White Sox</ruby>のやうな一部のチームは、その名前に非標準の複数形の綴りを使ってゐる。
+スポーツチーム名では、通常の使用ではその名詞には不規則な複数形があるにもかゝはらず、ある名詞に -s の形の規則的な複数形が与へられることがある。（上で述べられた[主要部の無い名詞](#%E4%B8%BB%E8%A6%81%E9%83%A8%E3%81%AE%E7%84%A1%E3%81%84%E5%90%8D%E8%A9%9E)の<ruby>具<rt>ぐ</rt>體<rt>たい</ruby>的な事例。）[ ]{.upright}例へば、<wbr><i lang="en">marlin</i> といふ単語は、通常、単数形と同一の複数形を持ち、また <i lang="en">leaf</i> の複数形は <i lang="en">leaves</i> であるにもかゝはらず、<ruby>マイアミ・マーリンズ<rt lang="en">Miami Marlins</ruby>や<ruby>トロント・メープルリーフス<rt lang="en">Toronto Maple Leafs</ruby>と呼ばれるチームがある。（これはいつも適用されるわけではない。例へば、<ruby>ミネソタ・リンクス<rt lang="en">Minnesota Lynx</ruby>がある。<wbr><i lang="en">*Lynxes</i> ではない。）[ ]{.upright}<ruby>ボストン・レッドソックス<rt lang="en">Boston Red Sox</ruby>や<ruby>シカゴ・ホワイトソックス<rt lang="en">Chicago White Sox</ruby>のやうな一部のチームは、その名前に非標準の複数形の綴りを使ってゐる。
+
+<!-- NOTE: 恐らく markdown-it-ruby のバグで、ここにおよそ5バイト以上のコメントが無いと、ルビベースに � が挿入されることがある。 -->
 
 スポーツチーム名が複数の場合、そのチームのメンバーを示すために対応する単数形が使はれることがよくある。例へば、<ruby>シンシナティ・レッズ<rt lang="en">Cincinnati Reds</ruby>のプレイヤーは <i lang="en">a (Cincinnati) Red</i> と呼ばれることがある。楽曲の『<ruby>セントルイス・ブルース<rt lang="en">St. Louis Blues</ruby>』から名付けられ、<wbr><i lang="en">blues</i> は元々はその複数形と同一の単数形だった［訳注　[単数と複数が同一の名詞](#単数と複数が同一の名詞)を参照。］にもかゝはらず、これは、アイスホッケーチームの<ruby>セントルイス・ブルーズ<rt lang="en">St. Louis Blues</ruby>にも適用される。
 
@@ -840,11 +842,11 @@ templateEngine:
 
 #### 実数は常に複数
 
-実数精度を含む数量は全て複数である。任意個数の[0]{.upright}に後続される[1]{.upright}を含む。具体的には、<wbr><i lang="en">1.0 gallon<b>s</b> per flush</i>、<wbr><i lang="en">0.6 unit<b>s</b></i> あるいは <i lang="en">3.3 child<b>ren</b> per couple</i> と言ふのは普通だが、<wbr><i lang="en">*1.0 gallon</i>、<wbr><i lang="en">*0.6 unit</i> および <i lang="en">*3.3 child per couple</i> はさうではない。
+実数精度を含む数量は全て複数である。任意個数の[0]{.upright}に後続される[1]{.upright}を含む。<ruby>具<rt>ぐ</rt>體<rt>たい</ruby>的には、<wbr><i lang="en">1.0 gallon<b>s</b> per flush</i>、<wbr><i lang="en">0.6 unit<b>s</b></i> あるいは <i lang="en">3.3 child<b>ren</b> per couple</i> と言ふのは普通だが、<wbr><i lang="en">*1.0 gallon</i>、<wbr><i lang="en">*0.6 unit</i> および <i lang="en">*3.3 child per couple</i> はさうではない。
 
 #### 分数
 
-分数は、分子に依存して、単数または複数になり（例: <i lang="en">one eighth</i> 対 <i lang="en">two eighth<b>s</b></i>）、また、分数が適用されるものは何でも、単一の物体の分数に言及するか、複数の物体の分数に言及するかに依存して、単数になることも複数になることもある（例: <i lang="en">three-quarters of the apple(s)</i>）。
+分数は、分子に依存して、単数または複数になり（例: <i lang="en">one eighth</i> 対 <i lang="en">two eighth<b>s</b></i>）、また、分数が適用されるものは何でも、単一の<ruby>物<rt>ぶっ</rt>體<rt>たい</ruby>の分数に言及するか、複数の物體の分数に言及するかに依存して、単数になることも複数になることもある（例: <i lang="en">three-quarters of the apple(s)</i>）。
 
 #### [0]{.upright}に等しいものは通常は複数
 
@@ -854,7 +856,7 @@ templateEngine:
 - <i lang="en">We have zero bananas.</i>
 - <i lang="en">We don’t have any bananas.</i>
 
-しかし、[1]{.upright}つの物体が問題になってゐるといふことがすでに立証されてゐる場合、<i lang="en">no</i> を使って、そのやうな物体が存在することを単数形で否定することがある:
+しかし、[1]{.upright}つの<ruby>物<rt>ぶっ</rt>體<rt>たい</ruby>が問題になってゐるといふことがすでに<ruby>立<rt>りっ</rt>證<rt>しょう</ruby>されてゐる場合、<i lang="en">no</i> を使って、そのやうな物體が存在することを単数形で否定することがある:
 
 - <i lang="en">“Can you pass me the banana on your desk?”</i> <i lang="en">“There’s no banana on my desk.”</i>
 
@@ -898,7 +900,7 @@ templateEngine:
 [^a2]: 原注　有声化した [/mɒ<b>ð</b>z/]{.ipa} はまれだが、ニューイングランドとカナダでは現れる<sup>\[要出典\]</sup>。
 [^a3]: 原注　<i lang="en">dwarf</i> について、その複数形の一般的な形式は、[J・R・R・トールキン](https://en.wikipedia.org/wiki/J._R._R._Tolkien){.upright}が <i lang="en">dwarves</i> を普及させるまでは、例へば、[ウォルト・ディズニー](https://en.wikipedia.org/wiki/Walt_Disney)の『<ruby>白雪姫<rt lang="en">Snow White and the Seven Dwarfs</ruby>』に見られるやうに、<wbr><i lang="en">dwarfs</i> だった。彼［トールキン］は、自身の小説に登場する空想上の種族「ドワーフ」をおとぎ話で一般的なよりキュートでシンプルな存在と区別するために、変更された綴りを意図的に使ったが、その後、この用法が広まった。たゞし、天文学的な矮星と非神話的な背の低い人類は <i lang="en">dwarfs</i> のまゝである。
 [^a4]: 原注　<i lang="en">hooves</i> と韻を踏むやうに [/ɹuː<b>v</b>z/]{.ipa} と発音されることは一般的だが、<wbr><i lang="en">rooves</i> は古風で珍しい綴り。
-[^a5]: 原注　「従業員全体」といふ意味の <i lang="en">staff</i><wbr>（[/stæf/]{.ipa} または [/stɑːf/]{.ipa}）については、その複数形は常に <i lang="en">staff</i> となる。その他の場合、<wbr><i lang="en">flagstaffs</i> のやうな複合語を除いて、<wbr><i lang="en">staffs</i> と <i lang="en">staves</i> の両方が許容される。<wbr><i lang="en">staves</i> は、「魔法の杖」や記譜ツールを意味する場合を除き、北アメリカではまれである。樽の胴板を意味する <i lang="en">stave</i> は、その複数形である <i lang="en">staves</i> からの逆成の結果である。（上の[逆成](#逆成)の節を見よ。）
+[^a5]: 原注　「従業員<ruby>全<rt>ぜん</rt>體<rt>たい</ruby>」といふ意味の <i lang="en">staff</i><wbr>（[/stæf/]{.ipa} または [/stɑːf/]{.ipa}）については、その複数形は常に <i lang="en">staff</i> となる。その他の場合、<wbr><i lang="en">flagstaffs</i> のやうな複合語を除いて、<wbr><i lang="en">staffs</i> と <i lang="en">staves</i> の両方が許容される。<wbr><i lang="en">staves</i> は、「魔法の杖」や記譜ツールを意味する場合を除き、北アメリカではまれである。樽の胴板を意味する <i lang="en">stave</i> は、その複数形である <i lang="en">staves</i> からの逆成の結果である。（上の[逆成](#逆成)の節を見よ。）
 
 </div>
 
@@ -934,7 +936,7 @@ templateEngine:
   - <time datetime="2022-12">現在</time>のところ、ウィキペディアやウィキブックスのテキストは CC-BY-SA-3.0 の下で利用許諾されます。バージョン 3.0 では、単に複製する場合、クレジットを全て提供しなければなりません。
 - その他の場合、クレジットから*私への言及を<b>すべて</b>削除*することができます。
   - 移出先の編輯方針等で要求または推奨されてゐるときは、その要求等に従って、一部の項目を表示することもできます。
-- 誤解を避けるために明記すると、クレジットの表示が省略できるのは、ウィキメディア・プロジェクトに移出する場合に限ります。その他の媒体で共有するときは、クレジットを全て提供してください。
+- 誤解を避けるために明記すると、クレジットの表示が省略できるのは、ウィキメディア・プロジェクトに移出する場合に限ります。その他の<ruby>媒<rt>ばい</rt>體<rt>たい</ruby>で共有するときは、クレジットを全て提供してください。
 
 なほ、私がこの翻訳をウィキペディアに投稿しなかった理由は次の通りです:
 

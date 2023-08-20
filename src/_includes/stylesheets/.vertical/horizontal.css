@@ -20,7 +20,7 @@
   @extend %vertical;
 }
 
-/* .vertical を元に戻す */
+/* .vertical を元に戾す */
 %revert-class-vertical {
   writing-mode: revert;
   writing-mode: horizontal-tb; /* Safari (15.1, iOS 15.2) では継承するか直接指定するかで振る舞いが変わることがあるので、明示的に指定している。 TODO: Delete this line */

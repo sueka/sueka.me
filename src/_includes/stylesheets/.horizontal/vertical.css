@@ -20,7 +20,7 @@
   @extend %horizontal
 }
 
-/* .horizontal を元に戻す */
+/* .horizontal を元に戾す */
 %revert-class-horizontal {
   writing-mode: revert;
   writing-mode: vertical-rl; /* Safari (15.1, iOS 15.2) では継承するか直接指定するかで振る舞いが変わることがあるので、明示的に指定している。 TODO: Delete this line */
@@ -51,7 +51,7 @@ p.horizontal {
   margin: 0 1em; /* ./reset.css */
   border-width: calc(2 / 13 * 1rem) 0;
   /* padding: calc(1rem - 2 / 13 * 1rem) 0; */
-  padding: calc(0.5rem - 2 / 13 * 1rem) 0; /* TODO: CSS Inline Layout Module Level 3 の leading-trim が十分実装されたら元に戻す。 */
+  padding: calc(0.5rem - 2 / 13 * 1rem) 0; /* TODO: CSS Inline Layout Module Level 3 の leading-trim が十分実装されたら元に戾す。 */
   box-sizing: border-box;
   width: revert;
   height: 100%;
