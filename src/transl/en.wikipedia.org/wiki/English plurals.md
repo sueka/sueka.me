@@ -1,7 +1,7 @@
 ---
 title: 『English Plurals - Wikipedia』の日本語訳
 date: 2022-12-26
-lastmod: 2023-07-04
+lastmod: 2023-09-08
 writing: horizontal
 templateEngine:
   - njk
@@ -689,7 +689,7 @@ templateEngine:
 
 - [glasses]{lang=en}（<ruby>眼鏡<rt lang="en">a pair of spectacles</ruby>）、<wbr>[pants]{lang=en}、<wbr>[panties]{lang=en}、<wbr>[pantyhose]{lang=en}、<wbr>[pliers]{lang=en}、<wbr>[scissors]{lang=en}、<wbr>[shorts]{lang=en}、<wbr>[suspenders]{lang=en}、<wbr>[tongs]{lang=en}（金属加工と料理）、<wbr>[trousers]{lang=en} 他。
 
-これらの単語は、<wbr><i lang="en">a pair of scissors</i>、<wbr><i lang="en">a pair of trousers</i> などゝ入れ替へられる。アメリカのファッション業界では、[1]{.upright}着のパンツは <i lang="en">a pant</i> と呼ぶのが一般的である。これは逆成の結果だが、英語のこの単語（フランス語の <i lang="fr">pantalon</i> に由来する。）は元々単数だった。同じやうなものとして、[1]{.upright}挺のはさみの半分から切り離されたもう半分は、やゝ非論理的だが、<wbr><i lang="en">a half-scissor</i> と呼ばれてゐる。<wbr><i lang="en">tweezers</i> はこのグループの一部だったが、[20]{.tate-chu-yoko}世紀後半からは <i lang="en">tweezer</i> が一般的に使用されてゐる。
+これらの単語は、<wbr><i lang="en">a pair of scissors</i>、<wbr><i lang="en">a pair of trousers</i> などゝ入れ替へられる。アメリカのファッション業界では、[1]{.upright}着のパンツは <i lang="en">a pant</i> と呼ぶのが一般的である。これは逆成の結果だが、英語のこの単語（フランス語の <i lang="fr">pantalon</i> に由来する。）は元々単数だった。同じ分野で、[1]{.upright}挺のはさみの半分から切り離されたもう半分は、やゝ非論理的だが、<wbr><i lang="en">a half-scissor</i> と呼ばれてゐる。<wbr><i lang="en">tweezers</i> はこのグループの一部だったが、[20]{.tate-chu-yoko}世紀後半からは <i lang="en">tweezer</i> が一般的に使用されてゐる。［訳注　アメリカ英語のみ。］
 
 [2]{.upright}つの部分を持つものを表す名詞は、形容詞として使はれる場合、単数形で現れる。その他の*絶対複数*は、形容詞としても変化せず、そのまゝである。
 
