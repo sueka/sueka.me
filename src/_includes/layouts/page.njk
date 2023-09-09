@@ -69,12 +69,12 @@
   <body>
     <div class="book">
       <main class="main">
-        {% if title -%} {% include 'templates/title-page.njk' %} {%- endif %}
+        {% include 'templates/title-page.njk' %}
         <div class="body">
           {{ content | safe }}
         </div>
       </main>
-      {% if not nocolophon -%} {% include 'templates/colophon.njk' %} {%- endif %}
+      {% include 'templates/colophon.njk' %}
     </div>
     {% include 'templates/footer.njk' %}
     <script type="module">

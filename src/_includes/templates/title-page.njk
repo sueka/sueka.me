@@ -1,4 +1,6 @@
+{% if title -%}
 <header class="title-page">
   <h1>{{ title | md(true) | safe }}</h1>
   {% if description -%} <p>{{ description }}</p> {%- endif %}
 </header>
+{%- endif %}
