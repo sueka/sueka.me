@@ -300,6 +300,28 @@
     "https://deno.land/x/deno_dom@v0.1.38/src/dom/utils-types.ts": "96db30e3e4a75b194201bb9fa30988215da7f91b380fca6a5143e51ece2a8436",
     "https://deno.land/x/deno_dom@v0.1.38/src/dom/utils.ts": "55f3e9dc71d6c4a54605888d3f99d26fb0cf9973924709f159252a6933ceeabe",
     "https://deno.land/x/deno_dom@v0.1.38/src/parser.ts": "b65eb7e673fa7ca611de871de109655f0aa9fa35ddc1de73df1a5fc2baafc332",
+    "https://deno.land/x/deno_dom@v0.1.40/build/deno-wasm/deno-wasm.js": "98b1ad24a1c13284557917659402202e5c5258ab1431b3f3a82434ad36ffa05a",
+    "https://deno.land/x/deno_dom@v0.1.40/deno-dom-wasm.ts": "bfd999a493a6974e9fca4d331bee03bfb68cfc600c662cd0b48b21d67a2a8ba0",
+    "https://deno.land/x/deno_dom@v0.1.40/src/api.ts": "0ff5790f0a3eeecb4e00b7d8fbfa319b165962cf6d0182a65ba90f158d74f7d7",
+    "https://deno.land/x/deno_dom@v0.1.40/src/constructor-lock.ts": "59714df7e0571ec7bd338903b1f396202771a6d4d7f55a452936bd0de9deb186",
+    "https://deno.land/x/deno_dom@v0.1.40/src/deserialize.ts": "f4d34514ca00473ca428b69ad437ba345925744b5d791cb9552e2d7a0e7b0439",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/document-fragment.ts": "1c7352a3c816587ed7fad574b42636198f680f17abc3836fcfe7799b31e7718f",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/document.ts": "b8f4e4ccabaaa063d6562a0f2f8dea9c0419515d63d8bd79bfde95f7cd64bd93",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/dom-parser.ts": "609097b426f8c2358f3e5d2bca55ed026cf26cdf86562e94130dfdb0f2537f92",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/element.ts": "019019a707a1cc795fc25c027b01d7d981d81eb2010fb6d5639a637ae8d5e469",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/elements/html-template-element.ts": "127bb291bb08afeb7e9a66294a5aa6ff2780f4eb4601fa6f7869fe8b70a81472",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/html-collection.ts": "ae90197f5270c32074926ad6cf30ee07d274d44596c7e413c354880cebce8565",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/node-list.ts": "4c6e4b4585301d4147addaccd90cb5f5a80e8d6290a1ba7058c5e3dfea16e15d",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/node.ts": "3069e6fc93ac4111a136ed68199d76673339842b9751610ba06f111ba7dc10a7",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/selectors/custom-api.ts": "852696bd58e534bc41bd3be9e2250b60b67cd95fd28ed16b1deff1d548531a71",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/selectors/nwsapi-types.ts": "c43b36c36acc5d32caabaa54fda8c9d239b2b0fcbce9a28efb93c84aa1021698",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/selectors/nwsapi.js": "985d7d8fc1eabbb88946b47a1c44c1b2d4aa79ff23c21424219f1528fa27a2ff",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/selectors/selectors.ts": "83eab57be2290fb48e3130533448c93c6c61239f2a2f3b85f1917f80ca0fdc75",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/selectors/sizzle-types.ts": "78149e2502409989ce861ed636b813b059e16bc267bb543e7c2b26ef43e4798b",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/selectors/sizzle.js": "c3aed60c1045a106d8e546ac2f85cc82e65f62d9af2f8f515210b9212286682a",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/utils-types.ts": "96db30e3e4a75b194201bb9fa30988215da7f91b380fca6a5143e51ece2a8436",
+    "https://deno.land/x/deno_dom@v0.1.40/src/dom/utils.ts": "55f3e9dc71d6c4a54605888d3f99d26fb0cf9973924709f159252a6933ceeabe",
+    "https://deno.land/x/deno_dom@v0.1.40/src/parser.ts": "b65eb7e673fa7ca611de871de109655f0aa9fa35ddc1de73df1a5fc2baafc332",
     "https://deno.land/x/imagemagick_deno@0.0.25/mod.ts": "85b2099e9ff5ea6e0ada441ce87c43bbd2555359248ae67a92acb0281d5908d5",
     "https://deno.land/x/imagemagick_deno@0.0.25/src/alpha-option.ts": "749a9f3309e491ec09a1d6bc50ce95d9733887d9f57c6863c4ff1c7e9610227b",
     "https://deno.land/x/imagemagick_deno@0.0.25/src/auto-threshold-method.ts": "bb08a00046137e441930e56190b6db10c5fe657cb0a6142cd565a40b1c4250a2",
@@ -473,7 +495,7 @@
     "https://deno.land/x/lume@v1.18.5/plugins/url.ts": "43d3d47896a7322a8dd34572dedb4baa6f73a382594a2ff7c34a3a064dcc6c9e",
     "https://deno.land/x/lume@v1.18.5/plugins/utils.ts": "6435d164539d9e408e7e818b080cc1a96ff76ed3c376160577a7df751b57fa07",
     "https://deno.land/x/lume@v1.18.5/plugins/yaml.ts": "df24aac4098dba258f1ac331a3b16ba488a336eb63c51afed8f59201228d583c",
-    "https://jspm.dev/@primer/octicons": "c474381977cec56a40db6e6b32473207f970c78288b76db005df402b246a4220",
+    "https://jspm.dev/@primer/octicons": "056cbedf78d3b8ee0d2e5a77a4a92a7521b968737d684df531674b984178cc54",
     "https://jspm.dev/css-has-pseudo/postcss": "ea9b1b50438bf459a00a0886f011c4e8c6a51ff85979353ba67df46e3a0bcabf",
     "https://jspm.dev/markdown-it-abbr": "0dc94a3de949e44fa2ad4aaa22e4f35b30f6e72303fff3be69e8a9b10651a0a4",
     "https://jspm.dev/markdown-it-anchor": "440237a4813a331eeafbf5bbf47c55a29ebd31df8165743d3fcc6c2cf435f5db",
@@ -486,16 +508,16 @@
     "https://jspm.dev/markdown-it-multimd-table": "01624bbd9e96c470df67e26f54020b40adc7ea5d06856154ab2db62ee12d874f",
     "https://jspm.dev/markdown-it-named-code-blocks": "be6a1170ac1bdf78256d4eafb0b3ae8a2c86214aa1a631f7bf8d6523c52793b8",
     "https://jspm.dev/markdown-it-ruby": "a2c536c769ccfaaa6b4bf7095b5731343141913c4bbb69699d81471d8bd8925f",
-    "https://jspm.dev/npm:@csstools/cascade-layer-name-parser@1": "c98b4c206e98e2d5c6258a07b74ba68075035503ecd66553b01686caeebf97cd",
-    "https://jspm.dev/npm:@csstools/cascade-layer-name-parser@1.0.4": "f80447540352ea6375365fd28e277073a798cb8e2d4dabc3b89c750022a6419b",
-    "https://jspm.dev/npm:@csstools/css-parser-algorithms@2": "0cce7fcd369f9255460ace98325fb340ea1d9aadd23c64a47221b7545f14062c",
-    "https://jspm.dev/npm:@csstools/css-parser-algorithms@2.3.1": "b096363805108c8d1b3aa4ac51fa5f4d64d2ab4895a6ae7dc5a7206240d0037d",
-    "https://jspm.dev/npm:@csstools/css-tokenizer@2": "6f8945052090215de8d4bb7724d0566c80a0a58fe48926462abcf2bbc468285c",
-    "https://jspm.dev/npm:@csstools/css-tokenizer@2.2.0": "e9cba48f3c2021b3a0b441c8c908a45ffe74f26fb53875e9ea43a53e2086cc1d",
+    "https://jspm.dev/npm:@csstools/cascade-layer-name-parser@1": "84db8d2858f7dd8dc0e30aa0f3a04ea1033de5fb363546f4a0eaf5b63670b70c",
+    "https://jspm.dev/npm:@csstools/cascade-layer-name-parser@1.0.5": "9dcc24bd15847f3b91b78036c31ec82062bfc0ce44e909f212627c6bf47e2593",
+    "https://jspm.dev/npm:@csstools/css-parser-algorithms@2": "18bda43653e715b9134b5502b7071739e0e6e472db6d84b0b42631295e8986e9",
+    "https://jspm.dev/npm:@csstools/css-parser-algorithms@2.3.2": "b8553793c113e703cfb5ae14a70f192d73227d87c7dd2f7a9d10d69398f0d621",
+    "https://jspm.dev/npm:@csstools/css-tokenizer@2": "f3c266896909789da116cef20f69290ad39947cff32db1fbfbfc5cd74956bdc3",
+    "https://jspm.dev/npm:@csstools/css-tokenizer@2.2.1": "b526bb8793f299e03f0f6d31e3139ddd49425e84139a1de849c2fa7e5b7e5539",
     "https://jspm.dev/npm:@csstools/selector-specificity@2": "264921edc2b8a1234c797c7eb7ad2b82f4329387e6a644362c8b807f982f3576",
     "https://jspm.dev/npm:@csstools/selector-specificity@2.2.0": "dd9bbcf4d2ea0fdf9a930f831b4f0a2bbefe3fbb7170aa4c1d478588f4c64f14",
-    "https://jspm.dev/npm:@primer/octicons@19.7.0!cjs": "09f4fb6690da87701cfa26567d15eb0254c97fa4d812eb1eced3a521e8e5560e",
-    "https://jspm.dev/npm:@primer/octicons@19.7.0/build/data.json!cjs": "0f64ca3b33dc8a44d040cb1d723ea014a559c726c8883dfd642801aee6d680f8",
+    "https://jspm.dev/npm:@primer/octicons@19.8.0!cjs": "9314755fbe5cb59a9c0eded2dd0f6b6c9478974fd40037bd3a3d6bd0a5846cf2",
+    "https://jspm.dev/npm:@primer/octicons@19.8.0/build/data.json!cjs": "6b1593ae304b8ccd8053b1326c79d5f89ed0926f5a32975f7dcfa48a9bf803a0",
     "https://jspm.dev/npm:boolbase@1!cjs": "5b386a8d8129f17ece99ddcb2502dc971467c8f794a40e57386da156b9ca13d0",
     "https://jspm.dev/npm:boolbase@1.0.0!cjs": "45e460e86228346efc33eadf5e2ecd8f87355826b0a3da7908193299581c3875",
     "https://jspm.dev/npm:css-has-pseudo@2.0.0/postcss!cjs": "fdae24b07b3b6dcdb542bba845e259987df20dc77fa618367ae03316cc663e53",
@@ -530,17 +552,17 @@
     "https://jspm.dev/npm:markdown-it-multimd-table@4.2.3!cjs": "3a40a47656b6c06d67d1e689a2a175749e847b5694e2ddbb0b4df88079fe1b73",
     "https://jspm.dev/npm:markdown-it-named-code-blocks@0.2.0!cjs": "63e9bd6d875eb221152816050fd315745425d2ade0ef19582d1c78a184daf74d",
     "https://jspm.dev/npm:markdown-it-ruby@0.1.1!cjs": "efacefb28c9569581f1cfc5e5d227b7c19857d01885238e3486c74d2222e8558",
-    "https://jspm.dev/npm:node-html-parser@6!cjs": "522a9a23d29063b2600a3a9f792670e500658ec6e83c92b0d70eb89eed78f827",
-    "https://jspm.dev/npm:node-html-parser@6.1.6!cjs": "c51741eb033c4b5a68f7c67f09912ed66c467d6b7f07d10c66cabafabebd3710",
-    "https://jspm.dev/npm:node-html-parser@6.1.6/_/e47ae7bd.js": "d6211d6adaeb80217358fff9ba83d206ee24a992ad03b206a1ef546236a074d5",
-    "https://jspm.dev/npm:node-html-parser@6.1.6/dist/matcher!cjs": "d6c4c63352cfd34f0ed32161ce69cd7f5d184f8c685c8080d75def6d757cd7e0",
-    "https://jspm.dev/npm:node-html-parser@6.1.6/dist/nodes/type!cjs": "673a56ee36e7757cfcfb88949bf1d42637eeb2de01594798bfddd1d9b25bab97",
-    "https://jspm.dev/npm:node-html-parser@6.1.6/dist/parse!cjs": "0893dd4e6e059fc6a9816d494163b922e5e5374e354a866d1187af416642568e",
+    "https://jspm.dev/npm:node-html-parser@6!cjs": "239c88c79717dff45141d09e37c28bdef19e6452324c39380330595a4179e315",
+    "https://jspm.dev/npm:node-html-parser@6.1.10!cjs": "d68cac68462cb0a1f168d46428d1ca6c2384a2f84ceb7d723f55d327c6c39a0d",
+    "https://jspm.dev/npm:node-html-parser@6.1.10/_/ab21fab0.js": "0fb440382fd2b6df9d3e6ed3ff53ce63a6dadc5a90fb7dd957dcbfb583755535",
+    "https://jspm.dev/npm:node-html-parser@6.1.10/dist/matcher!cjs": "d6c4c63352cfd34f0ed32161ce69cd7f5d184f8c685c8080d75def6d757cd7e0",
+    "https://jspm.dev/npm:node-html-parser@6.1.10/dist/nodes/type!cjs": "673a56ee36e7757cfcfb88949bf1d42637eeb2de01594798bfddd1d9b25bab97",
+    "https://jspm.dev/npm:node-html-parser@6.1.10/dist/parse!cjs": "4e3490e28eae01dbb19d0c433f33586a153e65d5a5f9f1c3ab413df95cec8d6f",
     "https://jspm.dev/npm:nth-check@2!cjs": "1b2eb9826ec5c93fba93750042664e0728bf3e81bbd1efef2e4d493534aa0086",
     "https://jspm.dev/npm:nth-check@2.1.1!cjs": "56aaafa47948476f1c63e289a4ad31d5a8deaf7f0d8297ce3e0d660a489153d8",
     "https://jspm.dev/npm:object-assign@4!cjs": "b19fbacc33f0ed8b8b4f8f7d0361a0546f4a5b946c3313fe9d36f4e599ecc41e",
     "https://jspm.dev/npm:object-assign@4.1.1!cjs": "6da711649ed78e03ebae561088386c8ece0fcc1c8da2b2f32de6515d30ac1db6",
-    "https://jspm.dev/npm:postcss-custom-selectors@7.1.4": "833644a27f13f4a3907a7be61bb1de0f8901b3f7e57199059911b201164f9c7b",
+    "https://jspm.dev/npm:postcss-custom-selectors@7.1.5": "77dd81e9fd4c69bbf8ab71525fff5c692df9b4572e0b83a9b302da6f34002213",
     "https://jspm.dev/npm:postcss-extend-rule@4.0.0": "f2bd1c61560959144f8c426ca831b2277688847963be061e8f1ab5ae814c586e",
     "https://jspm.dev/npm:postcss-nesting@10": "a535db3b8e4ddd88badf8c9e7d75632a09a44307049ec9a265fe4ed5d479b79e",
     "https://jspm.dev/npm:postcss-nesting@10.2.0": "addd4d3b0d3d386e477aa3d51ad2726fffd4dc70d1d82f2e4a8c03c1c6e12bee",
@@ -552,7 +574,7 @@
     "https://jspm.dev/npm:postcss-selector-parser@6.0.13/dist/util/unesc!cjs": "03ba115fbf339991ec36220c1b968f443940b336379bcc608208e646743fcb62",
     "https://jspm.dev/npm:util-deprecate@1!cjs": "bcd5753bbab1196f617155e8295f5c724846991f75b2cb32c2fbf58155057018",
     "https://jspm.dev/npm:util-deprecate@1.0.2!cjs": "8cb18daa280c8fe35c5c564fca088fe8c602170477e2d3f49f2c21f3b4303bbd",
-    "https://jspm.dev/postcss-custom-selectors": "cea418b7b0201a4333cbee68758cdd58e0ec59ec257e2339ab1998da00f4004c",
+    "https://jspm.dev/postcss-custom-selectors": "9e6e3a62bdaf4fe43b1afb70dbddd7254e1bf200961775ff31cb1a6a219714d7",
     "https://jspm.dev/postcss-extend-rule": "e8e65c15323fadf7e320afd2e2126c5988388512afa462702125b00284e4d637"
   },
   "npm": {
@@ -575,8 +597,8 @@
       "unidecode@0.1.8": "unidecode@0.1.8"
     },
     "packages": {
-      "@babel/runtime@7.22.15": {
-        "integrity": "sha512-T0O+aa+4w0u06iNmapipJXMV4HoUir03hpx3/YqXXhu9xim3w+dVphjFWl1OH8NbZHw5Lbm9k45drDkgq2VNNA==",
+      "@babel/runtime@7.23.1": {
+        "integrity": "sha512-hC2v6p8ZSI/W0HUzh3V8C5g+NwSKzKPtJwSpTjwl0o297GP9+ZLQSkdvHz46CM3LqyoXxq+5G9komY+eSqSO0g==",
         "dependencies": {
           "regenerator-runtime": "regenerator-runtime@0.14.0"
         }
@@ -591,8 +613,8 @@
         "integrity": "sha512-+lFIql0nbWSftazQ27cOYvSLC92SsfjxrU0I/Iys7hoxrBkN8OF+wmxxzx3bLFyFrLgDZ9lUckGcwldE4SfDQA==",
         "dependencies": {}
       },
-      "@types/prop-types@15.7.5": {
-        "integrity": "sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==",
+      "@types/prop-types@15.7.7": {
+        "integrity": "sha512-FbtmBWCcSa2J4zL781Zf1p5YUBXQomPEcep9QZCfRfQgTxz3pJWiDFLebohZ9fFntX5ibzOkSsrJ0TEew8cAog==",
         "dependencies": {}
       },
       "@types/react-dom@18.2.7": {
@@ -604,13 +626,13 @@
       "@types/react@18.2.18": {
         "integrity": "sha512-da4NTSeBv/P34xoZPhtcLkmZuJ+oYaCxHmyHzwaDQo9RQPBeXV+06gEk2FpqEcsX9XrnNLvRpVh6bdavDSjtiQ==",
         "dependencies": {
-          "@types/prop-types": "@types/prop-types@15.7.5",
-          "@types/scheduler": "@types/scheduler@0.16.3",
+          "@types/prop-types": "@types/prop-types@15.7.7",
+          "@types/scheduler": "@types/scheduler@0.16.4",
           "csstype": "csstype@3.1.2"
         }
       },
-      "@types/scheduler@0.16.3": {
-        "integrity": "sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==",
+      "@types/scheduler@0.16.4": {
+        "integrity": "sha512-2L9ifAGl7wmXwP4v3pN4p2FLhD0O1qsJpvKmNin5VA8+UvNVb447UDaAEV6UdrkA+m/Xs58U1RFps44x6TFsVQ==",
         "dependencies": {}
       },
       "a-sync-waterfall@1.0.1": {
@@ -628,8 +650,8 @@
       "autoprefixer@10.4.15_postcss@8.4.29": {
         "integrity": "sha512-KCuPB8ZCIqFdA4HwKXsvz7j6gvSDNhDP7WnUjBleRkKjPdvCmHFuQ77ocavI8FT6NdvlBnE2UFr2H4Mycn8Vew==",
         "dependencies": {
-          "browserslist": "browserslist@4.21.10",
-          "caniuse-lite": "caniuse-lite@1.0.30001532",
+          "browserslist": "browserslist@4.21.11",
+          "caniuse-lite": "caniuse-lite@1.0.30001539",
           "fraction.js": "fraction.js@4.3.6",
           "normalize-range": "normalize-range@0.1.2",
           "picocolors": "picocolors@1.0.0",
@@ -637,17 +659,17 @@
           "postcss-value-parser": "postcss-value-parser@4.2.0"
         }
       },
-      "browserslist@4.21.10": {
-        "integrity": "sha512-bipEBdZfVH5/pwrvqc+Ub0kUPVfGUhlKxbvfD+z1BDnPEO/X98ruXGA1WP5ASpAFKan7Qr6j736IacbZQuAlKQ==",
+      "browserslist@4.21.11": {
+        "integrity": "sha512-xn1UXOKUz7DjdGlg9RrUr0GGiWzI97UQJnugHtH0OLDfJB7jMgoIkYvRIEO1l9EeEERVqeqLYOcFBW9ldjypbQ==",
         "dependencies": {
-          "caniuse-lite": "caniuse-lite@1.0.30001532",
-          "electron-to-chromium": "electron-to-chromium@1.4.513",
+          "caniuse-lite": "caniuse-lite@1.0.30001539",
+          "electron-to-chromium": "electron-to-chromium@1.4.529",
           "node-releases": "node-releases@2.0.13",
-          "update-browserslist-db": "update-browserslist-db@1.0.11_browserslist@4.21.10"
+          "update-browserslist-db": "update-browserslist-db@1.0.13_browserslist@4.21.11"
         }
       },
-      "caniuse-lite@1.0.30001532": {
-        "integrity": "sha512-FbDFnNat3nMnrROzqrsg314zhqN5LGQ1kyyMk2opcrwGbVGpHRhgCWtAgD5YJUqNAiQ+dklreil/c3Qf1dfCTw==",
+      "caniuse-lite@1.0.30001539": {
+        "integrity": "sha512-hfS5tE8bnNiNvEOEkm8HElUHroYwlqMMENEzELymy77+tJ6m+gA2krtHl5hxJaj71OlpC2cHZbdSMX1/YEqEkA==",
         "dependencies": {}
       },
       "commander@5.1.0": {
@@ -665,11 +687,11 @@
       "date-fns@2.30.0": {
         "integrity": "sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==",
         "dependencies": {
-          "@babel/runtime": "@babel/runtime@7.22.15"
+          "@babel/runtime": "@babel/runtime@7.23.1"
         }
       },
-      "electron-to-chromium@1.4.513": {
-        "integrity": "sha512-cOB0xcInjm+E5qIssHeXJ29BaUyWpMyFKT5RB3bsLENDheCja0wMkHJyiPl0NBE/VzDI7JDuNEQWhe6RitEUcw==",
+      "electron-to-chromium@1.4.529": {
+        "integrity": "sha512-6uyPyXTo8lkv8SWAmjKFbG42U073TXlzD4R8rW3EzuznhFS2olCIAfjjQtV2dV2ar/vRF55KUd3zQYnCB0dd3A==",
         "dependencies": {}
       },
       "entities@3.0.1": {
@@ -782,7 +804,7 @@
           "postcss": "postcss@8.4.29",
           "postcss-value-parser": "postcss-value-parser@4.2.0",
           "read-cache": "read-cache@1.0.0",
-          "resolve": "resolve@1.22.4"
+          "resolve": "resolve@1.22.6"
         }
       },
       "postcss-nesting@12.0.1_postcss@8.4.29_postcss-selector-parser@6.0.13": {
@@ -836,8 +858,8 @@
         "integrity": "sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==",
         "dependencies": {}
       },
-      "resolve@1.22.4": {
-        "integrity": "sha512-PXNdCiPqDqeUou+w1C2eTQbNfxKSuMxqTCuvlmmMsk1NWHL5fRrhY6Pl0qEYYc6+QqGClco1Qj8XnjPego4wfg==",
+      "resolve@1.22.6": {
+        "integrity": "sha512-njhxM7mV12JfufShqGy3Rz8j11RPdLy4xi15UurGJeoHLfJpVXKdh3ueuOqbYUcDZnffr6X739JBo5LzyahEsw==",
         "dependencies": {
           "is-core-module": "is-core-module@2.13.0",
           "path-parse": "path-parse@1.0.7",
@@ -866,10 +888,10 @@
         "integrity": "sha512-SdoZNxCWpN2tXTCrGkPF/0rL2HEq+i2gwRG1ReBvx8/0yTzC3enHfugOf8A9JBShVwwrRIkLX0YcDUGbzjbVCA==",
         "dependencies": {}
       },
-      "update-browserslist-db@1.0.11_browserslist@4.21.10": {
-        "integrity": "sha512-dCwEFf0/oT85M1fHBg4F0jtLwJrutGoHSQXCh7u4o2t1drG+c0a9Flnqww6XUKSfQMPpJBRjU8d4RXB09qtvaA==",
+      "update-browserslist-db@1.0.13_browserslist@4.21.11": {
+        "integrity": "sha512-xebP81SNcPuNpPP3uzeW1NYXxI3rxyJzF3pD6sH4jE7o/IX+WtSpwnVU+qIsDPyk0d3hmFQ7mjqc6AtV604hbg==",
         "dependencies": {
-          "browserslist": "browserslist@4.21.10",
+          "browserslist": "browserslist@4.21.11",
           "escalade": "escalade@3.1.1",
           "picocolors": "picocolors@1.0.0"
         }
