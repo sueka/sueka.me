@@ -102,3 +102,136 @@ SLICE(range, offset_rows, _height)
 ```
 
 となる。
+
+## `UNION` `INTERSECTION`
+
+範囲や配列を集合みたいに使ひたいことも多い。まづは簡単な `UNION` から。シグネチャは
+
+``` excel
+UNION(left, right)
+```
+
+とする。`left` `right` は二次元でもよい。
+
+実装は
+
+``` excel
+=LET(
+  left_flat, TOCOL(left, 1),
+  right_flat, TOCOL(right, 1),
+  TOCOL(VSTACK(left_flat, right_flat), 1)
+)
+```
+
+とした[^2]。計算量は `left` `right` のサイズを 𝑚、𝑛 として、Θ(𝑚 + 𝑛) 程度。
+
+[^2]: `UNIQUE` はしない。`UNIQUE` の計算量は Θ(𝑛 log 𝑛) もあるが、その割に嬉しいことが少ない。
+
+`INTERSECTION` は少し難しい。シグネチャは
+
+``` excel
+INTERSECTION(left, right)
+```
+
+とする。
+
+実装は `left` から `right` に含まれない要素を取り除くといふ方針で行ふ。要素の除外には `FILTER` を使ふ。`FILTER` の条件は、もし範囲が列なら、列は行単位でしか処理できないので、行単位で処理される。よって、`INTERSECTION` は次のやうに実装できる:
+
+``` excel
+=LET(
+  left_flat, TOCOL(left, 1),
+  right_flat, TOCOL(right, 1),
+  FILTER(left_flat, IFNA(MATCH(left_flat, right_flat, 0)))
+)
+```
+
+ソートされてゐない範囲に関する `MATCH` の計算量は恐らく Θ(𝑛) だから、この実装の計算量は、`left` `right` のサイズを 𝑚、𝑛 として、Θ(𝑚𝑛) となる。
+
+これは積集合としてはかなり遅い。これを改善するには、効率的な `Set` を用ゐて、
+
+``` ts:intersect.ts
+function intersect<T>(xs: T[], ys: T[]): T[] {
+  const yy = new Set(ys) // Θ(n)
+
+  return xs.filter( // Θ(m)
+    x => yy.has(x) // Θ(1)
+  )
+}
+```
+
+のやうにする——つまり、Θ(1) の `CONTAINS` を用意して、`MATCH` をそれで置き換へればよい。
+
+スプレッドシートの関数だけでこれを実装することはできない[^3]が、Apps Script に委譲すればうまくいく。多少のオーバーヘッドはあるが、計算量は変はらないだらう。
+
+[^3]: 多分。
+
+また、二分探索を使った改善も考へられる。上の Θ(𝑚𝑛) の実装を、`right_flat` がソートされ、*`MATCH` が担ふ処理*が二分探索で実行されるやうに改変する。新しい実装の計算量は、`left` `right` のサイズを 𝑚、𝑛 として、Θ((𝑚 + 𝑛) log 𝑛) 程度となる[^4]。
+
+[^4]: `SORT` が最悪時間計算量が Θ(𝑛 log 𝑛) で済むアルゴリズムで実装されてゐることを期待してゐる。
+
+探索に使ふ関数について。`MATCH(search_key, range, search_type?)` は、`search_type` が `1` `-1` または<i>空白</i>[^5]なら、恐らく二分探索で実行される。しかし、このモードの `MATCH` は、`range` に含まれる `search_key` 以下で最大の値の位置を返す。この仕様と `INDEX` `FILTER` との噛み合はせの悪さから、`MATCH` を使った実装はうまくいかなかった。
+
+[^5]: 空白セルへの参照や、省略された引数など、`ISBLANK` が true を返す値。省略された引数が<i>空白</i>であることを確かめるには、`ISBLANK(LAMBDA(_a, b, b)(1,))` のやうな数式を実行する。
+
+そこで、代はりに `XMATCH` を使ふ。`XMATCH(search_key, lookup_range, match_mode?, search_mode?)` は、`search_mode` が `2` なら、昇順でソートされた範囲を二分探索する。`match_mode` が `1` `-1` でない限り、`search_key` と異なる値にマッチすることもない。
+
+新しい `INTERSECTION` の実装は、
+
+``` excel
+=LET(
+  left_flat, TOCOL(left, 1),
+  right_flat_sorted, SORT(TOCOL(right, 1)),
+  FILTER(left_flat, XMATCH(left_flat, right_flat_sorted,, 2))
+)
+```
+
+となる。
+
+## `TIMESPENT`
+
+数式の実行時間を計測するための関数 `TIMESPENT` を作る。シグネチャは
+
+``` excel
+TIMESPENT(proc)
+```
+
+とする。`proc` は引数を取らない関数。
+
+実装は
+
+``` excel
+=LET(
+  start_time, NOW(),
+  _result, proc(),
+  end_time, NOW(),
+  TIMEDIF(start_time, end_time, "Ms")
+)
+```
+
+とする。`LET(name, value_expression, ..., formula_expression)` は、`value_expression` の中でより左で宣言された `name` を使ふために、`name` `value_expression` ペアを左から順に逐次的に処理することになってゐる。 
+
+多く `LAMBDA` を使って、`TIMESPENT(LAMBDA(MATCH("Pikachu", B2:B, 1)))` といふゝうに使ふ。
+
+### `TIMEDIF`
+
+`TIMEDIF` は `DATEDIF` と同じシグネチャ、つまり、
+
+``` excel
+TIMEDIF(start_time, end_time, unit)
+```
+
+で、
+
+``` excel
+=LET(
+  diff, end_time - start_time,
+  IFS(
+    unit = "S", FLOOR(86400 * diff),
+    unit = "Ms", FLOOR(86400 * 1000 * diff)
+  )
+)
+```
+
+のやうに実装する。ミリ秒のための `unit` を `"MS"` ではなく `"Ms"` にしたのは、[Seconds in Minute]{lang=en} と誤解されないやうにするため[^6]。
+
+[^6]: `DATEDIF` の `unit` は `"YM"` `"MD"` `"YD"` といふ値を取ることがあり、これらはそれぞれ [Months in Year]{lang=en}、[Days on Month]{lang=en}、[Days in Year]{lang=en} を意味する。
