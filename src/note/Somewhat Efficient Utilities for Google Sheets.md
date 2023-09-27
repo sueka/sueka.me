@@ -135,7 +135,7 @@ INTERSECTION(left, right)
 
 とする。
 
-実装は `left` から `right` に含まれない要素を取り除くといふ方針で行ふ。要素の除外には `FILTER` を使ふ。`FILTER` の条件は、もし範囲が列なら、列は行単位でしか処理できないので、行単位で処理される。よって、`INTERSECTION` は次のやうに実装できる:
+実装は `right` に含まれない要素を `left` から取り除くといふ方針で行ふ。要素の除外には `FILTER` を使ふ。`FILTER` の条件は、もし範囲が列なら、列は行単位でしか処理できないので、行単位で処理される。よって、`INTERSECTION` は次のやうに実装できる:
 
 ``` excel
 =LET(
@@ -169,7 +169,7 @@ function intersect<T>(xs: T[], ys: T[]): T[] {
 
 [^4]: `SORT` が最悪時間計算量が Θ(𝑛 log 𝑛) で済むアルゴリズムで実装されてゐることを期待してゐる。
 
-探索に使ふ関数について。`MATCH(search_key, range, search_type?)` は、`search_type` が `1` `-1` または<i>空白</i>[^5]なら、恐らく二分探索で実行される。しかし、このモードの `MATCH` は、`range` に含まれる `search_key` 以下で最大の値の位置を返す。この仕様と `INDEX` `FILTER` との噛み合はせの悪さから、`MATCH` を使った実装はうまくいかなかった。
+探索に使ふ関数について。`MATCH(search_key, range, search_type?)` は、`search_type` が `1` `-1` または<i>空白</i>[^5]なら、恐らく二分探索で実行される。しかし、このモードの `MATCH` は、`range` に含まれる `search_key` 以下[/]{.upright}以上で最大[/]{.upright}最小の値の位置を返す。この仕様と `INDEX` `FILTER` との噛み合はせの悪さから、`MATCH` を使った実装はうまくいかなかった。
 
 [^5]: 空白セルへの参照や、省略された引数など、`ISBLANK` が true を返す値。省略された引数が<i>空白</i>であることを確かめるには、`ISBLANK(LAMBDA(_a, b, b)(1,))` のやうな数式を実行する。
 
@@ -210,7 +210,7 @@ TIMESPENT(proc)
 
 とする。`LET(name, value_expression, ..., formula_expression)` は、`value_expression` の中でより左で宣言された `name` を使ふために、`name` `value_expression` ペアを左から順に逐次的に処理することになってゐる。 
 
-多く `LAMBDA` を使って、`TIMESPENT(LAMBDA(MATCH("Pikachu", B2:B, 1)))` といふゝうに使ふ。
+多く `LAMBDA` を使って、`TIMESPENT(LAMBDA(MATCH("Pikachu", B2:B)))` といふゝうに使ふ。
 
 ### `TIMEDIF`
 
@@ -234,4 +234,4 @@ TIMEDIF(start_time, end_time, unit)
 
 のやうに実装する。ミリ秒のための `unit` を `"MS"` ではなく `"Ms"` にしたのは、[Seconds in Minute]{lang=en} と誤解されないやうにするため[^6]。
 
-[^6]: `DATEDIF` の `unit` は `"YM"` `"MD"` `"YD"` といふ値を取ることがあり、これらはそれぞれ [Months in Year]{lang=en}、[Days on Month]{lang=en}、[Days in Year]{lang=en} を意味する。
+[^6]: `DATEDIF` の `unit` は `"YM"` `"MD"` `"YD"` といふ値を取ることがあり、これらはそれぞれ [Months in Year]{lang=en}、[Days in Month]{lang=en}、[Days in Year]{lang=en} を意味する。
