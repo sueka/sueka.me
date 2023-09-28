@@ -2,7 +2,7 @@
 title: Google スプレッドシートのための効率的なユーティリティ
 writing: horizontal
 date: 2023-09-26
-lastmod: 2023-09-27
+lastmod: 2023-09-28
 ---
 
 ## `SMALLER` `LARGER`
@@ -34,7 +34,7 @@ CONJ(left, right)
 DISJ(left, right)
 ```
 
-として、実装は
+として、実装は、可変長引数を取る関数を使はないやうに注意して、
 
 ``` excel
 =IF(NOT(left), false, IF(NOT(right), false, true))
@@ -119,7 +119,7 @@ UNION(left, right)
 =LET(
   left_flat, TOCOL(left, 1),
   right_flat, TOCOL(right, 1),
-  TOCOL(VSTACK(left_flat, right_flat), 1)
+  VSTACK(left_flat, right_flat)
 )
 ```
 
@@ -141,11 +141,13 @@ INTERSECTION(left, right)
 =LET(
   left_flat, TOCOL(left, 1),
   right_flat, TOCOL(right, 1),
-  FILTER(left_flat, IFNA(MATCH(left_flat, right_flat, 0)))
+  TOCOL(IFNA(FILTER(left_flat, IFNA(MATCH(left_flat, right_flat, 0)))), 1)
 )
 ```
 
-ソートされてゐない範囲に関する `MATCH` の計算量は恐らく Θ(𝑛) だから、この実装の計算量は、`left` `right` のサイズを 𝑚、𝑛 として、Θ(𝑚𝑛) となる。
+`FILTER` は返すものがないときに `#N/A` を返すので、`IFNA` と `TOCOL` を使って<i>空の範囲</i>[^7]に置き換へてゐる。ソートされてゐない範囲に関する `MATCH` の計算量は恐らく Θ(𝑛) だから、この実装の計算量は、`left` `right` のサイズを 𝑚、𝑛 として、Θ(𝑚𝑛) となる。
+
+[^7]: <i>空の範囲</i>は、セルに直接出力すると `#REF`（<ruby>参照が存在しません。<rt lang="en">Reference does not exist</ruby>）を返すが、セルに出力されない限り、サイズ[0]{.upright}の範囲として振る舞ふ。
 
 これは積集合としてはかなり遅い。これを改善するには、効率的な `Set` を用ゐて、
 
@@ -181,7 +183,7 @@ function intersect<T>(xs: T[], ys: T[]): T[] {
 =LET(
   left_flat, TOCOL(left, 1),
   right_flat_sorted, SORT(TOCOL(right, 1)),
-  FILTER(left_flat, XMATCH(left_flat, right_flat_sorted,, 2))
+  TOCOL(IFNA(FILTER(left_flat, IFNA(XMATCH(left_flat, right_flat_sorted,, 2)))), 1)
 )
 ```
 
