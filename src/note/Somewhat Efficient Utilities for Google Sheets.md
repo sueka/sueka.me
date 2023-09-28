@@ -56,7 +56,7 @@ DISJ(left, right)
 
 などはセル参照ではない。
 
-こゝでは、かういふものを受け入れつゝ、行のみについて働く `OFFSET` の簡易版 `SLICE` を作る。シグネチャは
+こゝでは、かういふものを受け入れつゝ行のみについて働く `OFFSET` の簡易版、`SLICE` を作る。シグネチャは
 
 ``` excel
 SLICE(range, offset_rows, _height)
@@ -171,11 +171,11 @@ function intersect<T>(xs: T[], ys: T[]): T[] {
 
 [^4]: `SORT` が最悪時間計算量が Θ(𝑛 log 𝑛) で済むアルゴリズムで実装されてゐることを期待してゐる。
 
-探索に使ふ関数について。`MATCH(search_key, range, search_type?)` は、`search_type` が `1` `-1` または<i>空白</i>[^5]なら、恐らく二分探索で実行される。しかし、このモードの `MATCH` は、`range` に含まれる `search_key` 以下[/]{.upright}以上で最大[/]{.upright}最小の値の位置を返す。この仕様と `INDEX` `FILTER` との噛み合はせの悪さから、`MATCH` を使った実装はうまくいかなかった。
+探索に使ふ関数について。[`MATCH`](https://support.google.com/docs/answer/3093378) は、`search_type` が `1` `-1` または<i>空白</i>[^5]なら、恐らく二分探索で実行される。しかし、このモードの `MATCH` は、`search_type` が[1]{.upright}の場合、`range` に含まれる `search_key` 以下で最大の値の位置を返す。この仕様と `INDEX` `FILTER` との噛み合はせの悪さから、`MATCH` を使った実装はうまくいかなかった。
 
 [^5]: 空白セルへの参照や、省略された引数など、`ISBLANK` が true を返す値。省略された引数が<i>空白</i>であることを確かめるには、`ISBLANK(LAMBDA(_a, b, b)(1,))` のやうな数式を実行する。
 
-そこで、代はりに `XMATCH` を使ふ。`XMATCH(search_key, lookup_range, match_mode?, search_mode?)` は、`search_mode` が `2` なら、昇順でソートされた範囲を二分探索する。`match_mode` が `1` `-1` でない限り、`search_key` と異なる値にマッチすることもない。
+そこで、代はりに `XMATCH` を使ふ。[`XMATCH`](https://support.google.com/docs/answer/12406049) は、`search_mode` が `2` なら、昇順でソートされた範囲を二分探索する。`match_mode` が `1` `-1` でない限り、`search_key` と異なる値にマッチすることもない。
 
 新しい `INTERSECTION` の実装は、
 
@@ -210,7 +210,7 @@ TIMESPENT(proc)
 )
 ```
 
-とする。`LET(name, value_expression, ..., formula_expression)` は、`value_expression` の中でより左で宣言された `name` を使ふために、`name` `value_expression` ペアを左から順に逐次的に処理することになってゐる。 
+とする。[`LET`](https://support.google.com/docs/answer/13190535) は、`value_expression` の中でより左で宣言された `name` が使へるやうにするために、`name` `value_expression` ペアを左から順に逐次的に処理する。 
 
 多く `LAMBDA` を使って、`TIMESPENT(LAMBDA(MATCH("Pikachu", B2:B)))` といふゝうに使ふ。
 
