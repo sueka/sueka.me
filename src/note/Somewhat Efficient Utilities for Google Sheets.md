@@ -1,8 +1,8 @@
 ---
-title: Google スプレッドシートのための効率的なユーティリティ
+title: Google スプレッドシートのための効率的なユーティリティ集
 writing: horizontal
 date: 2023-09-26
-lastmod: 2023-09-28
+lastmod: 2023-10-02
 ---
 
 ## `SMALLER` `LARGER`
@@ -47,7 +47,7 @@ DISJ(left, right)
 
 同じヘッダーを持つ[2]{.upright}つの表をマージするために、[2]{.upright}つ目の表の先頭からヘッダーを取り除きたいことがある。
 
-もし<i>この表</i>がセル範囲なら、`A1:G100` といふセル参照から先頭[2]{.upright}行をヘッダーとして取り除く場合、セル参照を直接 `A3:G100` に書き換へるか、`OFFSET(A1:G100, 2, 0)` とするかすればよい。
+もし<i>この表</i>がセル範囲なら、`A1:G100` といふセル参照から先頭[2]{.upright}行をヘッダーとして取り除くには、セル参照を直接 `A3:G100` に書き換へるか、`OFFSET(A1:G100, 2, 0)` とするかすればよい。
 
 けれど、扱ふ範囲がいつもセル参照とは限らない。たとへば、
 
@@ -64,35 +64,7 @@ SLICE(range, offset_rows, _height)
 
 としよう。名前付き関数はオプション引数が扱へないので、`_height` を省略するときは `SLICE(range, 2, )` といふゝうに、末尾のカンマを置いて使ふ。
 
-最初に思ひ付いた実装は、
-
-``` excel
-=ARRAY_CONSTRAIN(
-  REVERSE(
-    ARRAY_CONSTRAIN(
-      REVERSE(range), 
-      ROWS(range) - offset_rows, 
-      COLUMNS(range)
-    )
-  ), 
-  height, 
-  COLUMNS(range)
-)
-```
-
-だった。しかし、`REVERSE` が曲者で、意外にうまい実装が思ひ浮かばなかった。また、配列のスライス（サイズ 𝑘）の計算量が Θ(𝑘) であるのに対し、配列（サイズ 𝑛）の反転の計算量は Θ(𝑛) なので、やゝ非効率的でもある。
-
-これよりもシンプルで、計算量も恐らく Θ(𝑘) で済む実装がある。`CHOOSEROWS`（第[2]{.upright}引数に配列を取れる[^1]。）を使って、
-
-``` excel
-=CHOOSEROWS(range, SEQUENCE(height, 1, offset_rows + 1))
-```
-
-のやうにすればよい。
-
-[^1]: ……といふか、組み込みの関数は `MIN` `MAX` なども含めて、可変長引数を取る部分には配列も渡せるやうになってゐる。
-
-`_height` が省略される場合を考慮すると、
+実装は `CHOOSEROWS`（第[2]{.upright}引数に配列を取れる[^1]。）を使って、
 
 ``` excel
 =LET(
@@ -101,7 +73,9 @@ SLICE(range, offset_rows, _height)
 )
 ```
 
-となる。
+とする。
+
+[^1]: ……といふか、組み込みの関数は `MIN` `MAX` なども含めて、可変長引数を取る部分には配列も渡せるやうになってゐる。
 
 ## `UNION` `INTERSECTION`
 
@@ -123,9 +97,9 @@ UNION(left, right)
 )
 ```
 
-とした[^2]。計算量は `left` `right` のサイズを 𝑚、𝑛 として、Θ(𝑚 + 𝑛) 程度。
+とする[^2]。計算量は `left` `right` のサイズを 𝑚、𝑛 として、Θ(𝑚 + 𝑛) 程度。
 
-[^2]: `UNIQUE` はしない。`UNIQUE` の計算量は Θ(𝑛 log 𝑛) もあるが、その割に嬉しいことが少ない。
+[^2]: `UNIQUE` は使はない。`UNIQUE` の計算量は Θ(𝑛 log 𝑛) もあるが、その割に嬉しいことが少ない。
 
 `INTERSECTION` は少し難しい。シグネチャは
 
@@ -171,11 +145,11 @@ function intersect<T>(xs: T[], ys: T[]): T[] {
 
 [^4]: `SORT` が最悪時間計算量が Θ(𝑛 log 𝑛) で済むアルゴリズムで実装されてゐることを期待してゐる。
 
-探索に使ふ関数について。[`MATCH`](https://support.google.com/docs/answer/3093378) は、`search_type` が `1` `-1` または<i>空白</i>[^5]なら、恐らく二分探索で実行される。しかし、このモードの `MATCH` は、`search_type` が[1]{.upright}の場合、`range` に含まれる `search_key` 以下で最大の値の位置を返す。この仕様と `INDEX` `FILTER` との噛み合はせの悪さから、`MATCH` を使った実装はうまくいかなかった。
+探索に使ふ関数は変更する必要がある。[`MATCH`](https://support.google.com/docs/answer/3093378) は、`search_type` が `1` `-1` または<i>空白</i>[^5]なら、恐らく二分探索で実行される。しかし、このモードの `MATCH` は、`search_type` が[1]{.upright}の場合、`range` に含まれる `search_key` 以下で最大の値の位置を返す。この仕様と `INDEX` `FILTER` との噛み合はせの悪さから、`MATCH` を使った実装はうまくいかなかった。
 
 [^5]: 空白セルへの参照や、省略された引数など、`ISBLANK` が true を返す値。省略された引数が<i>空白</i>であることを確かめるには、`ISBLANK(LAMBDA(_a, b, b)(1,))` のやうな数式を実行する。
 
-そこで、代はりに `XMATCH` を使ふ。[`XMATCH`](https://support.google.com/docs/answer/12406049) は、`search_mode` が `2` なら、昇順でソートされた範囲を二分探索する。`match_mode` が `1` `-1` でない限り、`search_key` と異なる値にマッチすることもない。
+そこで、代はりに `XMATCH` を採用した。[`XMATCH`](https://support.google.com/docs/answer/12406049) は、`search_mode` が `2` なら、昇順でソートされた範囲を二分探索する。`match_mode` が `1` `-1` でない限り、`search_key` と異なる値にマッチすることもない。
 
 新しい `INTERSECTION` の実装は、
 
@@ -188,6 +162,105 @@ function intersect<T>(xs: T[], ys: T[]): T[] {
 ```
 
 となる。
+
+## <s>`FORALL` `EXISTS`</s>
+
+範囲内の値が全て条件を満たすかどうかや、範囲内に条件を満たす値が存在するかどうかが知りたいことがある。
+
+この操作は `ARRAYFORMULA` を用ゐると効率良く行へる。たとへば、範囲 `A2:A` に素数が存在することを調べるには、`OR(ARRAYFORMULA(ISPRIME(A2:A)))` などゝする。計算量は常に Θ(𝑛) となる。
+
+`MAP` を使ふ方法もあるが、私の環境では `ARRAYFORMULA` を使った方法のはうが[1]{.upright}～[10]{.tate-chu-yoko}倍ほど速く動作した。
+
+もし名前付き関数にするなら、シグネチャは
+
+``` excel
+FORALL(range, pred)
+EXISTS(range, pred)
+```
+
+とし、実装は
+
+``` excel
+=AND(MAP(range, pred))
+=OR(MAP(range, pred))
+```
+
+のやうにする。`EXISTS(A2:A, ISPRIME)` といふゝうに使ふ。[`MAP`](https://support.google.com/docs/answer/12568985) の `LAMBDA` はラムダ関数でなければならないが、名前付き関数を `LAMBDA` 仮引数として渡すこともできる。`ARRAYFORMULA` の引数となる数式を範囲と条件に分けることは恐らくできない。
+
+`FORALL` `EXISTS` は名前と実装がほとんど同じで、名前付き関数として定義する意義が少ない。むしろ、もっぱらスプレッドシートに慣れてゐる人にとっては、組み込み関数で書かれてゐるはうが分かりやすいだらう。
+
+`ARRAYFORMULA` と `MAP` は[2]{.upright}行[2]{.upright}列以上の範囲も走査できる。便利な仕様だが、この機能性のせゐで、右に挙げた方法で行単位または列単位の条件の全称・存在性を調べることはできない。これを解決させるには `BYROW` `BYCOL` を使ふ。範囲 `A2:B` に含まれる全ての行が双子素数のペアであることを調べるには、`AND(BYROW(A2:B, ISTWINPRIME))` とする。
+
+## `REVERSE` `VREVERSE` `HREVERSE`
+
+範囲の反転は、
+
+``` excel
+REVERSE(range)
+```
+
+``` excel
+=LET(
+  empty_rows, TOCOL(, 1),
+  REDUCE(empty_rows, range, LAMBDA(total, value, VSTACK(value, total)))
+)
+```
+
+のやうに書ける。たゞし、`REDUCE` は[2]{.upright}行[2]{.upright}列以上の範囲を取れるので、この関数は、どんな形の範囲が渡されても、行優先で平滑化した上で、[1]{.upright}列の範囲を返す。
+
+そこで、行方向または列方向の範囲を反転させる方法を考へる。まづ、範囲がセル参照なら、行方向の範囲の反転は
+
+``` excel
+VREVERSE(rows)
+```
+
+``` excel
+=SORT(rows, ROW(rows), false)
+```
+
+のやうに書ける。この方法は、行番号をキーとして降順にソートすることで、行方向の範囲の反転を実現させてゐる。しかし、`ROW` はシート上の行番号を返すものなので、セル参照（例: `A1:B`）に対してしか動作しない。
+
+また、この方針では `HREVERSE` を実装することも恐らくできない。`SORT` は行方向のソートしか行へないので、上の `VREVERSE` と同じやうな実装はできないし、`ROW` はセル参照しか取れないので、`=TRANSPOSE(VREVERSE(TRANSPOSE(cols)))` みたいな実装もうまくいかない。
+
+### `VLEN`
+
+これを解決させるには、`ROW` の代はりに `SEQUENCE` を使ふとよい。範囲のサイズを知る必要があるので、まづは `VLEN` を作る。シグネチャは
+
+``` excel
+VLEN(rows)
+```
+
+として、実装は
+
+``` excel
+=SUM(BYROW(rows, LAMBDA(_, 1)))
+```
+
+とする。計算量は Θ(𝑛) である[^8]。
+
+[^8]: 遅さうに見えるが、サイズのためのフィールドがない場合は妥当だと思ふ。
+
+---
+
+新しい `VREVERSE` の実装は、
+
+``` excel
+=SORT(rows, SEQUENCE(VLEN(rows)), false)
+```
+
+となる。このバージョンはセル参照でない範囲に対してもうまく動作する。また、`HREVERSE` も `TRANSPOSE` と `VREVERSE` で実装できる。シグネチャは
+
+``` excel
+HREVERSE(cols)
+```
+
+とし、実装は
+
+``` excel
+=TRANSPOSE(VREVERSE(TRANSPOSE(cols)))
+```
+
+とする。
 
 ## `TIMESPENT`
 
