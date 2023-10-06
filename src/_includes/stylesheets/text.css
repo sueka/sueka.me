@@ -93,6 +93,10 @@ a:visited {
   color: var(--color-visited);
 }
 
+pre {
+  text-align: start;
+}
+
 code {
   font-variant-ligatures: none;
 }
