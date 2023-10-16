@@ -29,8 +29,7 @@ jobs:
         shell: bash -o pipefail {0}
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v1
-        # github.ref must be in the form refs/pull/:prNumber/merge when the workflow event is a pull_request. See also https://docs.github.com/en/actions/reference/events-that-trigger-workflows#pull_request.
-        if: github.ref == 'refs/heads/master'
+        if: github.event_name == 'push'
   deploy:
     permissions:
       pages: write
