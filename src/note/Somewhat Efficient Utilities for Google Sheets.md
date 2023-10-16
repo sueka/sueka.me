@@ -1,7 +1,7 @@
 ---
 title: Google スプレッドシートのための効率的なユーティリティ集
 date: 2023-09-26
-lastmod: 2023-10-06
+lastmod: 2023-10-16
 ---
 
 ## `SMALLER` `LARGER`
@@ -112,7 +112,7 @@ INTERSECTION(left, right)
 
 ---
 
-共通部分の計算には Θ(𝑚 + 𝑛) の実装がある:
+配列の共通部分の計算には Θ(𝑚 + 𝑛) の実装がある:
 
 ``` ts:intersect.ts
 function intersect<T>(xs: T[], ys: T[]): T[] {
@@ -136,7 +136,7 @@ function intersect<T>(xs: T[], ys: T[]): T[] {
 
 ## <s>`FORALL` `EXISTS`</s>
 
-範囲内の値が全て条件を満たすかどうか、あるいは範囲内に条件を満たす値が存在するかどうかが知りたいこともある。
+範囲内のデータが全て条件を満たすかどうか、あるいは範囲内に条件を満たすデータが存在するかどうかゞ知りたいこともある。
 
 この操作は `ARRAYFORMULA` を使ふと効率良く行へる。たとへば、範囲 `A2:A` に素数が存在することを調べるには、`OR(ARRAYFORMULA(ISPRIME(A2:A)))` などゝする。計算量は、`ISPRIME` の計算量を Θ(𝑔(𝑘)) として、常に Θ(Σₖ 𝑔(𝑘)) となる[^10]。
 
@@ -219,6 +219,77 @@ VREVERSE(rows)
 HREVERSE(cols)
 =TRANSPOSE(VREVERSE(TRANSPOSE(cols)))
 ```
+
+## `UNMERGE`
+
+結合されたセルのデータはその結合の左上[^13]のみにあり、そのやうなセルを含む範囲は、左上以外の位置にはデータを持たない。一方、市井では、セルの結合は結合されたセルが全て同じデータを持つことを表すと解される。ナンセンスな例だが、
+
+[^13]: 表示言語が RtL 言語でも同じ。
+
+<table class="horizontal">
+  <tr>
+    <td></td>
+    <th scope="col">A</th>
+    <th scope="col">B</th>
+    <th scope="col">C</th>
+  </tr>
+  <tr>
+    <th scope="row">1</th>
+    <td colspan="2" rowspan="2">BIG CELL</td>
+    <td>meow</td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td>croak</td>
+  </tr>
+  <tr>
+    <th scope="row">3</th>
+    <td>coo</td>
+    <td>buzz</td>
+    <td>neigh</td>
+  </tr>
+</table>
+
+のやうなシート片に対して
+
+``` excel
+=JOIN("
+", BYROW(A1:C3, LAMBDA(row, JOIN(",", row))))
+```
+
+とすると、
+
+``` txt
+BIG CELL,,meow
+,,croak
+coo,buzz,neigh
+```
+
+と表示され、`B1` `A2` `B2` は空白であることが分かる。
+
+かういふ表を結合のない範囲として扱ふために、結合されたセルを含む範囲に関して、結合されたセルを最も左上のデータで埋める関数 `UNMERGE` を作る。
+
+スプレッドシートにはセルが結合されてゐるかどうかを知る方法が無いので、Apps Script を使用した。[sueka/google-sheets-unmerge](https://github.com/sueka/google-sheets-unmerge) に置いてゐる。
+
+この Apps Script をインストールして、
+
+``` excel
+=UNMERGE("A1:C3")
+```
+
+とすると、
+
+| -------- | -------- | ----- |
+| BIG CELL | BIG CELL | meow  |
+| BIG CELL | BIG CELL | croak |
+| coo      | buzz     | neigh |
+{.horizontal}
+
+のやうに表示される。
+
+この関数の計算量は、範囲に含まれる結合された範囲のサイズの和を 𝑛 として、Θ(𝑛) 程度となる。
+
+なほ、スプレッドシートにおける<i>範囲</i>は、Apps Script に渡されると[2]{.upright}次元配列となり、結合に関する情報を失ってしまふため、~~`UNMERGE(A1:C3)`~~ のやうにセル参照を渡して実行されるものは作れない[^3]。
 
 ## `TIMESPENT`
 
