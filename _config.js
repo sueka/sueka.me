@@ -13,6 +13,7 @@ import {
 } from './deps.ts'
 
 import getIncipit from './lib/getIncipit.ts'
+import truncateHtml from './lib/truncateHtml.ts'
 import wrapTables from './lib/wrapTables.ts'
 import wrapDiagrams from './lib/wrapDiagrams.ts'
 import addClassExternal from './lib/addClassExternal.ts'
@@ -85,6 +86,7 @@ site.use(slugifyUrls())
 
 site.filter('encodeUri', encodeURI)
 site.filter('getIncipit', getIncipit)
+site.filter('truncateHtml', truncateHtml)
 
 // // Defines {% env 'PATH' %}
 // site.helper('env', (name) => Deno.env.get(name), { type: 'tag' })
