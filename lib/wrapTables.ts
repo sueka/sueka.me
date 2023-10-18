@@ -1,8 +1,11 @@
-import { Page, DOMParser } from '../deps.ts'
+import { Page, DOMParser, assert } from '../deps.ts'
 import html from './html.ts'
+import isElement from './isElement.ts'
 
 export default function wrapTables(page: Page) {
-  const document = new DOMParser().parseFromString(page.content, 'text/html')!
+  assert(page.content)
+  const document = new DOMParser().parseFromString(page.content.toString(), 'text/html')
+  assert(document)
   const tables = document.querySelectorAll('table')
 
   for (const table of tables) {
@@ -12,8 +15,11 @@ export default function wrapTables(page: Page) {
     wrapper.className = 'table-wrapper'
     wrapper.append(tableClone)
 
+    assert(isElement(table))
     table.replaceWith(wrapper)
   }
 
+  assert(document.doctype)
+  assert(document.documentElement)
   page.content = html(document.doctype, document.documentElement.outerHTML)
 }

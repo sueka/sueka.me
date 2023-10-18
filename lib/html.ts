@@ -5,7 +5,7 @@ interface DocType {
 }
 
 function tag(doctype: DocType) {
-  let tagBuilder: string[] = []
+  const tagBuilder: string[] = []
 
   tagBuilder.push('!DOCTYPE', doctype.name)
 

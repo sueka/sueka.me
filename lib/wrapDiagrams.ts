@@ -1,13 +1,16 @@
-import { Page, DOMParser } from '../deps.ts'
+import { Page, DOMParser, assert } from '../deps.ts'
 import html from './html.ts'
+import isElement from './isElement.ts'
 
 export default function wrapDiagrams(page: Page) {
-  const document = new DOMParser().parseFromString(page.content, 'text/html')!
-  const figures =
-    [...document.querySelectorAll('figure')]
-    .filter(_ => _.querySelector(':scope > .mermaid') !== null)
+  assert(page.content)
+  const document = new DOMParser().parseFromString(page.content.toString(), 'text/html')
+  assert(document)
+  const figures = [...document.querySelectorAll('figure')]
+  assert(figures.every(isElement))
+  const figuresMermaidWrappers = figures.filter(_ => _.querySelector(':scope > .mermaid') !== null)
   const mermaids = document.querySelectorAll('.mermaid')
-  const diagrams = [...figures, ...mermaids]
+  const diagrams = [...figuresMermaidWrappers, ...mermaids]
   // const diagrams = document.querySelectorAll('figure:has(> .mermaid), :not(figure) > .mermaid')
 
   for (const diagram of diagrams) {
@@ -17,8 +20,11 @@ export default function wrapDiagrams(page: Page) {
     wrapper.className = 'diagram-wrapper'
     wrapper.append(diagramClone)
 
+    assert(isElement(diagram))
     diagram.replaceWith(wrapper)
   }
 
+  assert(document.doctype)
+  assert(document.documentElement)
   page.content = html(document.doctype, document.documentElement.outerHTML)
 }
