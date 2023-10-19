@@ -96,12 +96,12 @@ const plugins = [
   //   },
   // }),
   autoprefixer(),
-  // @ts-expect-error
+  // @ts-expect-error: TS2349
   postcssNesting(),
-  // @ts-expect-error
+  // @ts-expect-error: TS2349
   postcssCustomSelectors(),
   postcssExtendRule(),
-  // @ts-expect-error
+  // @ts-expect-error: TS2349
   postcssHasPseudo(),
   // csso({ restructure: false }),
 ]
