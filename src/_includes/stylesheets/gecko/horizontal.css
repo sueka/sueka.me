@@ -12,6 +12,7 @@ kbd {
   display: revert;
   padding-block: 0.236068em; /* φ⁻³ */
   line-height: revert;
+  vertical-align: revert;
 }
 
 :is(span, i):lang(iu) {
