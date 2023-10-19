@@ -1,9 +1,11 @@
 import {
-  lume, relativeUrls, slugifyUrls,
+  lume, relativeUrls, slugifyUrls, sourceMaps,
   // text
   codeHighlight, date, ja,
   // css
   postcss, autoprefixer, postcssNesting,
+  // assert
+  assert,
   // yaml
   parse
 } from './deps.ts'
@@ -69,6 +71,10 @@ const markdown = {
   ],
 }
 
+assert(
+  typeof data === 'object' && data !== null && 'url' in data &&
+  typeof data.url === 'string'
+)
 const site = lume({
   src: 'src',
   location: new URL(data.url),
@@ -90,16 +96,20 @@ const plugins = [
   //   },
   // }),
   autoprefixer(),
+  // @ts-expect-error
   postcssNesting(),
+  // @ts-expect-error
   postcssCustomSelectors(),
   postcssExtendRule(),
+  // @ts-expect-error
   postcssHasPseudo(),
   // csso({ restructure: false }),
 ]
 
-site.use(postcss({ plugins, sourceMap: true }))
+site.use(postcss({ plugins }))
 site.use(relativeUrls())
 site.use(slugifyUrls())
+site.use(sourceMaps())
 
 site.filter('encodeUri', encodeURI)
 site.filter('getIncipit', getIncipit)
@@ -124,7 +134,10 @@ site.process(['.html', '.js'], (page) => {
   // Origin between a quote and a slash. (e.g. Ithref="http://example.com/foo.html"
   const pattern = new RegExp(`(?<=")${ site.options.location.origin }(?=/)`, 'g')
 
-  page.content = page.content.replace(pattern, '')
+  assert(page.content)
+  if (typeof page.content === 'string') {
+    page.content = page.content.replace(pattern, '')
+  }
   // page.content = page.content.replace(new RegExp(`(?<=")${ site.options.location.origin }(?=")`, 'g'), '/')
 })
 
