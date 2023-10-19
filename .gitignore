@@ -1,5 +1,8 @@
 # Lume
 /_site/
 
+# Deno
+/node_modules/
+
 # macOS
 .DS_Store

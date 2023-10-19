@@ -2,15 +2,32 @@ import {
   lume, relativeUrls, slugifyUrls,
   // text
   codeHighlight, date, ja,
-  // media
-  octicons,
-  // markdown-it
-  abbr, anchor, attrs, bracketedSpans, collapsible, deflist, footnote, mark, multimdTable, namedCodeBlocks, ruby,
   // css
-  postcss, autoprefixer, postcssNesting, postcssHasPseudo, postcssCustomSelectors, postcssExtendRule,
+  postcss, autoprefixer, postcssNesting,
   // yaml
   parse
 } from './deps.ts'
+
+// media
+import octicons from '@primer/octicons'
+
+// markdown-it
+import abbr from 'markdown-it-abbr'
+import anchor from 'markdown-it-anchor'
+import attrs from 'markdown-it-attrs'
+import bracketedSpans from 'markdown-it-bracketed-spans'
+import collapsible from 'markdown-it-collapsible'
+import deflist from 'markdown-it-deflist'
+import footnote from 'markdown-it-footnote'
+import mark from 'markdown-it-mark'
+import multimdTable from 'markdown-it-multimd-table'
+import namedCodeBlocks from 'markdown-it-named-code-blocks'
+import ruby from 'markdown-it-ruby'
+
+// css
+import postcssHasPseudo from 'css-has-pseudo'
+import postcssCustomSelectors from 'postcss-custom-selectors'
+import postcssExtendRule from 'postcss-extend-rule'
 
 import getIncipit from './lib/getIncipit.ts'
 import truncateHtml from './lib/truncateHtml.ts'
