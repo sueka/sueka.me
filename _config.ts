@@ -142,22 +142,22 @@ site.process(['.html', '.js'], (page) => {
 })
 
 // Defines {{ gitCommitHash }}
-const process = Deno.run({
+const process = new Deno.Command('git', {
+  args: ['show', '-s', '--format=%H'],
   env: {
     GIT_PAGER: '',
   },
-  cmd: ['git', 'show', '-s', '--format=%H'],
   stdout: 'piped',
 })
 
-const status = await process.status()
+const { success, stdout } = await process.output()
 
 // TODO: Abort the build in a more normal way
-if (!status.success) {
+if (!success) {
   throw new Error
 }
 
-site.data('gitCommitHash', new TextDecoder().decode(await process.output()).trimEnd())
+site.data('gitCommitHash', new TextDecoder().decode(stdout).trimEnd())
 
 // Exports
 export default site
