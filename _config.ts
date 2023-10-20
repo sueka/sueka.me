@@ -83,6 +83,7 @@ const site = lume({
 
 site.copy('assets/images/Logo blue.svg', 'assets/images/twitter-logo.svg')
 site.copy('favicon.ico')
+site.copy('feed.xsl')
 
 site.use(codeHighlight())
 site.use(date({ locales: { ja } }))
