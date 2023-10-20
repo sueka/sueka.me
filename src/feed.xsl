@@ -29,7 +29,9 @@
     <dl>
       <xsl:apply-templates select="a:*[name() != 'title'][name() != 'entry']" />
     </dl>
-    <xsl:apply-templates select="a:entry" />
+    <xsl:apply-templates select="a:entry">
+      <xsl:sort select="a:updated/text()" order="descending" />
+    </xsl:apply-templates>
   </xsl:template>
 
   <xsl:template match="a:title">
