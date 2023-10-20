@@ -17,8 +17,11 @@ section {
   border: 1px solid #7f7f7f;
   border-radius: 1em;
   padding: 1em;
-  width: calc(33.3333% - 2em - 2px - 2em); /* (one-third of the screen width) - (margin) - (border) - (padding) */
-  min-width: 27em;
+  width: max(
+    calc(33.3333% - 2em - 2px - 2em), /* (one-third of the screen width) - (margin) - (border) - (padding) */
+    27em
+  );
+  max-width: calc(100% - 2em - 2px - 2em);
   height: max-content;
 }
 
