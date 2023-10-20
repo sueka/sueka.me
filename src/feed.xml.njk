@@ -37,7 +37,7 @@
     </content>
     {% endif -%}
 
-    {% if page.data.lastmod -%} <published>{{ page.data.date | date('ATOM') }}</published> {%- endif %}
+    <published>{{ page.data.date | date('ATOM') }}</published>
     <updated>{{ (page.data.lastmod or page.data.date) | date('ATOM') }}</updated>
   </entry>
   {% endfor %}
