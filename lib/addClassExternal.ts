@@ -9,7 +9,7 @@ assert(
   typeof data === 'object' && data !== null && 'url' in data &&
   typeof data.url === 'string'
 )
-const internalPat = RegExp(`^(${ data.url.replace('.', '\\.') }\\b|/|\\.|(|about:blank)(\$|#))`)
+const internalPat = RegExp(`^(?:${ data.url.replace('.', '\\.') }\\b|(?!https?:\/\/))`)
 
 export default function externalLink(page: Page) {
   assert(page.content)
