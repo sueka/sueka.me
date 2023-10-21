@@ -25,22 +25,22 @@
       {{- titleText or incipit }}
       {%- if titleText != site.name and incipit != site.name %} - {{ site.name }} {%- endif -%}
     </title>
-    <link href="{{ '~/assets/stylesheets/main.css' | url }}" rel="stylesheet" />
-    <link href="{{ '~/assets/stylesheets/dark.css' | url }}" rel="stylesheet" media="(prefers-color-scheme: dark)" />
+    <link href="{{ '~/assets/stylesheets/main.css' | url(true) }}" rel="stylesheet" />
+    <link href="{{ '~/assets/stylesheets/dark.css' | url(true) }}" rel="stylesheet" media="(prefers-color-scheme: dark)" />
 
     {%- if prefersVertical %}
-    <link href="{{ '~/assets/stylesheets/horizontal.css' | url }}" rel="stylesheet" />
+    <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" />
     {#- Keep using physical, not logical #}
     {#- ⌈(27 / 39) * (2 * 4.236068 + 39) * 13⌉; 2 * 8.923272/100 MinHeight(rem) + 27 rem ≤ MinHeight(rem) #}
-    <link href="{{ '~/assets/stylesheets/vertical.css' | url }}" rel="stylesheet" media="(min-height: 428px)" class="linkToVerticalCss" />
+    <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 428px)" class="linkToVerticalCss" />
     {%- else %} {#- Prefers horizontal #}
-    {# <link href="{{ '~/assets/stylesheets/vertical.css' | url }}" rel="stylesheet" /> #}
-    <link href="{{ '~/assets/stylesheets/horizontal.css' | url }}" rel="stylesheet" />
+    {# <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" /> #}
+    <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" />
     {%- endif %}
 
     {%- if verticalOk %}
-    <link href="{{ '~/assets/stylesheets/horizontal.css' | url }}" rel="stylesheet alternate" title="Horizontal Writing" />
-    <link href="{{ '~/assets/stylesheets/vertical.css' | url }}" rel="stylesheet alternate" title="Vertical Writing" />
+    <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet alternate" title="Horizontal Writing" />
+    <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet alternate" title="Vertical Writing" />
     {%- endif %}
 
     {#- NOTE: Script is loaded in _config.js #}
@@ -48,15 +48,15 @@
     <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/gradient-dark.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)" />
 
     {%- if prefersVertical %}
-    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-light.css' | url }}" rel="stylesheet" media="(min-height: 428px)" class="linkToVerticalCss" />
-    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-dark.css' | url }}" rel="stylesheet" media="(min-height: 428px) and (prefers-color-scheme: dark)" class="linkToVerticalCss" />
+    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-light.css' | url(true) }}" rel="stylesheet" media="(min-height: 428px)" class="linkToVerticalCss" />
+    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-dark.css' | url(true) }}" rel="stylesheet" media="(min-height: 428px) and (prefers-color-scheme: dark)" class="linkToVerticalCss" />
     {%- endif %}
 
     {%- if verticalOk %}
     <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/gradient-light.min.css" rel="stylesheet alternate" media="(prefers-color-scheme: light)" title="Horizontal Writing" />
     <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/gradient-dark.min.css" rel="stylesheet alternate" media="(prefers-color-scheme: dark)" title="Horizontal Writing" />
-    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-light.css' | url }}" rel="stylesheet alternate" title="Vertical Writing" />
-    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-dark.css' | url }}" rel="stylesheet alternate" media="(prefers-color-scheme: dark)" title="Vertical Writing" />
+    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-light.css' | url(true) }}" rel="stylesheet alternate" title="Vertical Writing" />
+    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-dark.css' | url(true) }}" rel="stylesheet alternate" media="(prefers-color-scheme: dark)" title="Vertical Writing" />
     {%- endif %}
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
@@ -69,10 +69,10 @@
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js" integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A" crossorigin="anonymous"></script>
     {%- endif %}
 
-    <link href="{{ '~/feed.xml.njk' | url }}" rel="alternate" type="application/atom+xml" title="{{ site.name }}" />
+    <link href="{{ '~/feed.xml.njk' | url(true) }}" rel="alternate" type="application/atom+xml" title="{{ site.name }}" />
     <script defer src="https://unpkg.com/css-has-pseudo@1.0.0/browser"></script>
-    <script defer src="{{ '~/assets/scripts/run-css-has-pseudo.js.njk' | url }}"></script>
-    <script src="{{ '~/assets/scripts/main.js.njk' | url }}"></script>
+    <script defer src="{{ '~/assets/scripts/run-css-has-pseudo.js.njk' | url(true) }}"></script>
+    <script src="{{ '~/assets/scripts/main.js.njk' | url(true) }}"></script>
 
     {%- if he %}
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+Hebrew|Noto+Sans+Hebrew" rel="stylesheet" />
