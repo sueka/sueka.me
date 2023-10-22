@@ -3,6 +3,8 @@ html {
 }
 
 body {
+  /* min-block-size: revert; */
+  max-inline-size: revert;
   margin: 1.618034em;
 }
 
