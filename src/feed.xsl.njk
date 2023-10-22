@@ -16,7 +16,11 @@
         <title>
           <xsl:value-of select="a:feed/a:title/text()" />
         </title>
-        <link rel="stylesheet" href="feed.css" />
+        <link href="{{ '~/assets/stylesheets/main.css' | url(true) }}" rel="stylesheet" />
+        <link href="{{ '~/assets/stylesheets/dark.css' | url(true) }}" rel="stylesheet" media="(prefers-color-scheme: dark)" />
+        <link href="{{ '~/assets/stylesheets/feed.css' | url(true) }}" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/gradient-light.min.css" rel="stylesheet" media="(prefers-color-scheme: light)" />
+        <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/gradient-dark.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)" />
       </head>
       <body>
         <xsl:apply-templates />
@@ -29,9 +33,11 @@
     <dl>
       <xsl:apply-templates select="a:*[name() != 'title'][name() != 'entry']" />
     </dl>
-    <xsl:apply-templates select="a:entry">
-      <xsl:sort select="a:updated/text()" order="descending" />
-    </xsl:apply-templates>
+    <div class="entries">
+      <xsl:apply-templates select="a:entry">
+        <xsl:sort select="a:updated/text()" order="descending" />
+      </xsl:apply-templates>
+    </div>
   </xsl:template>
 
   <xsl:template match="a:title">
