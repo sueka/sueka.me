@@ -33,7 +33,9 @@
     <link href="{{ page.data.url | url(true) | encodeUri }}" rel="alternate" type="text/html" />
     {% if page.data.content -%}
     <content type="html">
-      {{ page.data.content | njk | md | truncateHtml(200) }}
+      <![CDATA[
+        {{ page.data.content | njk | md | truncateHtml(200) | safe }}
+      ]]>
     </content>
     {% endif -%}
 
