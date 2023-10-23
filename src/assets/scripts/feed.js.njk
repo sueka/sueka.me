@@ -1,0 +1,10 @@
+// Installing hljs reasonably
+addEventListener('DOMContentLoaded', () => {
+  const codes = document.querySelectorAll('code')
+
+  for (const code of codes) {
+    if ([...code.classList].some(className => /^language-/.test(className))) {
+      code.classList.add('hljs')
+    }
+  }
+})
