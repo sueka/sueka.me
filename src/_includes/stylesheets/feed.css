@@ -5,32 +5,37 @@ html {
 body {
   /* min-block-size: revert; */
   max-inline-size: revert;
-  margin: 1.618034em;
+  margin: 1.618034em; /* φ */
 }
 
 .entries {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 27em), 1fr));
-  gap: 1.618034em;
+  gap: 1.618034em; /* φ */
 }
 
-section {
-  border: 1px solid #7f7f7f;
+.feed-entry {
+  border: 1px solid var(--color-border);
   border-radius: 0.5em;
   padding: 1em;
   box-sizing: border-box;
   height: max-content;
-}
 
-/* Overwrite `:--pass-thru:first-child > :--margins:first-child` in layout.css. The <section>s are not pass-thru because they have a top and bottom border. */
-section:first-child > h1:first-child {
-  margin-block-start: 1.618034em !important;
-}
+  /* Overwrite `:--pass-thru:first-child > :--margins:first-child` in layout.css. The <section>s are not pass-thru because they have a top and bottom border. */
+  &:first-child > h1:first-child {
+    margin-block-start: 1.618034em !important;
+  }
 
-dl > dt {
-  text-transform: capitalize;
-}
+  & > dl > dt {
+    text-transform: capitalize;
+  }
 
-.content {
-  pointer-events: none;
+  & > dl > dd > .content {
+    opacity: 0.8;
+  }
+
+  & > dl > dd > .content a {
+    pointer-events: none;
+    text-decoration: line-through;
+  }
 }
