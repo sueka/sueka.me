@@ -45,12 +45,12 @@ lastmod: 2023-05-22
 
 > 第十五条　==法第二十八条==第一項の規定による個人情報の保護に関する制度を有している外国として……
 
-としてゐることに注意。法[71]{.tate-chu-yoko}条の規定には係らないため、日本の*行政機関*から EU への個人データの移転は、十分性認定の枠組みでは認められてゐない。逆（[公共部門<ruby>団<rt>だん</rt>體<rt>たい</ruby>への移転](#公共部門団だん體たいへの移転)）も同様。
+としてゐることに注意。法[71]{.tate-chu-yoko}条の規定には係らないため、日本の*行政機関*から EU への個人データの移転は、十分性認定の枠組みでは認められてゐない。逆（EU から[公共部門<ruby>団<rt>だん</rt>體<rt>たい</ruby>への移転](#公共部門団だん體たいへの移転)）も同様。
 
-たゞし、EU[^3] 域内で取得した個人データが無条件に日本に<ruby>移転<rt lang="en">Transfer</ruby>できるといふわけではない[^4]。[Commission Implementing Decision (EU) 2019/419](https://eur-lex.europa.eu/eli/dec_impl/2019/419/oj){lang=en} リサイタル[4]{.upright}には次のやうにある（脚注は省略した。）:
+また、EU による日本の<ruby>十分性認定<rt lang="en">Adequacy decision</ruby>は、個人情報保護法の適用を受ける組織への、<i>追加条件</i>に従ふ<ruby>移転<rt lang="en">Transfer</ruby>に限定されてをり、EU[^3] 域内で取得した個人データが無条件に日本に<ruby>移転<rt lang="en">Transfer</ruby>できるといふわけではない[^4]。[Commission Implementing Decision (EU) 2019/419](https://eur-lex.europa.eu/eli/dec_impl/2019/419/oj){lang=en} リサイタル[4]{.upright}には次のやうにある（脚注は省略した。）:
 
 [^3]: 右引用に倣って、この記事では、地域について言ふときは、クロアチアを含む EU 加盟国[27]{.tate-chu-yoko}か国、およびスイスを除く EFTA 加盟国[3]{.upright}か国、合はせて[30]{.tate-chu-yoko}か国を差して「EU」と言ふ。なほ、クロアチアは、[2014]{.upright}年から EEA を暫定的に適用してゐるが、EEA 加盟国ではない。
-[^4]: カナダと同じやうに「[\(private-sector organisations\)]{lang=en}」などゝ付記した方が良いと思ふ。
+[^4]: カナダと同様に「[\(private-sector organisations\)]{lang=en}」などゝ付記した方が良いと思ふ。
 
 <div class="blockquote-like">
 
@@ -65,8 +65,6 @@ lastmod: 2023-05-22
 
 </blockquote>
 +++
-
-よって、日本の<ruby>十分性認定<rt lang="en">Adequacy decision</ruby>は、個人情報保護法の適用を受ける組織への、<i>追加条件</i>に従ふ<ruby>移転<rt lang="en">Transfer</ruby>に限定されてゐる。
 
 なほ、日本が十分性認定を行ふ外国[^5]は、クロアチアを含む EU 加盟国、スイスを除く EFTA 加盟国、およびイギリスの[31]{.tate-chu-yoko}か国のみ。イギリスは [Brexit]{lang=en} 時点（[2020]{.upright}年[1]{.upright}月[31]{.tate-chu-yoko}日）における EU の十分性認定をそのまゝ引き継いでゐる。[UK approach to international data transfers - GOV.UK](https://www.gov.uk/government/publications/uk-approach-to-international-data-transfers){lang=en} も参照。
 
@@ -132,7 +130,7 @@ EU 域内から日本の行政機関や独立行政法人等への移転は、<i
 
     とある。
 
-[2023]{.upright}年[4]{.upright}月[4]{.upright}日に行はれたレビュー会合では、左整備法[50]{.tate-chu-yoko}条の施行など（同法[51]{.tate-chu-yoko}条の施行なども考慮された。）を受けて、EU から日本への十分性認定の範囲を学術研究分野や公的部門などに拡大する可能性を模索することで合意された[^9]。
+[2023]{.upright}年[4]{.upright}月[4]{.upright}日に行はれたレビュー会合では、右整備法[50]{.tate-chu-yoko}条の施行など（同法[51]{.tate-chu-yoko}条の施行なども考慮された。）を受けて、EU から日本への十分性認定の範囲を学術研究分野や公的部門などに拡大する可能性を模索することで合意された[^9]。
 
 [^9]: [Joint Press Statement](https://commission.europa.eu/news/joint-press-statement-conclusion-first-review-japan-eu-mutual-adequacy-arrangement-2023-04-04_en){lang=en}
 
