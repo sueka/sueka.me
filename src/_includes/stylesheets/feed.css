@@ -8,6 +8,10 @@ body {
   margin: 1.618034em; /* φ */
 }
 
+.feed > dl > dt {
+  text-transform: capitalize;
+}
+
 .entries {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 29em), 1fr));
