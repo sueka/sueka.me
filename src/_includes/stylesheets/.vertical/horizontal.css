@@ -33,9 +33,9 @@ p.vertical {
 
   width: 100%;
   height: max-content;
-  max-height: max(428px, 100vmin - 2em); /* Same as in page.njk, vertical margin */
+  max-height: max(424px, 100vmin - 2em); /* Same as in page.njk, vertical margin */
   @media (orientation: landscape) {
-    max-height: max(428px, 100vh - 2em);
+    max-height: max(424px, 100vh - 2em);
   }
   @media (orientation: portrait) {
     max-width: revert;

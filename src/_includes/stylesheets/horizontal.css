@@ -6,13 +6,13 @@ html {
   writing-mode: horizontal-tb;
 
   font-size: clamp(
-    13px,
+    9pt,
     100vw / (2 * 4.236068 + 39),
     100vmin / (2 * 2.618034 + 29)
   );
 
   font-size: clamp(
-    13px,
+    9pt,
     100vi / (2 * 4.236068 + 39), /* φ³ */
     100vmin / (2 * 2.618034 + 29) /* φ² */
   );
@@ -67,19 +67,19 @@ ol:has(li:nth-of-type(100)) {
 }
 
 pre, code {
-  @media (max-width: 427.25px) {
+  @media (max-width: 423.25px) {
     tab-size: 4;
   }
 
-  @media (width < 428px) { /* Same as in page.njk */
+  @media (width < 424px) { /* Same as in page.njk */
     tab-size: 4;
   }
 
-  @media (max-height: 427.25px) {
+  @media (max-height: 423.25px) {
     tab-size: revert;
   }
 
-  @media (height < 428px) { /* Same as in page.njk */
+  @media (height < 424px) { /* Same as in page.njk */
     tab-size: revert;
   }
 }
@@ -89,19 +89,19 @@ pre:has(code.hljs) {
 }
 
 :not(pre) > code {
-  @media (max-width: 427.25px) {
+  @media (max-width: 423.25px) {
     word-break: break-all;
   }
 
-  @media (width < 428px) { /* Same as in page.njk */
+  @media (width < 424px) { /* Same as in page.njk */
     word-break: break-all;
   }
 
-  @media (max-height: 427.25px) {
+  @media (max-height: 423.25px) {
     word-break: revert;
   }
 
-  @media (height < 428px) { /* Same as in page.njk */
+  @media (height < 424px) { /* Same as in page.njk */
     word-break: revert;
   }
 }
