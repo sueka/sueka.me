@@ -14,7 +14,11 @@ body {
 
 .entries {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 29em), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%,
+    29em /* letters */
+    + 2em /* indentation */
+    + 2em /* padding */
+  ), 1fr));
   gap: 1.618034em; /* φ */
 }
 
