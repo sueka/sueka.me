@@ -144,3 +144,8 @@ em .vertical:where([lang]) {
   -webkit-text-combine: horizontal; /* for Webkit */
   text-combine-upright: all;
 }
+
+.vertical table,
+table.vertical {
+  margin-inline: revert;
+}

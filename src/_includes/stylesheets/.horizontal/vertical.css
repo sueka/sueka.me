@@ -187,6 +187,11 @@ b.horizontal {
   text-combine-upright: revert;
 }
 
+.horizontal table,
+table.horizontal {
+  margin-inline: revert;
+}
+
 .horizontal .header-anchor,
 .header-anchor.horizontal {
   @extend .upright;

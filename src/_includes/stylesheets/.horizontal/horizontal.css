@@ -36,3 +36,8 @@ blockquote.horizontal {
 :--blockquote.horizontal > p {
   @extend %horizontal;
 }
+
+.horizontal table,
+table.horizontal {
+  margin-inline: auto;
+}

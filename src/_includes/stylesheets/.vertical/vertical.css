@@ -36,3 +36,8 @@ p.vertical {
 :--blockquote.vertical > p {
   @extend %vertical;
 }
+
+.vertical table,
+table.vertical {
+  margin-inline: auto;
+}
