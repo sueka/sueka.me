@@ -53,10 +53,19 @@
 
   <xsl:template match="a:title">
     <h1>
-      <a href="{../a:link/@href}">
+      <a href="{../a:link[@rel = &quot;alternate&quot;]/@href}">
         <xsl:value-of select="text()" />
       </a>
     </h1>
+  </xsl:template>
+
+  <xsl:template match="a:link/@rel">
+    <xsl:text xml:space="preserve"> </xsl:text>
+    <xsl:value-of select="." />
+  </xsl:template>
+
+  <xsl:template match="a:link/@href">
+    <xsl:value-of select="." />
   </xsl:template>
 
   <xsl:template match="a:published/text()|a:updated/text()">
@@ -65,8 +74,18 @@
     </time>
   </xsl:template>
 
-  <xsl:template match="a:link/@href">
+  <xsl:template match="a:link">
     <!-- skip -->
+  </xsl:template>
+
+  <xsl:template match="/a:feed/a:link[@rel != &quot;alternate&quot;]">
+    <dt>
+      <xsl:value-of select="name()" />
+      <xsl:apply-templates select="@rel" />
+    </dt>
+    <dd>
+      <xsl:apply-templates select="@href" />
+    </dd>
   </xsl:template>
 
   <xsl:template match="a:content">
