@@ -21,7 +21,7 @@ lastmod: 2023-05-22
 日本[^1]は EU と相互{認證|にん|しょう}してゐる。EU から日本への移転については、[Adequacy decisions | European Commission](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en){lang=en} に次のやうにある[^2]:
 
 [^1]: この記事では日本と EU の関係だけに集中する。
-[^2]: LED は、<ruby>決定<rt lang="en">Decision</ruby> (EU) 2021/1772 と合はせて、EU がイギリスの十分性認定を行ふものである。
+[^2]: LED は、<ruby>決定<rt lang="en">Decision</ruby> (EU) 2021/1772 と合はせて、EU がイギリスの十分性認定を行ふ。
 
 <div class="blockquote-like">
 
@@ -47,7 +47,7 @@ lastmod: 2023-05-22
 
 としてゐることに注意。法[71]{.tate-chu-yoko}条の規定には係らないため、日本の*行政機関*から EU への個人データの移転は、十分性認定の枠組みでは認められてゐない。逆（EU から[公共部門<ruby>団<rt>だん</rt>體<rt>たい</ruby>への移転](#公共部門団だん體たいへの移転)）も同様。
 
-また、EU による日本の<ruby>十分性認定<rt lang="en">Adequacy decision</ruby>は、個人情報保護法の適用を受ける組織への、<i>追加条件</i>に従ふ<ruby>移転<rt lang="en">Transfer</ruby>に限定されてをり、EU[^3] 域内で取得した個人データが無条件に日本に<ruby>移転<rt lang="en">Transfer</ruby>できるといふわけではない[^4]。[Commission Implementing Decision (EU) 2019/419](https://eur-lex.europa.eu/eli/dec_impl/2019/419/oj){lang=en} リサイタル[4]{.upright}には次のやうにある（脚注は省略した。）:
+また、EU による日本の<ruby>十分性認定<rt lang="en">Adequacy decision</ruby>は、個人情報保護法の適用を受ける組織への、<i>追加条件</i>に従ふ<ruby>移転<rt lang="en">Transfer</ruby>に限定されてをり、EU[^3] 域内で取得した個人データが無条件に日本に<ruby>移転<rt lang="en">Transfer</ruby>できるといふわけではない[^4]。[Commission Implementing Decision (EU) 2019/419](https://eur-lex.europa.eu/eli/dec_impl/2019/419/oj){lang=en}（<i>決定</i>）リサイタル[4]{.upright}には次のやうにある（脚注は省略した。）:
 
 [^3]: 右引用に倣って、この記事では、地域について言ふときは、クロアチアを含む EU 加盟国[27]{.tate-chu-yoko}か国、およびスイスを除く EFTA 加盟国[3]{.upright}か国、合はせて[30]{.tate-chu-yoko}か国を差して「EU」と言ふ。なほ、クロアチアは、[2014]{.upright}年から EEA を暫定的に適用してゐるが、EEA 加盟国ではない。
 [^4]: カナダと同様に「[\(private-sector organisations\)]{lang=en}」などゝ付記した方が良いと思ふ。
@@ -76,21 +76,21 @@ EU 域内から日本の行政機関や独立行政法人等への移転は、<i
 
 <div class="blockquote-like">
 
-  後者の[2]{.upright}つの法律（[2016]{.upright}年に改正された。）には、公共部門団體による個人情報の保護に適用される規定が含まれる。これらの法律の適用範囲内にあるデータ処理は、本決定に含まれる十分性認定（個人情報保護法の意味における「個人情報取扱事業者」による個人情報の保護に限定される。）の対象ではない。
+  後者の[2]{.upright}つの法律（[2016]{.upright}年に改正された。）には、公共部門団體による個人情報の保護に適用される規定が含まれる。これらの法律の適用範囲内にあるデータ処理は、本決定に含まれる十分性認定（個人情報保護法の〔規定する〕意味における<mark>「==個人情報取扱事業者==」による個人情報の保護に限定される。</mark>）の対象ではない。
 
 </div>
 
 +++ 原文
 <blockquote lang="en">
 
-  The two latter acts (amended in 2016) contain provisions applicable to the protection of personal information by public sector entities. Data processing falling within the scope of application of those acts is not the object of the adequacy finding contained in this Decision, which is limited to the protection of personal information by "Personal Information Handling Business Operators" (PIHBOs) within the meaning of the APPI.
+  The two latter acts (amended in 2016) contain provisions applicable to the protection of personal information by public sector entities. Data processing falling within the scope of application of those acts is not the object of the adequacy finding contained in this Decision, <mark>which is limited to the protection of personal information by "==Personal Information Handling Business Operators==" (PIHBOs)</mark> within the meaning of the APPI.
 
 </blockquote>
 +++
 
 とあり、個人情報保護法[16]{.tate-chu-yoko}条[2]{.upright}項には、
 
-> この章及び第六章から第八章までにおいて「個人情報取扱事業者」とは、個人情報データベース等を事業の用に供している者をいう。ただし、次に掲げる者を除く。
+> この章及び第六章から第八章までにおいて「==個人情報取扱事業者==」とは、個人情報データベース等を事業の用に供している者をいう。==ただし、次に掲げる者を除く==。
 >
 > 1. 国の機関
 > 2. 地方公共団体
@@ -101,7 +101,7 @@ EU 域内から日本の行政機関や独立行政法人等への移転は、<i
 
 ### 展開
 
-デジタル社会の形成を図るための関係法律の整備に関する法律では、<i>学術研究分野を含めた GDPR（EU 一般データ保護規則）の十分性認定への対応を目指し、学術研究に係る適用除外規定について、一律の適用除外ではなく、義務ごとの例外規定として精緻化</i>することゝなった[^7]。整備法[50]{.tate-chu-yoko}条は[2022]{.upright}年[4]{.upright}月[1]{.upright}日に施行された。
+デジタル社会の形成を図るための関係法律の整備に関する法律（<i>整備法</i>）では、<i>学術研究分野を含めた GDPR（EU 一般データ保護規則）の十分性認定への対応を目指し、学術研究に係る適用除外規定について、一律の適用除外ではなく、義務ごとの例外規定として精緻化</i>することゝなった[^7]。<i>整備法</i>[50]{.tate-chu-yoko}条（個人情報保護法の一部改正）は[2022]{.upright}年[4]{.upright}月[1]{.upright}日に施行された。
 
 [^7]: [法令｜デジタル庁](https://www.digital.go.jp/laws/)も参照。
 
@@ -130,7 +130,7 @@ EU 域内から日本の行政機関や独立行政法人等への移転は、<i
 
     とある。
 
-[2023]{.upright}年[4]{.upright}月[4]{.upright}日に行はれたレビュー会合では、右整備法[50]{.tate-chu-yoko}条の施行など（同法[51]{.tate-chu-yoko}条の施行なども考慮された。）を受けて、EU から日本への十分性認定の範囲を学術研究分野や公的部門などに拡大する可能性を模索することで合意された[^9]。
+[2023]{.upright}年[4]{.upright}月[4]{.upright}日に行はれたレビュー会合では、右<i>整備法</i>[50]{.tate-chu-yoko}条の施行など（同法[51]{.tate-chu-yoko}条の施行なども考慮された。）を受けて、EU から日本への十分性認定の範囲を学術研究分野や公的部門などに拡大する可能性を模索することで合意された[^9]。
 
 [^9]: [Joint Press Statement](https://commission.europa.eu/news/joint-press-statement-conclusion-first-review-japan-eu-mutual-adequacy-arrangement-2023-04-04_en){lang=en}
 
