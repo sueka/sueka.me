@@ -22,6 +22,11 @@ body {
   gap: 1.618034em; /* φ */
 }
 
+/* .entries > a {
+  all: unset;
+  cursor: pointer;
+} */
+
 .feed-entry {
   border: 1px solid var(--color-border);
   border-radius: 0.5em;
@@ -34,16 +39,44 @@ body {
     margin-block-start: 1.618034em !important;
   }
 
+  & > hr {
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 1px;
+    position: relative;
+    left: -1em;
+    width: calc(100% + 2em);
+  }
+
+  /* specificity を (0, 4, 0) 以上にする */
+  &&&& > :where(dl) {
+    margin-bottom: 1em;
+  }
+
   & > dl > dt {
     text-transform: capitalize;
   }
 
-  & > dl > dd > .content {
+  & .content {
     opacity: 0.8;
   }
 
-  & > dl > dd > .content a {
+  & .content a {
     pointer-events: none;
-    text-decoration: line-through;
+  }
+
+  & .content a::after {
+    display: inline-block;
+    display: inline flow-root;
+    font: var(--fa-font-solid);
+    content: '\f127'; /* fa-link-slash */
+    font-size: 61.8034%; /* φ⁻¹ */
+    color: var(--color-text-dimmed);
+    vertical-align: super;
+    margin-left: 2px;
+  }
+
+  & .content .header-anchor {
+    display: none;
   }
 }

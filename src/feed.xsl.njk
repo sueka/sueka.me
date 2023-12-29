@@ -24,6 +24,7 @@
         <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/gradient-dark.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)" />
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
         <script>hljs.highlightAll()</script>
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous" />
         <script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
         <!-- Bypassing both the Nunjucks variables and the XSLT attribute value templates  -->
@@ -52,14 +53,24 @@
 
   <xsl:template match="a:title">
     <h1>
-      <xsl:value-of select="text()" />
+      <a href="{../a:link/@href}">
+        <xsl:value-of select="text()" />
+      </a>
     </h1>
   </xsl:template>
 
-  <xsl:template match="a:link/@href">
-    <a href="{.}">
+  <xsl:template match="a:published/text()|a:updated/text()">
+    <time datetime="{.}" class="published">
       <xsl:value-of select="." />
-    </a>
+    </time>
+  </xsl:template>
+
+  <xsl:template match="a:link/@href">
+    <!-- skip -->
+  </xsl:template>
+
+  <xsl:template match="a:content">
+    <xsl:apply-templates />
   </xsl:template>
 
   <xsl:template match="a:author/a:name">
@@ -69,8 +80,10 @@
   <xsl:template match="a:entry">
     <section class="feed-entry">
       <xsl:apply-templates select="a:title" />
+      <xsl:apply-templates select="a:content" />
+      <hr />
       <dl>
-        <xsl:apply-templates select="a:*[name() != 'title']" />
+        <xsl:apply-templates select="a:*[name() != 'title'][name() != 'link'][name() != 'content']" />
       </dl>
     </section>
   </xsl:template>
