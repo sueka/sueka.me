@@ -23,5 +23,5 @@ a:lang(ja, jpn-archaic) {
 }
 
 u {
-  text-decoration: overline; /* left */
+  text-decoration-line: overline; /* left */
 }

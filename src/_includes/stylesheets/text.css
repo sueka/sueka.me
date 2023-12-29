@@ -214,6 +214,12 @@ i :where(:lang(ja, jpn-archaic)) {
   font-family: var(--font-text-emphasized);
 }
 
+@media (min-resolution: 192dpi) {
+  u {
+    text-decoration-thickness: 2px;
+  }
+}
+
 small {
   font-size: calc(39 / 44 * 100%);
 }

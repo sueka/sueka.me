@@ -41,7 +41,7 @@ a:lang(ja, jpn-archaic) {
 }
 
 u {
-  text-decoration: overline; /* left */
+  text-decoration-line: overline; /* left */
 }
 
 ul > li, ol > li {
@@ -58,8 +58,9 @@ ul > li, ol > li {
   }
 
   & > :--blockquote:first-child {
-    /* Firefox (98.0.2) の writing-mode: vertical-rl 文脈で ol > li 直下に <p> などの display: block な要素を置くとマーカーが右に 1 em 程度ずれてしまう不具合を回避する。 */
+    /* Firefox (98.0.2-119.0.1) の writing-mode: vertical-rl 文脈で ol > li 直下に <p> などの display: block な要素を置くとマーカーが右に 1 em 程度ずれてしまう不具合を回避する。 */
     display: inline flow-root;
+    display: -webkit-inline-box;
     height: -moz-available;
   }
 }

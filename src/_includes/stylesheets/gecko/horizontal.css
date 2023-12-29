@@ -52,7 +52,7 @@ a:lang(ja, jpn-archaic).horizontal:active {
 }
 
 u {
-  text-decoration: revert;
+  text-decoration-line: revert;
 }
 
 ul > li, ol > li {
