@@ -132,7 +132,6 @@ site.process(['.html'], addClassExternal) // class="external"
 
 // Removes the origin from an absolute URL; NOTE: Retains feed.xml
 site.process(['.html', '.js'], (page) => {
-  // Origin between a quote and a slash. (e.g. Ithref="http://example.com/foo.html"
   const pattern = new RegExp(`(?<=")${ site.options.location.origin }(?=/)`, 'g')
 
   assert(page.content)
