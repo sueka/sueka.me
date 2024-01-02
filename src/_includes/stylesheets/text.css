@@ -115,17 +115,17 @@ ruby {
   ruby-overhang: none;
 }
 
-ruby rt {
+ruby > rt {
   font-variant-caps: small-caps;
   text-align: center;
 }
 
-ruby rt:lang(ja),
-ruby rt:lang(jpn-archaic) {
+ruby > rt:lang(ja),
+ruby > rt:lang(jpn-archaic) {
   text-align: revert;
 }
 
-ruby rt:lang(ja, jpn-archaic) {
+ruby > rt:lang(ja, jpn-archaic) {
   text-align: revert;
 }
 

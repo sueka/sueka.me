@@ -121,8 +121,7 @@ a:not(:has(:--image)):any-link.external::after {
   margin-inline-start: 2px;
 }
 
-/* TODO: 主要ブラウザーと css-has-pseudo が :lang(ja, zh) をサポートしたら、この行を削除する。 */
-/* ruby:not(lang(ja)):not(lang(jpn-archaic)):not(lang(zh)):has(rt:not(lang(ja)):not(lang(jpn-archaic)):not(lang(zh))), */
+/* TODO: 主要ブラウザーと css-has-pseudo が :lang(ja, zh) をサポートしたら、このルールセットを削除する。 */
 ruby:lang(ja):has(rt:lang(ja)),
 ruby:lang(ja):has(rt:lang(jpn-archaic)),
 ruby:lang(ja):has(rt:lang(zh)),
@@ -131,14 +130,24 @@ ruby:lang(jpn-archaic):has(rt:lang(jpn-archaic)),
 ruby:lang(jpn-archaic):has(rt:lang(zh)),
 ruby:lang(zh):has(rt:lang(ja)),
 ruby:lang(zh):has(rt:lang(jpn-archaic)),
-ruby:lang(zh):has(rt:lang(zh)) {
+ruby:lang(zh):has(rt:lang(zh)),
+ruby:lang(ja):has(> rt:lang(ja)),
+ruby:lang(ja):has(> rt:lang(jpn-archaic)),
+ruby:lang(ja):has(> rt:lang(zh)),
+ruby:lang(jpn-archaic):has(> rt:lang(ja)),
+ruby:lang(jpn-archaic):has(> rt:lang(jpn-archaic)),
+ruby:lang(jpn-archaic):has(> rt:lang(zh)),
+ruby:lang(zh):has(> rt:lang(ja)),
+ruby:lang(zh):has(> rt:lang(jpn-archaic)),
+ruby:lang(zh):has(> rt:lang(zh)) {
   text-transform: revert;
   ruby-align: revert;
   ruby-overhang: revert;
 }
 
-/* ruby:not(:lang(ja, jpn-archaic, zh)):has(rt:not(:lang(ja, jpn-archaic, zh))), */
-ruby:lang(ja, jpn-archaic, zh):has(rt:lang(ja, jpn-archaic, zh)) {
+/* TODO: 主要ブラウザーと css-has-pseudo が :has(> E) をサポートしたら、このセレクターを削除する。 */
+ruby:lang(ja, jpn-archaic, zh):has(rt:lang(ja, jpn-archaic, zh)),
+ruby:lang(ja, jpn-archaic, zh):has(> rt:lang(ja, jpn-archaic, zh)) {
   text-transform: revert;
   /* TODO: 熟字訓のグループルビは中央寄せする。 */
   /* TODO: 4文字以上のルビは下から順に上下に1文字づつ追い出す? */
