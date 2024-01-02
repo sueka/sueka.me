@@ -105,7 +105,7 @@ CREATE EXTENSION cube;
 
     ビューは、次の条件を全て満たす場合、自動的に更新可能です:
 
-    - ビューが `FROM` リストにたゞ[1]{.upright}つのエントリーを持つ。そのエントリーはテーブルまたは他の更新可能なビューである。
+    - ビューが `FROM` リストにたゞ[1]{.upright}つのエントリーを持ち、そのエントリーがテーブルまたは他の更新可能なビューである。
     - ビューの定義がトップレベルに `WITH` 句、`DISTINCT` 句、`GROUP BY` 句、`HAVING` 句、`LIMIT` 句および `OFFSET` 句のいづれも含まない。
     - ビューの定義がトップレベルに集合演算（`UNION`、`INTERSECT` および `EXCEPT`）を含まない。
     - ビューの<ruby>選択<rt lang="en">select</ruby>リストがいかなる集約、ウィンドウ関数、あるいは集合を返す関数をも含まない。
@@ -154,7 +154,7 @@ CREATE EXTENSION cube;
       LEFT JOIN events
         ON date <= starts AND starts < date + '1 day'::interval
       ```
-  3.  そして、`date` でグループしてから `events` の個数を数へる:
+  3.  そして、`date` でグループ化してから `events` の個数を数へる:
 
       ``` sql
       SELECT date, count(events)
