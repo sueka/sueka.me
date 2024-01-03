@@ -82,7 +82,7 @@ CREATE EXTENSION cube;
 
   <div class="blockquote-like">
 
-    結果集合の<ruby>分割<rt lang="en">PARTITION</ruby>[^7]<ruby>{全體|ぜん|たい}に亙って<rt lang="en">OVER</ruby>集約関数を適用した結果を返す
+    結果集合の<ruby>分割<rt lang="en">PARTITION</ruby>[^7]<ruby>{全體|ぜん|たい}にわたって<rt lang="en">OVER</ruby>集約関数を適用した結果を返す
 
   </div>
 
