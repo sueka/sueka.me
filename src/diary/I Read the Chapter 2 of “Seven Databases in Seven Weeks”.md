@@ -56,7 +56,7 @@ CREATE EXTENSION cube;
 
 [2]{.upright}日目も適当に読んだ。
 
-- p.21 の `INSERT` クエリを発行してゐないと、p.22 の `min` `max` を使ったクエリが
+- p. 21 の `INSERT` クエリを発行してゐないと、p. 22 の `min` `max` を使ったクエリが
 
   ``` txt
   +--------+--------+
@@ -67,7 +67,7 @@ CREATE EXTENSION cube;
   ```
 
   を返してしまふ。
-- pp.24–25 の
+- pp. 24–25 の
 
   > 我々は、`PARTITION BY` を `GROUP BY` と同じものだと考えている。ただし、`SELECT` の外側で結果をグループ化するのではなく（結果の行数をまとめるのではなく）、グループ化した値を別のフィールド（グループ化した変数や属性を計算したもの）として返すのである。*SQL* 的に言えば、==結果セットの `PARTITION` に集約関数 `OVER` を適用した結果を返す==のである。
 
@@ -98,7 +98,7 @@ CREATE EXTENSION cube;
   とでもすべきだったと思ふ。
 
   <ruby>結果集合<rt lang="en">the result set</ruby>といふのは恐らく、`FROM` 句や `WHERE` 句などの結果のことだらう。
-- `createlang` は PostgreSQL 9.1 で非推奨になり、10 で廃止された。p.28 では `createlang book --list` の代はりに `psql book -c \\dL` を使った。
+- `createlang` は PostgreSQL 9.1 で非推奨になり、10 で廃止された。p. 28 では `createlang book --list` の代はりに `psql book -c \\dL` を使った。
 - PostgreSQL 9.3 では<i>自動的に更新可能な VIEW</i> が導入された。[リリースノート](https://www.postgresql.org/about/news/postgresql-93-released-1481/)。[CREATE VIEW](https://www.postgresql.org/docs/14/sql-createview.html#SQL-CREATEVIEW-UPDATABLE-VIEWS) には、
 
   <div class="blockquote-like">
@@ -125,7 +125,7 @@ CREATE EXTENSION cube;
   </blockquote>
   +++
 
-  とある。そのため、本の通りに進めると、p.30 の `UPDATE` クエリが成功してしまふ。そこで、同じく p.30 の `CREATE OR REPLACE VIEW` クエリに `LIMIT 100` を附け加へて発行した。さうすると、無事に
+  とある。そのため、本の通りに進めると、p. 30 の `UPDATE` クエリが成功してしまふ。そこで、同じく p. 30 の `CREATE OR REPLACE VIEW` クエリに `LIMIT 100` を附け加へて発行した。さうすると、無事に
 
   ``` txt
   cannot update view "holidays"
@@ -239,7 +239,7 @@ CREATE EXTENSION cube;
 
 [3]{.upright}日目は全文検索と多次元クエリについて学んだ。
 
-- p.38 に次のやうな入出力がある:
+- p. 38 に次のやうな入出力がある:
 
   > ``` sql
   > SELECT show_trgm('Avatar');
@@ -259,7 +259,7 @@ CREATE EXTENSION cube;
 
   のやうに [trailing spaces]{lang=en} を補っても、`r  ` は含まれない。
 - `pgcli` では `\dFd` がうまく動作しなかった。`psql` なら動作する。
-- p.40 の
+- p. 40 の
 
   > 「machst」（行う）や「gerade」（今）は語幹だ。
 
@@ -272,7 +272,7 @@ CREATE EXTENSION cube;
   </div>
 
   くらゐが妥当だと思ふ。
-- p.41 の[3]{.upright}つ目の `EXPLAIN` クエリは、行数が少ないときは、上[2]{.upright}つと同じ [Seq Scan on movies]{lang=en} プランを表示する。[Seven Databases in Seven Weeks, Second Edition](https://pragprog.com/titles/pwrdata/seven-databases-in-seven-weeks-second-edition/){lang=en} から[^5] [Source Code]{lang=en} をダウンロードして、
+- p. 41 の[3]{.upright}つ目の `EXPLAIN` クエリは、行数が少ないときは、上[2]{.upright}つと同じ [Seq Scan on movies]{lang=en} プランを表示する。[Seven Databases in Seven Weeks, Second Edition](https://pragprog.com/titles/pwrdata/seven-databases-in-seven-weeks-second-edition/){lang=en} から[^5] [Source Code]{lang=en} をダウンロードして、
 
   [^5]: [First Edition]{lang=en} 用のページは恐らくもう公開されてゐない。
 
