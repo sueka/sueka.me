@@ -50,7 +50,7 @@ CREATE EXTENSION cube;
 - [Loompaland]{lang=en} は『[Charlie and the Chocolate Factory]{lang=en}』に登場する地名らしい。
 - `events.venue_id` の型は `integer` にした。
 - <i>宿題</i>では [5.4. Constraints](https://www.postgresql.org/docs/14/ddl-constraints.html){lang=en} や [52.11. pg_class](https://www.postgresql.org/docs/14/catalog-pg-class.html){lang=en} などを参考にした。
-- <i>宿題</i>の<i>やってみよう[1]{.upright}</i>の<q>選択</q>は `SELECT` のこと。
+- <i>やってみよう[1]{.upright}</i>の<q>選択</q>は `SELECT` のこと。
 
 [2]{.upright}日目に入る前に、`psql` では補完がうまくいかないことが多かったので、`pgcli` をインストールした。こゝからは `pgcli book` でサーバーに接続する。
 
@@ -73,7 +73,7 @@ CREATE EXTENSION cube;
 
   はよく理解できなかったので原文に当たった[^3]。この部分の原文は
 
-  [^3]: わざわざ初版を買ふのは{勿體|もっ|たい}ない気がしたので、[Second Edition]{lang=en} を買った。この部分には差異は無いと思ふ。
+  [^3]: わざわざ初版を買ふのは{勿體|もっ|たい}ない気がしたので、[Second Edition]{lang=en} を買った。この部分に差異は無いと思ふ。
 
   > We like to think of `PARTITION BY` as akin to `GROUP BY`, but rather than grouping the results outside of the `SELECT` attribute list (and thus combining the results into fewer rows), it returns grouped values as any other field (calculating on the grouped variable but otherwise just another attribute). Or in *SQL* parlance, ==it returns the results of an aggregate function `OVER` a `PARTITION` of the result set==.
   {lang=en}
@@ -97,7 +97,7 @@ CREATE EXTENSION cube;
 
   とでもすべきだったと思ふ。
 
-  <ruby>結果集合<rt lang="en">the result set</ruby>といふのは恐らく、`FROM` 句や `WHERE` 句などの結果のことだと思ふ。
+  <ruby>結果集合<rt lang="en">the result set</ruby>といふのは恐らく、`FROM` 句や `WHERE` 句などの結果のことだらう。
 - `createlang` は PostgreSQL 9.1 で非推奨になり、10 で廃止された。p.28 では `createlang book --list` の代はりに `psql book -c \\dL` を使った。
 - PostgreSQL 9.3 では<i>自動的に更新可能な VIEW</i> が導入された。[リリースノート](https://www.postgresql.org/about/news/postgresql-93-released-1481/)。[CREATE VIEW](https://www.postgresql.org/docs/14/sql-createview.html#SQL-CREATEVIEW-UPDATABLE-VIEWS) には、
 
