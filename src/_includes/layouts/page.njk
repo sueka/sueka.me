@@ -54,7 +54,7 @@
     {#- ⌈(29 / 39) * (2 * 4.236068 + 39) * 12⌉; 2 * 8.923272/100 MinHeight(rem) + 29 rem ≤ MinHeight(rem) #}
     <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 424px)" class="linkToVerticalCss" />
     {%- else %} {#- Prefers horizontal #}
-    {# <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" /> #}
+    {# <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" class="linkToVerticalCss" /> #}
     <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" />
     {%- endif %}
 

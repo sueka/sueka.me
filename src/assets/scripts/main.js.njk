@@ -38,6 +38,7 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
   }
 })
 
+// 機械翻訳などによって <html lang> が "ja" 以外に変更されたとき、縦書き用のスタイルシートを無効化し、デフォルトで横書き表示されるようにする。ただし、代替スタイルシートは残す。
 ;(() => {
   const links = document.querySelectorAll('.linkToVerticalCss')
 
@@ -46,17 +47,19 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
     return
   }
 
-  for (const link of links) {
+  window.addEventListener('DOMContentLoaded', () => {
     const observer = new MutationObserver((mutations) => {
       for (const mutation of mutations) {
         if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
-          link.disabled = mutation.target.lang !== 'ja'
+          for (const link of links) {
+            link.disabled = mutation.target.lang !== 'ja'
+          }
         }
       }
     })
 
     observer.observe(document.documentElement, { attributes: true })
-  }
+  })
 })()
 
 ;(() => {
@@ -87,6 +90,7 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
   })
 })()
 
+// mermaid ダイアグラムのサイズを rem に合わせて調整する。
 function resizeMermaid(svg, intrinsicWidth) {
   const root = document.querySelector(':root')
   const rem = window.getComputedStyle(root).fontSize
