@@ -471,10 +471,6 @@ kbd {
   opacity: revert;
 }
 
-.hidden {
-  display: none !important;
-}
-
 .kuntened {
   line-height: 2.5;
   text-align: initial;
