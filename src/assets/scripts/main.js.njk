@@ -67,14 +67,8 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
     for (const mutation of mutations) {
       if (mutation.type === 'childList') {
         for (const node of mutation.addedNodes) {
-          if (node instanceof SVGElement) {
-            const widthBeforeResizing = node.clientWidth
-
-            resizeMermaid(node, widthBeforeResizing)
-
-            window.addEventListener('resize', (_event) => {
-              resizeMermaid(node, widthBeforeResizing)
-            })
+          if (node instanceof SVGSVGElement) {
+            mutation.target.dataset.intrinsicWidth = node.width.baseVal.value
           }
         }
       }
@@ -86,14 +80,27 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
 
     for (const mermaid of mermaids) {
       observer.observe(mermaid, { childList: true })
+
+      resizeMermaid(mermaid)
+
+      window.addEventListener('resize', () => {
+        resizeMermaid(mermaid)
+      })
     }
   })
 })()
 
-// mermaid ダイアグラムのサイズを rem に合わせて調整する。
-function resizeMermaid(svg, intrinsicWidth) {
+// Mermaid ダイアグラムのサイズを rem に合わせて調整する。
+function resizeMermaid(mermaid) {
   const root = document.querySelector(':root')
   const rem = window.getComputedStyle(root).fontSize
+
+  const svg = mermaid.querySelector('svg')
+  const intrinsicWidth = mermaid.dataset.intrinsicWidth
+
+  if (svg === null || intrinsicWidth === undefined) {
+    return
+  }
 
   svg.style.width = `calc(${ intrinsicWidth } * ${ rem } / 16)`
 }

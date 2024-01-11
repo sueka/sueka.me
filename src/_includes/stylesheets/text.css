@@ -62,7 +62,7 @@ p {
 }
 
 .mermaid {
-  border-radius: min(calc(4 / 13 * 1rem), 8px); /* ?; mermaid がデフォルトで取る余白 */
+  border-radius: min(calc(4 / 12 * 1rem), 8px); /* ?; Mermaid がデフォルトで取る余白 */
   background-color: #fffefb; /* TODO: Prefers the color scheme */
 }
 
