@@ -81,6 +81,7 @@ const site = lume({
   prettyUrls: false,
 }, { markdown })
 
+site.copy(['.js'])
 site.copy('assets/images/Logo blue.svg', 'assets/images/twitter-logo.svg')
 site.copy('favicon.ico')
 
