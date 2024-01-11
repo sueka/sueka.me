@@ -4,7 +4,11 @@
       if (mutation.type === 'childList') {
         for (const node of mutation.addedNodes) {
           if (node instanceof SVGSVGElement) {
-            mutation.target.dataset.intrinsicWidth = node.width.baseVal.value
+            resizeMermaid(node)
+
+            window.addEventListener('resize', () => {
+              resizeMermaid(node)
+            })
           }
         }
       }
@@ -16,23 +20,16 @@
 
     for (const mermaid of mermaids) {
       observer.observe(mermaid, { childList: true })
-
-      resizeMermaid(mermaid)
-
-      window.addEventListener('resize', () => {
-        resizeMermaid(mermaid)
-      })
     }
   })
 
-  function resizeMermaid(mermaid) {
+  function resizeMermaid(svg) {
     const root = document.querySelector(':root')
     const rem = window.getComputedStyle(root).fontSize
 
-    const svg = mermaid.querySelector('svg')
-    const intrinsicWidth = mermaid.dataset.intrinsicWidth
+    const intrinsicWidth = svg.width.baseVal.value
 
-    if (svg === null || intrinsicWidth === undefined) {
+    if (intrinsicWidth === undefined) {
       return
     }
 
