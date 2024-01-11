@@ -45,6 +45,7 @@
     <link href="{{ '~/assets/scripts/util.js' | url(true) }}" rel="preload" as="script" />
     <link href="{{ '~/assets/scripts/installCss.js.njk' | url(true) }}" rel="preload" as="script" />
     <link href="{{ '~/assets/scripts/prefersHorizontal.js' | url(true) }}" rel="preload" as="script" />
+    <link href="{{ '~/assets/scripts/compileMermaid.js' | url(true) }}" rel="preload" as="script" />
     <link href="{{ '~/assets/scripts/resizeMermaidDiagrams.js' | url(true) }}" rel="preload" as="script" />
     {#- <link href="https://fonts.googleapis.com/css?family=Noto+Serif+Hebrew|Noto+Sans+Hebrew" rel="preload" as="style" /> #}
 
@@ -98,6 +99,7 @@
     <script src="{{ '~/assets/scripts/util.js' | url(true) }}"></script>
     <script src="{{ '~/assets/scripts/installCss.js.njk' | url(true) }}"></script>
     <script src="{{ '~/assets/scripts/prefersHorizontal.js' | url(true) }}"></script>
+    <script src="{{ '~/assets/scripts/compileMermaid.js' | url(true) }}"></script>
     <script src="{{ '~/assets/scripts/resizeMermaidDiagrams.js' | url(true) }}"></script>
 
     {%- if he %}
@@ -115,14 +117,5 @@
       {% include 'templates/colophon.njk' %}
     </div>
     {% include 'templates/footer.njk' %}
-    <script type="module">
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.esm.min.mjs'
-      mermaid.initialize({
-        startOnLoad: true,
-        flowchart: {
-          useMaxWidth: false,
-        },
-      })
-    </script>
   </body>
 </html>
