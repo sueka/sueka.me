@@ -33,6 +33,7 @@ import postcssExtendRule from 'postcss-extend-rule'
 
 import getIncipit from './lib/getIncipit.ts'
 import truncateHtml from './lib/truncateHtml.ts'
+import upright from './lib/upright.ts'
 import wrapTables from './lib/wrapTables.ts'
 import wrapDiagrams from './lib/wrapDiagrams.ts'
 import addClassExternal from './lib/addClassExternal.ts'
@@ -113,8 +114,10 @@ site.use(slugifyUrls())
 site.use(sourceMaps())
 
 site.filter('encodeUri', encodeURI)
-site.filter('getIncipit', getIncipit)
+site.filter('getIncipit', getIncipit) //
 site.filter('truncateHtml', truncateHtml)
+site.filter('upright', upright)
+site.filter('v', upright)
 
 // // Defines {% env 'PATH' %}
 // site.helper('env', (name) => Deno.env.get(name), { type: 'tag' })
