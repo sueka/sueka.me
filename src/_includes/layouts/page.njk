@@ -53,18 +53,17 @@
     <link href="{{ '~/assets/stylesheets/dark.css' | url(true) }}" rel="stylesheet" media="(prefers-color-scheme: dark)" />
 
     {%- if prefersVertical %}
-    <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" />
-    {#- Keep using physical, not logical #}
+    <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" media="not (min-height: 424px)" title="Writing mode: Auto" />
+    {#- Keep physical, not logical #}
     {#- ⌈(29 / 39) * (2 * 4.236068 + 39) * 12⌉; 2 * 8.923272/100 MinHeight(rem) + 29 rem ≤ MinHeight(rem) #}
-    <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 424px)" class="linkToVerticalCss" />
-    {%- else %} {#- Prefers horizontal #}
-    {# <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" class="linkToVerticalCss" /> #}
-    <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" />
+    <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 424px)" title="Writing mode: Auto" class="linkToVerticalCss" />
+    {%- else %} {#- Must be horizontal #}
+    <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" title="Writing mode: Auto" />
     {%- endif %}
 
     {%- if verticalOk %}
-    <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet alternate" title="Horizontal Writing" />
-    <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet alternate" title="Vertical Writing" />
+    <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet alternate" title="Writing mode: Horizontal" />
+    <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet alternate" title="Writing mode: Vertical" />
     {%- endif %}
 
     {#- NOTE: Script is loaded in _config.js #}
@@ -77,10 +76,10 @@
     {%- endif %}
 
     {%- if verticalOk %}
-    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/gradient-light.min.css" rel="stylesheet alternate" media="(prefers-color-scheme: light)" title="Horizontal Writing" />
-    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/gradient-dark.min.css" rel="stylesheet alternate" media="(prefers-color-scheme: dark)" title="Horizontal Writing" />
-    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-light.css' | url(true) }}" rel="stylesheet alternate" title="Vertical Writing" />
-    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-dark.css' | url(true) }}" rel="stylesheet alternate" media="(prefers-color-scheme: dark)" title="Vertical Writing" />
+    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/gradient-light.min.css" rel="stylesheet alternate" media="(prefers-color-scheme: light)" title="Writing mode: Horizontal" />
+    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/gradient-dark.min.css" rel="stylesheet alternate" media="(prefers-color-scheme: dark)" title="Writing mode: Horizontal" />
+    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-light.css' | url(true) }}" rel="stylesheet alternate" title="Writing mode: Vertical" />
+    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-dark.css' | url(true) }}" rel="stylesheet alternate" media="(prefers-color-scheme: dark)" title="Writing mode: Vertical" />
     {%- endif %}
 
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">

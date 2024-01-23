@@ -33,34 +33,6 @@ body {
   min-block-size: 38.196601vi; /* φ⁻²; width/height = φ² */
 }
 
-.colophon {
-  width: revert;
-  max-width: revert;
-}
-
-.footnote-ref,
-.footnote-backref {
-  @extend .upright;
-}
-
-.footnote-ref {
-  font-feature-settings: revert;
-}
-
-ol {
-  list-style-type: revert;
-}
-
-ol:has(li:nth-of-type(11)),
-ol:has(li:nth-of-type(21)) {
-  padding-inline-start: 2em; /* Same as ol in layout.css */
-}
-
-/* 100-9999 */
-ol:has(li:nth-of-type(100)) {
-  padding-inline-start: 3em;
-}
-
 .table-wrapper {
   overflow-x: auto;
   overflow-inline: auto;
@@ -74,18 +46,6 @@ pre, code {
   @media (width < 424px) { /* Same as in page.njk */
     tab-size: 4;
   }
-
-  @media (max-height: 423.25px) {
-    tab-size: revert;
-  }
-
-  @media (height < 424px) { /* Same as in page.njk */
-    tab-size: revert;
-  }
-}
-
-pre:has(code.hljs) {
-  white-space: revert;
 }
 
 :not(pre) > code {
@@ -96,18 +56,6 @@ pre:has(code.hljs) {
   @media (width < 424px) { /* Same as in page.njk */
     word-break: break-all;
   }
-
-  @media (max-height: 423.25px) {
-    word-break: revert;
-  }
-
-  @media (height < 424px) { /* Same as in page.njk */
-    word-break: revert;
-  }
-}
-
-a:not(:has(:--image)):any-link.external::before {
-  content: none;
 }
 
 a:not(:has(:--image)):any-link.external::after {
@@ -121,71 +69,18 @@ a:not(:has(:--image)):any-link.external::after {
   margin-inline-start: 2px;
 }
 
-/* TODO: 主要ブラウザーと css-has-pseudo が :lang(ja, zh) をサポートしたら、このルールセットを削除する。 */
-ruby:lang(ja):has(rt:lang(ja)),
-ruby:lang(ja):has(rt:lang(jpn-archaic)),
-ruby:lang(ja):has(rt:lang(zh)),
-ruby:lang(jpn-archaic):has(rt:lang(ja)),
-ruby:lang(jpn-archaic):has(rt:lang(jpn-archaic)),
-ruby:lang(jpn-archaic):has(rt:lang(zh)),
-ruby:lang(zh):has(rt:lang(ja)),
-ruby:lang(zh):has(rt:lang(jpn-archaic)),
-ruby:lang(zh):has(rt:lang(zh)),
-ruby:lang(ja):has(> rt:lang(ja)),
-ruby:lang(ja):has(> rt:lang(jpn-archaic)),
-ruby:lang(ja):has(> rt:lang(zh)),
-ruby:lang(jpn-archaic):has(> rt:lang(ja)),
-ruby:lang(jpn-archaic):has(> rt:lang(jpn-archaic)),
-ruby:lang(jpn-archaic):has(> rt:lang(zh)),
-ruby:lang(zh):has(> rt:lang(ja)),
-ruby:lang(zh):has(> rt:lang(jpn-archaic)),
-ruby:lang(zh):has(> rt:lang(zh)) {
-  text-transform: revert;
-  ruby-align: revert;
-  ruby-overhang: revert;
-}
-
-/* TODO: 主要ブラウザーと css-has-pseudo が :has(> E) をサポートしたら、このセレクターを削除する。 */
-ruby:lang(ja, jpn-archaic, zh):has(rt:lang(ja, jpn-archaic, zh)),
-ruby:lang(ja, jpn-archaic, zh):has(> rt:lang(ja, jpn-archaic, zh)) {
-  text-transform: revert;
-  /* TODO: 熟字訓のグループルビは中央寄せする。 */
-  /* TODO: 4文字以上のルビは下から順に上下に1文字づつ追い出す? */
-  /* TODO: 行頭、行末ではルビを版面の外に出さない。 */
-  ruby-align: revert;
-  ruby-overhang: revert;
-}
-
-em,
-em :where(:not(:lang(ja)):not(:lang(jpn-archaic))) {
-  font-style: italic;
-  font-family: var(--font-text);
-}
-
-em,
-em :where(:not(:lang(ja, jpn-archaic))) {
-  font-style: italic;
-  font-family: var(--font-text);
-}
-
-em:where(:lang(ja)),
-em:where(:lang(jpn-archaic)),
-em :where(:lang(ja)),
-em :where(:lang(jpn-archaic)) {
+em:lang(ja),
+em:lang(jpn-archaic),
+em :lang(ja),
+em :lang(jpn-archaic) {
   font-style: normal;
   font-family: var(--font-text-emphasized);
 }
 
-em:where(:lang(ja, jpn-archaic)),
-em :where(:lang(ja, jpn-archaic)) {
+em:lang(ja, jpn-archaic),
+em :lang(ja, jpn-archaic) {
   font-style: normal;
   font-family: var(--font-text-emphasized);
-}
-
-b {
-  font-weight: unset;
-  text-emphasis-style: revert;
-  text-decoration: underline;
 }
 
 /* mark { See text.css } */
@@ -193,7 +88,6 @@ b {
 /* i { See text.css } */
 
 cite {
-  font-style: revert; /* italic */
   font-family: var(--font-text);
 }
 
@@ -201,39 +95,6 @@ cite {
 cite :where([lang]) {
   font-style: italic;
   font-family: var(--font-text);
-}
-
-.sideways {
-  font-feature-settings: revert;
-  text-orientation: revert;
-}
-
-:is(span, i):lang(iu) {
-  @extend .sideways;
-}
-
-.upright {
-  font-feature-settings: revert;
-  text-orientation: revert;
-}
-
-.tate-chu-yoko {
-  -webkit-text-combine: revert;
-  text-combine-upright: revert;
-}
-
-.header-anchor {
-  @extend .upright;
-}
-
-/* Keep contrasting with h# block-axis layout defined in layout.css */
-:is(h1, h2, h3, h4, h5, h6):is([id]) /*- :has(.header-anchor) */ {
-  scroll-margin-right: 0;
-  scroll-margin-left: 0;
-  scroll-margin-top: 1.618034em; /* φ */
-  scroll-margin-bottom: 1em;
-  scroll-margin-block-start: 1.618034em; /* φ */
-  scroll-margin-block-end: 1em;
 }
 
 .footnote-ref a[id] {
@@ -247,15 +108,6 @@ cite :where([lang]) {
     scroll-margin: 0.5em 0;
     scroll-margin-block: 0.5em; /* half of (line-height - 1em) */
     scroll-margin-inline: 0;
-  }
-}
-
-.kuntened {
-  & rt:lang(ja), & rt:lang(jpn-archaic) {
-    font-feature-settings: revert;
-  }
-  & rt:lang(ja, jpn-archaic) {
-    font-feature-settings: revert;
   }
 }
 

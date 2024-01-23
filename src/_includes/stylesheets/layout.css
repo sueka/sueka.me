@@ -128,8 +128,18 @@ hr {
   border: 1px inset var(--color-border);
 }
 
+.footnote-ref a[id] {
+  scroll-margin-block: 1em;
+  scroll-margin-inline: 0;
+}
+
 .footnotes-list {
   font-size: calc(39 / 44 * 100%);
+}
+
+.footnotes-list li:is([id]) {
+  scroll-margin-block: 0.5em; /* half of (line-height - 1em) */
+  scroll-margin-inline: 0;
 }
 
 .colophon {
@@ -254,6 +264,11 @@ h6 { font-size: 100% } /* φ^(0/5) */
   inline-size: fit-content; /* Get Webkit outlines fit */
 }
 
+:--heading:is([id]) /*- :has(.header-anchor) */ {
+  scroll-margin-block-start: 1.618034em; /* φ */
+  scroll-margin-block-end: 1em;
+}
+
 p, :--blockquote {
   margin-block: 1em;
 }
@@ -374,6 +389,11 @@ summary .details-marker {
 
 ul, ol {
   padding-inline-start: 2em;
+}
+
+/* 100-9999 */
+ol:has(li:nth-of-type(100)) {
+  padding-inline-start: 3em;
 }
 
 dd {

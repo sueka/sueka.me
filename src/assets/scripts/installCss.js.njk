@@ -9,7 +9,7 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
     return
   }
 
-  const links = document.querySelectorAll('link[href$="{{ "~/assets/stylesheets/horizontal.css" | url }}"], link[href$="{{ "~/assets/stylesheets/vertical.css" | url }}"]')
+  const links = document.querySelectorAll('link[href$="{{ "~/assets/stylesheets/vertical.css" | url }}"]')
 
   for (const link of links) {
     if (isGecko) {
@@ -30,7 +30,6 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
       const linkForWebkit = link.cloneNode()
 
       linkForWebkit.href = linkForWebkit.getAttribute('href').replace(/(?=\.css$)/, '-safari')
-      console.log(linkForWebkit)
       document.head.insertBefore(linkForWebkit, link.nextSibling)
     }
   }

@@ -183,8 +183,9 @@ strong {
   @extend strong;
 }
 
-i {
-  font-style: revert; /* italic */
+b {
+  font-weight: unset;
+  text-decoration: underline;
 }
 
 /* i, */

@@ -18,7 +18,6 @@ html {
     100vmin / (2 * 2.618034 + 29) φ²
   ); */
 
-  /* font-kerning: revert; */
   font-feature-settings: "vkna"; /* Don't set "vkrn" nor "vpal" */
 }
 
@@ -53,44 +52,26 @@ ol {
   list-style-type: japanese-informal;
 }
 
+ol:lang(ja):has(li:nth-of-type(11)),
+ol:lang(jpn-archaic):has(li:nth-of-type(11)) {
+  padding-inline-start: 3em;
+}
+
 /* japanese-informal で最初に2文字になる数は「十一」 */
 /* 11-20 */
-ol:has(li:nth-of-type(11)) {
+ol:lang(ja, jpn-archaic):has(li:nth-of-type(11)) {
   padding-inline-start: 3em;
+}
+
+ol:lang(ja):has(li:nth-of-type(21)),
+ol:lang(jpn-archaic):has(li:nth-of-type(21)) {
+  padding-inline-start: 4em;
 }
 
 /* japanese-informal で最初に3文字になる数は「二十一」 */
 /* 21-120 */
-ol:has(li:nth-of-type(21)) {
+ol:lang(ja, jpn-archaic):has(li:nth-of-type(21)) {
   padding-inline-start: 4em;
-}
-
-ol:where(:not(:lang(ja)):not(:lang(jpn-archaic))) {
-  list-style-type: revert;
-}
-
-ol:where(:not(:lang(ja, jpn-archaic))) {
-  list-style-type: revert;
-}
-
-ol:where(:not(:lang(ja)):not(:lang(jpn-archaic))):has(li:nth-of-type(11)),
-ol:where(:not(:lang(ja)):not(:lang(jpn-archaic))):has(li:nth-of-type(21)) {
-  padding-inline-start: 2em; /* Same as ol in layout.css */
-}
-
-ol:where(:not(:lang(ja, jpn-archaic))):has(li:nth-of-type(11)),
-ol:where(:not(:lang(ja, jpn-archaic))):has(li:nth-of-type(21)) {
-  padding-inline-start: 2em; /* Same as ol in layout.css */
-}
-
-/* 100-9999 */
-ol:where(:not(:lang(ja)):not(:lang(jpn-archaic))):has(li:nth-of-type(100)) {
-  padding-inline-start: 3em;
-}
-
-/* 100-9999 */
-ol:where(:not(:lang(ja, jpn-archaic))):has(li:nth-of-type(100)) {
-  padding-inline-start: 3em;
 }
 
 .table-wrapper {
@@ -106,14 +87,6 @@ pre, code {
   @media (height < 424px) { /* Same as in page.njk */
     tab-size: 4;
   }
-
-  @media (max-width: 423.25px) {
-    tab-size: revert;
-  }
-
-  @media (width < 424px) { /* Same as in page.njk */
-    tab-size: revert;
-  }
 }
 
 :not(pre) > code {
@@ -123,14 +96,6 @@ pre, code {
 
   @media (height < 424px) { /* Same as in page.njk */
     word-break: break-all;
-  }
-
-  @media (max-width: 423.25px) {
-    word-break: revert;
-  }
-
-  @media (width < 424px) { /* Same as in page.njk */
-    word-break: revert;
   }
 }
 
@@ -148,10 +113,6 @@ a:not(:has(:--image)):any-link.external::before {
   color: var(--color-text-dimmed);
   vertical-align: super;
   margin-inline-end: 2px;
-}
-
-a:not(:has(:--image)):any-link.external::after {
-  content: none;
 }
 
 /* TODO: 主要ブラウザーと css-has-pseudo が :lang(ja, zh) をサポートしたら、このルールセットを削除する。 */
@@ -193,7 +154,7 @@ em {
   font-style: normal;
   font-family: var(--font-text-emphasized);
 
-  & :where(*) {
+  & * {
     font-style: normal;
     font-family: var(--font-text-emphasized);
   }
@@ -206,7 +167,6 @@ b :where(:lang(jpn-archaic)) {
   font-weight: unset;
   text-emphasis-style: sesame;
   text-emphasis-position: over right;
-  text-decoration: revert;
 }
 
 b:where(:lang(ja, jpn-archaic)),
@@ -214,7 +174,6 @@ b :where(:lang(ja, jpn-archaic)) {
   font-weight: unset;
   text-emphasis-style: sesame;
   text-emphasis-position: over right;
-  text-decoration: revert;
 }
 
 /* mark { See text.css } */
@@ -280,30 +239,6 @@ cite :where(:lang(ja, jpn-archaic)) {
 
 .header-anchor {
   @extend .upright;
-}
-
-/* Keep contrasting with h# block-axis layout defined in layout.css */
-:is(h1, h2, h3, h4, h5, h6):is([id]) /*- :has(.header-anchor) */ {
-  scroll-margin-top: 0;
-  scroll-margin-bottom: 0;
-  scroll-margin-right: 1.618034em;
-  scroll-margin-left: 1em;
-  scroll-margin-block-start: 1.618034em; /* φ */
-  scroll-margin-block-end: 1em; /* NOTE: Firefox (92.0) では水平方向に移動するページ内リンクはアンカーがスクリーンに収まるまでの最小距離を移動するので、アンカーがスクリーンの左側にある場合、この値が意味を持つことがある。 */
-}
-
-.footnote-ref a[id] {
-  scroll-margin: 0 1em;
-  scroll-margin-block: 1em;
-  scroll-margin-inline: 0;
-}
-
-.footnotes-list {
-  & li:is([id]) {
-    scroll-margin: 0 0.5em;
-    scroll-margin-block: 0.5em; /* half of (line-height - 1em) */
-    scroll-margin-inline: 0;
-  }
 }
 
 .kuntened {
