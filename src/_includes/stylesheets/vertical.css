@@ -160,20 +160,22 @@ em {
   }
 }
 
-b:where(:lang(ja)),
-b:where(:lang(jpn-archaic)),
-b :where(:lang(ja)),
-b :where(:lang(jpn-archaic)) {
+b:lang(ja),
+b:lang(jpn-archaic),
+b :lang(ja),
+b :lang(jpn-archaic) {
   font-weight: unset;
   text-emphasis-style: sesame;
   text-emphasis-position: over right;
+  text-decoration: revert;
 }
 
-b:where(:lang(ja, jpn-archaic)),
-b :where(:lang(ja, jpn-archaic)) {
+b:lang(ja, jpn-archaic),
+b :lang(ja, jpn-archaic) {
   font-weight: unset;
   text-emphasis-style: sesame;
   text-emphasis-position: over right;
+  text-decoration: revert; /* Revert to text.css */
 }
 
 /* mark { See text.css } */
