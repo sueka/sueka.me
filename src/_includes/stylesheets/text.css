@@ -215,7 +215,7 @@ i :where(:lang(ja, jpn-archaic)) {
 }
 
 @media (min-resolution: 192dpi) {
-  u {
+  b, u {
     text-decoration-thickness: 2px;
   }
 }
