@@ -14,6 +14,16 @@ kbd {
   vertical-align: -moz-middle-with-baseline;
 }
 
+.horizontal :not(pre) > code,
+:not(pre).horizontal > code,
+:not(pre) > code.horizontal,
+kbd {
+  display: revert;
+  padding-block: 0.236068em; /* φ⁻³; Same as in layout.css */
+  line-height: revert;
+  vertical-align: revert;
+}
+
 :is(span, i):lang(iu) {
   @extend .sideways;
 }
@@ -40,8 +50,41 @@ a:lang(ja, jpn-archaic) {
   }
 }
 
+/* TODO: Delete this ruleset */
+.horizontal a:lang(ja):hover,
+.horizontal a:lang(jpn-archaic):hover,
+a:lang(ja).horizontal:hover,
+a:lang(jpn-archaic).horizontal:hover {
+  text-decoration: revert;
+  text-decoration-style: dashed;
+}
+
+.horizontal a:lang(ja, jpn-archaic):hover,
+a:lang(ja, jpn-archaic).horizontal:hover {
+  text-decoration: revert;
+  text-decoration-style: dashed;
+}
+
+/* TODO: Delete this ruleset */
+.horizontal a:lang(ja):active,
+.horizontal a:lang(jpn-archaic):active,
+a:lang(ja).horizontal:active,
+a:lang(jpn-archaic).horizontal:active {
+  text-decoration: revert;
+}
+
+.horizontal a:lang(ja, jpn-archaic):active,
+a:lang(ja, jpn-archaic).horizontal:active {
+  text-decoration: revert;
+}
+
 u {
   text-decoration-line: overline; /* left */
+}
+
+.horizontal u,
+u.horizontal {
+  text-decoration-line: revert;
 }
 
 ul > li, ol > li {
