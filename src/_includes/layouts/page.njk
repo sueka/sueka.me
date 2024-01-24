@@ -53,10 +53,11 @@
     <link href="{{ '~/assets/stylesheets/dark.css' | url(true) }}" rel="stylesheet" media="(prefers-color-scheme: dark)" />
 
     {%- if prefersVertical %}
-    <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" media="not (min-height: 424px)" title="Writing mode: Auto" />
+    <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" media="not (min-height: 424px)" title="Writing mode: Auto" class="for-ja" />
     {#- Keep physical, not logical #}
     {#- ⌈(29 / 39) * (2 * 4.236068 + 39) * 12⌉; 2 * 8.923272/100 MinHeight(rem) + 29 rem ≤ MinHeight(rem) #}
-    <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 424px)" title="Writing mode: Auto" class="linkToVerticalCss" />
+    <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="stylesheet" media="(min-height: 424px)" title="Writing mode: Auto" class="for-ja" />
+    <link disabled href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" title="Writing mode: Auto" class="not-for-ja" />
     {%- else %} {#- Must be horizontal #}
     <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="stylesheet" title="Writing mode: Auto" />
     {%- endif %}
@@ -71,8 +72,8 @@
     <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/gradient-dark.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)" />
 
     {%- if prefersVertical %}
-    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-light.css' | url(true) }}" rel="stylesheet" media="(min-height: 424px)" class="linkToVerticalCss" />
-    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-dark.css' | url(true) }}" rel="stylesheet" media="(min-height: 424px) and (prefers-color-scheme: dark)" class="linkToVerticalCss" />
+    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-light.css' | url(true) }}" rel="stylesheet" media="(min-height: 424px)" class="for-ja" />
+    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-dark.css' | url(true) }}" rel="stylesheet" media="(min-height: 424px) and (prefers-color-scheme: dark)" class="for-ja" />
     {%- endif %}
 
     {%- if verticalOk %}
