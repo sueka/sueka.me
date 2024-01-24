@@ -80,7 +80,7 @@ ol:lang(ja, jpn-archaic):has(li:nth-of-type(21)) {
 }
 
 pre, code {
-  @media (max-height: 423.25px) {
+  @media all and not (min-height: 424px) {
     tab-size: 4;
   }
 
@@ -90,7 +90,7 @@ pre, code {
 }
 
 :not(pre) > code {
-  @media (max-height: 423.25px) {
+  @media all and not (min-height: 424px) {
     word-break: break-all;
   }
 
