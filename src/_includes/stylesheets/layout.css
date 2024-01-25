@@ -326,6 +326,11 @@ details {
   margin-block: 1em;
 }
 
+summary {
+  display: inline flow list-item;
+  cursor: pointer;
+}
+
 summary::-webkit-details-marker {
   margin-right: unset;
   margin-inline-end: 0.4em;
