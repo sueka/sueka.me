@@ -1,8 +1,11 @@
 :root {
+  --font-text: serif;
+  --font-text-emphasized: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
+  --font-code: ui-monospace, Consolas, Inconsolata, monospace;
   --font-ui: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
 }
 
-:root, [lang]:where(:not([lang=""])) {
+[lang]:where(:not([lang="und"])) {
   --font-text: serif;
   --font-text-emphasized: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
   --font-code: ui-monospace, Consolas, Inconsolata, monospace;
