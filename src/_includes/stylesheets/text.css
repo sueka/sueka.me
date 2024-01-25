@@ -25,6 +25,10 @@ body {
   isolation: isolate;
 }
 
+.footnote-ref {
+  text-orientation: sideways;
+}
+
 .footer {
   & > ul > li > a {
     border-style: none;
