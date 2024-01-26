@@ -67,7 +67,7 @@ DISJ(left, right)
 ``` excel
 SLICE(range, offset_rows, _height)
 =LET(
-  height, IF(ISBLANK(_height), ROWS(range) - offset_rows, _height), 
+  height, IF(ISBLANK(_height), ROWS(range) - offset_rows, _height),
   CHOOSEROWS(range, SEQUENCE(height, 1, offset_rows + 1))
 )
 ```
@@ -307,7 +307,7 @@ TIMESPENT(proc)
 )
 ```
 
-`proc` は引数を取らない関数。[`LET`](https://support.google.com/docs/answer/13190535) は、`value_expression` の中でより左で宣言された `name` が使へるやうにするために、`name` `value_expression` ペアを左から順に逐次的に処理する。 
+`proc` は引数を取らない関数。[`LET`](https://support.google.com/docs/answer/13190535) は、`value_expression` の中でより左で宣言された `name` が使へるやうにするために、`name` `value_expression` ペアを左から順に逐次的に処理する。
 
 多く `LAMBDA` を使って、`TIMESPENT(LAMBDA(MATCH("Pikachu", B2:B)))` といふゝうに使ふ。
 
