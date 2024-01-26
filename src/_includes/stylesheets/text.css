@@ -4,6 +4,7 @@
   --color-background: #fffefb;
   --color-text: #675640;
   --color-text-dimmed: #A99075;
+  --color-text-accent: darkcyan;
   --color-link: dodgerblue;
   --color-visited: darkorchid;
   --color-background-code: #e9e1dbdd;
@@ -191,10 +192,15 @@ mark {
 strong {
   font-weight: revert; /* bold */
   font-weight: bold;
+  color: var(--color-text-accent);
 }
 
 .strong-like {
   @extend strong;
+}
+
+em {
+  color: var(--color-text-accent);
 }
 
 b {
