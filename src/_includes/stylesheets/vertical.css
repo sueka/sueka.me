@@ -154,7 +154,7 @@ em {
   font-style: normal;
   font-family: var(--font-text-emphasized);
 
-  & * {
+  & :where(*) {
     font-style: normal;
     font-family: var(--font-text-emphasized);
   }

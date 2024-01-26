@@ -69,16 +69,16 @@ a:not(:has(:--image)):any-link.external::after {
   margin-inline-start: 2px;
 }
 
-em:lang(ja),
-em:lang(jpn-archaic),
-em :lang(ja),
-em :lang(jpn-archaic) {
+em:where(:lang(ja)),
+em:where(:lang(jpn-archaic)),
+em :where(:lang(ja)),
+em :where(:lang(jpn-archaic)) {
   font-style: normal;
   font-family: var(--font-text-emphasized);
 }
 
-em:lang(ja, jpn-archaic),
-em :lang(ja, jpn-archaic) {
+em:where(:lang(ja, jpn-archaic)),
+em :where(:lang(ja, jpn-archaic)) {
   font-style: normal;
   font-family: var(--font-text-emphasized);
 }
