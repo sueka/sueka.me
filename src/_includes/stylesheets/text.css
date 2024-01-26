@@ -113,6 +113,16 @@ kbd {
   white-space: pre-wrap;
 }
 
+/* Safari (17.3, iOS 17.2) では mix-blend-mode が normal でない部分の :visited の前景色 (color, box-shadow, ..) は未訪問色となる。当面の間 mix-blend-mode を revert してこれを回避する。 */
+:any-link mark,
+mark:has(:any-link),
+:any-link code,
+code:has(:any-link) /* ,
+:any-link kbd,
+kbd:has(:any-link) */ {
+  mix-blend-mode: revert;
+}
+
 ruby {
   ruby-align: center;
   ruby-overhang: none;
