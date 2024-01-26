@@ -12,4 +12,4 @@ Translations of Wikipedia articles[^2] are _also_ available under [CC BY-SA 3.0]
 
 [^1]: All .md files
 [^2]: All .md files in transl/*.wikipedia.org (`git ls-files -- ://src/transl/*.wikipedia.org/*.md` prints them)
-[^3]: You have a list of such files by running `git ls-files -- ':!*/Logo blue.svg' ':!*/_includes/stylesheets/highlight.js/*.css' ':!:*.md'`.
+[^3]: You have a list of such files by running `git ls-files -- ':!*/Logo blue.svg' ':!:*.md'`.

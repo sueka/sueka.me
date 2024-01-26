@@ -31,10 +31,8 @@
     <link href="{{ '~/assets/stylesheets/dark.css' | url(true) }}" rel="preload" as="style" />
     <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="preload" as="style" />
     <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="preload" as="style" />
-    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/gradient-light.min.css" rel="preload" as="style" />
-    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/gradient-dark.min.css" rel="preload" as="style" />
-    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-light.css' | url(true) }}" rel="preload" as="style" />
-    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-dark.css' | url(true) }}" rel="preload" as="style" />
+    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/base16/solarized-light.min.css" rel="preload" as="style" />
+    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/base16/solarized-dark.min.css" rel="preload" as="style" />
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="preload" as="style" />
     {#- <link href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" rel="preload" as="style" /> #}
     {#- <link href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" rel="preload" as="script" /> #}
@@ -68,20 +66,8 @@
     {%- endif %}
 
     {#- NOTE: Script is loaded in _config.js #}
-    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/gradient-light.min.css" rel="stylesheet" media="(prefers-color-scheme: light)" />
-    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/gradient-dark.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)" />
-
-    {%- if prefersVertical %}
-    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-light.css' | url(true) }}" rel="stylesheet" media="(min-height: 424px)" class="for-ja" />
-    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-dark.css' | url(true) }}" rel="stylesheet" media="(min-height: 424px) and (prefers-color-scheme: dark)" class="for-ja" />
-    {%- endif %}
-
-    {%- if verticalOk %}
-    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/gradient-light.min.css" rel="stylesheet alternate" media="(prefers-color-scheme: light)" title="Writing mode: Horizontal" />
-    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/gradient-dark.min.css" rel="stylesheet alternate" media="(prefers-color-scheme: dark)" title="Writing mode: Horizontal" />
-    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-light.css' | url(true) }}" rel="stylesheet alternate" title="Writing mode: Vertical" />
-    <link href="{{ '~/assets/stylesheets/highlight.js/vertical-gradient-dark.css' | url(true) }}" rel="stylesheet alternate" media="(prefers-color-scheme: dark)" title="Writing mode: Vertical" />
-    {%- endif %}
+    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/base16/solarized-light.min.css" rel="stylesheet" media="(prefers-color-scheme: light)" />
+    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/base16/solarized-dark.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)" />
 
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
 
