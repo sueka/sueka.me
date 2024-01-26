@@ -103,13 +103,13 @@ code {
 
 :not(pre) > code {
   background-color: var(--color-background-code);
-  mix-blend-mode: multiply;
+  mix-blend-mode: darken;
   white-space: pre-wrap;
 }
 
 kbd {
   font-variant-ligatures: none;
-  /* mix-blend-mode: multiply; */
+  /* mix-blend-mode: darken; */
   white-space: pre-wrap;
 }
 
