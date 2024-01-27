@@ -1,6 +1,10 @@
 /* Keep contrasting with horizontal.css */
 
 @custom-selector :--image figure, img, picture, svg;
+@custom-selector :--sideways .sideways, code, kbd;
+@custom-selector :--non-upright
+  [lang]:where(:not(:lang(ja)):not(:lang(jpn-archaic)):not(:lang(zh))),
+  [lang]:where(:not(:lang(ja, jpn-archaic, zh)));
 
 html {
   writing-mode: vertical-rl;
@@ -113,6 +117,7 @@ a:not(:has(:--image)):any-link.external::before {
   color: var(--color-text-dimmed);
   vertical-align: super;
   margin-inline-end: 2px;
+  text-emphasis: none; /* Not sesamed */
 }
 
 /* TODO: 主要ブラウザーと css-has-pseudo が :lang(ja, zh) をサポートしたら、このルールセットを削除する。 */
@@ -160,22 +165,70 @@ em {
   }
 }
 
-b:lang(ja),
-b:lang(jpn-archaic),
-b :lang(ja),
-b :lang(jpn-archaic) {
-  font-weight: unset;
+b:where(:lang(ja)),
+b:where(:lang(jpn-archaic)),
+b :where(:lang(ja)),
+b :where(:lang(jpn-archaic)) {
+  font-weight: inherit;
   text-emphasis-style: sesame;
   text-emphasis-position: over right;
+  text-orientation: upright;
   text-decoration: revert;
+
+  & ruby {
+    -webkit-ruby-position: after; /*  */
+    ruby-position: under;
+  }
+
+  & ruby:has(rt:lang(ja)),
+  & ruby:has(rt:lang(jpn-archaic)) {
+    text-emphasis: none;
+  }
+
+  & :--sideways,
+  & :--sideways b {
+    text-emphasis: none;
+    text-orientation: mixed;
+  }
+
+  & :--non-upright,
+  & :--non-upright b {
+    text-emphasis: none;
+    text-orientation: mixed;
+  }
 }
 
-b:lang(ja, jpn-archaic),
-b :lang(ja, jpn-archaic) {
-  font-weight: unset;
+b:where(:lang(ja, jpn-archaic)),
+b :not(:--sideways):where(:lang(ja, jpn-archaic)) {
+  font-weight: inherit;
   text-emphasis-style: sesame;
   text-emphasis-position: over right;
+  text-orientation: upright; /* NOTE: Sesamed text should be upright. */
   text-decoration: revert; /* Revert to text.css */
+
+  /* 圏点とルビが競合し、ルビが日本語でない場合、ルビを左に置く。TODO: 圏点を右にずらしたほうが自然な気がする。 */
+  & ruby {
+    -webkit-ruby-position: after; /*  */
+    ruby-position: under;
+  }
+
+  /* 圏点とルビが競合し、ルビが日本語の場合、ルビを優先する。 */
+  & ruby:has(rt:lang(ja, jpn-archaic)) {
+    text-emphasis: none;
+  }
+
+  /* text-orientation: sideways なテキストでは圏点も廻転するため、圏点を打たない。 */
+  /* NOTE: この実装では、text-orientation: sideways でない横倒しのテキスト（.sideways でない和文中の欧文など）にはそのまま圏点が打たれるが、このようなテキストの圏点は廻転しない。幅が詰まるので、増えてきたら対処するかも。 */
+  & :--sideways,
+  & :--sideways b {
+    text-emphasis: none;
+  }
+
+  & :--non-upright,
+  & :--non-upright b {
+    text-emphasis: none;
+    text-orientation: mixed;
+  }
 }
 
 /* mark { See text.css } */

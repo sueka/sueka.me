@@ -435,6 +435,11 @@ pre:has(code) {
 
 code {
   text-orientation: sideways;
+
+  /* code の内部ではテキストの向きの変更を無視する。 */
+  & * {
+    text-orientation: revert !important;
+  }
 }
 
 code.hljs {

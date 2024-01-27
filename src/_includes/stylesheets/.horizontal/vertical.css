@@ -180,7 +180,6 @@ em :where(:lang(ja, jpn-archaic)).horizontal { font-style: normal;
 
 .horizontal b,
 b.horizontal {
-  font-weight: unset;
   text-emphasis-style: revert;
   text-decoration: underline;
 }

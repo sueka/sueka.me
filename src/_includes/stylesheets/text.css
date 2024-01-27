@@ -108,6 +108,11 @@ code {
   white-space: pre-wrap;
 }
 
+/* <code> の内部ではフォントの変更や圏点が無効になるため、デフォルトの外観を使う。 */
+code :is(b, i) {
+  all: revert;
+}
+
 kbd {
   font-variant-ligatures: none;
   /* mix-blend-mode: darken; */
@@ -234,10 +239,8 @@ i :where(:lang(ja, jpn-archaic)) {
   font-family: var(--font-text-emphasized);
 }
 
-@media (min-resolution: 192dpi) {
-  b, u {
-    text-decoration-thickness: 2px;
-  }
+b, u {
+  text-decoration-skip-ink: all;
 }
 
 small {
@@ -261,7 +264,7 @@ sup, sub {
   & b {
     font-weight: revert;
     text-decoration: revert; /* horizontal */
-    text-emphasis: revert; /* vertical */
+    text-emphasis: revert; /* ja vertical */
   }
 }
 

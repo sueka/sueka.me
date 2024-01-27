@@ -75,6 +75,7 @@ a:not(:has(:--image)):any-link.external.vertical::before {
   color: var(--color-text-dimmed);
   vertical-align: super;
   margin-inline-end: 2px;
+  text-emphasis: none; /* Not sesamed */
 }
 
 .vertical a:not(:has(:--image)):any-link.external::after,
