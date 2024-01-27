@@ -2,10 +2,9 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
   const browser = Bowser.getParser(navigator.userAgent)
 
   const isGecko = browser.isEngine('Gecko')
-  const isBlink = browser.isEngine('Blink')
   const isSafari = browser.isBrowser('Safari')
 
-  if (!isGecko && !isBlink && !isSafari) {
+  if (!isGecko && !isSafari) {
     return
   }
 
@@ -17,13 +16,6 @@ import('https://ga.jspm.io/npm:bowser@2.11.0/es5.js').then(({ default: Bowser })
 
       linkForGecko.href = linkForGecko.getAttribute('href').replace(/(?=\.css$)/, '-gecko')
       document.head.insertBefore(linkForGecko, link.nextSibling)
-    }
-
-    if (isBlink) {
-      const linkForBlink = link.cloneNode()
-
-      linkForBlink.href = linkForBlink.getAttribute('href').replace(/(?=\.css$)/, '-blink')
-      document.head.insertBefore(linkForBlink, link.nextSibling)
     }
 
     if (isSafari) {
