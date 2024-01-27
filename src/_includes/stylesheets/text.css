@@ -51,7 +51,7 @@ body {
 :--heading,
 dl > dt,
 dl > div > dt {
-  font-weight: unset;
+  font-weight: 500;
 }
 
 p {
@@ -195,8 +195,6 @@ mark {
 }
 
 strong {
-  font-weight: revert; /* bold */
-  font-weight: bold;
   color: var(--color-text-accent);
 }
 

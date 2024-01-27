@@ -183,6 +183,7 @@ hr {
   display: grid;
   grid-template-columns: repeat(7, max-content);
   column-gap: 1em;
+  align-items: baseline;
 
   & > time {
     display: grid;
