@@ -444,6 +444,9 @@ code {
 }
 
 code.hljs {
+  /* Overwrite highlight.js to be able to scroll to the right padding. */
+  display: flex;
+  display: -webkit-box;
   border-radius: 0.236068em; /* φ⁻² */
 }
 
