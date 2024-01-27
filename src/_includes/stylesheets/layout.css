@@ -280,6 +280,7 @@ aside {
 
 /* TODO: Merge those rulesets if the bugs of css-has-pseudo are fixed: */
 :--list,
+.katex-display.katex-display, /* Overwrite katex.min.css */
 .table-wrapper,
 :where(:not(.table-wrapper)) > table,
 .diagram-wrapper,
