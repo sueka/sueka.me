@@ -5,7 +5,13 @@
   --font-ui: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
 }
 
-[lang]:where(:not([lang="und"])) {
+[lang]:where(:not([lang=""]):not(:lang(mul, und, zxx, mis))) {
+  --font-text: serif;
+  --font-text-emphasized: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
+  --font-code: ui-monospace, Consolas, Inconsolata, monospace;
+}
+
+[lang]:where(:not([lang=""]):not(:lang(mul)):not(:lang(und)):not(:lang(zxx)):not(:lang(mis))) {
   --font-text: serif;
   --font-text-emphasized: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
   --font-code: ui-monospace, Consolas, Inconsolata, monospace;
