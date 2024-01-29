@@ -26,16 +26,10 @@
   writing-mode: horizontal-tb; /* Safari (15.1, iOS 15.2) では継承するか直接指定するかで振る舞いが変わることがあるので、明示的に指定している。 TODO: Delete this line */
 }
 
-.vertical p,
-p.vertical {
-  /* layout.css */
-  margin: 1em 0;
-
-  width: 100%;
-
-  max-height: min(
+:is(p, :--blockquote).vertical {
+  height: min(
     max(
-      27em,
+      29em,
 
       /* 100vw (w/ scroll bar) / √2 - (.body margin-inline) */
       100vw / 1.4142135624 - 2 * clamp(
@@ -49,19 +43,13 @@ p.vertical {
     100vh - 2em
   );
 
-  overflow-x: auto;
-  overflow-inline: auto;
+  max-height: fit-content;
 
-  hanging-punctuation: none; /* 左右に余白が無いため、句読点をぶら下げると垂直スクロールが発生する。 */
-}
-
-/* Use the same numbers as in horizontal.css. */
-@media (min-aspect-ratio: 1.334279) and (min-width: 848.498448px) {
-  .vertical p,
-  p.vertical {
-    max-height: min(
+  /* Use the same numbers as in horizontal.css. */
+  @media (min-aspect-ratio: 1.334279) and (min-width: 848.498448px) {
+    height: min(
       max(
-        27em,
+        29em,
 
         /* 50vw (w/ half of scroll bar) / √2 - (1 - 1 / (4√2)) (.body margin-inline) */
         50vw / 1.4142135624 - (1 - 1 / 4 / 1.4142135624) * 2 * clamp(
@@ -77,6 +65,20 @@ p.vertical {
   }
 }
 
+.vertical p,
+p.vertical {
+  /* layout.css */
+  margin: 1em 0;
+
+  /* 右から書き始めるため、幅を全部取る必要がある。 */
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-inline: auto;
+
+  hanging-punctuation: none; /* 左右に余白が無いため、句読点をぶら下げると垂直スクロールが発生する。 */
+}
+
 /* TODO: blockquote > p 以外の構造でもうまく動くようにする? */
 :--blockquote.vertical {
   margin: 1em 0; /* ./reset.css */
@@ -84,7 +86,6 @@ p.vertical {
   padding: 0 calc(1rem - 2 / 13 * 1rem);
   box-sizing: border-box;
   width: 100%;
-  height: revert;
   overflow-x: auto;
   overflow-y: revert;
 }

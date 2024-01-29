@@ -26,17 +26,11 @@
   writing-mode: vertical-rl; /* Safari (15.1, iOS 15.2) では継承するか直接指定するかで振る舞いが変わることがあるので、明示的に指定している。 TODO: Delete this line */
 }
 
-.horizontal p,
-p.horizontal {
-  /* layout.css */
-  margin: 0 1em;
-
-  height: 100%;
-
-  /* width だと blockquote.horizontal > p のときに <blockquote> のスクロールバーが <p> に重なって水平スクロールが発生することがある。.horizontal p ではなく blockquote.horizontal の幅でこれのサイズを制禦するようにすれば恐らく自然に回避できる。FIXME: */
-  max-width: min(
+:is(p, :--blockquote).horizontal {
+  /* NOTE: 27em > 100vw - 2em のときは 100vw - 2em になるべきなので、min-width は使えない。 */
+  width: min(
     max(
-      27em,
+      29em,
 
       /* 100vh (w/ scroll bar) / √2 - (.body margin-inline) */
       100vh / 1.4142135624 - 2 * clamp(
@@ -49,6 +43,16 @@ p.horizontal {
     /* 100vw - (margin-left-right itself) */
     100vw - 2em
   );
+
+  max-width: fit-content;
+}
+
+.horizontal p,
+p.horizontal {
+  /* layout.css */
+  margin: 0 1em;
+
+  height: 100%;
 
   overflow-y: auto;
   overflow-inline: auto;
@@ -63,7 +67,6 @@ p.horizontal {
   /* padding: calc(1rem - 2 / 13 * 1rem) 0; */
   padding: calc(0.5rem - 2 / 13 * 1rem) 0; /* TODO: CSS Inline Layout Module Level 3 の leading-trim が十分実装されたら元に戾す。 */
   box-sizing: border-box;
-  width: revert;
   height: 100%;
   overflow-x: revert;
   overflow-y: auto;
