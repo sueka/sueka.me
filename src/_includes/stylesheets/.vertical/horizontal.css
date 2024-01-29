@@ -33,17 +33,49 @@ p.vertical {
 
   width: 100%;
   height: max-content;
-  max-height: max(424px, 100vmin - 2em); /* Same as in page.njk, vertical margin */
-  @media (orientation: landscape) {
-    max-height: max(424px, 100vh - 2em);
-  }
-  @media (orientation: portrait) {
-    max-width: revert;
-  }
+
+  max-height: min(
+    max(
+      27em,
+
+      /* 100vw (w/ scroll bar) / √2 - (.body margin-inline) */
+      100vw / 1.4142135624 - 2 * clamp(
+        1rem,
+        100vmin * 2.618034 / (2 * 2.618034 + 29),
+        2.618034rem
+      )
+    ),
+
+    /* 100vh - (margin-top-bottom itself) */
+    100vh - 2em
+  );
+
   overflow-x: auto;
   overflow-inline: auto;
 
   hanging-punctuation: none; /* 左右に余白が無いため、句読点をぶら下げると垂直スクロールが発生する。 */
+}
+
+/* Use the same numbers as in horizontal.css. */
+@media (min-aspect-ratio: 1.334279) and (min-width: 848.498448px) {
+  .vertical p,
+  p.vertical {
+    max-height: min(
+      max(
+        27em,
+
+        /* 50vw (w/ half of scroll bar) / √2 - (1 - 1 / (4√2)) (.body margin-inline) */
+        50vw / 1.4142135624 - (1 - 1 / 4 / 1.4142135624) * 2 * clamp(
+          1rem,
+          100vmin * 2.618034 / (2 * 2.618034 + 29),
+          2.618034rem
+        )
+      ),
+
+      /* 100vh - (margin-top-bottom itself) */
+      100vh - 2em
+    );
+  }
 }
 
 /* TODO: blockquote > p 以外の構造でもうまく動くようにする? */
