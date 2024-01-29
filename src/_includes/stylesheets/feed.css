@@ -1,3 +1,5 @@
+@custom-selector :--blockquote blockquote, .blockquote-like;
+
 html {
   font-size: 9pt;
 }
@@ -78,5 +80,15 @@ body {
 
   & .content .header-anchor {
     display: none;
+  }
+
+  & .content :is(p, :--blockquote).vertical {
+    /* フィードではカラム数を正確に知ることができないため、vw に依存しないようにする。 */
+    height: min(
+      29em,
+
+      /* 100vh - (margin-top-bottom itself) */
+      100vh - 2em
+    );
   }
 }
