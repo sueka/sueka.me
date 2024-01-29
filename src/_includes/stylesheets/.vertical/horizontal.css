@@ -32,7 +32,6 @@ p.vertical {
   margin: 1em 0;
 
   width: 100%;
-  height: max-content;
 
   max-height: min(
     max(

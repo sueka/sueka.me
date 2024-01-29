@@ -32,7 +32,6 @@ p.horizontal {
   margin: 0 1em;
 
   height: 100%;
-  width: max-content;
 
   /* width だと blockquote.horizontal > p のときに <blockquote> のスクロールバーが <p> に重なって水平スクロールが発生することがある。.horizontal p ではなく blockquote.horizontal の幅でこれのサイズを制禦するようにすれば恐らく自然に回避できる。FIXME: */
   max-width: min(
