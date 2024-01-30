@@ -2,9 +2,9 @@
 @custom-selector :--list ul, menu, ol, dl;
 @custom-selector :--list-item li, dd;
 @custom-selector :--blockquote blockquote, .blockquote-like;
-@custom-selector :--sectioning article, aside, nav, section;
-@custom-selector :--pass-thru :--list-item, :--blockquote, :--sectioning;
-@custom-selector :--pass-thru-no-color :--list-item, :--sectioning;
+@custom-selector :--section article, aside, nav, section;
+@custom-selector :--pass-thru :--list-item, :--blockquote, :--section;
+@custom-selector :--pass-thru-no-color :--list-item, :--section;
 @custom-selector :--margins :--heading, :--list, pre, p, details, :--pass-thru;
 @custom-selector :--margins-no-anchor :--list, pre, p, details, :--pass-thru;
 @custom-selector :--margins-no-color :--heading, :--list, p, details, :--pass-thru-no-color;
