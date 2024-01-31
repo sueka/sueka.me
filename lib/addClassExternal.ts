@@ -19,6 +19,8 @@ export default function externalLink(page: Page) {
 
   for (const link of links) {
     assert(isElement(link))
+
+    // NOTE: 恐らく deno_dom の仕様で、link.getAttribute('href') は link.href 相当のもの（実際の href 属性の値がパスであっても、URL）を返す。
     if (internalPat.test(link.getAttribute('href')!)) {
       continue;
     }
