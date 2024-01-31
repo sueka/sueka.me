@@ -28,6 +28,7 @@
     <ul class="colophon-attrs">
       <li><a href="{{ url | url(true) }}">このページのパーマリンク</a></li>
       <li><a href="https://github.com/{{ site.github_repo }}/blob/{{ gitCommitHash }}/src{{ src }}" rel="external">{{ gitCommitHash }}</a></li>
+      <li>© {{ site.author.name }} {{ date | date('yyyy') }}</li>
     </ul>
   </div>
 </footer>
