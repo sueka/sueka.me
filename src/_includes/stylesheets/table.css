@@ -6,6 +6,8 @@ table {
   overflow-wrap: revert;
   margin-inline: auto;
   border-block: 2px solid var(--color-border);
+
+  break-inside: avoid-column;
 }
 
 thead > tr:last-of-type,
