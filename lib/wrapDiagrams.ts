@@ -1,8 +1,8 @@
-import { Page, DOMParser, assert } from '../deps.ts'
+import { DOMParser, assert } from '../deps.ts'
 import html from './html.ts'
 import isElement from './isElement.ts'
 
-export default function wrapDiagrams(page: Page) {
+export default function wrapDiagrams(page: Lume.Page) {
   assert(page.content)
   const document = new DOMParser().parseFromString(page.content.toString(), 'text/html')
   assert(document)

@@ -1,3 +1,7 @@
+---
+url: ./feed.xml
+---
+
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xml" href="{{ '~/feed.xsl.njk' | url(true) | encodeUri }}"?>
 <feed xmlns="http://www.w3.org/2005/Atom"
@@ -14,33 +18,33 @@
     {% if site.author.url -%} <uri>{{ site.author.url | encodeUri }}</uri> {%- endif %}
   </author>
 
-  {% set lastPage = search.pages('', 'lastmod=desc date=desc') | first %}
-  <updated>{{ (lastPage.data.lastmod or lastPage.data.date) | date("ATOM") }}</updated>
+  {% set lastPageData = search.pages('', 'lastmod=desc date=desc') | first %}
+  <updated>{{ (lastPageData.lastmod or lastPageData.date) | date("ATOM") }}</updated>
 
-  {% for page in search.pages('', 'lastmod=desc date=desc') %}
+  {% for data in search.pages('', 'lastmod=desc date=desc') %}
   <entry
-    {%- if page.data.language %} xml:lang="{{ page.data.language }}" {%- endif -%}
+    {%- if data.language %} xml:lang="{{ data.language }}" {%- endif -%}
   >
-    {% if page.data.title -%}
-    <title type="html">{{ page.data.title | md | safe | striptags }}</title>
+    {% if data.title -%}
+    <title type="html">{{ data.title | md | safe | striptags }}</title>
     {% endif -%}
 
-    {% if not page.data.title -%}
-    <title type="html">{{ page.data.content | md | safe | getIncipit }}</title>
+    {% if not data.title -%}
+    <title type="html">{{ data.content | md | safe | getIncipit }}</title>
     {% endif -%}
 
-    <id>{{ page.data.url | url(true) | encodeUri }}</id>
-    <link href="{{ page.data.url | url(true) | encodeUri }}" rel="alternate" type="text/html" />
-    {% if page.data.content -%}
+    <id>{{ data.url | url(true) | encodeUri }}</id>
+    <link href="{{ data.url | url(true) | encodeUri }}" rel="alternate" type="text/html" />
+    {% if data.content -%}
     <content type="html">
       <![CDATA[
-        {{ page.data.content | njk | md | truncateHtml(200) | safe }}
+        {{ data.content | njk | md | truncateHtml(200) | safe }}
       ]]>
     </content>
     {% endif -%}
 
-    <published>{{ page.data.date | date('ATOM') }}</published>
-    <updated>{{ (page.data.lastmod or page.data.date) | date('ATOM') }}</updated>
+    <published>{{ data.date | date('ATOM') }}</published>
+    <updated>{{ (data.lastmod or data.date) | date('ATOM') }}</updated>
   </entry>
   {% endfor %}
 </feed>

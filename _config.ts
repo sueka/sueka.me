@@ -1,5 +1,5 @@
 import {
-  lume, relativeUrls, slugifyUrls, sourceMaps,
+  lume, nunjucks, relativeUrls, slugifyUrls, sourceMaps,
   // text
   codeHighlight, date, ja,
   // css
@@ -99,7 +99,6 @@ const plugins = [
   //   },
   // }),
   autoprefixer(),
-  // @ts-expect-error: TS2349
   postcssNesting(),
   // @ts-expect-error: TS2349
   postcssCustomSelectors(),
@@ -110,6 +109,8 @@ const plugins = [
 ]
 
 site.use(postcss({ plugins }))
+
+site.use(nunjucks())
 site.use(relativeUrls())
 site.use(slugifyUrls())
 site.use(sourceMaps())
@@ -126,23 +127,27 @@ site.filter('v', upright)
 // Defines {% octicon 'mark-github', 32 %}
 site.helper('octicon', (symbol, width) => octicons[symbol].toSVG({ width }), { type: 'tag' })
 
-site.preprocess(['.html'], page => {
-  page.data.src = `${ page.src.path }${ page.src.ext }`
+site.preprocess(['.html'], pages => {
+  for (const page of pages) {
+    page.data.src = `${ page.src.path }${ page.src.ext }`
+  }
 })
 
-site.process(['.html'], wrapTables)
-site.process(['.html'], wrapDiagrams)
-site.process(['.html'], addClassExternal) // class="external"
+site.process(['.html'], pages => pages.forEach(wrapTables))
+site.process(['.html'], pages => pages.forEach(wrapDiagrams))
+site.process(['.html'], pages => pages.forEach(addClassExternal)) // class="external"
 
 // Removes the origin from an absolute URL; NOTE: Retains feed.xml
-site.process(['.html', '.js'], (page) => {
+site.process(['.html', '.js'], (pages) => {
   const pattern = new RegExp(`(?<=")${ site.options.location.origin }(?=/)`, 'g')
 
-  assert(page.content)
-  if (typeof page.content === 'string') {
-    page.content = page.content.replace(pattern, '')
+  for (const page of pages) {
+    assert(page.content)
+    if (typeof page.content === 'string') {
+      page.content = page.content.replace(pattern, '')
+    }
+    // page.content = page.content.replace(new RegExp(`(?<=")${ site.options.location.origin }(?=")`, 'g'), '/')
   }
-  // page.content = page.content.replace(new RegExp(`(?<=")${ site.options.location.origin }(?=")`, 'g'), '/')
 })
 
 // Defines {{ gitCommitHash }}

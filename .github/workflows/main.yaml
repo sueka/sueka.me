@@ -10,13 +10,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # Default value on Linux, which running `deno info` displays. See also https://deno.land/manual@v1.37.2/tools/dependency_inspector#cache-location.
+      # Default value on Linux, which running `deno info` displays. See also https://deno.land/manual@v1.40.2/tools/dependency_inspector#cache-location.
       DENO_DIR: ~/.cache/deno
     steps:
       - uses: actions/checkout@v3
       - uses: denoland/setup-deno@v1
         with:
-          deno-version: ~1.37.2
+          deno-version: ~1.40.2
       - uses: actions/cache@v3
         with:
           path: ${{ env.DENO_DIR }}

@@ -1,4 +1,4 @@
-import { DOMParser, Page, assert, parse } from '../deps.ts'
+import { DOMParser, assert, parse } from '../deps.ts'
 import html from './html.ts'
 import isElement from './isElement.ts'
 
@@ -11,7 +11,7 @@ assert(
 )
 const internalPat = RegExp(`^(?:${ data.url.replace('.', '\\.') }\\b|(?!https?:\/\/))`)
 
-export default function externalLink(page: Page) {
+export default function externalLink(page: Lume.Page) {
   assert(page.content)
   const document = new DOMParser().parseFromString(page.content.toString(), 'text/html')
   assert(document)
