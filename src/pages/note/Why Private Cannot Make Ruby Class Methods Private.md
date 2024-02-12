@@ -5,7 +5,13 @@ lastmod: 2023-07-03
 writing: horizontal
 ---
 
-Ruby には `private` といふメソッド[^1]があるが、このメソッドでクラスメソッドの可視性を [private]{lang=en} にすることはできない。次のコードを実行すると `NameError` が投げられる:
+
+
+Ruby では、private メソッドを
+
+Ruby の `Module` クラスには `private` といふメソッド[^1]がある。
+
+が、このメソッドでクラスメソッドの可視性を [private]{lang=en} にすることはできない。次のコードを実行すると `NameError` が投げられる:
 
 ``` ruby
 class A
