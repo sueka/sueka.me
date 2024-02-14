@@ -1,7 +1,7 @@
 ---
 title: 『English Plurals - Wikipedia』の日本語訳
 date: 2022-12-26
-lastmod: 2023-09-08
+lastmod: 2024-02-15
 writing: horizontal
 templateEngine:
   - njk
@@ -29,7 +29,7 @@ templateEngine:
 
 ## ライセンス
 
-この記事は [CC-BY-SA-3.0](https://github.com/sueka/sueka.me/blob/{{ gitCommitHash }}/LICENSE.CC-BY-SA-3.0) と [CC-BY-SA-4.0](https://github.com/sueka/sueka.me/blob/{{ gitCommitHash }}/LICENSE) のデュアルライセンスの下で利用可能です。ウィキメディア・プロジェクトへの移出については、下の[補足](#ウィキメディア・プロジェクトへの移出についての補足)もご確認下さい。
+この翻訳は、[English plurals - Wikipedia](https://en.wikipedia.org/w/index.php?title=English_plurals&oldid=1137888933){lang=en} を [CC-BY-SA-4.0](https://en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License){hreflang=en} の下で翻案したものです。このサイトのコンテンツは [CC-BY-SA-4.0](https://github.com/sueka/sueka.me/blob/{{ gitCommitHash }}/LICENSE) の下で利用可能です。ウィキメディア・プロジェクトへの移出については、下の[補足](#ウィキメディア・プロジェクトへの移出についての補足)もご確認下さい。
 
 ---
 
@@ -928,15 +928,14 @@ templateEngine:
 
 ## ウィキメディア・プロジェクトへの移出についての補足
 
-この翻訳をウィキメディア・プロジェクト（ウィキペディアなど）に移出するときは、*移出先の{編輯|へん|しふ}の方針やガイドラインを遵守*してください。例へば、ウィキペディア日本語版では、[表記ガイド](https://ja.wikipedia.org/wiki/WP:JPE)や[翻訳のガイドライン](https://ja.wikipedia.org/wiki/WP:TRANS)などに従ふべきです。とくに正書法には相当の違ひがあります。
+この翻訳をウィキメディア・プロジェクト[^1]に移出する場合、
 
-ウィキメディア・プロジェクトに移出する場合、クレジット（帰属）の表示が省略できることがあります:
+[^1]: 自動的に付与されるクリエイティブ・コモンズ・ライセンスが CC-BY-SA-4.0 以上であるプロジェクト。[Wikinews]{lang=en} など一部のプロジェクトには移出できません。
 
-- この翻訳の*逐語的な複製*物を*ウィキペディアなどに*移出する場合は、*クレジットを全て提供*する必要があります。
-  - <time datetime="2022-12">現在</time>のところ、ウィキペディアやウィキブックスのテキストは CC-BY-SA-3.0 の下で利用許諾されます。バージョン 3.0 では、単に複製する場合、クレジットを全て提供しなければなりません。
-- その他の場合、クレジットから*私への言及を<b>すべて</b>削除*することができます。
+- *移出先の{編輯|へん|しふ}の方針やガイドラインを遵守*してください。例へば、ウィキペディア日本語版では、[表記ガイド](https://ja.wikipedia.org/wiki/WP:JPE)や[翻訳のガイドライン](https://ja.wikipedia.org/wiki/WP:TRANS)などに従ふべきです。とくに正書法には相当の違ひがあります。
+- クレジット（帰属）から*私への言及を<b>すべて</b>削除*することができます。
   - 移出先の編輯方針等で要求または推奨されてゐるときは、その要求等に従って、一部の項目を表示することもできます。
-- 誤解を避けるために明記すると、クレジットの表示が省略できるのは、ウィキメディア・プロジェクトに移出する場合に限ります。その他の<ruby>媒<rt>ばい</rt>體<rt>たい</ruby>で共有するときは、クレジットを全て提供してください。
+  - 誤解を避けるために明記すると、クレジットの表示が省略できるのは、ウィキメディア・プロジェクトに移出する場合に限ります。その他の<ruby>媒<rt>ばい</rt>體<rt>たい</ruby>で共有するときは、クレジットを全て提供してください。
 
 なほ、私がこの翻訳をウィキペディアに投稿しなかった理由は次の通りです:
 
