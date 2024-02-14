@@ -1,5 +1,5 @@
 ---
-title: 『English Plurals - Wikipedia』の日本語訳
+title: 『English plurals - Wikipedia』の日本語訳
 date: 2022-12-26
 lastmod: 2024-02-15
 writing: horizontal
