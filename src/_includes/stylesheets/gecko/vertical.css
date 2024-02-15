@@ -12,6 +12,11 @@ kbd {
   line-height: calc(1 + 2 * 0.236068); /* φ⁻³; Hatching height same as layout.css; NOTE: Line that consists only code is thinner. */
   vertical-align: middle;
   vertical-align: -moz-middle-with-baseline;
+
+  @nest s & {
+    /* display: inline flow-root doesn't imply text-decoration: inherit. */
+    text-decoration-line: inherit;
+  }
 }
 
 .horizontal .sideways,
