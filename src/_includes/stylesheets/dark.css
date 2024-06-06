@@ -12,6 +12,10 @@
   --color-border: #59595A
 }
 
+html {
+  text-shadow: revert;
+}
+
 /* layout */
 hr {
   border-style: outset;
