@@ -246,26 +246,6 @@ ul.colophon-attrs {
     & > li > a {
       display: flex;
     }
-
-    a.feed-link:any-link {
-      text-decoration: none;
-    }
-
-    .feed-link.external::before,
-    .feed-link.external::after {
-      content: unset;
-    }
-
-    & > li > a.feed-link {
-      font-size: 16px;
-      color: currentColor;
-      width: 32px;
-      justify-content: center;
-
-      & i[class|=fa] {
-        line-height: 1;
-      }
-    }
   }
 }
 
