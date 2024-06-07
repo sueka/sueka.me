@@ -24,28 +24,28 @@ useKaTeX: true
   \\( \\boldsymbol{a}(t) = \\begin{pmatrix} x(t) \\\\ y(t) \\\\ z(t) \\end{pmatrix} \\)、\\( \\boldsymbol{b}(t) = \\begin{pmatrix} \\alpha(t) \\\\ \\beta(t) \\\\ \\gamma(t) \\end{pmatrix} \\) とする。このとき、
 
   $$
-  \\begin{aligned}
+  \\begin{align*}
   (\\boldsymbol{a}(t) \\cdot \\boldsymbol{b}(t))'
     & = \\left( \\begin{pmatrix} x(t) \\\\ y(t) \\\\ z(t) \\end{pmatrix} \\cdot \\begin{pmatrix} \\alpha(t) \\\\ \\beta(t) \\\\ \\gamma(t) \\end{pmatrix} \\right)' \\\\
     & = ( x(t) \\alpha(t) + y(t) \\beta(t) + z(t) \\gamma(t) )' \\\\
     & = \\green{x'(t) \\alpha(t)} \\blue{+ x(t) \\alpha'(t)} \\green{+ y'(t) \\beta(t)} \\blue{+ y(t) \\beta'(t)} \\green{+ z'(t) \\gamma(t)} \\blue{+ z(t) \\gamma'(t)} \\\\
     & = \\green{\\begin{pmatrix} x'(t) \\\\ y'(t) \\\\ z'(t) \\end{pmatrix} \\cdot \\begin{pmatrix} \\alpha(t) \\\\ \\beta(t) \\\\ \\gamma(t) \\end{pmatrix}} \\blue{+ \\begin{pmatrix} x(t) \\\\ y(t) \\\\ z(t) \\end{pmatrix} \\cdot \\begin{pmatrix} \\alpha'(t) \\\\ \\beta'(t) \\\\ \\gamma'(t) \\end{pmatrix}} \\\\
     & = \\boldsymbol{a}'(t) \\cdot \\boldsymbol{b}(t) + \\boldsymbol{a}(t) \\cdot \\boldsymbol{b}'(t) \\\\
-  \\end{aligned}
+  \\end{align*}
   $$
 
-- p. 39 の (2) 左図の \\( (a, b) \\) は、直線 \\( l \\) 上で \\( t = 0 \\) の点を指してゐる。
+- p. 39 の (2) 左図の \\( (a, b) \\) は、直線 \\( l \\) 上で \\( t = 0 \\) の点を指す。
 
 - p. 40 の数式は \\( \\nabla f \\left( = \\begin{pmatrix} \\frac{\\partial f}{\\partial x} \\\\[1ex] \\frac{\\partial f}{\\partial y} \\end{pmatrix} \\right) \\) と \\( \\begin{pmatrix} \\cos \\theta \\\\ \\sin \\theta \\end{pmatrix} \\) の内積であることを確認しながら読むと読みやすくなる:
 
   $$
-  \\begin{aligned}
+  \\begin{align*}
   \\frac{\\partial f}{\\partial x} \\cos \\theta + \\frac{\\partial f}{\\partial y} \\sin \\theta
     & = \\begin{pmatrix} \\frac{\\partial f}{\\partial x} \\\\[1ex] \\frac{\\partial f}{\\partial y} \\end{pmatrix} \\cdot \\begin{pmatrix} \\cos \\theta \\\\
     \\sin \\theta \\end{pmatrix} \\\\
     & = \\left\| \\begin{pmatrix} \\frac{\\partial f}{\\partial x} \\\\[1ex] \\frac{\\partial f}{\\partial y} \\end{pmatrix} \\right\| \\left\| \\begin{pmatrix} \\cos \\theta \\\\ \\sin \\theta \\end{pmatrix} \\right\| \\cos(\\theta - \\alpha) \\\\
     & \\cdots \\\\
-  \\end{aligned}
+  \\end{align*}
   $$
 
 - p. 49 の \\( \\frac{\\partial x}{\\partial x'} = a_1, \\ldots \\) は \\( x = a_1 x' + b_1 y' + c_1 z', \\ldots \\) をそれぞれ \\( x', \\ldots \\) で偏微分すると得られる。
@@ -65,31 +65,31 @@ useKaTeX: true
   左辺の \\( \\nabla \\) を展開すると、
 
   $$
-  \\begin{aligned}
+  \\begin{align*}
   \\nabla \\cdot \\frac{\\boldsymbol{x} - \\boldsymbol{a}}{\|\\boldsymbol{x} - \\boldsymbol{a}\|^n}
     & = \\frac{\\partial}{\\partial x} \\left( \\frac{x - a}{\|\\boldsymbol{x} - \\boldsymbol{a}\|^n} \\right) + \\frac{\\partial}{\\partial y} \\left( \\frac{y - b}{\|\\boldsymbol{x} - \\boldsymbol{a}\|^n} \\right) + \\frac{\\partial}{\\partial z} \\left( \\frac{z - c}{\|\\boldsymbol{x} - \\boldsymbol{a}\|^n} \\right) \\\\
     & = 0 \\\\
-  \\end{aligned}
+  \\end{align*}
   $$
 
   となる。こゝで、\\( \\frac{\\partial}{\\partial x} \\left( \\frac{x - a}{\|\\boldsymbol{x} - \\boldsymbol{a}\|^n} \\right) \\) は、
 
   $$
-  \\begin{aligned}
+  \\begin{align*}
   & \\phantom{=} \\frac{\\partial}{\\partial x} \\left( \\frac{x - a}{\|\\boldsymbol{x} - \\boldsymbol{a}\|^n} \\right) \\\\
   &           =  \\frac{\\partial}{\\partial x} \\left( \\frac{x - a}{(\|\\boldsymbol{x} - \\boldsymbol{a}\|^2)^{\\frac{n}{2}}} \\right) \\\\
   &           =  \\frac{1}{(\|\\boldsymbol{x} - \\boldsymbol{a}\|^2)^{\\frac{n}{2}}} + (x - a) \\cdot \\left( - \\frac{n}{2} \\right) \\cdot \\frac{1}{(\|\\boldsymbol{x} - \\boldsymbol{a}\|^2)^{\\frac{n}{2} + 1}} \\cdot 2 (x - a) \\\\
   &           =  \\frac{1}{(\|\\boldsymbol{x} - \\boldsymbol{a}\|^2)^{\\frac{n}{2} + 1}} (\|\\boldsymbol{x} - \\boldsymbol{a}\|^2 - n (x - a)^2) \\\\
-  \\end{aligned}
+  \\end{align*}
   $$
 
   なので、\\( \\boldsymbol{x} \\ne \\boldsymbol{a} \\) と対称形から、
 
   $$
-  \\begin{aligned}
+  \\begin{align*}
   & \\phantom{\\iff} 3 \|\\boldsymbol{x} - \\boldsymbol{a}\|^2 - n (x - a)^2 - n (y - b)^2 - n (z - c)^2 = 0 \\\\
   &           \\iff  n = 3 \\\\
-  \\end{aligned}
+  \\end{align*}
   $$
 
 - p. 99 では \\( \\left( \\frac{\\partial^2}{\\partial x^2} - \\frac{1}{c^2} \\frac{\\partial^2}{\\partial t^2} \\right) \\varphi(x, t) = 0 \\) が<q>波動方程式（1次）</q>として導入されるが、これは次数ではなく次元数だと思ふ。p. 102 も同じ。
@@ -105,11 +105,11 @@ useKaTeX: true
   \\( u(t) = t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\) とおく。\\( (f g)'' = ((f g)')' = (f' g + f g')' = f'' g + 2 f' g' + f g'' \\) より、
 
   $$
-  \\begin{aligned}
+  \\begin{align*}
   & \\phantom{=} \\frac{\\partial^2}{\\partial t^2} \\left( f \\left( \\boldsymbol{y}, t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\right) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\right) \\\\
   &           =  \\frac{\\partial^2}{\\partial t^2} \\left( f(\\boldsymbol{y}, u) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\right) \\\\
   &           =  \\frac{\\partial^2}{\\partial t^2} f(\\boldsymbol{y}, u) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} + 2 \\frac{\\partial}{\\partial t} f(\\boldsymbol{y}, u) \\frac{\\partial}{\\partial t} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} + f(\\boldsymbol{y}, u) \\frac{\\partial^2}{\\partial t^2} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\\\
-  \\end{aligned}
+  \\end{align*}
   $$
 
   \\( \\frac{\\partial}{\\partial t} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} = 0 \\) なので、
@@ -133,10 +133,10 @@ useKaTeX: true
   \\( \\frac{\\partial}{\\partial t} \\frac{\\partial}{\\partial u} f(\\boldsymbol{y}, u) \\) と \\( \\frac{\\partial}{\\partial u} \\frac{\\partial}{\\partial t} f(\\boldsymbol{y}, u) \\) が共に連続だと仮定する[^4]と、
 
   $$
-  \\begin{aligned}
+  \\begin{align*}
   & = \\frac{\\partial}{\\partial u} \\frac{\\partial}{\\partial t} f(\\boldsymbol{y}, u) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\\\
   & = \\frac{\\partial}{\\partial u} \\left( \\frac{\\partial}{\\partial u} f(\\boldsymbol{y}, u) \\frac{\\partial}{\\partial t} u(t) \\right) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\\\
-  \\end{aligned}
+  \\end{align*}
   $$
 
   \\( \\frac{\\partial}{\\partial t} u(t) = 1 \\) なので、
