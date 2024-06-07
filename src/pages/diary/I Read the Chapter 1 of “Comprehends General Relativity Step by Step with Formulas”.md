@@ -5,7 +5,7 @@ templateEngine:
   - njk
   - md
 date: 2020-10-29
-lastmod: 2023-01-10
+lastmod: 2024-06-08
 useKaTeX: true
 ---
 
@@ -102,7 +102,7 @@ useKaTeX: true
 
 - p. 111 の \\( \\frac{\\partial^2}{\\partial u^2} f(\\boldsymbol{y}, u) \\) の項の係数に \\( -\\frac{1}{c^2} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\) といふ項があるが、\\( \\frac{\\partial^2}{\\partial t^2} \\left( f \\left( \\boldsymbol{y}, t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\right) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\right) \\) はテキストでは計算されてゐないので、確認しておく:
 
-  \\( u(t) = t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\) とおく。\\( (f g)'' = ((f g)')' = (f' g + f g')' = f'' g + 2 f' g' + f g'' \\) より、
+  \\( u(t) = t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\) とおく。ライプニッツ則より、
 
   $$
   \\begin{align*}
@@ -118,7 +118,7 @@ useKaTeX: true
   = \\frac{\\partial^2}{\\partial t^2} f(\\boldsymbol{y}, u) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|}
   $$
 
-  \\( \\frac{d^2}{d x^2} f(g(x)) = \\frac{d}{dx} \\frac{d}{dx} f(g(x)) = \\frac{d}{dx} \\left( \\frac{d}{dg} f(g(x)) \\frac{d}{dx} g(x) \\right) = \\frac{d}{dx} \\frac{d}{dg} f(g(x)) \\frac{d}{dx} g(x) + \\frac{d}{dg} f(g(x)) \\frac{d^2}{d x^2} g(x) \\) より、
+  連鎖律とライプニッツ則より、\\( \\frac{d^2}{d x^2} f(g(x)) = \\frac{d}{dx} \\frac{d}{dg} f(g(x)) \\frac{d}{dx} g(x) + \\frac{d}{dg} f(g(x)) \\frac{d^2}{d x^2} g(x) \\) なので、
 
   $$
   = \\left( \\frac{\\partial}{\\partial t} \\frac{\\partial}{\\partial u} f(\\boldsymbol{y}, u) \\frac{\\partial}{\\partial t} u(t) + \\frac{\\partial}{\\partial u} f(\\boldsymbol{y}, u) \\frac{\\partial^2}{\\partial t^2} u(t) \\right) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\\\
@@ -145,7 +145,7 @@ useKaTeX: true
   = \\frac{\\partial^2}{\\partial u^2} f(\\boldsymbol{y}, u) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\\\
   $$
 
-  よって、\\( -\\frac{1}{c^2} \\frac{\\partial^2}{\\partial t^2} \\left( f \\left( \\boldsymbol{y}, t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\right) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\right) \\) の \\( \\frac{\\partial^2}{\\partial u^2} f(\\boldsymbol{y}, u) \\) の項の係数は \\( -\\frac{1}{c^2} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\) となる。
+  よって、\\( -\\frac{1}{c^2} \\frac{\\partial^2}{\\partial t^2} \\left( f \\left( \\boldsymbol{y}, t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\right) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\right) \\) における \\( \\frac{\\partial^2}{\\partial u^2} f(\\boldsymbol{y}, u) \\) の項の係数は \\( -\\frac{1}{c^2} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\) となる。
 
 {#- TODO:
  # pp. 76–77 の補足
