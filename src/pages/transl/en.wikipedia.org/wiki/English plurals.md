@@ -1,14 +1,14 @@
 ---
 title: 『English plurals - Wikipedia』の日本語訳
 date: 2022-12-26
-lastmod: 2024-02-15
+lastmod: 2024-06-08
 writing: horizontal
 templateEngine:
   - njk
   - md
 ---
 
-[English plurals - Wikipedia](https://en.wikipedia.org/wiki/English_plurals){lang=en} を和訳しました。原文の版は [oldid=1137888933](https://en.wikipedia.org/w/index.php?title=English_plurals&oldid=1137888933) です。
+[English plurals - Wikipedia](https://en.wikipedia.org/wiki/English_plurals){lang=en} を和訳しました。原文の版は [oldid=1220894559](https://en.wikipedia.org/w/index.php?title=English_plurals&oldid=1220894559) です。
 
 ## 凡例
 
@@ -37,13 +37,13 @@ templateEngine:
 
 # 英語の複数形
 
-英語の名詞は文法的数によって屈折する。つまり、可算なら、単数と複数とで異なる形式を持つのが一般的である。この記事は、英語の複数名詞を対応する単数形から形作る様々な方法や、英語における単数形と複数形の用法に関する種々の問題について議論する。代名詞の複数形については、[英語の人称代名詞](https://en.wikipedia.org/wiki/English_personal_pronouns)を見よ。
+英語の複数形には、英語の名詞［の複数形］と英語の冠詞の複数形が含まれる。この記事は、英語の複数形を対応する単数形から形作る様々な方法や、英語における単数形と複数形の用法に関する種々の問題について議論する。代名詞の複数形については、[英語の人称代名詞](https://en.wikipedia.org/wiki/English_personal_pronouns)を見よ。
 
 この記事で提供される音韻転写は容認発音と一般米語向けである。詳細は[英語の音韻論](https://en.wikipedia.org/wiki/English_phonology)を見よ。
 
 ## 意味
 
-<i><ruby>複数<rt lang="en">plural</ruby></i>の日常的な意味は「[1]{.upright}よりも多い」だが、この文法用語にはそれとは少し異なった専門的な意味がある。英語の文法的数の<ruby>體<rt>たい</rt>系<rt>けい</ruby>では、単数は「[1]{.upright}（またはマイナス[1]{.upright}）」を意味し、複数は「単数でない」を意味する。言ひ換へれば、複数は「[1]{.upright}よりも多い」だけでなく「[1]{.upright}よりも少ない」も意味する。この<ruby>よりも少ない<rt lang="en">less-than</ruby>といふ側面は、<wbr><i lang="en">the temperature is zero degrees</i><wbr>（<i lang="en">*zero degree</i> ではない。）や <i lang="en">0.5 children per woman</i><wbr>（<i lang="en">*0.5 child per woman</i> ではない。）のやうな場合に見られる。
+<i><ruby>複数<rt lang="en">plural</ruby></i>の日常的な意味は「[1]{.upright}よりも多い」だが、この文法用語にはそれとは少し異なった専門的な意味がある。英語の文法的数の<ruby>體<rt>たい</rt>系<rt>けい</ruby>では、単数は「[1]{.upright}（またはマイナス[1]{.upright}）」を意味し、複数は「単数でない」を意味する。言ひ換へれば、複数は「[1]{.upright}よりも多い」だけでなく「[1]{.upright}よりも少ない（マイナス[1]{.upright}を除く）」も意味する。この<ruby>よりも少ない<rt lang="en">less-than</ruby>といふ側面は、<wbr><i lang="en">the temperature is zero degrees</i><wbr>（<i lang="en">*zero degree</i> ではない。）や <i lang="en">0.5 children per woman</i><wbr>（<i lang="en">*0.5 child per woman</i> ではない。）のやうな場合に見られる。
 
 ## 形式
 
@@ -53,7 +53,7 @@ templateEngine:
 
 #### 歯擦音
 
-英語には[6]{.upright}つの歯擦子音がある。すなはち、<wbr>[/s z ʃ ʒ tʃ dʒ/]{.ipa} である。単数名詞が歯擦音で終はる場合、複数形は [/ɪz/]{.ipa} か [/əz/]{.ipa}（一部の転写<ruby>體<rt>たい</rt>系<rt>けい</ruby>では [/ᵻz/]{.ipa} と省略される。）を附け加へることで形成される。綴りは <i lang="en">-es</i> か、単数形がすでに <i lang="en">-e</i> で終はってゐるなら <i lang="en">-s</i> を附加する:
+英語には[6]{.upright}つの歯擦子音がある。すなはち、<wbr>[/s z ʃ ʒ tʃ dʒ/]{.ipa} である。単数名詞がこれらの音のいづれかで終はる場合、その複数形は [/ɪz/]{.ipa} か [/əz/]{.ipa}（一部の転写<ruby>體<rt>たい</rt>系<rt>けい</ruby>では [/ᵻz/]{.ipa} と省略される。）を附け加へることで発話される。綴りは <i lang="en">-es</i> か、単数形がすでに <i lang="en">-e</i> で終はってゐるなら <i lang="en">-s</i> を附加する:
 
 |-|-|-
 |[kiss]{lang=en}|[kisses]{lang=en}|[/ˈkɪs<b>ᵻz</b>/]{.ipa}
@@ -98,6 +98,7 @@ templateEngine:
 |[hero]{lang=en}|[heroes]{lang=en}|[/ˈhɪɹoʊ<b>z</b>/]{.ipa}、<wbr>[/ˈhiɹoʊ<b>z</b>/]{.ipa} または [/ˈhɪəɹəʊ<b>z</b>/]{.ipa}
 |[potato]{lang=en}|[potatoes]{lang=en}|[/pəˈteɪtoʊ<b>z</b>/]{.ipa} または [/pəˈteɪtəʊ<b>z</b>/]{.ipa}
 |[volcano]{lang=en}|[volcanoes]{lang=en} または [volcanos]{lang=en}|[/vɑlˈkeɪnoʊ<b>z</b>/]{.ipa}、<wbr>[/vɔlˈkeɪnoʊ<b>z</b>/]{.ipa} または [/vɒlˈkeɪnəʊ<b>z</b>/]{.ipa}
+|[echo]{lang=en}|[echoes]{lang=en}|
 
 たゞし、ほとんどのイタリア語借用語を含む、外来語に由来する多くの名詞は、単に <i lang="en">-s</i> を附加する:
 
@@ -246,7 +247,7 @@ templateEngine:
 少数の名詞の複数形は、単数形に <i lang="en">-n</i> または <i lang="en">-en</i> を附け加へることで形成される。これは古英語の弱変化に由来する。一般的には次の[3]{.upright}語のみが見られる:
 
 |-|-|-
-|[ox]{lang=en}|[oxen]{lang=en}|（とくに輓獣の群れに言及する場合。非標準のアメリカ英語ではときどき <i lang="en">oxes</i> となる。）
+|[ox]{lang=en}|[oxen]{lang=en}|（とくに輓獣の群れに言及する場合。非標準のアメリカ英語ではときどき <i lang="en">oxes</i> となる。）<sup>\[要出典\]</sup>
 |[child]{lang=en}|[children]{lang=en}|（唯一の可能な複数。古英語の複数である <i lang="ang">cildra</i>/<i lang="ang">cildru</i> に <i lang="ang">-en</i> が附加した二重複数形として始まったもので、この古英語の複数は、アイルランドでは今でも時折り出くはす、<wbr><i lang="en">Childermas</i> に見られる古風な複数形の <i lang="en">childer</i> にもなった。）
 |[brother]{lang=en}|[brethren]{lang=en}|（兄弟を意味する <i lang="en">brother</i> の複数としては古風だが、会衆や友愛組織の一員を意味する <i lang="en">brother</i> の複数としてはよく見られる。初期中期英語の <i lang="enm">brother</i> に <i lang="enm">-en</i> が附加した二重複数形に起源を持つ。）
 
@@ -271,7 +272,7 @@ templateEngine:
 
 #### 母音交替による複数形
 
-複数形は、単数形の母音を単に変更することによって形成されることがある（これらの複数形は<em><ruby>母音変異<rt lang="en">mutated</ruby>複数形</em>と呼ばれることがある。）:
+複数形は、単数形の母音を変更することによって形成されることがある（これらの複数形は<em><ruby>母音変異<rt lang="en">mutated</ruby>複数形</em>と呼ばれることがある。）:
 
 |-|-
 |[foot]{lang=en}|[feet]{lang=en}
@@ -279,7 +280,7 @@ templateEngine:
 |[louse]{lang=en}|[lice]{lang=en}
 |[dormouse]{lang=en}|[dormice]{lang=en}
 |[man]{lang=en}|[men]{lang=en}
-|[mouse]{lang=en}|[mice]{lang=en}（コンピューターの<ruby>マウス<rt lang="en">mouse</ruby>は規則的な複数形 <i lang="en">mouses</i> を取ることもある<sup>\[要出典\]</sup>。）
+|[mouse]{lang=en}|[mice]{lang=en}
 |[tooth]{lang=en}|[teeth]{lang=en}
 |[woman]{lang=en}|[women]{lang=en} [/ˈwɪmᵻn/]{.ipa}
 
@@ -291,7 +292,7 @@ templateEngine:
 
 いくつかの単語には、こゝで与へられたどの種類のものにも合はない不規則な複数形がある。
 
-- <i lang="en">person</i>—<i lang="en">people</i><wbr>（より形式的な——法的な、あるいは専門的な——文脈では <i lang="en">persons</i> もある。<i lang="en">people</i> は、<wbr><i lang="en">peoples</i> といふ複数形を持つ単数名詞となることもある。）
+- <i lang="en">person</i>—<i lang="en">people</i><wbr>（より形式的な（法的な、あるいは専門的な）文脈では <i lang="en">persons</i> もある。<i lang="en">people</i> は、<wbr><i lang="en">peoples</i> といふ複数形を持つ単数名詞となることもある。）
 - <i lang="en">die</i>—<i lang="en">dice</i><wbr>（遊戯の文脈では、<wbr><i lang="en">dice</i> は単数形としてもよく使はれる。また、<ruby>半<rt>はん</rt>導<rt>だう</rt>體<rt>たい</ruby>産業でも使はれる。その他の場合は <i lang="en">dies</i> が使はれる。）
 - <i lang="en">penny</i>—<i lang="en">pence</i><wbr>（スターリング・ポンドの金額の文脈で。）[ ]{.upright}[1p]{lang=en} <ruby>硬貨<rt lang="en">coins</ruby>や[1]{.upright}セント<ruby>硬貨<rt lang="en">coins</ruby>は <i lang="en">pennies</i> と呼ばれる。<wbr><i lang="en">pence</i> は <i lang="en">p</i><wbr>（会話では [“pee”]{lang=en}。）と省略される。<wbr><i lang="en">10 pences</i> については下の[主要部の無い名詞の節](#主要部の無い名詞)を見よ。
 
@@ -305,9 +306,9 @@ templateEngine:
 
 </aside>
 
-英語は、古典ラテン語と古代ギリシア語から非常に多くの単語を借用してゐる。古典ラテン語には、名詞、形容詞および代名詞に[5]{.upright}つの分類または格変化（一部は副分類を含む。）がある、非常に複雑な語尾の<ruby>體<rt>たい</rt>系<rt>けい</ruby>がある。通常、ラテン語から単語を借用する場合、主格の語尾が使はれる。<wbr><i lang="en">-a</i> で終はる単数主格を持つ名詞（第一格変化）は <i lang="en">-ae</i> で終はる複数形を持ち（<i lang="en">anima</i>、<i lang="en">animae</i>）、<wbr><i lang="en">-m</i> で終はる単数主格を持つ名詞（中性、第二格変化）は <i lang="en">-a</i> で終はる複数形を持つ（<i lang="en">stadium</i>、<wbr><i lang="en">stadia</i>[、]{.shiroten}<wbr><i lang="en">datum</i>、<wbr><i lang="en">data</i>）。（完全な取り扱ひについては、[ラテン語の格変化](https://en.wikipedia.org/wiki/Latin_declensions)を見よ。）
+英語は、古典ラテン語と古代ギリシア語から非常に多くの単語を借用してゐる。古典ラテン語には、名詞、形容詞および代名詞に[5]{.upright}つの分類または格変化（一部は副分類を含む。）がある、非常に複雑な語尾の<ruby>體<rt>たい</rt>系<rt>けい</ruby>がある。通常、ラテン語から単語を借用する場合、主格の語尾が使はれる。<wbr><i lang="en">-a</i> で終はる単数主格を持つ名詞（第一格変化）は <i lang="en">-ae</i> で終はる複数形を持ち（<i lang="en">anima</i>、<i lang="en">animae</i>）、<wbr><i lang="en">-um</i> で終はる単数主格を持つ名詞（中性、第二格変化）は <i lang="en">-a</i> で終はる複数形を持つ（<i lang="en">stadium</i>、<wbr><i lang="en">stadia</i>[、]{.shiroten}<wbr><i lang="en">datum</i>、<wbr><i lang="en">data</i>）。（完全な取り扱ひについては、[ラテン語の格変化](https://en.wikipedia.org/wiki/Latin_declensions)を見よ。）
 
-古代ギリシア語には、［古典ラテン語と比較すると］よりシンプルだが、英語のそれよりはやはり複雑な<ruby>體<rt>たい</rt>系<rt>けい</ruby>がある。英語にある、ギリシア語からの借用語は、アッティカ方言（プラトン、アリストテレスその他の偉大な作家の<ruby>アテナイのギリシア語<rt lang="en">the Athenian Greek</ruby>）からのものであり、デモティキ、コイネー（聖書ギリシア語）および現代ギリシア語からのものではないことに注意すること。これは、アッティカ方言が西ヨーロッパの学級で教へられてゐたものであり、したがって、単語を借用する人が知ってゐるギリシア語だったからである。
+古代ギリシア語には、［古典ラテン語と比較すると］よりシンプルだが、英語のそれよりはやはり複雑な<ruby>體<rt>たい</rt>系<rt>けい</ruby>がある。英語にある、多くのギリシア語からの借用語は、アッティカ方言（プラトン、アリストテレスその他の偉大な作家の<ruby>アテナイのギリシア語<rt lang="en">the Athenian Greek</ruby>）からのものであり、デモティキ、コイネー（聖書ギリシア語）および現代ギリシア語からのものではない。これは、アッティカ方言が西ヨーロッパの学級で教へられてゐたものであり、したがって、単語を借用する人が知ってゐるギリシア語だったからである。
 
 ###### <ruby>英語化<rt lang="en">Anglicisation</ruby>
 
@@ -315,7 +316,7 @@ templateEngine:
 
 この形式の選択は文脈に依存することがよくある。例へば、人文系の学者にとっては、<wbr><i lang="en">appendix</i> の複数形は（元の言語に従って）<wbr><i lang="en">appendices</i> だが、一部の<ruby>醫<rt>い</rt>師<rt>し</ruby>にとっては、<wbr><i lang="en">appendix</i> の複数形は <i lang="en">appendixes</i> である。同様に、無線従事者やレーダーエンジニアは<i><ruby>アンテナ<rt lang="en">antennas</ruby></i>を使って仕事をするが、<ruby>昆<rt>こん</rt>蟲<rt>ちう</ruby>学者は<i><ruby>触角<rt lang="en">antennae</ruby></i>を扱ふ。この形式の選択は談話のレベルにも依存する。学術的な、あるいは科学的な文脈では、伝統的なラテン語の複数形の方が多く見られるが、日常会話では、英語化された形式の方が一般的である。次の表では、英語化された形式の方が一般的な場合はその形式とゝもに、ラテン語の複数形が列挙されてゐる。
 
-［ラテン語由来の名詞について、］ラテン語の発音の<ruby>活用<rt lang="en">paradigms</ruby>が異なると、当該名詞の数や性に関する混乱を招くことがある。ラテン語の名詞は、科学的、<ruby>醫<rt>い</rt>学<rt>がく</ruby>的および法的な文脈を含む英語で伝統的に使はれてゐるため、綴りに関しては古典的な屈折を維持するが、それらの屈折は英語化された発音を使ふ。例へば、［触角を扱ふ］<ruby>昆<rt>こん</rt>蟲<rt>ちう</ruby>学者は、<wbr><i lang="en">antennae</i> を [/ænˈtɛni/]{.ipa} と発音する。このことは、古典ラテン語［式］の発音 [/ænˈtɛnaɪ/]{.ipa} をよく知ってゐる人を混乱させる可能性がある。<wbr><i lang="en">alumni</i> の英語化された発音は古典ラテン語の <i lang="la">alumnae</i> の発音と同じやうに聞こえるため、<wbr><i lang="en">alumni</i><wbr>（男性複数）や <i lang="en">alumnae</i><wbr>（女性複数）といった単語は、この［訳注　上で説明されたやうな混乱を招くことがあるといふ］点で悪名高い。
+［ラテン語由来の名詞について、］ラテン語の発音の<ruby>活用<rt lang="en">paradigms</ruby>が異なると、当該名詞の数や性に関する混乱を招くことがある。ラテン語の名詞は、科学的、<ruby>醫<rt>い</rt>学<rt>がく</ruby>的および法的な文脈を含む英語で伝統的に使はれてゐるため、綴りに関しては古典的な屈折を維持するが、それらの屈折は英語化された発音を使ふ。例へば、［触角を扱ふ］<ruby>昆<rt>こん</rt>蟲<rt>ちう</ruby>学者は、<wbr><i lang="en">antennae</i> を [/ænˈtɛni/]{.ipa} と発音する。このことは、古典ラテン語［式］の発音 [/ænˈtɛnaɪ/]{.ipa} をよく知ってゐる人を混乱させる可能性がある。<wbr><i lang="en">alumni</i> の英語化された発音は古典ラテン語の <i lang="la">alumnae</i> の発音と同じやうに聞こえる（逆も然り。）ため、<wbr><i lang="en">alumni</i><wbr>（男性複数）や <i lang="en">alumnae</i><wbr>（女性複数）といった単語は、この［訳注　上で説明されたやうな混乱を招くことがあるといふ］点で悪名高い。
 
 これらの複数形の多くは <i lang="en">-s</i> で終はらないため、一部が単数形として再解釈されてゐる。とくに <i lang="en">datum</i> や <i lang="en">medium</i><wbr>（「[medium of communication]{lang=en}」に見られる。）といった単語［がさうである］。元の複数形である <i lang="en">data</i> や <i lang="en">media</i> は、今日では、多くの文脈で、一部の人々によって不可算名詞の単数形として使はれてゐる。例へば、<wbr>[“The media is biased”]{lang=en}、<wbr>[“This data shows us that ...”]{lang=en}。（たゞし、多くの科学者、とくにイギリス出身の科学者は、今日でも [“These data show us that ...”]{lang=en} と言ふ。）[ ]{.upright}詳細は[下](#datum_data)を見よ。<wbr><i lang="en">criteria</i> や <i lang="en">phenomena</i> のやうな単語も同様に、一部の話者によって単数として使はれることがあるが、これは標準的な用法ではまだ正しくないと見做されてゐる。（[下](#phenomenon)を見よ。）
 
@@ -388,6 +389,8 @@ templateEngine:
 |[stratum]{lang=en}|[strata]{lang=en}
 
 末尾の <i lang="en">-us</i> は <i lang="en">-i</i><wbr>（第二格変化、[\[aɪ\]]{.ipa}）、<wbr><i lang="en">-era</i> または <i lang="en">-ora</i><wbr>（第三格変化）になるか、あるいは単に <i lang="en">-es</i><wbr>（とくに第四格変化の単語の場合。ラテン語の第四格変化の複数形は単数形に似てゐた。）を附加する:
+
+<!-- � -->
 
 |-|-
 |[alumnus]{lang=en}|[alumni]{lang=en}
@@ -806,6 +809,10 @@ templateEngine:
 - ある単語が単なる数量の表現ではなく、特定の意味を持つ場合、その単語は、通常の名詞のやうに複数化される。<wbr><i lang="en">Last season he scored eight hundreds</i>（= <i lang="en">scores of at least 100 runs in cricket</i>）。その他の数にも同じ規則が適用される。<wbr><i lang="en">My phone number consists of three fives and four sixes</i>。
 - <i lang="en">by the dozen</i> など（単数）、<wbr><i lang="en">in threes</i>（= <i lang="en">in groups of three</i>）など（複数）、<wbr><i lang="en">eight sevens are fifty-six</i> などゝいった表現に注意せよ。
 
+### 限定詞
+
+指示限定詞 <i lang="en">this</i> および <i lang="en">that</i> はそれぞれ、複数形 <i lang="en">these</i> および <i lang="en">those</i> を持つ。基数限定詞（例: <i lang="en"><u>twenty</u> people</i>）は複数形を持たない。明らかな［反］例として、<i lang="en">they numbered in the <u>twenties</u></i> のやうなものは名詞である。
+
 ## 用法と数の一致
 
 ### 属性的に使はれる名詞
@@ -817,8 +824,6 @@ templateEngine:
 ### チームとそのメンバー
 
 スポーツチーム名では、通常の使用ではその名詞には不規則な複数形があるにもかゝはらず、ある名詞に -s の形の規則的な複数形が与へられることがある。（上で述べられた[主要部の無い名詞](#%E4%B8%BB%E8%A6%81%E9%83%A8%E3%81%AE%E7%84%A1%E3%81%84%E5%90%8D%E8%A9%9E)の<ruby>具<rt>ぐ</rt>體<rt>たい</ruby>的な事例。）[ ]{.upright}例へば、<wbr><i lang="en">marlin</i> といふ単語は、通常、単数形と同一の複数形を持ち、また <i lang="en">leaf</i> の複数形は <i lang="en">leaves</i> であるにもかゝはらず、<ruby>マイアミ・マーリンズ<rt lang="en">Miami Marlins</ruby>や<ruby>トロント・メープルリーフス<rt lang="en">Toronto Maple Leafs</ruby>と呼ばれるチームがある。（これはいつも適用されるわけではない。例へば、<ruby>ミネソタ・リンクス<rt lang="en">Minnesota Lynx</ruby>がある。<wbr><i lang="en">*Lynxes</i> ではない。）[ ]{.upright}<ruby>ボストン・レッドソックス<rt lang="en">Boston Red Sox</ruby>や<ruby>シカゴ・ホワイトソックス<rt lang="en">Chicago White Sox</ruby>のやうな一部のチームは、その名前に非標準の複数形の綴りを使ってゐる。
-
-<!-- NOTE: 恐らく markdown-it-ruby のバグで、ここにおよそ5バイト以上のコメントが無いと、ルビベースに � が挿入されることがある。 -->
 
 スポーツチーム名が複数の場合、そのチームのメンバーを示すために対応する単数形が使はれることがよくある。例へば、<ruby>シンシナティ・レッズ<rt lang="en">Cincinnati Reds</ruby>のプレイヤーは <i lang="en">a (Cincinnati) Red</i> と呼ばれることがある。楽曲の『<ruby>セントルイス・ブルース<rt lang="en">St. Louis Blues</ruby>』から名付けられ、<wbr><i lang="en">blues</i> は元々はその複数形と同一の単数形だった［訳注　[単数と複数が同一の名詞](#単数と複数が同一の名詞)を参照。］にもかゝはらず、これは、アイスホッケーチームの<ruby>セントルイス・ブルーズ<rt lang="en">St. Louis Blues</ruby>にも適用される。
 
@@ -888,6 +893,14 @@ templateEngine:
 
 <i lang="en">How many?</i> と尋ねるときは、期待される回答が[1]{.upright}つだけであっても、複数が標準的である（例: <i lang="en">How many bananas?</i> であって、<wbr><i lang="en">*How many banana?</i> ではない。）。
 
+### 限定詞
+
+多くの限定詞は*主要部の*名詞*の数に無関係*だが、［<i>多くの</i>を除く］その他のものは選択的である。次の限定詞は複数の主要部を選択する。すなはち、<wbr><i lang="en">both</i>、<i lang="en">several</i>、<i lang="en">many</i>、<i lang="en">few</i>、<i lang="en">a few</i>、<i lang="en">you</i>、<i lang="en">we</i> および <i lang="en">one</i> を除く全ての基数詞。加へて、<wbr><i lang="en">a</i>/<i lang="en">an</i> と <i lang="en">another</i> は量化された複数形と共用できる。（例: <i lang="en">another five days</i>［はある］が、<i lang="en">*another days</i> は無い。）［訳注　……といふよりもむしろ、この例は、日本で英語を学んだ者にとっては馴染み深い、一纏まりのものとして単数扱ひされる複数形（例: <i lang="en">Three years <u>is</u> a long time</i>、<wbr><i lang="en">How long <u>is</u> ten yards?</i>。）に見える。］
+
+### 形容詞
+
+いくつかの形容詞は、主として複数名詞とゝもに使はれる。<i lang="en">numerous</i> と <i lang="en">countless</i> はこれに含まれるが、<i lang="en">a numerous class</i> や <i lang="en">a countless multitude</i> のやうな単数の例もありうる。
+
 ## <ruby>{関聯|くゎん|れん}項目<rt lang="en">See also</ruby>
 
 - [英語の動詞](https://en.wikipedia.org/wiki/English_verbs)
@@ -924,7 +937,7 @@ templateEngine:
 |[paisa]{lang=en}|[paise]{lang=en}|ヒンディーから。
 |[real]{lang=en}|[reais]{lang=en}|ポルトガル語から。
 
-たゞし、とくに文章では、ISO 4217 通貨コード（例: <i lang="en">CRC</i>、<wbr><i lang="en">SEK</i>）が通貨単位として使はれることもよくある。この場合、通貨単位は複数化しない。[文字と略語の複数形](#文字と略語の複数形)も参照。
+たゞし、とくに文章では、ISO 4217 通貨コード（例: <i lang="en">CRC</i>、<wbr><i lang="en">SEK</i>。）が通貨単位として使はれることもよくある。この場合、通貨単位は複数化しない。[文字と略語の複数形](#文字と略語の複数形)も参照。
 
 ## ウィキメディア・プロジェクトへの移出についての補足
 
