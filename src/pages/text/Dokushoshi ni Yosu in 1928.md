@@ -43,5 +43,5 @@ templateEngine: njk, md
 - 次に掲げる字は、次の字形で印刷されてゐる:
   - <i>取</i>は [u53d6-var-004 (取) - GlyphWiki](https://glyphwiki.org/wiki/u53d6-var-004)
   - <i>聲</i>は [u8072-g (聲) - GlyphWiki](https://glyphwiki.org/wiki/u8072-g)
-- その他の字は、{異體字|い|たい|じ}セレクターを使って、印刷と同等の字形を選択した。
+- その他の字は、異体字セレクターを使って、印刷と同等の字形を選択した。
 - このテキストは[1927]{.upright}年[12]{.tate-chu-yoko}月[31]{.tate-chu-yoko}日以前に発表されたため、アメリカ合衆国（推定サーバー所在地）においても、パブリック・ドメインにある。

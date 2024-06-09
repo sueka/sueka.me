@@ -73,7 +73,7 @@ CREATE EXTENSION cube;
 
   はよく理解できなかったので原文に当たった[^3]。この部分の原文は
 
-  [^3]: わざわざ初版を買ふのは{勿體|もっ|たい}ない気がしたので、[Second Edition]{lang=en} を買った。この部分に差異は無いと思ふ。
+  [^3]: わざわざ初版を買ふのは勿体ない気がしたので、[Second Edition]{lang=en} を買った。この部分に差異は無いと思ふ。
 
   > We like to think of `PARTITION BY` as akin to `GROUP BY`, but rather than grouping the results outside of the `SELECT` attribute list (and thus combining the results into fewer rows), it returns grouped values as any other field (calculating on the grouped variable but otherwise just another attribute). Or in *SQL* parlance, ==it returns the results of an aggregate function `OVER` a `PARTITION` of the result set==.
   {lang=en}
@@ -82,7 +82,7 @@ CREATE EXTENSION cube;
 
   <div class="blockquote-like">
 
-    結果集合の<ruby>分割<rt lang="en">PARTITION</ruby>[^7]<ruby>{全體|ぜん|たい}にわたって<rt lang="en">OVER</ruby>集約関数を適用した結果を返す
+    結果集合の<ruby>分割<rt lang="en">PARTITION</ruby>[^7]<ruby>全体にわたって<rt lang="en">OVER</ruby>集約関数を適用した結果を返す
 
   </div>
 

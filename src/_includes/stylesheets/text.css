@@ -164,7 +164,7 @@ ruby > rt:lang(ja, jpn-archaic) {
 .shiroten {
   color: transparent;
   -webkit-text-stroke: calc(1em / 26) var(--color-text);
-  /* TODO: 書體によっても適切な太さが変わる。 */
+  /* TODO: 書体によっても適切な太さが変わる。 */
 }
 
 /* NOTE: <q> の lang ではなく、一つ上の要素の lang によって、引用符を変更する。 */

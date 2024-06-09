@@ -19,7 +19,7 @@ useKaTeX: true
 
 - p. 20 では<u>交換法則</u>として \\( a \\times b = -(b \\times a) \\) が導入されてゐるが、これは<i>反交換法則</i>だと思ふ。
 
-- pp. 26–27 に{関聯|くゎん|れん}して、積の微分法則が内積に拡張できることを示す:
+- pp. 26–27 に関聯して、積の微分法則が内積に拡張できることを示す:
 
   \\( \\boldsymbol{a}(t) = \\begin{pmatrix} x(t) \\\\ y(t) \\\\ z(t) \\end{pmatrix} \\)、\\( \\boldsymbol{b}(t) = \\begin{pmatrix} \\alpha(t) \\\\ \\beta(t) \\\\ \\gamma(t) \\end{pmatrix} \\) とする。このとき、
 
