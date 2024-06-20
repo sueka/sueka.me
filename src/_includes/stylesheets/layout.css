@@ -524,6 +524,10 @@ kbd {
   font-family: revert;
 }
 
+.katex .vlist-t2.vlist-t2 {
+  margin-right: revert;
+}
+
 .diagram-wrapper {
   margin-inline: auto;
   max-height: fit-content;
