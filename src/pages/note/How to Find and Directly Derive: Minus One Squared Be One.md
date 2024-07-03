@@ -79,7 +79,7 @@ $$
 \\end{align}
 $$
 
-こゝで、「\\( -1 \\)」が単なる*表記*であり、以下の手続きにおいて \\( -1 \\) といふ*値*に依存した計算が行はれないことを明確にするために、\\( \\m1 \\coloneqq -1 \\) とおく。
+「\\( -1 \\)」が単なる*表記*であることゝ、以下の手続きを通して、\\( -1 \\) といふ*値*に依存した計算が行はれないことを明確にするために、\\( \\m1 \\coloneqq -1 \\) とおく。
 
 $$
 \\begin{align}
@@ -91,7 +91,7 @@ $$
 
 $$
 \\begin{align}
-      \\text{} & 1 + \\m1 = 0 \\notag \\\\
+               & 1 + \\m1 = 0 \\notag \\\\
 \\iff \\text{} & \\m1 \\times (1 + \\m1) = \\m1 \\times 0 \\\\ 
 \\end{align}
 $$
@@ -100,7 +100,7 @@ $$
 
 $$
 \\begin{align*}
-  \\text{} & \\orange{\\m1} \\times (\\green{1} + \\blue{\\m1}) \\\\
+           & \\orange{\\m1} \\times (\\green{1} + \\blue{\\m1}) \\\\
 = \\text{} & \\orange{\\m1} \\times \\green{1} + \\orange{\\m1} \\times \\blue{\\m1} \\\\
 \\end{align*}
 $$
@@ -109,7 +109,7 @@ $$
 
 $$
 \\begin{align}
-  \\text{} & \\orange{\\m1 \\times 1} + \\m1 \\times \\m1 \\notag \\\\
+           & \\orange{\\m1 \\times 1} + \\m1 \\times \\m1 \\notag \\\\
 = \\text{} & \\orange{\\m1} + \\m1 \\times \\m1 \\\\
 \\end{align}
 $$
@@ -126,7 +126,7 @@ $$
 
 $$
 \\begin{align*}
-      \\text{} & \\m1 \\times (1 + \\m1) = \\m1 \\times 0 \\\\
+               & \\m1 \\times (1 + \\m1) = \\m1 \\times 0 \\\\
 \\iff \\text{} & \\m1 + \\m1 \\times \\m1 = 0 \\\\
 \\end{align*}
 $$
@@ -135,7 +135,7 @@ $$
 
 $$
 \\begin{align}
-      \\text{} & \\m1 + \\m1 \\times \\m1 = 0 \\notag \\\\
+               & \\m1 + \\m1 \\times \\m1 = 0 \\notag \\\\
 \\iff \\text{} & \\orange{1} + (\\m1 + \\m1 \\times \\m1) = \\orange{1} + 0 \\\\
 \\end{align}
 $$
@@ -144,7 +144,7 @@ $$
 
 $$
 \\begin{align*}
-  \\text{} & 1 + \\orange{(}\\m1 + \\m1 \\times \\m1\\orange{)} \\\\
+           & 1 + \\orange{(}\\m1 + \\m1 \\times \\m1\\orange{)} \\\\
 = \\text{} & \\orange{(}1 + \\m1\\orange{)} + \\m1 \\times \\m1 \\\\
 \\end{align*}
 $$
@@ -153,7 +153,7 @@ $$
 
 $$
 \\begin{align*}
-  \\text{} & \\orange{(1 + \\m1)} + \\m1 \\times \\m1 \\\\
+           & \\orange{(1 + \\m1)} + \\m1 \\times \\m1 \\\\
 = \\text{} & \\orange{0} + \\m1 \\times \\m1 \\\\
 \\end{align*}
 $$
@@ -162,7 +162,7 @@ $$
 
 $$
 \\begin{align}
-  \\text{} & \\orange{0} + \\m1 \\times \\m1 \\notag \\\\
+           & \\orange{0} + \\m1 \\times \\m1 \\notag \\\\
 = \\text{} & \\m1 \\times \\m1 \\\\
 \\end{align}
 $$
@@ -179,7 +179,7 @@ $$
 
 $$
 \\begin{align}
-      \\text{} & 1 + (\\m1 + \\m1 \\times \\m1) = 1 + 0 \\notag \\\\
+               & 1 + (\\m1 + \\m1 \\times \\m1) = 1 + 0 \\notag \\\\
 \\iff \\text{} & \\m1 \\times \\m1 = 1 \\\\
 \\end{align}
 $$
@@ -190,7 +190,7 @@ $$
 
 $$
 \\begin{align*}
-  \\text{} & \\m1 \\times \\m1 \\\\
+           & \\m1 \\times \\m1 \\\\
 = \\text{} & 0 + \\m1 \\times \\m1 \\\\
 = \\text{} & (1 + \\m1) + \\m1 \\times \\m1 \\\\
 = \\text{} & 1 + (\\m1 + \\m1 \\times \\m1) \\\\
