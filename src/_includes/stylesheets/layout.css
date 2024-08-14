@@ -560,3 +560,7 @@ figure:has(> .mermaid),
   height: auto;
   width: auto;
 }
+
+.display-none {
+  display: none;
+}

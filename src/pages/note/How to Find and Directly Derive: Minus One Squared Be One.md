@@ -11,6 +11,7 @@ $$
 \\gdef\\F{𝔽}
 \\gdef\\label#1{\\!\\pod{\\text{\#1}}}
 $$
+{.display-none}
 
 <aside>
 
