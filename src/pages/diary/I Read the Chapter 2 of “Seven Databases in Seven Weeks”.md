@@ -146,7 +146,7 @@ CREATE EXTENSION cube;
       ```
 
       のやうにして取得した。これをビュー `Feb_2012` とする。
-  2.  次に、日ごとにその日にあったイベントの個数を数へる。まづ、`Feb_2012` に `events` を左結合する:
+  1.  次に、日ごとにその日にあったイベントの個数を数へる。まづ、`Feb_2012` に `events` を左結合する:
 
       ``` sql
       SELECT date, title, starts
@@ -154,7 +154,7 @@ CREATE EXTENSION cube;
       LEFT JOIN events
         ON date <= starts AND starts < date + '1 day'::interval
       ```
-  3.  そして、`date` でグループ化してから `events` の個数を数へる:
+  1.  そして、`date` でグループ化してから `events` の個数を数へる:
 
       ``` sql
       SELECT date, count(events)
@@ -164,7 +164,7 @@ CREATE EXTENSION cube;
       GROUP BY date
       ORDER BY date
       ```
-  4.  次に、週と曜日を [SELECT]{lang=en} してみる:
+  1.  次に、週と曜日を [SELECT]{lang=en} してみる:
 
       ``` sql
       SELECT date,
@@ -193,7 +193,7 @@ CREATE EXTENSION cube;
       ```
 
       週が変はるところと曜日が[0]{.upright}に戾るところとが異なってゐるが、これは、`extract` の `week` は ISO 週（月曜日で始まる。）を返し、`dow` は日曜始まりの値を返すからである。[9.9. Date/Time Functions and Operators](https://www.postgresql.org/docs/14/functions-datetime.html){lang=en} も参照。
-  5.  よって、日曜始まりのカレンダーを作るには、`week` を補正する必要がある。`dow` が[0]{.upright}なら `week` を[1]{.upright}だけ増やす。
+  1.  よって、日曜始まりのカレンダーを作るには、`week` を補正する必要がある。`dow` が[0]{.upright}なら `week` を[1]{.upright}だけ増やす。
 
       ``` sql
       SELECT date,
@@ -203,7 +203,7 @@ CREATE EXTENSION cube;
       ```
 
       とした。もっと巧い方法がありさう。
-  6.  必要なものは `date` ではなくイベントの個数だった:
+  1.  必要なものは `date` ではなくイベントの個数だった:
 
       ``` sql
       SELECT extract(week from date) + (CASE WHEN extract(dow from date) = 0 THEN 1 ELSE 0 END) week,
@@ -215,7 +215,7 @@ CREATE EXTENSION cube;
       GROUP BY date
       ORDER BY date
       ```
-  7.  最後に、`dow` つまり [0–6]{.upright} をカテゴリにして、このテーブルのピボットテーブルを作成した:
+  1.  最後に、`dow` つまり [0–6]{.upright} をカテゴリにして、このテーブルのピボットテーブルを作成した:
 
       ``` sql
       SELECT *
@@ -235,7 +235,7 @@ CREATE EXTENSION cube;
       )
       ORDER BY week
       ```
-  8.  本では `0` や `<null>` を取り除くことになってゐるが、省略。
+  1.  本では `0` や `<null>` を取り除くことになってゐるが、省略。
 
 [3]{.upright}日目は全文検索と多次元クエリについて学んだ。
 

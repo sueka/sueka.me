@@ -852,10 +852,10 @@ foo=1 bar=2
 
       与へられたシンプルコマンドが実行される必要がある場合（すなはち、AND-OR リストや case 文などの条件構造がそのシンプルコマンドをバイパスしてゐない場合）、コマンドテキストの最初から最後にかけて、次の展開、代入、およびリダイレクトが全て実行される:
 
-      1. [シェル文法規則](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02)に従って、変数代入またはリダイレクトとして認識される単語が、ステップ[3]{.upright}とステップ[4]{.upright}の処理のために保存される。
-      2. 変数代入でもリダイレクトでもない単語が展開される。展開後にフィールドが残ってゐる場合、最初のフィールドはコマンド名と見做され、残りのフィールドはそのコマンドの引数と見做される。
-      3. [リダイレクト](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07)に記述されてゐるやうに、リダイレクトが実行される。
-      4. それぞれの変数代入は、値を代入する前に、チルダ展開、パラメーター展開、コマンド置換、算術展開、そして引用符削除される。
+      1.  [シェル文法規則](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02)に従って、変数代入またはリダイレクトとして認識される単語が、ステップ[3]{.upright}とステップ[4]{.upright}の処理のために保存される。
+      1.  変数代入でもリダイレクトでもない単語が展開される。展開後にフィールドが残ってゐる場合、最初のフィールドはコマンド名と見做され、残りのフィールドはそのコマンドの引数と見做される。
+      1.  [リダイレクト](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07)に記述されてゐるやうに、リダイレクトが実行される。
+      1.  それぞれの変数代入は、値を代入する前に、チルダ展開、パラメーター展開、コマンド置換、算術展開、そして引用符削除される。
 
       先のリストにおいて、ステップ[2]{.upright}からコマンド名が生じない場合、またはコマンド名が特殊ビルトインユーティリティ（[特殊ビルトインユーティリティ](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_14)を見よ。）の名前に一致する場合、ステップ[3]{.upright}とステップ[4]{.upright}の順序は入れ替はってもよい。
 
@@ -866,10 +866,10 @@ foo=1 bar=2
 
       When a given simple command is required to be executed (that is, when any conditional construct such as an AND-OR list or a case statement has not bypassed the simple command), the following expansions, assignments, and redirections shall all be performed from the beginning of the command text to the end:
 
-      1. The words that are recognized as variable assignments or redirections according to [Shell Grammar Rules](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02) are saved for processing in steps 3 and 4.
-      2. The words that are not variable assignments or redirections shall be expanded. If any fields remain following their expansion, the first field shall be considered the command name and remaining fields are the arguments for the command.
-      3. Redirections shall be performed as described in [Redirection](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07).
-      4. Each variable assignment shall be expanded for tilde expansion, parameter expansion, command substitution, arithmetic expansion, and quote removal prior to assigning the value.
+      1.  The words that are recognized as variable assignments or redirections according to [Shell Grammar Rules](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_10_02) are saved for processing in steps 3 and 4.
+      1.  The words that are not variable assignments or redirections shall be expanded. If any fields remain following their expansion, the first field shall be considered the command name and remaining fields are the arguments for the command.
+      1.  Redirections shall be performed as described in [Redirection](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07).
+      1.  Each variable assignment shall be expanded for tilde expansion, parameter expansion, command substitution, arithmetic expansion, and quote removal prior to assigning the value.
 
       In the preceding list, the order of steps 3 and 4 may be reversed if no command name results from step 2 or if the command name matches the name of a special built-in utility; see [Special Built-In Utilities](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_14).
 
@@ -988,10 +988,10 @@ echo "$foo"
 
       単語展開の順序は次の通り:
 
-      1. チルダ展開（[チルダ展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_01)を見よ。）、パラメーター展開（[パラメーター展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02)を見よ。）、コマンド置換（[コマンド置換](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_03)を見よ。）、そして算術展開（[算術展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_04)を見よ。）が全て実行される。[トークン認識](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_03)の第[5]{.upright}項目を見よ。
-      2. <i>IFS</i> が null でなければ、ステップ[1]{.upright}で生成されたフィールドの部分に対して、フィールド分割（[フィールド分割](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05)を見よ。）が実行される。
-      3. <i>set</i> <b>-f</b> が有効でなければ、パス名展開（[パス名展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06)を見よ。）が実行される。
-      4. 最後に、引用符削除（[引用符削除](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_07)を見よ。）が常に実行される。
+      1.  チルダ展開（[チルダ展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_01)を見よ。）、パラメーター展開（[パラメーター展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02)を見よ。）、コマンド置換（[コマンド置換](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_03)を見よ。）、そして算術展開（[算術展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_04)を見よ。）が全て実行される。[トークン認識](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_03)の第[5]{.upright}項目を見よ。
+      1.  <i>IFS</i> が null でなければ、ステップ[1]{.upright}で生成されたフィールドの部分に対して、フィールド分割（[フィールド分割](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05)を見よ。）が実行される。
+      1.  <i>set</i> <b>-f</b> が有効でなければ、パス名展開（[パス名展開](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06)を見よ。）が実行される。
+      1.  最後に、引用符削除（[引用符削除](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_07)を見よ。）が常に実行される。
 
     </div>
 
@@ -1000,10 +1000,10 @@ echo "$foo"
 
       The order of word expansion shall be as follows:
 
-      1. Tilde expansion (see [Tilde Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_01)), parameter expansion (see [Parameter Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02)), command substitution (see [Command Substitution](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_03)), and arithmetic expansion (see [Arithmetic Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_04)) shall be performed, beginning to end. See item 5 in [Token Recognition](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_03).
-      2. Field splitting (see [Field Splitting](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05)) shall be performed on the portions of the fields generated by step 1, unless IFS is null.
-      3. Pathname expansion (see [Pathname Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06)) shall be performed, unless <i>set</i> <b>-f</b> is in effect.
-      4. Quote removal (see [Quote Removal](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_07)) shall always be performed last.
+      1.  Tilde expansion (see [Tilde Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_01)), parameter expansion (see [Parameter Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02)), command substitution (see [Command Substitution](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_03)), and arithmetic expansion (see [Arithmetic Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_04)) shall be performed, beginning to end. See item 5 in [Token Recognition](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_03).
+      1.  Field splitting (see [Field Splitting](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_05)) shall be performed on the portions of the fields generated by step 1, unless IFS is null.
+      1.  Pathname expansion (see [Pathname Expansion](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_06)) shall be performed, unless <i>set</i> <b>-f</b> is in effect.
+      1.  Quote removal (see [Quote Removal](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_07)) shall always be performed last.
 
     </blockquote>
     +++
