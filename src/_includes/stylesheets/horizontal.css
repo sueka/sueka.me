@@ -28,41 +28,6 @@ body {
   max-inline-size: calc(39 / 29 * 100vb);
 }
 
-/* column gap を2倍にしたアスペクト比が √2 以上、かつカラム分割しても1行あたり29文字以上表示できそうな場合はカラム分割する。縦書きでは行わない。 */
-/* √2 (3 φ³ + 2 * 29) / (4 φ³ + 2 * 29) ≈ 1.3342781032 */
-/* 9pt ≤ 100vw / (3 φ³ + 2 * 29) ⇔ 848.49844719px ⪅ 100vw */
-@media (min-aspect-ratio: 1.334279) and (min-width: 848.498448px) {
-  html {
-    font-size: clamp(
-      9pt,
-      100vw / (3 * 4.236068 + 2 * 29),
-      100vmin / (2 * 4.236068 + 40)
-    );
-
-    font-size: clamp(
-      9pt,
-      100vi / (3 * 4.236068 + 2 * 29), /* φ³ */
-      100vmin / (2 * 4.236068 + 40) /* φ³; 40 ≈ √2 (2 φ² + 29) - 2 φ³ */
-    );
-  }
-
-  body {
-    max-inline-size: revert;
-    max-inline-size: revert;
-  }
-
-  .body {
-    columns: 2;
-
-    /* Same as margin-inline of .body */
-    column-gap: clamp(
-      1.618034rem, /* φ */
-      100vmin * 4.236068 / (2 * 4.236068 + 39), /* φ³ */
-      4.236068rem /* φ³ */
-    );
-  }
-}
-
 .title-page {
   min-block-size: 38.196601vw;
   min-block-size: 38.196601vi; /* φ⁻²; width/height = φ² */
