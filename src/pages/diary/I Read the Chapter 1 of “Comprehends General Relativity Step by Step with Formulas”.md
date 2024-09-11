@@ -60,7 +60,7 @@ useKaTeX: true
 
   [^3]: これを書いてゐるときは「一貫性があれば十分」と思ってゐる。
 
-- p. 98 に関聯して、\\( \\nabla \\cdot \\frac{\\boldsymbol{x} - \\boldsymbol{a}}{\|\\boldsymbol{x} - \\boldsymbol{a}\|^n} = 0 \\) となる \\( n \\) が \\( 3 \\) 以外にあるかを確認する:
+- p. 98 に関聯して、\\( \\nabla \\cdot \\frac{\\boldsymbol{x} - \\boldsymbol{a}}{\|\\boldsymbol{x} - \\boldsymbol{a}\|^n} = 0 \\) となる \\( n \\) が \\( 3 \\) 以外にないことを確認する:
 
   左辺の \\( \\nabla \\) を展開すると、
 
@@ -72,7 +72,7 @@ useKaTeX: true
   \\end{align*}
   $$
 
-  となる。こゝで、\\( \\frac{\\partial}{\\partial x} \\left( \\frac{x - a}{\|\\boldsymbol{x} - \\boldsymbol{a}\|^n} \\right) \\) は、
+  \\( \\frac{\\partial}{\\partial x} \\left( \\frac{x - a}{\|\\boldsymbol{x} - \\boldsymbol{a}\|^n} \\right) \\) を変形すると、
 
   $$
   \\begin{align*}
@@ -83,7 +83,7 @@ useKaTeX: true
   \\end{align*}
   $$
 
-  なので、\\( \\boldsymbol{x} \\ne \\boldsymbol{a} \\) と対称形から、
+  よって、\\( \\boldsymbol{x} \\ne \\boldsymbol{a} \\) と対称形から、
 
   $$
   \\begin{align*}
