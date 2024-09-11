@@ -20,6 +20,7 @@ import attrs from 'markdown-it-attrs'
 import bracketedSpans from 'markdown-it-bracketed-spans'
 import collapsible from 'markdown-it-collapsible'
 import deflist from 'markdown-it-deflist'
+import { full as emoji } from 'markdown-it-emoji'
 import footnote from 'markdown-it-footnote'
 import mark from 'markdown-it-mark'
 import multimdTable from 'markdown-it-multimd-table'
@@ -58,6 +59,7 @@ const markdown = {
     bracketedSpans,
     collapsible,
     deflist,
+    emoji,
     footnote,
     mark,
     [

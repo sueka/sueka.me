@@ -8,6 +8,7 @@
     "markdown-it-bracketed-spans": "^1.0.1",
     "markdown-it-collapsible": "^1.0.0",
     "markdown-it-deflist": "^2.1.0",
+    "markdown-it-emoji": "^3.0.0",
     "markdown-it-footnote": "^3.0.3",
     "markdown-it-mark": "^3.0.1",
     "markdown-it-multimd-table": "^4.2.3",
