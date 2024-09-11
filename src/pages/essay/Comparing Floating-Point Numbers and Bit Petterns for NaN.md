@@ -4,22 +4,22 @@ date: 2024-09-03
 useKaTeX: true
 ---
 
-IEEE 754 binary64 ビット列が示す値は、符号ビットを \\( s \\)、指数部を \\( e \\)、仮数部を \\( m \\) として、次の関数 \\( v(s ,\\, e ,\\, m) \\) で表される:
+IEEE 754 binary64 ビット列が示す値は、符号ビットを \\( s \\)、指数部を \\( e \\)、仮数部を \\( m \\) として、次の関数 \\( v(s, e, m) \\) で表される:
 
 $$
 \\begin{align*}
-v(s ,\\, e ,\\, m) = 
+v(s, e, m) = 
 \\begin{cases}
   (-1)^s \\left( 1 + \\frac{m}{2^{52}} \\right) 2^{e - 1023} & \\text{if } 0 < e < 2047 \\\\
   (-1)^s \\left( 0 + \\frac{m}{2^{52}} \\right) 2^{-1022} & \\text{if } e = 0 \\\\
-  +\\infin & \\text{if } s = 0 ,\\, e = 2047 \\text{ and } m = 0 \\\\
-  -\\infin & \\text{if } s = 1 ,\\, e = 2047 \\text{ and } m = 0 \\\\
+  +\\infin & \\text{if } s = 0, e = 2047 \\text{ and } m = 0 \\\\
+  -\\infin & \\text{if } s = 1, e = 2047 \\text{ and } m = 0 \\\\
   \\mathrm{NaN} & \\text{if } e = 2047 \\text{ and } m \\ne 0 \\\\
 \\end{cases} \\\\
 \\end{align*}
 $$
 
-このとき、\\( \\mathrm{NaN} \\) 以外の値は、\\( s ,\\, e ,\\, m \\) の順に比較することで、簡単に大小比較できる:
+このとき、\\( \\mathrm{NaN} \\) 以外の値は、\\( s, e, m \\) の順に比較することで、簡単に大小比較できる:
 
 ``` ts
 class Binary64 {
