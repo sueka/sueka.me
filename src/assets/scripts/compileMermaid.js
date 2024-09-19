@@ -5,7 +5,7 @@
 
     return async (selector, config) => {
       if (mermaid === undefined) {
-        ;({ default: mermaid } = await import('https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.esm.min.mjs'))
+        ;({ default: mermaid } = await import('https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.esm.min.mjs'))
       }
 
       mermaid.initialize({

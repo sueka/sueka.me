@@ -31,13 +31,13 @@
     <link href="{{ '~/assets/stylesheets/dark.css' | url(true) }}" rel="preload" as="style" />
     <link href="{{ '~/assets/stylesheets/horizontal.css' | url(true) }}" rel="preload" as="style" />
     <link href="{{ '~/assets/stylesheets/vertical.css' | url(true) }}" rel="preload" as="style" />
-    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/base16/solarized-light.min.css" rel="preload" as="style" />
-    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/base16/solarized-dark.min.css" rel="preload" as="style" />
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="preload" as="style" />
-    {#- <link href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" rel="preload" as="style" /> #}
-    {#- <link href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" rel="preload" as="script" /> #}
-    {#- <link href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" rel="preload" as="script" /> #}
-    {#- <link href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js" rel="preload" as="script" /> #}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/base16/solarized-light.min.css" rel="preload" as="style" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/base16/solarized-dark.min.css" rel="preload" as="style" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="preload" as="style" />
+    {#- <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" rel="preload" as="style" /> #}
+    {#- <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js" rel="preload" as="script" /> #}
+    {#- <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js" rel="preload" as="script" /> #}
+    {#- <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js" rel="preload" as="script" /> #}
     {#- <link href="https://unpkg.com/css-has-pseudo@1.0.0/browser" rel="preload" as="script" /> #}
     {#- <link href="{{ '~/assets/scripts/run-css-has-pseudo.js' | url(true) }}" rel="preload" as="script" /> #}
     <link href="{{ '~/assets/scripts/util.js' | url(true) }}" rel="preload" as="script" />
@@ -66,17 +66,17 @@
     {%- endif %}
 
     {#- NOTE: Script is loaded in _config.js #}
-    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/base16/solarized-light.min.css" rel="stylesheet" media="(prefers-color-scheme: light)" />
-    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/base16/solarized-dark.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/base16/solarized-light.min.css" rel="stylesheet" integrity="sha512-ZW2g6Pn2pMbKSyjcA+r4Lc58kcfvOdcsTuCCTl3qz8NqVJwUtAuiN61pDoW3EEfrjwH2CPtkFWMdkzMY1idilA==" crossorigin="anonymous" referrerpolicy="no-referrer" media="(prefers-color-scheme: light)" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/base16/solarized-dark.min.css" rel="stylesheet" integrity="sha512-kBHeOXtsKtA97/1O3ebZzWRIwiWEOmdrylPrOo3D2+pGhq1m+1CroSOVErIlsqn1xmYowKfQNVDhsczIzeLpmg==" crossorigin="anonymous" referrerpolicy="no-referrer" media="(prefers-color-scheme: dark)" />
 
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     {#- Don't use lume/plugins/katex.ts now #}
     {%- if useKaTeX %}
-    <link href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" rel="stylesheet" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous" />
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body, { throwOnError: true })"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js" integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" rel="stylesheet" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js" integrity="sha512-LQNxIMR5rXv7o+b1l8+N1EZMfhG7iFZ9HhnbJkTp4zjNr5Wvst75AqUeFDxeRUa7l5vEDyUiAip//r+EFLLCyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js" integrity="sha512-iWiuBS5nt6r60fCz26Nd0Zqe0nbk1ZTIQbl3Kv7kYsX+yKMUFHzjaH2+AnM6vp2Xs+gNmaBAVWJjSmuPw76Efg==" crossorigin="anonymous" referrerpolicy="no-referrer" onload="renderMathInElement(document.body, { throwOnError: true })"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js" integrity="sha512-cQxSkTM4RvFAjdBeBDkrllhYfERwZWjM/oijKfPsmhR0JI2U3fXSlbUaJp5SlgBh/FzYmMyWudRTXLnNj3MbEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {%- endif %}
 
     <link href="{{ '~/feed.xml.njk' | url(true) }}" rel="alternate" type="application/atom+xml" title="{{ site.name }}" />
