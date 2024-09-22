@@ -26,6 +26,8 @@
       {%- if titleText != site.name and incipit != site.name %} - {{ site.name }} {%- endif -%}
     </title>
 
+    <meta name="format-detection" content="telephone=no" />
+
     {#- Preloads #}
     <link href="{{ '~/assets/stylesheets/main.css' | url(true) }}" rel="preload" as="style" />
     <link href="{{ '~/assets/stylesheets/dark.css' | url(true) }}" rel="preload" as="style" />
