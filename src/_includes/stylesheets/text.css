@@ -56,9 +56,7 @@ dl > div > dt {
 
 p {
   /* TODO: ぶら下げられた約物を除いて両端揃えする */
-  /* NOTE: On Safari 10 `force-end` for hanging-punctuation is recognized but broken */
-  hanging-punctuation: allow-end last;
-  /* hanging-punctuation: force-end last; */
+  hanging-punctuation: force-end last;
 
   &:has(mark),
   &:has(.katex) {
