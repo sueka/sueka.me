@@ -1,6 +1,6 @@
 /* Keep contrasting with ./horizontal.css */
 
-@custom-selector :--blockquote blockquote, .blockquote-like;
+@custom-selector :--indented blockquote, .blockquote-like, .indented;
 
 .sideways,
 /* code:root, */
@@ -36,6 +36,12 @@ kbd.horizontal {
   @extend .sideways;
 }
 
+@media print {
+  a:lang(ja, jpn-archaic) {
+    text-decoration: overline;
+  }
+}
+
 ul > li, ol > li {
   text-align: start;
 
@@ -49,7 +55,7 @@ ul > li, ol > li {
     display: inline;
   }
 
-  & > :--blockquote:first-child {
+  & > :--indented:first-child {
     /* Firefox (98.0.2-119.0.1) の writing-mode: vertical-rl 文脈で ol > li 直下に <p> などの display: block な要素を置くとマーカーが右に 1 em 程度ずれてしまう不具合を回避する。 */
     display: inline flow-root;
     display: -webkit-inline-box;

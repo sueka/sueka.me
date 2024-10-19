@@ -2,16 +2,18 @@
 @custom-selector :--list ul, menu, ol, dl;
 @custom-selector :--list-item li, dd;
 @custom-selector :--blockquote blockquote, .blockquote-like;
+@custom-selector :--indented blockquote, .blockquote-like, .indented;
 @custom-selector :--section article, aside, nav, section;
-@custom-selector :--pass-thru :--list-item, :--blockquote, :--section;
+@custom-selector :--pass-thru :--list-item, :--indented, :--section;
 @custom-selector :--pass-thru-no-color :--list-item, :--section;
 @custom-selector :--margins :--heading, :--list, pre, p, details, :--pass-thru;
 @custom-selector :--margins-no-anchor :--list, pre, p, details, :--pass-thru;
 @custom-selector :--margins-no-color :--heading, :--list, p, details, :--pass-thru-no-color;
 
 :root {
+  --color-indentation-guide: #c3cf56;
   --color-indentation-guide-quotation: #565acf;
-  --color-octicon: black;
+  --color-octicon: #1f2328;
   --color-border: #949595;
 }
 
@@ -270,7 +272,7 @@ h6 { font-size: 100% } /* φ^(0/5) */
   scroll-margin-block-end: 1em;
 }
 
-p, :--blockquote {
+p, :--indented {
   margin-block: 1em;
 }
 
@@ -380,14 +382,14 @@ summary .details-marker {
   }
 }
 
-:--blockquote {
-  /* NOTE: .horizontal/vertical.css の :--blockquote.horizontal 等に対抗するために詳細度を上げる。 */
+:--indented {
+  /* NOTE: .horizontal/vertical.css の :--indented.horizontal 等に対抗するために詳細度を上げる。 */
   & > :where(:--margins-no-anchor):first-child:first-child {
     margin-block-start: 0;
   }
 
   /* :--margins のうち、margin-block-end よりも margin-block-start の方が長い、または同じもの。<blockquote> の下側では長い方の margin-block は取り除かない。 */
-  & > :where(:--heading, p, details, :--blockquote):last-child:last-child {
+  & > :where(:--heading, p, details, :--indented):last-child:last-child {
     margin-block-end: 0;
   }
 }
@@ -403,17 +405,63 @@ ol:has(li:nth-of-type(100)) {
   padding-inline-start: 3em;
 }
 
+/* ol:lang(grc) {
+  counter-reset: greek-counter;
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: 1.5em auto;
+  gap: 0.5em;
+}
+
+ol:lang(grc) li {
+  list-style: none;
+  counter-increment: greek-counter;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1/3;
+}
+
+ol:lang(grc) li::before {
+  content: counter(greek-counter, lower-greek) "ˊ";
+  justify-self: flex-end;
+  justify-self: end;
+} */
+
 dd {
   margin-inline-start: 2em;
 }
 
+/* p:has(+ ol.inline) {
+  float: inline-start;
+}
 
-:--blockquote {
+ol.inline {
+  display: inline;
+  list-style-type: none;
+  counter-reset: inline-ol-item;
+  padding-inline-start: 0;
+  margin-block: 0;
+}
+
+ol.inline > li::before {
+  content: "(" counter(inline-ol-item) ") "
+}
+
+ol.inline > li {
+  counter-increment: inline-ol-item;
+  display: inline;
+} */
+
+:--indented {
   margin-inline: 0;
-  border: 0 solid var(--color-indentation-guide-quotation);
+  border: 0 solid var(--color-indentation-guide);
   border-inline-width: calc(2 / 13 * 1rem);
   padding-inline: calc(1rem - 2 / 13 * 1rem);
   text-align: justify;
+}
+
+:--blockquote {
+  border-color: var(--color-indentation-guide-quotation);
 }
 
 small:has(> p) {
@@ -491,7 +539,7 @@ kbd {
 
   opacity: 0.1;
 
-  @nest :--blockquote & {
+  @nest :--indented & {
     inset-inline-start: calc(-44 / 39 * 1em - 1rem); /* (the value of .header-anchor not in blockquote) - (blockquote indentation width) */
   }
 

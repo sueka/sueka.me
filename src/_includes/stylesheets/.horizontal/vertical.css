@@ -9,7 +9,7 @@
 
 /* cf. ./horizontal.css */
 
-@custom-selector :--blockquote blockquote, .blockquote-like;
+@custom-selector :--indented blockquote, .blockquote-like, .indented;
 @custom-selector :--image figure, img, picture, svg;
 
 %horizontal {
@@ -26,7 +26,7 @@
   writing-mode: vertical-rl; /* Safari (15.1, iOS 15.2) では継承するか直接指定するかで振る舞いが変わることがあるので、明示的に指定している。 TODO: Delete this line */
 }
 
-:is(p, :--blockquote).horizontal {
+:is(p, :--indented).horizontal {
   /* NOTE: 27em > 100vw - 2em のときは 100vw - 2em になるべきなので、min-width は使えない。 */
   width: min(
     max(
@@ -61,7 +61,7 @@ p.horizontal {
 }
 
 /* TODO: blockquote > p 以外の構造でもうまく動くようにする? */
-:--blockquote.horizontal {
+:--indented.horizontal {
   margin: 0 1em; /* ./reset.css */
   border-width: calc(2 / 13 * 1rem) 0;
   /* padding: calc(1rem - 2 / 13 * 1rem) 0; */
@@ -72,7 +72,7 @@ p.horizontal {
   overflow-y: auto;
 }
 
-:--blockquote.horizontal > p {
+:--indented.horizontal > p {
   @extend %horizontal;
 
   margin: revert;

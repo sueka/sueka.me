@@ -92,6 +92,14 @@ a:visited {
   color: var(--color-visited);
 }
 
+a:link em {
+  color: var(--color-link);
+}
+
+a:visited em {
+  color: var(--color-visited);
+}
+
 pre {
   text-align: start;
 }
@@ -157,6 +165,12 @@ ruby > rt:lang(ja, jpn-archaic) {
   text-justify: inter-word;
   display: inline-block;
   display: inline flow-root; /* for browsers that don't support inter-word: Safari */
+}
+
+.ninojiten {
+  @extend sup, sub;
+  /* vertical-align: sub;
+  font-size: 71%; */
 }
 
 .shiroten {

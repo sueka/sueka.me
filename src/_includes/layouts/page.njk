@@ -48,6 +48,7 @@
     <link href="{{ '~/assets/scripts/compileMermaid.js' | url(true) }}" rel="preload" as="script" />
     <link href="{{ '~/assets/scripts/resizeMermaidDiagrams.js' | url(true) }}" rel="preload" as="script" />
     {#- <link href="https://fonts.googleapis.com/css?family=Noto+Serif+Hebrew|Noto+Sans+Hebrew" rel="preload" as="style" /> #}
+    <link href="{{ '~/assets/stylesheets/print.css' | url(true) }}" rel="preload" as="style" />
 
     <link href="{{ '~/assets/stylesheets/main.css' | url(true) }}" rel="stylesheet" />
     <link href="{{ '~/assets/stylesheets/dark.css' | url(true) }}" rel="stylesheet" media="(prefers-color-scheme: dark)" />
@@ -93,6 +94,9 @@
     {%- if he %}
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+Hebrew|Noto+Sans+Hebrew" rel="stylesheet" />
     {%- endif %}
+
+    {#- print #}
+    <link href="{{ '~/assets/stylesheets/print.css' | url(true) }}" rel="stylesheet" media="print" />
   </head>
   <body>
     <div class="book">

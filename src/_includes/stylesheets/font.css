@@ -1,33 +1,45 @@
 :root {
   --font-text: serif;
   --font-text-emphasized: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
-  --font-code: ui-monospace, Consolas, Inconsolata, monospace;
+  --font-code: ui-monospace, monospace;
   --font-ui: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
 }
 
 [lang]:where(:not([lang=""]):not(:lang(mul, und, zxx, mis))) {
-  --font-text: serif;
-  --font-text-emphasized: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
-  --font-code: ui-monospace, Consolas, Inconsolata, monospace;
+  --font-text: "Linux Libertine", serif;
+  --font-text-emphasized: "Linux Biolinum", system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
+  --font-code: ui-monospace, monospace;
 }
 
 [lang]:where(:not([lang=""]):not(:lang(mul)):not(:lang(und)):not(:lang(zxx)):not(:lang(mis))) {
-  --font-text: serif;
-  --font-text-emphasized: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
-  --font-code: ui-monospace, Consolas, Inconsolata, monospace;
+  --font-text: "Linux Libertine", serif;
+  --font-text-emphasized: "Linux Biolinum", system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
+  --font-code: ui-monospace, monospace;
+}
+
+@font-face {
+  font-family: ;
+  src: local("CodeM");
+  size-adjust: 130%;
 }
 
 [lang="ja"],
 [lang="jpn-archaic"] {
   --font-text: "YuMincho +36p Kana", "Yu Mincho", serif;
   --font-text-emphasized: "Hiragino Sans", "Yu Gothic Medium", sans-serif;
-  --font-code: CodeM, "Myrica M", Ricty, ui-monospace, monospace;
+  --font-code: "CodeM", "Myrica M", "Ricty", ui-monospace, monospace;
 }
 
 [lang="he"],
 [lang="hbo"] {
   --font-text: "Noto Serif Hebrew", serif;
   --font-text-emphasized: "Noto Sans Hebrew", sans-serif;
+}
+
+[lang="el"],
+[lang="grc"] {
+  --font-text: "Linux Libertine", serif;
+  --font-text-emphasized: "Linux Biolinum", sans-serif;
 }
 
 html,
@@ -48,7 +60,12 @@ th {
 }
 
 code {
-  font-family: var(--font-code);
+  /* font-family: var(--font-code); */
+  font-family: "code-m";
+  /* font-family: "Myrica M";
+  font-family: "PlemolJP";
+  font-family: "IPAGothic"; */
+  font-family: "Source Han Code JP";
 
   /* code の内部ではフォントの変更を無視する。 */
   & * {

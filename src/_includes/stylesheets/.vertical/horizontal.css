@@ -9,7 +9,7 @@
 
 /* cf. ./vertical.css */
 
-@custom-selector :--blockquote blockquote, .blockquote-like;
+@custom-selector :--indented blockquote, .blockquote-like, .indented;
 @custom-selector :--image figure, img, picture, svg;
 
 %vertical {
@@ -26,7 +26,7 @@
   writing-mode: horizontal-tb; /* Safari (15.1, iOS 15.2) では継承するか直接指定するかで振る舞いが変わることがあるので、明示的に指定している。 TODO: Delete this line */
 }
 
-:is(p, :--blockquote).vertical {
+:is(p, :--indented).vertical {
   height: min(
     max(
       29em,
@@ -80,7 +80,7 @@ p.vertical {
 }
 
 /* TODO: blockquote > p 以外の構造でもうまく動くようにする? */
-:--blockquote.vertical {
+:--indented.vertical {
   margin: 1em 0; /* ./reset.css */
   border-width: 0 calc(2 / 13 * 1rem);
   padding: 0 calc(1rem - 2 / 13 * 1rem);
@@ -90,7 +90,7 @@ p.vertical {
   overflow-y: revert;
 }
 
-:--blockquote.vertical > p {
+:--indented.vertical > p {
   @extend %vertical;
 
   margin: revert;

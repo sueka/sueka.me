@@ -1,4 +1,4 @@
-@custom-selector :--blockquote blockquote, .blockquote-like;
+@custom-selector :--indented blockquote, .blockquote-like, .indented;
 
 html {
   font-size: 9pt;
@@ -82,7 +82,7 @@ body {
     display: none;
   }
 
-  & .content :is(p, :--blockquote).vertical {
+  & .content :is(p, :--indented).vertical {
     /* フィードではカラム数を正確に知ることができないため、vw に依存しないようにする。 */
     height: min(
       29em,
