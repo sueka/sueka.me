@@ -1,4 +1,6 @@
-import { DOMParser, assert, parse } from '../deps.ts'
+import { DOMParser } from '@b-fuze/deno-dom'
+import { assert } from '@std/assert'
+import { parse } from '@std/yaml'
 import html from './html.ts'
 import isElement from './isElement.ts'
 

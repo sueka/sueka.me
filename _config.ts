@@ -1,14 +1,14 @@
 import {
   lume, nunjucks, relativeUrls, slugifyUrls, sourceMaps,
   // text
-  codeHighlight, date, ja,
+  codeHighlight, date,
   // css
   postcss, autoprefixer, postcssNesting,
-  // assert
-  assert,
-  // yaml
-  parse
 } from './deps.ts'
+
+import { ja } from 'npm:date-fns/locale/ja'
+import { assert } from '@std/assert'
+import { parse } from '@std/yaml'
 
 // media
 import octicons from '@primer/octicons'
