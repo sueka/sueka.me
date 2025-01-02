@@ -21,6 +21,7 @@
     "markdown-it-ruby": "npm:markdown-it-ruby@^0.1.1",
     "postcss-custom-selectors": "npm:postcss-custom-selectors@^7.1.12",
     "postcss-extend-rule": "npm:postcss-extend-rule@^4.0.0",
+    "postcss-nesting": "npm:postcss-nesting@^13.0.1",
     "truncate-html": "npm:truncate-html@^1.1.2"
   },
   "tasks": {

@@ -6,6 +6,7 @@ import {
   postcss, autoprefixer,
 } from './deps.ts'
 
+import postcssNesting from 'postcss-nesting'
 import { ja } from 'npm:date-fns/locale/ja'
 import { assert } from '@std/assert'
 import { parse } from '@std/yaml'
@@ -101,6 +102,7 @@ const plugins = [
   //   },
   // }),
   autoprefixer(),
+  postcssNesting(),
   // @ts-expect-error: TS2349
   postcssCustomSelectors(),
   postcssExtendRule(),

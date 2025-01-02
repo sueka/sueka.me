@@ -491,12 +491,12 @@ kbd {
 
   opacity: 0.1;
 
-  @nest :--blockquote & {
+  :--blockquote & {
     inset-inline-start: calc(-44 / 39 * 1em - 1rem); /* (the value of .header-anchor not in blockquote) - (blockquote indentation width) */
   }
 
-  /* Not `@nest :--list-item &` because <dd> has inline-start margin. */
-  @nest li & {
+  /* Not `:--list-item &` because <dd> has inline-start margin. */
+  li & {
     inset-inline-start: calc(-44 / 39 * 1em - 2rem); /* (the value of .header-anchor not in list item) - (list item indentation width) */
   }
 }

@@ -13,7 +13,7 @@ kbd {
   vertical-align: middle;
   vertical-align: -moz-middle-with-baseline;
 
-  @nest s & {
+  s & {
     /* display: inline flow-root doesn't imply text-decoration: inherit. */
     text-decoration-line: inherit;
   }
