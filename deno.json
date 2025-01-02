@@ -6,7 +6,7 @@
     "@std/yaml": "jsr:@std/yaml@^0.204.0",
     "css-has-pseudo": "npm:css-has-pseudo@^6.0.5",
     "date-fns": "npm:date-fns@^2.30.0",
-    "lume/": "https://deno.land/x/lume@v2.0.3/",
+    "lume/": "https://deno.land/x/lume@v2.4.3/",
     "markdown-it-abbr": "npm:markdown-it-abbr@^1.0.4",
     "markdown-it-anchor": "npm:markdown-it-anchor@^8.6.7",
     "markdown-it-attrs": "npm:markdown-it-attrs@^4.3.1",

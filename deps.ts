@@ -1,4 +1,4 @@
-export { autoprefixer, postcssNesting } from 'lume/deps/postcss.ts'
+export { autoprefixer } from 'lume/deps/postcss.ts'
 export { default as lume } from 'lume/mod.ts'
 export { default as codeHighlight } from 'lume/plugins/code_highlight.ts'
 export { default as date } from 'lume/plugins/date.ts'

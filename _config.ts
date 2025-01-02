@@ -3,7 +3,7 @@ import {
   // text
   codeHighlight, date,
   // css
-  postcss, autoprefixer, postcssNesting,
+  postcss, autoprefixer,
 } from './deps.ts'
 
 import { ja } from 'npm:date-fns/locale/ja'
@@ -101,7 +101,6 @@ const plugins = [
   //   },
   // }),
   autoprefixer(),
-  postcssNesting(),
   // @ts-expect-error: TS2349
   postcssCustomSelectors(),
   postcssExtendRule(),
