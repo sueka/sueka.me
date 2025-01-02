@@ -55,6 +55,7 @@ templateEngine:
 
 英語には[6]{.upright}つの歯擦子音がある。すなはち、<wbr>[/s z ʃ ʒ tʃ dʒ/]{.ipa} である。単数名詞がこれらの音のいづれかで終はる場合、その複数形は [/ɪz/]{.ipa} か [/əz/]{.ipa}（一部の転写体系では [/ᵻz/]{.ipa} と省略される。）を附け加へることで発話される。綴りは <i lang="en">-es</i> か、単数形がすでに <i lang="en">-e</i> で終はってゐるなら <i lang="en">-s</i> を附加する:
 
+|||
 |-|-|-
 |[kiss]{lang=en}|[kisses]{lang=en}|[/ˈkɪs<b>ᵻz</b>/]{.ipa}
 |[phase]{lang=en}|[phases]{lang=en}|[/ˈfeɪz<b>ᵻz</b>/]{.ipa}
@@ -67,6 +68,7 @@ templateEngine:
 
 ほとんどの英語変種には、語末で見られる歯擦でない無声子音が[5]{.upright}つある。すなはち、<wbr>[/p t k f θ/]{.ipa} である。一部の変種には [/x/]{.ipa} もある。単数形が歯擦音でない無声子音で終はるなら、複数形は、通常、<wbr>[/s/]{.ipa} を附け加へることで形成される。綴りは <i lang="en">-s</i> を附加する:
 
+|||
 |-|-|-
 |[lap]{lang=en}|[laps]{lang=en}|[/læp<b>s</b>/]{.ipa}
 |[cat]{lang=en}|[cats]{lang=en}|[/kæt<b>s</b>/]{.ipa}
@@ -81,12 +83,14 @@ templateEngine:
 
 歯擦でない有声子音で終はる単数名詞については、複数形は [/z/]{.ipa}（有声歯擦音）を加へ、綴りは -s を附加する:
 
+|||
 |-|-|-
 |[girl]{lang=en}|[girls]{lang=en}|[/ɡɜːrl<b>z</b>/]{.ipa}
 |[chair]{lang=en}|[chairs]{lang=en}|[/tʃɛər<b>z</b>/]{.ipa}
 
 英語では母音は全て有声である。母音で終はる名詞は、同様に、<wbr>[/z/]{.ipa} を附け加へて複数形を形成する。綴りは普通 <i lang="en">-s</i> を附加するが、（下で説明される）いくつかの例では、代はりに <i lang="en">-es</i> を附加することがある:
 
+|||
 |-|-|-
 |[boy]{lang=en}|[boys]{lang=en}|[/bɔɪ<b>z</b>/]{.ipa}
 
@@ -94,6 +98,7 @@ templateEngine:
 
 子音に先行される <i lang="en">o</i> で終はる単数名詞は、多くの場合、（[/z/]{.ipa} と発音される）<wbr><i lang="en">-es</i> を附け加へることで複数形になる:
 
+|||
 |-|-|-
 |[hero]{lang=en}|[heroes]{lang=en}|[/ˈhɪɹoʊ<b>z</b>/]{.ipa}、<wbr>[/ˈhiɹoʊ<b>z</b>/]{.ipa} または [/ˈhɪəɹəʊ<b>z</b>/]{.ipa}
 |[potato]{lang=en}|[potatoes]{lang=en}|[/pəˈteɪtoʊ<b>z</b>/]{.ipa} または [/pəˈteɪtəʊ<b>z</b>/]{.ipa}
@@ -102,6 +107,7 @@ templateEngine:
 
 たゞし、ほとんどのイタリア語借用語を含む、外来語に由来する多くの名詞は、単に <i lang="en">-s</i> を附加する:
 
+||
 |-|-
 |[canto]{lang=en}|[cantos]{lang=en}
 |[hetero]{lang=en}|[heteros]{lang=en}
@@ -117,6 +123,7 @@ templateEngine:
 
 子音に先行される、有声の（つまり、母音として使はれてゐる）<wbr><i lang="en">y</i> で終はる名詞は、大抵、その <i lang="en">y</i> を落として、<wbr><i lang="en">-ies</i><wbr>（[/iz/]{.ipa}、あるいは [y]{lang=en} が [/ai/]{.ipa} と発音される単語では [/aiz/]{.ipa} と発音される。）を附加する:
 
+|||
 |-|-|-
 |[cherry]{lang=en}|[cherries]{lang=en}|[/ˈt͡ʃɛɹi<b>z</b>/]{.ipa}
 |[lady]{lang=en}|[ladies]{lang=en}|[/ˈleɪdi<b>z</b>/]{.ipa}
@@ -124,6 +131,7 @@ templateEngine:
 
 英語では、<wbr><i lang="en">qu</i> は、[2]{.upright}つの子音（[/kw/]{.ipa}）か、たまに[1]{.upright}つの子音（[/k/]{.ipa}）を表す二重音字なので、<wbr><i lang="en">quy</i> で終はる単語もこのパターンに従ふ:
 
+|||
 |-|-|-
 |[colloquy]{lang=en}|[colloquies]{lang=en}|[/ˈkɒləkwi<b>z</b>/]{.ipa}
 |[obsequy]{lang=en}|[obsequies]{lang=en}|[/ˈɒbsəkwi<b>z</b>/]{.ipa}
@@ -135,6 +143,7 @@ templateEngine:
 
 母音に先行される <i lang="en">y</i> で終はる単語は、<wbr><i lang="en">-s</i> を附け加へて複数形を形成する:
 
+|||
 |-|-|-
 |[day]{lang=en}|[days]{lang=en}|[/ˈdeɪ<b>z</b>/]{.ipa}
 |[monkey]{lang=en}|[monkeys]{lang=en}|[/ˈmʌŋki<b>z</b>/]{.ipa}
@@ -145,6 +154,7 @@ templateEngine:
 
 <i lang="en">-i</i> の形で書かれる名詞は通常 <i lang="en">-is</i> で終はる複数形を持つが、<wbr><i lang="en">-ies</i> で終はるものもいくつかある。
 
+|||
 |-|-|-
 |[alibi]{lang=en}|[alibis]{lang=en}|[/ˈæl.ə.baɪ<b>z</b>/]{.ipa}
 |[bikini]{lang=en}|[bikinis]{lang=en}|[/bɪˈkiːni<b>z</b>/]{.ipa}
@@ -156,6 +166,7 @@ templateEngine:
 
 古英語と中期英語では、無声摩擦音 [/f/]{.ipa} と [/θ/]{.ipa} は、有声語尾の前ではそれぞれ有声摩擦音 [/v/]{.ipa} と [/ð/]{.ipa} に変化した。一部の単語で、この有声化が現代英語の複数形に残ってゐる。[/f/]{.ipa} が [/v/]{.ipa} に変はる場合、その変化が正書法にも現れる。また、単数形が <i lang="en">-e</i> で終はってゐないなら、この場合［訳注　[/f/]{.ipa} が [/v/]{.ipa} に変はる場合］、サイレント <i lang="en">e</i> が附け加へられる。
 
+|||
 |-|-|-
 |[bath]{lang=en}|[baths]{lang=en}|[/bɑː<b>ð</b>z/]{.ipa}、<wbr>[/bæ<b>ð</b>z/]{.ipa}
 |[mouth]{lang=en}[^a1]|[mouths]{lang=en}|[/maʊ<b>ð</b>z/]{.ipa}
@@ -166,17 +177,20 @@ templateEngine:
 
 さらに、複数形で [/s/]{.ipa} が有声化する単語が1つある:
 
+|||
 |-|-|-
 |[house]{lang=en}|[houses]{lang=en}[^a1]|[/haʊ<b>z</b>ᵻz/]{.ipa}
 
 それでも、<wbr>[/f/]{.ipa} または [/θ/]{.ipa} で終はる多くの名詞（正書法で [/f/]{.ipa} が <i lang="en">gh</i> または <i lang="en">ph</i> で表される全ての単語を含む。）は無声子音を維持する:
 
+||
 |-|-
 |[moth]{lang=en}|[moths]{lang=en}[^a2]
 |[proof]{lang=en}|[proofs]{lang=en}
 
 一部は両方ある:
 
+||
 |-|-
 |[dwarf]{lang=en}[^a3]|[dwarfs]{lang=en}/[dwarves]{lang=en}
 |[hoof]{lang=en}|[hoofs]{lang=en}/[hooves]{lang=en}
@@ -246,6 +260,7 @@ templateEngine:
 
 少数の名詞の複数形は、単数形に <i lang="en">-n</i> または <i lang="en">-en</i> を附け加へることで形成される。これは古英語の弱変化に由来する。一般的には次の[3]{.upright}語のみが見られる:
 
+|||
 |-|-|-
 |[ox]{lang=en}|[oxen]{lang=en}|（とくに輓獣の群れに言及する場合。非標準のアメリカ英語ではときどき <i lang="en">oxes</i> となる。）<sup>\[要出典\]</sup>
 |[child]{lang=en}|[children]{lang=en}|（唯一の可能な複数。古英語の複数である <i lang="ang">cildra</i>/<i lang="ang">cildru</i> に <i lang="ang">-en</i> が附加した二重複数形として始まったもので、この古英語の複数は、アイルランドでは今でも時折り出くはす、<wbr><i lang="en">Childermas</i> に見られる古風な複数形の <i lang="en">childer</i> にもなった。）
@@ -257,6 +272,7 @@ templateEngine:
 
 方言的な、まれな、あるいは古風な用法では、<wbr><i lang="en">-(e)n</i> で終はる、次のやうな複数形が見られる:
 
+|||
 |-|-|-
 |[bee]{lang=en}|[been]{lang=en}|（方言的、アイルランド。）
 |[cow]{lang=en}|[kine]{lang=en}|（古風または地域的。実際には、早期の複数 <i>[kye]{lang=en}</i><wbr>（スコットランド語の <i>[kye]{lang=sco}</i> と［英語の］<i>[cows]{lang=en}</i> を比較せよ。）に接尾辞 [-en]{lang=en} を附け加へたもので、二重複数形を形成してゐる。）
@@ -274,6 +290,7 @@ templateEngine:
 
 複数形は、単数形の母音を変更することによって形成されることがある（これらの複数形は<em><ruby>母音変異<rt lang="en">mutated</ruby>複数形</em>と呼ばれることがある。）:
 
+||
 |-|-
 |[foot]{lang=en}|[feet]{lang=en}
 |[goose]{lang=en}|[geese]{lang=en}
@@ -322,6 +339,7 @@ templateEngine:
 
 末尾の <i lang="en">-a</i> は <i lang="en">-ae</i><wbr>（<i lang="en">-æ</i> もある<sup>\[要出典\]</sup>。）になるか、あるいは単に <i lang="en">-s</i> を附加する:
 
+||
 |-|-
 |[alumna]{lang=en}|[alumnae]{lang=en}
 |[antenna]{lang=en}|[antennae]{lang=en}
@@ -335,6 +353,7 @@ templateEngine:
 
 末尾の <i lang="en">-ex</i> または <i lang="en">-ix</i> は <i lang="en">-ices</i><wbr>（[/ᵻsiːz/]{.ipa} と発音される。）になるか、あるいは単に <i lang="en">-es</i> を附加する:
 
+||||
 |-|-|-|-
 |[index]{lang=en}|[indices]{lang=en}|[/ˈɪndᵻsiːz/]{.ipa}|または [indexes]{lang=en}
 |[matrix]{lang=en}|[matrices]{lang=en}|[/ˈmeɪtrᵻsiːz/]{.ipa}
@@ -342,6 +361,7 @@ templateEngine:
 
 末尾の <i lang="en">-is</i> は <i lang="en">-es</i><wbr>（[/iːz/]{.ipa} と発音される。）または <i lang="en">-ises</i>/<i lang="en">-ides</i> になる:
 
+|||
 |-|-|-
 |[axis]{lang=en}|[axes]{lang=en}|[/ˈæksiːz/]{.ipa}
 |[genesis]{lang=en}|[geneses]{lang=en}|[/dʒɛn.ə.siːz/]{.ipa}
@@ -354,6 +374,7 @@ templateEngine:
 
 ギリシア語の <i lang="grc-Latn">polis</i>［訳注　[πόλις]{lang=grc}］から派生した語は除く。これらは <i lang="en">poleis</i><wbr>（[/iːs/]{.ipa} または [/iːz/]{.ipa} と発音される。）になる:
 
+|||
 |-|-|-
 |[acropolis]{lang=en}|[acropoleis]{lang=en}|[/æˈkropoliːs/]{.ipa}
 
@@ -361,6 +382,7 @@ templateEngine:
 
 末尾の <i lang="en">-ies</i> は変化せず、そのまゝにされる:
 
+||
 |-|-
 |[series]{lang=en}|[series]{lang=en}
 |[species]{lang=en}|[species]{lang=en}
@@ -370,6 +392,7 @@ templateEngine:
 <a id="datum_data"></a>
 末尾の <i lang="en">-um</i> は <i lang="en">-a</i> になるか、あるいは単に <i lang="en">-s</i> を附加する:
 
+||
 |-|-
 |[addendum]{lang=en}|[addenda]{lang=en}/[addendums]{lang=en}
 |[agendum]{lang=en}（廃語。ほとんどの辞書で立項されてゐない。）|[agenda]{lang=en} は、「会議における議題の一覧」を意味し、<wbr><i lang="en">agendas</i> といふ複数形を持つ。
@@ -392,6 +415,7 @@ templateEngine:
 
 <!-- � -->
 
+||
 |-|-
 |[alumnus]{lang=en}|[alumni]{lang=en}
 |[cactus]{lang=en}|[cactuses]{lang=en}/[cacti]{lang=en}（アリゾナ州では多くの人が単数と複数の両方として <i lang="en">cactus</i> を選ぶことを避けてゐる<sup>\[要出典\]</sup>。）
@@ -416,6 +440,7 @@ templateEngine:
 
 末尾の <i lang="en">-us</i> は複数形で変化せず、そのまゝにされる（第四格変化——複数形は長い [ū]{lang=la} を持ち、単数形の短い [u]{lang=la} と区別される。）:
 
+||
 |-|-
 |[meatus]{lang=en}|[meatus]{lang=en}（たゞし、通常は <i lang="en">meatuses</i>。）
 |[status]{lang=en}|[status]{lang=en}（たゞし、通常は <i lang="en">statuses</i>。）
@@ -428,6 +453,7 @@ templateEngine:
 <a id="phenomenon"></a>
 末尾の <i lang="en">-on</i> は <i lang="en">-a</i> になる:
 
+||
 |-|-
 |[automaton]{lang=en}|[automata]{lang=en}/[automatons]{lang=en}
 |[criterion]{lang=en}|[criteria]{lang=en}/[criterions]{lang=en}（後者の形式はまれ。）
@@ -436,6 +462,7 @@ templateEngine:
 
 末尾の <i lang="en">-as</i> が <i lang="en">-antes</i> に変化する場合が[1]{.upright}つある:
 
+||
 |-|-
 |[Atlas]{lang=en}|[Atlantes]{lang=en}（<i>ティーターン像</i>）に対して、
 |[atlas]{lang=en}|[atlases]{lang=en}（<i>地図集</i>）
@@ -443,6 +470,7 @@ templateEngine:
 <!-- NOTE: 原文は . で終はるが、: に変更した。 -->
 ギリシア語由来の名詞の末尾の <i lang="en">-ma</i> は、<wbr><i lang="en">-mata</i> になることもあるが、<wbr><i lang="en">-s</i> も常に受け入れられ、また多くの場合、より一般的である:
 
+||
 |-|-
 |[stigma]{lang=en}|[stigmata]{lang=en}/[stigmas]{lang=en}
 |[stoma]{lang=en}|[stomata]{lang=en}/[stomas]{lang=en}
@@ -459,6 +487,7 @@ templateEngine:
 
 一部のフランス語由来の名詞は <i lang="en">-x</i> を附加する。これは無音か、あるいは [/z/]{.ipa} と発音されることがある:
 
+||
 |-|-
 |[beau]{lang=en}|[beaux]{lang=en} または [beaus]{lang=en}
 |[bureau]{lang=en}|[bureaux]{lang=en} または [bureaus]{lang=en}
@@ -470,6 +499,7 @@ templateEngine:
 
 イタリア語の名詞、とくに音楽と藝術の専門用語は、イタリア語の複数形を維持することがよくある:
 
+||
 |-|-
 |[cello]{lang=en}|[celli]{lang=en}
 |[timpano]{lang=en}|[timpani]{lang=en}
@@ -478,6 +508,7 @@ templateEngine:
 
 スラヴ諸語由来の名詞は、言語固有のルールに従って <i lang="en">-a</i> または <i lang="en">-i</i> を附加するか、あるいは単に <i lang="en">-s</i> を附加する:
 
+||
 |-|-
 |[kniazhestvo]{lang=en}|[kniazhestva]{lang=en} / [kniazhestvos]{lang=en}
 |[kobzar]{lang=en}|[kobzari]{lang=en} / [kobzars]{lang=en}
@@ -485,6 +516,7 @@ templateEngine:
 
 ヘブライ語由来の名詞は、言語固有のルールに従って <i lang="en">-im</i> または <i lang="en">-ot</i><wbr>（概して、男性[/]{.upright}女性。）を附加するか、あるいは単に <i lang="en">-s</i> を附加する:
 
+||
 |-|-
 |[cherub]{lang=en}|[cherubim]{lang=en} / [cherubs]{lang=en}
 |[seraph]{lang=en}|[seraphim]{lang=en} / [seraphs]{lang=en}（ヘブライ語の単数形は <i lang="he-Latn">saraph</i>［訳注　[שרף]{lang=he}］。<wbr><i lang="en">seraph</i> は <i lang="en">seraphim</i> からの逆成の結果である。欽定訳聖書では <i lang="en">seraphims</i> といふ形式が見られる。）
@@ -495,6 +527,7 @@ templateEngine:
 
 日本語由来の名詞の多くは複数形を持たず、変化しない:
 
+||
 |-|-
 |[bentō]{lang=en}|[bentō]{lang=en}
 |[otaku]{lang=en}|[otaku]{lang=en}
@@ -504,6 +537,7 @@ templateEngine:
 
 ニュージーランド英語では、マオリ語由来の名詞は <i lang="en">-s</i> の形を取るか、分離した複数形を持たないかである。マオリ文化により密接であり、その文脈で使用される単語は、同じ形式を取る傾向があるが、植物名や動物名は、文脈に依存して、<wbr><i lang="en">-s</i> の形を取る場合と取らない場合とがある。多くの人は省略の方が正しいと考へてゐる:
 
+||
 |-|-
 |[kiwi]{lang=en}[^b1]|[kiwi]{lang=en}/[kiwis]{lang=en}
 |[kowhai]{lang=en}|[kowhai]{lang=en}/[kowhais]{lang=en}
@@ -517,6 +551,7 @@ templateEngine:
 
 カナダ、グリーンランドおよびアラスカのイヌイットによって話されるイヌクティトゥット語と関聯言語から借用した一部の単語は、元の複数形を維持してゐる。<wbr><i lang="en">Inuit</i> といふ単語自体は複数形である。カナダ英語はイヌクティトゥット語の単数の <i lang="en">Inuk</i> も借用してゐるが、これはカナダ以外の英語では一般的ではない。
 
+||
 |-|-
 |[Inuk]{lang=en}（一般的ではない。）|[Inuit]{lang=en}
 |[inukshuk]{lang=en}|[inukshuit]{lang=en}（まれ。）
@@ -526,6 +561,7 @@ templateEngine:
 
 上のもの以外の言語に由来する名詞は、一般に、まるで生来の英語の単語であるかのやうに、複数形を形成する:
 
+|||
 |-|-|-
 |[canoe]{lang=en}|[canoes]{lang=en}||
 |[cwm]{lang=en}|[cwms]{lang=en}|<i>ウェールズ語の谷</i>。ウェールズ語の複数形は <i lang="cy">cymoedd</i>。
@@ -542,6 +578,7 @@ templateEngine:
 
 英語の複合名詞の大部分は、末尾に[1]{.upright}つの基本的な<ruby>項<rt lang="en">term</ruby>、あるいは<mark>[<ruby>主要部<rt lang="en">head</ruby>](https://en.wikipedia.org/wiki/Head_(linguistics))</mark>を持つ。これらの主要部は名詞であり、典型的な方法で複数化される:
 
+||
 |-|-
 |[able seaman]{lang=en}|[able seamen]{lang=en}
 |[head banger]{lang=en}|[head bangers]{lang=en}
@@ -549,6 +586,7 @@ templateEngine:
 
 一部の複合語は、先頭に[1]{.upright}つの主要部を持つ。これらの主要部も名詞である。通常、主要部は複数化され、[2]{.upright}番目の（通常は後置形容詞の）項は変化せずに残る:
 
+||
 |-|-
 |[attorney general]{lang=en}|[attorneys general]{lang=en}
 |[bill of attainder]{lang=en}|[bills of attainder]{lang=en}
@@ -570,6 +608,7 @@ templateEngine:
 
 複合語が[2]{.upright}つの主要部を持つと考へられうる場合、最初の主要部が不規則な複数形を持つなら、両方の主要部が複数化される傾向がある<sup>\[要出典\]</sup>:
 
+||
 |-|-
 |[man-child]{lang=en}|[men-children]{lang=en}
 |[manservant]{lang=en}|[menservants]{lang=en}
@@ -577,6 +616,7 @@ templateEngine:
 
 しかし、最初の主要部が標準的な複数形を持つやうな<ruby>二重主要部<rt lang="en">Two-headed</ruby>の複合語は、最後の主要部だけが複数化する傾向がある:
 
+||
 |-|-
 |[city-state]{lang=en}|[city-states]{lang=en}
 |[nurse-practitioner]{lang=en}|[nurse-practitioners]{lang=en}
@@ -584,6 +624,7 @@ templateEngine:
 
 陸海軍の用法では、将官・将校の肩書きの一部としての <i lang="en">general</i>、<wbr><i lang="en">colonel</i>、<wbr><i lang="en">commander</i> といった用語は、語源的には形容詞だが、名詞として採用されてをり、したがって、主要部なので、これらの用語を採用した肩書きの複合語は、末尾で複数化される:
 
+||
 |-|-
 |[brigadier general]{lang=en}|[brigadier generals]{lang=en}
 |[lieutenant commander]{lang=en}|[lieutenant commanders]{lang=en}
@@ -592,6 +633,7 @@ templateEngine:
 
 不規則な複数形を持つ主要部を持つ、[3]{.upright}語以上の複合語については、その項［訳注　主要部］だけが複数化される:
 
+||
 |-|-
 |[man-about-town]{lang=en}|[men-about-town]{lang=en}
 |[man-of-war]{lang=en}/[man-o’-war]{lang=en}|[men-of-war]{lang=en}/[men-o’-war]{lang=en}
@@ -600,6 +642,7 @@ templateEngine:
 
 先頭に主要部のある[3]{.upright}語以上の他の多くの複合語——とくに、その複合語が<em>その場限り</em>の場合や、その主要部が隠喩的な場合。——については、一般に、最初または最後の主要な項を複数化することが受け入れられると見做されてゐる（単数のときに<ruby>スペース区切り<rt lang="en">open</ruby>なら、このやうな複合語は、後者の［最後の主要な項を複数化する］場合、複数のときにハイフンを使ふ傾向がある。）:
 
+||
 |-|-
 |[ham on rye]{lang=en}|[hams on rye]{lang=en}/[ham-on-ryes]{lang=en}
 |[jack-in-the-box]{lang=en}|[jacks-in-the-box]{lang=en}/[jack-in-the-boxes]{lang=en}
@@ -607,12 +650,14 @@ templateEngine:
 
 少数の拡大解釈された複合語については、両方の項が複数化されることがある——さらに、別の選択肢があり、より普及してゐることがある（例: <i lang="en">heads of state</i>）:
 
+||
 |-|-
 |[head of state]{lang=en}|[heads of states]{lang=en}/[heads of state]{lang=en}
 |[son of a bitch]{lang=en}|[sons of bitches]{lang=en}/[sons-of-a-bitch]{lang=en}
 
 一部の <i lang="en">o</i> を中心に構築される拡大解釈された複合語では、最後の項だけが複数化される（あるいは、最後の項がすでに複数なら、変化せずに残される。）:
 
+||
 |-|-
 |[jack-o’-lantern]{lang=en}|[jack-o’-lanterns]{lang=en}
 |[will-o’-the-wisp]{lang=en}|[will-o’-the-wisps]{lang=en}
@@ -623,6 +668,7 @@ templateEngine:
 
 英語の複合語の多くはフランス語から直接借用されてをり、これらの語は一般に、やゝ異なる一式の規則に従ふ。主要部としての名詞と<ruby>記述形容詞<rt lang="en">a qualifying adjective</ruby>からなるフランス語の借用語では、フランス語の慣習と同じやうに両方の単語を複数化するのが正しい。通常、フランス語では、名詞が形容詞に先行する:
 
+||
 |-|-
 |[agent provocateur]{lang=en}|[agents provocateurs]{lang=en}
 |[entente cordiale]{lang=en}|[ententes cordiales]{lang=en}
@@ -631,6 +677,7 @@ templateEngine:
 
 一部の表現では、形容詞が名詞に先行する。この場合も依然として、フランス語の慣習と同じやうに両方の単語を複数化するのが正しいが、英語の形式では名詞だけが複数化することがある:
 
+||
 |-|-
 |[beau geste]{lang=en}|[beaux gestes]{lang=en} / [beau gestes]{lang=en}
 |[belle époque]{lang=en}|[belles époques]{lang=en} / [belle époques]{lang=en}
@@ -639,11 +686,13 @@ templateEngine:
 
 たゞし、<wbr><i lang="en">beau</i><wbr>（<i>美しい</i>または<i>ハンサムな</i>）、<wbr><i lang="en">nouveau</i><wbr>（<i>新しい</i>）または <i lang="en">vieux</i><wbr>（<i>古い</i>）といった形容詞は、母音または無音の <i lang="en">h</i> で始まる単数名詞（<i lang="en">homme</i> のやうな。）に先行する場合、<wbr><i lang="en">bel</i><wbr>（下の例に見られる。）、<wbr><i lang="en">nouvel</i> または <i lang="en">vieil</i> に変化する。（フランス語での発音を円滑にするために。）[ ]{.upright}この場合、英語の形式でもフランス語のやうに、名詞と形容詞の両方が複数化される:
 
+||
 |-|-
 |[bel homme]{lang=en}|[beaux hommes]{lang=en}
 
 その他のフランス語の複合表現では、主要部の名詞だけが複数化される:
 
+||
 |-|-
 |[aide-de-camp]{lang=en}|[aides-de-camp]{lang=en}
 |[coup d’état]{lang=en}|[coups d’état]{lang=en}
@@ -654,6 +703,7 @@ templateEngine:
 
 *たゞし*:
 
+|||
 |-|-|-
 |[tête-à-tête]{lang=en}|[tête-à-têtes]{lang=en}|（フランス語では、複数形は単数形と同一。）
 
@@ -673,6 +723,7 @@ templateEngine:
 
 言語学者の[スティーブン・ピンカー](https://en.wikipedia.org/wiki/Steven_Pinker)は、『言語を生み出す本能』で、<wbr><i lang="en">lowlife</i> や <i lang="en">flatfoot</i> のやうな、彼［ピンカー］自身は「<ruby>主要部の無い<rt lang="en">headless</ruby>単語」と呼び、典型的には<ruby>所有複合語<rt lang="en">bahuvrihi compounds</ruby>と呼ばれるものについて論じてゐる。これらの単語の中では、<wbr><i lang="en">life</i> や <i lang="en">foot</i> は、意味的には、主要部ではない。つまり、<ruby>ごろつき<rt lang="en">lowlife</ruby>は<ruby>命<rt lang="en">life</ruby>の一種ではないし、<ruby>扁平足<rt lang="en">flatfoot</ruby>は<ruby>足<rt lang="en">foot</ruby>の一種ではない。このやうな単語の通常の形式が単数なら、その単語の最後の構成素が通常は不規則な方法で複数化されるとしても、その単語は規則的な複数形を持つものとして扱はれる。ピンカーによれば、したがって、<wbr><i lang="en">lowlife</i> の複数形は <i lang="en">lowlifes</i> であって、「[lowlives]{lang=en}」ではない。その他の提案された例には、次のものが含まれる:
 
+||
 |-|-
 |[sabretooth]{lang=en}|[sabretooths]{lang=en}
 |[still life]{lang=en}|[still lifes]{lang=en}
@@ -696,6 +747,7 @@ templateEngine:
 
 [2]{.upright}つの部分を持つものを表す名詞は、形容詞として使はれる場合、単数形で現れる。その他の*絶対複数*は、形容詞としても変化せず、そのまゝである。
 
+||
 |-|-
 |[a pair of spectacles]{lang=en}|[a <b>spectacle</b> grinder]{lang=en}
 |[a pair of trousers]{lang=en}|[a <b>trouser</b> press]{lang=en}
@@ -703,6 +755,7 @@ templateEngine:
 
 単数形は存在するものゝ、複数形と比べるとめったに出くはさないやうな複数名詞もいくつかある:
 
+||
 |-|-
 |[nuptial]{lang=en}|[nuptials]{lang=en}
 |[phalanx]{lang=en}[^d1]|[phalanges]{lang=en}
@@ -750,8 +803,7 @@ templateEngine:
 
 一部の外国語由来の単語は、その（外国語形態論の）複数形としてよりよく知られてをり、英語話者には複数形があると認識されてゐさへしないことがよくある。==[記述的には](https://en.wikipedia.org/wiki/Linguistic_description)==、英語は、外国語の複数形を英語の単数形として<ruby>帰化させた<rt lang="en">has naturalized</ruby>ゝめ、英語の形態論では、これらの多くは複数形ではない。元の単数形の用法は、衒学的、<ruby>過剰修正的<rt lang="en">hypercorrective</ruby>、あるいは誤りだと見做されることがある。下の例においては、元の複数形は現在は一般的に単数形として使はれてをり、また、いくつかのケースでは、元の複数形から規則的な英語の複数（事実上の二重複数形。）が形成されてゐる。
 
-|元の単数形|元の複数形[/]{.upright}<br>|一般的な複数形\
-||一般的な単数形|
+|元の単数形|元の複数形[/]{.upright}<br>一般的な単数形|一般的な複数形
 |-|-|-
 |[agendum]{lang=en}|[agenda]{lang=en}[^f1]|[agendas]{lang=en}
 |[alga]{lang=en}|[algae]{lang=en}|[algae]{lang=en}
@@ -771,6 +823,7 @@ templateEngine:
 
 複数形が単数形として使はれることがある他の単語には、次のものが含まれる:
 
+||
 |-|-
 |[criterion]{lang=en}|[criteria]{lang=en}
 |[phenomenon]{lang=en}|[phenomena]{lang=en}
@@ -927,6 +980,7 @@ templateEngine:
 
 通貨単位は、その性質上、<ruby>内名<rt lang="en">endonym</ruby>の複数形で用ゐられることが少なくない:
 
+|||
 |-|-|-
 |[colón]{lang=en}|[colones]{lang=en}|スペイン語から。
 |[krona]{lang=en}|[kronor]{lang=en}<wbr>（<i lang="en">*kronas</i> は無い。）|スウェーデン語から。

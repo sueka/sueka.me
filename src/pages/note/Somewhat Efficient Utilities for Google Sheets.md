@@ -281,6 +281,7 @@ coo,buzz,neigh
 
 とすると、
 
+||||
 | -------- | -------- | ----- |
 | BIG CELL | BIG CELL | meow  |
 | BIG CELL | BIG CELL | croak |
