@@ -4,11 +4,10 @@ url: ./i-read-comprehends-general-relativity-1-math.html
 templateEngine:
   - njk
   - md
-date: 2020-10-29
-lastmod: 2024-06-08
+date: '2020-10-29'
+lastmod: '2024-06-08'
 useKaTeX: true
 ---
-
 『[一般相対性理論を一歩一歩数式で理解する](https://www.beret.co.jp/books/detail/638)』第1章（数学の準備）を読んだ。気付いたことを箇条書きにする。
 
 <small>

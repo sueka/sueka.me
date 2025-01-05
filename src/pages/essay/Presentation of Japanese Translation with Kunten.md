@@ -1,11 +1,11 @@
 ---
 title: 訓点による和訳の表示
 title_rubied: '{訓点|くん|てむ}による{和訳|わ|やく}の{表示|へう|じ}'
-date: 2022-03-29
-lastmod: 2023-03-27
+date: '2022-03-29'
+lastmod: '2023-03-27'
+templateEngine: null
 he: true
 ---
-
 昔ぼんやり考へてゐた小ネタ。
 
 ## 概要

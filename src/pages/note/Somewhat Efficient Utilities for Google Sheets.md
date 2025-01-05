@@ -1,9 +1,9 @@
 ---
 title: Google スプレッドシートのための効率的なユーティリティ集
-date: 2023-09-26
-lastmod: 2023-10-24
+date: '2023-09-26'
+lastmod: '2023-10-24'
+templateEngine: null
 ---
-
 ## `SMALLER` `LARGER`
 
 同じサイズの[2]{.upright}つの範囲に関して、それぞれのペアのうち、より小さい方のデータからなる範囲が知りたいとしよう。

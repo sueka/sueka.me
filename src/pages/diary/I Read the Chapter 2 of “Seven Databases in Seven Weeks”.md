@@ -1,11 +1,11 @@
 ---
-title: 『[7]{.upright}つのデータベース [7]{.upright}つの世界』第[2]{.upright}章を読んだ
+title: '『[7]{.upright}つのデータベース [7]{.upright}つの世界』第[2]{.upright}章を読んだ'
 url: ./i-read-7dbs-2-postgres.html
-date: 2022-08-12
-lastmod: 2022-12-27
+date: '2022-08-12'
+lastmod: '2022-12-27'
 writing: horizontal
+templateEngine: null
 ---
-
 『<a href="https://www.ohmsha.co.jp/book/9784274069086/">[7]{.upright}つのデータベース [7]{.upright}つの世界</a>』（[2013]{.upright}年、オーム社）第[2]{.upright}章を読んだ。
 
 <small>

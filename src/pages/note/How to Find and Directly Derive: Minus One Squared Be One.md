@@ -1,10 +1,10 @@
 ---
 title: \\( (-1)^2 = 1 \\) を発見し、直接導く方法
 useKaTeX: true
-date: 2024-06-21
-lastmod: 2024-06-25
+date: '2024-06-21'
+lastmod: '2024-06-25'
+templateEngine: null
 ---
-
 <aside>
 
   この記事は*色*を使用してゐます。

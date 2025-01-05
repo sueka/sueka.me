@@ -1,9 +1,10 @@
 ---
 title: <span class="upright">1928</span>年の「讀書子に寄す」
-date: 2023-05-26
-templateEngine: njk, md
+date: '2023-05-26'
+templateEngine:
+  - njk
+  - md
 ---
-
 > # 讀書子に寄す
 >
 > 岩波文󠄁庫發刊に際して

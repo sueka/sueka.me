@@ -1,9 +1,9 @@
 ---
 title: GDPR 対応の必要性
-date: 2022-08-27
-lastmod: 2023-05-22
+date: '2022-08-27'
+lastmod: '2023-05-22'
+templateEngine: null
 ---
-
 ## TL;DR
 
 少なくとも、

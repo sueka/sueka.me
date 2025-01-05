@@ -1,9 +1,9 @@
 ---
 title: 刑法改正の話
-date: 2022-06-27
-lastmod: 2023-07-04
+date: '2022-06-27'
+lastmod: '2023-07-04'
+templateEngine: null
 ---
-
 [6]{.upright}月[13]{.tate-chu-yoko}日、<a href="https://www.clb.go.jp/recent-laws/diet_bill/detail/id=4126">第[208]{.upright}回国会閣法第[57]{.tate-chu-yoko}号</a>が成立した。要旨は、
 
 1.  侮辱罪の法定刑の引き上げ

@@ -1,9 +1,9 @@
 ---
 title: 浮動小数点数の比較と NaN のビットパターンの話
-date: 2024-09-03
+date: '2024-09-03'
 useKaTeX: true
+templateEngine: null
 ---
-
 IEEE 754 binary64 ビット列が示す値は、符号ビットを \\( s \\)、指数部を \\( e \\)、仮数部を \\( m \\) として、次の関数 \\( v(s, e, m) \\) で表される:
 
 $$

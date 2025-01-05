@@ -1,10 +1,10 @@
 ---
-title: なぜ Ruby のクラスメソッドは `private` で [private]{lang=en} にできないのか
-date: 2022-07-21
-lastmod: 2023-07-03
+title: 'なぜ Ruby のクラスメソッドは `private` で [private]{lang=en} にできないのか'
+date: '2022-07-21'
+lastmod: '2023-07-03'
 writing: horizontal
+templateEngine: null
 ---
-
 Ruby には `private` といふメソッド[^1]があるが、このメソッドでクラスメソッドの可視性を [private]{lang=en} にすることはできない。次のコードを実行すると `NameError` が投げられる:
 
 ``` ruby

@@ -3,11 +3,10 @@ title: シェルスクリプト・ベタープラクティス
 templateEngine:
   - njk
   - md
-date: 2022-06-12
-lastmod: 2023-01-20
+date: '2022-06-12'
+lastmod: '2023-01-20'
 writing: horizontal
 ---
-
 自分用のメモ。
 
 ## 引用部分の凡例

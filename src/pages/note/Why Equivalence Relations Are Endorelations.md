@@ -1,11 +1,12 @@
 ---
 title: なぜ同値関係は自己関係なのか
-date: 2022-09-07
-lastmod: 2023-07-04
+date: '2022-09-07'
+lastmod: '2023-07-04'
 writing: horizontal
-templateEngine: njk, md
+templateEngine:
+  - njk
+  - md
 ---
-
 [rap/Eq.ts · sueka/rap](https://github.com/sueka/rap/blob/35abbf5377e442cb4f6c42b90cf208165d4614b7/src/trait/Eq.ts) を作ったときに考へてゐたことを思ひ出したので書き残しておく。
 
 ## 定義

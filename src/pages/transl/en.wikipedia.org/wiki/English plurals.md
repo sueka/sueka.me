@@ -1,13 +1,12 @@
 ---
 title: 『English plurals - Wikipedia』の日本語訳
-date: 2022-12-26
-lastmod: 2024-06-08
+date: '2022-12-26'
+lastmod: '2024-06-08'
 writing: horizontal
 templateEngine:
   - njk
   - md
 ---
-
 [English plurals - Wikipedia](https://en.wikipedia.org/wiki/English_plurals){lang=en} を和訳しました。原文の版は [oldid=1220894559](https://en.wikipedia.org/w/index.php?title=English_plurals&oldid=1220894559) です。
 
 ## 凡例

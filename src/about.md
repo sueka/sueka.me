@@ -2,10 +2,10 @@
 layout: layouts/page.njk
 title: このサイトについて
 nocolophon: true
-date: 2021-08-27
-lastmod: 2021-12-21
+date: '2021-08-27'
+lastmod: '2021-12-21'
+templateEngine: null
 ---
-
 このサイトは[私](#作者)の個人ブログです。
 
 ## 作者
