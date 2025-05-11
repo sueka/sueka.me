@@ -16,10 +16,10 @@ templateEngine: null
 
 ## PostgreSQL
 
-第[2]{.upright}章（最初）の題材は PostgreSQL だった。この本で取り上げられてゐる唯一の関係データベースである。[1]{.upright}日目に入る前に、PostgreSQL とモジュールをインストールした[^1]:
+第[2]{.upright}章（最初）の題材は PostgreSQL だった。この本で取り上げられている唯一の関係データベースである。[1]{.upright}日目に入る前に、PostgreSQL とモジュールをインストールした[^1]:
 
 [^1]:
-    本では PostgreSQL 9.0 が使はれてゐるが、あまり気にせずに最新版をインストールした。`psql -V` は
+    本では PostgreSQL 9.0 が使はれているが、あまり気にせずに最新版をインストールした。`psql -V` は
 
     ``` txt
     psql (PostgreSQL) 14.4
@@ -43,7 +43,7 @@ CREATE EXTENSION cube;
 \q
 ```
 
-`psql book -c \\dx` とすると、インストールされてゐる拡張の一覧が印字される。
+`psql book -c \\dx` とすると、インストールされている拡張の一覧が印字される。
 
 [1]{.upright}日目はリレーションの基礎と CRUD、結合について学ぶ。適当に手を動かしながら読んだ。
 
@@ -56,7 +56,7 @@ CREATE EXTENSION cube;
 
 [2]{.upright}日目も適当に読んだ。
 
-- p. 21 の `INSERT` クエリを発行してゐないと、p. 22 の `min` `max` を使ったクエリが
+- p. 21 の `INSERT` クエリを発行していないと、p. 22 の `min` `max` を使ったクエリが
 
   ``` txt
   +--------+--------+
@@ -78,7 +78,7 @@ CREATE EXTENSION cube;
   > We like to think of `PARTITION BY` as akin to `GROUP BY`, but rather than grouping the results outside of the `SELECT` attribute list (and thus combining the results into fewer rows), it returns grouped values as any other field (calculating on the grouped variable but otherwise just another attribute). Or in *SQL* parlance, ==it returns the results of an aggregate function `OVER` a `PARTITION` of the result set==.
   {lang=en}
 
-  だった。<q lang="en">OVER</q>が前置詞として使はれてゐることや、<q lang="en">PARTITION</q>にもわざわざ不定冠詞が付けてあることから考へると、[マーク]{.mark-like}した部分の訳は、
+  だった。<q lang="en">OVER</q>が前置詞として使はれていることや、<q lang="en">PARTITION</q>にもわざわざ不定冠詞が付けてあることから考へると、[マーク]{.mark-like}した部分の訳は、
 
   <div class="blockquote-like">
 
@@ -192,7 +192,7 @@ CREATE EXTENSION cube;
       ⋮
       ```
 
-      週が変はるところと曜日が[0]{.upright}に戾るところとが異なってゐるが、これは、`extract` の `week` は ISO 週（月曜日で始まる。）を返し、`dow` は日曜始まりの値を返すからである。[9.9. Date/Time Functions and Operators](https://www.postgresql.org/docs/14/functions-datetime.html){lang=en} も参照。
+      週が変はるところと曜日が[0]{.upright}に戾るところとが異なっているが、これは、`extract` の `week` は ISO 週（月曜日で始まる。）を返し、`dow` は日曜始まりの値を返すからである。[9.9. Date/Time Functions and Operators](https://www.postgresql.org/docs/14/functions-datetime.html){lang=en} も参照。
   1.  よって、日曜始まりのカレンダーを作るには、`week` を補正する必要がある。`dow` が[0]{.upright}なら `week` を[1]{.upright}だけ増やす。
 
       ``` sql
@@ -235,7 +235,7 @@ CREATE EXTENSION cube;
       )
       ORDER BY week
       ```
-  1.  本では `0` や `<null>` を取り除くことになってゐるが、省略。
+  1.  本では `0` や `<null>` を取り除くことになっているが、省略。
 
 [3]{.upright}日目は全文検索と多次元クエリについて学んだ。
 
@@ -271,10 +271,10 @@ CREATE EXTENSION cube;
 
   </div>
 
-  くらゐが妥当だと思ふ。
+  くらいが妥当だと思ふ。
 - p. 41 の[3]{.upright}つ目の `EXPLAIN` クエリは、行数が少ないときは、上[2]{.upright}つと同じ [Seq Scan on movies]{lang=en} プランを表示する。[Seven Databases in Seven Weeks, Second Edition](https://pragprog.com/titles/pwrdata/seven-databases-in-seven-weeks-second-edition/){lang=en} から[^5] [Source Code]{lang=en} をダウンロードして、
 
-  [^5]: [First Edition]{lang=en} 用のページは恐らくもう公開されてゐない。
+  [^5]: [First Edition]{lang=en} 用のページは恐らくもう公開されていない。
 
   ``` sql
   \i /path/to/code/postgres/movies_data.sql
@@ -286,7 +286,7 @@ CREATE EXTENSION cube;
 
   事前に `SET enable_seqscan = false;` としておけば、行数が少なくても [Bitmap Heap Scan on movies]{lang=en} プランを表示する。`enable_seqscan` を `false` にしても、全表スキャンが完全に制御されるわけではない。[20.7. Query Planning](https://www.postgresql.org/docs/14/runtime-config-query.html){lang=en} も参照。
 
-<i>まとめ</i>の節では PostgreSQL の強みと弱みが述べられてゐた。とくに、
+<i>まとめ</i>の節では PostgreSQL の強みと弱みが述べられていた。とくに、
 
 > 他のオープンソースデータベースには複雑なライセンス規約があるが、PostgreSQL は純粋なオープンソースソフトウェアだ。誰もコードを所有していない。誰でも何でも好きなことができる（著作権を主張すること以外）。
 

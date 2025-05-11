@@ -11,15 +11,15 @@ draft: true
 
 - EU 域内の<i><ruby>個人データ<rt lang="en">personal data</ruby></i>を<i><ruby>処理<rt lang="en">processing</ruby></i>し、かつ
 - 次のいづれかである:
-  - 個人情報保護法を遵守してゐないか、
+  - 個人情報保護法を遵守していないか、
   - <i>個人情報取扱事業者</i>でないか、または
-  - <i>追加条件</i>を満たしてゐない
+  - <i>追加条件</i>を満たしていない
 
 場合は、GDPR に関して、何らかの対策を講ずる必要がある。
 
 ## 十分性認定
 
-日本[^1]は EU と相互認證してゐる。EU から日本への移転については、[Adequacy decisions | European Commission](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en){lang=en} に次のやうにある[^2]:
+日本[^1]は EU と相互認證している。EU から日本への移転については、[Adequacy decisions | European Commission](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en){lang=en} に次のやうにある[^2]:
 
 [^1]: この記事では日本と EU の関係だけに集中する。
 [^2]: LED は、<ruby>決定<rt lang="en">Decision</ruby> (EU) 2021/1772 と合はせて、EU がイギリスの十分性認定を行ふ。
@@ -28,7 +28,7 @@ draft: true
 
   さういふ決定の効果は、追加の保護措置を必要とせずに、個人データが EU（ならびにノルウェー、リヒテンシュタインおよびアイスランド）からそれらの第三国へ流れることがあるといふことです。言ひ換へれば、当該国への移転は EU 域内のデータ転送に同化されます。
 
-  欧州委員会はこれまでのところ、アルゼンチン、アンドラ、イギリス、イスラエル、カナダ（営利組織）、ガーンジー、ジャージー、スイス、ニュージーランド、フェロー諸島、マン島、日本、韓国を GDPR および LED の下で認めてをり、また、ウルグアイを適切な保護を提供してゐると認めてゐます。
+  欧州委員会はこれまでのところ、アルゼンチン、アンドラ、イギリス、イスラエル、カナダ（営利組織）、ガーンジー、ジャージー、スイス、ニュージーランド、フェロー諸島、マン島、日本、韓国を GDPR および LED の下で認めてをり、また、ウルグアイを適切な保護を提供していると認めています。
 
 </div>
 
@@ -46,16 +46,16 @@ draft: true
 
 > 第十五条　==法第二十八条==第一項の規定による個人情報の保護に関する制度を有している外国として……
 
-としてゐることに注意。法[71]{.tate-chu-yoko}条の規定には係らないため、日本の*行政機関*から EU への個人データの移転は、十分性認定の枠組みでは認められてゐない。逆（EU から[公共部門団体への移転](#公共部門団体への移転)）も同様。
+としていることに注意。法[71]{.tate-chu-yoko}条の規定には係らないため、日本の*行政機関*から EU への個人データの移転は、十分性認定の枠組みでは認められていない。逆（EU から[公共部門団体への移転](#公共部門団体への移転)）も同様。
 
 また、EU による日本の<ruby>十分性認定<rt lang="en">Adequacy decision</ruby>は、個人情報保護法の適用を受ける組織への、<i>追加条件</i>に従ふ<ruby>移転<rt lang="en">Transfer</ruby>に限定されてをり、EU[^3] 域内で取得した個人データが無条件に日本に<ruby>移転<rt lang="en">Transfer</ruby>できるといふわけではない[^4]。[Commission Implementing Decision (EU) 2019/419](https://eur-lex.europa.eu/eli/dec_impl/2019/419/oj){lang=en}（<i>決定</i>）リサイタル[4]{.upright}には次のやうにある（脚注は省略した。）:
 
-[^3]: 右引用に倣って、この記事では、地域について言ふときは、クロアチアを含む EU 加盟国[27]{.tate-chu-yoko}か国、およびスイスを除く EFTA 加盟国[3]{.upright}か国、合はせて[30]{.tate-chu-yoko}か国を差して「EU」と言ふ。なほ、クロアチアは、[2014]{.upright}年から EEA を暫定的に適用してゐるが、EEA 加盟国ではない。
+[^3]: 右引用に倣って、この記事では、地域について言ふときは、クロアチアを含む EU 加盟国[27]{.tate-chu-yoko}か国、およびスイスを除く EFTA 加盟国[3]{.upright}か国、合はせて[30]{.tate-chu-yoko}か国を差して「EU」と言ふ。なほ、クロアチアは、[2014]{.upright}年から EEA を暫定的に適用しているが、EEA 加盟国ではない。
 [^4]: カナダと同様に「[\(private-sector organisations\)]{lang=en}」などゝ付記した方が良いと思ふ。
 
 <div class="blockquote-like">
 
-  委員会は日本の法律と慣行を注意深く分析してきた。委員会は、リサイタル[6]{.upright}から[175]{.upright}で展開される調査結果に基づいて、日本は、個人情報の保護に関する法律<sup>(5)</sup>の適用範囲内にあり、かつ==この決定で言及する追加条件に従ふ==組織に移転される個人データについて、適切なレベルの保護を保證すると結論付ける。これらの条件は、個人情報保護委員会 (PPC)<sup>(6)</sup> が策定した補完的ルール（附属書 I）ならびに日本政府による欧州委員会への公式の説明、表明およびコミットメント（附属書 II）に規定されてゐる。
+  委員会は日本の法律と慣行を注意深く分析してきた。委員会は、リサイタル[6]{.upright}から[175]{.upright}で展開される調査結果に基づいて、日本は、個人情報の保護に関する法律<sup>(5)</sup>の適用範囲内にあり、かつ==この決定で言及する追加条件に従ふ==組織に移転される個人データについて、適切なレベルの保護を保證すると結論付ける。これらの条件は、個人情報保護委員会 (PPC)<sup>(6)</sup> が策定した補完的ルール（附属書 I）ならびに日本政府による欧州委員会への公式の説明、表明およびコミットメント（附属書 II）に規定されている。
 
 </div>
 
@@ -67,13 +67,13 @@ draft: true
 </blockquote>
 +++
 
-なほ、日本が十分性認定を行ふ外国[^5]は、クロアチアを含む EU 加盟国、スイスを除く EFTA 加盟国、およびイギリスの[31]{.tate-chu-yoko}か国のみ。イギリスは [Brexit]{lang=en} 時点（[2020]{.upright}年[1]{.upright}月[31]{.tate-chu-yoko}日）における EU の十分性認定をそのまゝ引き継いでゐる。[UK approach to international data transfers - GOV.UK](https://www.gov.uk/government/publications/uk-approach-to-international-data-transfers){lang=en} も参照。
+なほ、日本が十分性認定を行ふ外国[^5]は、クロアチアを含む EU 加盟国、スイスを除く EFTA 加盟国、およびイギリスの[31]{.tate-chu-yoko}か国のみ。イギリスは [Brexit]{lang=en} 時点（[2020]{.upright}年[1]{.upright}月[31]{.tate-chu-yoko}日）における EU の十分性認定をそのまゝ引き継いでいる。[UK approach to international data transfers - GOV.UK](https://www.gov.uk/government/publications/uk-approach-to-international-data-transfers){lang=en} も参照。
 
 [^5]: 個人情報保護法[28]{.tate-chu-yoko}条[1]{.upright}項における「個人の権利利益を保護する上で我が国と同等の水準にあると認められる個人情報の保護に関する制度を有している外国」。
 
 ## 公共部門団体への移転
 
-EU 域内から日本の行政機関や独立行政法人等への移転は、<i>決定</i>では認められてゐない。<i>決定</i>リサイタル[10]{.tate-chu-yoko}には、
+EU 域内から日本の行政機関や独立行政法人等への移転は、<i>決定</i>では認められていない。<i>決定</i>リサイタル[10]{.tate-chu-yoko}には、
 
 <div class="blockquote-like">
 
@@ -106,11 +106,11 @@ EU 域内から日本の行政機関や独立行政法人等への移転は、<i
 
 [^7]: [法令｜デジタル庁](https://www.digital.go.jp/laws/)も参照。
 
-また、<i>決定</i>リサイタル[181]{.upright}は、発効後[2]{.upright}年以内に最初のレビューを行ひ、その後は少なくとも[4]{.upright}年ごとにレビューを行ふとしてゐる。最初のレビュー会合は、オンラインで、[2021]{.upright}年[10]{.tate-chu-yoko}月[26]{.tate-chu-yoko}日に行はれた[^8]。
+また、<i>決定</i>リサイタル[181]{.upright}は、発効後[2]{.upright}年以内に最初のレビューを行ひ、その後は少なくとも[4]{.upright}年ごとにレビューを行ふとしている。最初のレビュー会合は、オンラインで、[2021]{.upright}年[10]{.tate-chu-yoko}月[26]{.tate-chu-yoko}日に行はれた[^8]。
 
 [^8]: [Joint statement](https://ec.europa.eu/newsroom/just/items/724795/en){lang=en}
 
-<i>整備法</i>[50]{.tate-chu-yoko}条は、<i>最初のレビュー</i>の[5]{.upright}か月後に施行されたゝめ、<i>決定</i>にはまだ反映されてゐない。[3]{.upright}年後のレビューでは、この改正についても議論されるだらう[^6]。
+<i>整備法</i>[50]{.tate-chu-yoko}条は、<i>最初のレビュー</i>の[5]{.upright}か月後に施行されたゝめ、<i>決定</i>にはまだ反映されていない。[3]{.upright}年後のレビューでは、この改正についても議論されるだらう[^6]。
 
 [^6]:
     GDPR <ruby>[45]{.tate-chu-yoko}条[3]{.upright}項<rt lang="en">Article 45(3)</ruby>には、
@@ -137,7 +137,7 @@ EU 域内から日本の行政機関や独立行政法人等への移転は、<i
 
 ## 追加条件
 
-<i>追加条件</i>については、個人情報保護委員会が附属書 I の日本語版と附属書 II の参考仮訳を公開してゐる:
+<i>追加条件</i>については、個人情報保護委員会が附属書 I の日本語版と附属書 II の参考仮訳を公開している:
 
 附属書 I
 : [個人情報の保護に関する法律に係る EU 域内及び英国から十分性認定により移転を受けた個人データの取扱いに関する補完的ルール \(PDF\)](https://www.ppc.go.jp/files/pdf/Supplementary_Rules.pdf)

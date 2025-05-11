@@ -17,7 +17,7 @@ draft: true
 
 </small>
 
-- p. 20 では<u>交換法則</u>として \\( a \\times b = -(b \\times a) \\) が導入されてゐるが、これは<i>反交換法則</i>だと思ふ。
+- p. 20 では<u>交換法則</u>として \\( a \\times b = -(b \\times a) \\) が導入されているが、これは<i>反交換法則</i>だと思ふ。
 
 - pp. 26–27 に関聯して、積の微分法則が内積に拡張できることを示す:
 
@@ -52,13 +52,13 @@ draft: true
 
 - p. 68 では<i>弧度法の定義（単位円の円周）</i>を使ふ。たまに度忘れするので注意したい。
 
-- p. 88 で \\( C_1 \\)、\\( C_2 \\)、\\( C_3 \\) に使はれてゐる \\( x \\)、\\( y \\) はパラメーター。
+- p. 88 で \\( C_1 \\)、\\( C_2 \\)、\\( C_3 \\) に使はれている \\( x \\)、\\( y \\) はパラメーター。
 
 - p. 89 の \\( \\int_a^0 A_x \\left( x, b \\left( 1 - \\frac{x}{a} \\right) , 0 \\right) dx + \\int_0^b A_y \\left( a \\left( 1 - \\frac{y}{b} \\right) , y, 0 \\right) dy \\) は pp. 72–73 で導入された \\( \\int_C \\boldsymbol{F} \\cdot d \\boldsymbol{r} = \\int_{x(a)}^{x(b)} F_x(x, y) dx + \\int_{y(a)}^{y(b)} F_y(x, y) dy \\) の適用例。
 
 - p. 89 で法線ベクトルを右ねじの向きに取った理由はよく分からなかった[^3]。後日追記するかも。
 
-  [^3]: これを書いてゐるときは「一貫性があれば十分」と思ってゐる。
+  [^3]: これを書いているときは「一貫性があれば十分」と思っている。
 
 - p. 98 に関聯して、\\( \\nabla \\cdot \\frac{\\boldsymbol{x} - \\boldsymbol{a}}{\|\\boldsymbol{x} - \\boldsymbol{a}\|^n} = 0 \\) となる \\( n \\) が \\( 3 \\) 以外にないことを確認する:
 
@@ -96,11 +96,11 @@ draft: true
 
 - p. 107 に<q>\\( \\Delta \\left( \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|^{1 - \\alpha}} \\right) \\) の符号が負</q>とあるが、これが負となるには、p. 105 で \\( \\alpha \\) を定義するときに \\( 0 < \\alpha < 1 \\) としておく必要がある。\\( \\alpha \\to +0 \\) に飛ばすのはこれより後である。
 
-- p. 110 の<q>(1.21) より</q>とある変形では、偏微分の順序が入れ替へられてゐる[^4]。
+- p. 110 の<q>(1.21) より</q>とある変形では、偏微分の順序が入れ替へられている[^4]。
 
   [^4]: 中扉には<q>微分と積分の順序も，2変数関数の偏微分の順序も常に交換可能とします</q>とある。
 
-- p. 111 の \\( \\frac{\\partial^2}{\\partial u^2} f(\\boldsymbol{y}, u) \\) の項の係数に \\( -\\frac{1}{c^2} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\) といふ項があるが、\\( \\frac{\\partial^2}{\\partial t^2} \\left( f \\left( \\boldsymbol{y}, t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\right) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\right) \\) はテキストでは計算されてゐないので、確認しておく:
+- p. 111 の \\( \\frac{\\partial^2}{\\partial u^2} f(\\boldsymbol{y}, u) \\) の項の係数に \\( -\\frac{1}{c^2} \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\) といふ項があるが、\\( \\frac{\\partial^2}{\\partial t^2} \\left( f \\left( \\boldsymbol{y}, t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\right) \\frac{1}{\|\\boldsymbol{y} - \\boldsymbol{x}\|} \\right) \\) はテキストでは計算されていないので、確認しておく:
 
   \\( u(t) = t + \\frac{\|\\boldsymbol{y} - \\boldsymbol{x}\|}{c} \\) とおく。ライプニッツ則より、
 

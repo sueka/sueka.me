@@ -7,7 +7,7 @@ templateEngine: null
 ---
 <aside>
 
-  この記事は*色*を使用してゐます。
+  この記事は*色*を使用しています。
 
 </aside>
 

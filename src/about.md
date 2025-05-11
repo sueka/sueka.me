@@ -10,7 +10,7 @@ templateEngine: null
 
 ## 作者
 
-Sueka と言ひます。東京でウェブアプリケーションを開発してゐます。<time datetime="2018-10">最近</time>の関心事はコンピューター・アーキテクチャと型理論です。
+Sueka と言ひます。東京でウェブアプリケーションを開発しています。<time datetime="2018-10">最近</time>の関心事はコンピューター・アーキテクチャと型理論です。
 
 ### 個人識別のための情報
 
@@ -34,7 +34,7 @@ Sueka と言ひます。東京でウェブアプリケーションを開発し�
 
 ### カレンダー
 
-ゲストが追加されてゐる豫定の詳細は公開してゐません。
+ゲストが追加されている豫定の詳細は公開していません。
 
 - [HTML](https://calendar.google.com/calendar/embed?src=uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com&hl=ja)
 - [iCal](https://calendar.google.com/calendar/ical/uu6sc8cgpmvk87tamajg4nhl34%40group.calendar.google.com/public/basic.ics)
