@@ -6,6 +6,7 @@ lastmod: '2023-03-09'
 templateEngine:
   - njk
   - md
+draft: true
 ---
 このサイトでは、一部のページの名前をインキピット[^1]にしてゐる。
 

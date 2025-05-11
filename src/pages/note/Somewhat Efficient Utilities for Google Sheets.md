@@ -3,6 +3,7 @@ title: Google スプレッドシートのための効率的なユーティリテ
 date: '2023-09-26'
 lastmod: '2023-10-24'
 templateEngine: null
+draft: true
 ---
 ## `SMALLER` `LARGER`
 

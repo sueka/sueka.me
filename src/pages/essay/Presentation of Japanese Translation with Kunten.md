@@ -5,6 +5,7 @@ date: '2022-03-29'
 lastmod: '2023-03-27'
 templateEngine: null
 he: true
+draft: true
 ---
 昔ぼんやり考へてゐた小ネタ。
 

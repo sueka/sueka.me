@@ -6,6 +6,7 @@ templateEngine:
 date: '2022-06-12'
 lastmod: '2023-01-20'
 writing: horizontal
+draft: true
 ---
 自分用のメモ。
 

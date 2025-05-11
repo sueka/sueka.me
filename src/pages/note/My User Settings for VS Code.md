@@ -3,6 +3,7 @@ title: VS Code のユーザー設定
 date: '2023-01-04'
 lastmod: '2023-09-10'
 templateEngine: null
+draft: true
 ---
 先日、多分元日、はてなブックマークで、[VScodeの設定（settings.json）まとめ【<span class="upright">2023</span>年<span class="upright">1</span>月更新】](https://zenn.dev/sayuki_coding/articles/c389d9ad48feaa)なる記事を見た。[settings]{lang=en} か [setting]{lang=en} かなどゞうでもよい[^1]けれど、蓋し VS Code の設定で最も重大なのは以下の項目だらう。誤解のないやうに明記すると、リンク先の記事は、ツールとしての VS Code の設定について、誰にでも馴染むものではないにせよ、丁寧に記述された、良い記事だと思ふ。
 
