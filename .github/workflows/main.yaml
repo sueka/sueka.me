@@ -28,7 +28,7 @@ jobs:
         run: deno task build
         shell: bash -o pipefail {0}
       - name: Upload build artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v5
         if: github.event_name == 'push'
   deploy:
     permissions:
