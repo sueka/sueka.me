@@ -1,1 +1,1 @@
-window.addEventListener('touchstart', () => {})
+globalThis.addEventListener('touchstart', () => {})

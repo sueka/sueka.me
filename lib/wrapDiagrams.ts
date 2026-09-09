@@ -5,11 +5,16 @@ import isElement from './isElement.ts'
 
 export default function wrapDiagrams(page: Lume.Page) {
   assert(page.content)
-  const document = new DOMParser().parseFromString(page.content.toString(), 'text/html')
+  const document = new DOMParser().parseFromString(
+    page.content.toString(),
+    'text/html',
+  )
   assert(document)
   const figures = [...document.querySelectorAll('figure')]
   assert(figures.every(isElement))
-  const figuresMermaidWrappers = figures.filter(_ => _.querySelector(':scope > .mermaid') !== null)
+  const figuresMermaidWrappers = figures.filter((_) =>
+    _.querySelector(':scope > .mermaid') !== null
+  )
   const mermaids = document.querySelectorAll('.mermaid')
   const diagrams = [...figuresMermaidWrappers, ...mermaids]
   // const diagrams = document.querySelectorAll('figure:has(> .mermaid), :not(figure) > .mermaid')

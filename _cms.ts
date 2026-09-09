@@ -1,5 +1,5 @@
 import lumeCMS from 'lume/cms/mod.ts'
-import { Field } from 'lume/cms/types.ts'
+import type { Field } from 'lume/cms/types.ts'
 
 const cms = lumeCMS()
 

@@ -6,7 +6,7 @@
           if (node instanceof SVGSVGElement) {
             resizeMermaid(node)
 
-            window.addEventListener('resize', () => {
+            globalThis.addEventListener('resize', () => {
               resizeMermaid(node)
             })
           }
@@ -15,7 +15,7 @@
     }
   })
 
-  window.addEventListener('DOMContentLoaded', () => {
+  globalThis.addEventListener('DOMContentLoaded', () => {
     const mermaids = document.querySelectorAll('.mermaid')
 
     for (const mermaid of mermaids) {
@@ -25,7 +25,7 @@
 
   function resizeMermaid(svg) {
     const root = document.querySelector(':root')
-    const rem = window.getComputedStyle(root).fontSize
+    const rem = globalThis.getComputedStyle(root).fontSize
 
     const intrinsicWidth = svg.width.baseVal.value
 
@@ -33,6 +33,6 @@
       return
     }
 
-    svg.style.width = `calc(${ intrinsicWidth } * ${ rem } / 16)`
+    svg.style.width = `calc(${intrinsicWidth} * ${rem} / 16)`
   }
 })()

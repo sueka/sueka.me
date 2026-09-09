@@ -5,7 +5,7 @@
 
     return async (selector, config) => {
       if (mermaid === undefined) {
-        ;({ default: mermaid } = await import('https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.esm.min.mjs'))
+        ;({ default: mermaid } = await import('mermaid'))
       }
 
       mermaid.initialize({
@@ -13,7 +13,7 @@
         flowchart: {
           useMaxWidth: false,
         },
-        ...config
+        ...config,
       })
 
       mermaid.run({
@@ -22,9 +22,9 @@
     }
   })()
 
-  window.addEventListener('DOMContentLoaded', () => {
+  globalThis.addEventListener('DOMContentLoaded', () => {
     const mermaids = document.querySelectorAll('.mermaid')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)')
+    const prefersDark = globalThis.matchMedia('(prefers-color-scheme: dark)')
 
     for (const mermaid of mermaids) {
       mermaid.dataset.mmd = mermaid.innerHTML

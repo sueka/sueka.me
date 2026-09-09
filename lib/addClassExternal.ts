@@ -9,13 +9,18 @@ const data = parse(await Deno.readTextFile('./src/_data/site.yaml'))
 // TODO: Escape を普通の方法で
 assert(
   typeof data === 'object' && data !== null && 'url' in data &&
-  typeof data.url === 'string'
+    typeof data.url === 'string',
 )
-const internalPat = RegExp(`^(?:${ data.url.replace('.', '\\.') }\\b|(?!https?:\/\/))`)
+const internalPat = RegExp(
+  `^(?:${data.url.replace('.', '\\.')}\\b|(?!https?:\/\/))`,
+)
 
 export default function externalLink(page: Lume.Page) {
   assert(page.content)
-  const document = new DOMParser().parseFromString(page.content.toString(), 'text/html')
+  const document = new DOMParser().parseFromString(
+    page.content.toString(),
+    'text/html',
+  )
   assert(document)
   const links = document.querySelectorAll('a:any-link')
 
@@ -24,7 +29,7 @@ export default function externalLink(page: Lume.Page) {
 
     // NOTE: 恐らく deno_dom の仕様で、link.getAttribute('href') は link.href 相当のもの（実際の href 属性の値がパスであっても、URL）を返す。
     if (internalPat.test(link.getAttribute('href')!)) {
-      continue;
+      continue
     }
 
     link.classList.add('external')

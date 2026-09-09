@@ -5,7 +5,10 @@ import isElement from './isElement.ts'
 
 export default function wrapTables(page: Lume.Page) {
   assert(page.content)
-  const document = new DOMParser().parseFromString(page.content.toString(), 'text/html')
+  const document = new DOMParser().parseFromString(
+    page.content.toString(),
+    'text/html',
+  )
   assert(document)
   const tables = document.querySelectorAll('table')
 

@@ -1,13 +1,19 @@
 import {
-  lume, nunjucks, relativeUrls, slugifyUrls, sourceMaps,
+  autoprefixer,
   // text
-  codeHighlight, date,
+  codeHighlight,
+  date,
+  lume,
+  nunjucks,
   // css
-  postcss, autoprefixer,
+  postcss,
+  relativeUrls,
+  slugifyUrls,
+  sourceMaps,
 } from './deps.ts'
 
 import postcssNesting from 'postcss-nesting'
-import { ja } from 'npm:date-fns/locale/ja'
+import { ja } from 'date-fns/locale/ja'
 import { assert } from '@std/assert'
 import { parse } from '@std/yaml'
 
@@ -40,7 +46,12 @@ import wrapTables from './lib/wrapTables.ts'
 import wrapDiagrams from './lib/wrapDiagrams.ts'
 import addClassExternal from './lib/addClassExternal.ts'
 
-const data = parse(await Deno.readTextFile('./src/_data/site.yaml'))
+const data = parse(
+  await Deno
+    .readTextFile(
+      './src/_data/site.yaml',
+    ),
+)
 
 const markdown = {
   plugins: [
@@ -49,11 +60,15 @@ const markdown = {
       anchor,
       {
         tabIndex: false,
-        permalink: anchor.permalink.linkInsideHeader({
-          symbol: '&para;',
-          placement: 'before',
-          ariaHidden: true,
-        }),
+        permalink: anchor
+          .permalink
+          .linkInsideHeader(
+            {
+              symbol: '&para;',
+              placement: 'before',
+              ariaHidden: true,
+            },
+          ),
       },
     ],
     attrs,
@@ -75,23 +90,53 @@ const markdown = {
   ],
 }
 
-assert(
-  typeof data === 'object' && data !== null && 'url' in data &&
-  typeof data.url === 'string'
+assert( typeof data === 'object' && data !== null && 'url' in data && typeof data .url === 'string', )
+const site = lume(
+  {
+    src: 'src',
+    location: new URL(
+      data
+        .url,
+    ),
+    prettyUrls: false,
+  },
+  {
+    markdown,
+  },
 )
-const site = lume({
-  src: 'src',
-  location: new URL(data.url),
-  prettyUrls: false,
-}, { markdown })
 
-site.copy(['.js'])
-site.copy('assets/images/Logo blue.svg', 'assets/images/twitter-logo.svg')
-site.copy('favicon.ico')
-site.copy('ads.txt')
+site
+  .copy(
+    ['.js'],
+  )
+site
+  .copy(
+    'assets/images/Logo blue.svg',
+    'assets/images/twitter-logo.svg',
+  )
+site
+  .copy(
+    'favicon.ico',
+  )
+site
+  .copy(
+    'ads.txt',
+  )
 
-site.use(codeHighlight())
-site.use(date({ locales: { ja } }))
+site
+  .use(
+    codeHighlight(),
+  )
+site
+  .use(
+    date(
+      {
+        locales: {
+          ja,
+        },
+      },
+    ),
+  )
 
 const plugins = [
   // postcssPresetEnv({
@@ -103,73 +148,215 @@ const plugins = [
   // }),
   autoprefixer(),
   postcssNesting(),
-  // @ts-expect-error: TS2349
   postcssCustomSelectors(),
   postcssExtendRule(),
-  // @ts-expect-error: TS2349
   postcssHasPseudo(),
   // csso({ restructure: false }),
 ]
 
-site.use(postcss({ plugins }))
+site
+  .use(
+    postcss(
+      {
+        plugins,
+      },
+    ),
+  )
 
-site.use(nunjucks())
-site.use(relativeUrls())
-site.use(slugifyUrls())
-site.use(sourceMaps())
+site
+  .use(
+    nunjucks(),
+  )
+site
+  .use(
+    relativeUrls(),
+  )
+site
+  .use(
+    slugifyUrls(),
+  )
+site
+  .use(
+    sourceMaps(),
+  )
 
-site.filter('encodeUri', encodeURI)
-site.filter('getIncipit', getIncipit) //
-site.filter('truncateHtml', truncateHtml)
-site.filter('upright', upright)
-site.filter('v', upright)
+site
+  .filter(
+    'encodeUri',
+    encodeURI,
+  )
+site
+  .filter(
+    'getIncipit',
+    getIncipit,
+  ) //
+site
+  .filter(
+    'truncateHtml',
+    truncateHtml,
+  )
+site
+  .filter(
+    'upright',
+    upright,
+  )
+site
+  .filter(
+    'v',
+    upright,
+  )
 
 // // Defines {% env 'PATH' %}
 // site.helper('env', (name) => Deno.env.get(name), { type: 'tag' })
 
 // Defines {% octicon 'mark-github', 32 %}
-site.helper('octicon', (symbol, width) => octicons[symbol].toSVG({ width }), { type: 'tag' })
+site
+  .helper(
+    'octicon',
+    (
+      symbol,
+      width,
+    ) =>
+      octicons[
+        symbol
+      ].toSVG(
+        {
+          width,
+        },
+      ),
+    {
+      type: 'tag',
+    },
+  )
 
-site.preprocess(['.html'], pages => {
-  for (const page of pages) {
-    page.data.src = `${ page.src.path }${ page.src.ext }`
-  }
-})
+site
+  .preprocess(
+    ['.html'],
+    (
+      pages,
+    ) => {
+      for (
+        const page of pages
+      ) {
+        page
+          .data
+          .src = `${page.src.path}${page.src.ext}`
+      }
+    },
+  )
 
-site.process(['.html'], pages => pages.forEach(wrapTables))
-site.process(['.html'], pages => pages.forEach(wrapDiagrams))
-site.process(['.html'], pages => pages.forEach(addClassExternal)) // class="external"
+site
+  .process(
+    ['.html'],
+    (
+      pages,
+    ) =>
+      pages
+        .forEach(
+          wrapTables,
+        ),
+  )
+site
+  .process(
+    ['.html'],
+    (
+      pages,
+    ) =>
+      pages
+        .forEach(
+          wrapDiagrams,
+        ),
+  )
+site
+  .process(
+    ['.html'],
+    (
+      pages,
+    ) =>
+      pages
+        .forEach(
+          addClassExternal,
+        ),
+  ) // class="external"
 
 // Removes the origin from an absolute URL; NOTE: Retains feed.xml
-site.process(['.html', '.js'], (pages) => {
-  const pattern = new RegExp(`(?<=")${ site.options.location.origin }(?=/)`, 'g')
+site
+  .process(
+    [
+      '.html',
+      '.js',
+    ],
+    (
+      pages,
+    ) => {
+      const pattern = new RegExp(
+        `(?<=")${site.options.location.origin}(?=/)`,
+        'g',
+      )
 
-  for (const page of pages) {
-    assert(page.content)
-    if (typeof page.content === 'string') {
-      page.content = page.content.replace(pattern, '')
-    }
-    // page.content = page.content.replace(new RegExp(`(?<=")${ site.options.location.origin }(?=")`, 'g'), '/')
-  }
-})
+      for (
+        const page of pages
+      ) {
+        assert(
+          page
+            .content,
+        )
+        if (
+          typeof page
+            .content ===
+            'string'
+        ) {
+          page
+            .content = page
+              .content
+              .replace(
+                pattern,
+                '',
+              )
+        }
+        // page.content = page.content.replace(new RegExp(`(?<=")${ site.options.location.origin }(?=")`, 'g'), '/')
+      }
+    },
+  )
 
 // Defines {{ gitCommitHash }}
-const process = new Deno.Command('git', {
-  args: ['show', '-s', '--format=%H'],
-  env: {
-    GIT_PAGER: '',
+const process = new Deno
+  .Command(
+  'git',
+  {
+    args: [
+      'show',
+      '-s',
+      '--format=%H',
+    ],
+    env: {
+      GIT_PAGER: '',
+    },
+    stdout: 'piped',
   },
-  stdout: 'piped',
-})
+)
 
-const { success, stdout } = await process.output()
+const {
+  success,
+  stdout,
+} = await process
+  .output()
 
 // TODO: Abort the build in a more normal way
-if (!success) {
-  throw new Error
+if (
+  !success
+) {
+  throw new Error()
 }
 
-site.data('gitCommitHash', new TextDecoder().decode(stdout).trimEnd())
+site
+  .data(
+    'gitCommitHash',
+    new TextDecoder()
+      .decode(
+        stdout,
+      ).trimEnd(),
+  )
 
 // Exports
 export default site

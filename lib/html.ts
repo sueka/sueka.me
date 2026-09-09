@@ -19,7 +19,7 @@ function tag(doctype: DocType) {
     tagBuilder.push('SYSTEM', doctype.systemId)
   }
 
-  return `<${ tagBuilder.join(' ') }>`
+  return `<${tagBuilder.join(' ')}>`
 }
 
 export default function html(doctype: DocType, content: string) {

@@ -8,10 +8,12 @@
     return
   }
 
-  window.addEventListener('DOMContentLoaded', () => {
+  globalThis.addEventListener('DOMContentLoaded', () => {
     const observer = new MutationObserver((mutations) => {
       for (const mutation of mutations) {
-        if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
+        if (
+          mutation.type === 'attributes' && mutation.attributeName === 'lang'
+        ) {
           for (const jaStyle of jaStyles) {
             jaStyle.disabled = !isJa(mutation.target.lang)
           }
